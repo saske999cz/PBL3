@@ -50,13 +50,13 @@ namespace DoAnPBL3.Models
         [Required]
         public string Address { get; set; }
 
-        [Required]
         public byte[] Avatar { get; set; }
 
         [Column("taiKhoanDangNhap")]
         [StringLength(255)]
-        public string Username { get; set; }
-        [ForeignKey("Username")]
+        public string UserName { get; set; }
+
+        [ForeignKey("UserName")]
         public virtual Account Account { get; set; }
     }
 }

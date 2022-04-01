@@ -14,9 +14,15 @@ namespace DoAnPBL3.Models
 
         public Account()
         {
-            AdminAccounts = new HashSet<Admin>();
-            EmployeeAccounts = new HashSet<Employee>();
-            CustomerAccounts = new HashSet<Customer>();
+
+        }
+
+        public Account(string Username, string Password, string Email, string Role)
+        {
+            this.Username = Username;
+            this.Password = Password;
+            this.Email = Email;
+            this.Role = Role;
         }
 
         [Key]
@@ -30,13 +36,18 @@ namespace DoAnPBL3.Models
         [Required]
         public string Password { get; set; }
 
+        [Column("email")]
+        [StringLength(255)]
+        [Required]
+        public string Email { get; set; }
+
         [Column("quyen")]
         [StringLength(255)]
         [Required]
         public string Role { get; set; }
 
-        public virtual ICollection<Admin> AdminAccounts { get; set; }
-        public virtual ICollection<Employee> EmployeeAccounts { get; set; }
-        public virtual ICollection<Customer> CustomerAccounts { get; set; }
+        //public virtual Admin AdminAccounts { get; set; }
+        //public virtual Employee EmployeeAccounts { get; set; }
+        //public virtual Customer CustomerAccounts { get; set; }
     }
 }

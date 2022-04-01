@@ -59,11 +59,11 @@ namespace DoAnPBL3.Models
 
         [Column("taiKhoanDangNhap")]
         [StringLength(255)]
-        public string Username { get; set; }
-        [ForeignKey("Username")]
+        public string UserName { get; set; }
+
+        [ForeignKey("UserName")]
         public virtual Account Account { get; set; }
 
         public virtual ICollection<Order> Orders { get; set; }
-
     }
 }
