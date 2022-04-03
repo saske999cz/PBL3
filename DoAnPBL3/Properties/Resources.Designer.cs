@@ -183,6 +183,26 @@ namespace DoAnPBL3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap computer_icons_download_login_icon_design_png_favpng_NWzD7MizCq1wPDKyaUY8ezv5W {
+            get {
+                object obj = ResourceManager.GetObject("computer-icons-download-login-icon-design-png-favpng-NWzD7MizCq1wPDKyaUY8ezv5W", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap computer_icons_download_login_icon_design_png_favpng_NWzD7MizCq1wPDKyaUY8ezv5W1 {
+            get {
+                object obj = ResourceManager.GetObject("computer-icons-download-login-icon-design-png-favpng-NWzD7MizCq1wPDKyaUY8ezv5W1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap customer_img {
             get {
                 object obj = ResourceManager.GetObject("customer img", resourceCulture);

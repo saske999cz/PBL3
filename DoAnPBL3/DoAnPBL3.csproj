@@ -298,6 +298,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Books-2-icon.ico" />
+    <None Include="Img\computer-icons-download-login-icon-design-png-favpng-NWzD7MizCq1wPDKyaUY8ezv5W.ico" />
+    <None Include="Resources\computer-icons-download-login-icon-design-png-favpng-NWzD7MizCq1wPDKyaUY8ezv5W.jpg" />
     <None Include="Img\blue eye slash icon.jpg" />
     <None Include="Img\blue eye icon.jpg" />
     <None Include="Img\private-xxl.png" />

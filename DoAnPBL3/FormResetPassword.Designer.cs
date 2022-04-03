@@ -108,6 +108,7 @@ namespace DoAnPBL3
             this.txtNewPassword.PasswordChar = '*';
             this.txtNewPassword.Size = new System.Drawing.Size(240, 19);
             this.txtNewPassword.TabIndex = 0;
+            this.txtNewPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNewPassword_KeyPress);
             // 
             // label3
             // 
@@ -139,6 +140,7 @@ namespace DoAnPBL3
             this.txtConfirmNewPassword.PasswordChar = '*';
             this.txtConfirmNewPassword.Size = new System.Drawing.Size(240, 19);
             this.txtConfirmNewPassword.TabIndex = 1;
+            this.txtConfirmNewPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtConfirmNewPassword_KeyPress);
             // 
             // btnConfirm
             // 

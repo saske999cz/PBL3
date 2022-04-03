@@ -154,5 +154,23 @@ namespace DoAnPBL3
                 blueEyeIcon.BringToFront();
             }
         }
+
+        private void txtSendCode_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+                btnSendCode.PerformClick();
+        }
+
+        private void txtEmailPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+                btnSendCode.PerformClick();
+        }
+
+        private void txtVerifyCode_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+                btnConfirm.PerformClick();
+        }
     }
 }

@@ -112,10 +112,11 @@ namespace DoAnPBL3
             // 
             this.txtVerifyCode.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtVerifyCode.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.txtVerifyCode.Location = new System.Drawing.Point(100, 518);
+            this.txtVerifyCode.Location = new System.Drawing.Point(100, 514);
             this.txtVerifyCode.Name = "txtVerifyCode";
             this.txtVerifyCode.Size = new System.Drawing.Size(280, 19);
             this.txtVerifyCode.TabIndex = 3;
+            this.txtVerifyCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtVerifyCode_KeyPress);
             // 
             // btnSendCode
             // 
@@ -163,10 +164,11 @@ namespace DoAnPBL3
             // 
             this.txtSendCode.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSendCode.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.txtSendCode.Location = new System.Drawing.Point(100, 239);
+            this.txtSendCode.Location = new System.Drawing.Point(100, 235);
             this.txtSendCode.Name = "txtSendCode";
             this.txtSendCode.Size = new System.Drawing.Size(280, 19);
             this.txtSendCode.TabIndex = 0;
+            this.txtSendCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSendCode_KeyPress);
             // 
             // label4
             // 
@@ -197,6 +199,7 @@ namespace DoAnPBL3
             this.txtEmailPassword.PasswordChar = '*';
             this.txtEmailPassword.Size = new System.Drawing.Size(280, 19);
             this.txtEmailPassword.TabIndex = 1;
+            this.txtEmailPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEmailPassword_KeyPress);
             // 
             // exitIcon
             // 

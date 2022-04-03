@@ -106,5 +106,17 @@ namespace DoAnPBL3
                 blueEyeIcon.BringToFront();
             }
         }
+
+        private void txtNewPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+                btnConfirm.PerformClick();
+        }
+
+        private void txtConfirmNewPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+                btnConfirm.PerformClick();
+        }
     }
 }

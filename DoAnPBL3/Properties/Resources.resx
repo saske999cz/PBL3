@@ -142,6 +142,9 @@
   <data name="new password" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Img\new password.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="computer-icons-download-login-icon-design-png-favpng-NWzD7MizCq1wPDKyaUY8ezv5W" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\computer-icons-download-login-icon-design-png-favpng-NWzD7MizCq1wPDKyaUY8ezv5W.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="arr 2 img" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Img\arr 2 img.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -157,8 +160,8 @@
   <data name="quarter icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Img\quarter icon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="blue eye icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Img\blue eye icon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Email icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Img\Email icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="verify code icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Img\verify code icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -181,11 +184,14 @@
   <data name="bill user" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Img\bill user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="search logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Img\search logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="search customer img" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Img\search customer img.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="blue eye icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Img\blue eye icon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="search logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Img\search logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="reset password" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Img\reset password.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -235,8 +241,8 @@
   <data name="lock-xxl" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Img\lock-xxl.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Email icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Img\Email icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="blue eye slash icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Img\blue eye slash icon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tkkh background 4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Img\tkkh background 4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -247,7 +253,7 @@
   <data name="user icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Img\user icon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="blue eye slash icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Img\blue eye slash icon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="computer-icons-download-login-icon-design-png-favpng-NWzD7MizCq1wPDKyaUY8ezv5W1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Img\computer-icons-download-login-icon-design-png-favpng-NWzD7MizCq1wPDKyaUY8ezv5W.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
