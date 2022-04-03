@@ -37,13 +37,19 @@ namespace DoAnPBL3
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtConfirmNewPassword = new System.Windows.Forms.TextBox();
+            this.btnConfirm = new System.Windows.Forms.Button();
+            this.exitIcon = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnConfirm = new System.Windows.Forms.Button();
+            this.blueEyeSlashIcon = new System.Windows.Forms.PictureBox();
+            this.blueEyeIcon = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.exitIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.blueEyeSlashIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.blueEyeIcon)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -100,8 +106,8 @@ namespace DoAnPBL3
             this.txtNewPassword.Location = new System.Drawing.Point(123, 251);
             this.txtNewPassword.Name = "txtNewPassword";
             this.txtNewPassword.PasswordChar = '*';
-            this.txtNewPassword.Size = new System.Drawing.Size(200, 19);
-            this.txtNewPassword.TabIndex = 5;
+            this.txtNewPassword.Size = new System.Drawing.Size(240, 19);
+            this.txtNewPassword.TabIndex = 0;
             // 
             // label3
             // 
@@ -131,8 +137,35 @@ namespace DoAnPBL3
             this.txtConfirmNewPassword.Location = new System.Drawing.Point(123, 357);
             this.txtConfirmNewPassword.Name = "txtConfirmNewPassword";
             this.txtConfirmNewPassword.PasswordChar = '*';
-            this.txtConfirmNewPassword.Size = new System.Drawing.Size(200, 19);
-            this.txtConfirmNewPassword.TabIndex = 5;
+            this.txtConfirmNewPassword.Size = new System.Drawing.Size(240, 19);
+            this.txtConfirmNewPassword.TabIndex = 1;
+            // 
+            // btnConfirm
+            // 
+            this.btnConfirm.AutoSize = true;
+            this.btnConfirm.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnConfirm.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirm.ForeColor = System.Drawing.Color.White;
+            this.btnConfirm.Location = new System.Drawing.Point(275, 411);
+            this.btnConfirm.Name = "btnConfirm";
+            this.btnConfirm.Size = new System.Drawing.Size(97, 30);
+            this.btnConfirm.TabIndex = 2;
+            this.btnConfirm.Text = "Xác Nhận";
+            this.btnConfirm.UseVisualStyleBackColor = false;
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
+            // 
+            // exitIcon
+            // 
+            this.exitIcon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.exitIcon.Image = global::DoAnPBL3.Properties.Resources.navy_exit_icon;
+            this.exitIcon.Location = new System.Drawing.Point(364, 0);
+            this.exitIcon.Name = "exitIcon";
+            this.exitIcon.Size = new System.Drawing.Size(47, 48);
+            this.exitIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.exitIcon.TabIndex = 12;
+            this.exitIcon.TabStop = false;
+            this.exitIcon.Click += new System.EventHandler(this.exitIcon_Click);
             // 
             // pictureBox3
             // 
@@ -164,27 +197,37 @@ namespace DoAnPBL3
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // btnConfirm
+            // blueEyeSlashIcon
             // 
-            this.btnConfirm.AutoSize = true;
-            this.btnConfirm.BackColor = System.Drawing.Color.MidnightBlue;
-            this.btnConfirm.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfirm.ForeColor = System.Drawing.Color.White;
-            this.btnConfirm.Location = new System.Drawing.Point(275, 411);
-            this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(97, 30);
-            this.btnConfirm.TabIndex = 2;
-            this.btnConfirm.Text = "Xác Nhận";
-            this.btnConfirm.UseVisualStyleBackColor = false;
-            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
+            this.blueEyeSlashIcon.Image = global::DoAnPBL3.Properties.Resources.blue_eye_slash_icon;
+            this.blueEyeSlashIcon.Location = new System.Drawing.Point(319, 235);
+            this.blueEyeSlashIcon.Name = "blueEyeSlashIcon";
+            this.blueEyeSlashIcon.Size = new System.Drawing.Size(44, 40);
+            this.blueEyeSlashIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.blueEyeSlashIcon.TabIndex = 13;
+            this.blueEyeSlashIcon.TabStop = false;
+            this.blueEyeSlashIcon.Click += new System.EventHandler(this.blueEyeSlashIcon_Click);
+            // 
+            // blueEyeIcon
+            // 
+            this.blueEyeIcon.Image = global::DoAnPBL3.Properties.Resources.blue_eye_icon;
+            this.blueEyeIcon.Location = new System.Drawing.Point(319, 235);
+            this.blueEyeIcon.Name = "blueEyeIcon";
+            this.blueEyeIcon.Size = new System.Drawing.Size(44, 40);
+            this.blueEyeIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.blueEyeIcon.TabIndex = 14;
+            this.blueEyeIcon.TabStop = false;
+            this.blueEyeIcon.Click += new System.EventHandler(this.blueEyeIcon_Click);
             // 
             // FormResetPassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(410, 550);
+            this.ClientSize = new System.Drawing.Size(410, 502);
+            this.Controls.Add(this.blueEyeIcon);
+            this.Controls.Add(this.blueEyeSlashIcon);
+            this.Controls.Add(this.exitIcon);
             this.Controls.Add(this.txtConfirmNewPassword);
             this.Controls.Add(this.txtNewPassword);
             this.Controls.Add(this.pictureBox3);
@@ -202,9 +245,12 @@ namespace DoAnPBL3
             this.Name = "FormResetPassword";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Xác Nhận Tài Khoản";
+            ((System.ComponentModel.ISupportInitialize)(this.exitIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.blueEyeSlashIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.blueEyeIcon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -224,5 +270,8 @@ namespace DoAnPBL3
         private System.Windows.Forms.TextBox txtConfirmNewPassword;
         private System.Windows.Forms.Button btnConfirm;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox exitIcon;
+        private System.Windows.Forms.PictureBox blueEyeSlashIcon;
+        private System.Windows.Forms.PictureBox blueEyeIcon;
     }
 }

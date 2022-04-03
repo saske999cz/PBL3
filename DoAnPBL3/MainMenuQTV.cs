@@ -17,18 +17,12 @@ namespace DoAnPBL3
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void BtnQLNV_Click(object sender, EventArgs e)
         {
             Hide();
             MenuQLNV a = new MenuQLNV();
             a.ShowDialog();
             Close();
-
         }
 
         private void BtnQLS_Click(object sender, EventArgs e)
@@ -58,8 +52,8 @@ namespace DoAnPBL3
         private void BtnLogOut_Click(object sender, EventArgs e)
         {
             Hide();
-            Login l = new Login();
-            l.ShowDialog();
+            Login login = new Login();
+            login.ShowDialog();
             Close();
         }
     }

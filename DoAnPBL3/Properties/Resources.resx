@@ -139,9 +139,6 @@
   <data name="thêm img" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Img\thêm img.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Books-2-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Img\Books-2-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="new password" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Img\new password.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -151,8 +148,17 @@
   <data name="user name icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Img\user name icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="close-window-xxl" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Img\close-window-xxl.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="private-xxl1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Img\private-xxl.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="quarter icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Img\quarter icon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="blue eye icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Img\blue eye icon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="verify code icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Img\verify code icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -162,6 +168,9 @@
   </data>
   <data name="list img 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Img\list img 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cancel-xxl" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Img\cancel-xxl.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="search book img" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Img\search book img.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -175,8 +184,17 @@
   <data name="search logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Img\search logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="search customer img" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Img\search customer img.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="reset password" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Img\reset password.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Day icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Img\Day icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="navy exit icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Img\navy exit icon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Password icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Img\Password icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -193,8 +211,8 @@
   <data name="customer info img" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Img\customer info img.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="search customer img" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Img\search customer img.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Books-2-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Img\Books-2-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tkkh background 3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Img\tkkh background 3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -211,6 +229,12 @@
   <data name="doanh thu img" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Img\doanh thu img.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="private-xxl" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Img\private-xxl.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lock-xxl" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Img\lock-xxl.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Email icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Img\Email icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -223,7 +247,7 @@
   <data name="user icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Img\user icon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="reset password" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Img\reset password.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="blue eye slash icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Img\blue eye slash icon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

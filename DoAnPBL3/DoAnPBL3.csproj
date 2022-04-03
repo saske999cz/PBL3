@@ -152,6 +152,7 @@
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\EnumLanguage.cs" />
+    <Compile Include="Models\EnumRole.cs" />
     <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\Language.cs" />
     <Compile Include="Models\Order.cs" />
@@ -297,6 +298,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Books-2-icon.ico" />
+    <None Include="Img\blue eye slash icon.jpg" />
+    <None Include="Img\blue eye icon.jpg" />
+    <None Include="Img\private-xxl.png" />
+    <None Include="Img\navy exit icon.jpg" />
+    <None Include="Img\lock-xxl.png" />
+    <None Include="Img\close-window-xxl.png" />
+    <None Include="Img\cancel-xxl.png" />
     <None Include="Img\reset password.jpg" />
     <None Include="Img\new password.jpg" />
     <None Include="Img\verify code icon.png" />

@@ -14,10 +14,10 @@ namespace DoAnPBL3
         {
             context.Accounts.AddRange(new Account[]
             {
-                new Account {Username = "lehoanglong", Password = "lehoanglong", Email = "lelong.ll32@gmail.com", Role = "ADMIN"},
-                new Account {Username = "nguyenkhacthai", Password = "nguyenkhacthai", Email = "zed999cz@gmail.com", Role = "ADMIN"},
-                new Account {Username = "daothuytrang", Password = "daothuytrang", Email = "thuytrangdao240402@gmail.com", Role = "ADMIN"},
-                new Account {Username = "nguyentrongnghia", Password = "nguyentrongnghia", Email = "trongnghia161001@gmail.com", Role = "ADMIN"},
+                new Account {Username = "lehoanglong", Password = "lehoanglong", Email = "lelong.ll32@gmail.com", Role = EnumRole.Admin.ToString()},
+                new Account {Username = "nguyenkhacthai", Password = "nguyenkhacthai", Email = "zed999cz@gmail.com", Role = EnumRole.Admin.ToString()},
+                new Account {Username = "daothuytrang", Password = "daothuytrang", Email = "thuytrangdao240402@gmail.com", Role = EnumRole.Admin.ToString()},
+                new Account {Username = "nguyentrongnghia", Password = "nguyentrongnghia", Email = "trongnghia161001@gmail.com", Role = EnumRole.Admin.ToString()},
             });
             context.AdminAccounts.AddRange(new Admin[]
             {
