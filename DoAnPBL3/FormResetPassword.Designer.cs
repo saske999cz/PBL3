@@ -29,6 +29,7 @@ namespace DoAnPBL3
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormResetPassword));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
@@ -192,7 +193,7 @@ namespace DoAnPBL3
             // pictureBox1
             // 
             this.pictureBox1.Image = global::DoAnPBL3.Properties.Resources.bookstore_icon;
-            this.pictureBox1.Location = new System.Drawing.Point(157, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(155, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(100, 96);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -212,7 +213,7 @@ namespace DoAnPBL3
             // 
             // blueEyeIcon
             // 
-            this.blueEyeIcon.Image = global::DoAnPBL3.Properties.Resources.blue_eye_icon;
+            this.blueEyeIcon.Image = ((System.Drawing.Image)(resources.GetObject("blueEyeIcon.Image")));
             this.blueEyeIcon.Location = new System.Drawing.Point(319, 235);
             this.blueEyeIcon.Name = "blueEyeIcon";
             this.blueEyeIcon.Size = new System.Drawing.Size(44, 40);

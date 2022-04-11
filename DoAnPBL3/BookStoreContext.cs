@@ -10,7 +10,7 @@ namespace DoAnPBL3
         public BookStoreContext()
             : base("name=BookStoreContext")
         {
-            Database.SetInitializer<BookStoreContext>(new CreateAdmin());
+            Database.SetInitializer<BookStoreContext>(new CreateAdminAndEmployee());
         }
 
         public virtual DbSet<Author> Authors { get; set; }
