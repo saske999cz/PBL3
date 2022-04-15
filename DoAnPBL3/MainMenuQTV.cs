@@ -24,6 +24,10 @@ namespace DoAnPBL3
             btnLeftBorder = new Panel();
             btnLeftBorder.Size = new Size(7, 77);
             panelMenu.Controls.Add(btnLeftBorder);
+
+
+
+
             //Form
             this.Text = string.Empty;
             this.ControlBox = false;
@@ -78,7 +82,7 @@ namespace DoAnPBL3
             {
                 btnCurrent.BackColor = Color.FromArgb(31, 30, 68);
                 btnCurrent.ForeColor = Color.Gainsboro;
-                btnCurrent.TextAlign = ContentAlignment.MiddleLeft;
+                btnCurrent.TextAlign = ContentAlignment.MiddleCenter;
                 btnCurrent.IconColor = Color.Gainsboro;
                 btnCurrent.TextImageRelation = TextImageRelation.ImageBeforeText;
                 btnCurrent.ImageAlign = ContentAlignment.MiddleLeft;
@@ -229,9 +233,39 @@ namespace DoAnPBL3
 
         private void btnAdmin_Click(object sender, EventArgs e)
         {
+
             rjddmAdminSettingMenu.Show(btnAdmin, new Point(0, btnAdmin.Height));
+
         }
 
+        private void btnAdmin_MouseEnter(object sender, EventArgs e)
+        {
+            btnAdmin.BackColor = RGBColors.color4;
 
+        }
+
+        private void btnAdmin_MouseLeave(object sender, EventArgs e)
+        {
+            btnAdmin.BackColor = Color.FromArgb(26, 25, 62);
+
+        }
+
+        private void AdminPicture_Click(object sender, EventArgs e)
+        {
+
+            btnAdmin_Click(sender, e);
+        }
+
+        private void AdminPicture_MouseEnter(object sender, EventArgs e)
+        {
+            btnAdmin.BackColor = RGBColors.color4;
+
+        }
+
+        private void AdminPicture_MouseLeave(object sender, EventArgs e)
+        {
+            btnAdmin.BackColor = Color.FromArgb(26, 25, 62);
+
+        }
     }
 }

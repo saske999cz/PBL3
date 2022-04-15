@@ -57,5 +57,20 @@ namespace DoAnPBL3
         {
             btnHDTN.BackColor = Color.FromArgb(31, 30, 68);
         }
+
+        private void btnSXS_Click(object sender, EventArgs e)
+        {
+            rjDropDownMenuSXS.Show(btnSXS, new Point(0, btnSXS.Height));
+        }
+
+        private void FormQLBS_Load(object sender, EventArgs e)
+        {
+            rjDropDownMenuSXS.IsMainMenu = false;
+        }
+
+        private void rjtbTKNV__TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

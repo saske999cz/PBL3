@@ -34,8 +34,19 @@ namespace DoAnPBL3
         {
             bookStore = new BookStoreContext();
             bookStore.Languages.ToList(); // tương tác với DB 1 lần để rend ra CSDL
-            txtUserName.Text = username;
-            txtPassword.Text = password;
+            if (Properties.Settings.Default.username != "")
+                cbSaveAcc.Checked = true;
+            if (username != "" || password != "")
+            {
+                txtUserName.Text = username;
+                txtPassword.Text = password;
+            }
+            else
+            {
+                txtUserName.Text = Properties.Settings.Default.username;
+                txtPassword.Text = Properties.Settings.Default.password;
+                // btnLogin.PerformClick();
+            } 
         }
         private void exitIcon_Click(object sender, EventArgs e)
         {
@@ -45,6 +56,22 @@ namespace DoAnPBL3
             else
                 return;
         }
+
+        private void cbSaveAcc_CheckedChanged(object sender, EventArgs e)
+        {
+            if (txtUserName.Text.Trim() != "" && txtPassword.Text.Trim() != "")
+            {
+                if (cbSaveAcc.Checked)
+                {
+                    Properties.Settings.Default.username = txtUserName.Text;
+                    Properties.Settings.Default.password = txtPassword.Text;
+                    Properties.Settings.Default.Save();
+                }
+                else
+                    Properties.Settings.Default.Reset();
+            }    
+        }
+
         private void linkLabelForgotPassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Hide();
@@ -114,7 +141,12 @@ namespace DoAnPBL3
                     if (listEmployeeUsernameAccounts.ToList().Count > 0)
                     {
                         if ((listEmployeeAccounts.ToList()).Count > 0)
-                            MessageBox.Show("Hệ thống nhân viên đang trong giai đoạn phát triển", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        {
+                            Hide();
+                            MainMenuNV mainMenuNV = new MainMenuNV();
+                            mainMenuNV.ShowDialog();
+                            Close();
+                        }
                         else
                             MessageBox.Show("Sai mật khẩu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }

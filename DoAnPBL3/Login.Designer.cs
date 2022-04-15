@@ -40,10 +40,11 @@ namespace DoAnPBL3
             this.linkLabelForgotPassword = new System.Windows.Forms.LinkLabel();
             this.radioEmployee = new System.Windows.Forms.RadioButton();
             this.radioAdmin = new System.Windows.Forms.RadioButton();
+            this.btnLogin = new System.Windows.Forms.Button();
+            this.cbSaveAcc = new System.Windows.Forms.CheckBox();
             this.blueEyeIcon = new System.Windows.Forms.PictureBox();
             this.blueEyeSlashIcon = new System.Windows.Forms.PictureBox();
             this.exitIcon = new System.Windows.Forms.PictureBox();
-            this.btnLogin = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -132,10 +133,10 @@ namespace DoAnPBL3
             this.linkLabelForgotPassword.AutoSize = true;
             this.linkLabelForgotPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabelForgotPassword.LinkColor = System.Drawing.Color.MidnightBlue;
-            this.linkLabelForgotPassword.Location = new System.Drawing.Point(199, 483);
+            this.linkLabelForgotPassword.Location = new System.Drawing.Point(221, 495);
             this.linkLabelForgotPassword.Name = "linkLabelForgotPassword";
             this.linkLabelForgotPassword.Size = new System.Drawing.Size(129, 20);
-            this.linkLabelForgotPassword.TabIndex = 4;
+            this.linkLabelForgotPassword.TabIndex = 5;
             this.linkLabelForgotPassword.TabStop = true;
             this.linkLabelForgotPassword.Text = "Quên Mật Khẩu?";
             this.linkLabelForgotPassword.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelForgotPassword_LinkClicked);
@@ -145,7 +146,7 @@ namespace DoAnPBL3
             this.radioEmployee.AutoSize = true;
             this.radioEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioEmployee.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.radioEmployee.Location = new System.Drawing.Point(227, 436);
+            this.radioEmployee.Location = new System.Drawing.Point(249, 436);
             this.radioEmployee.Name = "radioEmployee";
             this.radioEmployee.Size = new System.Drawing.Size(101, 24);
             this.radioEmployee.TabIndex = 3;
@@ -158,13 +159,41 @@ namespace DoAnPBL3
             this.radioAdmin.Checked = true;
             this.radioAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioAdmin.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.radioAdmin.Location = new System.Drawing.Point(54, 436);
+            this.radioAdmin.Location = new System.Drawing.Point(47, 436);
             this.radioAdmin.Name = "radioAdmin";
             this.radioAdmin.Size = new System.Drawing.Size(87, 24);
             this.radioAdmin.TabIndex = 3;
             this.radioAdmin.TabStop = true;
             this.radioAdmin.Text = "Quản Trị";
             this.radioAdmin.UseVisualStyleBackColor = true;
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.AutoSize = true;
+            this.btnLogin.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.ForeColor = System.Drawing.Color.White;
+            this.btnLogin.Location = new System.Drawing.Point(135, 554);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(130, 35);
+            this.btnLogin.TabIndex = 6;
+            this.btnLogin.Text = "Đăng Nhập";
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
+            // cbSaveAcc
+            // 
+            this.cbSaveAcc.AutoSize = true;
+            this.cbSaveAcc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbSaveAcc.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.cbSaveAcc.Location = new System.Drawing.Point(47, 495);
+            this.cbSaveAcc.Name = "cbSaveAcc";
+            this.cbSaveAcc.Size = new System.Drawing.Size(140, 24);
+            this.cbSaveAcc.TabIndex = 4;
+            this.cbSaveAcc.Text = "Lưu Đăng Nhập";
+            this.cbSaveAcc.UseVisualStyleBackColor = true;
+            this.cbSaveAcc.CheckedChanged += new System.EventHandler(this.cbSaveAcc_CheckedChanged);
             // 
             // blueEyeIcon
             // 
@@ -201,21 +230,6 @@ namespace DoAnPBL3
             this.exitIcon.TabIndex = 10;
             this.exitIcon.TabStop = false;
             this.exitIcon.Click += new System.EventHandler(this.exitIcon_Click);
-            // 
-            // btnLogin
-            // 
-            this.btnLogin.AutoSize = true;
-            this.btnLogin.BackColor = System.Drawing.Color.MidnightBlue;
-            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(137, 530);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(130, 35);
-            this.btnLogin.TabIndex = 5;
-            this.btnLogin.Text = "Đăng Nhập";
-            this.btnLogin.UseVisualStyleBackColor = false;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // pictureBox3
             // 
@@ -254,6 +268,7 @@ namespace DoAnPBL3
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(410, 611);
+            this.Controls.Add(this.cbSaveAcc);
             this.Controls.Add(this.blueEyeIcon);
             this.Controls.Add(this.blueEyeSlashIcon);
             this.Controls.Add(this.radioEmployee);
@@ -307,5 +322,6 @@ namespace DoAnPBL3
         private System.Windows.Forms.RadioButton radioAdmin;
         private System.Windows.Forms.PictureBox blueEyeSlashIcon;
         private System.Windows.Forms.PictureBox blueEyeIcon;
+        private System.Windows.Forms.CheckBox cbSaveAcc;
     }
 }

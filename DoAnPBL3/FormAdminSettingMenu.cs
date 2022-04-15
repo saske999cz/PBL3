@@ -16,5 +16,25 @@ namespace DoAnPBL3
         {
             InitializeComponent();
         }
+
+        private void btnEditAccount_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSetupMode_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnNote_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -15,6 +15,21 @@
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -36,7 +51,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Books-2-icon.ico</ApplicationIcon>
+    <ApplicationIcon>books11.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -117,11 +132,35 @@
   <ItemGroup>
     <Compile Include="BookStoreContext.cs" />
     <Compile Include="CreateAdminAndEmployee.cs" />
+    <Compile Include="FormAddNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddNV.Designer.cs">
+      <DependentUpon>FormAddNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddSach.Designer.cs">
+      <DependentUpon>FormAddSach.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormAdminSettingMenu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormAdminSettingMenu.Designer.cs">
       <DependentUpon>FormAdminSettingMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAlert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAlert.Designer.cs">
+      <DependentUpon>FormAlert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMessageBox.Designer.cs">
+      <DependentUpon>FormMessageBox.cs</DependentUpon>
     </Compile>
     <Compile Include="FormQLBS.cs">
       <SubType>Form</SubType>
@@ -147,6 +186,12 @@
     <Compile Include="FormQLNV.Designer.cs">
       <DependentUpon>FormQLNV.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormQLS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQLS.Designer.cs">
+      <DependentUpon>FormQLS.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormResetPassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,11 +204,23 @@
     <Compile Include="FormSendCode.Designer.cs">
       <DependentUpon>FormSendCode.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTest.Designer.cs">
+      <DependentUpon>FormTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenuNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenuNV.Designer.cs">
+      <DependentUpon>MainMenuNV.cs</DependentUpon>
     </Compile>
     <Compile Include="MainMenuQTV.cs">
       <SubType>Form</SubType>
@@ -193,10 +250,35 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="RJButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="RJDropDownMenu.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="RJMessageBox.cs" />
+    <Compile Include="RJTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RJTextBox.Designer.cs">
+      <DependentUpon>RJTextBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="Settings.cs" />
+    <EmbeddedResource Include="FormAddNV.resx">
+      <DependentUpon>FormAddNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddSach.resx">
+      <DependentUpon>FormAddSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAdminSettingMenu.resx">
+      <DependentUpon>FormAdminSettingMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAlert.resx">
+      <DependentUpon>FormAlert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMessageBox.resx">
+      <DependentUpon>FormMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormQLBS.resx">
       <DependentUpon>FormQLBS.cs</DependentUpon>
     </EmbeddedResource>
@@ -218,6 +300,9 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MainMenuNV.resx">
+      <DependentUpon>MainMenuNV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainMenuQTV.resx">
       <DependentUpon>MainMenuQTV.cs</DependentUpon>
     </EmbeddedResource>
@@ -225,6 +310,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RJTextBox.resx">
+      <DependentUpon>RJTextBox.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -241,7 +329,30 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Books-2-icon.ico" />
+    <Content Include="books11.ico" />
+    <None Include="Img\api.png" />
+    <None Include="Img\buyer.png" />
+    <Content Include="Img\chat.png" />
+    <Content Include="Img\error.png" />
+    <Content Include="Img\exclamation.png" />
+    <Content Include="Img\information.png" />
+    <None Include="Img\logo menu.png" />
+    <None Include="Img\java.png" />
+    <None Include="Img\money-bag.png" />
+    <None Include="Img\package2.png" />
+    <None Include="Img\man.png" />
+    <Content Include="Img\question.png" />
+    <None Include="Img\web-browser.png" />
+    <None Include="Img\sql-file2.png" />
+    <None Include="Img\user1.png" />
+    <None Include="Img\team.png" />
+    <None Include="Img\user.png" />
+    <None Include="Img\user2.png" />
+    <Content Include="NotificationIcons\error.png" />
+    <Content Include="NotificationIcons\icons8_cancel_45px.png" />
+    <Content Include="NotificationIcons\info.png" />
+    <Content Include="NotificationIcons\success.png" />
+    <Content Include="NotificationIcons\warning.png" />
     <None Include="Img\revenue.png" />
     <None Include="Img\profits.png" />
     <None Include="Img\payment.png" />
@@ -253,7 +364,6 @@
     <None Include="Img\book.png" />
     <None Include="Img\logo menu 1.png" />
     <None Include="Img\Bookstore logo32.png" />
-    <None Include="Img\Bookstore logo.png" />
     <None Include="Img\blue eye slash icon.jpg" />
     <None Include="Img\blue eye icon.jpg" />
     <None Include="Img\private-xxl.png" />
@@ -265,7 +375,18 @@
     <None Include="Img\Email icon.png" />
     <None Include="Img\user icon.jpg" />
     <None Include="Img\bookstore_icon.png" />
-    <None Include="Img\Books-2-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

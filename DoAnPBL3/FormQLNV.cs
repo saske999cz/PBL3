@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FontAwesome.Sharp;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,10 +13,42 @@ namespace DoAnPBL3
 {
     public partial class FormQLNV : Form
     {
+        private IconButton btnCurrent;
         public FormQLNV()
         {
             InitializeComponent();
         }
+
+
+        private void DisableButton()
+        {
+            if (btnCurrent != null)
+            {
+                btnCurrent.BackColor = Color.FromArgb(34, 31, 46);
+                btnCurrent.ForeColor = Color.Gainsboro;
+                btnCurrent.TextAlign = ContentAlignment.MiddleCenter;
+                btnCurrent.IconColor = Color.Gainsboro;
+                btnCurrent.TextImageRelation = TextImageRelation.Overlay;
+                btnCurrent.ImageAlign = ContentAlignment.MiddleLeft;
+            }
+        }
+
+        private void ActivateButton(object senderBtn, Color color)
+        {
+            if (senderBtn != null)
+            {
+                DisableButton();
+                // Button
+                btnCurrent = (IconButton)senderBtn;
+                btnCurrent.BackColor = Color.FromArgb(157, 16, 221);
+                btnCurrent.ForeColor = color;
+                btnCurrent.TextAlign = ContentAlignment.MiddleCenter;
+                btnCurrent.IconColor = color;
+                btnCurrent.TextImageRelation = TextImageRelation.Overlay;
+                btnCurrent.ImageAlign = ContentAlignment.MiddleRight;
+            }
+        }
+
 
         private struct RGBColors
         {
@@ -36,24 +69,82 @@ namespace DoAnPBL3
             btnDeleteNV.BackColor = RGBColors.color4;
         }
 
-        private void btnHienThiNV_MouseEnter(object sender, EventArgs e)
+        private void btnSuaNV_MouseEnter(object sender, EventArgs e)
         {
-            btnHienThiNV.BackColor = RGBColors.color4;
+            btnSuaNV.BackColor = RGBColors.color4;
         }
 
         private void btnAddNV_MouseLeave(object sender, EventArgs e)
         {
-            btnAddNV.BackColor = Color.FromArgb(31, 30, 68);
+            btnAddNV.BackColor = Color.Green;
         }
 
         private void btnDeleteNV_MouseLeave(object sender, EventArgs e)
         {
-            btnDeleteNV.BackColor = Color.FromArgb(31, 30, 68);
+            btnDeleteNV.BackColor = Color.Maroon;
         }
 
-        private void btnHienThiNV_MouseLeave(object sender, EventArgs e)
+        private void btnSuaNV_MouseLeave(object sender, EventArgs e)
         {
-            btnHienThiNV.BackColor = Color.FromArgb(31, 30, 68);
+            btnSuaNV.BackColor = Color.DarkBlue;
+        }
+
+        private void btnAll_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, Color.Gainsboro);
+        }
+
+        private void btnNam_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, Color.Gainsboro);
+        }
+
+        private void btnNu_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, Color.Gainsboro);
+        }
+
+        private void btnAddNV_Click(object sender, EventArgs e)
+        {
+            new FormAddNV().Show();
+        }
+
+        private void btnDeleteNV_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSuaNV_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTKNV_Click(object sender, EventArgs e)
+        {
+            DisableButton();
+            if (rjtbTKNV.Texts == "")
+            {
+                btnCurrent = btnAll;
+                btnCurrent.BackColor = Color.FromArgb(157, 16, 221);
+                btnCurrent.ForeColor = Color.Gainsboro;
+                btnCurrent.TextAlign = ContentAlignment.MiddleCenter;
+                btnCurrent.IconColor = Color.Gainsboro;
+                btnCurrent.TextImageRelation = TextImageRelation.Overlay;
+                btnCurrent.ImageAlign = ContentAlignment.MiddleRight;
+            }
+
+            else
+                RJMessageBox.Show(rjtbTKNV.Texts, "Success", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+        }
+
+        private void rjtbTKNV_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (Char)Keys.Enter)
+            {
+                btnTKNV.PerformClick();
+                e.Handled = true;
+
+            }
         }
     }
 }
