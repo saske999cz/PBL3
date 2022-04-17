@@ -31,7 +31,7 @@ namespace DoAnPBL3
             InitializeComponent();
             this.username = username;
             this.password = password;
-            txtSendCode.Text = email;
+            txtEmail.Text = email;
             txtEmailPassword.Text = emailPassword;
         }
         private void exitIcon_Click(object sender, EventArgs e)
@@ -50,7 +50,7 @@ namespace DoAnPBL3
                 if (dialogResult == DialogResult.Yes)
                 {
                     Hide();
-                    Login login = new Login(username, password, txtSendCode.Text, txtEmailPassword.Text);
+                    Login login = new Login(username, password, txtEmail.Text, txtEmailPassword.Text);
                     login.ShowDialog();
                     Close();
                 }
@@ -59,7 +59,7 @@ namespace DoAnPBL3
             else
             {
                 Hide();
-                Login login = new Login(username, password, txtSendCode.Text, txtEmailPassword.Text);
+                Login login = new Login(username, password, txtEmail.Text, txtEmailPassword.Text);
                 login.ShowDialog();
                 Close();
             }
@@ -71,19 +71,19 @@ namespace DoAnPBL3
 
             Random rand = new Random();
 
-            if (txtSendCode.Text.Trim() == "" && txtEmailPassword.Text.Trim() == "")
+            if (txtEmail.Text.Trim() == "" && txtEmailPassword.Text.Trim() == "")
                 MessageBox.Show("Vui lòng nhập email và mật khẩu email", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            else if (txtSendCode.Text.Trim() == "")
+            else if (txtEmail.Text.Trim() == "")
                 MessageBox.Show("Vui lòng nhập email", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else if (txtEmailPassword.Text.Trim() == "")
                 MessageBox.Show("Vui lòng nhập mật khẩu email", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
             {
-                if (!Regex.IsMatch(txtSendCode.Text, EMAIL_REGEX))
+                if (!Regex.IsMatch(txtEmail.Text, EMAIL_REGEX))
                     MessageBox.Show("Email không hợp lệ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
                 {
-                    var listEmail = from account in bookStore.Accounts where account.Email == txtSendCode.Text select new { account.Email };
+                    var listEmail = from account in bookStore.Accounts where account.Email == txtEmail.Text select new { account.Email };
                     if (listEmail.ToList().Count == 0)
                         MessageBox.Show("Không tìm thấy email trong hệ thống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     else
@@ -91,14 +91,14 @@ namespace DoAnPBL3
                         randomCode = (rand.Next(999999)).ToString();
                         MailMessage mailMessage = new MailMessage();
                         mailMessage.From = new MailAddress("BookShop@gmail.com");
-                        mailMessage.To.Add(txtSendCode.Text);
+                        mailMessage.To.Add(txtEmail.Text);
                         mailMessage.Body = "Mã xác nhận là " + randomCode;
                         mailMessage.Subject = "Xác nhận thay đổi mật khẩu";
 
                         SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
                         smtp.EnableSsl = true;
                         smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
-                        smtp.Credentials = new NetworkCredential(txtSendCode.Text, txtEmailPassword.Text);
+                        smtp.Credentials = new NetworkCredential(txtEmail.Text, txtEmailPassword.Text);
                         try
                         {
                             smtp.Send(mailMessage);
@@ -125,7 +125,7 @@ namespace DoAnPBL3
                 {
                     if (randomCode == txtVerifyCode.Text)
                     {
-                        toAddress = txtSendCode.Text;
+                        toAddress = txtEmail.Text;
                         Hide();
                         FormResetPassword formResetPassword = new FormResetPassword(username, password);
                         formResetPassword.ShowDialog();

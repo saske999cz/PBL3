@@ -76,17 +76,17 @@ namespace DoAnPBL3
 
         private void btnAddNV_MouseLeave(object sender, EventArgs e)
         {
-            btnAddNV.BackColor = Color.Green;
+            btnAddNV.BackColor = Color.MediumSeaGreen;
         }
 
         private void btnDeleteNV_MouseLeave(object sender, EventArgs e)
         {
-            btnDeleteNV.BackColor = Color.Maroon;
+            btnDeleteNV.BackColor = Color.Firebrick;
         }
 
         private void btnSuaNV_MouseLeave(object sender, EventArgs e)
         {
-            btnSuaNV.BackColor = Color.DarkBlue;
+            btnSuaNV.BackColor = Color.DodgerBlue;
         }
 
         private void btnAll_Click(object sender, EventArgs e)
@@ -121,20 +121,15 @@ namespace DoAnPBL3
 
         private void btnTKNV_Click(object sender, EventArgs e)
         {
-            DisableButton();
             if (rjtbTKNV.Texts == "")
             {
-                btnCurrent = btnAll;
-                btnCurrent.BackColor = Color.FromArgb(157, 16, 221);
-                btnCurrent.ForeColor = Color.Gainsboro;
-                btnCurrent.TextAlign = ContentAlignment.MiddleCenter;
-                btnCurrent.IconColor = Color.Gainsboro;
-                btnCurrent.TextImageRelation = TextImageRelation.Overlay;
-                btnCurrent.ImageAlign = ContentAlignment.MiddleRight;
+                xuiSegmentNV.SelectedIndex = 0;
             }
-
             else
+            {
                 RJMessageBox.Show(rjtbTKNV.Texts, "Success", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                xuiSegmentNV.SelectedIndex = 0;
+            }
         }
 
         private void rjtbTKNV_KeyPress(object sender, KeyPressEventArgs e)

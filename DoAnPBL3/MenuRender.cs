@@ -17,24 +17,30 @@ namespace DoAnPBL3
         private int arrowThickness;
 
         //Constructor
+
         public MenuRenderer(bool isMainMenu, Color primaryColor, Color textColor)
             : base(new MenuColorTable(isMainMenu, primaryColor))
         {
             this.primaryColor = primaryColor;
-            this.textColor = textColor;
+            this.textColor = Color.White;
             if (isMainMenu) arrowThickness = 3;
             else arrowThickness = 2;
         }
 
+
         // Override
+
         protected override void OnRenderItemText(ToolStripItemTextRenderEventArgs e)
         {
             base.OnRenderItemText(e);
             e.Item.ForeColor = e.Item.Selected ? Color.White : textColor;
+
         }
 
         protected override void OnRenderArrow(ToolStripArrowRenderEventArgs e)
         {
+
+
             // Fields
             var graph = e.Graphics;
             var arrowSize = new Size(5, 12);
@@ -51,6 +57,11 @@ namespace DoAnPBL3
                 path.AddLine(rect.Right, rect.Top + rect.Height / 2, rect.Left, rect.Top + rect.Height);
                 graph.DrawPath(pen, path);
             }
+
+
+
+
         }
+
     }
 }

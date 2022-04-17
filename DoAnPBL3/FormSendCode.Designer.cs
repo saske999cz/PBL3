@@ -38,24 +38,24 @@ namespace DoAnPBL3
             this.btnSendCode = new System.Windows.Forms.Button();
             this.btnConfirm = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
-            this.txtSendCode = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtEmailPassword = new System.Windows.Forms.TextBox();
+            this.blueEyeIcon = new System.Windows.Forms.PictureBox();
+            this.blueEyeSlashIcon = new System.Windows.Forms.PictureBox();
             this.exitIcon = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.blueEyeSlashIcon = new System.Windows.Forms.PictureBox();
-            this.blueEyeIcon = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.blueEyeIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.blueEyeSlashIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.exitIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.blueEyeSlashIcon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.blueEyeIcon)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -160,15 +160,15 @@ namespace DoAnPBL3
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // txtSendCode
+            // txtEmail
             // 
-            this.txtSendCode.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSendCode.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.txtSendCode.Location = new System.Drawing.Point(100, 235);
-            this.txtSendCode.Name = "txtSendCode";
-            this.txtSendCode.Size = new System.Drawing.Size(280, 19);
-            this.txtSendCode.TabIndex = 0;
-            this.txtSendCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSendCode_KeyPress);
+            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEmail.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.txtEmail.Location = new System.Drawing.Point(100, 235);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(280, 19);
+            this.txtEmail.TabIndex = 0;
+            this.txtEmail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSendCode_KeyPress);
             // 
             // label4
             // 
@@ -200,6 +200,30 @@ namespace DoAnPBL3
             this.txtEmailPassword.Size = new System.Drawing.Size(280, 19);
             this.txtEmailPassword.TabIndex = 1;
             this.txtEmailPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEmailPassword_KeyPress);
+            // 
+            // blueEyeIcon
+            // 
+            this.blueEyeIcon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.blueEyeIcon.Image = global::DoAnPBL3.Properties.Resources.blue_eye_icon;
+            this.blueEyeIcon.Location = new System.Drawing.Point(336, 340);
+            this.blueEyeIcon.Name = "blueEyeIcon";
+            this.blueEyeIcon.Size = new System.Drawing.Size(44, 40);
+            this.blueEyeIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.blueEyeIcon.TabIndex = 13;
+            this.blueEyeIcon.TabStop = false;
+            this.blueEyeIcon.Click += new System.EventHandler(this.blueEyeIcon_Click);
+            // 
+            // blueEyeSlashIcon
+            // 
+            this.blueEyeSlashIcon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.blueEyeSlashIcon.Image = global::DoAnPBL3.Properties.Resources.blue_eye_slash_icon;
+            this.blueEyeSlashIcon.Location = new System.Drawing.Point(336, 340);
+            this.blueEyeSlashIcon.Name = "blueEyeSlashIcon";
+            this.blueEyeSlashIcon.Size = new System.Drawing.Size(44, 40);
+            this.blueEyeSlashIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.blueEyeSlashIcon.TabIndex = 12;
+            this.blueEyeSlashIcon.TabStop = false;
+            this.blueEyeSlashIcon.Click += new System.EventHandler(this.blueEyeSlashIcon_Click);
             // 
             // exitIcon
             // 
@@ -253,30 +277,6 @@ namespace DoAnPBL3
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
-            // blueEyeSlashIcon
-            // 
-            this.blueEyeSlashIcon.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.blueEyeSlashIcon.Image = global::DoAnPBL3.Properties.Resources.blue_eye_slash_icon;
-            this.blueEyeSlashIcon.Location = new System.Drawing.Point(336, 340);
-            this.blueEyeSlashIcon.Name = "blueEyeSlashIcon";
-            this.blueEyeSlashIcon.Size = new System.Drawing.Size(44, 40);
-            this.blueEyeSlashIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.blueEyeSlashIcon.TabIndex = 12;
-            this.blueEyeSlashIcon.TabStop = false;
-            this.blueEyeSlashIcon.Click += new System.EventHandler(this.blueEyeSlashIcon_Click);
-            // 
-            // blueEyeIcon
-            // 
-            this.blueEyeIcon.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.blueEyeIcon.Image = global::DoAnPBL3.Properties.Resources.blue_eye_icon;
-            this.blueEyeIcon.Location = new System.Drawing.Point(336, 340);
-            this.blueEyeIcon.Name = "blueEyeIcon";
-            this.blueEyeIcon.Size = new System.Drawing.Size(44, 40);
-            this.blueEyeIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.blueEyeIcon.TabIndex = 13;
-            this.blueEyeIcon.TabStop = false;
-            this.blueEyeIcon.Click += new System.EventHandler(this.blueEyeIcon_Click);
-            // 
             // FormSendCode
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -291,7 +291,7 @@ namespace DoAnPBL3
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.btnSendCode);
             this.Controls.Add(this.txtEmailPassword);
-            this.Controls.Add(this.txtSendCode);
+            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtVerifyCode);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
@@ -310,13 +310,13 @@ namespace DoAnPBL3
             this.Name = "FormSendCode";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Xác Nhận Tài Khoản";
+            ((System.ComponentModel.ISupportInitialize)(this.blueEyeIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.blueEyeSlashIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.exitIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.blueEyeSlashIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.blueEyeIcon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -335,7 +335,7 @@ namespace DoAnPBL3
         private System.Windows.Forms.Button btnSendCode;
         private System.Windows.Forms.Button btnConfirm;
         private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.TextBox txtSendCode;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox exitIcon;
         private System.Windows.Forms.PictureBox pictureBox4;

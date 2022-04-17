@@ -13,11 +13,10 @@ using System.Windows.Forms;
 namespace DoAnPBL3
 {
     public partial class FormAddSach : Form
-    {
-        //Fields
-        private int borderRadius = 20;
+    {//Fields
+        private int borderRadius = 16;
         private int borderSize = 2;
-        private Color borderColor = Color.FromArgb(128, 128, 255);
+        private Color borderColor = Color.RoyalBlue;
         //Constructor
         public FormAddSach()
         {
@@ -48,7 +47,11 @@ namespace DoAnPBL3
             }
         }
 
-
+        public void Alert(string msg, Form_Alert.enmType type)
+        {
+            Form_Alert frm = new Form_Alert();
+            frm.showAlert(msg, type);
+        }
 
         private GraphicsPath GetRoundedPath(Rectangle rect, float radius)
         {
@@ -189,7 +192,7 @@ namespace DoAnPBL3
 
         private void panelContainer_Paint(object sender, PaintEventArgs e)
         {
-            ControlRegionAndBorder(panelContainer, borderRadius - (borderSize / 2), e.Graphics, borderColor);
+
         }
 
 
@@ -206,5 +209,15 @@ namespace DoAnPBL3
             this.Invalidate();
         }
 
+        private void rjbtnOK_Click(object sender, EventArgs e)
+        {
+            this.Alert("Thêm sách mới thành công", Form_Alert.enmType.Success);
+            this.Close();
+        }
+
+        private void rjbtnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -80,7 +80,7 @@ namespace DoAnPBL3
         {
             if (btnCurrent != null)
             {
-                btnCurrent.BackColor = Color.FromArgb(31, 30, 68);
+                btnCurrent.BackColor = Color.FromArgb(22, 33, 49);
                 btnCurrent.ForeColor = Color.Gainsboro;
                 btnCurrent.TextAlign = ContentAlignment.MiddleCenter;
                 btnCurrent.IconColor = Color.Gainsboro;
@@ -115,7 +115,7 @@ namespace DoAnPBL3
         private void btnQLS_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color6);
-            OpenChildForm(new FormQLNV());
+            OpenChildForm(new FormQLS());
         }
 
         private void btnBS_Click(object sender, EventArgs e)
@@ -218,7 +218,7 @@ namespace DoAnPBL3
             timer1.Start();
             lblTime.Text = DateTime.Now.ToLongTimeString();
             lblDate.Text = DateTime.Now.ToLongDateString();
-            rjddmAdminSettingMenu.IsMainMenu = true;
+            rjddmUserSettingMenu.IsMainMenu = true;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -230,7 +230,7 @@ namespace DoAnPBL3
         private void btnAdmin_Click(object sender, EventArgs e)
         {
 
-            rjddmAdminSettingMenu.Show(btnAdmin, new Point(0, btnAdmin.Height));
+            rjddmUserSettingMenu.Show(btnAdmin, new Point(0, btnAdmin.Height));
 
         }
 

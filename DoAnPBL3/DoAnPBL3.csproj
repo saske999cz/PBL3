@@ -69,6 +69,9 @@
     <Reference Include="FontAwesome.Sharp, Version=5.15.4.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.5.15.4\lib\net472\FontAwesome.Sharp.dll</HintPath>
     </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.3.2, Culture=neutral, PublicKeyToken=4015e4865bda28a4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.3.2\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.6.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
@@ -83,6 +86,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Linq.Expressions, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Linq.Expressions.4.3.0\lib\net463\System.Linq.Expressions.dll</HintPath>
       <Private>True</Private>
@@ -128,10 +132,19 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="WindowsBase" />
+    <Reference Include="XanderUI">
+      <HintPath>..\..\..\Downloads\XanderUI-master\XanderUI.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BookStoreContext.cs" />
     <Compile Include="CreateAdminAndEmployee.cs" />
+    <Compile Include="FormAddKH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddKH.Designer.cs">
+      <DependentUpon>FormAddKH.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormAddNV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,6 +169,12 @@
     <Compile Include="FormAlert.Designer.cs">
       <DependentUpon>FormAlert.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMessageBox.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,6 +187,12 @@
     <Compile Include="FormQLBS.Designer.cs">
       <DependentUpon>FormQLBS.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormQLBSNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQLBSNV.Designer.cs">
+      <DependentUpon>FormQLBSNV.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormQLDT.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,6 +204,12 @@
     </Compile>
     <Compile Include="FormQLKH.Designer.cs">
       <DependentUpon>FormQLKH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQLKHNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQLKHNV.Designer.cs">
+      <DependentUpon>FormQLKHNV.cs</DependentUpon>
     </Compile>
     <Compile Include="FormQLNV.cs">
       <SubType>Form</SubType>
@@ -203,6 +234,12 @@
     </Compile>
     <Compile Include="FormSendCode.Designer.cs">
       <DependentUpon>FormSendCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSend_Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSend_Code.Designer.cs">
+      <DependentUpon>FormSend_Code.cs</DependentUpon>
     </Compile>
     <Compile Include="FormTest.cs">
       <SubType>Form</SubType>
@@ -253,6 +290,9 @@
     <Compile Include="RJButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="RJComboBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="RJDropDownMenu.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -264,6 +304,9 @@
       <DependentUpon>RJTextBox.cs</DependentUpon>
     </Compile>
     <Compile Include="Settings.cs" />
+    <EmbeddedResource Include="FormAddKH.resx">
+      <DependentUpon>FormAddKH.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormAddNV.resx">
       <DependentUpon>FormAddNV.cs</DependentUpon>
     </EmbeddedResource>
@@ -276,11 +319,17 @@
     <EmbeddedResource Include="FormAlert.resx">
       <DependentUpon>FormAlert.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMessageBox.resx">
       <DependentUpon>FormMessageBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormQLBS.resx">
       <DependentUpon>FormQLBS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQLBSNV.resx">
+      <DependentUpon>FormQLBSNV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormQLDT.resx">
       <DependentUpon>FormQLDT.cs</DependentUpon>
@@ -288,14 +337,26 @@
     <EmbeddedResource Include="FormQLKH.resx">
       <DependentUpon>FormQLKH.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormQLKHNV.resx">
+      <DependentUpon>FormQLKHNV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormQLNV.resx">
       <DependentUpon>FormQLNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQLS.resx">
+      <DependentUpon>FormQLS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormResetPassword.resx">
       <DependentUpon>FormResetPassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormSendCode.resx">
       <DependentUpon>FormSendCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSend_Code.resx">
+      <DependentUpon>FormSend_Code.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTest.resx">
+      <DependentUpon>FormTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -330,17 +391,44 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="books11.ico" />
+    <None Include="Resources\writing.png" />
+    <None Include="Resources\night-mode.png" />
+    <None Include="Resources\human-resources.png" />
+    <None Include="Resources\teamwork1.png" />
+    <None Include="Resources\shopping-bags.png" />
+    <None Include="Resources\fairy-tale.png" />
+    <None Include="Resources\add.png" />
+    <None Include="Resources\add book.png" />
+    <None Include="Resources\division.png" />
+    <None Include="Resources\buyer1.png" />
+    <None Include="Resources\book2.png" />
     <None Include="Img\api.png" />
     <None Include="Img\buyer.png" />
+    <None Include="Img\b logo.png" />
+    <None Include="Img\b logo 2.png" />
     <Content Include="Img\chat.png" />
     <Content Include="Img\error.png" />
     <Content Include="Img\exclamation.png" />
+    <None Include="Img\exit.png" />
+    <None Include="Img\icons8_user_settings_30px.png" />
+    <None Include="Img\icons8_do_not_disturb_ios_30px.png" />
+    <None Include="Img\icons8_reserve_30px_1.png" />
+    <None Include="Img\icons8_Logout_30px.png" />
+    <None Include="Img\icons8_eye_24px.png" />
+    <None Include="Img\icons8_hide_24px.png" />
+    <None Include="Img\icons8_search_20px.png" />
     <Content Include="Img\information.png" />
     <None Include="Img\logo menu.png" />
     <None Include="Img\java.png" />
     <None Include="Img\money-bag.png" />
     <None Include="Img\package2.png" />
     <None Include="Img\man.png" />
+    <None Include="Img\Logo Project AM.png" />
+    <None Include="Img\Mesa de trabajo 1 copia%404x.png" />
+    <None Include="Img\private.png" />
+    <None Include="Img\Logo Project AM 2.png" />
+    <None Include="Img\logo bk.png" />
+    <None Include="Img\man 1.png" />
     <Content Include="Img\question.png" />
     <None Include="Img\web-browser.png" />
     <None Include="Img\sql-file2.png" />
@@ -348,6 +436,8 @@
     <None Include="Img\team.png" />
     <None Include="Img\user.png" />
     <None Include="Img\user2.png" />
+    <None Include="Img\show.png" />
+    <None Include="Img\women.png" />
     <Content Include="NotificationIcons\error.png" />
     <Content Include="NotificationIcons\icons8_cancel_45px.png" />
     <Content Include="NotificationIcons\info.png" />

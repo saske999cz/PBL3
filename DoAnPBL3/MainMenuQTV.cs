@@ -17,6 +17,7 @@ namespace DoAnPBL3
         private IconButton btnCurrent;
         private Panel btnLeftBorder;
         private Form currentChildForm;
+      
 
         public MainMenuQTV()
         {
@@ -100,16 +101,18 @@ namespace DoAnPBL3
                 currentChildForm.Close();
             }
 
-            currentChildForm = childForm;
-            childForm.TopLevel = false;
-            childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock = DockStyle.Fill;
-            panelDesktop.Controls.Add(childForm);
-            panelDesktop.Tag = childForm;
-            childForm.BringToFront();
-            childForm.Show();
-            lblTitleChildForm.Text = childForm.Text;
+                currentChildForm = childForm;
+                childForm.TopLevel = false;
+                childForm.FormBorderStyle = FormBorderStyle.None;
+                childForm.Dock = DockStyle.Fill;
+                panelDesktop.Controls.Add(childForm);
+                panelDesktop.Tag = childForm;
+                childForm.BringToFront();
+                childForm.Show();
+                lblTitleChildForm.Text = childForm.Text;
+            
 
+            
         }
 
         private void btnQLNV_Click(object sender, EventArgs e)
@@ -132,14 +135,18 @@ namespace DoAnPBL3
 
         private void btnQLKH_Click(object sender, EventArgs e)
         {
+            
             ActivateButton(sender, RGBColors.color4);
             OpenChildForm(new FormQLKH());
         }
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            currentChildForm.Close();
-            Reset();
+            if (currentChildForm != null)
+            {
+                currentChildForm.Close();
+                Reset();
+            }
         }
 
         private void Reset()
@@ -219,17 +226,13 @@ namespace DoAnPBL3
 
         private void MainMenuQTV_Load(object sender, EventArgs e)
         {
-            timer1.Start();
-            lblTime.Text = DateTime.Now.ToLongTimeString();
+
+
             lblDate.Text = DateTime.Now.ToLongDateString();
             rjddmAdminSettingMenu.IsMainMenu = true;
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            lblTime.Text = DateTime.Now.ToLongTimeString();
-            timer1.Start();
-        }
+
 
         private void btnAdmin_Click(object sender, EventArgs e)
         {
@@ -267,5 +270,18 @@ namespace DoAnPBL3
             btnAdmin.BackColor = Color.FromArgb(26, 25, 62);
 
         }
+
+        private void rjddmAdminSettingMenu_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+          if(đăngXuấtToolStripMenuItem.Selected == true)
+            {
+                this.Hide();
+                new FormLogin().ShowDialog();
+                this.Close();
+
+            }
+        }
+
+       
     }
 }
