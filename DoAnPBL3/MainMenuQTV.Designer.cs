@@ -241,8 +241,9 @@ namespace DoAnPBL3
             // 
             this.AdminPicture.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.AdminPicture.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
-            this.AdminPicture.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AdminPicture.BackgroundImage")));
+            this.AdminPicture.BackgroundImage = global::DoAnPBL3.Properties.Resources.test5;
             this.AdminPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.AdminPicture.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AdminPicture.ForeColor = System.Drawing.SystemColors.ControlText;
             this.AdminPicture.IconChar = FontAwesome.Sharp.IconChar.None;
             this.AdminPicture.IconColor = System.Drawing.SystemColors.ControlText;

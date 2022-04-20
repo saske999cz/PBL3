@@ -16,7 +16,7 @@ namespace DoAnPBL3
     {//Fields
         private int borderRadius = 16;
         private int borderSize = 2;
-        private Color borderColor = Color.RoyalBlue;
+        private Color borderColor = Color.NavajoWhite;
         //Constructor
         public FormAddSach()
         {

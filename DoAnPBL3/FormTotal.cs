@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace DoAnPBL3
 {
-    public partial class FormTest : Form
+    public partial class FormTotal : Form
     {
-        public FormTest()
+        public FormTotal()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            RJMessageBox.Show("You pressed the button");
         }
     }
 }

@@ -181,6 +181,12 @@
     <Compile Include="FormMessageBox.Designer.cs">
       <DependentUpon>FormMessageBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormMuaSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMuaSach.Designer.cs">
+      <DependentUpon>FormMuaSach.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormQLBS.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -241,11 +247,17 @@
     <Compile Include="FormSend_Code.Designer.cs">
       <DependentUpon>FormSend_Code.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormTest.cs">
+    <Compile Include="FormNhapMua.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormTest.Designer.cs">
-      <DependentUpon>FormTest.cs</DependentUpon>
+    <Compile Include="FormNhapMua.Designer.cs">
+      <DependentUpon>FormNhapMua.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTotal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTotal.Designer.cs">
+      <DependentUpon>FormTotal.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -325,6 +337,9 @@
     <EmbeddedResource Include="FormMessageBox.resx">
       <DependentUpon>FormMessageBox.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormMuaSach.resx">
+      <DependentUpon>FormMuaSach.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormQLBS.resx">
       <DependentUpon>FormQLBS.cs</DependentUpon>
     </EmbeddedResource>
@@ -355,8 +370,11 @@
     <EmbeddedResource Include="FormSend_Code.resx">
       <DependentUpon>FormSend_Code.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormTest.resx">
-      <DependentUpon>FormTest.cs</DependentUpon>
+    <EmbeddedResource Include="FormNhapMua.resx">
+      <DependentUpon>FormNhapMua.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTotal.resx">
+      <DependentUpon>FormTotal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -391,6 +409,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="books11.ico" />
+    <None Include="Resources\test2.png" />
     <None Include="Resources\writing.png" />
     <None Include="Resources\night-mode.png" />
     <None Include="Resources\human-resources.png" />
@@ -438,6 +457,9 @@
     <None Include="Img\user2.png" />
     <None Include="Img\show.png" />
     <None Include="Img\women.png" />
+    <None Include="Img\vietnam flag.png" />
+    <None Include="Img\united-kingdom flag.png" />
+    <None Include="Img\shopping-cart.png" />
     <Content Include="NotificationIcons\error.png" />
     <Content Include="NotificationIcons\icons8_cancel_45px.png" />
     <Content Include="NotificationIcons\info.png" />

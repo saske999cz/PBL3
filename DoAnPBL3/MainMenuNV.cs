@@ -121,7 +121,7 @@ namespace DoAnPBL3
         private void btnBS_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color2);
-            OpenChildForm(new FormQLBS());
+            OpenChildForm(new FormQLBSNV());
         }
 
 
@@ -129,7 +129,7 @@ namespace DoAnPBL3
         private void btnQLKH_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color4);
-            OpenChildForm(new FormQLKH());
+            OpenChildForm(new FormQLKHNV());
         }
 
         private void btnHome_Click(object sender, EventArgs e)

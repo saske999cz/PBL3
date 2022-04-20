@@ -44,6 +44,11 @@ namespace DoAnPBL3
             this.label1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panelShadow = new System.Windows.Forms.Panel();
+            this.rjddmUserSettingMenu = new DoAnPBL3.RJDropDownMenu(this.components);
+            this.chỉnhSửaTàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.thayĐổiThemeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ghiChúToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.iconPictureBox6 = new FontAwesome.Sharp.IconPictureBox();
             this.iconPictureBox5 = new FontAwesome.Sharp.IconPictureBox();
             this.iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
@@ -60,15 +65,11 @@ namespace DoAnPBL3
             this.btnBS = new FontAwesome.Sharp.IconButton();
             this.btnQLS = new FontAwesome.Sharp.IconButton();
             this.btnHome = new System.Windows.Forms.PictureBox();
-            this.rjddmUserSettingMenu = new DoAnPBL3.RJDropDownMenu(this.components);
-            this.chỉnhSửaTàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.thayĐổiThemeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ghiChúToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelTitleBar.SuspendLayout();
             this.panelDesktop.SuspendLayout();
+            this.rjddmUserSettingMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).BeginInit();
@@ -82,7 +83,6 @@ namespace DoAnPBL3
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
-            this.rjddmUserSettingMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -227,7 +227,7 @@ namespace DoAnPBL3
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(371, 144);
+            this.label3.Location = new System.Drawing.Point(370, 162);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(295, 24);
@@ -274,6 +274,56 @@ namespace DoAnPBL3
             this.panelShadow.Name = "panelShadow";
             this.panelShadow.Size = new System.Drawing.Size(983, 9);
             this.panelShadow.TabIndex = 5;
+            // 
+            // rjddmUserSettingMenu
+            // 
+            this.rjddmUserSettingMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(43)))), ((int)(((byte)(59)))));
+            this.rjddmUserSettingMenu.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjddmUserSettingMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.rjddmUserSettingMenu.IsMainMenu = false;
+            this.rjddmUserSettingMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.chỉnhSửaTàiKhoảnToolStripMenuItem,
+            this.thayĐổiThemeToolStripMenuItem,
+            this.ghiChúToolStripMenuItem,
+            this.đăngXuấtToolStripMenuItem});
+            this.rjddmUserSettingMenu.MenuItemHeight = 25;
+            this.rjddmUserSettingMenu.MenuItemTextColor = System.Drawing.Color.DimGray;
+            this.rjddmUserSettingMenu.Name = "rjddmAdminSettingMenu";
+            this.rjddmUserSettingMenu.PrimaryColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjddmUserSettingMenu.Size = new System.Drawing.Size(204, 92);
+            // 
+            // chỉnhSửaTàiKhoảnToolStripMenuItem
+            // 
+            this.chỉnhSửaTàiKhoảnToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(43)))), ((int)(((byte)(59)))));
+            this.chỉnhSửaTàiKhoảnToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.chỉnhSửaTàiKhoảnToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.chỉnhSửaTàiKhoảnToolStripMenuItem.Name = "chỉnhSửaTàiKhoảnToolStripMenuItem";
+            this.chỉnhSửaTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
+            this.chỉnhSửaTàiKhoảnToolStripMenuItem.Text = "Chỉnh sửa tài khoản";
+            // 
+            // thayĐổiThemeToolStripMenuItem
+            // 
+            this.thayĐổiThemeToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.thayĐổiThemeToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.thayĐổiThemeToolStripMenuItem.Name = "thayĐổiThemeToolStripMenuItem";
+            this.thayĐổiThemeToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
+            this.thayĐổiThemeToolStripMenuItem.Text = "Thay đổi theme";
+            // 
+            // ghiChúToolStripMenuItem
+            // 
+            this.ghiChúToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.ghiChúToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ghiChúToolStripMenuItem.Name = "ghiChúToolStripMenuItem";
+            this.ghiChúToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
+            this.ghiChúToolStripMenuItem.Text = "Ghi chú";
+            // 
+            // đăngXuấtToolStripMenuItem
+            // 
+            this.đăngXuấtToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.đăngXuấtToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
+            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
+            this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
             // 
             // iconPictureBox6
             // 
@@ -358,12 +408,12 @@ namespace DoAnPBL3
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Image = global::DoAnPBL3.Properties.Resources.Bookstore_logo32;
-            this.pictureBox1.Location = new System.Drawing.Point(392, -43);
+            this.pictureBox1.Image = global::DoAnPBL3.Properties.Resources.Logo_Project_AM_2;
+            this.pictureBox1.Location = new System.Drawing.Point(391, -25);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(244, 228);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             // 
@@ -403,8 +453,8 @@ namespace DoAnPBL3
             // 
             this.AdminPicture.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.AdminPicture.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
-            this.AdminPicture.BackgroundImage = global::DoAnPBL3.Properties.Resources.user2;
-            this.AdminPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.AdminPicture.BackgroundImage = global::DoAnPBL3.Properties.Resources.test2;
+            this.AdminPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.AdminPicture.ForeColor = System.Drawing.SystemColors.ControlText;
             this.AdminPicture.IconChar = FontAwesome.Sharp.IconChar.None;
             this.AdminPicture.IconColor = System.Drawing.SystemColors.ControlText;
@@ -582,56 +632,6 @@ namespace DoAnPBL3
             this.btnHome.TabStop = false;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
-            // rjddmUserSettingMenu
-            // 
-            this.rjddmUserSettingMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(43)))), ((int)(((byte)(59)))));
-            this.rjddmUserSettingMenu.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjddmUserSettingMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.rjddmUserSettingMenu.IsMainMenu = false;
-            this.rjddmUserSettingMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.chỉnhSửaTàiKhoảnToolStripMenuItem,
-            this.thayĐổiThemeToolStripMenuItem,
-            this.ghiChúToolStripMenuItem,
-            this.đăngXuấtToolStripMenuItem});
-            this.rjddmUserSettingMenu.MenuItemHeight = 25;
-            this.rjddmUserSettingMenu.MenuItemTextColor = System.Drawing.Color.DimGray;
-            this.rjddmUserSettingMenu.Name = "rjddmAdminSettingMenu";
-            this.rjddmUserSettingMenu.PrimaryColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjddmUserSettingMenu.Size = new System.Drawing.Size(204, 92);
-            // 
-            // chỉnhSửaTàiKhoảnToolStripMenuItem
-            // 
-            this.chỉnhSửaTàiKhoảnToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(43)))), ((int)(((byte)(59)))));
-            this.chỉnhSửaTàiKhoảnToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.chỉnhSửaTàiKhoảnToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.chỉnhSửaTàiKhoảnToolStripMenuItem.Name = "chỉnhSửaTàiKhoảnToolStripMenuItem";
-            this.chỉnhSửaTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
-            this.chỉnhSửaTàiKhoảnToolStripMenuItem.Text = "Chỉnh sửa tài khoản";
-            // 
-            // thayĐổiThemeToolStripMenuItem
-            // 
-            this.thayĐổiThemeToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.thayĐổiThemeToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.thayĐổiThemeToolStripMenuItem.Name = "thayĐổiThemeToolStripMenuItem";
-            this.thayĐổiThemeToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
-            this.thayĐổiThemeToolStripMenuItem.Text = "Thay đổi theme";
-            // 
-            // ghiChúToolStripMenuItem
-            // 
-            this.ghiChúToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.ghiChúToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ghiChúToolStripMenuItem.Name = "ghiChúToolStripMenuItem";
-            this.ghiChúToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
-            this.ghiChúToolStripMenuItem.Text = "Ghi chú";
-            // 
-            // đăngXuấtToolStripMenuItem
-            // 
-            this.đăngXuấtToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.đăngXuấtToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
-            this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
-            // 
             // MainMenuNV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -652,6 +652,7 @@ namespace DoAnPBL3
             this.panelTitleBar.PerformLayout();
             this.panelDesktop.ResumeLayout(false);
             this.panelDesktop.PerformLayout();
+            this.rjddmUserSettingMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).EndInit();
@@ -665,7 +666,6 @@ namespace DoAnPBL3
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).EndInit();
-            this.rjddmUserSettingMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

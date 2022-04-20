@@ -76,7 +76,7 @@ namespace DoAnPBL3
             this.panelContainer.Controls.Add(this.panelTitleBar);
             this.panelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContainer.Location = new System.Drawing.Point(0, 0);
-            this.panelContainer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelContainer.Margin = new System.Windows.Forms.Padding(2);
             this.panelContainer.Name = "panelContainer";
             this.panelContainer.Size = new System.Drawing.Size(356, 562);
             this.panelContainer.TabIndex = 2;
@@ -92,6 +92,7 @@ namespace DoAnPBL3
             this.rjtbPrice.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjtbPrice.ForeColor = System.Drawing.Color.DimGray;
             this.rjtbPrice.Location = new System.Drawing.Point(143, 428);
+            this.rjtbPrice.Margin = new System.Windows.Forms.Padding(4);
             this.rjtbPrice.Multiline = false;
             this.rjtbPrice.Name = "rjtbPrice";
             this.rjtbPrice.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
@@ -126,7 +127,7 @@ namespace DoAnPBL3
             this.rjbtnCancel.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjbtnCancel.ForeColor = System.Drawing.Color.White;
             this.rjbtnCancel.Location = new System.Drawing.Point(194, 514);
-            this.rjbtnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rjbtnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.rjbtnCancel.Name = "rjbtnCancel";
             this.rjbtnCancel.Size = new System.Drawing.Size(113, 36);
             this.rjbtnCancel.TabIndex = 20;
@@ -147,7 +148,7 @@ namespace DoAnPBL3
             this.rjbtnOK.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjbtnOK.ForeColor = System.Drawing.Color.White;
             this.rjbtnOK.Location = new System.Drawing.Point(53, 514);
-            this.rjbtnOK.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rjbtnOK.Margin = new System.Windows.Forms.Padding(2);
             this.rjbtnOK.Name = "rjbtnOK";
             this.rjbtnOK.Size = new System.Drawing.Size(113, 36);
             this.rjbtnOK.TabIndex = 19;
@@ -173,7 +174,7 @@ namespace DoAnPBL3
             this.rjcbGender.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.rjcbGender.ListTextColor = System.Drawing.Color.DimGray;
             this.rjcbGender.Location = new System.Drawing.Point(143, 172);
-            this.rjcbGender.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rjcbGender.Margin = new System.Windows.Forms.Padding(2);
             this.rjcbGender.MinimumSize = new System.Drawing.Size(150, 24);
             this.rjcbGender.Name = "rjcbGender";
             this.rjcbGender.Padding = new System.Windows.Forms.Padding(2);
@@ -191,6 +192,7 @@ namespace DoAnPBL3
             this.rjtbTheLoai.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjtbTheLoai.ForeColor = System.Drawing.Color.DimGray;
             this.rjtbTheLoai.Location = new System.Drawing.Point(143, 362);
+            this.rjtbTheLoai.Margin = new System.Windows.Forms.Padding(4);
             this.rjtbTheLoai.Multiline = false;
             this.rjtbTheLoai.Name = "rjtbTheLoai";
             this.rjtbTheLoai.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
@@ -212,6 +214,7 @@ namespace DoAnPBL3
             this.rjtbSDT.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjtbSDT.ForeColor = System.Drawing.Color.DimGray;
             this.rjtbSDT.Location = new System.Drawing.Point(143, 298);
+            this.rjtbSDT.Margin = new System.Windows.Forms.Padding(4);
             this.rjtbSDT.Multiline = false;
             this.rjtbSDT.Name = "rjtbSDT";
             this.rjtbSDT.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
@@ -233,6 +236,7 @@ namespace DoAnPBL3
             this.rjtbAddress.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjtbAddress.ForeColor = System.Drawing.Color.DimGray;
             this.rjtbAddress.Location = new System.Drawing.Point(143, 234);
+            this.rjtbAddress.Margin = new System.Windows.Forms.Padding(4);
             this.rjtbAddress.Multiline = false;
             this.rjtbAddress.Name = "rjtbAddress";
             this.rjtbAddress.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
@@ -254,6 +258,7 @@ namespace DoAnPBL3
             this.rjtbDateXB.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjtbDateXB.ForeColor = System.Drawing.Color.DimGray;
             this.rjtbDateXB.Location = new System.Drawing.Point(143, 114);
+            this.rjtbDateXB.Margin = new System.Windows.Forms.Padding(4);
             this.rjtbDateXB.Multiline = false;
             this.rjtbDateXB.Name = "rjtbDateXB";
             this.rjtbDateXB.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
@@ -275,6 +280,7 @@ namespace DoAnPBL3
             this.rjtbNameNV.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjtbNameNV.ForeColor = System.Drawing.Color.DimGray;
             this.rjtbNameNV.Location = new System.Drawing.Point(143, 53);
+            this.rjtbNameNV.Margin = new System.Windows.Forms.Padding(4);
             this.rjtbNameNV.Multiline = false;
             this.rjtbNameNV.Name = "rjtbNameNV";
             this.rjtbNameNV.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
@@ -354,12 +360,12 @@ namespace DoAnPBL3
             // 
             // panelTitleBar
             // 
-            this.panelTitleBar.BackColor = System.Drawing.Color.RoyalBlue;
+            this.panelTitleBar.BackColor = System.Drawing.Color.NavajoWhite;
             this.panelTitleBar.Controls.Add(this.pictureBox2);
             this.panelTitleBar.Controls.Add(this.label2);
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleBar.Location = new System.Drawing.Point(0, 0);
-            this.panelTitleBar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelTitleBar.Margin = new System.Windows.Forms.Padding(2);
             this.panelTitleBar.Name = "panelTitleBar";
             this.panelTitleBar.Size = new System.Drawing.Size(356, 41);
             this.panelTitleBar.TabIndex = 0;
@@ -370,7 +376,7 @@ namespace DoAnPBL3
             this.pictureBox2.BackgroundImage = global::DoAnPBL3.Properties.Resources.add_book;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox2.Location = new System.Drawing.Point(142, 7);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(30, 30);
             this.pictureBox2.TabIndex = 3;
@@ -394,7 +400,7 @@ namespace DoAnPBL3
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(356, 562);
             this.Controls.Add(this.panelContainer);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormAddSach";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormAddSach";

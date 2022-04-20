@@ -15,7 +15,7 @@ namespace DoAnPBL3
     public partial class FormAddKH : Form
     {
         //Fields
-        private int borderRadius = 20;
+        private int borderRadius = 16;
         private int borderSize = 2;
         private Color borderColor = Color.RoyalBlue;
         //Constructor

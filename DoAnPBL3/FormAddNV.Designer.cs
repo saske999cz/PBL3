@@ -29,6 +29,7 @@ namespace DoAnPBL3
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAddNV));
             this.panelContainer = new System.Windows.Forms.Panel();
             this.rjComboBox1 = new DoAnPBL3.RJComboBox();
@@ -51,6 +52,8 @@ namespace DoAnPBL3
             this.panelTitleBar = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.guna2DragControl2 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.panelContainer.SuspendLayout();
             this.panelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -120,7 +123,7 @@ namespace DoAnPBL3
             this.rjbtnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjbtnCancel.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjbtnCancel.ForeColor = System.Drawing.Color.White;
-            this.rjbtnCancel.Location = new System.Drawing.Point(186, 564);
+            this.rjbtnCancel.Location = new System.Drawing.Point(194, 557);
             this.rjbtnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.rjbtnCancel.Name = "rjbtnCancel";
             this.rjbtnCancel.Size = new System.Drawing.Size(113, 36);
@@ -141,7 +144,7 @@ namespace DoAnPBL3
             this.rjbtnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjbtnOK.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjbtnOK.ForeColor = System.Drawing.Color.White;
-            this.rjbtnOK.Location = new System.Drawing.Point(46, 564);
+            this.rjbtnOK.Location = new System.Drawing.Point(54, 557);
             this.rjbtnOK.Margin = new System.Windows.Forms.Padding(2);
             this.rjbtnOK.Name = "rjbtnOK";
             this.rjbtnOK.Size = new System.Drawing.Size(113, 36);
@@ -408,6 +411,18 @@ namespace DoAnPBL3
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
+            // guna2DragControl1
+            // 
+            this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2DragControl1.TargetControl = this.label1;
+            this.guna2DragControl1.UseTransparentDrag = true;
+            // 
+            // guna2DragControl2
+            // 
+            this.guna2DragControl2.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2DragControl2.TargetControl = this.pictureBox1;
+            this.guna2DragControl2.UseTransparentDrag = true;
+            // 
             // FormAddNV
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -454,5 +469,7 @@ namespace DoAnPBL3
         private System.Windows.Forms.Label lblCMND;
         private System.Windows.Forms.Label lblAvatar;
         private RJComboBox rjComboBox1;
+        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
+        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl2;
     }
 }

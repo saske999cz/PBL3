@@ -32,54 +32,48 @@ namespace DoAnPBL3
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.rjtbTKNV = new DoAnPBL3.RJTextBox();
-            this.xuiSegmentNV = new XanderUI.XUISegment();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormQLKHNV));
+            this.rjtbTKKH = new DoAnPBL3.RJTextBox();
             this.dgvQLKHNV = new System.Windows.Forms.DataGridView();
             this.btnAddNV = new FontAwesome.Sharp.IconButton();
-            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            this.btnTKNV = new FontAwesome.Sharp.IconButton();
+            this.btnTKKH = new Guna.UI2.WinForms.Guna2Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.xuiSegmentNV = new XanderUI.XUISegment();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQLKHNV)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // rjtbTKNV
+            // rjtbTKKH
             // 
-            this.rjtbTKNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(35)))));
-            this.rjtbTKNV.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(35)))));
-            this.rjtbTKNV.BorderFocusColor = System.Drawing.Color.DeepSkyBlue;
-            this.rjtbTKNV.BorderRadius = 15;
-            this.rjtbTKNV.BorderSize = 1;
-            this.rjtbTKNV.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjtbTKNV.ForeColor = System.Drawing.Color.Silver;
-            this.rjtbTKNV.Location = new System.Drawing.Point(5, 133);
-            this.rjtbTKNV.Margin = new System.Windows.Forms.Padding(4);
-            this.rjtbTKNV.Multiline = false;
-            this.rjtbTKNV.Name = "rjtbTKNV";
-            this.rjtbTKNV.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjtbTKNV.PasswordChar = false;
-            this.rjtbTKNV.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(83)))), ((int)(((byte)(103)))));
-            this.rjtbTKNV.PlaceholderText = "Tìm kiếm";
-            this.rjtbTKNV.Size = new System.Drawing.Size(250, 31);
-            this.rjtbTKNV.TabIndex = 52;
-            this.rjtbTKNV.Texts = "";
-            this.rjtbTKNV.UnderlinedStyle = false;
-            // 
-            // xuiSegmentNV
-            // 
-            this.xuiSegmentNV.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.xuiSegmentNV.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xuiSegmentNV.Items = "Tất cả, Tiếng Việt , Tiếng Anh";
-            this.xuiSegmentNV.Location = new System.Drawing.Point(512, 130);
-            this.xuiSegmentNV.Margin = new System.Windows.Forms.Padding(2);
-            this.xuiSegmentNV.Name = "xuiSegmentNV";
-            this.xuiSegmentNV.SegmentActiveTextColor = System.Drawing.SystemColors.Highlight;
-            this.xuiSegmentNV.SegmentBackColor = System.Drawing.Color.CornflowerBlue;
-            this.xuiSegmentNV.SegmentColor = System.Drawing.Color.Blue;
-            this.xuiSegmentNV.SegmentInactiveTextColor = System.Drawing.Color.White;
-            this.xuiSegmentNV.SegmentStyle = XanderUI.XUISegment.Style.Material;
-            this.xuiSegmentNV.SelectedIndex = 0;
-            this.xuiSegmentNV.Size = new System.Drawing.Size(314, 34);
-            this.xuiSegmentNV.TabIndex = 50;
+            this.rjtbTKKH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(35)))));
+            this.rjtbTKKH.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(35)))));
+            this.rjtbTKKH.BorderFocusColor = System.Drawing.Color.DeepSkyBlue;
+            this.rjtbTKKH.BorderRadius = 15;
+            this.rjtbTKKH.BorderSize = 1;
+            this.rjtbTKKH.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjtbTKKH.ForeColor = System.Drawing.Color.Silver;
+            this.rjtbTKKH.Location = new System.Drawing.Point(5, 133);
+            this.rjtbTKKH.Margin = new System.Windows.Forms.Padding(4);
+            this.rjtbTKKH.Multiline = false;
+            this.rjtbTKKH.Name = "rjtbTKKH";
+            this.rjtbTKKH.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.rjtbTKKH.PasswordChar = false;
+            this.rjtbTKKH.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(83)))), ((int)(((byte)(103)))));
+            this.rjtbTKKH.PlaceholderText = "Tìm kiếm";
+            this.rjtbTKKH.Size = new System.Drawing.Size(250, 31);
+            this.rjtbTKKH.TabIndex = 52;
+            this.rjtbTKKH.Texts = "";
+            this.rjtbTKKH.UnderlinedStyle = false;
             // 
             // dgvQLKHNV
             // 
@@ -150,73 +144,182 @@ namespace DoAnPBL3
             this.btnAddNV.UseVisualStyleBackColor = false;
             this.btnAddNV.Click += new System.EventHandler(this.btnAddNV_Click);
             // 
-            // iconPictureBox1
+            // btnTKKH
             // 
-            this.iconPictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(53)))), ((int)(((byte)(70)))));
-            this.iconPictureBox1.BackgroundImage = global::DoAnPBL3.Properties.Resources.teamwork1;
-            this.iconPictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.iconPictureBox1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconPictureBox1.IconColor = System.Drawing.Color.Gainsboro;
-            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.IconSize = 72;
-            this.iconPictureBox1.Location = new System.Drawing.Point(437, 2);
-            this.iconPictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.iconPictureBox1.Size = new System.Drawing.Size(90, 72);
-            this.iconPictureBox1.TabIndex = 51;
-            this.iconPictureBox1.TabStop = false;
+            this.btnTKKH.BorderRadius = 15;
+            this.btnTKKH.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnTKKH.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnTKKH.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnTKKH.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnTKKH.FillColor = System.Drawing.SystemColors.HotTrack;
+            this.btnTKKH.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnTKKH.ForeColor = System.Drawing.Color.White;
+            this.btnTKKH.Image = global::DoAnPBL3.Properties.Resources.icons8_search_20px;
+            this.btnTKKH.Location = new System.Drawing.Point(262, 133);
+            this.btnTKKH.Name = "btnTKKH";
+            this.btnTKKH.Size = new System.Drawing.Size(141, 32);
+            this.btnTKKH.TabIndex = 54;
+            this.btnTKKH.Text = "Tìm kiếm";
             // 
-            // btnTKNV
+            // pictureBox1
             // 
-            this.btnTKNV.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnTKNV.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.btnTKNV.FlatAppearance.BorderColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnTKNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTKNV.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTKNV.ForeColor = System.Drawing.Color.White;
-            this.btnTKNV.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.btnTKNV.IconColor = System.Drawing.Color.Gainsboro;
-            this.btnTKNV.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnTKNV.IconSize = 30;
-            this.btnTKNV.Location = new System.Drawing.Point(261, 131);
-            this.btnTKNV.Margin = new System.Windows.Forms.Padding(2);
-            this.btnTKNV.Name = "btnTKNV";
-            this.btnTKNV.Size = new System.Drawing.Size(133, 34);
-            this.btnTKNV.TabIndex = 49;
-            this.btnTKNV.Text = "Tìm kiếm";
-            this.btnTKNV.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnTKNV.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTKNV.UseVisualStyleBackColor = false;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(181, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(38, 33);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 63;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Image = global::DoAnPBL3.Properties.Resources.women;
+            this.pictureBox3.Location = new System.Drawing.Point(889, 12);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(38, 27);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 62;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::DoAnPBL3.Properties.Resources.man_1;
+            this.pictureBox2.Location = new System.Drawing.Point(542, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(38, 27);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 61;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(817, 49);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(29, 16);
+            this.label6.TabIndex = 60;
+            this.label6.Text = "100";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
+            this.label7.Location = new System.Drawing.Point(768, 18);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(124, 16);
+            this.label7.TabIndex = 59;
+            this.label7.Text = "Số khach hàng nữ";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(460, 49);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(29, 16);
+            this.label4.TabIndex = 58;
+            this.label4.Text = "100";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
+            this.label5.Location = new System.Drawing.Point(411, 18);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(135, 16);
+            this.label5.TabIndex = 57;
+            this.label5.Text = "Số khách hàng nam";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(97, 49);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(29, 16);
+            this.label3.TabIndex = 56;
+            this.label3.Text = "100";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
+            this.label2.Location = new System.Drawing.Point(45, 18);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(136, 16);
+            this.label2.TabIndex = 55;
+            this.label2.Text = "Tổng số khách hàng";
+            // 
+            // xuiSegmentNV
+            // 
+            this.xuiSegmentNV.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.xuiSegmentNV.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xuiSegmentNV.Items = "Tất cả, Nam, Nữ";
+            this.xuiSegmentNV.Location = new System.Drawing.Point(512, 130);
+            this.xuiSegmentNV.Margin = new System.Windows.Forms.Padding(2);
+            this.xuiSegmentNV.Name = "xuiSegmentNV";
+            this.xuiSegmentNV.SegmentActiveTextColor = System.Drawing.SystemColors.Highlight;
+            this.xuiSegmentNV.SegmentBackColor = System.Drawing.Color.CornflowerBlue;
+            this.xuiSegmentNV.SegmentColor = System.Drawing.Color.Blue;
+            this.xuiSegmentNV.SegmentInactiveTextColor = System.Drawing.Color.White;
+            this.xuiSegmentNV.SegmentStyle = XanderUI.XUISegment.Style.Material;
+            this.xuiSegmentNV.SelectedIndex = 0;
+            this.xuiSegmentNV.Size = new System.Drawing.Size(314, 34);
+            this.xuiSegmentNV.TabIndex = 50;
             // 
             // FormQLKHNV
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(53)))), ((int)(((byte)(70)))));
             this.ClientSize = new System.Drawing.Size(980, 585);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.btnTKKH);
             this.Controls.Add(this.btnAddNV);
-            this.Controls.Add(this.rjtbTKNV);
-            this.Controls.Add(this.iconPictureBox1);
+            this.Controls.Add(this.rjtbTKKH);
             this.Controls.Add(this.xuiSegmentNV);
-            this.Controls.Add(this.btnTKNV);
             this.Controls.Add(this.dgvQLKHNV);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormQLKHNV";
             this.Text = "FormQLKHNV";
             ((System.ComponentModel.ISupportInitialize)(this.dgvQLKHNV)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
         private FontAwesome.Sharp.IconButton btnAddNV;
-        private RJTextBox rjtbTKNV;
-        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
-        private XanderUI.XUISegment xuiSegmentNV;
-        private FontAwesome.Sharp.IconButton btnTKNV;
+        private RJTextBox rjtbTKKH;
         private System.Windows.Forms.DataGridView dgvQLKHNV;
+        private Guna.UI2.WinForms.Guna2Button btnTKKH;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private XanderUI.XUISegment xuiSegmentNV;
     }
 }

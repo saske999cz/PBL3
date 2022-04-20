@@ -16,5 +16,10 @@ namespace DoAnPBL3
         {
             InitializeComponent();
         }
+
+        private void rjbtnBuy_Click(object sender, EventArgs e)
+        {
+            new FormMuaSach().Show();
+        }
     }
 }
