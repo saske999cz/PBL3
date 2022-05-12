@@ -30,10 +30,20 @@ namespace DoAnPBL3
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormQLBS));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvQLBS = new System.Windows.Forms.DataGridView();
             this.xuiSegmentBS = new XanderUI.XUISegment();
@@ -60,12 +70,28 @@ namespace DoAnPBL3
             this.btnHDTN = new FontAwesome.Sharp.IconButton();
             this.btnSXS = new FontAwesome.Sharp.IconButton();
             this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelContainer = new System.Windows.Forms.Panel();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NameBook = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PublishDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ISBN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID_Author = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID_Genre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID_Language = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID_Publisher = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataSetListBooks = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvQLBS)).BeginInit();
             this.rjDropDownMenuSXS.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panelContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DataSetListBooks)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -84,37 +110,53 @@ namespace DoAnPBL3
             // 
             this.dgvQLBS.AllowUserToAddRows = false;
             this.dgvQLBS.AllowUserToDeleteRows = false;
-            this.dgvQLBS.AllowUserToOrderColumns = true;
             this.dgvQLBS.AllowUserToResizeColumns = false;
             this.dgvQLBS.AllowUserToResizeRows = false;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(35)))));
-            this.dgvQLBS.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(35)))));
+            this.dgvQLBS.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvQLBS.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvQLBS.AutoGenerateColumns = false;
             this.dgvQLBS.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvQLBS.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
             this.dgvQLBS.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvQLBS.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvQLBS.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(16)))), ((int)(((byte)(221)))));
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(16)))), ((int)(((byte)(221)))));
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvQLBS.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle20;
-            this.dgvQLBS.ColumnHeadersHeight = 22;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(16)))), ((int)(((byte)(221)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(16)))), ((int)(((byte)(221)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvQLBS.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvQLBS.ColumnHeadersHeight = 30;
             this.dgvQLBS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(43)))), ((int)(((byte)(63)))));
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvQLBS.DefaultCellStyle = dataGridViewCellStyle21;
+            this.dgvQLBS.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.NameBook,
+            this.PublishDate,
+            this.Quantity,
+            this.Price,
+            this.ISBN,
+            this.ID_Author,
+            this.ID_Genre,
+            this.ID_Language,
+            this.ID_Publisher});
+            this.dgvQLBS.DataSource = this.DataSetListBooks;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(43)))), ((int)(((byte)(63)))));
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvQLBS.DefaultCellStyle = dataGridViewCellStyle13;
             this.dgvQLBS.EnableHeadersVisualStyles = false;
-            this.dgvQLBS.Location = new System.Drawing.Point(6, 170);
+            this.dgvQLBS.Location = new System.Drawing.Point(6, 169);
             this.dgvQLBS.Name = "dgvQLBS";
+            this.dgvQLBS.ReadOnly = true;
             this.dgvQLBS.RowHeadersVisible = false;
             this.dgvQLBS.RowHeadersWidth = 51;
             this.dgvQLBS.RowTemplate.Height = 30;
@@ -124,6 +166,7 @@ namespace DoAnPBL3
             // 
             // xuiSegmentBS
             // 
+            this.xuiSegmentBS.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.xuiSegmentBS.Cursor = System.Windows.Forms.Cursors.Hand;
             this.xuiSegmentBS.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xuiSegmentBS.Items = "Tất cả, Tiếng Việt, Tiếng Anh";
@@ -250,7 +293,7 @@ namespace DoAnPBL3
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(812, 49);
+            this.label6.Location = new System.Drawing.Point(683, 60);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(29, 16);
             this.label6.TabIndex = 35;
@@ -261,7 +304,7 @@ namespace DoAnPBL3
             this.lblSSTA.AutoSize = true;
             this.lblSSTA.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSSTA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
-            this.lblSSTA.Location = new System.Drawing.Point(768, 18);
+            this.lblSSTA.Location = new System.Drawing.Point(639, 29);
             this.lblSSTA.Name = "lblSSTA";
             this.lblSSTA.Size = new System.Drawing.Size(123, 16);
             this.lblSSTA.TabIndex = 34;
@@ -272,7 +315,7 @@ namespace DoAnPBL3
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(454, 49);
+            this.label4.Location = new System.Drawing.Point(412, 60);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(29, 16);
             this.label4.TabIndex = 33;
@@ -283,7 +326,7 @@ namespace DoAnPBL3
             this.lblSSTV.AutoSize = true;
             this.lblSSTV.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSSTV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
-            this.lblSSTV.Location = new System.Drawing.Point(411, 18);
+            this.lblSSTV.Location = new System.Drawing.Point(369, 29);
             this.lblSSTV.Name = "lblSSTV";
             this.lblSSTV.Size = new System.Drawing.Size(123, 16);
             this.lblSSTV.TabIndex = 32;
@@ -294,7 +337,7 @@ namespace DoAnPBL3
             this.lblTSSDB.AutoSize = true;
             this.lblTSSDB.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTSSDB.ForeColor = System.Drawing.Color.White;
-            this.lblTSSDB.Location = new System.Drawing.Point(101, 49);
+            this.lblTSSDB.Location = new System.Drawing.Point(107, 60);
             this.lblTSSDB.Name = "lblTSSDB";
             this.lblTSSDB.Size = new System.Drawing.Size(29, 16);
             this.lblTSSDB.TabIndex = 31;
@@ -305,7 +348,7 @@ namespace DoAnPBL3
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
-            this.label2.Location = new System.Drawing.Point(45, 18);
+            this.label2.Location = new System.Drawing.Point(51, 29);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(155, 16);
             this.label2.TabIndex = 30;
@@ -314,7 +357,7 @@ namespace DoAnPBL3
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(206, 12);
+            this.pictureBox3.Location = new System.Drawing.Point(212, 23);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(38, 27);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -324,7 +367,7 @@ namespace DoAnPBL3
             // pictureBox1
             // 
             this.pictureBox1.Image = global::DoAnPBL3.Properties.Resources.united_kingdom_flag;
-            this.pictureBox1.Location = new System.Drawing.Point(889, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(760, 23);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(38, 27);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -334,7 +377,7 @@ namespace DoAnPBL3
             // pictureBox2
             // 
             this.pictureBox2.Image = global::DoAnPBL3.Properties.Resources.vietnam_flag;
-            this.pictureBox2.Location = new System.Drawing.Point(532, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(490, 23);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(38, 27);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -360,7 +403,6 @@ namespace DoAnPBL3
             // 
             // btnHDTN
             // 
-            this.btnHDTN.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnHDTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.btnHDTN.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
             this.btnHDTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -370,7 +412,7 @@ namespace DoAnPBL3
             this.btnHDTN.IconColor = System.Drawing.Color.White;
             this.btnHDTN.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnHDTN.IconSize = 30;
-            this.btnHDTN.Location = new System.Drawing.Point(832, 244);
+            this.btnHDTN.Location = new System.Drawing.Point(5, 56);
             this.btnHDTN.Name = "btnHDTN";
             this.btnHDTN.Size = new System.Drawing.Size(142, 47);
             this.btnHDTN.TabIndex = 13;
@@ -383,7 +425,6 @@ namespace DoAnPBL3
             // 
             // btnSXS
             // 
-            this.btnSXS.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSXS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.btnSXS.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
             this.btnSXS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -393,7 +434,7 @@ namespace DoAnPBL3
             this.btnSXS.IconColor = System.Drawing.Color.White;
             this.btnSXS.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSXS.IconSize = 30;
-            this.btnSXS.Location = new System.Drawing.Point(833, 171);
+            this.btnSXS.Location = new System.Drawing.Point(5, 3);
             this.btnSXS.Name = "btnSXS";
             this.btnSXS.Size = new System.Drawing.Size(142, 47);
             this.btnSXS.TabIndex = 12;
@@ -420,27 +461,124 @@ namespace DoAnPBL3
             this.iconPictureBox2.TabIndex = 10;
             this.iconPictureBox2.TabStop = false;
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.btnSXS);
+            this.panel1.Controls.Add(this.btnHDTN);
+            this.panel1.Location = new System.Drawing.Point(833, 169);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(150, 112);
+            this.panel1.TabIndex = 39;
+            // 
+            // panelContainer
+            // 
+            this.panelContainer.Controls.Add(this.pictureBox3);
+            this.panelContainer.Controls.Add(this.label2);
+            this.panelContainer.Controls.Add(this.lblTSSDB);
+            this.panelContainer.Controls.Add(this.pictureBox1);
+            this.panelContainer.Controls.Add(this.lblSSTV);
+            this.panelContainer.Controls.Add(this.label6);
+            this.panelContainer.Controls.Add(this.pictureBox2);
+            this.panelContainer.Controls.Add(this.lblSSTA);
+            this.panelContainer.Controls.Add(this.label4);
+            this.panelContainer.Location = new System.Drawing.Point(7, 12);
+            this.panelContainer.Name = "panelContainer";
+            this.panelContainer.Size = new System.Drawing.Size(820, 100);
+            this.panelContainer.TabIndex = 40;
+            // 
+            // ID
+            // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.ID.DefaultCellStyle = dataGridViewCellStyle3;
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            // 
+            // NameBook
+            // 
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.NameBook.DefaultCellStyle = dataGridViewCellStyle4;
+            this.NameBook.HeaderText = "Tên sách";
+            this.NameBook.Name = "NameBook";
+            this.NameBook.ReadOnly = true;
+            // 
+            // PublishDate
+            // 
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.PublishDate.DefaultCellStyle = dataGridViewCellStyle5;
+            this.PublishDate.HeaderText = "Ngày phát hành";
+            this.PublishDate.Name = "PublishDate";
+            this.PublishDate.ReadOnly = true;
+            // 
+            // Quantity
+            // 
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Quantity.DefaultCellStyle = dataGridViewCellStyle6;
+            this.Quantity.HeaderText = "Số lượng";
+            this.Quantity.Name = "Quantity";
+            this.Quantity.ReadOnly = true;
+            // 
+            // Price
+            // 
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Price.DefaultCellStyle = dataGridViewCellStyle7;
+            this.Price.HeaderText = "Giá tiền";
+            this.Price.Name = "Price";
+            this.Price.ReadOnly = true;
+            // 
+            // ISBN
+            // 
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.ISBN.DefaultCellStyle = dataGridViewCellStyle8;
+            this.ISBN.HeaderText = "ISBN";
+            this.ISBN.Name = "ISBN";
+            this.ISBN.ReadOnly = true;
+            // 
+            // ID_Author
+            // 
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.ID_Author.DefaultCellStyle = dataGridViewCellStyle9;
+            this.ID_Author.HeaderText = "ID Tác giả";
+            this.ID_Author.Name = "ID_Author";
+            this.ID_Author.ReadOnly = true;
+            // 
+            // ID_Genre
+            // 
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.ID_Genre.DefaultCellStyle = dataGridViewCellStyle10;
+            this.ID_Genre.HeaderText = "ID Thể loại";
+            this.ID_Genre.Name = "ID_Genre";
+            this.ID_Genre.ReadOnly = true;
+            // 
+            // ID_Language
+            // 
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.ID_Language.DefaultCellStyle = dataGridViewCellStyle11;
+            this.ID_Language.HeaderText = "ID Ngôn ngữ";
+            this.ID_Language.Name = "ID_Language";
+            this.ID_Language.ReadOnly = true;
+            // 
+            // ID_Publisher
+            // 
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.ID_Publisher.DefaultCellStyle = dataGridViewCellStyle12;
+            this.ID_Publisher.HeaderText = "ID Nhà xuất bản";
+            this.ID_Publisher.Name = "ID_Publisher";
+            this.ID_Publisher.ReadOnly = true;
+            // 
             // FormQLBS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(980, 585);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.lblSSTA);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.lblSSTV);
-            this.Controls.Add(this.lblTSSDB);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.panelContainer);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnTKS);
             this.Controls.Add(this.xuiSegmentBS);
             this.Controls.Add(this.rjtbTKNV);
             this.Controls.Add(this.dgvQLBS);
-            this.Controls.Add(this.btnHDTN);
-            this.Controls.Add(this.btnSXS);
             this.Controls.Add(this.iconPictureBox2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -455,6 +593,10 @@ namespace DoAnPBL3
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panelContainer.ResumeLayout(false);
+            this.panelContainer.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DataSetListBooks)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -488,5 +630,18 @@ namespace DoAnPBL3
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelContainer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NameBook;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PublishDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ISBN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID_Author;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID_Genre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID_Language;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID_Publisher;
+        private System.Windows.Forms.BindingSource DataSetListBooks;
     }
 }

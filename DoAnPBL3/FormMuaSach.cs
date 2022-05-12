@@ -12,7 +12,7 @@ namespace DoAnPBL3
 {
     public partial class FormMuaSach : Form
     {
-         FormNhapMua[] currentChildForm;
+        FormNhapMua[] currentChildForm;
         public FormMuaSach()
         {
             InitializeComponent();

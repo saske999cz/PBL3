@@ -1,4 +1,5 @@
-﻿using FontAwesome.Sharp;
+﻿using DoAnPBL3.Models;
+using FontAwesome.Sharp;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace DoAnPBL3
 {
@@ -107,6 +109,18 @@ namespace DoAnPBL3
         private void btnAddNV_Click(object sender, EventArgs e)
         {
             new FormAddNV().Show();
+            //using (BookStoreContext context = new BookStoreContext())
+            //{
+            //    dgvQLNV.DataSource = context.Employees.Select(employee => new
+            //    {
+            //        employee.ID_Employee,
+            //        employee.NameEmployee,
+            //        employee.Gender,
+            //        employee.Email,
+            //        employee.Phone
+            //    }).ToList();
+            //}
+            FormQLNV_Load(sender, e);
         }
 
         private void btnDeleteNV_Click(object sender, EventArgs e)
@@ -142,6 +156,65 @@ namespace DoAnPBL3
             }
         }
 
-        
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblSNVNam_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dgvQLNV_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            DataGridViewRow data = dgvQLNV.CurrentRow;
+            string result = "";
+            result += data.Cells["ID_NhanVien"].Value.ToString()
+                    + data.Cells["hoVaTen"].Value.ToString()
+                    + data.Cells["SDT"].Value.ToString()
+                    + data.Cells["CMND"].Value.ToString()
+                    + data.Cells["diaChi"].Value.ToString();
+        }
+
+        private void dgvQLNV_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+
+        }
+
+        private void FormQLNV_Load(object sender, EventArgs e)
+        {
+            using (BookStoreContext context = new BookStoreContext())
+            {
+                dgvQLNV.DataSource = context.Employees.Select(employee => new
+                {
+                    employee.ID_Employee,
+                    employee.NameEmployee,
+                    employee.Gender,
+                    employee.Email,
+                    employee.Phone
+                }).ToList();
+            }
+        }
+
+        private void xuiSegmentNV_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

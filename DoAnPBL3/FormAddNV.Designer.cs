@@ -32,17 +32,25 @@ namespace DoAnPBL3
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAddNV));
             this.panelContainer = new System.Windows.Forms.Panel();
-            this.rjComboBox1 = new DoAnPBL3.RJComboBox();
+            this.btnAvatar = new Guna.UI2.WinForms.Guna2Button();
+            this.msgDateOfBirth = new System.Windows.Forms.Label();
+            this.msgAge = new System.Windows.Forms.Label();
+            this.msgGender = new System.Windows.Forms.Label();
+            this.msgAddress = new System.Windows.Forms.Label();
+            this.gunaDTP = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.msgEmail = new System.Windows.Forms.Label();
+            this.msgPhone = new System.Windows.Forms.Label();
+            this.msgIDCard = new System.Windows.Forms.Label();
+            this.msgName = new System.Windows.Forms.Label();
+            this.rjcbbAddress = new DoAnPBL3.RJComboBox();
+            this.rjcbbGender = new DoAnPBL3.RJComboBox();
             this.rjbtnCancel = new DoAnPBL3.RJButton();
             this.rjbtnOK = new DoAnPBL3.RJButton();
             this.rjtbEmail = new DoAnPBL3.RJTextBox();
             this.rjtbCMND = new DoAnPBL3.RJTextBox();
             this.rjtbSDT = new DoAnPBL3.RJTextBox();
-            this.rjtbAddress = new DoAnPBL3.RJTextBox();
-            this.rjtbBD = new DoAnPBL3.RJTextBox();
             this.rjtbNameNV = new DoAnPBL3.RJTextBox();
             this.lblCMND = new System.Windows.Forms.Label();
-            this.lblAvatar = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblSDT = new System.Windows.Forms.Label();
             this.lblAddress = new System.Windows.Forms.Label();
@@ -50,29 +58,40 @@ namespace DoAnPBL3
             this.lblBD = new System.Windows.Forms.Label();
             this.lblNameNV = new System.Windows.Forms.Label();
             this.panelTitleBar = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2DragControl2 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.avatar = new System.Windows.Forms.PictureBox();
             this.panelContainer.SuspendLayout();
             this.panelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.avatar)).BeginInit();
             this.SuspendLayout();
             // 
             // panelContainer
             // 
             this.panelContainer.BackColor = System.Drawing.Color.Lavender;
-            this.panelContainer.Controls.Add(this.rjComboBox1);
+            this.panelContainer.Controls.Add(this.avatar);
+            this.panelContainer.Controls.Add(this.btnAvatar);
+            this.panelContainer.Controls.Add(this.msgDateOfBirth);
+            this.panelContainer.Controls.Add(this.msgAge);
+            this.panelContainer.Controls.Add(this.msgGender);
+            this.panelContainer.Controls.Add(this.msgAddress);
+            this.panelContainer.Controls.Add(this.gunaDTP);
+            this.panelContainer.Controls.Add(this.msgEmail);
+            this.panelContainer.Controls.Add(this.msgPhone);
+            this.panelContainer.Controls.Add(this.msgIDCard);
+            this.panelContainer.Controls.Add(this.msgName);
+            this.panelContainer.Controls.Add(this.rjcbbAddress);
+            this.panelContainer.Controls.Add(this.rjcbbGender);
             this.panelContainer.Controls.Add(this.rjbtnCancel);
             this.panelContainer.Controls.Add(this.rjbtnOK);
             this.panelContainer.Controls.Add(this.rjtbEmail);
             this.panelContainer.Controls.Add(this.rjtbCMND);
             this.panelContainer.Controls.Add(this.rjtbSDT);
-            this.panelContainer.Controls.Add(this.rjtbAddress);
-            this.panelContainer.Controls.Add(this.rjtbBD);
             this.panelContainer.Controls.Add(this.rjtbNameNV);
             this.panelContainer.Controls.Add(this.lblCMND);
-            this.panelContainer.Controls.Add(this.lblAvatar);
             this.panelContainer.Controls.Add(this.lblEmail);
             this.panelContainer.Controls.Add(this.lblSDT);
             this.panelContainer.Controls.Add(this.lblAddress);
@@ -85,32 +104,153 @@ namespace DoAnPBL3
             this.panelContainer.Location = new System.Drawing.Point(0, 0);
             this.panelContainer.Margin = new System.Windows.Forms.Padding(2);
             this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(356, 611);
+            this.panelContainer.Size = new System.Drawing.Size(731, 611);
             this.panelContainer.TabIndex = 0;
             this.panelContainer.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContainer_Paint);
             // 
-            // rjComboBox1
+            // btnAvatar
             // 
-            this.rjComboBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.rjComboBox1.BorderColor = System.Drawing.Color.HotPink;
-            this.rjComboBox1.BorderSize = 2;
-            this.rjComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.rjComboBox1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjComboBox1.ForeColor = System.Drawing.Color.DarkGray;
-            this.rjComboBox1.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjComboBox1.Items.AddRange(new object[] {
+            this.btnAvatar.DefaultAutoSize = true;
+            this.btnAvatar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAvatar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAvatar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAvatar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAvatar.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAvatar.ForeColor = System.Drawing.Color.Black;
+            this.btnAvatar.Location = new System.Drawing.Point(486, 61);
+            this.btnAvatar.Name = "btnAvatar";
+            this.btnAvatar.Size = new System.Drawing.Size(87, 37);
+            this.btnAvatar.TabIndex = 21;
+            this.btnAvatar.Text = "Avatar";
+            this.btnAvatar.Click += new System.EventHandler(this.btnAvatar_Click);
+            // 
+            // msgDateOfBirth
+            // 
+            this.msgDateOfBirth.AutoSize = true;
+            this.msgDateOfBirth.Location = new System.Drawing.Point(135, 166);
+            this.msgDateOfBirth.Name = "msgDateOfBirth";
+            this.msgDateOfBirth.Size = new System.Drawing.Size(0, 13);
+            this.msgDateOfBirth.TabIndex = 20;
+            // 
+            // msgAge
+            // 
+            this.msgAge.AutoSize = true;
+            this.msgAge.Location = new System.Drawing.Point(135, 153);
+            this.msgAge.Name = "msgAge";
+            this.msgAge.Size = new System.Drawing.Size(0, 13);
+            this.msgAge.TabIndex = 19;
+            // 
+            // msgGender
+            // 
+            this.msgGender.AutoSize = true;
+            this.msgGender.Location = new System.Drawing.Point(138, 217);
+            this.msgGender.Name = "msgGender";
+            this.msgGender.Size = new System.Drawing.Size(0, 13);
+            this.msgGender.TabIndex = 18;
+            // 
+            // msgAddress
+            // 
+            this.msgAddress.AutoSize = true;
+            this.msgAddress.Location = new System.Drawing.Point(138, 341);
+            this.msgAddress.Name = "msgAddress";
+            this.msgAddress.Size = new System.Drawing.Size(0, 13);
+            this.msgAddress.TabIndex = 18;
+            // 
+            // gunaDTP
+            // 
+            this.gunaDTP.Checked = true;
+            this.gunaDTP.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaDTP.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.gunaDTP.Location = new System.Drawing.Point(135, 113);
+            this.gunaDTP.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.gunaDTP.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.gunaDTP.Name = "gunaDTP";
+            this.gunaDTP.Size = new System.Drawing.Size(188, 30);
+            this.gunaDTP.TabIndex = 17;
+            this.gunaDTP.Value = new System.DateTime(2022, 5, 5, 20, 47, 40, 103);
+            // 
+            // msgEmail
+            // 
+            this.msgEmail.AutoSize = true;
+            this.msgEmail.Location = new System.Drawing.Point(136, 457);
+            this.msgEmail.Name = "msgEmail";
+            this.msgEmail.Size = new System.Drawing.Size(0, 13);
+            this.msgEmail.TabIndex = 16;
+            // 
+            // msgPhone
+            // 
+            this.msgPhone.AutoSize = true;
+            this.msgPhone.Location = new System.Drawing.Point(138, 395);
+            this.msgPhone.Name = "msgPhone";
+            this.msgPhone.Size = new System.Drawing.Size(0, 13);
+            this.msgPhone.TabIndex = 16;
+            // 
+            // msgIDCard
+            // 
+            this.msgIDCard.AutoSize = true;
+            this.msgIDCard.Location = new System.Drawing.Point(138, 275);
+            this.msgIDCard.Name = "msgIDCard";
+            this.msgIDCard.Size = new System.Drawing.Size(0, 13);
+            this.msgIDCard.TabIndex = 16;
+            // 
+            // msgName
+            // 
+            this.msgName.AutoSize = true;
+            this.msgName.Location = new System.Drawing.Point(138, 95);
+            this.msgName.Name = "msgName";
+            this.msgName.Size = new System.Drawing.Size(0, 13);
+            this.msgName.TabIndex = 16;
+            // 
+            // rjcbbAddress
+            // 
+            this.rjcbbAddress.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.rjcbbAddress.BorderColor = System.Drawing.Color.HotPink;
+            this.rjcbbAddress.BorderSize = 2;
+            this.rjcbbAddress.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.rjcbbAddress.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjcbbAddress.ForeColor = System.Drawing.Color.DarkGray;
+            this.rjcbbAddress.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjcbbAddress.Items.AddRange(new object[] {
+            "Quận Thanh Khê",
+            "Quận Hải Châu",
+            "Quận Cẩm Lệ",
+            "Quận Sơn Trà",
+            "Quận Ngũ Hành Sơn",
+            "Quận Liên Chiểu",
+            "Huyện Hoàng Sa",
+            "Huyện Hòa Vang"});
+            this.rjcbbAddress.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.rjcbbAddress.ListTextColor = System.Drawing.Color.DimGray;
+            this.rjcbbAddress.Location = new System.Drawing.Point(135, 302);
+            this.rjcbbAddress.MinimumSize = new System.Drawing.Size(188, 29);
+            this.rjcbbAddress.Name = "rjcbbAddress";
+            this.rjcbbAddress.Padding = new System.Windows.Forms.Padding(2);
+            this.rjcbbAddress.Size = new System.Drawing.Size(188, 32);
+            this.rjcbbAddress.TabIndex = 15;
+            this.rjcbbAddress.Texts = "Địa chỉ";
+            // 
+            // rjcbbGender
+            // 
+            this.rjcbbGender.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.rjcbbGender.BorderColor = System.Drawing.Color.HotPink;
+            this.rjcbbGender.BorderSize = 2;
+            this.rjcbbGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.rjcbbGender.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjcbbGender.ForeColor = System.Drawing.Color.DarkGray;
+            this.rjcbbGender.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjcbbGender.Items.AddRange(new object[] {
             "Nam",
             "Nữ",
             "Giới tính thứ 3"});
-            this.rjComboBox1.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.rjComboBox1.ListTextColor = System.Drawing.Color.DimGray;
-            this.rjComboBox1.Location = new System.Drawing.Point(135, 177);
-            this.rjComboBox1.MinimumSize = new System.Drawing.Size(188, 29);
-            this.rjComboBox1.Name = "rjComboBox1";
-            this.rjComboBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.rjComboBox1.Size = new System.Drawing.Size(188, 32);
-            this.rjComboBox1.TabIndex = 15;
-            this.rjComboBox1.Texts = "Giới tính";
+            this.rjcbbGender.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.rjcbbGender.ListTextColor = System.Drawing.Color.DimGray;
+            this.rjcbbGender.Location = new System.Drawing.Point(135, 182);
+            this.rjcbbGender.MinimumSize = new System.Drawing.Size(188, 29);
+            this.rjcbbGender.Name = "rjcbbGender";
+            this.rjcbbGender.Padding = new System.Windows.Forms.Padding(2);
+            this.rjcbbGender.Size = new System.Drawing.Size(188, 32);
+            this.rjcbbGender.TabIndex = 15;
+            this.rjcbbGender.Texts = "Giới tính";
             // 
             // rjbtnCancel
             // 
@@ -123,7 +263,7 @@ namespace DoAnPBL3
             this.rjbtnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjbtnCancel.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjbtnCancel.ForeColor = System.Drawing.Color.White;
-            this.rjbtnCancel.Location = new System.Drawing.Point(194, 557);
+            this.rjbtnCancel.Location = new System.Drawing.Point(411, 536);
             this.rjbtnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.rjbtnCancel.Name = "rjbtnCancel";
             this.rjbtnCancel.Size = new System.Drawing.Size(113, 36);
@@ -144,7 +284,7 @@ namespace DoAnPBL3
             this.rjbtnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjbtnOK.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjbtnOK.ForeColor = System.Drawing.Color.White;
-            this.rjbtnOK.Location = new System.Drawing.Point(54, 557);
+            this.rjbtnOK.Location = new System.Drawing.Point(210, 536);
             this.rjbtnOK.Margin = new System.Windows.Forms.Padding(2);
             this.rjbtnOK.Name = "rjbtnOK";
             this.rjbtnOK.Size = new System.Drawing.Size(113, 36);
@@ -185,7 +325,7 @@ namespace DoAnPBL3
             this.rjtbCMND.BorderSize = 2;
             this.rjtbCMND.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjtbCMND.ForeColor = System.Drawing.Color.DimGray;
-            this.rjtbCMND.Location = new System.Drawing.Point(135, 235);
+            this.rjtbCMND.Location = new System.Drawing.Point(135, 241);
             this.rjtbCMND.Margin = new System.Windows.Forms.Padding(4);
             this.rjtbCMND.Multiline = false;
             this.rjtbCMND.Name = "rjtbCMND";
@@ -220,50 +360,6 @@ namespace DoAnPBL3
             this.rjtbSDT.Texts = "";
             this.rjtbSDT.UnderlinedStyle = false;
             // 
-            // rjtbAddress
-            // 
-            this.rjtbAddress.BackColor = System.Drawing.SystemColors.Window;
-            this.rjtbAddress.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjtbAddress.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.rjtbAddress.BorderRadius = 0;
-            this.rjtbAddress.BorderSize = 2;
-            this.rjtbAddress.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjtbAddress.ForeColor = System.Drawing.Color.DimGray;
-            this.rjtbAddress.Location = new System.Drawing.Point(135, 299);
-            this.rjtbAddress.Margin = new System.Windows.Forms.Padding(4);
-            this.rjtbAddress.Multiline = false;
-            this.rjtbAddress.Name = "rjtbAddress";
-            this.rjtbAddress.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
-            this.rjtbAddress.PasswordChar = false;
-            this.rjtbAddress.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjtbAddress.PlaceholderText = "Nhập địa chỉ";
-            this.rjtbAddress.Size = new System.Drawing.Size(188, 30);
-            this.rjtbAddress.TabIndex = 10;
-            this.rjtbAddress.Texts = "";
-            this.rjtbAddress.UnderlinedStyle = false;
-            // 
-            // rjtbBD
-            // 
-            this.rjtbBD.BackColor = System.Drawing.SystemColors.Window;
-            this.rjtbBD.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjtbBD.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.rjtbBD.BorderRadius = 0;
-            this.rjtbBD.BorderSize = 2;
-            this.rjtbBD.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjtbBD.ForeColor = System.Drawing.Color.DimGray;
-            this.rjtbBD.Location = new System.Drawing.Point(135, 120);
-            this.rjtbBD.Margin = new System.Windows.Forms.Padding(4);
-            this.rjtbBD.Multiline = false;
-            this.rjtbBD.Name = "rjtbBD";
-            this.rjtbBD.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
-            this.rjtbBD.PasswordChar = false;
-            this.rjtbBD.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjtbBD.PlaceholderText = "Nhập ngày sinh";
-            this.rjtbBD.Size = new System.Drawing.Size(188, 30);
-            this.rjtbBD.TabIndex = 8;
-            this.rjtbBD.Texts = "";
-            this.rjtbBD.UnderlinedStyle = false;
-            // 
             // rjtbNameNV
             // 
             this.rjtbNameNV.BackColor = System.Drawing.SystemColors.Window;
@@ -290,23 +386,12 @@ namespace DoAnPBL3
             // 
             this.lblCMND.AutoSize = true;
             this.lblCMND.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCMND.Location = new System.Drawing.Point(13, 241);
+            this.lblCMND.Location = new System.Drawing.Point(11, 252);
             this.lblCMND.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCMND.Name = "lblCMND";
             this.lblCMND.Size = new System.Drawing.Size(58, 19);
             this.lblCMND.TabIndex = 5;
             this.lblCMND.Text = "CMND";
-            // 
-            // lblAvatar
-            // 
-            this.lblAvatar.AutoSize = true;
-            this.lblAvatar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAvatar.Location = new System.Drawing.Point(13, 486);
-            this.lblAvatar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblAvatar.Name = "lblAvatar";
-            this.lblAvatar.Size = new System.Drawing.Size(57, 19);
-            this.lblAvatar.TabIndex = 6;
-            this.lblAvatar.Text = "Avatar";
             // 
             // lblEmail
             // 
@@ -345,7 +430,7 @@ namespace DoAnPBL3
             // 
             this.lblGender.AutoSize = true;
             this.lblGender.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGender.Location = new System.Drawing.Point(13, 182);
+            this.lblGender.Location = new System.Drawing.Point(13, 195);
             this.lblGender.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblGender.Name = "lblGender";
             this.lblGender.Size = new System.Drawing.Size(73, 19);
@@ -356,7 +441,7 @@ namespace DoAnPBL3
             // 
             this.lblBD.AutoSize = true;
             this.lblBD.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBD.Location = new System.Drawing.Point(13, 124);
+            this.lblBD.Location = new System.Drawing.Point(11, 124);
             this.lblBD.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblBD.Name = "lblBD";
             this.lblBD.Size = new System.Drawing.Size(86, 19);
@@ -383,21 +468,9 @@ namespace DoAnPBL3
             this.panelTitleBar.Location = new System.Drawing.Point(0, 0);
             this.panelTitleBar.Margin = new System.Windows.Forms.Padding(2);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(356, 41);
+            this.panelTitleBar.Size = new System.Drawing.Size(731, 41);
             this.panelTitleBar.TabIndex = 0;
             this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
-            this.label1.Location = new System.Drawing.Point(7, 12);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(164, 19);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Thêm nhân viên mới";
             // 
             // pictureBox1
             // 
@@ -411,6 +484,18 @@ namespace DoAnPBL3
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
+            this.label1.Location = new System.Drawing.Point(7, 12);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(164, 19);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Thêm nhân viên mới";
+            // 
             // guna2DragControl1
             // 
             this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
@@ -423,10 +508,20 @@ namespace DoAnPBL3
             this.guna2DragControl2.TargetControl = this.pictureBox1;
             this.guna2DragControl2.UseTransparentDrag = true;
             // 
+            // avatar
+            // 
+            this.avatar.BackColor = System.Drawing.Color.White;
+            this.avatar.Location = new System.Drawing.Point(396, 113);
+            this.avatar.Name = "avatar";
+            this.avatar.Size = new System.Drawing.Size(274, 334);
+            this.avatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.avatar.TabIndex = 22;
+            this.avatar.TabStop = false;
+            // 
             // FormAddNV
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(356, 611);
+            this.ClientSize = new System.Drawing.Size(731, 611);
             this.Controls.Add(this.panelContainer);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -442,6 +537,7 @@ namespace DoAnPBL3
             this.panelTitleBar.ResumeLayout(false);
             this.panelTitleBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.avatar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -459,17 +555,26 @@ namespace DoAnPBL3
         private System.Windows.Forms.Label lblEmail;
         private RJTextBox rjtbEmail;
         private RJTextBox rjtbSDT;
-        private RJTextBox rjtbAddress;
-        private RJTextBox rjtbBD;
         private RJTextBox rjtbNameNV;
         private RJButton rjbtnCancel;
         private RJButton rjbtnOK;
         private System.Windows.Forms.PictureBox pictureBox1;
         private RJTextBox rjtbCMND;
         private System.Windows.Forms.Label lblCMND;
-        private System.Windows.Forms.Label lblAvatar;
-        private RJComboBox rjComboBox1;
+        private RJComboBox rjcbbGender;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl2;
+        private System.Windows.Forms.Label msgPhone;
+        private System.Windows.Forms.Label msgIDCard;
+        private System.Windows.Forms.Label msgName;
+        private RJComboBox rjcbbAddress;
+        private System.Windows.Forms.Label msgEmail;
+        private Guna.UI2.WinForms.Guna2DateTimePicker gunaDTP;
+        private System.Windows.Forms.Label msgGender;
+        private System.Windows.Forms.Label msgAddress;
+        private System.Windows.Forms.Label msgAge;
+        private System.Windows.Forms.Label msgDateOfBirth;
+        private Guna.UI2.WinForms.Guna2Button btnAvatar;
+        private System.Windows.Forms.PictureBox avatar;
     }
 }

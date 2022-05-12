@@ -100,7 +100,7 @@ namespace DoAnPBL3
             this.linkLabelForgotPassword.Location = new System.Drawing.Point(186, 340);
             this.linkLabelForgotPassword.Name = "linkLabelForgotPassword";
             this.linkLabelForgotPassword.Size = new System.Drawing.Size(95, 15);
-            this.linkLabelForgotPassword.TabIndex = 15;
+            this.linkLabelForgotPassword.TabIndex = 4;
             this.linkLabelForgotPassword.TabStop = true;
             this.linkLabelForgotPassword.Text = "Quên Mật Khẩu?";
             this.linkLabelForgotPassword.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelForgotPassword_LinkClicked);
@@ -159,7 +159,7 @@ namespace DoAnPBL3
             this.label1.Location = new System.Drawing.Point(74, 340);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(90, 15);
-            this.label1.TabIndex = 4;
+            this.label1.TabIndex = 3;
             this.label1.Text = "Lưu Đăng Nhập";
             // 
             // cbSaveAcc
@@ -180,7 +180,6 @@ namespace DoAnPBL3
             this.cbSaveAcc.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(43)))));
             this.cbSaveAcc.UncheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(153)))), ((int)(((byte)(149)))));
             this.cbSaveAcc.UncheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(153)))), ((int)(((byte)(149)))));
-            this.cbSaveAcc.CheckedChanged += new System.EventHandler(this.cbSaveAcc_CheckedChanged);
             // 
             // txtUserName
             // 

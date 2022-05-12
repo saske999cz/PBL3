@@ -29,12 +29,25 @@ namespace DoAnPBL3
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormQLKH));
             this.label1 = new System.Windows.Forms.Label();
             this.dgvQLKH = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rjtbTKNV = new DoAnPBL3.RJTextBox();
             this.xuiSegmentKH = new XanderUI.XUISegment();
             this.btnTTHD = new FontAwesome.Sharp.IconButton();
@@ -50,11 +63,17 @@ namespace DoAnPBL3
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelContainer = new System.Windows.Forms.Panel();
+            this.DataSetListCustomers = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvQLKH)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panelContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DataSetListCustomers)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -73,11 +92,14 @@ namespace DoAnPBL3
             // 
             this.dgvQLKH.AllowUserToAddRows = false;
             this.dgvQLKH.AllowUserToDeleteRows = false;
-            this.dgvQLKH.AllowUserToOrderColumns = true;
             this.dgvQLKH.AllowUserToResizeColumns = false;
             this.dgvQLKH.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(35)))));
             this.dgvQLKH.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvQLKH.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvQLKH.AutoGenerateColumns = false;
             this.dgvQLKH.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvQLKH.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
             this.dgvQLKH.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -91,25 +113,82 @@ namespace DoAnPBL3
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvQLKH.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvQLKH.ColumnHeadersHeight = 22;
+            this.dgvQLKH.ColumnHeadersHeight = 30;
             this.dgvQLKH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(43)))), ((int)(((byte)(63)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvQLKH.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvQLKH.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.Name,
+            this.Email,
+            this.Gender,
+            this.Phone,
+            this.Address});
+            this.dgvQLKH.DataSource = this.DataSetListCustomers;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(43)))), ((int)(((byte)(63)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvQLKH.DefaultCellStyle = dataGridViewCellStyle9;
             this.dgvQLKH.EnableHeadersVisualStyles = false;
             this.dgvQLKH.Location = new System.Drawing.Point(6, 170);
             this.dgvQLKH.Name = "dgvQLKH";
+            this.dgvQLKH.ReadOnly = true;
             this.dgvQLKH.RowHeadersVisible = false;
             this.dgvQLKH.RowHeadersWidth = 51;
             this.dgvQLKH.RowTemplate.Height = 30;
             this.dgvQLKH.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvQLKH.Size = new System.Drawing.Size(821, 413);
             this.dgvQLKH.TabIndex = 16;
+            // 
+            // ID
+            // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.ID.DefaultCellStyle = dataGridViewCellStyle3;
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            // 
+            // Name
+            // 
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Name.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Name.HeaderText = "Họ và tên";
+            this.Name.Name = "Name";
+            this.Name.ReadOnly = true;
+            // 
+            // Email
+            // 
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Email.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
+            // 
+            // Gender
+            // 
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Gender.DefaultCellStyle = dataGridViewCellStyle6;
+            this.Gender.HeaderText = "Giới tính";
+            this.Gender.Name = "Gender";
+            this.Gender.ReadOnly = true;
+            // 
+            // Phone
+            // 
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Phone.DefaultCellStyle = dataGridViewCellStyle7;
+            this.Phone.HeaderText = "SĐT";
+            this.Phone.Name = "Phone";
+            this.Phone.ReadOnly = true;
+            // 
+            // Address
+            // 
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Address.DefaultCellStyle = dataGridViewCellStyle8;
+            this.Address.HeaderText = "Địa chỉ";
+            this.Address.Name = "Address";
+            this.Address.ReadOnly = true;
             // 
             // rjtbTKNV
             // 
@@ -135,6 +214,7 @@ namespace DoAnPBL3
             // 
             // xuiSegmentKH
             // 
+            this.xuiSegmentKH.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.xuiSegmentKH.Cursor = System.Windows.Forms.Cursors.Hand;
             this.xuiSegmentKH.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xuiSegmentKH.Items = "Tất cả,Nam,Nữ";
@@ -151,7 +231,6 @@ namespace DoAnPBL3
             // 
             // btnTTHD
             // 
-            this.btnTTHD.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnTTHD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.btnTTHD.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
             this.btnTTHD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -161,7 +240,7 @@ namespace DoAnPBL3
             this.btnTTHD.IconColor = System.Drawing.Color.White;
             this.btnTTHD.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnTTHD.IconSize = 30;
-            this.btnTTHD.Location = new System.Drawing.Point(835, 242);
+            this.btnTTHD.Location = new System.Drawing.Point(3, 57);
             this.btnTTHD.Name = "btnTTHD";
             this.btnTTHD.Size = new System.Drawing.Size(142, 47);
             this.btnTTHD.TabIndex = 10;
@@ -174,7 +253,6 @@ namespace DoAnPBL3
             // 
             // btnTTKH
             // 
-            this.btnTTKH.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnTTKH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.btnTTKH.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
             this.btnTTKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -184,7 +262,7 @@ namespace DoAnPBL3
             this.btnTTKH.IconColor = System.Drawing.Color.White;
             this.btnTTKH.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnTTKH.IconSize = 30;
-            this.btnTTKH.Location = new System.Drawing.Point(835, 170);
+            this.btnTTKH.Location = new System.Drawing.Point(3, 3);
             this.btnTTKH.Name = "btnTTKH";
             this.btnTTKH.Size = new System.Drawing.Size(142, 47);
             this.btnTTKH.TabIndex = 8;
@@ -232,7 +310,7 @@ namespace DoAnPBL3
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(817, 49);
+            this.label6.Location = new System.Drawing.Point(688, 60);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(29, 16);
             this.label6.TabIndex = 29;
@@ -243,18 +321,18 @@ namespace DoAnPBL3
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
-            this.label7.Location = new System.Drawing.Point(768, 18);
+            this.label7.Location = new System.Drawing.Point(639, 29);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(124, 16);
             this.label7.TabIndex = 28;
-            this.label7.Text = "Số khach hàng nữ";
+            this.label7.Text = "Số khách hàng nữ";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(460, 49);
+            this.label4.Location = new System.Drawing.Point(410, 60);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(29, 16);
             this.label4.TabIndex = 27;
@@ -265,7 +343,7 @@ namespace DoAnPBL3
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
-            this.label5.Location = new System.Drawing.Point(411, 18);
+            this.label5.Location = new System.Drawing.Point(361, 29);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(135, 16);
             this.label5.TabIndex = 26;
@@ -276,7 +354,7 @@ namespace DoAnPBL3
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(97, 49);
+            this.label3.Location = new System.Drawing.Point(126, 60);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(29, 16);
             this.label3.TabIndex = 25;
@@ -287,7 +365,7 @@ namespace DoAnPBL3
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
-            this.label2.Location = new System.Drawing.Point(45, 18);
+            this.label2.Location = new System.Drawing.Point(74, 29);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(136, 16);
             this.label2.TabIndex = 24;
@@ -296,7 +374,7 @@ namespace DoAnPBL3
             // pictureBox2
             // 
             this.pictureBox2.Image = global::DoAnPBL3.Properties.Resources.man_1;
-            this.pictureBox2.Location = new System.Drawing.Point(542, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(492, 23);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(38, 27);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -307,7 +385,7 @@ namespace DoAnPBL3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::DoAnPBL3.Properties.Resources.women;
-            this.pictureBox3.Location = new System.Drawing.Point(889, 12);
+            this.pictureBox3.Location = new System.Drawing.Point(760, 23);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(38, 27);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -317,12 +395,38 @@ namespace DoAnPBL3
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(181, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(210, 23);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(38, 33);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 37;
             this.pictureBox1.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.btnTTKH);
+            this.panel1.Controls.Add(this.btnTTHD);
+            this.panel1.Location = new System.Drawing.Point(833, 170);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(152, 109);
+            this.panel1.TabIndex = 38;
+            // 
+            // panelContainer
+            // 
+            this.panelContainer.Controls.Add(this.pictureBox1);
+            this.panelContainer.Controls.Add(this.pictureBox2);
+            this.panelContainer.Controls.Add(this.pictureBox3);
+            this.panelContainer.Controls.Add(this.label2);
+            this.panelContainer.Controls.Add(this.label6);
+            this.panelContainer.Controls.Add(this.label3);
+            this.panelContainer.Controls.Add(this.label7);
+            this.panelContainer.Controls.Add(this.label4);
+            this.panelContainer.Controls.Add(this.label5);
+            this.panelContainer.Location = new System.Drawing.Point(7, 12);
+            this.panelContainer.Name = "panelContainer";
+            this.panelContainer.Size = new System.Drawing.Size(820, 100);
+            this.panelContainer.TabIndex = 39;
             // 
             // FormQLKH
             // 
@@ -330,36 +434,29 @@ namespace DoAnPBL3
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(980, 585);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.panelContainer);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnTKKH);
             this.Controls.Add(this.xuiSegmentKH);
             this.Controls.Add(this.rjtbTKNV);
             this.Controls.Add(this.dgvQLKH);
-            this.Controls.Add(this.btnTTHD);
-            this.Controls.Add(this.btnTTKH);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.iconPictureBox2);
             this.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.Gainsboro;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FormQLKH";
-            this.Text = "Quản lý khách hàng";
             ((System.ComponentModel.ISupportInitialize)(this.dgvQLKH)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panelContainer.ResumeLayout(false);
+            this.panelContainer.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DataSetListCustomers)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-
+            this.Text = "Quản lý khách hàng";
         }
 
         #endregion
@@ -381,5 +478,14 @@ namespace DoAnPBL3
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelContainer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Gender;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Phone;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Address;
+        private System.Windows.Forms.BindingSource DataSetListCustomers;
     }
 }
