@@ -17,7 +17,7 @@ namespace DoAnPBL3
             InitializeComponent();
         }
 
-        private void btnAddNV_Click(object sender, EventArgs e)
+        private void btnAddKH_Click(object sender, EventArgs e)
         {
             new FormAddKH().Show();
         }

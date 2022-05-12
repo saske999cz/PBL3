@@ -43,10 +43,12 @@ namespace DoAnPBL3
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tbCP = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Index = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // guna2CircleButton1
             // 
+            this.guna2CircleButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2CircleButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2CircleButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2CircleButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -55,7 +57,7 @@ namespace DoAnPBL3
             this.guna2CircleButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2CircleButton1.ForeColor = System.Drawing.Color.White;
             this.guna2CircleButton1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CircleButton1.Image")));
-            this.guna2CircleButton1.Location = new System.Drawing.Point(1022, 5);
+            this.guna2CircleButton1.Location = new System.Drawing.Point(1049, 5);
             this.guna2CircleButton1.Name = "guna2CircleButton1";
             this.guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CircleButton1.Size = new System.Drawing.Size(39, 40);
@@ -64,19 +66,20 @@ namespace DoAnPBL3
             // 
             // tbPrice
             // 
-            this.tbPrice.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.tbPrice.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(43)))), ((int)(((byte)(59)))));
             this.tbPrice.Cursor = System.Windows.Forms.Cursors.Default;
             this.tbPrice.DefaultText = "";
-            this.tbPrice.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tbPrice.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tbPrice.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbPrice.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(43)))), ((int)(((byte)(59)))));
+            this.tbPrice.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(43)))), ((int)(((byte)(59)))));
+            this.tbPrice.DisabledState.ForeColor = System.Drawing.Color.LightGray;
             this.tbPrice.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbPrice.Enabled = false;
+            this.tbPrice.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(43)))), ((int)(((byte)(59)))));
             this.tbPrice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbPrice.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.tbPrice.ForeColor = System.Drawing.Color.Black;
+            this.tbPrice.ForeColor = System.Drawing.Color.White;
             this.tbPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbPrice.Location = new System.Drawing.Point(649, 11);
+            this.tbPrice.Location = new System.Drawing.Point(676, 11);
             this.tbPrice.Name = "tbPrice";
             this.tbPrice.PasswordChar = '\0';
             this.tbPrice.PlaceholderForeColor = System.Drawing.SystemColors.Window;
@@ -88,18 +91,19 @@ namespace DoAnPBL3
             // 
             // tbSL
             // 
-            this.tbSL.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.tbSL.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(43)))), ((int)(((byte)(59)))));
             this.tbSL.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbSL.DefaultText = "";
             this.tbSL.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.tbSL.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.tbSL.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbSL.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbSL.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(43)))), ((int)(((byte)(59)))));
             this.tbSL.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbSL.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.tbSL.ForeColor = System.Drawing.Color.Black;
+            this.tbSL.ForeColor = System.Drawing.Color.LightGray;
             this.tbSL.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbSL.Location = new System.Drawing.Point(540, 11);
+            this.tbSL.Location = new System.Drawing.Point(567, 11);
             this.tbSL.MaxLength = 10;
             this.tbSL.Name = "tbSL";
             this.tbSL.PasswordChar = '\0';
@@ -112,19 +116,20 @@ namespace DoAnPBL3
             // 
             // tbNameBook
             // 
-            this.tbNameBook.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.tbNameBook.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(43)))), ((int)(((byte)(59)))));
             this.tbNameBook.Cursor = System.Windows.Forms.Cursors.Default;
             this.tbNameBook.DefaultText = "";
-            this.tbNameBook.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tbNameBook.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tbNameBook.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbNameBook.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(43)))), ((int)(((byte)(59)))));
+            this.tbNameBook.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(43)))), ((int)(((byte)(59)))));
+            this.tbNameBook.DisabledState.ForeColor = System.Drawing.Color.Silver;
             this.tbNameBook.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbNameBook.Enabled = false;
+            this.tbNameBook.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(43)))), ((int)(((byte)(59)))));
             this.tbNameBook.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbNameBook.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.tbNameBook.ForeColor = System.Drawing.Color.Black;
+            this.tbNameBook.ForeColor = System.Drawing.Color.White;
             this.tbNameBook.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbNameBook.Location = new System.Drawing.Point(218, 11);
+            this.tbNameBook.Location = new System.Drawing.Point(245, 11);
             this.tbNameBook.Name = "tbNameBook";
             this.tbNameBook.PasswordChar = '\0';
             this.tbNameBook.PlaceholderForeColor = System.Drawing.SystemColors.Window;
@@ -136,18 +141,19 @@ namespace DoAnPBL3
             // 
             // tbIDBook
             // 
-            this.tbIDBook.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.tbIDBook.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(43)))), ((int)(((byte)(59)))));
             this.tbIDBook.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbIDBook.DefaultText = "";
             this.tbIDBook.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.tbIDBook.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.tbIDBook.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbIDBook.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbIDBook.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(43)))), ((int)(((byte)(59)))));
             this.tbIDBook.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbIDBook.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.tbIDBook.ForeColor = System.Drawing.Color.Black;
+            this.tbIDBook.ForeColor = System.Drawing.Color.LightGray;
             this.tbIDBook.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbIDBook.Location = new System.Drawing.Point(54, 11);
+            this.tbIDBook.Location = new System.Drawing.Point(81, 11);
             this.tbIDBook.MaxLength = 32;
             this.tbIDBook.Name = "tbIDBook";
             this.tbIDBook.PasswordChar = '\0';
@@ -162,8 +168,8 @@ namespace DoAnPBL3
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(608, 18);
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(635, 18);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(12, 13);
             this.label7.TabIndex = 22;
@@ -173,8 +179,8 @@ namespace DoAnPBL3
             // 
             this.lblCP.AutoSize = true;
             this.lblCP.BackColor = System.Drawing.Color.Transparent;
-            this.lblCP.ForeColor = System.Drawing.Color.Black;
-            this.lblCP.Location = new System.Drawing.Point(791, 18);
+            this.lblCP.ForeColor = System.Drawing.Color.White;
+            this.lblCP.Location = new System.Drawing.Point(818, 18);
             this.lblCP.Name = "lblCP";
             this.lblCP.Size = new System.Drawing.Size(41, 13);
             this.lblCP.TabIndex = 21;
@@ -184,8 +190,8 @@ namespace DoAnPBL3
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(772, 18);
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(799, 18);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(13, 13);
             this.label5.TabIndex = 20;
@@ -195,8 +201,8 @@ namespace DoAnPBL3
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(160, 18);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(187, 18);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 13);
             this.label4.TabIndex = 19;
@@ -206,8 +212,8 @@ namespace DoAnPBL3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(620, 18);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(647, 18);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(23, 13);
             this.label3.TabIndex = 18;
@@ -217,8 +223,8 @@ namespace DoAnPBL3
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(481, 18);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(508, 18);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 13);
             this.label2.TabIndex = 16;
@@ -228,8 +234,8 @@ namespace DoAnPBL3
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(7, 18);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(34, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(46, 13);
             this.label1.TabIndex = 15;
@@ -237,19 +243,20 @@ namespace DoAnPBL3
             // 
             // tbCP
             // 
-            this.tbCP.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.tbCP.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(43)))), ((int)(((byte)(59)))));
             this.tbCP.Cursor = System.Windows.Forms.Cursors.Default;
             this.tbCP.DefaultText = "";
-            this.tbCP.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tbCP.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tbCP.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbCP.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(43)))), ((int)(((byte)(59)))));
+            this.tbCP.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(43)))), ((int)(((byte)(59)))));
+            this.tbCP.DisabledState.ForeColor = System.Drawing.Color.LightGray;
             this.tbCP.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbCP.Enabled = false;
+            this.tbCP.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(43)))), ((int)(((byte)(59)))));
             this.tbCP.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbCP.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.tbCP.ForeColor = System.Drawing.Color.Black;
+            this.tbCP.ForeColor = System.Drawing.Color.White;
             this.tbCP.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbCP.Location = new System.Drawing.Point(833, 11);
+            this.tbCP.Location = new System.Drawing.Point(860, 11);
             this.tbCP.Name = "tbCP";
             this.tbCP.PasswordChar = '\0';
             this.tbCP.PlaceholderForeColor = System.Drawing.SystemColors.Window;
@@ -259,11 +266,24 @@ namespace DoAnPBL3
             this.tbCP.Size = new System.Drawing.Size(176, 27);
             this.tbCP.TabIndex = 28;
             // 
+            // Index
+            // 
+            this.Index.AutoSize = true;
+            this.Index.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Index.ForeColor = System.Drawing.Color.White;
+            this.Index.Location = new System.Drawing.Point(6, 16);
+            this.Index.Name = "Index";
+            this.Index.Size = new System.Drawing.Size(27, 15);
+            this.Index.TabIndex = 29;
+            this.Index.Text = "Ind";
+            this.Index.Paint += new System.Windows.Forms.PaintEventHandler(this.Index_Paint);
+            // 
             // FormNhapMua
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.ClientSize = new System.Drawing.Size(1069, 52);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(53)))), ((int)(((byte)(70)))));
+            this.ClientSize = new System.Drawing.Size(1094, 52);
+            this.Controls.Add(this.Index);
             this.Controls.Add(this.tbCP);
             this.Controls.Add(this.guna2CircleButton1);
             this.Controls.Add(this.tbPrice);
@@ -300,5 +320,6 @@ namespace DoAnPBL3
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2TextBox tbCP;
+        private System.Windows.Forms.Label Index;
     }
 }

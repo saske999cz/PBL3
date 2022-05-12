@@ -29,12 +29,13 @@ namespace DoAnPBL3
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormQLS));
             this.rjtbTKS = new DoAnPBL3.RJTextBox();
-            this.xuiSegmentNV = new XanderUI.XUISegment();
+            this.xuiSegmentSach = new XanderUI.XUISegment();
             this.dgvQLSNV = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
             this.lblSSTA = new System.Windows.Forms.Label();
@@ -46,9 +47,13 @@ namespace DoAnPBL3
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnTKS = new Guna.UI2.WinForms.Guna2Button();
-            this.btnSuaNV = new FontAwesome.Sharp.IconButton();
-            this.btnDeleteNV = new FontAwesome.Sharp.IconButton();
-            this.btnAddNV = new FontAwesome.Sharp.IconButton();
+            this.btnSuaSach = new FontAwesome.Sharp.IconButton();
+            this.btnDeleteSach = new FontAwesome.Sharp.IconButton();
+            this.btnAddSach = new FontAwesome.Sharp.IconButton();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvQLSNV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -77,22 +82,22 @@ namespace DoAnPBL3
             this.rjtbTKS.Texts = "";
             this.rjtbTKS.UnderlinedStyle = false;
             // 
-            // xuiSegmentNV
+            // xuiSegmentSach
             // 
-            this.xuiSegmentNV.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.xuiSegmentNV.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xuiSegmentNV.Items = "Tất cả, Tiếng Việt , Tiếng Anh";
-            this.xuiSegmentNV.Location = new System.Drawing.Point(511, 130);
-            this.xuiSegmentNV.Margin = new System.Windows.Forms.Padding(2);
-            this.xuiSegmentNV.Name = "xuiSegmentNV";
-            this.xuiSegmentNV.SegmentActiveTextColor = System.Drawing.SystemColors.Highlight;
-            this.xuiSegmentNV.SegmentBackColor = System.Drawing.Color.CornflowerBlue;
-            this.xuiSegmentNV.SegmentColor = System.Drawing.Color.Blue;
-            this.xuiSegmentNV.SegmentInactiveTextColor = System.Drawing.Color.White;
-            this.xuiSegmentNV.SegmentStyle = XanderUI.XUISegment.Style.Material;
-            this.xuiSegmentNV.SelectedIndex = 0;
-            this.xuiSegmentNV.Size = new System.Drawing.Size(314, 34);
-            this.xuiSegmentNV.TabIndex = 42;
+            this.xuiSegmentSach.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.xuiSegmentSach.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xuiSegmentSach.Items = "Tất cả, Tiếng Việt , Tiếng Anh";
+            this.xuiSegmentSach.Location = new System.Drawing.Point(511, 130);
+            this.xuiSegmentSach.Margin = new System.Windows.Forms.Padding(2);
+            this.xuiSegmentSach.Name = "xuiSegmentSach";
+            this.xuiSegmentSach.SegmentActiveTextColor = System.Drawing.SystemColors.Highlight;
+            this.xuiSegmentSach.SegmentBackColor = System.Drawing.Color.CornflowerBlue;
+            this.xuiSegmentSach.SegmentColor = System.Drawing.Color.Blue;
+            this.xuiSegmentSach.SegmentInactiveTextColor = System.Drawing.Color.White;
+            this.xuiSegmentSach.SegmentStyle = XanderUI.XUISegment.Style.Material;
+            this.xuiSegmentSach.SelectedIndex = 0;
+            this.xuiSegmentSach.Size = new System.Drawing.Size(314, 34);
+            this.xuiSegmentSach.TabIndex = 42;
             // 
             // dgvQLSNV
             // 
@@ -102,14 +107,14 @@ namespace DoAnPBL3
             this.dgvQLSNV.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvQLSNV.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvQLSNV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvQLSNV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvQLSNV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvQLSNV.ColumnHeadersHeight = 20;
             this.dgvQLSNV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvQLSNV.EnableHeadersVisualStyles = false;
@@ -118,22 +123,22 @@ namespace DoAnPBL3
             this.dgvQLSNV.Margin = new System.Windows.Forms.Padding(2);
             this.dgvQLSNV.Name = "dgvQLSNV";
             this.dgvQLSNV.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvQLSNV.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvQLSNV.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvQLSNV.RowHeadersVisible = false;
             this.dgvQLSNV.RowHeadersWidth = 51;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvQLSNV.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvQLSNV.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvQLSNV.RowTemplate.Height = 24;
             this.dgvQLSNV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvQLSNV.Size = new System.Drawing.Size(821, 413);
@@ -252,75 +257,95 @@ namespace DoAnPBL3
             this.btnTKS.TabIndex = 55;
             this.btnTKS.Text = "Tìm kiếm";
             // 
-            // btnSuaNV
+            // btnSuaSach
             // 
-            this.btnSuaNV.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnSuaNV.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnSuaNV.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
-            this.btnSuaNV.FlatAppearance.BorderSize = 0;
-            this.btnSuaNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSuaNV.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSuaNV.ForeColor = System.Drawing.Color.White;
-            this.btnSuaNV.IconChar = FontAwesome.Sharp.IconChar.UserEdit;
-            this.btnSuaNV.IconColor = System.Drawing.Color.White;
-            this.btnSuaNV.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSuaNV.IconSize = 30;
-            this.btnSuaNV.Location = new System.Drawing.Point(832, 225);
-            this.btnSuaNV.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSuaNV.Name = "btnSuaNV";
-            this.btnSuaNV.Size = new System.Drawing.Size(143, 44);
-            this.btnSuaNV.TabIndex = 47;
-            this.btnSuaNV.Text = "Sửa";
-            this.btnSuaNV.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSuaNV.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSuaNV.UseVisualStyleBackColor = false;
+            this.btnSuaSach.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnSuaSach.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnSuaSach.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
+            this.btnSuaSach.FlatAppearance.BorderSize = 0;
+            this.btnSuaSach.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSuaSach.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSuaSach.ForeColor = System.Drawing.Color.White;
+            this.btnSuaSach.IconChar = FontAwesome.Sharp.IconChar.UserEdit;
+            this.btnSuaSach.IconColor = System.Drawing.Color.White;
+            this.btnSuaSach.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSuaSach.IconSize = 30;
+            this.btnSuaSach.Location = new System.Drawing.Point(832, 224);
+            this.btnSuaSach.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSuaSach.Name = "btnSuaSach";
+            this.btnSuaSach.Size = new System.Drawing.Size(143, 44);
+            this.btnSuaSach.TabIndex = 47;
+            this.btnSuaSach.Text = "Sửa";
+            this.btnSuaSach.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSuaSach.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSuaSach.UseVisualStyleBackColor = false;
             // 
-            // btnDeleteNV
+            // btnDeleteSach
             // 
-            this.btnDeleteNV.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnDeleteNV.BackColor = System.Drawing.Color.Firebrick;
-            this.btnDeleteNV.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
-            this.btnDeleteNV.FlatAppearance.BorderSize = 0;
-            this.btnDeleteNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeleteNV.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteNV.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteNV.IconChar = FontAwesome.Sharp.IconChar.UserMinus;
-            this.btnDeleteNV.IconColor = System.Drawing.Color.White;
-            this.btnDeleteNV.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnDeleteNV.IconSize = 30;
-            this.btnDeleteNV.Location = new System.Drawing.Point(832, 278);
-            this.btnDeleteNV.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDeleteNV.Name = "btnDeleteNV";
-            this.btnDeleteNV.Size = new System.Drawing.Size(143, 44);
-            this.btnDeleteNV.TabIndex = 46;
-            this.btnDeleteNV.Text = "Xóa";
-            this.btnDeleteNV.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDeleteNV.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDeleteNV.UseVisualStyleBackColor = false;
+            this.btnDeleteSach.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnDeleteSach.BackColor = System.Drawing.Color.Firebrick;
+            this.btnDeleteSach.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
+            this.btnDeleteSach.FlatAppearance.BorderSize = 0;
+            this.btnDeleteSach.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteSach.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteSach.ForeColor = System.Drawing.Color.White;
+            this.btnDeleteSach.IconChar = FontAwesome.Sharp.IconChar.UserMinus;
+            this.btnDeleteSach.IconColor = System.Drawing.Color.White;
+            this.btnDeleteSach.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnDeleteSach.IconSize = 30;
+            this.btnDeleteSach.Location = new System.Drawing.Point(832, 278);
+            this.btnDeleteSach.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDeleteSach.Name = "btnDeleteSach";
+            this.btnDeleteSach.Size = new System.Drawing.Size(143, 44);
+            this.btnDeleteSach.TabIndex = 46;
+            this.btnDeleteSach.Text = "Xóa";
+            this.btnDeleteSach.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDeleteSach.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDeleteSach.UseVisualStyleBackColor = false;
             // 
-            // btnAddNV
+            // btnAddSach
             // 
-            this.btnAddNV.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnAddNV.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnAddNV.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
-            this.btnAddNV.FlatAppearance.BorderSize = 0;
-            this.btnAddNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddNV.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddNV.ForeColor = System.Drawing.Color.White;
-            this.btnAddNV.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
-            this.btnAddNV.IconColor = System.Drawing.Color.White;
-            this.btnAddNV.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAddNV.IconSize = 30;
-            this.btnAddNV.Location = new System.Drawing.Point(832, 170);
-            this.btnAddNV.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAddNV.Name = "btnAddNV";
-            this.btnAddNV.Size = new System.Drawing.Size(143, 44);
-            this.btnAddNV.TabIndex = 45;
-            this.btnAddNV.Text = "Thêm";
-            this.btnAddNV.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAddNV.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAddNV.UseVisualStyleBackColor = false;
-            this.btnAddNV.Click += new System.EventHandler(this.btnAddNV_Click);
+            this.btnAddSach.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnAddSach.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnAddSach.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
+            this.btnAddSach.FlatAppearance.BorderSize = 0;
+            this.btnAddSach.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddSach.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddSach.ForeColor = System.Drawing.Color.White;
+            this.btnAddSach.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
+            this.btnAddSach.IconColor = System.Drawing.Color.White;
+            this.btnAddSach.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAddSach.IconSize = 30;
+            this.btnAddSach.Location = new System.Drawing.Point(832, 170);
+            this.btnAddSach.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddSach.Name = "btnAddSach";
+            this.btnAddSach.Size = new System.Drawing.Size(143, 44);
+            this.btnAddSach.TabIndex = 45;
+            this.btnAddSach.Text = "Thêm";
+            this.btnAddSach.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAddSach.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAddSach.UseVisualStyleBackColor = false;
+            this.btnAddSach.Click += new System.EventHandler(this.btnAddNV_Click);
+            // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.BorderRadius = 5;
+            this.guna2Elipse1.TargetControl = this.xuiSegmentSach;
+            // 
+            // guna2Elipse2
+            // 
+            this.guna2Elipse2.BorderRadius = 5;
+            this.guna2Elipse2.TargetControl = this.btnAddSach;
+            // 
+            // guna2Elipse3
+            // 
+            this.guna2Elipse3.BorderRadius = 5;
+            this.guna2Elipse3.TargetControl = this.btnSuaSach;
+            // 
+            // guna2Elipse4
+            // 
+            this.guna2Elipse4.BorderRadius = 5;
+            this.guna2Elipse4.TargetControl = this.btnDeleteSach;
             // 
             // FormQLS
             // 
@@ -337,11 +362,11 @@ namespace DoAnPBL3
             this.Controls.Add(this.lblTSSDB);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnTKS);
-            this.Controls.Add(this.btnSuaNV);
-            this.Controls.Add(this.btnDeleteNV);
-            this.Controls.Add(this.btnAddNV);
+            this.Controls.Add(this.btnSuaSach);
+            this.Controls.Add(this.btnDeleteSach);
+            this.Controls.Add(this.btnAddSach);
             this.Controls.Add(this.rjtbTKS);
-            this.Controls.Add(this.xuiSegmentNV);
+            this.Controls.Add(this.xuiSegmentSach);
             this.Controls.Add(this.dgvQLSNV);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormQLS";
@@ -358,11 +383,11 @@ namespace DoAnPBL3
         #endregion
 
         private RJTextBox rjtbTKS;
-        private XanderUI.XUISegment xuiSegmentNV;
+        private XanderUI.XUISegment xuiSegmentSach;
         private System.Windows.Forms.DataGridView dgvQLSNV;
-        private FontAwesome.Sharp.IconButton btnSuaNV;
-        private FontAwesome.Sharp.IconButton btnDeleteNV;
-        private FontAwesome.Sharp.IconButton btnAddNV;
+        private FontAwesome.Sharp.IconButton btnSuaSach;
+        private FontAwesome.Sharp.IconButton btnDeleteSach;
+        private FontAwesome.Sharp.IconButton btnAddSach;
         private Guna.UI2.WinForms.Guna2Button btnTKS;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -373,5 +398,9 @@ namespace DoAnPBL3
         private System.Windows.Forms.Label lblSSTV;
         private System.Windows.Forms.Label lblTSSDB;
         private System.Windows.Forms.Label label2;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse3;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse4;
     }
 }

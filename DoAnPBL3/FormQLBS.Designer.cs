@@ -30,14 +30,13 @@ namespace DoAnPBL3
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormQLBS));
-            this.label1 = new System.Windows.Forms.Label();
             this.dgvQLBS = new System.Windows.Forms.DataGridView();
             this.xuiSegmentBS = new XanderUI.XUISegment();
-            this.rjtbTKNV = new DoAnPBL3.RJTextBox();
+            this.rjtbTKS = new DoAnPBL3.RJTextBox();
             this.rjDropDownMenuSXS = new DoAnPBL3.RJDropDownMenu(this.components);
             this.chữCáiGiảmDầnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chữCáiTăngDầnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,10 +46,10 @@ namespace DoAnPBL3
             this.mứcĐộBánChạyGiảmDầnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sốLượngSáchHiệnCóTăngDầnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sốLượngSáchHiệnCóGiảmDầnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label6 = new System.Windows.Forms.Label();
-            this.lblSSTA = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.lblSSTV = new System.Windows.Forms.Label();
+            this.lblSTA = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.lblSTV = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.lblTSSDB = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -59,26 +58,15 @@ namespace DoAnPBL3
             this.btnTKS = new Guna.UI2.WinForms.Guna2Button();
             this.btnHDTN = new FontAwesome.Sharp.IconButton();
             this.btnSXS = new FontAwesome.Sharp.IconButton();
-            this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvQLBS)).BeginInit();
             this.rjDropDownMenuSXS.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label1.Location = new System.Drawing.Point(926, 563);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(23, 9);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "PBL3";
             // 
             // dgvQLBS
             // 
@@ -87,31 +75,32 @@ namespace DoAnPBL3
             this.dgvQLBS.AllowUserToOrderColumns = true;
             this.dgvQLBS.AllowUserToResizeColumns = false;
             this.dgvQLBS.AllowUserToResizeRows = false;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(35)))));
-            this.dgvQLBS.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(35)))));
+            this.dgvQLBS.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvQLBS.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dgvQLBS.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvQLBS.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
             this.dgvQLBS.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvQLBS.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvQLBS.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(16)))), ((int)(((byte)(221)))));
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(16)))), ((int)(((byte)(221)))));
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvQLBS.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(16)))), ((int)(((byte)(221)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(16)))), ((int)(((byte)(221)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvQLBS.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvQLBS.ColumnHeadersHeight = 22;
             this.dgvQLBS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(43)))), ((int)(((byte)(63)))));
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvQLBS.DefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(43)))), ((int)(((byte)(63)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvQLBS.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvQLBS.EnableHeadersVisualStyles = false;
             this.dgvQLBS.Location = new System.Drawing.Point(6, 170);
             this.dgvQLBS.Name = "dgvQLBS";
@@ -124,6 +113,7 @@ namespace DoAnPBL3
             // 
             // xuiSegmentBS
             // 
+            this.xuiSegmentBS.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.xuiSegmentBS.Cursor = System.Windows.Forms.Cursors.Hand;
             this.xuiSegmentBS.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xuiSegmentBS.Items = "Tất cả, Tiếng Việt, Tiếng Anh";
@@ -138,27 +128,28 @@ namespace DoAnPBL3
             this.xuiSegmentBS.Size = new System.Drawing.Size(314, 34);
             this.xuiSegmentBS.TabIndex = 21;
             // 
-            // rjtbTKNV
+            // rjtbTKS
             // 
-            this.rjtbTKNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(35)))));
-            this.rjtbTKNV.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(35)))));
-            this.rjtbTKNV.BorderFocusColor = System.Drawing.Color.DeepSkyBlue;
-            this.rjtbTKNV.BorderRadius = 15;
-            this.rjtbTKNV.BorderSize = 1;
-            this.rjtbTKNV.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjtbTKNV.ForeColor = System.Drawing.Color.Silver;
-            this.rjtbTKNV.Location = new System.Drawing.Point(6, 133);
-            this.rjtbTKNV.Margin = new System.Windows.Forms.Padding(4);
-            this.rjtbTKNV.Multiline = false;
-            this.rjtbTKNV.Name = "rjtbTKNV";
-            this.rjtbTKNV.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjtbTKNV.PasswordChar = false;
-            this.rjtbTKNV.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(83)))), ((int)(((byte)(103)))));
-            this.rjtbTKNV.PlaceholderText = "Tìm kiếm";
-            this.rjtbTKNV.Size = new System.Drawing.Size(250, 31);
-            this.rjtbTKNV.TabIndex = 16;
-            this.rjtbTKNV.Texts = "";
-            this.rjtbTKNV.UnderlinedStyle = false;
+            this.rjtbTKS.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.rjtbTKS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(35)))));
+            this.rjtbTKS.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(35)))));
+            this.rjtbTKS.BorderFocusColor = System.Drawing.Color.DeepSkyBlue;
+            this.rjtbTKS.BorderRadius = 15;
+            this.rjtbTKS.BorderSize = 1;
+            this.rjtbTKS.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjtbTKS.ForeColor = System.Drawing.Color.Silver;
+            this.rjtbTKS.Location = new System.Drawing.Point(6, 133);
+            this.rjtbTKS.Margin = new System.Windows.Forms.Padding(4);
+            this.rjtbTKS.Multiline = false;
+            this.rjtbTKS.Name = "rjtbTKS";
+            this.rjtbTKS.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.rjtbTKS.PasswordChar = false;
+            this.rjtbTKS.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(83)))), ((int)(((byte)(103)))));
+            this.rjtbTKS.PlaceholderText = "Tìm kiếm";
+            this.rjtbTKS.Size = new System.Drawing.Size(250, 31);
+            this.rjtbTKS.TabIndex = 16;
+            this.rjtbTKS.Texts = "";
+            this.rjtbTKS.UnderlinedStyle = false;
             // 
             // rjDropDownMenuSXS
             // 
@@ -245,53 +236,62 @@ namespace DoAnPBL3
             this.sốLượngSáchHiệnCóGiảmDầnToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
             this.sốLượngSáchHiệnCóGiảmDầnToolStripMenuItem.Text = "Số lượng sách hiện có giảm dần";
             // 
-            // label6
+            // lblSTA
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(812, 49);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(29, 16);
-            this.label6.TabIndex = 35;
-            this.label6.Text = "100";
+            this.lblSTA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblSTA.AutoSize = true;
+            this.lblSTA.BackColor = System.Drawing.Color.Transparent;
+            this.lblSTA.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSTA.ForeColor = System.Drawing.Color.White;
+            this.lblSTA.Location = new System.Drawing.Point(812, 49);
+            this.lblSTA.Name = "lblSTA";
+            this.lblSTA.Size = new System.Drawing.Size(29, 16);
+            this.lblSTA.TabIndex = 35;
+            this.lblSTA.Text = "100";
             // 
-            // lblSSTA
+            // label7
             // 
-            this.lblSSTA.AutoSize = true;
-            this.lblSSTA.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSSTA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
-            this.lblSSTA.Location = new System.Drawing.Point(768, 18);
-            this.lblSSTA.Name = "lblSSTA";
-            this.lblSSTA.Size = new System.Drawing.Size(123, 16);
-            this.lblSSTA.TabIndex = 34;
-            this.lblSSTA.Text = "Số sách tiếng Anh";
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
+            this.label7.Location = new System.Drawing.Point(768, 18);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(123, 16);
+            this.label7.TabIndex = 34;
+            this.label7.Text = "Số sách tiếng Anh";
             // 
-            // label4
+            // lblSTV
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(454, 49);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(29, 16);
-            this.label4.TabIndex = 33;
-            this.label4.Text = "100";
+            this.lblSTV.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblSTV.AutoSize = true;
+            this.lblSTV.BackColor = System.Drawing.Color.Transparent;
+            this.lblSTV.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSTV.ForeColor = System.Drawing.Color.White;
+            this.lblSTV.Location = new System.Drawing.Point(454, 49);
+            this.lblSTV.Name = "lblSTV";
+            this.lblSTV.Size = new System.Drawing.Size(29, 16);
+            this.lblSTV.TabIndex = 33;
+            this.lblSTV.Text = "100";
             // 
-            // lblSSTV
+            // label5
             // 
-            this.lblSSTV.AutoSize = true;
-            this.lblSSTV.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSSTV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
-            this.lblSSTV.Location = new System.Drawing.Point(411, 18);
-            this.lblSSTV.Name = "lblSSTV";
-            this.lblSSTV.Size = new System.Drawing.Size(123, 16);
-            this.lblSSTV.TabIndex = 32;
-            this.lblSSTV.Text = "Số sách tiếng Việt";
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
+            this.label5.Location = new System.Drawing.Point(411, 18);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(123, 16);
+            this.label5.TabIndex = 32;
+            this.label5.Text = "Số sách tiếng Việt";
             // 
             // lblTSSDB
             // 
             this.lblTSSDB.AutoSize = true;
+            this.lblTSSDB.BackColor = System.Drawing.Color.Transparent;
             this.lblTSSDB.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTSSDB.ForeColor = System.Drawing.Color.White;
             this.lblTSSDB.Location = new System.Drawing.Point(101, 49);
@@ -303,6 +303,7 @@ namespace DoAnPBL3
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
             this.label2.Location = new System.Drawing.Point(45, 18);
@@ -323,6 +324,7 @@ namespace DoAnPBL3
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = global::DoAnPBL3.Properties.Resources.united_kingdom_flag;
             this.pictureBox1.Location = new System.Drawing.Point(889, 12);
             this.pictureBox1.Name = "pictureBox1";
@@ -333,6 +335,7 @@ namespace DoAnPBL3
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox2.Image = global::DoAnPBL3.Properties.Resources.vietnam_flag;
             this.pictureBox2.Location = new System.Drawing.Point(532, 12);
             this.pictureBox2.Name = "pictureBox2";
@@ -343,6 +346,7 @@ namespace DoAnPBL3
             // 
             // btnTKS
             // 
+            this.btnTKS.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnTKS.BorderRadius = 15;
             this.btnTKS.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnTKS.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -360,9 +364,11 @@ namespace DoAnPBL3
             // 
             // btnHDTN
             // 
-            this.btnHDTN.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnHDTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btnHDTN.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnHDTN.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnHDTN.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHDTN.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
+            this.btnHDTN.FlatAppearance.BorderSize = 0;
             this.btnHDTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHDTN.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHDTN.ForeColor = System.Drawing.Color.White;
@@ -370,12 +376,11 @@ namespace DoAnPBL3
             this.btnHDTN.IconColor = System.Drawing.Color.White;
             this.btnHDTN.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnHDTN.IconSize = 30;
-            this.btnHDTN.Location = new System.Drawing.Point(832, 244);
+            this.btnHDTN.Location = new System.Drawing.Point(833, 244);
             this.btnHDTN.Name = "btnHDTN";
             this.btnHDTN.Size = new System.Drawing.Size(142, 47);
             this.btnHDTN.TabIndex = 13;
-            this.btnHDTN.Text = "Hóa đơn trong ngày";
-            this.btnHDTN.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnHDTN.Text = "  Hóa đơn trong ngày";
             this.btnHDTN.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnHDTN.UseVisualStyleBackColor = false;
             this.btnHDTN.MouseEnter += new System.EventHandler(this.btnHDTN_MouseEnter);
@@ -383,9 +388,11 @@ namespace DoAnPBL3
             // 
             // btnSXS
             // 
-            this.btnSXS.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSXS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btnSXS.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnSXS.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnSXS.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSXS.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
+            this.btnSXS.FlatAppearance.BorderSize = 0;
             this.btnSXS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSXS.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSXS.ForeColor = System.Drawing.Color.White;
@@ -393,7 +400,7 @@ namespace DoAnPBL3
             this.btnSXS.IconColor = System.Drawing.Color.White;
             this.btnSXS.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSXS.IconSize = 30;
-            this.btnSXS.Location = new System.Drawing.Point(833, 171);
+            this.btnSXS.Location = new System.Drawing.Point(834, 171);
             this.btnSXS.Name = "btnSXS";
             this.btnSXS.Size = new System.Drawing.Size(142, 47);
             this.btnSXS.TabIndex = 12;
@@ -405,20 +412,20 @@ namespace DoAnPBL3
             this.btnSXS.MouseEnter += new System.EventHandler(this.btnSXS_MouseEnter);
             this.btnSXS.MouseLeave += new System.EventHandler(this.btnSXS_MouseLeave);
             // 
-            // iconPictureBox2
+            // guna2Elipse1
             // 
-            this.iconPictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconPictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.iconPictureBox2.ForeColor = System.Drawing.Color.Gainsboro;
-            this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.Microsoft;
-            this.iconPictureBox2.IconColor = System.Drawing.Color.Gainsboro;
-            this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox2.IconSize = 20;
-            this.iconPictureBox2.Location = new System.Drawing.Point(958, 563);
-            this.iconPictureBox2.Name = "iconPictureBox2";
-            this.iconPictureBox2.Size = new System.Drawing.Size(24, 20);
-            this.iconPictureBox2.TabIndex = 10;
-            this.iconPictureBox2.TabStop = false;
+            this.guna2Elipse1.BorderRadius = 5;
+            this.guna2Elipse1.TargetControl = this.xuiSegmentBS;
+            // 
+            // guna2Elipse2
+            // 
+            this.guna2Elipse2.BorderRadius = 5;
+            this.guna2Elipse2.TargetControl = this.btnSXS;
+            // 
+            // guna2Elipse3
+            // 
+            this.guna2Elipse3.BorderRadius = 5;
+            this.guna2Elipse3.TargetControl = this.btnHDTN;
             // 
             // FormQLBS
             // 
@@ -429,20 +436,18 @@ namespace DoAnPBL3
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.lblSSTA);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.lblSSTV);
+            this.Controls.Add(this.lblSTA);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.lblSTV);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.lblTSSDB);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnTKS);
             this.Controls.Add(this.xuiSegmentBS);
-            this.Controls.Add(this.rjtbTKNV);
+            this.Controls.Add(this.rjtbTKS);
             this.Controls.Add(this.dgvQLBS);
             this.Controls.Add(this.btnHDTN);
             this.Controls.Add(this.btnSXS);
-            this.Controls.Add(this.iconPictureBox2);
-            this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.Gainsboro;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -454,20 +459,16 @@ namespace DoAnPBL3
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
         private FontAwesome.Sharp.IconButton btnSXS;
         private FontAwesome.Sharp.IconButton btnHDTN;
         private System.Windows.Forms.DataGridView dgvQLBS;
-        private RJTextBox rjtbTKNV;
+        private RJTextBox rjtbTKS;
         private RJDropDownMenu rjDropDownMenuSXS;
         private System.Windows.Forms.ToolStripMenuItem chữCáiGiảmDầnToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem chữCáiTăngDầnToolStripMenuItem;
@@ -479,14 +480,17 @@ namespace DoAnPBL3
         private System.Windows.Forms.ToolStripMenuItem sốLượngSáchHiệnCóGiảmDầnToolStripMenuItem;
         private XanderUI.XUISegment xuiSegmentBS;
         private Guna.UI2.WinForms.Guna2Button btnTKS;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label lblSSTA;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label lblSSTV;
+        private System.Windows.Forms.Label lblSTA;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblSTV;
+        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblTSSDB;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse3;
     }
 }

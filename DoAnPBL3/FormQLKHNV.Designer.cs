@@ -29,13 +29,14 @@ namespace DoAnPBL3
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormQLKHNV));
             this.rjtbTKKH = new DoAnPBL3.RJTextBox();
             this.dgvQLKHNV = new System.Windows.Forms.DataGridView();
-            this.btnAddNV = new FontAwesome.Sharp.IconButton();
+            this.btnAddKH = new FontAwesome.Sharp.IconButton();
             this.btnTKKH = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -46,7 +47,9 @@ namespace DoAnPBL3
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.xuiSegmentNV = new XanderUI.XUISegment();
+            this.xuiSegmentKH = new XanderUI.XUISegment();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvQLKHNV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -120,33 +123,35 @@ namespace DoAnPBL3
             this.dgvQLKHNV.Size = new System.Drawing.Size(821, 413);
             this.dgvQLKHNV.TabIndex = 48;
             // 
-            // btnAddNV
+            // btnAddKH
             // 
-            this.btnAddNV.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnAddNV.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnAddNV.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
-            this.btnAddNV.FlatAppearance.BorderSize = 0;
-            this.btnAddNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddNV.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddNV.ForeColor = System.Drawing.Color.White;
-            this.btnAddNV.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
-            this.btnAddNV.IconColor = System.Drawing.Color.White;
-            this.btnAddNV.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAddNV.IconSize = 30;
-            this.btnAddNV.Location = new System.Drawing.Point(833, 175);
-            this.btnAddNV.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAddNV.Name = "btnAddNV";
-            this.btnAddNV.Size = new System.Drawing.Size(143, 44);
-            this.btnAddNV.TabIndex = 53;
-            this.btnAddNV.Text = "Thêm";
-            this.btnAddNV.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAddNV.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAddNV.UseVisualStyleBackColor = false;
-            this.btnAddNV.Click += new System.EventHandler(this.btnAddNV_Click);
+            this.btnAddKH.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnAddKH.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnAddKH.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddKH.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
+            this.btnAddKH.FlatAppearance.BorderSize = 0;
+            this.btnAddKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddKH.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddKH.ForeColor = System.Drawing.Color.White;
+            this.btnAddKH.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
+            this.btnAddKH.IconColor = System.Drawing.Color.White;
+            this.btnAddKH.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAddKH.IconSize = 30;
+            this.btnAddKH.Location = new System.Drawing.Point(833, 175);
+            this.btnAddKH.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddKH.Name = "btnAddKH";
+            this.btnAddKH.Size = new System.Drawing.Size(143, 44);
+            this.btnAddKH.TabIndex = 53;
+            this.btnAddKH.Text = "Thêm";
+            this.btnAddKH.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAddKH.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAddKH.UseVisualStyleBackColor = false;
+            this.btnAddKH.Click += new System.EventHandler(this.btnAddKH_Click);
             // 
             // btnTKKH
             // 
             this.btnTKKH.BorderRadius = 15;
+            this.btnTKKH.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTKKH.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnTKKH.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnTKKH.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -258,22 +263,32 @@ namespace DoAnPBL3
             this.label2.TabIndex = 55;
             this.label2.Text = "Tổng số khách hàng";
             // 
-            // xuiSegmentNV
+            // xuiSegmentKH
             // 
-            this.xuiSegmentNV.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.xuiSegmentNV.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xuiSegmentNV.Items = "Tất cả, Nam, Nữ";
-            this.xuiSegmentNV.Location = new System.Drawing.Point(512, 130);
-            this.xuiSegmentNV.Margin = new System.Windows.Forms.Padding(2);
-            this.xuiSegmentNV.Name = "xuiSegmentNV";
-            this.xuiSegmentNV.SegmentActiveTextColor = System.Drawing.SystemColors.Highlight;
-            this.xuiSegmentNV.SegmentBackColor = System.Drawing.Color.CornflowerBlue;
-            this.xuiSegmentNV.SegmentColor = System.Drawing.Color.Blue;
-            this.xuiSegmentNV.SegmentInactiveTextColor = System.Drawing.Color.White;
-            this.xuiSegmentNV.SegmentStyle = XanderUI.XUISegment.Style.Material;
-            this.xuiSegmentNV.SelectedIndex = 0;
-            this.xuiSegmentNV.Size = new System.Drawing.Size(314, 34);
-            this.xuiSegmentNV.TabIndex = 50;
+            this.xuiSegmentKH.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.xuiSegmentKH.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xuiSegmentKH.Items = "Tất cả, Nam, Nữ";
+            this.xuiSegmentKH.Location = new System.Drawing.Point(512, 130);
+            this.xuiSegmentKH.Margin = new System.Windows.Forms.Padding(2);
+            this.xuiSegmentKH.Name = "xuiSegmentKH";
+            this.xuiSegmentKH.SegmentActiveTextColor = System.Drawing.SystemColors.Highlight;
+            this.xuiSegmentKH.SegmentBackColor = System.Drawing.Color.CornflowerBlue;
+            this.xuiSegmentKH.SegmentColor = System.Drawing.Color.Blue;
+            this.xuiSegmentKH.SegmentInactiveTextColor = System.Drawing.Color.White;
+            this.xuiSegmentKH.SegmentStyle = XanderUI.XUISegment.Style.Material;
+            this.xuiSegmentKH.SelectedIndex = 0;
+            this.xuiSegmentKH.Size = new System.Drawing.Size(314, 34);
+            this.xuiSegmentKH.TabIndex = 50;
+            // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.BorderRadius = 5;
+            this.guna2Elipse1.TargetControl = this.xuiSegmentKH;
+            // 
+            // guna2Elipse2
+            // 
+            this.guna2Elipse2.BorderRadius = 5;
+            this.guna2Elipse2.TargetControl = this.btnAddKH;
             // 
             // FormQLKHNV
             // 
@@ -290,13 +305,13 @@ namespace DoAnPBL3
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnTKKH);
-            this.Controls.Add(this.btnAddNV);
+            this.Controls.Add(this.btnAddKH);
             this.Controls.Add(this.rjtbTKKH);
-            this.Controls.Add(this.xuiSegmentNV);
+            this.Controls.Add(this.xuiSegmentKH);
             this.Controls.Add(this.dgvQLKHNV);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormQLKHNV";
-            this.Text = "FormQLKHNV";
+            this.Text = "Quản lý khách hàng";
             ((System.ComponentModel.ISupportInitialize)(this.dgvQLKHNV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -307,7 +322,7 @@ namespace DoAnPBL3
         }
 
         #endregion
-        private FontAwesome.Sharp.IconButton btnAddNV;
+        private FontAwesome.Sharp.IconButton btnAddKH;
         private RJTextBox rjtbTKKH;
         private System.Windows.Forms.DataGridView dgvQLKHNV;
         private Guna.UI2.WinForms.Guna2Button btnTKKH;
@@ -320,6 +335,8 @@ namespace DoAnPBL3
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private XanderUI.XUISegment xuiSegmentNV;
+        private XanderUI.XUISegment xuiSegmentKH;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
     }
 }

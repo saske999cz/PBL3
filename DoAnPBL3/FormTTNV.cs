@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DoAnPBL3
 {
-    public partial class FormTotal : Form
+    public partial class FormTTNV : Form
     {
-        public FormTotal()
+        public FormTTNV()
         {
             InitializeComponent();
         }

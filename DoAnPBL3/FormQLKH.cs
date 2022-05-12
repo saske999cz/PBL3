@@ -12,9 +12,70 @@ namespace DoAnPBL3
 {
     public partial class FormQLKH : Form
     {
-        public FormQLKH()
+        public FormQLKH(string theme)
         {
             InitializeComponent();
+            switch (theme)
+            {
+                case "Admin":
+                    btnTKKH.Parent.BackColor = Color.FromArgb(34, 33, 74);
+                    label2.ForeColor = Color.FromArgb(124, 141, 181);
+                    label5.ForeColor = Color.FromArgb(124, 141, 181);
+                    label7.ForeColor = Color.FromArgb(124, 141, 181);
+                    lblKHN.ForeColor = Color.White;
+                    lblKHNu.ForeColor = Color.White;
+                    lblTSKH.ForeColor = Color.White;
+                    xuiSegmentKH.SegmentActiveTextColor = Color.HotPink;
+                    xuiSegmentKH.SegmentBackColor = Color.SlateBlue;
+                    xuiSegmentKH.SegmentColor = Color.DarkMagenta;
+                    xuiSegmentKH.SegmentInactiveTextColor = Color.White;
+                    btnTKKH.FillColor = Color.FromArgb(107, 83, 255);
+                    rjtbTKKH.BackColor = Color.FromArgb(23, 21, 35);
+                    rjtbTKKH.BorderColor = Color.FromArgb(23, 21, 35);
+                    rjtbTKKH.ForeColor = Color.Silver;
+                    rjtbTKKH.PlaceholderColor = Color.FromArgb(87, 83, 103);
+
+                    break;
+
+                case "Dark":
+                    btnTKKH.Parent.BackColor = Color.FromArgb(32, 32, 32);
+                    label2.ForeColor = Color.FromArgb(124, 141, 181);
+                    label5.ForeColor = Color.FromArgb(124, 141, 181);
+                    label7.ForeColor = Color.FromArgb(124, 141, 181);
+                    lblKHN.ForeColor = Color.White;
+                    lblKHNu.ForeColor = Color.White;
+                    lblTSKH.ForeColor = Color.White;
+                    xuiSegmentKH.SegmentActiveTextColor = Color.HotPink;
+                    xuiSegmentKH.SegmentBackColor = Color.SlateBlue;
+                    xuiSegmentKH.SegmentColor = Color.DarkMagenta;
+                    xuiSegmentKH.SegmentInactiveTextColor = Color.White;
+                    btnTKKH.FillColor = Color.FromArgb(107, 83, 255);
+                    rjtbTKKH.BackColor = Color.FromArgb(18, 18, 18);
+                    rjtbTKKH.BorderColor = Color.FromArgb(18, 18, 18);
+                    rjtbTKKH.ForeColor = Color.Silver;
+                    rjtbTKKH.PlaceholderColor = Color.FromArgb(87, 83, 103);
+                    break;
+
+                case "Light":
+                    btnTKKH.Parent.BackColor = Color.FromArgb(220, 220, 220);
+                    label2.ForeColor = Color.FromArgb(124, 141, 181);
+                    label5.ForeColor = Color.FromArgb(124, 141, 181);
+                    label7.ForeColor = Color.FromArgb(124, 141, 181);
+                    lblKHN.ForeColor = Color.Black;
+                    lblKHNu.ForeColor = Color.Black;
+                    lblTSKH.ForeColor = Color.Black;
+                    xuiSegmentKH.SegmentActiveTextColor = Color.HotPink;
+                    xuiSegmentKH.SegmentBackColor = Color.SlateBlue;
+                    xuiSegmentKH.SegmentColor = Color.DarkMagenta;
+                    xuiSegmentKH.SegmentInactiveTextColor = Color.White;
+                    btnTKKH.FillColor = Color.FromArgb(107, 83, 255);
+                    rjtbTKKH.BackColor = Color.FromArgb(255, 255, 255);
+                    rjtbTKKH.BorderColor = Color.FromArgb(180, 180, 180);
+                    rjtbTKKH.ForeColor = Color.DimGray;
+                    rjtbTKKH.PlaceholderColor = Color.FromArgb(87, 83, 103);
+
+                    break;
+            }
         }
 
         private struct RGBColors
@@ -38,14 +99,14 @@ namespace DoAnPBL3
             btnTKKH.BackColor = RGBColors.color4;
         }
 
-        private void btnTTHD_MouseEnter(object sender, EventArgs e)
+        private void btnHDKH_MouseEnter(object sender, EventArgs e)
         {
-            btnTTHD.BackColor = RGBColors.color4;
+            btnHDKH.BackColor = RGBColors.color4;
         }
 
         private void btnTTKH_MouseLeave(object sender, EventArgs e)
         {
-            btnTTKH.BackColor = Color.FromArgb(31, 30, 68);
+            btnTTKH.BackColor = Color.RoyalBlue;
         }
 
         private void btnTKKH_MouseLeave(object sender, EventArgs e)
@@ -53,9 +114,9 @@ namespace DoAnPBL3
             btnTKKH.BackColor = Color.FromArgb(31, 30, 68);
         }
 
-        private void btnTTHD_MouseLeave(object sender, EventArgs e)
+        private void btnHDKH_MouseLeave(object sender, EventArgs e)
         {
-            btnTTHD.BackColor = Color.FromArgb(31, 30, 68);
+            btnHDKH.BackColor = Color.RoyalBlue;
         }
     }
 }

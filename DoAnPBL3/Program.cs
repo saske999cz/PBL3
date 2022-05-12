@@ -17,7 +17,7 @@ namespace DoAnPBL3
         {   
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-                Application.Run(new FormMuaSach());
+                Application.Run(new FormLogin());
 
             
         }

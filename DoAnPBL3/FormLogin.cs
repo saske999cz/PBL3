@@ -32,9 +32,14 @@ namespace DoAnPBL3
 
 
         private void Login_Load(object sender, EventArgs e)
-        {
-            bookStore = new BookStoreContext();
-            bookStore.Languages.ToList(); // tương tác với DB 1 lần để rend ra CSDL
+        {   //edit
+
+            using (var bookStore = new BookStoreContext())
+            {
+                // tương tác với DB 1 lần để rend ra CSDL
+                bookStore.Languages.ToList();
+            }
+            cbSaveAcc.Checked = true;
             if (Properties.Settings.Default.username != "")
                 cbSaveAcc.Checked = true;
             if (username != "" || password != "")
@@ -48,6 +53,11 @@ namespace DoAnPBL3
                 txtPassword.Text = Properties.Settings.Default.password;
                 // btnLogin.PerformClick();
             }
+            // edit
+            if (Properties.Settings.Default.role == "Quản Trị")
+                radioAdmin.Checked = true;
+            else
+                radioEmployee.Checked = true;
         }
 
 
@@ -57,7 +67,7 @@ namespace DoAnPBL3
             {
                 if (cbSaveAcc.Checked)
                 {
-                    Properties.Settings.Default.username = txtUserName.Text;
+                   Properties.Settings.Default.username = txtUserName.Text;
                     Properties.Settings.Default.password = txtPassword.Text;
                     Properties.Settings.Default.Save();
                 }
@@ -85,65 +95,89 @@ namespace DoAnPBL3
                 RJMessageBox.Show("Vui lòng nhập mật khẩu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
             {
-                if (radioAdmin.Checked)
+                if(radioAdmin.Checked)
                 {
-                    var listAdminAccounts = from account in bookStore.Accounts
-                                            where (account.Role == EnumRole.Admin.ToString() && account.Username == username && account.Password == password)
-                                            select new
-                                            {
-                                                account.Username,
-                                                account.Password
-                                            };
-                    var listAdminUsernameAccounts = from account in bookStore.Accounts
-                                                    where (account.Role == EnumRole.Admin.ToString() && account.Username == username)
-                                                    select new
-                                                    {
-                                                        account.Username,
-                                                    };
-                    if (listAdminUsernameAccounts.ToList().Count > 0)
+                    using (var bookStore = new BookStoreContext())
                     {
-                        if ((listAdminAccounts.ToList()).Count > 0)
+                        var listAdminAccounts = from account in bookStore.Accounts.ToList()
+                                                where (account.Role == EnumRole.Admin.ToString() && account.Username == username && account.Password == password)
+                                                select new
+                                                {
+                                                    account.Username,
+                                                    account.Password
+                                                };
+                        var listAdminUsernameAccounts = from account in bookStore.Accounts.ToList()
+                                                        where (account.Role == EnumRole.Admin.ToString() && account.Username == username)
+                                                        select new
+                                                        {
+                                                            account.Username,
+                                                        };
+                        if (listAdminUsernameAccounts.ToList().Count > 0)
                         {
-                            Hide();
-                            MainMenuQTV mainMenuQTV = new MainMenuQTV();
-                            mainMenuQTV.ShowDialog();
-                            Close();
+                            if ((listAdminAccounts.ToList()).Count > 0)
+                            {
+                                Hide();
+                                if (cbSaveAcc.Checked)
+                                {
+                                    Properties.Settings.Default.username = username;
+                                    Properties.Settings.Default.password = password;
+                                    Properties.Settings.Default.role = radioAdmin.Text;
+                                    Properties.Settings.Default.Save();
+                                }
+                                else
+                                    Properties.Settings.Default.Reset();
+                                MainMenuQTV mainMenuQTV = new MainMenuQTV();
+                                mainMenuQTV.ShowDialog();
+                                Close();
+                            }
+                            else
+                                RJMessageBox.Show("Sai mật khẩu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                         else
-                            MessageBox.Show("Sai mật khẩu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            RJMessageBox.Show("Tài khoản không tồn tại trong hệ thống quản trị", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                    else
-                        MessageBox.Show("Tài khoản không tồn tại trong hệ thống quản trị", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
-                    var listEmployeeAccounts = from account in bookStore.Accounts
-                                               where (account.Role == EnumRole.Employee.ToString() && account.Username == username && account.Password == password)
-                                               select new
-                                               {
-                                                   account.Username,
-                                                   account.Password
-                                               };
-                    var listEmployeeUsernameAccounts = from account in bookStore.Accounts
-                                                       where (account.Role == EnumRole.Employee.ToString() && account.Username == username)
-                                                       select new
-                                                       {
-                                                           account.Username,
-                                                       };
-                    if (listEmployeeUsernameAccounts.ToList().Count > 0)
+                    using (var bookStore = new BookStoreContext())
                     {
-                        if ((listEmployeeAccounts.ToList()).Count > 0)
+                        var listEmployeeAccounts = from account in bookStore.Accounts
+                                                   where (account.Role == EnumRole.Employee.ToString() && account.Username == username && account.Password == password)
+                                                   select new
+                                                   {
+                                                       account.Username,
+                                                       account.Password
+                                                   };
+                        var listEmployeeUsernameAccounts = from account in bookStore.Accounts
+                                                           where (account.Role == EnumRole.Employee.ToString() && account.Username == username)
+                                                           select new
+                                                           {
+                                                               account.Username,
+                                                           };
+                        if (listEmployeeUsernameAccounts.ToList().Count > 0)
                         {
-                            Hide();
-                            MainMenuNV mainMenuNV = new MainMenuNV();
-                            mainMenuNV.ShowDialog();
-                            Close();
+                            if ((listEmployeeAccounts.ToList()).Count > 0)
+                            {
+                                Hide();
+                                if (cbSaveAcc.Checked)
+                                {
+                                    Properties.Settings.Default.username = username;
+                                    Properties.Settings.Default.password = password;
+                                    Properties.Settings.Default.role = radioEmployee.Text;
+                                    Properties.Settings.Default.Save();
+                                }
+                                else
+                                    Properties.Settings.Default.Reset();
+                                MainMenuNV mainMenuNV = new MainMenuNV();
+                                mainMenuNV.ShowDialog();
+                                Close();
+                            }
+                            else
+                                MessageBox.Show("Sai mật khẩu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                         else
-                            MessageBox.Show("Sai mật khẩu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Tài khoản không tồn tại trong hệ thống nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                    else
-                        MessageBox.Show("Tài khoản không tồn tại trong hệ thống nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -197,5 +231,7 @@ namespace DoAnPBL3
             
 
         }
+
+        
     }
 }
