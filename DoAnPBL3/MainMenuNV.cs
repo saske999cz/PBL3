@@ -33,6 +33,8 @@ namespace DoAnPBL3
             this.ControlBox = false;
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+
+            
         }
 
         //Structs
@@ -133,9 +135,11 @@ namespace DoAnPBL3
         }
 
         private void btnHome_Click(object sender, EventArgs e)
-        {
-            currentChildForm.Close();
-            Reset();
+        {   if (currentChildForm != null)
+            {
+                currentChildForm.Close();
+                Reset();
+            }
         }
 
         private void Reset()
@@ -264,6 +268,29 @@ namespace DoAnPBL3
 
         }
 
+        private void rjddmUserSettingMenu_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            
+            
+            
+                if (đăngXuấtToolStripMenuItem.Selected == true)
+                {
+                    this.Hide();
+                    new FormLogin().ShowDialog();
+                    this.Close();
 
+                
+            }
+
+            if (chỉnhSửaTàiKhoảnToolStripMenuItem.Selected == true)
+            {
+                DisableButton();
+                btnLeftBorder.Visible = false;
+                OpenChildForm(new FormSettingAccountNV());
+
+            }
+        }
+
+        
     }
 }

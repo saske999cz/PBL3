@@ -220,12 +220,6 @@
     <Compile Include="FormAddSach.Designer.cs">
       <DependentUpon>FormAddSach.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormAdminSettingMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormAdminSettingMenu.Designer.cs">
-      <DependentUpon>FormAdminSettingMenu.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormAlert.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -244,11 +238,29 @@
     <Compile Include="FormMessageBox.Designer.cs">
       <DependentUpon>FormMessageBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormMuaSach.cs">
+    <Compile Include="FormCart.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormMuaSach.Designer.cs">
-      <DependentUpon>FormMuaSach.cs</DependentUpon>
+    <Compile Include="FormCart.Designer.cs">
+      <DependentUpon>FormCart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenuNote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenuNote.Designer.cs">
+      <DependentUpon>FormMenuNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMinNote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMinNote.Designer.cs">
+      <DependentUpon>FormMinNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNote.Designer.cs">
+      <DependentUpon>FormNote.cs</DependentUpon>
     </Compile>
     <Compile Include="FormQLBS.cs">
       <SubType>Form</SubType>
@@ -304,11 +316,53 @@
     <Compile Include="FormNhapMua.Designer.cs">
       <DependentUpon>FormNhapMua.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormTotal.cs">
+    <Compile Include="FormSettingAccount.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormTotal.Designer.cs">
-      <DependentUpon>FormTotal.cs</DependentUpon>
+    <Compile Include="FormSettingAccount.Designer.cs">
+      <DependentUpon>FormSettingAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSettingAccountNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSettingAccountNV.Designer.cs">
+      <DependentUpon>FormSettingAccountNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSuaNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSuaNV.Designer.cs">
+      <DependentUpon>FormSuaNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTest.Designer.cs">
+      <DependentUpon>FormTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTheme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTheme.Designer.cs">
+      <DependentUpon>FormTheme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTTKH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTTKH.Designer.cs">
+      <DependentUpon>FormTTKH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTTNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTTNV.Designer.cs">
+      <DependentUpon>FormTTNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTTS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTTS.Designer.cs">
+      <DependentUpon>FormTTS.cs</DependentUpon>
     </Compile>
     <Compile Include="MainMenuNV.cs">
       <SubType>Form</SubType>
@@ -380,9 +434,6 @@
     <EmbeddedResource Include="FormAddSach.resx">
       <DependentUpon>FormAddSach.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormAdminSettingMenu.resx">
-      <DependentUpon>FormAdminSettingMenu.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormAlert.resx">
       <DependentUpon>FormAlert.cs</DependentUpon>
     </EmbeddedResource>
@@ -392,8 +443,17 @@
     <EmbeddedResource Include="FormMessageBox.resx">
       <DependentUpon>FormMessageBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormMuaSach.resx">
-      <DependentUpon>FormMuaSach.cs</DependentUpon>
+    <EmbeddedResource Include="FormCart.resx">
+      <DependentUpon>FormCart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenuNote.resx">
+      <DependentUpon>FormMenuNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMinNote.resx">
+      <DependentUpon>FormMinNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNote.resx">
+      <DependentUpon>FormNote.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormQLBS.resx">
       <DependentUpon>FormQLBS.cs</DependentUpon>
@@ -422,8 +482,29 @@
     <EmbeddedResource Include="FormNhapMua.resx">
       <DependentUpon>FormNhapMua.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormTotal.resx">
-      <DependentUpon>FormTotal.cs</DependentUpon>
+    <EmbeddedResource Include="FormSettingAccount.resx">
+      <DependentUpon>FormSettingAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSettingAccountNV.resx">
+      <DependentUpon>FormSettingAccountNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSuaNV.resx">
+      <DependentUpon>FormSuaNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTest.resx">
+      <DependentUpon>FormTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTheme.resx">
+      <DependentUpon>FormTheme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTTKH.resx">
+      <DependentUpon>FormTTKH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTTNV.resx">
+      <DependentUpon>FormTTNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTTS.resx">
+      <DependentUpon>FormTTS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenuNV.resx">
       <DependentUpon>MainMenuNV.cs</DependentUpon>
@@ -477,7 +558,11 @@
     <None Include="Img\buyer.png" />
     <None Include="Img\b logo.png" />
     <None Include="Img\b logo 2.png" />
+    <None Include="Img\bach khoa.jpg" />
+    <None Include="Img\book info.png" />
+    <None Include="Img\book info 2.png" />
     <Content Include="Img\chat.png" />
+    <None Include="Img\customer information.png" />
     <Content Include="Img\error.png" />
     <Content Include="Img\exclamation.png" />
     <None Include="Img\exit.png" />
@@ -488,6 +573,13 @@
     <None Include="Img\icons8_eye_24px.png" />
     <None Include="Img\icons8_hide_24px.png" />
     <None Include="Img\icons8_search_20px.png" />
+    <None Include="Img\icons8_cheap_2_30px.png" />
+    <None Include="Img\icons8_drop_shipping_30px.png" />
+    <None Include="Img\icons8_add_shopping_cart_30px.png" />
+    <None Include="Img\icons8_customer_18px.png" />
+    <None Include="Img\icons8_lock_18px.png" />
+    <None Include="Img\icons8_picture_30px.png" />
+    <None Include="Img\icons8_create_document_30px.png" />
     <Content Include="Img\information.png" />
     <None Include="Img\logo menu.png" />
     <None Include="Img\java.png" />
@@ -500,6 +592,7 @@
     <None Include="Img\Logo Project AM 2.png" />
     <None Include="Img\logo bk.png" />
     <None Include="Img\man 1.png" />
+    <None Include="Img\pencil.png" />
     <Content Include="Img\question.png" />
     <None Include="Img\web-browser.png" />
     <None Include="Img\sql-file2.png" />
@@ -512,6 +605,8 @@
     <None Include="Img\vietnam flag.png" />
     <None Include="Img\united-kingdom flag.png" />
     <None Include="Img\shopping-cart.png" />
+    <None Include="Img\user info.png" />
+    <None Include="Img\sticky-notes.png" />
     <Content Include="NotificationIcons\error.png" />
     <Content Include="NotificationIcons\icons8_cancel_45px.png" />
     <Content Include="NotificationIcons\info.png" />

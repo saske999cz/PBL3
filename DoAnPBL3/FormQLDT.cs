@@ -7,28 +7,148 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace DoAnPBL3
 {
+    
     public partial class FormQLDT : Form
     {
+        private string ThemeColor;
         private Button btnCurrent;
-        public FormQLDT()
+        public FormQLDT(string theme)
         {
             InitializeComponent();
+            ThemeColor = theme;
+            switch (theme)
+            {
+                case "Admin":
+                    btnOK.Parent.BackColor = Color.FromArgb(34, 33, 74);
+                    label10.ForeColor = Color.FromArgb(124, 141, 181);
+                    label8.ForeColor = Color.FromArgb(124, 141, 181);
+                    label7.ForeColor = Color.FromArgb(124, 141, 181);
+                    lblCustomerNumber.ForeColor = Color.WhiteSmoke;
+                    lblProductNumberConLai.ForeColor = Color.WhiteSmoke;
+                    lblSellNumber.ForeColor = Color.WhiteSmoke;
+                    lblNumberOfOrders.ForeColor = Color.FromArgb(124, 141, 181);
+                    lblProfit.ForeColor = Color.FromArgb(124, 141, 181);
+                    lblTotalRevenue.ForeColor = Color.FromArgb(124, 141, 181);
+                    lblProfitNumber.ForeColor = Color.WhiteSmoke;
+                    lblTotalRevenueNumber.ForeColor = Color.WhiteSmoke;
+                    lblOrderNumber.ForeColor = Color.WhiteSmoke;
+                    lblEndDate.ForeColor = Color.Gainsboro;
+                    lblStartDate.ForeColor = Color.Gainsboro;
+                    label4.ForeColor = Color.Gainsboro;
+                    label18.ForeColor = Color.Gainsboro;
+                    label6.ForeColor = Color.Gainsboro;
+                    btnCustomDate.ForeColor = Color.Gainsboro;
+                    btnLast7Days.ForeColor = Color.Gainsboro;
+                    btnThisMonth.ForeColor = Color.Gainsboro;
+                    btnThisQuarter.ForeColor = Color.Gainsboro;
+                    btnToday.ForeColor = Color.Gainsboro;
+                    
+
+                    break;
+
+                case "Dark":
+                    btnOK.Parent.BackColor = Color.FromArgb(32, 32, 32);
+                    label10.ForeColor = Color.FromArgb(124, 141, 181);
+                    label8.ForeColor = Color.FromArgb(124, 141, 181);
+                    label7.ForeColor = Color.FromArgb(124, 141, 181);
+                    lblCustomerNumber.ForeColor = Color.WhiteSmoke;
+                    lblProductNumberConLai.ForeColor = Color.WhiteSmoke;
+                    lblSellNumber.ForeColor = Color.WhiteSmoke;
+                    lblNumberOfOrders.ForeColor = Color.FromArgb(124, 141, 181);
+                    lblProfit.ForeColor = Color.FromArgb(124, 141, 181);
+                    lblTotalRevenue.ForeColor = Color.FromArgb(124, 141, 181);
+                    lblProfitNumber.ForeColor = Color.WhiteSmoke;
+                    lblTotalRevenueNumber.ForeColor = Color.WhiteSmoke;
+                    lblOrderNumber.ForeColor = Color.WhiteSmoke;
+                    lblEndDate.ForeColor = Color.Gainsboro;
+                    lblStartDate.ForeColor = Color.Gainsboro;
+                    label4.ForeColor = Color.Gainsboro;
+                    label18.ForeColor = Color.Gainsboro;
+                    label6.ForeColor = Color.Gainsboro;
+                    btnCustomDate.ForeColor = Color.Gainsboro;
+                    btnLast7Days.ForeColor = Color.Gainsboro;
+                    btnThisMonth.ForeColor = Color.Gainsboro;
+                    btnThisQuarter.ForeColor = Color.Gainsboro;
+                    btnToday.ForeColor = Color.Gainsboro;
+                    
+                    break;
+
+                case "Light":
+                    btnOK.Parent.BackColor = Color.FromArgb(220, 220, 220);
+                    label10.ForeColor = Color.FromArgb(124, 141, 181);
+                    label8.ForeColor = Color.FromArgb(124, 141, 181);
+                    label7.ForeColor = Color.FromArgb(124, 141, 181);
+                    lblCustomerNumber.ForeColor = Color.Black;
+                    lblProductNumberConLai.ForeColor = Color.Black;
+                    lblSellNumber.ForeColor = Color.Black;
+                    lblNumberOfOrders.ForeColor = Color.FromArgb(124, 141, 181);
+                    lblProfit.ForeColor = Color.FromArgb(124, 141, 181);
+                    lblTotalRevenue.ForeColor = Color.FromArgb(124, 141, 181);
+                    lblProfitNumber.ForeColor = Color.Black;
+                    lblTotalRevenueNumber.ForeColor = Color.Black;
+                    lblOrderNumber.ForeColor = Color.Black;
+                    lblEndDate.ForeColor = Color.Black;
+                    lblStartDate.ForeColor = Color.Black;
+                    label4.ForeColor = Color.Black;
+                    label18.ForeColor = Color.Black;
+                    label6.ForeColor = Color.Black;
+                    btnCustomDate.ForeColor = Color.Black;
+                    btnLast7Days.ForeColor = Color.Black;
+                    btnThisMonth.ForeColor = Color.Black;
+                    btnThisQuarter.ForeColor = Color.Black;
+                    btnToday.ForeColor = Color.Black;
+                    chartTDT.Titles.Clear();
+                    Title title = chartTDT.Titles.Add("Tổng doanh thu");
+                    title.Font = new System.Drawing.Font("Arial", 10, FontStyle.Bold);
+                    title.ForeColor = Color.Black;
+                    title.Alignment = ContentAlignment.MiddleLeft;
+
+                    chartTop5Sach.Titles.Clear();
+                    Title title2 = chartTop5Sach.Titles.Add("Top 5 sách bán chạy nhất");
+                    title2.Font = new System.Drawing.Font("Arial", 10, FontStyle.Bold);
+                    title2.ForeColor = Color.Black;
+                    title2.Alignment = ContentAlignment.MiddleLeft;
+
+                    break;
+            }
             btnOK.Hide();
+            ActivateButton(btnToday, Color.FromArgb(107, 83, 255));
+           
         }
 
         private void DisableButton()
         {
             if (btnCurrent != null)
             {
-                btnCurrent.BackColor = Color.FromArgb(34, 31, 46);
-                btnCurrent.ForeColor = Color.Gainsboro;
-                btnCurrent.TextAlign = ContentAlignment.MiddleCenter;
+                btnCurrent.BackColor = Color.Transparent;
+                switch (ThemeColor)
+                {
+                    case "Dark":
+                        btnCurrent.ForeColor = Color.Gainsboro;
+                        btnCurrent.TextAlign = ContentAlignment.MiddleCenter;
 
-                btnCurrent.TextImageRelation = TextImageRelation.Overlay;
-                btnCurrent.ImageAlign = ContentAlignment.MiddleLeft;
+                        btnCurrent.TextImageRelation = TextImageRelation.Overlay;
+                        btnCurrent.ImageAlign = ContentAlignment.MiddleLeft;
+                        break;
+                    case "Admin":
+                        btnCurrent.ForeColor = Color.Gainsboro;
+                        btnCurrent.TextAlign = ContentAlignment.MiddleCenter;
+
+                        btnCurrent.TextImageRelation = TextImageRelation.Overlay;
+                        btnCurrent.ImageAlign = ContentAlignment.MiddleLeft;
+                        break;
+                    case "Light":
+                        btnCurrent.ForeColor = Color.Black;
+                        btnCurrent.TextAlign = ContentAlignment.MiddleCenter;
+
+                        btnCurrent.TextImageRelation = TextImageRelation.Overlay;
+                        btnCurrent.ImageAlign = ContentAlignment.MiddleLeft;
+                        break;
+            }
                 if (btnCurrent == btnCustomDate)
                 {
                     btnOK.Hide();
@@ -120,9 +240,6 @@ namespace DoAnPBL3
             ActivateButton(sender, Color.FromArgb(107, 83, 255));
         }
 
-        private void lblCustomerNumber_Click(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

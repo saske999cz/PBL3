@@ -56,14 +56,13 @@ namespace DoAnPBL3
             this.iconPictureBox4 = new FontAwesome.Sharp.IconPictureBox();
             this.lblDate = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.rjddmAdminSettingMenu = new DoAnPBL3.RJDropDownMenu(this.components);
             this.chỉnhSửaTàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thayĐổiThemeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -83,7 +82,6 @@ namespace DoAnPBL3
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             this.rjddmAdminSettingMenu.SuspendLayout();
@@ -210,12 +208,13 @@ namespace DoAnPBL3
             // 
             // btnHome
             // 
-            this.btnHome.BackgroundImage = global::DoAnPBL3.Properties.Resources.logo_menu;
-            this.btnHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnHome.Location = new System.Drawing.Point(0, 0);
+            this.btnHome.Image = global::DoAnPBL3.Properties.Resources.Logo_Project_AM_2;
+            this.btnHome.Location = new System.Drawing.Point(-8, -2);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(217, 140);
+            this.btnHome.Size = new System.Drawing.Size(222, 140);
+            this.btnHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnHome.TabIndex = 0;
             this.btnHome.TabStop = false;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
@@ -256,8 +255,6 @@ namespace DoAnPBL3
             this.AdminPicture.TabIndex = 13;
             this.AdminPicture.TabStop = false;
             this.AdminPicture.Click += new System.EventHandler(this.AdminPicture_Click);
-            this.AdminPicture.MouseEnter += new System.EventHandler(this.AdminPicture_MouseEnter);
-            this.AdminPicture.MouseLeave += new System.EventHandler(this.AdminPicture_MouseLeave);
             // 
             // btnAdmin
             // 
@@ -279,8 +276,6 @@ namespace DoAnPBL3
             this.btnAdmin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAdmin.UseVisualStyleBackColor = true;
             this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click);
-            this.btnAdmin.MouseEnter += new System.EventHandler(this.btnAdmin_MouseEnter);
-            this.btnAdmin.MouseLeave += new System.EventHandler(this.btnAdmin_MouseLeave);
             // 
             // btnMinimize
             // 
@@ -384,7 +379,6 @@ namespace DoAnPBL3
             this.panelDesktop.Controls.Add(this.iconPictureBox4);
             this.panelDesktop.Controls.Add(this.lblDate);
             this.panelDesktop.Controls.Add(this.label3);
-            this.panelDesktop.Controls.Add(this.pictureBox1);
             this.panelDesktop.Controls.Add(this.iconPictureBox1);
             this.panelDesktop.Controls.Add(this.label2);
             this.panelDesktop.Controls.Add(this.iconPictureBox2);
@@ -423,7 +417,7 @@ namespace DoAnPBL3
             // 
             this.lblAdminName.AutoSize = true;
             this.lblAdminName.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAdminName.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblAdminName.ForeColor = System.Drawing.Color.White;
             this.lblAdminName.Location = new System.Drawing.Point(4, 4);
             this.lblAdminName.Name = "lblAdminName";
             this.lblAdminName.Size = new System.Drawing.Size(57, 16);
@@ -507,7 +501,7 @@ namespace DoAnPBL3
             this.lblDate.AutoSize = true;
             this.lblDate.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDate.ForeColor = System.Drawing.Color.White;
-            this.lblDate.Location = new System.Drawing.Point(820, 5);
+            this.lblDate.Location = new System.Drawing.Point(823, 5);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(37, 16);
             this.lblDate.TabIndex = 14;
@@ -519,22 +513,11 @@ namespace DoAnPBL3
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(342, 188);
+            this.label3.Location = new System.Drawing.Point(360, 77);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(295, 24);
             this.label3.TabIndex = 12;
             this.label3.Text = "Ứng dụng quản lý bán sách ";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox1.BackgroundImage = global::DoAnPBL3.Properties.Resources.Logo_Project_AM_2;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(363, -12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(244, 228);
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
             // 
             // iconPictureBox1
             // 
@@ -600,6 +583,10 @@ namespace DoAnPBL3
             // guna2Elipse1
             // 
             this.guna2Elipse1.TargetControl = this;
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // rjddmAdminSettingMenu
             // 
@@ -685,7 +672,6 @@ namespace DoAnPBL3
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
             this.rjddmAdminSettingMenu.ResumeLayout(false);
@@ -711,13 +697,11 @@ namespace DoAnPBL3
         private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
         private System.Windows.Forms.Label label2;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private FontAwesome.Sharp.IconPictureBox btnMinimize;
         private FontAwesome.Sharp.IconPictureBox btnMaximize;
         private FontAwesome.Sharp.IconPictureBox btnClose;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblDate;
-        private System.Windows.Forms.Timer timer1;
         private RJDropDownMenu rjddmAdminSettingMenu;
         private System.Windows.Forms.ToolStripMenuItem chỉnhSửaTàiKhoảnToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thayĐổiThemeToolStripMenuItem;
@@ -733,6 +717,7 @@ namespace DoAnPBL3
         private XanderUI.XUIClock xuiClock1;
         private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

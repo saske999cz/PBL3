@@ -12,9 +12,70 @@ namespace DoAnPBL3
 {
     public partial class FormQLBS : Form
     {
-        public FormQLBS()
+        public FormQLBS(string theme)
         {
             InitializeComponent();
+            switch (theme)
+            {
+                case "Admin":
+                    btnTKS.Parent.BackColor = Color.FromArgb(34, 33, 74);
+                    label2.ForeColor = Color.FromArgb(124, 141, 181);
+                    label5.ForeColor = Color.FromArgb(124, 141, 181);
+                    label7.ForeColor = Color.FromArgb(124, 141, 181);
+                    lblSTA.ForeColor = Color.White;
+                    lblSTV.ForeColor = Color.White;
+                    lblTSSDB.ForeColor = Color.White;
+                    xuiSegmentBS.SegmentActiveTextColor = Color.HotPink;
+                    xuiSegmentBS.SegmentBackColor = Color.SlateBlue;
+                    xuiSegmentBS.SegmentColor = Color.DarkMagenta;
+                    xuiSegmentBS.SegmentInactiveTextColor = Color.White;
+                    btnTKS.FillColor = Color.FromArgb(107, 83, 255);
+                    rjtbTKS.BackColor = Color.FromArgb(23, 21, 35);
+                    rjtbTKS.BorderColor = Color.FromArgb(23, 21, 35);
+                    rjtbTKS.ForeColor = Color.Silver;
+                    rjtbTKS.PlaceholderColor = Color.FromArgb(87, 83, 103);
+
+                    break;
+
+                case "Dark":
+                    btnTKS.Parent.BackColor = Color.FromArgb(32, 32, 32);
+                    label2.ForeColor = Color.FromArgb(124, 141, 181);
+                    label5.ForeColor = Color.FromArgb(124, 141, 181);
+                    label7.ForeColor = Color.FromArgb(124, 141, 181);
+                    lblSTA.ForeColor = Color.White;
+                    lblSTV.ForeColor = Color.White;
+                    lblTSSDB.ForeColor = Color.White;
+                    xuiSegmentBS.SegmentActiveTextColor = Color.HotPink;
+                    xuiSegmentBS.SegmentBackColor = Color.SlateBlue;
+                    xuiSegmentBS.SegmentColor = Color.DarkMagenta;
+                    xuiSegmentBS.SegmentInactiveTextColor = Color.White;
+                    btnTKS.FillColor = Color.FromArgb(107, 83, 255);
+                    rjtbTKS.BackColor = Color.FromArgb(18, 18, 18);
+                    rjtbTKS.BorderColor = Color.FromArgb(18, 18, 18);
+                    rjtbTKS.ForeColor = Color.Silver;
+                    rjtbTKS.PlaceholderColor = Color.FromArgb(87, 83, 103);
+                    break;
+
+                case "Light":
+                    btnTKS.Parent.BackColor = Color.FromArgb(220, 220, 220);
+                    label2.ForeColor = Color.FromArgb(124, 141, 181);
+                    label5.ForeColor = Color.FromArgb(124, 141, 181);
+                    label7.ForeColor = Color.FromArgb(124, 141, 181);
+                    lblSTA.ForeColor = Color.Black;
+                    lblSTV.ForeColor = Color.Black;
+                    lblTSSDB.ForeColor = Color.Black;
+                    xuiSegmentBS.SegmentActiveTextColor = Color.HotPink;
+                    xuiSegmentBS.SegmentBackColor = Color.SlateBlue;
+                    xuiSegmentBS.SegmentColor = Color.DarkMagenta;
+                    xuiSegmentBS.SegmentInactiveTextColor = Color.White;
+                    btnTKS.FillColor = Color.FromArgb(107, 83, 255);
+                    rjtbTKS.BackColor = Color.FromArgb(255, 255, 255);
+                    rjtbTKS.BorderColor = Color.FromArgb(180, 180, 180);
+                    rjtbTKS.ForeColor = Color.DimGray;
+                    rjtbTKS.PlaceholderColor = Color.FromArgb(87, 83, 103);
+
+                    break;
+            }
         }
 
         private struct RGBColors
@@ -50,12 +111,12 @@ namespace DoAnPBL3
 
         private void btnSXS_MouseLeave(object sender, EventArgs e)
         {
-            btnSXS.BackColor = Color.FromArgb(31, 30, 68);
+            btnSXS.BackColor = Color.RoyalBlue;
         }
 
         private void btnHDTN_MouseLeave(object sender, EventArgs e)
         {
-            btnHDTN.BackColor = Color.FromArgb(31, 30, 68);
+            btnHDTN.BackColor = Color.RoyalBlue;
         }
 
         private void btnSXS_Click(object sender, EventArgs e)

@@ -13,7 +13,7 @@ namespace DoAnPBL3
     {
         //Fields
         private Color backColor;
-        private Color leftColumnColor;
+        public Color leftColumnColor;
         private Color borderColor;
         private Color menuItemBorderColor;
         private Color menuItemSelectedColor;

@@ -19,7 +19,7 @@ namespace DoAnPBL3
 
         private void rjbtnBuy_Click(object sender, EventArgs e)
         {
-            new FormMuaSach().Show();
+            new FormCart().Show();
         }
     }
 }

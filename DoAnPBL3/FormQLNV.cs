@@ -16,9 +16,70 @@ namespace DoAnPBL3
     public partial class FormQLNV : Form
     {
         private IconButton btnCurrent;
-        public FormQLNV()
+        public FormQLNV(string theme)
         {
             InitializeComponent();
+            switch(theme)
+            {
+                case "Admin":
+                    btnAddNV.Parent.BackColor = Color.FromArgb(34, 33, 74);
+                    label2.ForeColor = Color.FromArgb(124, 141, 181);
+                    label5.ForeColor = Color.FromArgb(124, 141, 181);
+                    label7.ForeColor = Color.FromArgb(124, 141, 181);
+                    lblTSNV.ForeColor = Color.White;
+                    lblSNVNu.ForeColor = Color.White;
+                    lblSNVNam.ForeColor = Color.White;
+                    xuiSegmentNV.SegmentActiveTextColor = Color.HotPink;
+                    xuiSegmentNV.SegmentBackColor = Color.SlateBlue;
+                    xuiSegmentNV.SegmentColor = Color.DarkMagenta;
+                    xuiSegmentNV.SegmentInactiveTextColor = Color.White;
+                    btnTKNV.FillColor = Color.FromArgb(107, 83, 255);
+                    rjtbTKNV.BackColor = Color.FromArgb(23, 21, 35);
+                    rjtbTKNV.BorderColor = Color.FromArgb(23, 21, 35);
+                    rjtbTKNV.ForeColor = Color.Silver;
+                    rjtbTKNV.PlaceholderColor = Color.FromArgb(87, 83, 103);
+
+                    break;
+
+                case "Dark":
+                    btnAddNV.Parent.BackColor = Color.FromArgb(32,32,32);
+                    label2.ForeColor = Color.FromArgb(124, 141, 181);
+                    label5.ForeColor = Color.FromArgb(124, 141, 181);
+                    label7.ForeColor = Color.FromArgb(124, 141, 181);
+                    lblTSNV.ForeColor = Color.White;
+                    lblSNVNu.ForeColor = Color.White;
+                    lblSNVNam.ForeColor = Color.White;
+                    xuiSegmentNV.SegmentActiveTextColor = Color.HotPink;
+                    xuiSegmentNV.SegmentBackColor = Color.SlateBlue;
+                    xuiSegmentNV.SegmentColor = Color.DarkMagenta;
+                    xuiSegmentNV.SegmentInactiveTextColor = Color.White;
+                    btnTKNV.FillColor = Color.FromArgb(107, 83, 255);
+                    rjtbTKNV.BackColor = Color.FromArgb(18,18,18);
+                    rjtbTKNV.BorderColor = Color.FromArgb(18,18,18);
+                    rjtbTKNV.ForeColor = Color.Silver;
+                    rjtbTKNV.PlaceholderColor = Color.FromArgb(87, 83, 103);
+                    break;
+
+                case "Light":
+                    btnAddNV.Parent.BackColor = Color.FromArgb(220, 220, 220);
+                    label2.ForeColor = Color.FromArgb(124, 141, 181);
+                    label5.ForeColor = Color.FromArgb(124, 141, 181);
+                    label7.ForeColor = Color.FromArgb(124, 141, 181);
+                    lblTSNV.ForeColor = Color.Black;
+                    lblSNVNu.ForeColor = Color.Black;
+                    lblSNVNam.ForeColor = Color.Black;
+                    xuiSegmentNV.SegmentActiveTextColor = Color.HotPink;
+                    xuiSegmentNV.SegmentBackColor = Color.SlateBlue;
+                    xuiSegmentNV.SegmentColor = Color.DarkMagenta;
+                    xuiSegmentNV.SegmentInactiveTextColor = Color.White;
+                    btnTKNV.FillColor = Color.FromArgb(107, 83, 255);
+                    rjtbTKNV.BackColor = Color.FromArgb(255,255,255);
+                    rjtbTKNV.BorderColor = Color.FromArgb(180,180,180);
+                    rjtbTKNV.ForeColor = Color.DimGray;
+                    rjtbTKNV.PlaceholderColor = Color.FromArgb(87, 83, 103);
+
+                    break;
+            }
         }
 
 
