@@ -4,30 +4,28 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.Entity.Validation;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
-using System.IO;
+using Guna.UI2.WinForms;
 
 namespace DoAnPBL3
 {
     public partial class FormAddNV : Form
     {
-        
+
         //Constructor
         public FormAddNV()
         {
             InitializeComponent();
-            
-        }
 
-        
+        }
 
         public void Alert(string msg, Form_Alert.enmType type)
         {
@@ -35,160 +33,189 @@ namespace DoAnPBL3
             frm.showAlert(msg, type);
         }
 
-        
-
-
-
-        
-
-        private void rjbtnCancel_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void rjbtnOK_Click(object sender, EventArgs e)
         {
-            bool isValidName, isValidAge, isValidDateOfBirth, isValidEmail, isValidPhone, isValidIdCard;
-            string name, gender, idCard, address, phone, email;
-            DateTime birthday;
+            bool isDateContainsAlpha, isValidFormatDateOfBirth, isValidAge = false,
+                isGreaterThanCurrentDate, isValidEmail, isValidPhone, isValidIdCard;
+            string name, email, dateOfBirth, gender, phone, idCard, address;
             byte[] ava;
             // Validate name
-            name = rjtbNameNV.Texts;
-            isValidName = EmployeeValidator.IsValidName(name, EmployeeValidator.NAME_REGEX);
+            name = tbNameNV.Text;
             if (name == "")
             {
-                msgName.ForeColor = Color.Red;
-                msgName.Text = "Trường này không được để trống";
+                msgValidateName.ForeColor = Color.Red;
+                msgValidateName.Text = "Trường này không được để trống";
             }
             else
             {
-                if (!isValidName)
-                {
-                    msgName.ForeColor = Color.Red;
-                    msgName.Text = "Họ và tên không hợp lệ";
-                }
-                else
-                {
-                    msgName.ForeColor = Color.Black;
-                    msgName.Text = "";
-                }
-            }
-            // Validate age
-            birthday = gunaDTP.Value;
-            isValidAge = EmployeeValidator.IsValidAge(birthday, EmployeeValidator.DATE_TIME_REGEX);
-            if (isValidAge)
-            {
-                msgAge.ForeColor = Color.Black;
-                msgAge.Text = "";
-            } 
-            else
-            {
-                msgAge.ForeColor = Color.Red;
-                msgAge.Text = "Nhân viên ít nhất phải đủ 18 tuổi";
-            }
-            // Validate date of birth
-            isValidDateOfBirth = EmployeeValidator.IsValidDateOfBirth(birthday, EmployeeValidator.DATE_TIME_REGEX);
-            if (isValidDateOfBirth)
-            {
-                msgDateOfBirth.ForeColor = Color.Black;
-                msgDateOfBirth.Text = "";
-            }
-            else
-            {
-                msgDateOfBirth.ForeColor = Color.Red;
-                msgDateOfBirth.Text = "Ngày sinh không được lớn hơn ngày hiện tại";
-            }
-            // Validate gender
-            if (rjcbbGender.SelectedItem == null)
-            {
-                gender = "";
-                msgGender.ForeColor = Color.Red;
-                msgGender.Text = "Trường này không được để trống";
-            } 
-            else
-            {
-                gender = rjcbbGender.SelectedItem.ToString();
-                msgGender.ForeColor = Color.Black;
-                msgGender.Text = "";
+                msgValidateName.ForeColor = Color.White;
+                msgValidateName.Text = "";
             }
             // Validate email
-            email = rjtbEmail.Texts;
+            email = tbEmailNV.Text;
             isValidEmail = EmployeeValidator.IsValidEmail(email);
             if (email == "")
             {
-                msgEmail.ForeColor = Color.Red;
-                msgEmail.Text = "Trường này không được để trống";
+                msgValidateEmail.ForeColor = Color.Red;
+                msgValidateEmail.Text = "Trường này không được để trống";
             }
             else
             {
                 if (!isValidEmail)
                 {
-                    msgEmail.ForeColor = Color.Red;
-                    msgEmail.Text = "Email không hợp lệ";
+                    msgValidateEmail.ForeColor = Color.Red;
+                    msgValidateEmail.Text = "Email không hợp lệ";
                 }
                 else
                 {
-                    msgEmail.ForeColor = Color.Black;
-                    msgEmail.Text = "";
+                    msgValidateEmail.ForeColor = Color.White;
+                    msgValidateEmail.Text = "";
                 }
             }
+            // Validate value of input date of birth
+            dateOfBirth = tbBD.Text;
+            if (dateOfBirth == "")
+            {
+                msgValidateDateOfBirth.ForeColor = Color.Red;
+                msgValidateDateOfBirth.Text = "Trường này không được để trống";
+            }
+            else
+            {
+                msgValidateDateOfBirth.ForeColor = Color.White;
+                msgValidateDateOfBirth.Text = "";
+
+                // Validatge date contains alphabet
+                isDateContainsAlpha = EmployeeValidator.IsDateContainsAlphabet(dateOfBirth);
+                if (isDateContainsAlpha)
+                {
+                    msgValidateDateOfBirth.ForeColor = Color.Red;
+                    msgValidateDateOfBirth.Text = "Ngày sinh không hợp lệ";
+                }
+                else
+                {
+                    msgValidateDateOfBirth.ForeColor = Color.White;
+                    msgValidateDateOfBirth.Text = "";
+
+                    // Validate format date of birth
+                    isValidFormatDateOfBirth = EmployeeValidator.IsValidFormatDateOfBirth(dateOfBirth, EmployeeValidator.DATE_TIME_REGEX);
+                    if (!isValidFormatDateOfBirth)
+                    {
+                        msgValidateDateOfBirth.ForeColor = Color.Red;
+                        msgValidateDateOfBirth.Text = "Ngày sinh phải theo định dạng dd/MM/yyyy";
+                    }
+                    else
+                    {
+                        // Check date
+                        string msgValidate = EmployeeValidator.CheckDateOfBirth(dateOfBirth, EmployeeValidator.DATE_TIME_REGEX);
+                        if (msgValidate != "")
+                        {
+                            msgValidateDateOfBirth.ForeColor = Color.Red;
+                            msgValidateDateOfBirth.Text = msgValidate;
+                        }
+                        else
+                        {
+                            msgValidateDateOfBirth.ForeColor = Color.White;
+                            msgValidateDateOfBirth.Text = "";
+
+                            // Validate curent date
+                            isGreaterThanCurrentDate = EmployeeValidator.IsValidDateOfBirth(dateOfBirth, EmployeeValidator.DATE_TIME_REGEX);
+                            if (!isGreaterThanCurrentDate)
+                            {
+                                msgValidateDateOfBirth.ForeColor = Color.Red;
+                                msgValidateDateOfBirth.Text = "Ngày sinh không được lớn hơn ngày hiện tại";
+                            }
+                            else
+                            {
+                                msgValidateDateOfBirth.ForeColor = Color.White;
+                                msgValidateDateOfBirth.Text = "";
+
+                                // Validate age
+                                isValidAge = EmployeeValidator.IsValidAge(dateOfBirth, EmployeeValidator.DATE_TIME_REGEX);
+                                if (!isValidAge)
+                                {
+                                    msgValidateDateOfBirth.ForeColor = Color.Red;
+                                    msgValidateDateOfBirth.Text = "Nhân viên ít nhất phải đủ 18 tuổi";
+                                }
+                                else
+                                {
+                                    msgValidateDateOfBirth.ForeColor = Color.White;
+                                    msgValidateDateOfBirth.Text = "";
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            // Validate gender
+            if (cbGenderNV.SelectedItem == null)
+            {
+                gender = "";
+                msgValidateGender.ForeColor = Color.Red;
+                msgValidateGender.Text = "Trường này không được để trống";
+            }
+            else
+            {
+                gender = cbGenderNV.SelectedItem.ToString();
+                msgValidateGender.ForeColor = Color.White;
+                msgValidateGender.Text = "";
+            }
             // Validate phone number
-            phone = rjtbSDT.Texts;
+            phone = tbSDTNV.Text;
             isValidPhone = EmployeeValidator.IsValidPhoneNumber(phone, EmployeeValidator.PHONE_REGEX);
             if (phone == "")
             {
-                msgPhone.ForeColor = Color.Red;
-                msgPhone.Text = "Trường này không được để trống";
-            } 
+                msgValidatePhone.ForeColor = Color.Red;
+                msgValidatePhone.Text = "Trường này không được để trống";
+            }
             else
             {
                 if (!isValidPhone)
                 {
-                    msgPhone.ForeColor = Color.Red;
-                    msgPhone.Text = "SĐT không hợp lệ";
+                    msgValidatePhone.ForeColor = Color.Red;
+                    msgValidatePhone.Text = "SĐT không hợp lệ";
                 }
                 else
                 {
-                    msgPhone.ForeColor = Color.Black;
-                    msgPhone.Text = "";
+                    msgValidatePhone.ForeColor = Color.White;
+                    msgValidatePhone.Text = "";
                 }
             }
             // Validate ID Card
-            idCard = rjtbCMND.Texts;
+            idCard = tbCMNDNV.Text;
             isValidIdCard = EmployeeValidator.IsValidIdCard(idCard, EmployeeValidator.ID_CARD_REGEX);
             if (idCard == "")
             {
-                msgIDCard.ForeColor = Color.Red;
-                msgIDCard.Text = "Trường này không được để trống";
+                msgValidateIDCard.ForeColor = Color.Red;
+                msgValidateIDCard.Text = "Trường này không được để trống";
             }
             else
             {
                 if (!isValidIdCard)
                 {
-                    msgIDCard.ForeColor = Color.Red;
-                    msgIDCard.Text = "CMND không hợp lệ";
+                    msgValidateIDCard.ForeColor = Color.Red;
+                    msgValidateIDCard.Text = "CMND không hợp lệ";
                 }
                 else
                 {
-                    msgIDCard.ForeColor = Color.Black;
-                    msgIDCard.Text = "";
+                    msgValidateIDCard.ForeColor = Color.White;
+                    msgValidateIDCard.Text = "";
                 }
             }
             // Validate address
-            if (rjcbbAddress.SelectedItem == null)
+            if (tbAddressNV.Text == "")
             {
                 address = "";
-                msgAddress.ForeColor = Color.Red;
-                msgAddress.Text = "Trường này không được để trống";
+                msgValidateAddress.ForeColor = Color.Red;
+                msgValidateAddress.Text = "Trường này không được để trống";
             }
             else
             {
-                address = rjcbbAddress.SelectedItem.ToString();
-                msgAddress.ForeColor = Color.Black;
-                msgAddress.Text = "";
+                address = tbAddressNV.Text;
+                msgValidateAddress.ForeColor = Color.White;
+                msgValidateAddress.Text = "";
             }
             // Validate image
-            if (avatar.Image == null)
+            if (avatar.ImageLocation == null)
             {
                 ava = null;
             }
@@ -196,8 +223,8 @@ namespace DoAnPBL3
             {
                 ava = ImageToByteArray(avatar);
             }
-            
-            if (isValidName && isValidEmail && isValidIdCard && isValidPhone)
+
+            if (isValidEmail && isValidIdCard && isValidPhone && isValidAge)
             {
                 using (BookStoreContext context = new BookStoreContext())
                 {
@@ -213,26 +240,61 @@ namespace DoAnPBL3
                     StringBuilder newEmployeeId = new StringBuilder(id); // E0006
                     newEmployeeId = newEmployeeId.Remove(newEmployeeId.Length - lenNumStr, lenNumStr);// E000
                     newEmployeeId.Append(numStr); // E000 + 7 => E0007
+
+                    DateTime birthday = new DateTime(
+                        Convert.ToInt32(dateOfBirth.Substring(6, 4)),
+                        Convert.ToInt32(dateOfBirth.Substring(3, 2)),
+                        Convert.ToInt32(dateOfBirth.Substring(0, 2))
+                    );
+
                     Employee employee = new Employee(newEmployeeId.ToString(), name, email, birthday, gender, phone, idCard, address, ava, null);
                     context.Employees.Add(employee);
                     context.SaveChanges();
-                    Console.WriteLine(name);
                     char[] c = name.ToCharArray();
-                    foreach(char item in c)
+                    foreach (char item in c)
                     {
                         Console.WriteLine(item);
                     }
                     Alert("Thêm nhân viên mới thành công", Form_Alert.enmType.Success);
                     Close();
                 }
-            } 
+            }
             else
-            { 
-                this.Alert("Dữ liệu không hợp lệ", Form_Alert.enmType.Error);
+            {
+                Alert("Dữ liệu không hợp lệ", Form_Alert.enmType.Error);
             }
         }
 
-        private void btnAvatar_Click(object sender, EventArgs e)
+        private void rjbtnCancel_Click(object sender, EventArgs e)
+        {
+            string name, email, dateOfBirth, phone, idCard, address;
+            name = tbNameNV.Text;
+            email = tbEmailNV.Text;
+            dateOfBirth = tbBD.Text;
+            phone = tbSDTNV.Text;
+            idCard = tbCMNDNV.Text;
+            address = tbAddressNV.Text;
+            if (name != "" || email != "" || dateOfBirth != "" 
+                || cbGenderNV.SelectedItem != null || phone != "" || idCard != "" || address != "" || avatar.Image != null)
+            {
+                DialogResult result = RJMessageBox.Show("Dữ liệu chưa được lưu. Bạn vẫn muốn thoát?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+                if (result == DialogResult.Yes)
+                    Close();
+                else
+                    return;
+            }
+            else
+                Close();
+        }
+
+        private byte[] ImageToByteArray(Guna2PictureBox pictureBox)
+        {
+            MemoryStream memoryStream = new MemoryStream();
+            pictureBox.Image.Save(memoryStream, pictureBox.Image.RawFormat);
+            return memoryStream.ToArray();
+        }
+
+        private void btnNVImg_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Title = "Chọn ảnh";
@@ -243,11 +305,63 @@ namespace DoAnPBL3
             }
         }
 
-        private byte[] ImageToByteArray(PictureBox pictureBox)
+        private void btnDeleteImg_Click(object sender, EventArgs e)
         {
-            MemoryStream memoryStream = new MemoryStream();
-            pictureBox.Image.Save(memoryStream, pictureBox.Image.RawFormat);
-            return memoryStream.ToArray();
+            avatar.Image = null;
+        }
+
+        private void tbNameNV_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                rjbtnOK.PerformClick();
+                e.Handled = true;
+            }
+        }
+
+        private void tbEmailNV_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                rjbtnOK.PerformClick();
+                e.Handled = true;
+            }
+        }
+
+        private void tbBD_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                rjbtnOK.PerformClick();
+                e.Handled = true;
+            }
+        }
+
+        private void tbSDTNV_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                rjbtnOK.PerformClick();
+                e.Handled = true;
+            }
+        }
+
+        private void tbCMNDNV_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                rjbtnOK.PerformClick();
+                e.Handled = true;
+            }
+        }
+
+        private void tbAddressNV_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                rjbtnOK.PerformClick();
+                e.Handled = true;
+            }
         }
     }
 }

@@ -28,13 +28,12 @@ namespace DoAnPBL3
             this.emailPassword = emailPassword;
         }
 
-
         private void Login_Load(object sender, EventArgs e)
         {
-            using (var bookStore = new BookStoreContext())
+            using (BookStoreContext context = new BookStoreContext())
             {
                 // tương tác với DB 1 lần để rend ra CSDL
-                bookStore.Languages.ToList();
+                context.Languages.ToList();
             }
             cbSaveAcc.Checked = true;
             if (username != "" || password != "")
@@ -205,13 +204,19 @@ namespace DoAnPBL3
         private void txtUserName_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
+            {
                 btnLogin.PerformClick();
+                e.Handled = true;
+            }
         }
 
         private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
+            {
                 btnLogin.PerformClick();
+                e.Handled = true;
+            }
         }
 
         private void OpenChildForm(Form childForm)

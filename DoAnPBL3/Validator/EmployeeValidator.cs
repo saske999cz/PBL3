@@ -10,36 +10,109 @@ namespace DoAnPBL3.Validator
 {
     public class EmployeeValidator
     {
-        public static string NAME_REGEX = @"^[\p{L}+]{2,}(?: [\p{L}]+){0,2}$";
         public static string PHONE_REGEX = @"(84|0[3|5|7|8|9])+([\d]{8})\b";
         public static string ID_CARD_REGEX = @"^(\d{9})";
-        public static string DATE_TIME_REGEX = @"(?<months>\d+)/(?<days>\d+)/(?<years>\d{4})\s(?<hours>\d+):(?<minutes>\d+):(?<seconds>\d+)\s(?<clock>\w{2})";
-        public static bool IsValidName(string name, string pattern)
+        public static string DATE_TIME_REGEX = @"(?<days>\d{2})/(?<months>\d{2})/(?<years>\d{4})";
+
+        public static bool IsLeapYear(int year)
         {
-            if (Regex.IsMatch(name, pattern))
+            if (year % 400 == 0)
+                return true;
+            if (year % 4 == 0 && year % 100 != 0)
+                return true;
+            return false;
+        }
+
+        public static bool IsDateContainsAlphabet(string dateOfBirth)
+        {
+            return dateOfBirth.Any(alpha => char.IsLetter(alpha));
+        }
+
+        public static bool IsValidFormatDateOfBirth(string dateOfBirth, string pattern)
+        {
+            if (Regex.IsMatch(dateOfBirth, pattern))
                 return true;
             else
                 return false;
         }
 
-        public static bool IsValidAge(DateTime date, string pattern)
+        public static string CheckDateOfBirth(string dateOfBirth, string pattern)
         {
-            int seconds = 0, minutes = 0, hours = 0;
+            string msg = "";
+            int days = 0, months = 0, years = 0;
+            Regex regex = new Regex(pattern);
+            foreach (Match item in regex.Matches(dateOfBirth.ToString()))
+            {
+                days = Convert.ToInt32(item.Groups["days"].ToString());
+                months = Convert.ToInt32(item.Groups["months"].ToString());
+                years = Convert.ToInt32(item.Groups["years"].ToString());
+            }
+            if (months < 1 || months > 12 || days < 1 || days > 31)
+            {
+                msg = "Sai ngày hoặc tháng";
+            }
+            switch (months)
+            {
+                case 2:
+                    if (IsLeapYear(years))
+                    {
+                        if (days > 29)
+                        {
+                            msg = "Năm nhuận không có ngày 30";
+                        }
+                        else
+                            msg = "";
+                    }
+                    else
+                    {
+                        if (days > 28)
+                        {
+                            msg = "Năm không nhuận không có ngày 29";
+                        }
+                        else
+                            msg = "";
+                    }
+                    break;
+                case 4:
+                    if (days > 30)
+                    {
+                        msg = "Tháng 4 không có ngày 31";
+                    }
+                    break;
+                case 6:
+                    if (days > 30)
+                    {
+                        msg = "Tháng 6 không có ngày 31";
+                    }
+                    break;
+                case 9:
+                    if (days > 30)
+                    {
+                        msg = "Tháng 9 không có ngày 31";
+                    }
+                    break;
+                case 11:
+                    if (days > 30)
+                    {
+                        msg = "Tháng 11 không có ngày 31";
+                    }
+                    break;
+                default:
+                    break;
+            }
+            return msg;
+        }
+
+        public static bool IsValidAge(string dateOfBirth, string pattern)
+        {
             string days = "01", months = "01", years = "2000";
             string currentDate = DateTime.Now.ToString("MM/dd/yyyy"); // Format current date to MM/dd/yyyy
             Regex regex = new Regex(pattern);
-            foreach (Match item in regex.Matches(date.ToString()))
+            foreach (Match item in regex.Matches(dateOfBirth))
             {
-                seconds = Convert.ToInt32(item.Groups["seconds"].ToString());
-                minutes = Convert.ToInt32(item.Groups["minutes"].ToString());
-                hours = Convert.ToInt32(item.Groups["hours"].ToString());
                 days = item.Groups["days"].ToString();
                 months = item.Groups["months"].ToString();
                 years = item.Groups["years"].ToString();
-                if (item.Groups["clock"].ToString() == "PM")
-                {
-                    hours += 12;
-                }
             }
             if (Convert.ToInt32(currentDate.Substring(6, 4)) - Convert.ToInt32(years) > 18)
             {
@@ -73,12 +146,12 @@ namespace DoAnPBL3.Validator
             }
         }
 
-        public static bool IsValidDateOfBirth(DateTime date, string pattern)
+        public static bool IsValidDateOfBirth(string dateOfBirth, string pattern)
         {
             string days = "01", months = "01", years = "2000";
             string currentDate = DateTime.Now.ToString("MM/dd/yyyy"); // Format current date to MM/dd/yyyy
             Regex regex = new Regex(pattern);
-            foreach (Match item in regex.Matches(date.ToString()))
+            foreach (Match item in regex.Matches(dateOfBirth.ToString()))
             {
                 days = item.Groups["days"].ToString();
                 months = item.Groups["months"].ToString();

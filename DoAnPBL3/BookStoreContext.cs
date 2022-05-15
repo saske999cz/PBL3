@@ -29,13 +29,13 @@ namespace DoAnPBL3
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Employee>()
-                .HasIndex(u => u.Phone)
-                .IsUnique();
+                .HasIndex(employee => new { employee.Phone, employee.Id_Card })
+                .IsUnique(true);
             modelBuilder.Entity<Admin>()
-                .HasIndex(u => u.Phone)
-                .IsUnique();
+                .HasIndex(admin => new { admin.Phone, admin.ID_Card })
+                .IsUnique(true);
             modelBuilder.Entity<Customer>()
-                .HasIndex(u => u.Phone)
+                .HasIndex(customer => customer.Phone)
                 .IsUnique();
             modelBuilder.Entity<Employee>()
                 .MapToStoredProcedures(s =>

@@ -196,7 +196,6 @@
     <Reference Include="WindowsBase" />
     <Reference Include="XanderUI">
       <HintPath>..\packages\XanderUI-master\XanderUI.dll</HintPath>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -378,15 +377,6 @@
     </Compile>
     <Compile Include="MenuColorTable.cs" />
     <Compile Include="MenuRender.cs" />
-    <Compile Include="Migrations\202205101157512_InitialCreate.cs" />
-    <Compile Include="Migrations\202205101157512_InitialCreate.designer.cs">
-      <DependentUpon>202205101157512_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202205101204471_Employee.cs" />
-    <Compile Include="Migrations\202205101204471_Employee.designer.cs">
-      <DependentUpon>202205101204471_Employee.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Account.cs" />
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\Author.cs" />
@@ -425,9 +415,6 @@
     </Compile>
     <Compile Include="Settings.cs" />
     <Compile Include="Validator\EmployeeValidator.cs" />
-    <EmbeddedResource Include="FormAddKH.resx">
-      <DependentUpon>FormAddKH.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormAddNV.resx">
       <DependentUpon>FormAddNV.cs</DependentUpon>
     </EmbeddedResource>
@@ -512,12 +499,6 @@
     <EmbeddedResource Include="MainMenuQTV.resx">
       <DependentUpon>MainMenuQTV.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202205101157512_InitialCreate.resx">
-      <DependentUpon>202205101157512_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202205101204471_Employee.resx">
-      <DependentUpon>202205101204471_Employee.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -563,6 +544,7 @@
     <None Include="Img\book info 2.png" />
     <Content Include="Img\chat.png" />
     <None Include="Img\customer information.png" />
+    <None Include="Img\delete_30px.png" />
     <Content Include="Img\error.png" />
     <Content Include="Img\exclamation.png" />
     <None Include="Img\exit.png" />
@@ -607,6 +589,8 @@
     <None Include="Img\shopping-cart.png" />
     <None Include="Img\user info.png" />
     <None Include="Img\sticky-notes.png" />
+    <None Include="Img\remove_image_40px.png" />
+    <None Include="Img\remove_image_30px.png" />
     <Content Include="NotificationIcons\error.png" />
     <Content Include="NotificationIcons\icons8_cancel_45px.png" />
     <Content Include="NotificationIcons\info.png" />
