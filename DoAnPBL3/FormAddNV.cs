@@ -14,6 +14,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Guna.UI2.WinForms;
+using System.Drawing.Imaging;
 
 namespace DoAnPBL3
 {
@@ -221,7 +222,13 @@ namespace DoAnPBL3
             }
             else
             {
-                ava = ImageToByteArray(avatar);
+                try
+                {
+                    ava = ImageToByteArray(avatar);
+                } catch(ExternalException)
+                {
+                    return;
+                }
             }
 
             if (isValidEmail && isValidIdCard && isValidPhone && isValidAge)
@@ -289,9 +296,20 @@ namespace DoAnPBL3
 
         private byte[] ImageToByteArray(Guna2PictureBox pictureBox)
         {
-            MemoryStream memoryStream = new MemoryStream();
-            pictureBox.Image.Save(memoryStream, pictureBox.Image.RawFormat);
-            return memoryStream.ToArray();
+            using (Bitmap bitmap = new Bitmap(avatar.ImageLocation))
+            {
+                MemoryStream memoryStream = new MemoryStream();
+                try
+                {
+                    bitmap.Save(memoryStream, ImageFormat.Bmp);
+                }
+                catch (ExternalException)
+                {
+                    RJMessageBox.Show("Lỗi không thể lưu được ảnh. Vui lòng thử lại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    throw;
+                }
+                return memoryStream.ToArray();
+            } 
         }
 
         private void btnNVImg_Click(object sender, EventArgs e)

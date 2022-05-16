@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -39,14 +40,13 @@ namespace DoAnPBL3
                 tbNameNV.Text = employee.NameEmployee;
                 tbEmailNV.Text = employee.Email;
                 tbBD.Text = employee.DateOfBirth.ToString("dd/MM/yyyy");
-                //int index = cbGenderNV.Items.IndexOf(employee.Gender);
                 cbGenderNV.SelectedItem = employee.Gender;
                 tbSDTNV.Text = employee.Phone;
                 tbCMNDNV.Text = employee.Id_Card;
                 tbAddressNV.Text = employee.Address;
                 if (employee.Avatar != null)
                 {
-                    MemoryStream memoryStream = new MemoryStream((byte[])employee.Avatar);
+                    MemoryStream memoryStream = new MemoryStream(employee.Avatar);
                     avatar.Image = Image.FromStream(memoryStream);
                 }
                 else
@@ -244,7 +244,14 @@ namespace DoAnPBL3
             }
             else
             {
-                ava = ImageToByteArray(avatar);
+                try
+                {
+                    ava = ImageToByteArray(avatar);
+                }
+                catch (ExternalException)
+                {
+                    return;
+                }
             }
 
             if (isValidEmail && isValidIdCard && isValidPhone && isValidAge)
@@ -307,9 +314,20 @@ namespace DoAnPBL3
 
         private byte[] ImageToByteArray(PictureBox pictureBox)
         {
-            MemoryStream memoryStream = new MemoryStream();
-            pictureBox.Image.Save(memoryStream, pictureBox.Image.RawFormat);
-            return memoryStream.ToArray();
+            using (Bitmap bitmap = new Bitmap(avatar.ImageLocation))
+            {
+                MemoryStream memoryStream = new MemoryStream();
+                try
+                {
+                    bitmap.Save(memoryStream, ImageFormat.Bmp);
+                }
+                catch (ExternalException)
+                {
+                    RJMessageBox.Show("Lỗi không thể lưu được ảnh. Vui lòng thử lại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    throw;
+                }
+                return memoryStream.ToArray();
+            }
         }
 
         private void btnNVImg_Click(object sender, EventArgs e)
