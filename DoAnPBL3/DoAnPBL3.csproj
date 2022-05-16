@@ -199,6 +199,12 @@
     <Compile Include="FormNote.Designer.cs">
       <DependentUpon>FormNote.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormNoteInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNoteInfo.Designer.cs">
+      <DependentUpon>FormNoteInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormQLBS.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -381,6 +387,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormNote.resx">
       <DependentUpon>FormNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNoteInfo.resx">
+      <DependentUpon>FormNoteInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormQLBS.resx">
       <DependentUpon>FormQLBS.cs</DependentUpon>

@@ -48,5 +48,7 @@ namespace DoAnPBL3
         {
             this.Hide();
         }
+
+       
     }
 }

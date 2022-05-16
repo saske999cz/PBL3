@@ -12,9 +12,35 @@ namespace DoAnPBL3
 {
     public partial class FormMinNote : Form
     {
-        public FormMinNote()
+        private string content;
+        public FormMinNote(string theme)
         {
             InitializeComponent();
+            switch (theme)
+            {
+                case "Admin":
+                    lblNoteDate.Parent.BackColor = Color.FromArgb(34, 33, 74);
+                    lblNoteDate.ForeColor = Color.White;
+                    lblNoteTitle.ForeColor = Color.White;
+
+
+                    break;
+
+                case "Dark":
+
+                    
+                    lblNoteDate.Parent.BackColor = Color.FromArgb(32, 32, 32);
+                    lblNoteDate.ForeColor = Color.White;
+                    lblNoteTitle.ForeColor = Color.White;
+                    break;
+
+                case "Light":
+                    
+                    lblNoteDate.Parent.BackColor = Color.FromArgb(220, 220, 220);
+                    lblNoteDate.ForeColor = Color.Black;
+                    lblNoteTitle.ForeColor = Color.Black;
+                    break;
+            }
         }
 
         private void guna2CircleButton3_Click(object sender, EventArgs e)
@@ -30,6 +56,16 @@ namespace DoAnPBL3
         public void SetDate()
         {
             lblNoteDate.Text = DateTime.Now.ToString();
+        }
+
+        public void SetContent(string content)
+        {
+            this.content = content;
+        }
+
+        private void panelNote_Click(object sender, EventArgs e)
+        {
+            new FormNoteInfo(lblNoteTitle.Text, this.content).Show();
         }
     }
 }
