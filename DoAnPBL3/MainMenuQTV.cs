@@ -342,7 +342,7 @@ namespace DoAnPBL3
                 DisableButton();
                 iconCurrentChildForm.IconChar = IconChar.Pen;
                 btnLeftBorder.Visible = false;
-                OpenChildForm(new FormMenuNote());
+                OpenChildForm(new FormMenuNote(theme));
             }
         }
 

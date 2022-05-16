@@ -16,11 +16,31 @@ namespace DoAnPBL3
         FormMinNote[] minNote = new FormMinNote[100];
         static int count = 0;
         static int index = 0;
-        public FormMenuNote()
+        private string theme;
+        string[] content = new string[100];
+        public FormMenuNote(string theme)
         {
+            this.theme = theme;
             InitializeComponent();
             Notes.BringToFront();
-            
+            switch (theme)
+            {
+                case "Admin":
+                    Notes.Parent.BackColor = Color.FromArgb(34, 33, 74);
+                    Notes.BackColor = Color.FromArgb(34, 33, 74);
+                    break;
+
+                case "Dark":
+                    Notes.Parent.BackColor = Color.FromArgb(32, 32, 32);
+                    Notes.BackColor = Color.FromArgb(32, 32, 32);
+                    break;
+
+                case "Light":
+                    Notes.Parent.BackColor = Color.FromArgb(220, 220, 220);
+                    Notes.BackColor = Color.FromArgb(220, 220, 220);
+                    break;
+            }
+
         }
 
         private void OpenChildForm(FormMinNote childForm)
@@ -65,15 +85,16 @@ namespace DoAnPBL3
         {
             if (note.Text == "Changed")
             {
-                minNote[index] = new FormMinNote();
+                content[index] = note.GetContent();
+                minNote[index] = new FormMinNote(theme);
                 OpenChildForm(minNote[index]);
                 minNote[index].SetTitle(note.GetTitle());
                 minNote[index].SetDate();
-                
+                minNote[index].SetContent(content[index]);
                 count++;
                 index++;
                 note.Text = "NotChanged";
-                Notes.Show();
+                //Notes.Show();
                
             }
         }
