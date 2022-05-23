@@ -36,6 +36,9 @@ namespace DoAnPBL3
             this.label1 = new System.Windows.Forms.Label();
             this.rjbtnOK = new DoAnPBL3.RJButton();
             this.panelContainer = new System.Windows.Forms.Panel();
+            this.msgValidateStartDate = new System.Windows.Forms.Label();
+            this.tbStartDate = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblStartDate = new System.Windows.Forms.Label();
             this.btnDeleteImg = new DoAnPBL3.RJButton();
             this.rjbtnCancel = new DoAnPBL3.RJButton();
             this.avatar = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -81,7 +84,7 @@ namespace DoAnPBL3
             this.panelTitleBar.Location = new System.Drawing.Point(0, 0);
             this.panelTitleBar.Margin = new System.Windows.Forms.Padding(2);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(812, 41);
+            this.panelTitleBar.Size = new System.Drawing.Size(851, 41);
             this.panelTitleBar.TabIndex = 1;
             // 
             // pictureBox1
@@ -119,11 +122,11 @@ namespace DoAnPBL3
             this.rjbtnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjbtnOK.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjbtnOK.ForeColor = System.Drawing.Color.White;
-            this.rjbtnOK.Location = new System.Drawing.Point(240, 569);
+            this.rjbtnOK.Location = new System.Drawing.Point(240, 617);
             this.rjbtnOK.Margin = new System.Windows.Forms.Padding(2);
             this.rjbtnOK.Name = "rjbtnOK";
             this.rjbtnOK.Size = new System.Drawing.Size(145, 36);
-            this.rjbtnOK.TabIndex = 13;
+            this.rjbtnOK.TabIndex = 10;
             this.rjbtnOK.Text = "Lưu";
             this.rjbtnOK.TextColor = System.Drawing.Color.White;
             this.rjbtnOK.UseVisualStyleBackColor = false;
@@ -132,6 +135,9 @@ namespace DoAnPBL3
             // panelContainer
             // 
             this.panelContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(37)))), ((int)(((byte)(65)))));
+            this.panelContainer.Controls.Add(this.msgValidateStartDate);
+            this.panelContainer.Controls.Add(this.tbStartDate);
+            this.panelContainer.Controls.Add(this.lblStartDate);
             this.panelContainer.Controls.Add(this.btnDeleteImg);
             this.panelContainer.Controls.Add(this.rjbtnCancel);
             this.panelContainer.Controls.Add(this.avatar);
@@ -163,8 +169,52 @@ namespace DoAnPBL3
             this.panelContainer.Location = new System.Drawing.Point(0, 41);
             this.panelContainer.Margin = new System.Windows.Forms.Padding(2);
             this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(812, 645);
+            this.panelContainer.Size = new System.Drawing.Size(851, 700);
             this.panelContainer.TabIndex = 4;
+            // 
+            // msgValidateStartDate
+            // 
+            this.msgValidateStartDate.AutoSize = true;
+            this.msgValidateStartDate.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.msgValidateStartDate.Location = new System.Drawing.Point(405, 278);
+            this.msgValidateStartDate.Name = "msgValidateStartDate";
+            this.msgValidateStartDate.Size = new System.Drawing.Size(0, 16);
+            this.msgValidateStartDate.TabIndex = 79;
+            // 
+            // tbStartDate
+            // 
+            this.tbStartDate.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.tbStartDate.BorderRadius = 6;
+            this.tbStartDate.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbStartDate.DefaultText = "";
+            this.tbStartDate.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.tbStartDate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.tbStartDate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.tbStartDate.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.tbStartDate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.tbStartDate.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbStartDate.Font = new System.Drawing.Font("Arial", 11.25F);
+            this.tbStartDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.tbStartDate.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbStartDate.Location = new System.Drawing.Point(396, 245);
+            this.tbStartDate.Name = "tbStartDate";
+            this.tbStartDate.PasswordChar = '\0';
+            this.tbStartDate.PlaceholderText = "Nhập ngày bắt đầu";
+            this.tbStartDate.SelectedText = "";
+            this.tbStartDate.Size = new System.Drawing.Size(409, 30);
+            this.tbStartDate.TabIndex = 3;
+            // 
+            // lblStartDate
+            // 
+            this.lblStartDate.AutoSize = true;
+            this.lblStartDate.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStartDate.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblStartDate.Location = new System.Drawing.Point(287, 251);
+            this.lblStartDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblStartDate.Name = "lblStartDate";
+            this.lblStartDate.Size = new System.Drawing.Size(99, 18);
+            this.lblStartDate.TabIndex = 77;
+            this.lblStartDate.Text = "Ngày bắt đầu";
             // 
             // btnDeleteImg
             // 
@@ -183,7 +233,7 @@ namespace DoAnPBL3
             this.btnDeleteImg.Location = new System.Drawing.Point(143, 313);
             this.btnDeleteImg.Name = "btnDeleteImg";
             this.btnDeleteImg.Size = new System.Drawing.Size(110, 40);
-            this.btnDeleteImg.TabIndex = 76;
+            this.btnDeleteImg.TabIndex = 9;
             this.btnDeleteImg.Text = "Xóa ảnh";
             this.btnDeleteImg.TextColor = System.Drawing.Color.White;
             this.btnDeleteImg.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -202,11 +252,11 @@ namespace DoAnPBL3
             this.rjbtnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjbtnCancel.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjbtnCancel.ForeColor = System.Drawing.Color.White;
-            this.rjbtnCancel.Location = new System.Drawing.Point(444, 569);
+            this.rjbtnCancel.Location = new System.Drawing.Point(444, 617);
             this.rjbtnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.rjbtnCancel.Name = "rjbtnCancel";
             this.rjbtnCancel.Size = new System.Drawing.Size(145, 36);
-            this.rjbtnCancel.TabIndex = 75;
+            this.rjbtnCancel.TabIndex = 11;
             this.rjbtnCancel.Text = "Hủy";
             this.rjbtnCancel.TextColor = System.Drawing.Color.White;
             this.rjbtnCancel.UseVisualStyleBackColor = false;
@@ -214,6 +264,7 @@ namespace DoAnPBL3
             // 
             // avatar
             // 
+            this.avatar.ErrorImage = null;
             this.avatar.ImageRotate = 0F;
             this.avatar.Location = new System.Drawing.Point(11, 42);
             this.avatar.Name = "avatar";
@@ -226,7 +277,7 @@ namespace DoAnPBL3
             // 
             this.msgValidateAddress.AutoSize = true;
             this.msgValidateAddress.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.msgValidateAddress.Location = new System.Drawing.Point(386, 491);
+            this.msgValidateAddress.Location = new System.Drawing.Point(405, 559);
             this.msgValidateAddress.Name = "msgValidateAddress";
             this.msgValidateAddress.Size = new System.Drawing.Size(0, 16);
             this.msgValidateAddress.TabIndex = 73;
@@ -235,7 +286,7 @@ namespace DoAnPBL3
             // 
             this.msgValidateIDCard.AutoSize = true;
             this.msgValidateIDCard.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.msgValidateIDCard.Location = new System.Drawing.Point(386, 423);
+            this.msgValidateIDCard.Location = new System.Drawing.Point(405, 491);
             this.msgValidateIDCard.Name = "msgValidateIDCard";
             this.msgValidateIDCard.Size = new System.Drawing.Size(0, 16);
             this.msgValidateIDCard.TabIndex = 72;
@@ -244,7 +295,7 @@ namespace DoAnPBL3
             // 
             this.msgValidatePhone.AutoSize = true;
             this.msgValidatePhone.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.msgValidatePhone.Location = new System.Drawing.Point(386, 351);
+            this.msgValidatePhone.Location = new System.Drawing.Point(405, 419);
             this.msgValidatePhone.Name = "msgValidatePhone";
             this.msgValidatePhone.Size = new System.Drawing.Size(0, 16);
             this.msgValidatePhone.TabIndex = 71;
@@ -253,7 +304,7 @@ namespace DoAnPBL3
             // 
             this.msgValidateGender.AutoSize = true;
             this.msgValidateGender.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.msgValidateGender.Location = new System.Drawing.Point(386, 283);
+            this.msgValidateGender.Location = new System.Drawing.Point(405, 351);
             this.msgValidateGender.Name = "msgValidateGender";
             this.msgValidateGender.Size = new System.Drawing.Size(0, 16);
             this.msgValidateGender.TabIndex = 70;
@@ -262,7 +313,7 @@ namespace DoAnPBL3
             // 
             this.msgValidateDateOfBirth.AutoSize = true;
             this.msgValidateDateOfBirth.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.msgValidateDateOfBirth.Location = new System.Drawing.Point(386, 209);
+            this.msgValidateDateOfBirth.Location = new System.Drawing.Point(405, 209);
             this.msgValidateDateOfBirth.Name = "msgValidateDateOfBirth";
             this.msgValidateDateOfBirth.Size = new System.Drawing.Size(0, 16);
             this.msgValidateDateOfBirth.TabIndex = 69;
@@ -271,7 +322,7 @@ namespace DoAnPBL3
             // 
             this.msgValidateEmail.AutoSize = true;
             this.msgValidateEmail.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.msgValidateEmail.Location = new System.Drawing.Point(386, 139);
+            this.msgValidateEmail.Location = new System.Drawing.Point(405, 139);
             this.msgValidateEmail.Name = "msgValidateEmail";
             this.msgValidateEmail.Size = new System.Drawing.Size(0, 16);
             this.msgValidateEmail.TabIndex = 68;
@@ -280,7 +331,7 @@ namespace DoAnPBL3
             // 
             this.msgValidateName.AutoSize = true;
             this.msgValidateName.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.msgValidateName.Location = new System.Drawing.Point(386, 70);
+            this.msgValidateName.Location = new System.Drawing.Point(405, 70);
             this.msgValidateName.Name = "msgValidateName";
             this.msgValidateName.Size = new System.Drawing.Size(0, 16);
             this.msgValidateName.TabIndex = 67;
@@ -302,7 +353,7 @@ namespace DoAnPBL3
             this.btnNVImg.Location = new System.Drawing.Point(10, 313);
             this.btnNVImg.Name = "btnNVImg";
             this.btnNVImg.Size = new System.Drawing.Size(110, 40);
-            this.btnNVImg.TabIndex = 66;
+            this.btnNVImg.TabIndex = 8;
             this.btnNVImg.Text = "Chọn ảnh";
             this.btnNVImg.TextColor = System.Drawing.Color.White;
             this.btnNVImg.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -324,13 +375,14 @@ namespace DoAnPBL3
             this.tbEmailNV.Font = new System.Drawing.Font("Arial", 11.25F);
             this.tbEmailNV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.tbEmailNV.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbEmailNV.Location = new System.Drawing.Point(377, 106);
+            this.tbEmailNV.Location = new System.Drawing.Point(396, 106);
             this.tbEmailNV.Name = "tbEmailNV";
             this.tbEmailNV.PasswordChar = '\0';
             this.tbEmailNV.PlaceholderText = "Nhập email";
             this.tbEmailNV.SelectedText = "";
             this.tbEmailNV.Size = new System.Drawing.Size(409, 30);
-            this.tbEmailNV.TabIndex = 54;
+            this.tbEmailNV.TabIndex = 1;
+            this.tbEmailNV.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbEmailNV_KeyPress);
             // 
             // tbSDTNV
             // 
@@ -347,13 +399,14 @@ namespace DoAnPBL3
             this.tbSDTNV.Font = new System.Drawing.Font("Arial", 11.25F);
             this.tbSDTNV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.tbSDTNV.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbSDTNV.Location = new System.Drawing.Point(377, 318);
+            this.tbSDTNV.Location = new System.Drawing.Point(396, 386);
             this.tbSDTNV.Name = "tbSDTNV";
             this.tbSDTNV.PasswordChar = '\0';
             this.tbSDTNV.PlaceholderText = "Nhập số điện thoại";
             this.tbSDTNV.SelectedText = "";
             this.tbSDTNV.Size = new System.Drawing.Size(409, 30);
-            this.tbSDTNV.TabIndex = 62;
+            this.tbSDTNV.TabIndex = 5;
+            this.tbSDTNV.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbSDTNV_KeyPress);
             // 
             // tbAddressNV
             // 
@@ -370,13 +423,14 @@ namespace DoAnPBL3
             this.tbAddressNV.Font = new System.Drawing.Font("Arial", 11.25F);
             this.tbAddressNV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.tbAddressNV.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbAddressNV.Location = new System.Drawing.Point(377, 458);
+            this.tbAddressNV.Location = new System.Drawing.Point(396, 526);
             this.tbAddressNV.Name = "tbAddressNV";
             this.tbAddressNV.PasswordChar = '\0';
             this.tbAddressNV.PlaceholderText = "Nhập địa chỉ";
             this.tbAddressNV.SelectedText = "";
             this.tbAddressNV.Size = new System.Drawing.Size(409, 30);
-            this.tbAddressNV.TabIndex = 65;
+            this.tbAddressNV.TabIndex = 7;
+            this.tbAddressNV.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbAddressNV_KeyPress);
             // 
             // tbCMNDNV
             // 
@@ -393,13 +447,14 @@ namespace DoAnPBL3
             this.tbCMNDNV.Font = new System.Drawing.Font("Arial", 11.25F);
             this.tbCMNDNV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.tbCMNDNV.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbCMNDNV.Location = new System.Drawing.Point(377, 390);
+            this.tbCMNDNV.Location = new System.Drawing.Point(396, 458);
             this.tbCMNDNV.Name = "tbCMNDNV";
             this.tbCMNDNV.PasswordChar = '\0';
             this.tbCMNDNV.PlaceholderText = "Nhập CMND";
             this.tbCMNDNV.SelectedText = "";
             this.tbCMNDNV.Size = new System.Drawing.Size(409, 30);
-            this.tbCMNDNV.TabIndex = 64;
+            this.tbCMNDNV.TabIndex = 6;
+            this.tbCMNDNV.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCMNDNV_KeyPress);
             // 
             // tbBD
             // 
@@ -416,13 +471,14 @@ namespace DoAnPBL3
             this.tbBD.Font = new System.Drawing.Font("Arial", 11.25F);
             this.tbBD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.tbBD.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbBD.Location = new System.Drawing.Point(377, 176);
+            this.tbBD.Location = new System.Drawing.Point(396, 176);
             this.tbBD.Name = "tbBD";
             this.tbBD.PasswordChar = '\0';
             this.tbBD.PlaceholderText = "Nhập ngày sinh";
             this.tbBD.SelectedText = "";
             this.tbBD.Size = new System.Drawing.Size(409, 30);
-            this.tbBD.TabIndex = 57;
+            this.tbBD.TabIndex = 2;
+            this.tbBD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbBD_KeyPress);
             // 
             // tbNameNV
             // 
@@ -439,13 +495,14 @@ namespace DoAnPBL3
             this.tbNameNV.Font = new System.Drawing.Font("Arial", 11.25F);
             this.tbNameNV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.tbNameNV.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbNameNV.Location = new System.Drawing.Point(377, 37);
+            this.tbNameNV.Location = new System.Drawing.Point(396, 37);
             this.tbNameNV.Name = "tbNameNV";
             this.tbNameNV.PasswordChar = '\0';
             this.tbNameNV.PlaceholderText = "Nhập họ và tên";
             this.tbNameNV.SelectedText = "";
             this.tbNameNV.Size = new System.Drawing.Size(409, 30);
-            this.tbNameNV.TabIndex = 53;
+            this.tbNameNV.TabIndex = 0;
+            this.tbNameNV.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbNameNV_KeyPress);
             // 
             // cbGenderNV
             // 
@@ -462,12 +519,12 @@ namespace DoAnPBL3
             "Giới tính thứ 3"});
             this.cbGenderNV.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
             this.cbGenderNV.ListTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.cbGenderNV.Location = new System.Drawing.Point(377, 248);
+            this.cbGenderNV.Location = new System.Drawing.Point(396, 316);
             this.cbGenderNV.MinimumSize = new System.Drawing.Size(188, 29);
             this.cbGenderNV.Name = "cbGenderNV";
             this.cbGenderNV.Padding = new System.Windows.Forms.Padding(2);
             this.cbGenderNV.Size = new System.Drawing.Size(409, 32);
-            this.cbGenderNV.TabIndex = 59;
+            this.cbGenderNV.TabIndex = 4;
             this.cbGenderNV.Texts = "Giới tính";
             // 
             // lblCMND
@@ -475,7 +532,7 @@ namespace DoAnPBL3
             this.lblCMND.AutoSize = true;
             this.lblCMND.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCMND.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblCMND.Location = new System.Drawing.Point(287, 396);
+            this.lblCMND.Location = new System.Drawing.Point(287, 464);
             this.lblCMND.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCMND.Name = "lblCMND";
             this.lblCMND.Size = new System.Drawing.Size(54, 18);
@@ -500,7 +557,7 @@ namespace DoAnPBL3
             this.lblSDT.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSDT.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.lblSDT.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblSDT.Location = new System.Drawing.Point(287, 322);
+            this.lblSDT.Location = new System.Drawing.Point(287, 390);
             this.lblSDT.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSDT.Name = "lblSDT";
             this.lblSDT.Size = new System.Drawing.Size(80, 18);
@@ -512,7 +569,7 @@ namespace DoAnPBL3
             this.lblAddress.AutoSize = true;
             this.lblAddress.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddress.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblAddress.Location = new System.Drawing.Point(287, 461);
+            this.lblAddress.Location = new System.Drawing.Point(287, 529);
             this.lblAddress.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAddress.Name = "lblAddress";
             this.lblAddress.Size = new System.Drawing.Size(56, 18);
@@ -524,7 +581,7 @@ namespace DoAnPBL3
             this.lblGender.AutoSize = true;
             this.lblGender.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGender.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblGender.Location = new System.Drawing.Point(287, 253);
+            this.lblGender.Location = new System.Drawing.Point(287, 321);
             this.lblGender.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblGender.Name = "lblGender";
             this.lblGender.Size = new System.Drawing.Size(70, 18);
@@ -586,7 +643,7 @@ namespace DoAnPBL3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(812, 686);
+            this.ClientSize = new System.Drawing.Size(851, 741);
             this.Controls.Add(this.panelContainer);
             this.Controls.Add(this.panelTitleBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -642,5 +699,8 @@ namespace DoAnPBL3
         private System.Windows.Forms.Label lblNameNV;
         private RJButton rjbtnCancel;
         private RJButton btnDeleteImg;
+        private System.Windows.Forms.Label msgValidateStartDate;
+        private Guna.UI2.WinForms.Guna2TextBox tbStartDate;
+        private System.Windows.Forms.Label lblStartDate;
     }
 }

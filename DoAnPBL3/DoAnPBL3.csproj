@@ -200,7 +200,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BookStoreContext.cs" />
-    <Compile Include="CreateAdminAndEmployee.cs" />
+    <Compile Include="FlatCombobox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="InitialData.cs" />
     <Compile Include="FormAddKH.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -389,8 +392,6 @@
     <Compile Include="Models\Book.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Employee.cs" />
-    <Compile Include="Models\EnumLanguage.cs" />
-    <Compile Include="Models\EnumRole.cs" />
     <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\Language.cs" />
     <Compile Include="Models\Order.cs" />
@@ -420,7 +421,7 @@
       <DependentUpon>RJTextBox.cs</DependentUpon>
     </Compile>
     <Compile Include="Settings.cs" />
-    <Compile Include="Validator\EmployeeValidator.cs" />
+    <Compile Include="Validator\Validators.cs" />
     <EmbeddedResource Include="FormAddNV.resx">
       <DependentUpon>FormAddNV.cs</DependentUpon>
     </EmbeddedResource>

@@ -21,12 +21,8 @@ namespace DoAnPBL3
             InitializeComponent();
         }
 
-        
         private void OpenChildForm(FormNhapMua childForm)
         {
-
-
-
             childForm.TopLevel = false;
             childForm.Dock = DockStyle.Top;
             panelDesktop.Controls.Add(childForm);
@@ -45,7 +41,6 @@ namespace DoAnPBL3
             int Num = 0;
             if (tbNumber.Texts == "")
                 RJMessageBox.Show("Vui lòng nhập số lượng loại sách muốn mua", "Lỗi ", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
             else
             {
                 Num = Convert.ToInt32(tbNumber.Texts);
@@ -56,9 +51,7 @@ namespace DoAnPBL3
                     {
                         currentChildForm[z] = new FormNhapMua(z + 1);
                         OpenChildForm(currentChildForm[z]);
-
                         z++;
-
                     }
 
                 }
@@ -70,9 +63,6 @@ namespace DoAnPBL3
             }
                 tbNumber.Texts = "";
                 panelDesktop.Focus();
-            
-
-
         }
 
         private void tbNumber__TextChanged(object sender, EventArgs e)
@@ -92,17 +82,14 @@ namespace DoAnPBL3
 
                 RJMessageBox.Show("Chỉ được nhập số", "Lỗi ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 tbNumber.Texts = "";
-
             }
-
-           
         }
 
         private void rjbtnBuy_Click(object sender, EventArgs e)
-        { bool check = true;
+        { 
+            bool check = true;
             int[] error = new int[100];
             int indexError = 0;
-            
             if (panelDesktop.Controls.Count != 0)
             {
                 foreach (FormNhapMua b in panelDesktop.Controls)
@@ -111,27 +98,24 @@ namespace DoAnPBL3
                     {
                         check = false;
                         error[indexError] = panelDesktop.Controls.Count - panelDesktop.Controls.GetChildIndex(b) ;
-                        indexError++;
-                       
+                        indexError++; 
                     }
                 }
                 if (check == true)
                 {
-                    
-                    this.Alert("Mua sách thành công", Form_Alert.enmType.Success);
+                    Alert("Mua sách thành công", Form_Alert.enmType.Success);
                     z = 0;
-                    this.Close();
+                    Close();
                 }
                 else
-                {   int o = 0;
+                {   
+                    int o = 0;
                     int[] v = new int[indexError];
                     for (int i = indexError - 1; i >= 0; i--)
                     {
                         v[i] = error[o];
                         o++;
                     }
-                        
-                    
                     RJMessageBox.Show("Vui lòng nhập các thông tin cần thiết trước khi nhấn mua", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     RJMessageBox.Show("Xuất hiện sai sót tại dòng: " + string.Join(", ", v), "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -143,30 +127,20 @@ namespace DoAnPBL3
         private void rjbtnCancel_Click(object sender, EventArgs e)
         {
             z = 0;
-            this.Close();
+            Close();
         }
-
-       
 
         private void tbNumber_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
             {
                 btnOK.PerformClick();
-                
             }
         }
 
-        
-
         private void panelDesktop_ControlAdded(object sender, ControlEventArgs e)
-        {
-            
+        {         
             Tinh();
-            
-            
-
-
         }
 
         private void panelDesktop_ControlRemoved(object sender, ControlEventArgs e)
@@ -174,39 +148,22 @@ namespace DoAnPBL3
             z = panelDesktop.Controls.Count;
             Count--;
             foreach (FormNhapMua b in panelDesktop.Controls)
-            {
-                
-                
+            {      
                     b.SetIndex(panelDesktop.Controls.Count - panelDesktop.Controls.GetChildIndex(b));
                     b.SetIndexText();
-                
-
             }
-
-
-
-
             Tinh();
-            
-            
         }
 
         
 
         private void panelDesktop_Paint(object sender, PaintEventArgs e)
         {
-
             Tinh();
-
         }
-
-        
-
-
 
         private void FormCart_Load(object sender, EventArgs e)
         {
-
             timer1.Tick += new System.EventHandler(timer1_Tick);
             timer1.Start();
         }
@@ -222,7 +179,6 @@ namespace DoAnPBL3
             long total = 0;
             foreach ( FormNhapMua b in panelDesktop.Controls)
             {
-                
                     if (b.GetSLText() == "")
                         Quantity += 0;
                     else
@@ -233,13 +189,9 @@ namespace DoAnPBL3
                         total += b.GetCP();
                 
             }
-
             tbTotal.Text = total.ToString();
             tbNumDiverse.Text = panelDesktop.Controls.Count.ToString();
             tbQuantity.Text = Quantity.ToString();
-
-        }
-
-        
+        }        
     }
 }

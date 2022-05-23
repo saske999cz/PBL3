@@ -36,6 +36,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.guna2DragControl2 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.panelContainer = new System.Windows.Forms.Panel();
+            this.msgValidateStartDate = new System.Windows.Forms.Label();
+            this.tbStartDate = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblStartDate = new System.Windows.Forms.Label();
+            this.msgValidateID = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.tbIDNV = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblIDNV = new System.Windows.Forms.Label();
             this.btnDeleteImg = new DoAnPBL3.RJButton();
             this.avatar = new Guna.UI2.WinForms.Guna2PictureBox();
             this.msgValidateAddress = new System.Windows.Forms.Label();
@@ -86,7 +93,7 @@
             this.panelTitleBar.Location = new System.Drawing.Point(0, 0);
             this.panelTitleBar.Margin = new System.Windows.Forms.Padding(2);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(812, 41);
+            this.panelTitleBar.Size = new System.Drawing.Size(828, 41);
             this.panelTitleBar.TabIndex = 3;
             // 
             // pictureBox1
@@ -122,6 +129,13 @@
             // panelContainer
             // 
             this.panelContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(37)))), ((int)(((byte)(65)))));
+            this.panelContainer.Controls.Add(this.msgValidateStartDate);
+            this.panelContainer.Controls.Add(this.tbStartDate);
+            this.panelContainer.Controls.Add(this.lblStartDate);
+            this.panelContainer.Controls.Add(this.msgValidateID);
+            this.panelContainer.Controls.Add(this.label3);
+            this.panelContainer.Controls.Add(this.tbIDNV);
+            this.panelContainer.Controls.Add(this.lblIDNV);
             this.panelContainer.Controls.Add(this.btnDeleteImg);
             this.panelContainer.Controls.Add(this.avatar);
             this.panelContainer.Controls.Add(this.msgValidateAddress);
@@ -153,8 +167,105 @@
             this.panelContainer.Location = new System.Drawing.Point(0, 41);
             this.panelContainer.Margin = new System.Windows.Forms.Padding(2);
             this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(812, 645);
+            this.panelContainer.Size = new System.Drawing.Size(828, 770);
             this.panelContainer.TabIndex = 4;
+            // 
+            // msgValidateStartDate
+            // 
+            this.msgValidateStartDate.AutoSize = true;
+            this.msgValidateStartDate.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.msgValidateStartDate.Location = new System.Drawing.Point(396, 356);
+            this.msgValidateStartDate.Name = "msgValidateStartDate";
+            this.msgValidateStartDate.Size = new System.Drawing.Size(0, 16);
+            this.msgValidateStartDate.TabIndex = 58;
+            // 
+            // tbStartDate
+            // 
+            this.tbStartDate.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.tbStartDate.BorderRadius = 6;
+            this.tbStartDate.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbStartDate.DefaultText = "";
+            this.tbStartDate.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.tbStartDate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.tbStartDate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.tbStartDate.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.tbStartDate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.tbStartDate.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbStartDate.Font = new System.Drawing.Font("Arial", 11.25F);
+            this.tbStartDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.tbStartDate.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbStartDate.Location = new System.Drawing.Point(395, 320);
+            this.tbStartDate.Name = "tbStartDate";
+            this.tbStartDate.PasswordChar = '\0';
+            this.tbStartDate.PlaceholderText = "Nhập ngày bắt đầu làm việc";
+            this.tbStartDate.SelectedText = "";
+            this.tbStartDate.Size = new System.Drawing.Size(409, 30);
+            this.tbStartDate.TabIndex = 4;
+            // 
+            // lblStartDate
+            // 
+            this.lblStartDate.AutoSize = true;
+            this.lblStartDate.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStartDate.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblStartDate.Location = new System.Drawing.Point(286, 325);
+            this.lblStartDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblStartDate.Name = "lblStartDate";
+            this.lblStartDate.Size = new System.Drawing.Size(99, 18);
+            this.lblStartDate.TabIndex = 56;
+            this.lblStartDate.Text = "Ngày bắt đầu";
+            // 
+            // msgValidateID
+            // 
+            this.msgValidateID.AutoSize = true;
+            this.msgValidateID.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.msgValidateID.Location = new System.Drawing.Point(396, 78);
+            this.msgValidateID.Name = "msgValidateID";
+            this.msgValidateID.Size = new System.Drawing.Size(0, 16);
+            this.msgValidateID.TabIndex = 54;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(385, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(0, 16);
+            this.label3.TabIndex = 55;
+            // 
+            // tbIDNV
+            // 
+            this.tbIDNV.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.tbIDNV.BorderRadius = 6;
+            this.tbIDNV.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbIDNV.DefaultText = "";
+            this.tbIDNV.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.tbIDNV.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.tbIDNV.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.tbIDNV.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.tbIDNV.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.tbIDNV.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbIDNV.Font = new System.Drawing.Font("Arial", 11.25F);
+            this.tbIDNV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.tbIDNV.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbIDNV.Location = new System.Drawing.Point(395, 44);
+            this.tbIDNV.Name = "tbIDNV";
+            this.tbIDNV.PasswordChar = '\0';
+            this.tbIDNV.PlaceholderText = "Nhập mã nhân viên";
+            this.tbIDNV.SelectedText = "";
+            this.tbIDNV.Size = new System.Drawing.Size(409, 30);
+            this.tbIDNV.TabIndex = 0;
+            // 
+            // lblIDNV
+            // 
+            this.lblIDNV.AutoSize = true;
+            this.lblIDNV.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIDNV.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblIDNV.Location = new System.Drawing.Point(287, 47);
+            this.lblIDNV.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblIDNV.Name = "lblIDNV";
+            this.lblIDNV.Size = new System.Drawing.Size(103, 18);
+            this.lblIDNV.TabIndex = 52;
+            this.lblIDNV.Text = "Mã nhân viên";
             // 
             // btnDeleteImg
             // 
@@ -173,7 +284,7 @@
             this.btnDeleteImg.Location = new System.Drawing.Point(142, 313);
             this.btnDeleteImg.Name = "btnDeleteImg";
             this.btnDeleteImg.Size = new System.Drawing.Size(110, 40);
-            this.btnDeleteImg.TabIndex = 9;
+            this.btnDeleteImg.TabIndex = 10;
             this.btnDeleteImg.Text = "Xóa ảnh";
             this.btnDeleteImg.TextColor = System.Drawing.Color.White;
             this.btnDeleteImg.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -182,6 +293,7 @@
             // 
             // avatar
             // 
+            this.avatar.ErrorImage = global::DoAnPBL3.Properties.Resources.add_book;
             this.avatar.ImageRotate = 0F;
             this.avatar.Location = new System.Drawing.Point(10, 44);
             this.avatar.Name = "avatar";
@@ -194,7 +306,7 @@
             // 
             this.msgValidateAddress.AutoSize = true;
             this.msgValidateAddress.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.msgValidateAddress.Location = new System.Drawing.Point(385, 493);
+            this.msgValidateAddress.Location = new System.Drawing.Point(396, 633);
             this.msgValidateAddress.Name = "msgValidateAddress";
             this.msgValidateAddress.Size = new System.Drawing.Size(0, 16);
             this.msgValidateAddress.TabIndex = 50;
@@ -203,7 +315,7 @@
             // 
             this.msgValidateIDCard.AutoSize = true;
             this.msgValidateIDCard.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.msgValidateIDCard.Location = new System.Drawing.Point(385, 425);
+            this.msgValidateIDCard.Location = new System.Drawing.Point(396, 565);
             this.msgValidateIDCard.Name = "msgValidateIDCard";
             this.msgValidateIDCard.Size = new System.Drawing.Size(0, 16);
             this.msgValidateIDCard.TabIndex = 50;
@@ -212,7 +324,7 @@
             // 
             this.msgValidatePhone.AutoSize = true;
             this.msgValidatePhone.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.msgValidatePhone.Location = new System.Drawing.Point(385, 353);
+            this.msgValidatePhone.Location = new System.Drawing.Point(396, 493);
             this.msgValidatePhone.Name = "msgValidatePhone";
             this.msgValidatePhone.Size = new System.Drawing.Size(0, 16);
             this.msgValidatePhone.TabIndex = 50;
@@ -221,7 +333,7 @@
             // 
             this.msgValidateGender.AutoSize = true;
             this.msgValidateGender.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.msgValidateGender.Location = new System.Drawing.Point(385, 285);
+            this.msgValidateGender.Location = new System.Drawing.Point(396, 425);
             this.msgValidateGender.Name = "msgValidateGender";
             this.msgValidateGender.Size = new System.Drawing.Size(0, 16);
             this.msgValidateGender.TabIndex = 50;
@@ -230,7 +342,7 @@
             // 
             this.msgValidateDateOfBirth.AutoSize = true;
             this.msgValidateDateOfBirth.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.msgValidateDateOfBirth.Location = new System.Drawing.Point(385, 211);
+            this.msgValidateDateOfBirth.Location = new System.Drawing.Point(396, 285);
             this.msgValidateDateOfBirth.Name = "msgValidateDateOfBirth";
             this.msgValidateDateOfBirth.Size = new System.Drawing.Size(0, 16);
             this.msgValidateDateOfBirth.TabIndex = 50;
@@ -239,7 +351,7 @@
             // 
             this.msgValidateEmail.AutoSize = true;
             this.msgValidateEmail.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.msgValidateEmail.Location = new System.Drawing.Point(385, 141);
+            this.msgValidateEmail.Location = new System.Drawing.Point(396, 212);
             this.msgValidateEmail.Name = "msgValidateEmail";
             this.msgValidateEmail.Size = new System.Drawing.Size(0, 16);
             this.msgValidateEmail.TabIndex = 50;
@@ -248,7 +360,7 @@
             // 
             this.msgValidateName.AutoSize = true;
             this.msgValidateName.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.msgValidateName.Location = new System.Drawing.Point(385, 72);
+            this.msgValidateName.Location = new System.Drawing.Point(396, 143);
             this.msgValidateName.Name = "msgValidateName";
             this.msgValidateName.Size = new System.Drawing.Size(0, 16);
             this.msgValidateName.TabIndex = 50;
@@ -270,7 +382,7 @@
             this.btnNVImg.Location = new System.Drawing.Point(10, 313);
             this.btnNVImg.Name = "btnNVImg";
             this.btnNVImg.Size = new System.Drawing.Size(110, 40);
-            this.btnNVImg.TabIndex = 8;
+            this.btnNVImg.TabIndex = 9;
             this.btnNVImg.Text = "Chọn ảnh";
             this.btnNVImg.TextColor = System.Drawing.Color.White;
             this.btnNVImg.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -292,7 +404,7 @@
             this.tbEmailNV.Font = new System.Drawing.Font("Arial", 11.25F);
             this.tbEmailNV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.tbEmailNV.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbEmailNV.Location = new System.Drawing.Point(376, 108);
+            this.tbEmailNV.Location = new System.Drawing.Point(395, 179);
             this.tbEmailNV.Name = "tbEmailNV";
             this.tbEmailNV.PasswordChar = '\0';
             this.tbEmailNV.PlaceholderText = "Nhập email";
@@ -316,13 +428,13 @@
             this.tbSDTNV.Font = new System.Drawing.Font("Arial", 11.25F);
             this.tbSDTNV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.tbSDTNV.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbSDTNV.Location = new System.Drawing.Point(376, 320);
+            this.tbSDTNV.Location = new System.Drawing.Point(395, 460);
             this.tbSDTNV.Name = "tbSDTNV";
             this.tbSDTNV.PasswordChar = '\0';
             this.tbSDTNV.PlaceholderText = "Nhập số điện thoại";
             this.tbSDTNV.SelectedText = "";
             this.tbSDTNV.Size = new System.Drawing.Size(409, 30);
-            this.tbSDTNV.TabIndex = 5;
+            this.tbSDTNV.TabIndex = 6;
             this.tbSDTNV.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbSDTNV_KeyPress);
             // 
             // tbAddressNV
@@ -340,13 +452,13 @@
             this.tbAddressNV.Font = new System.Drawing.Font("Arial", 11.25F);
             this.tbAddressNV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.tbAddressNV.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbAddressNV.Location = new System.Drawing.Point(376, 460);
+            this.tbAddressNV.Location = new System.Drawing.Point(395, 600);
             this.tbAddressNV.Name = "tbAddressNV";
             this.tbAddressNV.PasswordChar = '\0';
             this.tbAddressNV.PlaceholderText = "Nhập địa chỉ";
             this.tbAddressNV.SelectedText = "";
             this.tbAddressNV.Size = new System.Drawing.Size(409, 30);
-            this.tbAddressNV.TabIndex = 7;
+            this.tbAddressNV.TabIndex = 8;
             this.tbAddressNV.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbAddressNV_KeyPress);
             // 
             // tbCMNDNV
@@ -364,13 +476,13 @@
             this.tbCMNDNV.Font = new System.Drawing.Font("Arial", 11.25F);
             this.tbCMNDNV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.tbCMNDNV.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbCMNDNV.Location = new System.Drawing.Point(376, 392);
+            this.tbCMNDNV.Location = new System.Drawing.Point(395, 532);
             this.tbCMNDNV.Name = "tbCMNDNV";
             this.tbCMNDNV.PasswordChar = '\0';
             this.tbCMNDNV.PlaceholderText = "Nhập CMND";
             this.tbCMNDNV.SelectedText = "";
             this.tbCMNDNV.Size = new System.Drawing.Size(409, 30);
-            this.tbCMNDNV.TabIndex = 6;
+            this.tbCMNDNV.TabIndex = 7;
             this.tbCMNDNV.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCMNDNV_KeyPress);
             // 
             // tbBD
@@ -388,7 +500,7 @@
             this.tbBD.Font = new System.Drawing.Font("Arial", 11.25F);
             this.tbBD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.tbBD.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbBD.Location = new System.Drawing.Point(376, 178);
+            this.tbBD.Location = new System.Drawing.Point(395, 249);
             this.tbBD.Name = "tbBD";
             this.tbBD.PasswordChar = '\0';
             this.tbBD.PlaceholderText = "Nhập ngày sinh";
@@ -412,7 +524,7 @@
             this.tbNameNV.Font = new System.Drawing.Font("Arial", 11.25F);
             this.tbNameNV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.tbNameNV.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbNameNV.Location = new System.Drawing.Point(376, 39);
+            this.tbNameNV.Location = new System.Drawing.Point(395, 110);
             this.tbNameNV.Name = "tbNameNV";
             this.tbNameNV.PasswordChar = '\0';
             this.tbNameNV.PlaceholderText = "Nhập họ và tên";
@@ -436,12 +548,12 @@
             "Giới tính thứ 3"});
             this.cbGenderNV.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
             this.cbGenderNV.ListTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.cbGenderNV.Location = new System.Drawing.Point(376, 250);
+            this.cbGenderNV.Location = new System.Drawing.Point(395, 390);
             this.cbGenderNV.MinimumSize = new System.Drawing.Size(188, 29);
             this.cbGenderNV.Name = "cbGenderNV";
             this.cbGenderNV.Padding = new System.Windows.Forms.Padding(2);
             this.cbGenderNV.Size = new System.Drawing.Size(409, 32);
-            this.cbGenderNV.TabIndex = 4;
+            this.cbGenderNV.TabIndex = 5;
             this.cbGenderNV.Texts = "Giới tính";
             // 
             // rjbtnCancel
@@ -456,11 +568,11 @@
             this.rjbtnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjbtnCancel.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjbtnCancel.ForeColor = System.Drawing.Color.White;
-            this.rjbtnCancel.Location = new System.Drawing.Point(444, 569);
+            this.rjbtnCancel.Location = new System.Drawing.Point(444, 682);
             this.rjbtnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.rjbtnCancel.Name = "rjbtnCancel";
             this.rjbtnCancel.Size = new System.Drawing.Size(145, 36);
-            this.rjbtnCancel.TabIndex = 11;
+            this.rjbtnCancel.TabIndex = 12;
             this.rjbtnCancel.Text = "Hủy";
             this.rjbtnCancel.TextColor = System.Drawing.Color.White;
             this.rjbtnCancel.UseVisualStyleBackColor = false;
@@ -478,11 +590,11 @@
             this.rjbtnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjbtnOK.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjbtnOK.ForeColor = System.Drawing.Color.White;
-            this.rjbtnOK.Location = new System.Drawing.Point(240, 569);
+            this.rjbtnOK.Location = new System.Drawing.Point(240, 682);
             this.rjbtnOK.Margin = new System.Windows.Forms.Padding(2);
             this.rjbtnOK.Name = "rjbtnOK";
             this.rjbtnOK.Size = new System.Drawing.Size(145, 36);
-            this.rjbtnOK.TabIndex = 10;
+            this.rjbtnOK.TabIndex = 11;
             this.rjbtnOK.Text = "OK";
             this.rjbtnOK.TextColor = System.Drawing.Color.White;
             this.rjbtnOK.UseVisualStyleBackColor = false;
@@ -493,7 +605,7 @@
             this.lblCMND.AutoSize = true;
             this.lblCMND.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCMND.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblCMND.Location = new System.Drawing.Point(286, 398);
+            this.lblCMND.Location = new System.Drawing.Point(286, 538);
             this.lblCMND.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCMND.Name = "lblCMND";
             this.lblCMND.Size = new System.Drawing.Size(54, 18);
@@ -505,7 +617,7 @@
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblEmail.Location = new System.Drawing.Point(286, 113);
+            this.lblEmail.Location = new System.Drawing.Point(286, 184);
             this.lblEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(46, 18);
@@ -518,7 +630,7 @@
             this.lblSDT.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSDT.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.lblSDT.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblSDT.Location = new System.Drawing.Point(286, 324);
+            this.lblSDT.Location = new System.Drawing.Point(286, 464);
             this.lblSDT.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSDT.Name = "lblSDT";
             this.lblSDT.Size = new System.Drawing.Size(80, 18);
@@ -530,7 +642,7 @@
             this.lblAddress.AutoSize = true;
             this.lblAddress.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddress.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblAddress.Location = new System.Drawing.Point(286, 463);
+            this.lblAddress.Location = new System.Drawing.Point(286, 603);
             this.lblAddress.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAddress.Name = "lblAddress";
             this.lblAddress.Size = new System.Drawing.Size(56, 18);
@@ -542,7 +654,7 @@
             this.lblGender.AutoSize = true;
             this.lblGender.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGender.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblGender.Location = new System.Drawing.Point(286, 255);
+            this.lblGender.Location = new System.Drawing.Point(286, 395);
             this.lblGender.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblGender.Name = "lblGender";
             this.lblGender.Size = new System.Drawing.Size(70, 18);
@@ -554,7 +666,7 @@
             this.lblBD.AutoSize = true;
             this.lblBD.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBD.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblBD.Location = new System.Drawing.Point(286, 183);
+            this.lblBD.Location = new System.Drawing.Point(286, 254);
             this.lblBD.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblBD.Name = "lblBD";
             this.lblBD.Size = new System.Drawing.Size(77, 18);
@@ -566,7 +678,7 @@
             this.lblNameNV.AutoSize = true;
             this.lblNameNV.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNameNV.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblNameNV.Location = new System.Drawing.Point(286, 44);
+            this.lblNameNV.Location = new System.Drawing.Point(286, 115);
             this.lblNameNV.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNameNV.Name = "lblNameNV";
             this.lblNameNV.Size = new System.Drawing.Size(76, 18);
@@ -592,7 +704,7 @@
             // FormAddNV
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(812, 686);
+            this.ClientSize = new System.Drawing.Size(828, 811);
             this.Controls.Add(this.panelContainer);
             this.Controls.Add(this.panelTitleBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -647,5 +759,12 @@
         private System.Windows.Forms.Label msgValidateDateOfBirth;
         private Guna.UI2.WinForms.Guna2PictureBox avatar;
         private RJButton btnDeleteImg;
+        private System.Windows.Forms.Label msgValidateID;
+        private System.Windows.Forms.Label label3;
+        private Guna.UI2.WinForms.Guna2TextBox tbIDNV;
+        private System.Windows.Forms.Label lblIDNV;
+        private System.Windows.Forms.Label msgValidateStartDate;
+        private Guna.UI2.WinForms.Guna2TextBox tbStartDate;
+        private System.Windows.Forms.Label lblStartDate;
     }
 }

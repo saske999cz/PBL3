@@ -73,112 +73,58 @@ namespace DoAnPBL3
                 {
                     using (var bookStore = new BookStoreContext())
                     {
-                        // ===========================     LINQ TO ENTITIES cách 1     ===========================
-                        //var listAdminAccounts = from account in bookStore.Accounts
-                        //                        where (account.Role == EnumRole.Admin.ToString() && account.Username == username && account.Password == password)
-                        //                        select new
-                        //                        {
-                        //                            account.Username,
-                        //                            account.Password
-                        //                        };
-                        //var listAdminUsernameAccounts = from account in bookStore.Accounts
-                        //                                where (account.Role == EnumRole.Admin.ToString() && account.Username == username)
-                        //                                select new
-                        //                                {
-                        //                                    account.Username,
-                        //                                };
-                        // =======================================================================================
-                        // ===========================     LINQ TO ENTITIES cách 2     ===========================
                         var listAdminAccounts = bookStore.Accounts
-                                                .Where(account => account.Role == EnumRole.Admin.ToString())
+                                                .Where(account => account.Role == true) // Admin
                                                 .Where(account => account.Username == username)
                                                 .Where(account => account.Password == password)
                                                 .Select(account => new { account.Username, account.Password });
-                        var listAdminUsernameAccounts = bookStore.Accounts
-                                                .Where(account => account.Role == EnumRole.Admin.ToString())
-                                                .Where(account => account.Username == username)
-                                                .Where(account => account.Password == password)
-                                                .Select(account => account.Username);
-                        // =======================================================================================
-                        if (listAdminUsernameAccounts.ToList().Count > 0)
+                        if (listAdminAccounts.ToList().Count > 0)
                         {
-                            if ((listAdminAccounts.ToList()).Count > 0)
+                            Hide();
+                            if (cbSaveAcc.Checked)
                             {
-                                Hide();
-                                if (cbSaveAcc.Checked)
-                                {
-                                    Properties.Settings.Default.username = username;
-                                    Properties.Settings.Default.password = password;
-                                    Properties.Settings.Default.role = radioAdmin.Text;
-                                    Properties.Settings.Default.Save();
-                                }
-                                else
-                                    Properties.Settings.Default.Reset();
-                                MainMenuQTV mainMenuQTV = new MainMenuQTV();
-                                mainMenuQTV.ShowDialog();
-                                Close();
+                                Properties.Settings.Default.username = username;
+                                Properties.Settings.Default.password = password;
+                                Properties.Settings.Default.role = radioAdmin.Text;
+                                Properties.Settings.Default.Save();
                             }
                             else
-                                RJMessageBox.Show("Sai mật khẩu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                Properties.Settings.Default.Reset();
+                            MainMenuQTV mainMenuQTV = new MainMenuQTV(listAdminAccounts.ToList().FirstOrDefault().Username);
+                            mainMenuQTV.ShowDialog();
+                            Close();
                         }
                         else
-                            RJMessageBox.Show("Tài khoản không tồn tại trong hệ thống quản trị", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            RJMessageBox.Show("Đăng nhập thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
                 {
                     using (var bookStore = new BookStoreContext())
                     {
-                        // ===========================     LINQ TO ENTITIES cách 1     ===========================
-                        //var listEmployeeAccounts = from account in bookStore.Accounts
-                        //                           where (account.Role == EnumRole.Employee.ToString() && account.Username == username && account.Password == password)
-                        //                           select new
-                        //                           {
-                        //                               account.Username,
-                        //                               account.Password
-                        //                           };
-                        //var listEmployeeUsernameAccounts = from account in bookStore.Accounts
-                        //                                   where (account.Role == EnumRole.Employee.ToString() && account.Username == username)
-                        //                                   select new
-                        //                                   {
-                        //                                       account.Username,
-                        //                                   };
-                        // =======================================================================================
-                        // ===========================     LINQ TO ENTITIES cách 2     ===========================
                         var listEmployeeAccounts = bookStore.Accounts
-                                                .Where(account => account.Role == EnumRole.Employee.ToString())
+                                                .Where(account => account.Role == false) // Employee
                                                 .Where(account => account.Username == username)
                                                 .Where(account => account.Password == password)
                                                 .Select(account => new { account.Username, account.Password });
-                        var listEmployeeUsernameAccounts = bookStore.Accounts
-                                                .Where(account => account.Role == EnumRole.Employee.ToString())
-                                                .Where(account => account.Username == username)
-                                                .Where(account => account.Password == password)
-                                                .Select(account => account.Username);
-                        // =======================================================================================
-                        if (listEmployeeUsernameAccounts.ToList().Count > 0)
+                        if (listEmployeeAccounts.ToList().Count > 0)
                         {
-                            if ((listEmployeeAccounts.ToList()).Count > 0)
+                            Hide();
+                            if (cbSaveAcc.Checked)
                             {
-                                Hide();
-                                if (cbSaveAcc.Checked)
-                                {
-                                    Properties.Settings.Default.username = username;
-                                    Properties.Settings.Default.password = password;
-                                    Properties.Settings.Default.role = radioEmployee.Text;
-                                    Properties.Settings.Default.Save();
-                                }
-                                else
-                                    Properties.Settings.Default.Reset();
-                                MainMenuNV mainMenuNV = new MainMenuNV();
-                                mainMenuNV.ShowDialog();
-                                Close();
+                                Properties.Settings.Default.username = username;
+                                Properties.Settings.Default.password = password;
+                                Properties.Settings.Default.role = radioEmployee.Text;
+                                Properties.Settings.Default.Save();
                             }
                             else
-                                MessageBox.Show("Sai mật khẩu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                Properties.Settings.Default.Reset();
+                            MainMenuNV mainMenuNV = new MainMenuNV(listEmployeeAccounts.ToList().FirstOrDefault().Username);
+                            mainMenuNV.ShowDialog();
+                            Close();
                         }
                         else
-                            MessageBox.Show("Tài khoản không tồn tại trong hệ thống nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            RJMessageBox.Show("Đăng nhập thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }

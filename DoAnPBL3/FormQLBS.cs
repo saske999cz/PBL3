@@ -34,9 +34,7 @@ namespace DoAnPBL3
                     rjtbTKS.BorderColor = Color.FromArgb(23, 21, 35);
                     rjtbTKS.ForeColor = Color.Silver;
                     rjtbTKS.PlaceholderColor = Color.FromArgb(87, 83, 103);
-
                     break;
-
                 case "Dark":
                     btnTKS.Parent.BackColor = Color.FromArgb(32, 32, 32);
                     label2.ForeColor = Color.FromArgb(124, 141, 181);
@@ -55,7 +53,6 @@ namespace DoAnPBL3
                     rjtbTKS.ForeColor = Color.Silver;
                     rjtbTKS.PlaceholderColor = Color.FromArgb(87, 83, 103);
                     break;
-
                 case "Light":
                     btnTKS.Parent.BackColor = Color.FromArgb(220, 220, 220);
                     label2.ForeColor = Color.FromArgb(124, 141, 181);
@@ -73,7 +70,6 @@ namespace DoAnPBL3
                     rjtbTKS.BorderColor = Color.FromArgb(180, 180, 180);
                     rjtbTKS.ForeColor = Color.DimGray;
                     rjtbTKS.PlaceholderColor = Color.FromArgb(87, 83, 103);
-
                     break;
             }
         }
@@ -91,7 +87,6 @@ namespace DoAnPBL3
         private void btnTKS_MouseEnter(object sender, EventArgs e)
         {
             btnTKS.BackColor = RGBColors.color4;
-
         }
 
         private void btnSXS_MouseEnter(object sender, EventArgs e)

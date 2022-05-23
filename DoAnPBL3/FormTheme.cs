@@ -27,7 +27,6 @@ namespace DoAnPBL3
                     label1.ForeColor = Color.White;
                     cbTheme.ForeColor = Color.RoyalBlue;
                     break;
-
                 case "Dark":
                     cbTheme.Parent.BackColor = Color.FromArgb(24, 24, 24);
                     cbTheme.FillColor = Color.FromArgb(15, 27, 57);
@@ -35,28 +34,19 @@ namespace DoAnPBL3
                     label1.ForeColor = Color.White;
                     cbTheme.ForeColor = Color.Gainsboro;
                     break;
-
                 case "Light":
                     cbTheme.Parent.BackColor = Color.FromArgb(220, 220, 220);
                     cbTheme.FillColor = Color.FromArgb(44, 53, 70);
                     cbTheme.BorderColor = Color.FromArgb(44, 53, 70);
                     label1.ForeColor = Color.Black;
                     cbTheme.ForeColor = Color.White;
-
                     break;
-
             }
-
-
-
         }
 
         private void cbTheme_SelectedIndexChanged(object sender, EventArgs e)
         {
-
             btnSave.Show();
-        
-
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -66,32 +56,30 @@ namespace DoAnPBL3
             {
                 case "Admin":
                     cbTheme.Parent.BackColor = Color.FromArgb(34, 33, 74);
+                    panel1.Parent.BackColor = Color.FromArgb(24, 24, 24);
                     cbTheme.FillColor = Color.FromArgb(15, 27, 57);
                     cbTheme.BorderColor = Color.FromArgb(15, 27, 57);
                     label1.ForeColor = Color.White;
                     cbTheme.ForeColor = Color.RoyalBlue;
                     break;
-
                 case "Dark":
                     cbTheme.Parent.BackColor = Color.FromArgb(24, 24, 24);
+                    panel1.Parent.BackColor = Color.FromArgb(24, 24, 24);
                     cbTheme.FillColor = Color.FromArgb(15, 27, 57);
                     cbTheme.BorderColor = Color.FromArgb(15, 27, 57);
                     label1.ForeColor = Color.White;
                     cbTheme.ForeColor = Color.Gainsboro;
                     break;
-
                 case "Light":
                     cbTheme.Parent.BackColor = Color.FromArgb(220, 220, 220);
+                    panel1.Parent.BackColor = Color.FromArgb(220, 220, 220);
                     cbTheme.FillColor = Color.FromArgb(44, 53, 70);
                     cbTheme.BorderColor = Color.FromArgb(44, 53, 70);
                     label1.ForeColor = Color.Black;
-                    cbTheme.ForeColor = Color.White;
-                    
+                    cbTheme.ForeColor = Color.White; 
                     break;
-
             }
             btnSave.Hide();
-            
         }
     }
 }

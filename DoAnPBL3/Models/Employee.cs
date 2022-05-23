@@ -17,67 +17,73 @@ namespace DoAnPBL3.Models
             Orders = new HashSet<Order>();
         }
 
-        public Employee(string id, string name, string email, DateTime dateOfBirth, string gender, string phone, string ID_Card, string address, byte[] avatar, string username)
+        public Employee(string id_employee, string nameEmployee, string email, DateTime dateOfBirth, DateTime startDate,
+                string gender, string phone, string ID_Card, string address, byte[] avatar, string accountUsername)
         {
-            ID_Employee = id;
-            NameEmployee = name;
+            ID_Employee = id_employee;
+            FullNameEmployee = nameEmployee;
             Email = email;
             DateOfBirth = dateOfBirth;
+            StartDate = startDate;
             Gender = gender;
             Phone = phone;
             Id_Card = ID_Card;
             Address = address;
             Avatar = avatar;
-            UserName = username;
+            AccountUsername = accountUsername;
         }
 
         [Key]
         [Column("ID_NhanVien")]
         [StringLength(100)]
-        [Required(ErrorMessage = "Trường này không được để trống")]
+        [Required(ErrorMessage = "ID của nhân viên không được để trống")]
         public string ID_Employee { get; set; }
 
-        [Column("hoVaTen")]
+        [Column("HoVaTen")]
         [StringLength(255)]
-        [Required(ErrorMessage = "Trường này không được để trống")]
-        public string NameEmployee { get; set; }
+        [Required(ErrorMessage = "Họ và tên của nhân viên không được để trống")]
+        public string FullNameEmployee { get; set; }
 
-        [Column("email")]
-        [Required(ErrorMessage = "Trường này không được để trống")]
+        [Column("Email")]
+        [Required(ErrorMessage = "Email của nhân viên không được để trống")]
         public string Email { get; set; }
 
-        [Column("ngaySinh")]
-        [Required(ErrorMessage = "Trường này không được để trống")]
+        [Column("NgaySinh")]
+        [Required(ErrorMessage = "Ngày sinh của nhân viên không được để trống")]
         public DateTime DateOfBirth { get; set; }
 
-        [Column("gioiTinh")]
+        [Column("NgayBatDau")]
+        [Required(ErrorMessage = "Ngày bắt đầu làm việc của nhân viên không được để trống")]
+        public DateTime StartDate { get; set; }
+
+        [Column("GioiTinh")]
         [StringLength(20)]
-        [Required(ErrorMessage = "Trường này không được để trống")]
+        [Required(ErrorMessage = "Giới tính của nhân viên không được để trống")]
         public string Gender { get; set; }
 
         [Column("SDT")]
         [StringLength(20)]
-        [Required(ErrorMessage = "Trường này không được để trống")]
+        [Required(ErrorMessage = "Số điện thoại của nhân viên không được để trống")]
         public string Phone { get; set; }
 
         [Column("CMND")]
         [StringLength(50)]
-        [Required(ErrorMessage = "Trường này không được để trống")]
+        [Required(ErrorMessage = "CMND của nhân viên không được để trống")]
         public string Id_Card { get; set; }
 
-        [Column("diaChi")]
+        [Column("DiaChi")]
         [StringLength(255)]
-        [Required(ErrorMessage = "Trường này không được để trống")]
+        [Required(ErrorMessage = "Địa chỉ của nhân viên không được để trống")]
         public string Address { get; set; }
 
-        [Column("anh")]
+        [Column("Anh")]
         public byte[] Avatar { get; set; }
 
-        [Column("taiKhoanDangNhap")]
+        [Column("TaiKhoanDangNhap")]
         [StringLength(255)]
-        public string UserName { get; set; }
+        public string AccountUsername { get; set; }
 
-        [ForeignKey("UserName")]
+        [ForeignKey("AccountUsername")]
         public virtual Account Account { get; set; }
 
         public virtual ICollection<Order> Orders { get; set; }

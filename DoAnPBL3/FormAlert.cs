@@ -27,18 +27,19 @@ namespace DoAnPBL3
             Error,
             Info
         }
+
         private enmAction action;
         private int x, y;
+
         public Form_Alert()
         {
             InitializeComponent();
         }
 
-
         public void showAlert(string msg, enmType type)
         {
-            this.Opacity = 0.0;
-            this.StartPosition = FormStartPosition.Manual;
+            Opacity = 0.0;
+            StartPosition = FormStartPosition.Manual;
             string fname;
 
             for (int i = 1; i < 10; i++)
@@ -48,64 +49,60 @@ namespace DoAnPBL3
 
                 if (frm == null)
                 {
-                    this.Name = fname;
-                    this.x = Screen.PrimaryScreen.WorkingArea.Width - this.Width + 15;
-                    this.y = Screen.PrimaryScreen.WorkingArea.Height - this.Height * i - 5 * i;
-                    this.Location = new Point(this.x, this.y);
+                    Name = fname;
+                    x = Screen.PrimaryScreen.WorkingArea.Width - Width + 15;
+                    y = Screen.PrimaryScreen.WorkingArea.Height - Height * i - 5 * i;
+                    Location = new Point(x, y);
                     break;
 
                 }
             }
-            this.x = Screen.PrimaryScreen.WorkingArea.Width - base.Width - 5;
+            x = Screen.PrimaryScreen.WorkingArea.Width - Width - 5;
             string projectDirectory = Directory.GetParent(Environment.CurrentDirectory).Parent.FullName;
             switch (type)
             {
                 case enmType.Success:
-                    this.pictureBox1.Image = Image.FromFile(Path.Combine(projectDirectory, @"NotificationIcons\success.png"));
-                    this.BackColor = Color.SeaGreen;
+                    pictureBox1.Image = Image.FromFile(Path.Combine(projectDirectory, @"NotificationIcons\success.png"));
+                    BackColor = Color.SeaGreen;
                     break;
                 case enmType.Error:
-                    this.pictureBox1.Image = Image.FromFile(Path.Combine(projectDirectory, @"NotificationIcons\error.png"));
-                    this.BackColor = Color.DarkRed;
+                    pictureBox1.Image = Image.FromFile(Path.Combine(projectDirectory, @"NotificationIcons\error.png"));
+                    BackColor = Color.DarkRed;
                     break;
                 case enmType.Info:
-                    this.pictureBox1.Image = Image.FromFile(Path.Combine(projectDirectory, @"NotificationIcons\info.png"));
-                    this.BackColor = Color.RoyalBlue;
+                    pictureBox1.Image = Image.FromFile(Path.Combine(projectDirectory, @"NotificationIcons\info.png"));
+                    BackColor = Color.RoyalBlue;
                     break;
                 case enmType.Warning:
-                    this.pictureBox1.Image = Image.FromFile(Path.Combine(projectDirectory, @"NotificationIcons\warning.png"));
-                    this.BackColor = Color.DarkOrange;
+                    pictureBox1.Image = Image.FromFile(Path.Combine(projectDirectory, @"NotificationIcons\warning.png"));
+                    BackColor = Color.DarkOrange;
                     break;
             }
-
-
-            this.lblMsg.Text = msg;
-
-            this.Show();
-            this.action = enmAction.start;
-            this.timer1.Interval = 1;
-            this.timer1.Start();
+            lblMsg.Text = msg;
+            Show();
+            action = enmAction.start;
+            timer1.Interval = 1;
+            timer1.Start();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            switch (this.action)
+            switch (action)
             {
-
                 case enmAction.wait:
                     timer1.Interval = 5000;
                     action = enmAction.close;
                     break;
                 case enmAction.start:
-                    this.timer1.Interval = 1;
-                    this.Opacity += 0.1;
-                    if (this.x < this.Location.X)
+                    timer1.Interval = 1;
+                    Opacity += 0.1;
+                    if (x < Location.X)
                     {
-                        this.Left--;
+                        Left--;
                     }
                     else
                     {
-                        if (this.Opacity == 1.0)
+                        if (Opacity == 1.0)
                         {
                             action = Form_Alert.enmAction.wait;
                         }
@@ -113,12 +110,11 @@ namespace DoAnPBL3
                     break;
                 case enmAction.close:
                     timer1.Interval = 1;
-                    this.Opacity -= 0.1;
-
-                    this.Left -= 3;
-                    if (base.Opacity == 0.0)
+                    Opacity -= 0.1;
+                    Left -= 3;
+                    if (Opacity == 0.0)
                     {
-                        base.Close();
+                        Close();
                     }
                     break;
             }
@@ -126,7 +122,7 @@ namespace DoAnPBL3
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         public void Alert(string msg, Form_Alert.enmType type)
@@ -134,10 +130,5 @@ namespace DoAnPBL3
             Form_Alert frm = new Form_Alert();
             frm.showAlert(msg, type);
         }
-
-
-
     }
-
-
 }

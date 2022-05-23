@@ -11,13 +11,12 @@ namespace DoAnPBL3.Models
     [Table("Tai_Khoan")]
     public class Account
     {
-
         public Account()
         {
 
         }
 
-        public Account(string Username, string Password, string Email, string Role)
+        public Account(string Username, string Password, string Email, bool Role)
         {
             this.Username = Username;
             this.Password = Password;
@@ -28,22 +27,21 @@ namespace DoAnPBL3.Models
         [Key]
         [Column("TenDangNhap")]
         [StringLength(255)]
-        [Required]
+        [Required(ErrorMessage = "Tên đăng nhập không được để trống")]
         public string Username { get; set; }
 
-        [Column("matKhau")]
+        [Column("MatKhau")]
         [StringLength(255)]
-        [Required]
+        [Required(ErrorMessage = "Mật khẩu không được để trống")]
         public string Password { get; set; }
 
-        [Column("email")]
+        [Column("Email")]
         [StringLength(255)]
-        [Required]
+        [Required(ErrorMessage = "Email của tài khoản không được để trống")]
         public string Email { get; set; }
 
-        [Column("quyen")]
-        [StringLength(255)]
-        [Required]
-        public string Role { get; set; }
+        [Column("Quyen")]
+        [Required(ErrorMessage = "Quyền không được để trống")]
+        public bool Role { get; set; }
     }
 }

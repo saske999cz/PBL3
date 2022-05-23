@@ -11,33 +11,49 @@ namespace DoAnPBL3.Models
     [Table("Chi_Tiet_Hoa_Don")]
     public class OrderDetail
     {
+        public OrderDetail()
+        {
+
+        }
+
+        public OrderDetail(string id_order, string id_book, string nameBook, 
+            int unitPrice, int quantity, int totalAmount)
+        {
+            ID_Order = id_order;
+            ID_Book = id_book;
+            NameBook = nameBook;
+            UnitPrice = unitPrice;
+            Quantity = quantity;
+            TotalAmount = totalAmount;
+        }
+
         [Key]
         [Column("ID_HoaDon", Order = 0)]
         [StringLength(100)]
-        [Required]
+        [Required(ErrorMessage = "ID hóa đơn không được để trống")]
         public string ID_Order { get; set; }
 
         [Key]
         [Column("ID_Sach", Order = 1)]
         [StringLength(100)]
-        [Required]
+        [Required(ErrorMessage = "ID sách không được để trống")]
         public string ID_Book { get; set; }
 
-        [Column("Ten_Sach")]
+        [Column("TenSach")]
         [StringLength(100)]
-        [Required]
+        [Required(ErrorMessage = "Tên sách không được để trống")]
         public string NameBook { get; set; }
 
-        [Column("donGia")]
-        [Required]
+        [Column("DonGia")]
+        [Required(ErrorMessage = "Đơn giá của sách không được để trống")]
         public int UnitPrice { get; set; }
 
-        [Column("soLuong")]
-        [Required]
+        [Column("SoLuong")]
+        [Required(ErrorMessage = "Số lượng sách không được để trống")]
         public int Quantity { get; set; }
 
-        [Column("thanhTien")]
-        [Required]
+        [Column("ThanhTien")]
+        [Required(ErrorMessage = "Thành tiền của mặt hàng sách không được để trống")]
         public int TotalAmount { get; set; }
 
         [ForeignKey("ID_Book")]

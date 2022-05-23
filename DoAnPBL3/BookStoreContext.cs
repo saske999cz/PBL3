@@ -10,8 +10,8 @@ namespace DoAnPBL3
         public BookStoreContext()
             : base("name=BookStoreContext")
         {
-            this.Configuration.LazyLoadingEnabled = true;
-            Database.SetInitializer<BookStoreContext>(new CreateAdminAndEmployee());
+            Configuration.LazyLoadingEnabled = true;
+            Database.SetInitializer<BookStoreContext>(new InitialData());
         }
 
         public virtual DbSet<Author> Authors { get; set; }
@@ -19,6 +19,8 @@ namespace DoAnPBL3
         public virtual DbSet<Language> Languages { get; set; }
         public virtual DbSet<Publisher> Publishers { get; set; }
         public virtual DbSet<Book> Books { get; set; }
+        //public virtual DbSet<Book_Author> Book_Authors { get; set; }
+        //public virtual DbSet<Book_Genre> Book_Genres { get; set; }
         public virtual DbSet<Account> Accounts { get; set; }
         public virtual DbSet<Admin> Admins { get; set; }
         public virtual DbSet<Employee> Employees { get; set; }
@@ -41,26 +43,28 @@ namespace DoAnPBL3
                 .MapToStoredProcedures(s =>
                     s.Insert(i => i.HasName("Employee_Insert", "dbo")
                                    .Parameter(e => e.ID_Employee, "ID_NhanVien")
-                                   .Parameter(e => e.NameEmployee, "hoVaTen")
-                                   .Parameter(e => e.Email, "email")
-                                   .Parameter(e => e.DateOfBirth, "ngaySinh")
-                                   .Parameter(e => e.Gender, "gioiTinh")
+                                   .Parameter(e => e.FullNameEmployee, "HoVaTen")
+                                   .Parameter(e => e.Email, "Email")
+                                   .Parameter(e => e.DateOfBirth, "NgaySinh")
+                                   .Parameter(e => e.StartDate, "NgayBatDau")
+                                   .Parameter(e => e.Gender, "GioiTinh")
                                    .Parameter(e => e.Phone, "SDT")
                                    .Parameter(e => e.Id_Card, "CMND")
-                                   .Parameter(e => e.Address, "diaChi")
-                                   .Parameter(e => e.Avatar, "anh")
-                                   .Parameter(e => e.UserName, "taiKhoanDangNhap"))
+                                   .Parameter(e => e.Address, "DiaChi")
+                                   .Parameter(e => e.Avatar, "Anh")
+                                   .Parameter(e => e.AccountUsername, "TaiKhoanDangNhap"))
                      .Update(u => u.HasName("Employee_Update", "dbo")
                                    .Parameter(e => e.ID_Employee, "ID_NhanVien")
-                                   .Parameter(e => e.NameEmployee, "hoVaTen")
-                                   .Parameter(e => e.Email, "email")
-                                   .Parameter(e => e.DateOfBirth, "ngaySinh")
-                                   .Parameter(e => e.Gender, "gioiTinh")
+                                   .Parameter(e => e.FullNameEmployee, "HoVaTen")
+                                   .Parameter(e => e.Email, "Email")
+                                   .Parameter(e => e.DateOfBirth, "NgaySinh")
+                                   .Parameter(e => e.StartDate, "NgayBatDau")
+                                   .Parameter(e => e.Gender, "GioiTinh")
                                    .Parameter(e => e.Phone, "SDT")
                                    .Parameter(e => e.Id_Card, "CMND")
-                                   .Parameter(e => e.Address, "diaChi")
-                                   .Parameter(e => e.Avatar, "anh")
-                                   .Parameter(e => e.UserName, "taiKhoanDangNhap"))
+                                   .Parameter(e => e.Address, "DiaChi")
+                                   .Parameter(e => e.Avatar, "Anh")
+                                   .Parameter(e => e.AccountUsername, "TaiKhoanDangNhap"))
                      .Delete(d => d.HasName("Employee_Delete", "dbo")
                                    .Parameter(e => e.ID_Employee, "ID_NhanVien"))
                );

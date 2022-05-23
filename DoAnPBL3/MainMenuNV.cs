@@ -17,24 +17,20 @@ namespace DoAnPBL3
         private IconButton btnCurrent;
         private Panel btnLeftBorder;
         private Form currentChildForm;
+        private string accountUsername;
 
-        public MainMenuNV()
+        public MainMenuNV(string accountUsername)
         {
             InitializeComponent();
             btnLeftBorder = new Panel();
             btnLeftBorder.Size = new Size(7, 77);
             panelMenu.Controls.Add(btnLeftBorder);
-
-
-
-
+            this.accountUsername = accountUsername;
             //Form
-            this.Text = string.Empty;
-            this.ControlBox = false;
-            this.DoubleBuffered = true;
-            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
-
-            
+            Text = string.Empty;
+            ControlBox = false;
+            DoubleBuffered = true;
+            MaximizedBounds = Screen.FromHandle(Handle).WorkingArea;
         }
 
         //Structs
@@ -48,14 +44,11 @@ namespace DoAnPBL3
             public static Color color6 = Color.FromArgb(24, 161, 251);
         }
 
-
-
         // Methods
         private void ActivateButton(object senderBtn, Color color)
         {
             if (senderBtn != null)
             {
-
                 DisableButton();
                 // Button
                 btnCurrent = (IconButton)senderBtn;
@@ -88,11 +81,8 @@ namespace DoAnPBL3
                 btnCurrent.IconColor = Color.Gainsboro;
                 btnCurrent.TextImageRelation = TextImageRelation.ImageBeforeText;
                 btnCurrent.ImageAlign = ContentAlignment.MiddleLeft;
-
             }
         }
-
-
 
         private void OpenChildForm(Form childForm)
         {
@@ -101,7 +91,6 @@ namespace DoAnPBL3
                 // Open only form
                 currentChildForm.Close();
             }
-
             currentChildForm = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
@@ -111,7 +100,6 @@ namespace DoAnPBL3
             childForm.BringToFront();
             childForm.Show();
             lblTitleChildForm.Text = childForm.Text;
-
         }
 
         private void btnQLS_Click(object sender, EventArgs e)
@@ -126,8 +114,6 @@ namespace DoAnPBL3
             OpenChildForm(new FormQLBSNV());
         }
 
-
-
         private void btnQLKH_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color4);
@@ -135,7 +121,8 @@ namespace DoAnPBL3
         }
 
         private void btnHome_Click(object sender, EventArgs e)
-        {   if (currentChildForm != null)
+        {
+            if (currentChildForm != null)
             {
                 currentChildForm.Close();
                 Reset();
@@ -168,9 +155,7 @@ namespace DoAnPBL3
             if (WindowState == FormWindowState.Normal)
             {
                 WindowState = FormWindowState.Maximized;
-
             }
-
             else WindowState = FormWindowState.Normal;
         }
 
@@ -193,7 +178,6 @@ namespace DoAnPBL3
         private void btnMaximize_MouseEnter(object sender, EventArgs e)
         {
             btnMaximize.BackColor = RGBColors.color1;
-
         }
 
         private void btnMaximize_MouseLeave(object sender, EventArgs e)
@@ -204,7 +188,6 @@ namespace DoAnPBL3
         private void btnMinimize_MouseEnter(object sender, EventArgs e)
         {
             btnMinimize.BackColor = RGBColors.color6;
-
         }
 
         private void btnMinimize_MouseLeave(object sender, EventArgs e)
@@ -220,66 +203,30 @@ namespace DoAnPBL3
         private void MainMenuQTV_Load(object sender, EventArgs e)
         {
             timer1.Start();
-            lblTime.Text = DateTime.Now.ToLongTimeString();
             lblDate.Text = DateTime.Now.ToLongDateString();
             rjddmUserSettingMenu.IsMainMenu = true;
+            using (BookStoreContext context = new BookStoreContext())
+            {
+                var employee = context.Employees
+                                   .Where(em => em.AccountUsername == accountUsername)
+                                   .Select(em => new { em.FullNameEmployee, em.AccountUsername });
+                lblUserName.Text = employee.ToList().FirstOrDefault().FullNameEmployee;
+                lblEmployeeUsername.Text = employee.ToList().FirstOrDefault().AccountUsername;
+            }
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void EmployeePicture_Click(object sender, EventArgs e)
         {
-            lblTime.Text = DateTime.Now.ToLongTimeString();
-            timer1.Start();
-        }
-
-        private void btnAdmin_Click(object sender, EventArgs e)
-        {
-
-            rjddmUserSettingMenu.Show(btnAdmin, new Point(0, btnAdmin.Height));
-
-        }
-
-        private void btnAdmin_MouseEnter(object sender, EventArgs e)
-        {
-            btnAdmin.BackColor = RGBColors.color4;
-
-        }
-
-        private void btnAdmin_MouseLeave(object sender, EventArgs e)
-        {
-            btnAdmin.BackColor = Color.FromArgb(26, 25, 62);
-
-        }
-
-        private void AdminPicture_Click(object sender, EventArgs e)
-        {
-
-            btnAdmin_Click(sender, e);
-        }
-
-        private void AdminPicture_MouseEnter(object sender, EventArgs e)
-        {
-            btnAdmin.BackColor = RGBColors.color4;
-
-        }
-
-        private void AdminPicture_MouseLeave(object sender, EventArgs e)
-        {
-            btnAdmin.BackColor = Color.FromArgb(26, 25, 62);
-
+            rjddmUserSettingMenu.Show(EmployeePicture, new Point(0, EmployeePicture.Height));
         }
 
         private void rjddmUserSettingMenu_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
-            
-            
-            
-                if (đăngXuấtToolStripMenuItem.Selected == true)
-                {
-                    this.Hide();
-                    new FormLogin().ShowDialog();
-                    this.Close();
-
-                
+            if (đăngXuấtToolStripMenuItem.Selected == true)
+            {
+                Hide();
+                new FormLogin().ShowDialog();
+                Close();
             }
 
             if (chỉnhSửaTàiKhoảnToolStripMenuItem.Selected == true)
@@ -287,10 +234,7 @@ namespace DoAnPBL3
                 DisableButton();
                 btnLeftBorder.Visible = false;
                 OpenChildForm(new FormSettingAccountNV());
-
             }
         }
-
-        
     }
 }

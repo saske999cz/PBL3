@@ -39,8 +39,8 @@ namespace DoAnPBL3
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnHome = new System.Windows.Forms.PictureBox();
             this.panelTitleBar = new System.Windows.Forms.Panel();
+            this.lblAdminUsername = new System.Windows.Forms.Label();
             this.AdminPicture = new FontAwesome.Sharp.IconPictureBox();
-            this.btnAdmin = new System.Windows.Forms.Button();
             this.btnMinimize = new FontAwesome.Sharp.IconPictureBox();
             this.btnMaximize = new FontAwesome.Sharp.IconPictureBox();
             this.btnClose = new FontAwesome.Sharp.IconPictureBox();
@@ -222,8 +222,8 @@ namespace DoAnPBL3
             // panelTitleBar
             // 
             this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.panelTitleBar.Controls.Add(this.lblAdminUsername);
             this.panelTitleBar.Controls.Add(this.AdminPicture);
-            this.panelTitleBar.Controls.Add(this.btnAdmin);
             this.panelTitleBar.Controls.Add(this.btnMinimize);
             this.panelTitleBar.Controls.Add(this.btnMaximize);
             this.panelTitleBar.Controls.Add(this.btnClose);
@@ -235,6 +235,18 @@ namespace DoAnPBL3
             this.panelTitleBar.Size = new System.Drawing.Size(980, 74);
             this.panelTitleBar.TabIndex = 1;
             this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
+            // 
+            // lblAdminUsername
+            // 
+            this.lblAdminUsername.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblAdminUsername.AutoSize = true;
+            this.lblAdminUsername.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdminUsername.ForeColor = System.Drawing.Color.White;
+            this.lblAdminUsername.Location = new System.Drawing.Point(806, 33);
+            this.lblAdminUsername.Name = "lblAdminUsername";
+            this.lblAdminUsername.Size = new System.Drawing.Size(58, 19);
+            this.lblAdminUsername.TabIndex = 14;
+            this.lblAdminUsername.Text = "Admin";
             // 
             // AdminPicture
             // 
@@ -255,27 +267,6 @@ namespace DoAnPBL3
             this.AdminPicture.TabIndex = 13;
             this.AdminPicture.TabStop = false;
             this.AdminPicture.Click += new System.EventHandler(this.AdminPicture_Click);
-            // 
-            // btnAdmin
-            // 
-            this.btnAdmin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAdmin.AutoSize = true;
-            this.btnAdmin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnAdmin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdmin.FlatAppearance.BorderSize = 0;
-            this.btnAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdmin.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdmin.ForeColor = System.Drawing.Color.White;
-            this.btnAdmin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdmin.Location = new System.Drawing.Point(806, 22);
-            this.btnAdmin.Name = "btnAdmin";
-            this.btnAdmin.Size = new System.Drawing.Size(70, 42);
-            this.btnAdmin.TabIndex = 12;
-            this.btnAdmin.Text = "Admin";
-            this.btnAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAdmin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAdmin.UseVisualStyleBackColor = true;
-            this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click);
             // 
             // btnMinimize
             // 
@@ -400,7 +391,7 @@ namespace DoAnPBL3
             this.xuiClock1.Font = new System.Drawing.Font("Impact", 15F);
             this.xuiClock1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.xuiClock1.HexagonColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(70)))));
-            this.xuiClock1.Location = new System.Drawing.Point(847, 33);
+            this.xuiClock1.Location = new System.Drawing.Point(860, 33);
             this.xuiClock1.Name = "xuiClock1";
             this.xuiClock1.ShowAmPm = false;
             this.xuiClock1.ShowHexagon = true;
@@ -501,7 +492,7 @@ namespace DoAnPBL3
             this.lblDate.AutoSize = true;
             this.lblDate.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDate.ForeColor = System.Drawing.Color.White;
-            this.lblDate.Location = new System.Drawing.Point(823, 5);
+            this.lblDate.Location = new System.Drawing.Point(830, 5);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(37, 16);
             this.lblDate.TabIndex = 14;
@@ -712,12 +703,12 @@ namespace DoAnPBL3
         private FontAwesome.Sharp.IconPictureBox iconPictureBox3;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox4;
         private System.Windows.Forms.Label lblAdminName;
-        private System.Windows.Forms.Button btnAdmin;
         private FontAwesome.Sharp.IconPictureBox AdminPicture;
         private XanderUI.XUIClock xuiClock1;
         private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label lblAdminUsername;
     }
 }
 

@@ -21,18 +21,13 @@ namespace DoAnPBL3
             if(index > 9)
             {
                 Index.Location = new Point(3, 16);
-
             }
-            
         }
-
-        
 
         private void button1_Click(object sender, EventArgs e)
         {
             RJMessageBox.Show("You pressed the button");
         }
-
 
         private void tbIDBook_TextChanged(object sender, EventArgs e)
         {
@@ -40,28 +35,24 @@ namespace DoAnPBL3
             {
                 tbNameBook.Text = "abc";
                 tbPrice.Text = "40000";
-
             }
             else
             if (tbIDBook.Text == "2")
             {
                 tbNameBook.Text = "kkk";
                 tbPrice.Text = "50000";
-
             }
             else
             if (tbIDBook.Text == "3")
             {
                 tbNameBook.Text = "ooo";
                 tbPrice.Text = "60000";
-
             }
             else
             if(tbIDBook.Text == "4")
             {
                 tbNameBook.Text = "iii";
                 tbPrice.Text = "70000";
-
             }
             else
             {
@@ -88,14 +79,11 @@ namespace DoAnPBL3
 
                 RJMessageBox.Show("Chỉ được nhập số", "Lỗi ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 tbSL.Text = "";
-
             }
             else
-
             {
                 if (tbSL.Text != "")
                 {
-
                     if (tbPrice.Text == "")
                     {
                         RJMessageBox.Show("ID sách không hợp lệ", "Lỗi ", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -103,21 +91,16 @@ namespace DoAnPBL3
                     }
                     else
                         tbCP.Text = (Convert.ToInt64(tbSL.Text) * Convert.ToInt64(tbPrice.Text)).ToString();
-
                 }
-
                 else
                     tbCP.Text = "";
-                this.Parent.Refresh();
+                Parent.Refresh();
             }
-
-            this.Parent.Refresh();
-
+            Parent.Refresh();
         }
         private void guna2CircleButton1_Click(object sender, EventArgs e)
         {
-            this.Close();
-
+            Close();
         }
 
         public long GetCP()
@@ -158,7 +141,7 @@ namespace DoAnPBL3
 
         public int GetIndex()
         {
-            return this.index;
+            return index;
         }
 
         public void TextChanged()
@@ -170,7 +153,5 @@ namespace DoAnPBL3
         {
             Index.Text = index.ToString();
         }
-
-        
     }
 }

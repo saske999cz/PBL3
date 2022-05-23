@@ -22,20 +22,13 @@ namespace DoAnPBL3
                     lblNoteDate.Parent.BackColor = Color.FromArgb(34, 33, 74);
                     lblNoteDate.ForeColor = Color.White;
                     lblNoteTitle.ForeColor = Color.White;
-
-
                     break;
-
                 case "Dark":
-
-                    
                     lblNoteDate.Parent.BackColor = Color.FromArgb(32, 32, 32);
                     lblNoteDate.ForeColor = Color.White;
                     lblNoteTitle.ForeColor = Color.White;
                     break;
-
-                case "Light":
-                    
+                case "Light":    
                     lblNoteDate.Parent.BackColor = Color.FromArgb(220, 220, 220);
                     lblNoteDate.ForeColor = Color.Black;
                     lblNoteTitle.ForeColor = Color.Black;
@@ -45,7 +38,7 @@ namespace DoAnPBL3
 
         private void guna2CircleButton3_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         public void SetTitle(string Title)
@@ -65,7 +58,7 @@ namespace DoAnPBL3
 
         private void panelNote_Click(object sender, EventArgs e)
         {
-            new FormNoteInfo(lblNoteTitle.Text, this.content).Show();
+            new FormNoteInfo(lblNoteTitle.Text, content).Show();
         }
     }
 }

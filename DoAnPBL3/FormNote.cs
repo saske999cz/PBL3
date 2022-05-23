@@ -17,7 +17,6 @@ namespace DoAnPBL3
         {
             InitializeComponent();
             this.Text = "Ghi chú";
-            
         }
 
         public string GetTitle()
@@ -39,16 +38,14 @@ namespace DoAnPBL3
         private void rjbtnOK_Click(object sender, EventArgs e)
         {
             rjbtnOK.Parent.Parent.Text = "Changed";
-            this.Hide();
-            this.Alert("Đã thêm ghi chú mới", Form_Alert.enmType.Success);
+            Hide();
+            Alert("Đã thêm ghi chú mới", Form_Alert.enmType.Success);
            
         }
 
         private void rjbtnCancel_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            Hide();
         }
-
-       
     }
 }

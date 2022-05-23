@@ -46,10 +46,7 @@ namespace DoAnPBL3
                     btnThisMonth.ForeColor = Color.Gainsboro;
                     btnThisQuarter.ForeColor = Color.Gainsboro;
                     btnToday.ForeColor = Color.Gainsboro;
-                    
-
                     break;
-
                 case "Dark":
                     btnOK.Parent.BackColor = Color.FromArgb(32, 32, 32);
                     label10.ForeColor = Color.FromArgb(124, 141, 181);
@@ -73,10 +70,8 @@ namespace DoAnPBL3
                     btnLast7Days.ForeColor = Color.Gainsboro;
                     btnThisMonth.ForeColor = Color.Gainsboro;
                     btnThisQuarter.ForeColor = Color.Gainsboro;
-                    btnToday.ForeColor = Color.Gainsboro;
-                    
+                    btnToday.ForeColor = Color.Gainsboro;                   
                     break;
-
                 case "Light":
                     btnOK.Parent.BackColor = Color.FromArgb(220, 220, 220);
                     label10.ForeColor = Color.FromArgb(124, 141, 181);
@@ -112,7 +107,6 @@ namespace DoAnPBL3
                     title2.Font = new System.Drawing.Font("Arial", 10, FontStyle.Bold);
                     title2.ForeColor = Color.Black;
                     title2.Alignment = ContentAlignment.MiddleLeft;
-
                     break;
             }
             btnOK.Hide();
@@ -148,7 +142,7 @@ namespace DoAnPBL3
                         btnCurrent.TextImageRelation = TextImageRelation.Overlay;
                         btnCurrent.ImageAlign = ContentAlignment.MiddleLeft;
                         break;
-            }
+                }
                 if (btnCurrent == btnCustomDate)
                 {
                     btnOK.Hide();
@@ -160,7 +154,6 @@ namespace DoAnPBL3
         {
             if (senderBtn != null)
             {
-
                 DisableButton();
                 // Button
                 btnCurrent = (Button)senderBtn;
@@ -239,7 +232,5 @@ namespace DoAnPBL3
             DisableButton();
             ActivateButton(sender, Color.FromArgb(107, 83, 255));
         }
-
-       
     }
 }

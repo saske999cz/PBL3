@@ -11,54 +11,79 @@ namespace DoAnPBL3.Models
     [Table("Quan_Tri")]
     public class Admin
     {
+        public Admin()
+        {
+
+        }
+
+        public Admin(string id_admin, string nameAdmin, string email, DateTime dateOfBirth, DateTime startDate, 
+            string gender, string phone, string ID_Card, string address, byte[] avatar, string accountUsername)
+        {
+            ID_Admin = id_admin;
+            FullNameAdmin = nameAdmin;
+            Email = email;
+            DateOfBirth = dateOfBirth;
+            StartDate = startDate;
+            Gender = gender;
+            Phone = phone;
+            this.ID_Card = ID_Card;
+            Address = address;
+            Avatar = avatar;
+            AccountUsername = accountUsername;
+        }
+
         [Key]
         [Column("ID_QuanTri")]
         [StringLength(100)]
-        [Required]
+        [Required(ErrorMessage = "ID của quản trị không được để trống")]
         public string ID_Admin { get; set; }
 
-        [Column("hoVaTen")]
+        [Column("HoVaTen")]
         [StringLength(255)]
-        [Required]
-        public string NameAdmin { get; set; }
+        [Required(ErrorMessage = "Họ và tên của quản trị không được để trống")]
+        public string FullNameAdmin { get; set; }
 
-        [Column("email")]
+        [Column("Email")]
         [StringLength(255)]
-        [Required]
+        [Required(ErrorMessage = "Email của quản trị không được để trống")]
         public string Email { get; set; }
 
-        [Column("ngaySinh")]
-        [Required]
+        [Column("NgaySinh")]
+        [Required(ErrorMessage = "Ngày sinh của quản trị không được để trống")]
         public DateTime DateOfBirth { get; set; }
 
-        [Column("gioiTinh")]
+        [Column("NgayBatDauLamViec")]
+        [Required(ErrorMessage = "Ngày bắt đầu làm việc của quản trị không được để trống")]
+        public DateTime StartDate { get; set; }
+
+        [Column("GioiTinh")]
         [StringLength(20)]
-        [Required]
+        [Required(ErrorMessage = "Giới tính của quản trị không được để trống")]
         public string Gender { get; set; }
 
         [Column("SDT")]
         [StringLength(20)]
-        [Required]
+        [Required(ErrorMessage = "Số điện thoại của quản trị không được để trống")]
         public string Phone { get; set; }
 
         [Column("CMND")]
         [StringLength(50)]
-        [Required]
+        [Required(ErrorMessage = "CMND của quản trị không được để trống")]
         public string ID_Card { get; set; }
 
-        [Column("diaChi")]
+        [Column("DiaChi")]
         [StringLength(255)]
-        [Required]
+        [Required(ErrorMessage = "Địa chỉ của quản trị không được để trống")]
         public string Address { get; set; }
 
-        [Column("anh")]
+        [Column("Anh")]
         public byte[] Avatar { get; set; }
 
-        [Column("taiKhoanDangNhap")]
+        [Column("TaiKhoanDangNhap")]
         [StringLength(255)]
-        public string UserName { get; set; }
+        public string AccountUsername { get; set; }
 
-        [ForeignKey("UserName")]
+        [ForeignKey("AccountUsername")]
         public virtual Account Account { get; set; }
     }
 }

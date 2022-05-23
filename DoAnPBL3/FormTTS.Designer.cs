@@ -31,284 +31,458 @@ namespace DoAnPBL3
         {
             this.components = new System.ComponentModel.Container();
             this.panelContainer = new System.Windows.Forms.Panel();
-            this.tbEmailNV = new Guna.UI2.WinForms.Guna2TextBox();
-            this.tbSDTNV = new Guna.UI2.WinForms.Guna2TextBox();
-            this.tbAddressNV = new Guna.UI2.WinForms.Guna2TextBox();
-            this.tbCMNDNV = new Guna.UI2.WinForms.Guna2TextBox();
-            this.tbBD = new Guna.UI2.WinForms.Guna2TextBox();
-            this.tbNameNV = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lbl = new System.Windows.Forms.Label();
-            this.lblNXB = new System.Windows.Forms.Label();
-            this.lblAddress = new System.Windows.Forms.Label();
-            this.lblGender = new System.Windows.Forms.Label();
-            this.lblBD = new System.Windows.Forms.Label();
-            this.lblNameNV = new System.Windows.Forms.Label();
+            this.tbNameBook = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblNameBook = new System.Windows.Forms.Label();
+            this.tbUnit = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblUnit = new System.Windows.Forms.Label();
+            this.tbQuantity = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblQuantity = new System.Windows.Forms.Label();
+            this.tbLanguage = new Guna.UI2.WinForms.Guna2TextBox();
+            this.gpbBookImg = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.rjbtnOK = new DoAnPBL3.RJButton();
+            this.tbPrice = new Guna.UI2.WinForms.Guna2TextBox();
+            this.tbGenre = new Guna.UI2.WinForms.Guna2TextBox();
+            this.tbPublisher = new Guna.UI2.WinForms.Guna2TextBox();
+            this.tbAuthor = new Guna.UI2.WinForms.Guna2TextBox();
+            this.tbPublishDate = new Guna.UI2.WinForms.Guna2TextBox();
+            this.tbIDBook = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lbPrice = new System.Windows.Forms.Label();
+            this.lbGenre = new System.Windows.Forms.Label();
+            this.lbPublisher = new System.Windows.Forms.Label();
+            this.lbAuthor = new System.Windows.Forms.Label();
+            this.lbLanguage = new System.Windows.Forms.Label();
+            this.lbPublishDate = new System.Windows.Forms.Label();
+            this.lbIDBook = new System.Windows.Forms.Label();
             this.panelTitleBar = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.gpbBookImg = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2DragControl2 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.rjbtnCancel = new DoAnPBL3.RJButton();
-            this.cbLanguage = new DoAnPBL3.RJComboBox();
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.panelContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gpbBookImg)).BeginInit();
             this.panelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gpbBookImg)).BeginInit();
             this.SuspendLayout();
             // 
             // panelContainer
             // 
             this.panelContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(53)))), ((int)(((byte)(70)))));
+            this.panelContainer.Controls.Add(this.tbNameBook);
+            this.panelContainer.Controls.Add(this.lblNameBook);
+            this.panelContainer.Controls.Add(this.tbUnit);
+            this.panelContainer.Controls.Add(this.lblUnit);
+            this.panelContainer.Controls.Add(this.tbQuantity);
+            this.panelContainer.Controls.Add(this.lblQuantity);
+            this.panelContainer.Controls.Add(this.tbLanguage);
             this.panelContainer.Controls.Add(this.gpbBookImg);
-            this.panelContainer.Controls.Add(this.rjbtnCancel);
-            this.panelContainer.Controls.Add(this.tbEmailNV);
-            this.panelContainer.Controls.Add(this.tbSDTNV);
-            this.panelContainer.Controls.Add(this.tbAddressNV);
-            this.panelContainer.Controls.Add(this.tbCMNDNV);
-            this.panelContainer.Controls.Add(this.tbBD);
-            this.panelContainer.Controls.Add(this.tbNameNV);
-            this.panelContainer.Controls.Add(this.cbLanguage);
-            this.panelContainer.Controls.Add(this.label1);
-            this.panelContainer.Controls.Add(this.lbl);
-            this.panelContainer.Controls.Add(this.lblNXB);
-            this.panelContainer.Controls.Add(this.lblAddress);
-            this.panelContainer.Controls.Add(this.lblGender);
-            this.panelContainer.Controls.Add(this.lblBD);
-            this.panelContainer.Controls.Add(this.lblNameNV);
+            this.panelContainer.Controls.Add(this.rjbtnOK);
+            this.panelContainer.Controls.Add(this.tbPrice);
+            this.panelContainer.Controls.Add(this.tbGenre);
+            this.panelContainer.Controls.Add(this.tbPublisher);
+            this.panelContainer.Controls.Add(this.tbAuthor);
+            this.panelContainer.Controls.Add(this.tbPublishDate);
+            this.panelContainer.Controls.Add(this.tbIDBook);
+            this.panelContainer.Controls.Add(this.lbPrice);
+            this.panelContainer.Controls.Add(this.lbGenre);
+            this.panelContainer.Controls.Add(this.lbPublisher);
+            this.panelContainer.Controls.Add(this.lbAuthor);
+            this.panelContainer.Controls.Add(this.lbLanguage);
+            this.panelContainer.Controls.Add(this.lbPublishDate);
+            this.panelContainer.Controls.Add(this.lbIDBook);
             this.panelContainer.Controls.Add(this.panelTitleBar);
             this.panelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContainer.Location = new System.Drawing.Point(0, 0);
             this.panelContainer.Margin = new System.Windows.Forms.Padding(2);
             this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(812, 686);
+            this.panelContainer.Size = new System.Drawing.Size(812, 757);
             this.panelContainer.TabIndex = 3;
             // 
-            // tbEmailNV
+            // tbNameBook
             // 
-            this.tbEmailNV.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
-            this.tbEmailNV.BorderRadius = 6;
-            this.tbEmailNV.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbEmailNV.DefaultText = "";
-            this.tbEmailNV.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
-            this.tbEmailNV.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
-            this.tbEmailNV.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.tbEmailNV.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.tbEmailNV.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
-            this.tbEmailNV.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbEmailNV.Font = new System.Drawing.Font("Arial", 11.25F);
-            this.tbEmailNV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.tbEmailNV.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbEmailNV.Location = new System.Drawing.Point(398, 471);
-            this.tbEmailNV.Name = "tbEmailNV";
-            this.tbEmailNV.PasswordChar = '\0';
-            this.tbEmailNV.PlaceholderText = "Giá";
-            this.tbEmailNV.SelectedText = "";
-            this.tbEmailNV.Size = new System.Drawing.Size(390, 30);
-            this.tbEmailNV.TabIndex = 42;
+            this.tbNameBook.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
+            this.tbNameBook.BorderRadius = 6;
+            this.tbNameBook.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbNameBook.DefaultText = "";
+            this.tbNameBook.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.tbNameBook.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.tbNameBook.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.tbNameBook.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.tbNameBook.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
+            this.tbNameBook.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbNameBook.Font = new System.Drawing.Font("Arial", 11.25F);
+            this.tbNameBook.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.tbNameBook.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbNameBook.Location = new System.Drawing.Point(398, 140);
+            this.tbNameBook.Name = "tbNameBook";
+            this.tbNameBook.PasswordChar = '\0';
+            this.tbNameBook.PlaceholderText = "Tên sách";
+            this.tbNameBook.SelectedText = "";
+            this.tbNameBook.Size = new System.Drawing.Size(390, 30);
+            this.tbNameBook.TabIndex = 52;
             // 
-            // tbSDTNV
+            // lblNameBook
             // 
-            this.tbSDTNV.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
-            this.tbSDTNV.BorderRadius = 6;
-            this.tbSDTNV.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbSDTNV.DefaultText = "";
-            this.tbSDTNV.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
-            this.tbSDTNV.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
-            this.tbSDTNV.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.tbSDTNV.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.tbSDTNV.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
-            this.tbSDTNV.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbSDTNV.Font = new System.Drawing.Font("Arial", 11.25F);
-            this.tbSDTNV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.tbSDTNV.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbSDTNV.Location = new System.Drawing.Point(398, 405);
-            this.tbSDTNV.Name = "tbSDTNV";
-            this.tbSDTNV.PasswordChar = '\0';
-            this.tbSDTNV.PlaceholderText = "Thể loại";
-            this.tbSDTNV.SelectedText = "";
-            this.tbSDTNV.Size = new System.Drawing.Size(390, 30);
-            this.tbSDTNV.TabIndex = 41;
+            this.lblNameBook.AutoSize = true;
+            this.lblNameBook.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNameBook.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblNameBook.Location = new System.Drawing.Point(286, 144);
+            this.lblNameBook.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNameBook.Name = "lblNameBook";
+            this.lblNameBook.Size = new System.Drawing.Size(73, 18);
+            this.lblNameBook.TabIndex = 51;
+            this.lblNameBook.Text = "Tên sách";
             // 
-            // tbAddressNV
+            // tbUnit
             // 
-            this.tbAddressNV.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
-            this.tbAddressNV.BorderRadius = 6;
-            this.tbAddressNV.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbAddressNV.DefaultText = "";
-            this.tbAddressNV.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
-            this.tbAddressNV.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
-            this.tbAddressNV.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.tbAddressNV.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.tbAddressNV.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
-            this.tbAddressNV.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbAddressNV.Font = new System.Drawing.Font("Arial", 11.25F);
-            this.tbAddressNV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.tbAddressNV.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbAddressNV.Location = new System.Drawing.Point(398, 339);
-            this.tbAddressNV.Name = "tbAddressNV";
-            this.tbAddressNV.PasswordChar = '\0';
-            this.tbAddressNV.PlaceholderText = "Nhà xuất bản";
-            this.tbAddressNV.SelectedText = "";
-            this.tbAddressNV.Size = new System.Drawing.Size(390, 30);
-            this.tbAddressNV.TabIndex = 40;
+            this.tbUnit.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
+            this.tbUnit.BorderRadius = 6;
+            this.tbUnit.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbUnit.DefaultText = "";
+            this.tbUnit.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.tbUnit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.tbUnit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.tbUnit.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.tbUnit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
+            this.tbUnit.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbUnit.Font = new System.Drawing.Font("Arial", 11.25F);
+            this.tbUnit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.tbUnit.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbUnit.Location = new System.Drawing.Point(659, 597);
+            this.tbUnit.Name = "tbUnit";
+            this.tbUnit.PasswordChar = '\0';
+            this.tbUnit.PlaceholderText = "Số lượng";
+            this.tbUnit.SelectedText = "";
+            this.tbUnit.Size = new System.Drawing.Size(129, 30);
+            this.tbUnit.TabIndex = 50;
             // 
-            // tbCMNDNV
+            // lblUnit
             // 
-            this.tbCMNDNV.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
-            this.tbCMNDNV.BorderRadius = 6;
-            this.tbCMNDNV.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbCMNDNV.DefaultText = "";
-            this.tbCMNDNV.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
-            this.tbCMNDNV.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
-            this.tbCMNDNV.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.tbCMNDNV.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.tbCMNDNV.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
-            this.tbCMNDNV.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbCMNDNV.Font = new System.Drawing.Font("Arial", 11.25F);
-            this.tbCMNDNV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.tbCMNDNV.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbCMNDNV.Location = new System.Drawing.Point(398, 271);
-            this.tbCMNDNV.Name = "tbCMNDNV";
-            this.tbCMNDNV.PasswordChar = '\0';
-            this.tbCMNDNV.PlaceholderText = "Tên tác giả";
-            this.tbCMNDNV.SelectedText = "";
-            this.tbCMNDNV.Size = new System.Drawing.Size(390, 30);
-            this.tbCMNDNV.TabIndex = 39;
+            this.lblUnit.AutoSize = true;
+            this.lblUnit.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUnit.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblUnit.Location = new System.Drawing.Point(578, 603);
+            this.lblUnit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblUnit.Name = "lblUnit";
+            this.lblUnit.Size = new System.Drawing.Size(56, 18);
+            this.lblUnit.TabIndex = 49;
+            this.lblUnit.Text = "Đơn vị";
             // 
-            // tbBD
+            // tbQuantity
             // 
-            this.tbBD.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
-            this.tbBD.BorderRadius = 6;
-            this.tbBD.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbBD.DefaultText = "";
-            this.tbBD.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
-            this.tbBD.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
-            this.tbBD.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.tbBD.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.tbBD.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
-            this.tbBD.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbBD.Font = new System.Drawing.Font("Arial", 11.25F);
-            this.tbBD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.tbBD.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbBD.Location = new System.Drawing.Point(398, 143);
-            this.tbBD.Name = "tbBD";
-            this.tbBD.PasswordChar = '\0';
-            this.tbBD.PlaceholderText = "Ngày xuất bản";
-            this.tbBD.SelectedText = "";
-            this.tbBD.Size = new System.Drawing.Size(390, 30);
-            this.tbBD.TabIndex = 38;
+            this.tbQuantity.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
+            this.tbQuantity.BorderRadius = 6;
+            this.tbQuantity.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbQuantity.DefaultText = "";
+            this.tbQuantity.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.tbQuantity.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.tbQuantity.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.tbQuantity.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.tbQuantity.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
+            this.tbQuantity.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbQuantity.Font = new System.Drawing.Font("Arial", 11.25F);
+            this.tbQuantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.tbQuantity.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbQuantity.Location = new System.Drawing.Point(398, 597);
+            this.tbQuantity.Name = "tbQuantity";
+            this.tbQuantity.PasswordChar = '\0';
+            this.tbQuantity.PlaceholderText = "Số lượng";
+            this.tbQuantity.SelectedText = "";
+            this.tbQuantity.Size = new System.Drawing.Size(138, 30);
+            this.tbQuantity.TabIndex = 48;
             // 
-            // tbNameNV
+            // lblQuantity
             // 
-            this.tbNameNV.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
-            this.tbNameNV.BorderRadius = 6;
-            this.tbNameNV.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbNameNV.DefaultText = "";
-            this.tbNameNV.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
-            this.tbNameNV.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
-            this.tbNameNV.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.tbNameNV.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.tbNameNV.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
-            this.tbNameNV.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbNameNV.Font = new System.Drawing.Font("Arial", 11.25F);
-            this.tbNameNV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.tbNameNV.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbNameNV.Location = new System.Drawing.Point(398, 81);
-            this.tbNameNV.Name = "tbNameNV";
-            this.tbNameNV.PasswordChar = '\0';
-            this.tbNameNV.PlaceholderText = "Tên sách";
-            this.tbNameNV.SelectedText = "";
-            this.tbNameNV.Size = new System.Drawing.Size(390, 30);
-            this.tbNameNV.TabIndex = 37;
+            this.lblQuantity.AutoSize = true;
+            this.lblQuantity.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuantity.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblQuantity.Location = new System.Drawing.Point(286, 603);
+            this.lblQuantity.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblQuantity.Name = "lblQuantity";
+            this.lblQuantity.Size = new System.Drawing.Size(75, 18);
+            this.lblQuantity.TabIndex = 47;
+            this.lblQuantity.Text = "Số lượng";
             // 
-            // label1
+            // tbLanguage
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Location = new System.Drawing.Point(286, 477);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(32, 18);
-            this.label1.TabIndex = 21;
-            this.label1.Text = "Giá";
+            this.tbLanguage.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
+            this.tbLanguage.BorderRadius = 6;
+            this.tbLanguage.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbLanguage.DefaultText = "";
+            this.tbLanguage.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.tbLanguage.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.tbLanguage.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.tbLanguage.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.tbLanguage.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
+            this.tbLanguage.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbLanguage.Font = new System.Drawing.Font("Arial", 11.25F);
+            this.tbLanguage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.tbLanguage.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbLanguage.Location = new System.Drawing.Point(398, 266);
+            this.tbLanguage.Name = "tbLanguage";
+            this.tbLanguage.PasswordChar = '\0';
+            this.tbLanguage.PlaceholderText = "Ngôn ngữ";
+            this.tbLanguage.SelectedText = "";
+            this.tbLanguage.Size = new System.Drawing.Size(390, 30);
+            this.tbLanguage.TabIndex = 46;
             // 
-            // lbl
+            // gpbBookImg
             // 
-            this.lbl.AutoSize = true;
-            this.lbl.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lbl.Location = new System.Drawing.Point(286, 410);
-            this.lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl.Name = "lbl";
-            this.lbl.Size = new System.Drawing.Size(65, 18);
-            this.lbl.TabIndex = 12;
-            this.lbl.Text = "Thể loại";
+            this.gpbBookImg.BackColor = System.Drawing.Color.Transparent;
+            this.gpbBookImg.ErrorImage = null;
+            this.gpbBookImg.ImageRotate = 0F;
+            this.gpbBookImg.Location = new System.Drawing.Point(10, 82);
+            this.gpbBookImg.Name = "gpbBookImg";
+            this.gpbBookImg.Size = new System.Drawing.Size(242, 233);
+            this.gpbBookImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.gpbBookImg.TabIndex = 45;
+            this.gpbBookImg.TabStop = false;
             // 
-            // lblNXB
+            // rjbtnOK
             // 
-            this.lblNXB.AutoSize = true;
-            this.lblNXB.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNXB.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblNXB.Location = new System.Drawing.Point(286, 343);
-            this.lblNXB.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblNXB.Name = "lblNXB";
-            this.lblNXB.Size = new System.Drawing.Size(100, 18);
-            this.lblNXB.TabIndex = 11;
-            this.lblNXB.Text = "Nhà xuất bản";
+            this.rjbtnOK.BackColor = System.Drawing.Color.SeaGreen;
+            this.rjbtnOK.BackgroundColor = System.Drawing.Color.SeaGreen;
+            this.rjbtnOK.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjbtnOK.BorderRadius = 15;
+            this.rjbtnOK.BorderSize = 0;
+            this.rjbtnOK.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rjbtnOK.FlatAppearance.BorderSize = 0;
+            this.rjbtnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjbtnOK.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjbtnOK.ForeColor = System.Drawing.Color.White;
+            this.rjbtnOK.Location = new System.Drawing.Point(343, 668);
+            this.rjbtnOK.Margin = new System.Windows.Forms.Padding(2);
+            this.rjbtnOK.Name = "rjbtnOK";
+            this.rjbtnOK.Size = new System.Drawing.Size(145, 36);
+            this.rjbtnOK.TabIndex = 44;
+            this.rjbtnOK.Text = "OK";
+            this.rjbtnOK.TextColor = System.Drawing.Color.White;
+            this.rjbtnOK.UseVisualStyleBackColor = false;
+            this.rjbtnOK.Click += new System.EventHandler(this.rjbtnCancel_Click);
             // 
-            // lblAddress
+            // tbPrice
             // 
-            this.lblAddress.AutoSize = true;
-            this.lblAddress.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddress.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblAddress.Location = new System.Drawing.Point(286, 275);
-            this.lblAddress.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(59, 18);
-            this.lblAddress.TabIndex = 10;
-            this.lblAddress.Text = "Tác giả";
+            this.tbPrice.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
+            this.tbPrice.BorderRadius = 6;
+            this.tbPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbPrice.DefaultText = "";
+            this.tbPrice.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.tbPrice.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.tbPrice.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.tbPrice.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.tbPrice.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
+            this.tbPrice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbPrice.Font = new System.Drawing.Font("Arial", 11.25F);
+            this.tbPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.tbPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbPrice.Location = new System.Drawing.Point(398, 532);
+            this.tbPrice.Name = "tbPrice";
+            this.tbPrice.PasswordChar = '\0';
+            this.tbPrice.PlaceholderText = "Giá";
+            this.tbPrice.SelectedText = "";
+            this.tbPrice.Size = new System.Drawing.Size(390, 30);
+            this.tbPrice.TabIndex = 42;
             // 
-            // lblGender
+            // tbGenre
             // 
-            this.lblGender.AutoSize = true;
-            this.lblGender.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGender.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblGender.Location = new System.Drawing.Point(286, 210);
-            this.lblGender.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblGender.Name = "lblGender";
-            this.lblGender.Size = new System.Drawing.Size(79, 18);
-            this.lblGender.TabIndex = 9;
-            this.lblGender.Text = "Ngôn ngữ";
+            this.tbGenre.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
+            this.tbGenre.BorderRadius = 6;
+            this.tbGenre.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbGenre.DefaultText = "";
+            this.tbGenre.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.tbGenre.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.tbGenre.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.tbGenre.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.tbGenre.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
+            this.tbGenre.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbGenre.Font = new System.Drawing.Font("Arial", 11.25F);
+            this.tbGenre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.tbGenre.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbGenre.Location = new System.Drawing.Point(398, 466);
+            this.tbGenre.Name = "tbGenre";
+            this.tbGenre.PasswordChar = '\0';
+            this.tbGenre.PlaceholderText = "Thể loại";
+            this.tbGenre.SelectedText = "";
+            this.tbGenre.Size = new System.Drawing.Size(390, 30);
+            this.tbGenre.TabIndex = 41;
             // 
-            // lblBD
+            // tbPublisher
             // 
-            this.lblBD.AutoSize = true;
-            this.lblBD.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBD.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblBD.Location = new System.Drawing.Point(286, 147);
-            this.lblBD.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblBD.Name = "lblBD";
-            this.lblBD.Size = new System.Drawing.Size(107, 18);
-            this.lblBD.TabIndex = 8;
-            this.lblBD.Text = "Ngày xuất bản";
+            this.tbPublisher.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
+            this.tbPublisher.BorderRadius = 6;
+            this.tbPublisher.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbPublisher.DefaultText = "";
+            this.tbPublisher.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.tbPublisher.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.tbPublisher.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.tbPublisher.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.tbPublisher.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
+            this.tbPublisher.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbPublisher.Font = new System.Drawing.Font("Arial", 11.25F);
+            this.tbPublisher.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.tbPublisher.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbPublisher.Location = new System.Drawing.Point(398, 400);
+            this.tbPublisher.Name = "tbPublisher";
+            this.tbPublisher.PasswordChar = '\0';
+            this.tbPublisher.PlaceholderText = "Nhà xuất bản";
+            this.tbPublisher.SelectedText = "";
+            this.tbPublisher.Size = new System.Drawing.Size(390, 30);
+            this.tbPublisher.TabIndex = 40;
             // 
-            // lblNameNV
+            // tbAuthor
             // 
-            this.lblNameNV.AutoSize = true;
-            this.lblNameNV.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNameNV.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblNameNV.Location = new System.Drawing.Point(286, 85);
-            this.lblNameNV.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblNameNV.Name = "lblNameNV";
-            this.lblNameNV.Size = new System.Drawing.Size(73, 18);
-            this.lblNameNV.TabIndex = 7;
-            this.lblNameNV.Text = "Tên sách";
+            this.tbAuthor.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
+            this.tbAuthor.BorderRadius = 6;
+            this.tbAuthor.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbAuthor.DefaultText = "";
+            this.tbAuthor.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.tbAuthor.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.tbAuthor.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.tbAuthor.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.tbAuthor.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
+            this.tbAuthor.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbAuthor.Font = new System.Drawing.Font("Arial", 11.25F);
+            this.tbAuthor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.tbAuthor.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbAuthor.Location = new System.Drawing.Point(398, 332);
+            this.tbAuthor.Name = "tbAuthor";
+            this.tbAuthor.PasswordChar = '\0';
+            this.tbAuthor.PlaceholderText = "Tên tác giả";
+            this.tbAuthor.SelectedText = "";
+            this.tbAuthor.Size = new System.Drawing.Size(390, 30);
+            this.tbAuthor.TabIndex = 39;
+            // 
+            // tbPublishDate
+            // 
+            this.tbPublishDate.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
+            this.tbPublishDate.BorderRadius = 6;
+            this.tbPublishDate.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbPublishDate.DefaultText = "";
+            this.tbPublishDate.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.tbPublishDate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.tbPublishDate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.tbPublishDate.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.tbPublishDate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
+            this.tbPublishDate.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbPublishDate.Font = new System.Drawing.Font("Arial", 11.25F);
+            this.tbPublishDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.tbPublishDate.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbPublishDate.Location = new System.Drawing.Point(398, 204);
+            this.tbPublishDate.Name = "tbPublishDate";
+            this.tbPublishDate.PasswordChar = '\0';
+            this.tbPublishDate.PlaceholderText = "Ngày xuất bản";
+            this.tbPublishDate.SelectedText = "";
+            this.tbPublishDate.Size = new System.Drawing.Size(390, 30);
+            this.tbPublishDate.TabIndex = 38;
+            // 
+            // tbIDBook
+            // 
+            this.tbIDBook.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
+            this.tbIDBook.BorderRadius = 6;
+            this.tbIDBook.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbIDBook.DefaultText = "";
+            this.tbIDBook.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.tbIDBook.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.tbIDBook.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.tbIDBook.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.tbIDBook.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
+            this.tbIDBook.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbIDBook.Font = new System.Drawing.Font("Arial", 11.25F);
+            this.tbIDBook.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.tbIDBook.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbIDBook.Location = new System.Drawing.Point(398, 81);
+            this.tbIDBook.Name = "tbIDBook";
+            this.tbIDBook.PasswordChar = '\0';
+            this.tbIDBook.PlaceholderText = "Mã sách";
+            this.tbIDBook.SelectedText = "";
+            this.tbIDBook.Size = new System.Drawing.Size(390, 30);
+            this.tbIDBook.TabIndex = 37;
+            // 
+            // lbPrice
+            // 
+            this.lbPrice.AutoSize = true;
+            this.lbPrice.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPrice.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lbPrice.Location = new System.Drawing.Point(286, 538);
+            this.lbPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbPrice.Name = "lbPrice";
+            this.lbPrice.Size = new System.Drawing.Size(32, 18);
+            this.lbPrice.TabIndex = 21;
+            this.lbPrice.Text = "Giá";
+            // 
+            // lbGenre
+            // 
+            this.lbGenre.AutoSize = true;
+            this.lbGenre.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbGenre.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lbGenre.Location = new System.Drawing.Point(286, 471);
+            this.lbGenre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbGenre.Name = "lbGenre";
+            this.lbGenre.Size = new System.Drawing.Size(65, 18);
+            this.lbGenre.TabIndex = 12;
+            this.lbGenre.Text = "Thể loại";
+            // 
+            // lbPublisher
+            // 
+            this.lbPublisher.AutoSize = true;
+            this.lbPublisher.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPublisher.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lbPublisher.Location = new System.Drawing.Point(286, 404);
+            this.lbPublisher.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbPublisher.Name = "lbPublisher";
+            this.lbPublisher.Size = new System.Drawing.Size(100, 18);
+            this.lbPublisher.TabIndex = 11;
+            this.lbPublisher.Text = "Nhà xuất bản";
+            // 
+            // lbAuthor
+            // 
+            this.lbAuthor.AutoSize = true;
+            this.lbAuthor.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAuthor.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lbAuthor.Location = new System.Drawing.Point(286, 336);
+            this.lbAuthor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbAuthor.Name = "lbAuthor";
+            this.lbAuthor.Size = new System.Drawing.Size(59, 18);
+            this.lbAuthor.TabIndex = 10;
+            this.lbAuthor.Text = "Tác giả";
+            // 
+            // lbLanguage
+            // 
+            this.lbLanguage.AutoSize = true;
+            this.lbLanguage.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbLanguage.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lbLanguage.Location = new System.Drawing.Point(286, 271);
+            this.lbLanguage.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbLanguage.Name = "lbLanguage";
+            this.lbLanguage.Size = new System.Drawing.Size(79, 18);
+            this.lbLanguage.TabIndex = 9;
+            this.lbLanguage.Text = "Ngôn ngữ";
+            // 
+            // lbPublishDate
+            // 
+            this.lbPublishDate.AutoSize = true;
+            this.lbPublishDate.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPublishDate.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lbPublishDate.Location = new System.Drawing.Point(286, 208);
+            this.lbPublishDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbPublishDate.Name = "lbPublishDate";
+            this.lbPublishDate.Size = new System.Drawing.Size(107, 18);
+            this.lbPublishDate.TabIndex = 8;
+            this.lbPublishDate.Text = "Ngày xuất bản";
+            // 
+            // lbIDBook
+            // 
+            this.lbIDBook.AutoSize = true;
+            this.lbIDBook.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbIDBook.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lbIDBook.Location = new System.Drawing.Point(286, 85);
+            this.lbIDBook.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbIDBook.Name = "lbIDBook";
+            this.lbIDBook.Size = new System.Drawing.Size(73, 18);
+            this.lbIDBook.TabIndex = 7;
+            this.lbIDBook.Text = "Tên sách";
             // 
             // panelTitleBar
             // 
@@ -346,16 +520,6 @@ namespace DoAnPBL3
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
             // 
-            // gpbBookImg
-            // 
-            this.gpbBookImg.BackColor = System.Drawing.Color.Transparent;
-            this.gpbBookImg.ImageRotate = 0F;
-            this.gpbBookImg.Location = new System.Drawing.Point(10, 82);
-            this.gpbBookImg.Name = "gpbBookImg";
-            this.gpbBookImg.Size = new System.Drawing.Size(242, 233);
-            this.gpbBookImg.TabIndex = 45;
-            this.gpbBookImg.TabStop = false;
-            // 
             // guna2DragControl1
             // 
             this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
@@ -373,57 +537,9 @@ namespace DoAnPBL3
             this.guna2Elipse1.BorderRadius = 10;
             this.guna2Elipse1.TargetControl = this;
             // 
-            // rjbtnCancel
-            // 
-            this.rjbtnCancel.BackColor = System.Drawing.Color.DimGray;
-            this.rjbtnCancel.BackgroundColor = System.Drawing.Color.DimGray;
-            this.rjbtnCancel.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjbtnCancel.BorderRadius = 15;
-            this.rjbtnCancel.BorderSize = 0;
-            this.rjbtnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rjbtnCancel.FlatAppearance.BorderSize = 0;
-            this.rjbtnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjbtnCancel.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjbtnCancel.ForeColor = System.Drawing.Color.White;
-            this.rjbtnCancel.Location = new System.Drawing.Point(343, 598);
-            this.rjbtnCancel.Margin = new System.Windows.Forms.Padding(2);
-            this.rjbtnCancel.Name = "rjbtnCancel";
-            this.rjbtnCancel.Size = new System.Drawing.Size(145, 36);
-            this.rjbtnCancel.TabIndex = 44;
-            this.rjbtnCancel.Text = "Hủy";
-            this.rjbtnCancel.TextColor = System.Drawing.Color.White;
-            this.rjbtnCancel.UseVisualStyleBackColor = false;
-            this.rjbtnCancel.Click += new System.EventHandler(this.rjbtnCancel_Click);
-            // 
-            // cbLanguage
-            // 
-            this.cbLanguage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
-            this.cbLanguage.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
-            this.cbLanguage.BorderSize = 2;
-            this.cbLanguage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbLanguage.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbLanguage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.cbLanguage.IconColor = System.Drawing.Color.RoyalBlue;
-            this.cbLanguage.Items.AddRange(new object[] {
-            "TIếng Việt",
-            "Tiếng Anh",
-            "Tiếng Nhật",
-            "Tiếng Hàn",
-            "Tiếng Trung"});
-            this.cbLanguage.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
-            this.cbLanguage.ListTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.cbLanguage.Location = new System.Drawing.Point(398, 205);
-            this.cbLanguage.MinimumSize = new System.Drawing.Size(188, 29);
-            this.cbLanguage.Name = "cbLanguage";
-            this.cbLanguage.Padding = new System.Windows.Forms.Padding(2);
-            this.cbLanguage.Size = new System.Drawing.Size(390, 32);
-            this.cbLanguage.TabIndex = 36;
-            this.cbLanguage.Texts = "Ngôn ngữ";
-            // 
             // guna2Elipse2
             // 
             this.guna2Elipse2.BorderRadius = 10;
-            this.guna2Elipse2.TargetControl = this.cbLanguage;
             // 
             // guna2ShadowForm1
             // 
@@ -435,17 +551,19 @@ namespace DoAnPBL3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(812, 686);
+            this.ClientSize = new System.Drawing.Size(812, 757);
             this.Controls.Add(this.panelContainer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormTTS";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormTTS";
+            this.Load += new System.EventHandler(this.FormTTS_Load);
             this.panelContainer.ResumeLayout(false);
             this.panelContainer.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gpbBookImg)).EndInit();
             this.panelTitleBar.ResumeLayout(false);
             this.panelTitleBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gpbBookImg)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -453,21 +571,20 @@ namespace DoAnPBL3
         #endregion
 
         private System.Windows.Forms.Panel panelContainer;
-        private RJButton rjbtnCancel;
-        private Guna.UI2.WinForms.Guna2TextBox tbEmailNV;
-        private Guna.UI2.WinForms.Guna2TextBox tbSDTNV;
-        private Guna.UI2.WinForms.Guna2TextBox tbAddressNV;
-        private Guna.UI2.WinForms.Guna2TextBox tbCMNDNV;
-        private Guna.UI2.WinForms.Guna2TextBox tbBD;
-        private Guna.UI2.WinForms.Guna2TextBox tbNameNV;
-        private RJComboBox cbLanguage;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lbl;
-        private System.Windows.Forms.Label lblNXB;
-        private System.Windows.Forms.Label lblAddress;
-        private System.Windows.Forms.Label lblGender;
-        private System.Windows.Forms.Label lblBD;
-        private System.Windows.Forms.Label lblNameNV;
+        private RJButton rjbtnOK;
+        private Guna.UI2.WinForms.Guna2TextBox tbPrice;
+        private Guna.UI2.WinForms.Guna2TextBox tbGenre;
+        private Guna.UI2.WinForms.Guna2TextBox tbPublisher;
+        private Guna.UI2.WinForms.Guna2TextBox tbAuthor;
+        private Guna.UI2.WinForms.Guna2TextBox tbPublishDate;
+        private Guna.UI2.WinForms.Guna2TextBox tbIDBook;
+        private System.Windows.Forms.Label lbPrice;
+        private System.Windows.Forms.Label lbGenre;
+        private System.Windows.Forms.Label lbPublisher;
+        private System.Windows.Forms.Label lbAuthor;
+        private System.Windows.Forms.Label lbLanguage;
+        private System.Windows.Forms.Label lbPublishDate;
+        private System.Windows.Forms.Label lbIDBook;
         private System.Windows.Forms.Panel panelTitleBar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -477,5 +594,12 @@ namespace DoAnPBL3
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
         private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
+        private Guna.UI2.WinForms.Guna2TextBox tbLanguage;
+        private Guna.UI2.WinForms.Guna2TextBox tbQuantity;
+        private System.Windows.Forms.Label lblQuantity;
+        private Guna.UI2.WinForms.Guna2TextBox tbUnit;
+        private System.Windows.Forms.Label lblUnit;
+        private Guna.UI2.WinForms.Guna2TextBox tbNameBook;
+        private System.Windows.Forms.Label lblNameBook;
     }
 }

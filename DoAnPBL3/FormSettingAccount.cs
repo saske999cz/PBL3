@@ -27,12 +27,10 @@ namespace DoAnPBL3
                     tbName.BorderColor = Color.White;
                     tbPassword.FillColor = Color.White;
                     tbPassword.BorderColor = Color.White;
-
-
                     break;
-
                 case "Dark":
                     btnEditPassword.Parent.BackColor = Color.FromArgb(32, 32, 32);
+                    btnEditPassword.Parent.Parent.BackColor = Color.FromArgb(32, 32, 32);
                     lblName.ForeColor = Color.White;
                     label1.ForeColor = Color.White;
                     label2.ForeColor = Color.White;
@@ -41,8 +39,8 @@ namespace DoAnPBL3
                     tbPassword.FillColor = Color.White;
                     tbPassword.BorderColor = Color.White;
                     break;
-
                 case "Light":
+                    btnEditPassword.Parent.BackColor = Color.FromArgb(220, 220, 220);
                     btnEditPassword.Parent.BackColor = Color.FromArgb(220, 220, 220);
                     lblName.ForeColor = Color.Black;
                     label1.ForeColor = Color.Black;
@@ -51,8 +49,6 @@ namespace DoAnPBL3
                     tbName.BorderColor = Color.White;
                     tbPassword.FillColor = Color.White;
                     tbPassword.BorderColor = Color.White;
-
-
                     break;
             }
         }

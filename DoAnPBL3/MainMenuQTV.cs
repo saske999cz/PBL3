@@ -18,24 +18,20 @@ namespace DoAnPBL3
         private Panel btnLeftBorder;
         private Form currentChildForm;
         private string theme = "Admin";
-        
+        private string accountUsername;
 
-
-        public MainMenuQTV()
+        public MainMenuQTV(string accountUsername)
         {
             InitializeComponent();
             btnLeftBorder = new Panel();
             btnLeftBorder.Size = new Size(7, 77);
             panelMenu.Controls.Add(btnLeftBorder);
-
-
-
-
+            this.accountUsername = accountUsername;
             //Form
-            this.Text = string.Empty;
-            this.ControlBox = false;
-            this.DoubleBuffered = true;
-            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            Text = string.Empty;
+            ControlBox = false;
+            DoubleBuffered = true;
+            MaximizedBounds = Screen.FromHandle(Handle).WorkingArea;
         }
 
         //Structs
@@ -49,8 +45,6 @@ namespace DoAnPBL3
             public static Color color6 = Color.FromArgb(24, 161, 251);
         }
 
-
-
         // Methods
         private void ActivateButton(object senderBtn, Color color)
         {
@@ -59,7 +53,7 @@ namespace DoAnPBL3
 
                 DisableButton();
                 // Button
-                switch (this.theme)
+                switch (theme)
                 {
                     case "Admin":
                         btnCurrent = (IconButton)senderBtn;
@@ -70,7 +64,6 @@ namespace DoAnPBL3
                         btnCurrent.TextImageRelation = TextImageRelation.TextBeforeImage;
                         btnCurrent.ImageAlign = ContentAlignment.MiddleRight;
                         break;
-
                     case "Dark":
                         btnCurrent = (IconButton)senderBtn;
                         btnCurrent.BackColor = Color.FromArgb(71, 71, 71);
@@ -80,7 +73,6 @@ namespace DoAnPBL3
                         btnCurrent.TextImageRelation = TextImageRelation.TextBeforeImage;
                         btnCurrent.ImageAlign = ContentAlignment.MiddleRight;
                         break;
-
                     case "Light":
                         btnCurrent = (IconButton)senderBtn;
                         btnCurrent.BackColor = Color.Silver;
@@ -100,7 +92,6 @@ namespace DoAnPBL3
                 // Icon Current Child Form
                 iconCurrentChildForm.IconChar = btnCurrent.IconChar;
                 iconCurrentChildForm.IconColor = color;
-            
             }
         }
 
@@ -108,18 +99,16 @@ namespace DoAnPBL3
         {
             if (btnCurrent != null)
             {
-                switch (this.theme)
+                switch (theme)
                 {
                     case "Admin":
-                btnCurrent.BackColor = Color.FromArgb(31, 30, 68);
-                btnCurrent.ForeColor = Color.Gainsboro;
-                btnCurrent.TextAlign = ContentAlignment.MiddleCenter;
-                btnCurrent.IconColor = Color.Gainsboro;
-                btnCurrent.TextImageRelation = TextImageRelation.ImageBeforeText;
-                btnCurrent.ImageAlign = ContentAlignment.MiddleLeft;
+                        btnCurrent.BackColor = Color.FromArgb(31, 30, 68);
+                        btnCurrent.ForeColor = Color.Gainsboro;
+                        btnCurrent.TextAlign = ContentAlignment.MiddleCenter;
+                        btnCurrent.IconColor = Color.Gainsboro;
+                        btnCurrent.TextImageRelation = TextImageRelation.ImageBeforeText;
+                        btnCurrent.ImageAlign = ContentAlignment.MiddleLeft;
                         break;
-                    
-
                     case "Dark":
                         btnCurrent.BackColor = Color.FromArgb(26, 26, 26);
                         btnCurrent.ForeColor = Color.Gainsboro;
@@ -128,8 +117,6 @@ namespace DoAnPBL3
                         btnCurrent.TextImageRelation = TextImageRelation.ImageBeforeText;
                         btnCurrent.ImageAlign = ContentAlignment.MiddleLeft;
                         break;
-
-
                     case "Light":
                         btnCurrent.BackColor = Color.FromArgb(210, 210, 210);
                         btnCurrent.ForeColor = Color.Black;
@@ -141,8 +128,6 @@ namespace DoAnPBL3
                 }
             }
         }
-
-
 
         private void OpenChildForm(Form childForm)
         {
@@ -164,10 +149,6 @@ namespace DoAnPBL3
                 lblTitleChildForm.Text = "Theme";
             else
             lblTitleChildForm.Text = childForm.Text;
-           
-
-
-
         }
 
         private void btnQLNV_Click(object sender, EventArgs e)
@@ -222,7 +203,7 @@ namespace DoAnPBL3
         private void panelTitleBar_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
+            SendMessage(Handle, 0x112, 0xf012, 0);
         }
 
         private void btnMaximize_Click(object sender, EventArgs e)
@@ -230,9 +211,7 @@ namespace DoAnPBL3
             if (WindowState == FormWindowState.Normal)
             {
                 WindowState = FormWindowState.Maximized;
-
             }
-
             else WindowState = FormWindowState.Normal;
         }
 
@@ -255,7 +234,6 @@ namespace DoAnPBL3
         private void btnMaximize_MouseEnter(object sender, EventArgs e)
         {
             btnMaximize.BackColor = RGBColors.color1;
-
         }
 
         private void btnMaximize_MouseLeave(object sender, EventArgs e)
@@ -266,7 +244,6 @@ namespace DoAnPBL3
         private void btnMinimize_MouseEnter(object sender, EventArgs e)
         {
             btnMinimize.BackColor = RGBColors.color6;
-
         }
 
         private void btnMinimize_MouseLeave(object sender, EventArgs e)
@@ -283,42 +260,30 @@ namespace DoAnPBL3
         {
             timer1.Tick += new System.EventHandler(timer1_Tick);
             timer1.Start();
-
             lblDate.Text = DateTime.Now.ToLongDateString();
             rjddmAdminSettingMenu.IsMainMenu = true;
+            using (BookStoreContext context = new BookStoreContext())
+            {
+                var admin = context.Admins
+                                   .Where(ad => ad.AccountUsername == accountUsername)
+                                   .Select(ad => new { ad.FullNameAdmin, ad.AccountUsername });
+                lblAdminName.Text = admin.ToList().FirstOrDefault().FullNameAdmin;
+                lblAdminUsername.Text = admin.ToList().FirstOrDefault().AccountUsername;
+            }
         }
-
-
-
-        private void btnAdmin_Click(object sender, EventArgs e)
-        {
-
-            rjddmAdminSettingMenu.Show(btnAdmin, new Point(0, btnAdmin.Height));
-
-        }
-
-       
-
-        
 
         private void AdminPicture_Click(object sender, EventArgs e)
         {
-
-            btnAdmin_Click(sender, e);
+            rjddmAdminSettingMenu.Show(AdminPicture, new Point(0, AdminPicture.Height));
         }
-
-        
-
-       
 
         private void rjddmAdminSettingMenu_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
             if (đăngXuấtToolStripMenuItem.Selected == true)
             {
-                this.Hide();
+                Hide();
                 new FormLogin().ShowDialog();
-                this.Close();
-
+                Close();
             }
             if (chỉnhSửaTàiKhoảnToolStripMenuItem.Selected == true)
             {
@@ -326,7 +291,6 @@ namespace DoAnPBL3
                 iconCurrentChildForm.IconChar = IconChar.Cog;
                 btnLeftBorder.Visible = false;
                 OpenChildForm(new FormSettingAccount(theme));
-
             }
             if(thayĐổiThemeToolStripMenuItem.Selected == true)
             {
@@ -334,7 +298,6 @@ namespace DoAnPBL3
                 iconCurrentChildForm.IconChar = IconChar.Moon;
                 btnLeftBorder.Visible = false;
                 OpenChildForm(new FormTheme(theme));
-                
             }
 
             if(ghiChúToolStripMenuItem.Selected == true)
@@ -349,7 +312,6 @@ namespace DoAnPBL3
         public void ChangeTheme(string theme)
         {
             this.theme = theme;
-
         }
 
         public void ApplyTheme(string theme)
@@ -390,8 +352,6 @@ namespace DoAnPBL3
             btnQLKH.BackColor = Color.FromArgb(26, 26, 26);
             btnQLKH.ForeColor = Color.Gainsboro;
             btnQLKH.IconColor = Color.Gainsboro;
-            btnAdmin.BackColor = Color.FromArgb(20, 20, 20);
-            btnAdmin.ForeColor = Color.Gainsboro;
             rjddmAdminSettingMenu.BackColor = Color.FromArgb(26, 26, 26);
             label3.ForeColor = Color.White;
             lblDate.ForeColor = Color.White;
@@ -400,10 +360,6 @@ namespace DoAnPBL3
             lblAdminName.ForeColor = Color.White;
             iconPictureBox1.IconColor = Color.White;
             iconPictureBox2.IconColor = Color.White;
-
-
-
-
         }
 
         public void ApplyThemeLight()
@@ -425,8 +381,6 @@ namespace DoAnPBL3
             btnQLKH.BackColor = Color.FromArgb(210, 210, 210);
             btnQLKH.ForeColor = Color.Black;
             btnQLKH.IconColor = Color.Black;
-            btnAdmin.BackColor = Color.FromArgb(235, 235, 235);
-            btnAdmin.ForeColor = Color.Black;
             rjddmAdminSettingMenu.BackColor = Color.FromArgb(190, 190,190);
             label3.ForeColor = Color.Black;
             lblDate.ForeColor = Color.Black;
@@ -435,9 +389,6 @@ namespace DoAnPBL3
             lblAdminName.ForeColor = Color.Black;
             iconPictureBox1.IconColor = Color.Black;
             iconPictureBox2.IconColor = Color.Black;
-            
-
-
         }
 
         public void ApplyThemeAdmin()
@@ -459,8 +410,6 @@ namespace DoAnPBL3
             btnQLKH.BackColor = Color.FromArgb(31, 30, 68);
             btnQLKH.ForeColor = Color.White;
             btnQLKH.IconColor = Color.White;
-            btnAdmin.BackColor = Color.FromArgb(26, 25, 62);
-            btnAdmin.ForeColor = Color.White;
             rjddmAdminSettingMenu.BackColor = Color.DarkSlateBlue;
             label3.ForeColor = Color.White;
             lblDate.ForeColor = Color.White;
@@ -471,20 +420,16 @@ namespace DoAnPBL3
             iconPictureBox2.IconColor = Color.White;
         }
 
-        
-
-        
-
-        
-
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (currentChildForm != null)
+            {
                 if (currentChildForm.Text == "Dark" || currentChildForm.Text == "Admin" || currentChildForm.Text == "Light")
                 {
                     ChangeTheme(currentChildForm.Text);
                     ApplyTheme(currentChildForm.Text);
                 }
+            }
         }
     }
 }

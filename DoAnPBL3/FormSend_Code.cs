@@ -35,7 +35,6 @@ namespace DoAnPBL3
             Close();
         }
 
-
         private void btnSendCode_ClickAsync(object sender, EventArgs e)
         {
             if (txtEmail.Text.Trim() == "" && txtEmailPassword.Text.Trim() == "")
@@ -89,11 +88,9 @@ namespace DoAnPBL3
                             }
                         }
                     }
-
                 }
             }
         }
-
 
         private void txtEmail_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -124,6 +121,5 @@ namespace DoAnPBL3
                 Hide.BringToFront();
             }
         }
-
     }
 }

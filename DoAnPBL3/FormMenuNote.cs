@@ -29,25 +29,19 @@ namespace DoAnPBL3
                     Notes.Parent.BackColor = Color.FromArgb(34, 33, 74);
                     Notes.BackColor = Color.FromArgb(34, 33, 74);
                     break;
-
                 case "Dark":
                     Notes.Parent.BackColor = Color.FromArgb(32, 32, 32);
                     Notes.BackColor = Color.FromArgb(32, 32, 32);
                     break;
-
                 case "Light":
                     Notes.Parent.BackColor = Color.FromArgb(220, 220, 220);
                     Notes.BackColor = Color.FromArgb(220, 220, 220);
                     break;
             }
-
         }
 
         private void OpenChildForm(FormMinNote childForm)
         {
-
-
-
             childForm.TopLevel = false;
             childForm.Dock = DockStyle.Top;
             Notes.Controls.Add(childForm);
@@ -59,20 +53,16 @@ namespace DoAnPBL3
         {
             note = new FormNote();
             note.Show();
-            
-            
         }
 
         private void FormMenuNote_Paint(object sender, PaintEventArgs e)
         {
            
-            
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             Notes.Refresh();
-            
         }
 
         private void FormMenuNote_Load(object sender, EventArgs e)
@@ -95,7 +85,6 @@ namespace DoAnPBL3
                 index++;
                 note.Text = "NotChanged";
                 //Notes.Show();
-               
             }
         }
     }

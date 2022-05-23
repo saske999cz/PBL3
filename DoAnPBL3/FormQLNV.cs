@@ -16,6 +16,7 @@ namespace DoAnPBL3
 {
     public partial class FormQLNV : Form
     {
+        private int count;
         private IconButton btnCurrent;
         public FormQLNV(string theme)
         {
@@ -39,11 +40,10 @@ namespace DoAnPBL3
                     rjtbTKNV.BorderColor = Color.FromArgb(23, 21, 35);
                     rjtbTKNV.ForeColor = Color.Silver;
                     rjtbTKNV.PlaceholderColor = Color.FromArgb(87, 83, 103);
-
                     break;
-
                 case "Dark":
                     btnAddNV.Parent.BackColor = Color.FromArgb(32, 32, 32);
+                    btnAddNV.Parent.Parent.BackColor = Color.FromArgb(32, 32, 32);
                     label2.ForeColor = Color.FromArgb(124, 141, 181);
                     label5.ForeColor = Color.FromArgb(124, 141, 181);
                     label7.ForeColor = Color.FromArgb(124, 141, 181);
@@ -60,9 +60,9 @@ namespace DoAnPBL3
                     rjtbTKNV.ForeColor = Color.Silver;
                     rjtbTKNV.PlaceholderColor = Color.FromArgb(87, 83, 103);
                     break;
-
                 case "Light":
                     btnAddNV.Parent.BackColor = Color.FromArgb(220, 220, 220);
+                    btnAddNV.Parent.Parent.BackColor = Color.FromArgb(220, 220, 220);
                     label2.ForeColor = Color.FromArgb(124, 141, 181);
                     label5.ForeColor = Color.FromArgb(124, 141, 181);
                     label7.ForeColor = Color.FromArgb(124, 141, 181);
@@ -78,7 +78,6 @@ namespace DoAnPBL3
                     rjtbTKNV.BorderColor = Color.FromArgb(180, 180, 180);
                     rjtbTKNV.ForeColor = Color.DimGray;
                     rjtbTKNV.PlaceholderColor = Color.FromArgb(87, 83, 103);
-
                     break;
             }
         }
@@ -173,42 +172,6 @@ namespace DoAnPBL3
             ActivateButton(sender, Color.Gainsboro);
         }
 
-        private void btnAddNV_Click(object sender, EventArgs e)
-        {
-            new FormAddNV().Show();
-        }
-
-        private void btnSuaNV_Click(object sender, EventArgs e)
-        {
-            string ID_Employee = dgvQLNV.CurrentRow.Cells["ID"].Value.ToString();
-            new FormSuaNV(ID_Employee).Show();
-        }
-        private void btnDeleteNV_Click(object sender, EventArgs e)
-        {
-            string ID_Employee = dgvQLNV.CurrentRow.Cells["ID"].Value.ToString();
-            string name = dgvQLNV.CurrentRow.Cells["Name"].Value.ToString();
-            DialogResult result = RJMessageBox.Show("Xác nhận xóa nhân viên " + name + "?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-            if (result == DialogResult.Yes)
-            {
-                using (BookStoreContext context = new BookStoreContext())
-                {
-                    Employee employee = context.Employees.Find(ID_Employee);
-                    context.Employees.Remove(employee);
-                    context.SaveChanges();
-                }
-                FormQLNV_Load(sender, e);
-                Alert("Xóa nhân viên thành công", Form_Alert.enmType.Success);
-            }
-            else
-                return;
-        }
-
-        private void dgvQLNV_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            string ID_Employee = dgvQLNV.CurrentRow.Cells["ID"].Value.ToString();
-            new FormTTNV(ID_Employee).Show();
-        }
-
         private void FormQLNV_Load(object sender, EventArgs e)
         {
             using (BookStoreContext context = new BookStoreContext())
@@ -217,31 +180,14 @@ namespace DoAnPBL3
                                     .Select(employee => new
                                     {
                                         employee.ID_Employee,
-                                        employee.NameEmployee,
+                                        employee.FullNameEmployee,
                                         employee.Gender,
                                         employee.Email,
                                         employee.Phone
                                     });
-                var listMaleEmployees = context.Employees
-                                        .Where(employee => employee.Gender == "Nam")
-                                        .Select(employee => new
-                                        {
-                                            employee.ID_Employee,
-                                            employee.NameEmployee,
-                                            employee.Gender,
-                                            employee.Email,
-                                            employee.Phone
-                                        });
-                var listFemaleEmployees = context.Employees
-                                        .Where(employee => employee.Gender == "Nữ")
-                                        .Select(employee => new
-                                        {
-                                            employee.ID_Employee,
-                                            employee.NameEmployee,
-                                            employee.Gender,
-                                            employee.Email,
-                                            employee.Phone
-                                        });
+                var listMaleEmployees = listEmployees.Where(employee => employee.Gender == "Nam");
+                var listFemaleEmployees = listEmployees.Where(employee => employee.Gender == "Nữ");
+                count = listEmployees.ToList().Count();
                 dgvQLNV.DataSource = listEmployees.ToList();
                 lblTSNV.Text = listEmployees.ToList().Count().ToString();
                 lblSNVNam.Text = listMaleEmployees.ToList().Count().ToString();
@@ -249,18 +195,73 @@ namespace DoAnPBL3
             }
         }
 
+        private void btnAddNV_Click(object sender, EventArgs e)
+        {
+            new FormAddNV().Show();
+            timer1.Start();        
+        }
+
+        private void btnSuaNV_Click(object sender, EventArgs e)
+        {
+            if (dgvQLNV.CurrentRow == null)
+            {
+                RJMessageBox.Show("Hệ thống chưa có nhân viên nào", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                string ID_Employee = dgvQLNV.CurrentRow.Cells["ID"].Value.ToString();
+                new FormSuaNV(ID_Employee).Show();
+            }
+        }
+        private void btnDeleteNV_Click(object sender, EventArgs e)
+        {
+            if (dgvQLNV.CurrentRow == null)
+            {
+                RJMessageBox.Show("Hệ thống chưa có nhân viên nào", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                string ID_Employee = dgvQLNV.CurrentRow.Cells["ID"].Value.ToString();
+                string name = dgvQLNV.CurrentRow.Cells["Name"].Value.ToString();
+                DialogResult result = RJMessageBox.Show("Xác nhận xóa nhân viên " + name + "?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    using (BookStoreContext context = new BookStoreContext())
+                    {
+                        Employee employee = context.Employees.Find(ID_Employee);
+                        context.Employees.Remove(employee);
+                        context.SaveChanges();
+                    }
+                    FormQLNV_Load(sender, e);
+                    Alert("Xóa nhân viên thành công", Form_Alert.enmType.Success);
+                }
+                else
+                    return;
+            }
+        }
+
+        private void dgvQLNV_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            string ID_Employee = dgvQLNV.CurrentRow.Cells["ID"].Value.ToString();
+            new FormTTNV(ID_Employee).Show();
+        }
+
         private void btnTKNV_Click(object sender, EventArgs e)
         {
             using (BookStoreContext context = new BookStoreContext())
             {
-                if (EmployeeValidator.IsValidPhoneNumber(rjtbTKNV.Texts, EmployeeValidator.PHONE_REGEX))
+                if (rjtbTKNV.Texts.Trim() == "")
+                {
+                    RJMessageBox.Show("Vui lòng điền thông tin nhân viên cần tìm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else if (Validator.Validators.IsValidPhoneNumber(rjtbTKNV.Texts, Validator.Validators.PHONE_REGEX))
                 {
                     var listEmployees = context.Employees
                                         .Where(employee => employee.Phone == rjtbTKNV.Texts)
                                         .Select(employee => new
                                         {
                                             employee.ID_Employee,
-                                            employee.NameEmployee,
+                                            employee.FullNameEmployee,
                                             employee.Gender,
                                             employee.Email,
                                             employee.Phone
@@ -273,11 +274,11 @@ namespace DoAnPBL3
                 else
                 {
                     var listEmployees = context.Employees
-                                        .Where(employee => employee.NameEmployee.Contains(rjtbTKNV.Texts))
+                                        .Where(employee => employee.FullNameEmployee.Contains(rjtbTKNV.Texts))
                                         .Select(employee => new
                                         {
                                             employee.ID_Employee,
-                                            employee.NameEmployee,
+                                            employee.FullNameEmployee,
                                             employee.Gender,
                                             employee.Email,
                                             employee.Phone
@@ -306,15 +307,7 @@ namespace DoAnPBL3
                 // Tất cả
                 if (xuiSegmentNV.SelectedIndex == 0)
                 {
-                    dgvQLNV.DataSource = context.Employees
-                                        .Select(employee => new
-                                        {
-                                            employee.ID_Employee,
-                                            employee.NameEmployee,
-                                            employee.Gender,
-                                            employee.Email,
-                                            employee.Phone
-                                        }).ToList();
+                    FormQLNV_Load(sender, e);
                 }
                 // Nam
                 else if (xuiSegmentNV.SelectedIndex == 1)
@@ -324,7 +317,7 @@ namespace DoAnPBL3
                                         .Select(employee => new
                                         {
                                             employee.ID_Employee,
-                                            employee.NameEmployee,
+                                            employee.FullNameEmployee,
                                             employee.Gender,
                                             employee.Email,
                                             employee.Phone
@@ -338,11 +331,37 @@ namespace DoAnPBL3
                                         .Select(employee => new
                                         {
                                             employee.ID_Employee,
-                                            employee.NameEmployee,
+                                            employee.FullNameEmployee,
                                             employee.Gender,
                                             employee.Email,
                                             employee.Phone
                                         }).ToList();
+                }
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            using (BookStoreContext context = new BookStoreContext())
+            {
+                var listEmployees = context.Employees
+                                    .Select(employee => new
+                                    {
+                                        employee.ID_Employee,
+                                        employee.FullNameEmployee,
+                                        employee.Gender,
+                                        employee.Email,
+                                        employee.Phone
+                                    });
+                var listMaleEmployees = listEmployees.Where(employee => employee.Gender == "Nam");
+                var listFemaleEmployees = listEmployees.Where(employee => employee.Gender == "Nữ");
+                if (listEmployees.ToList().Count() != count)
+                {
+                    dgvQLNV.DataSource = listEmployees.ToList();
+                    lblTSNV.Text = listEmployees.ToList().Count().ToString();
+                    lblSNVNam.Text = listMaleEmployees.ToList().Count().ToString();
+                    lblSNVNu.Text = listFemaleEmployees.ToList().Count().ToString();
+                    count = listEmployees.ToList().Count();
                 }
             }
         }

@@ -11,27 +11,32 @@ namespace DoAnPBL3.Models
     [Table("Tac_Gia")]
     public class Author
     {
-
         public Author()
         {
-            Books = new HashSet<Book>();
+            //Book_Authors = new HashSet<Book_Author>();
+        }
+
+        public Author(int id_author, string fullNameAuthor, string email)
+        {
+            ID_Author = id_author;
+            FullNameAuthor = fullNameAuthor;
+            Email = email;
         }
 
         [Key]
         [Column("ID_TacGia")]
-        [StringLength(100)]
-        [Required]
-        public string ID_Author { get; set; }
+        [Required(ErrorMessage = "ID của tác giả không được để trống")]
+        public int ID_Author { get; set; }
 
-        [Column("hoVaTen")]
+        [Column("HoVaTen")]
         [StringLength(255)]
-        [Required]
-        public string Name { get; set; }
+        [Required(ErrorMessage = "Họ và tên của tác giả không được để trống")]
+        public string FullNameAuthor { get; set; }
 
         [StringLength(255)]
-        [Required]
+        [Required(ErrorMessage = "Email của tác giả không được để trống")]
         public string Email { get; set; }
 
-        public virtual ICollection<Book> Books { get; set; }
+        //public virtual ICollection<Book_Author> Book_Authors { get; set; }
     }
 }

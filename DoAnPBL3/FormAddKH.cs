@@ -19,7 +19,6 @@ namespace DoAnPBL3
         public FormAddKH()
         {
             InitializeComponent();
-
         }
         public void Alert(string msg, Form_Alert.enmType type)
         {
@@ -34,13 +33,13 @@ namespace DoAnPBL3
             }
             else
             {
-                this.Alert("Thêm khách hàng mới thành công", Form_Alert.enmType.Success);
-                this.Close();
+                Alert("Thêm khách hàng mới thành công", Form_Alert.enmType.Success);
+                Close();
             }
         }
         private void rjbtnCancel_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
     }
 }

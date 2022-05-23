@@ -8,7 +8,7 @@ using System.Net.Mail;
 
 namespace DoAnPBL3.Validator
 {
-    public class EmployeeValidator
+    public class Validators
     {
         public static string PHONE_REGEX = @"(84|0[3|5|7|8|9])+([\d]{8})\b";
         public static string ID_CARD_REGEX = @"^(\d{9})";
@@ -23,25 +23,25 @@ namespace DoAnPBL3.Validator
             return false;
         }
 
-        public static bool IsDateContainsAlphabet(string dateOfBirth)
+        public static bool IsDateContainsAlphabet(string date)
         {
-            return dateOfBirth.Any(alpha => char.IsLetter(alpha));
+            return date.Any(alpha => char.IsLetter(alpha));
         }
 
-        public static bool IsValidFormatDateOfBirth(string dateOfBirth, string pattern)
+        public static bool IsValidFormatDate(string date, string pattern)
         {
-            if (Regex.IsMatch(dateOfBirth, pattern))
+            if (Regex.IsMatch(date, pattern))
                 return true;
             else
                 return false;
         }
 
-        public static string CheckDateOfBirth(string dateOfBirth, string pattern)
+        public static string CheckDate(string date, string pattern)
         {
             string msg = "";
             int days = 0, months = 0, years = 0;
             Regex regex = new Regex(pattern);
-            foreach (Match item in regex.Matches(dateOfBirth.ToString()))
+            foreach (Match item in regex.Matches(date.ToString()))
             {
                 days = Convert.ToInt32(item.Groups["days"].ToString());
                 months = Convert.ToInt32(item.Groups["months"].ToString());
@@ -103,12 +103,12 @@ namespace DoAnPBL3.Validator
             return msg;
         }
 
-        public static bool IsValidAge(string dateOfBirth, string pattern)
+        public static bool IsValidAge(string date, string pattern)
         {
             string days = "01", months = "01", years = "2000";
             string currentDate = DateTime.Now.ToString("MM/dd/yyyy"); // Format current date to MM/dd/yyyy
             Regex regex = new Regex(pattern);
-            foreach (Match item in regex.Matches(dateOfBirth))
+            foreach (Match item in regex.Matches(date))
             {
                 days = item.Groups["days"].ToString();
                 months = item.Groups["months"].ToString();
@@ -146,12 +146,12 @@ namespace DoAnPBL3.Validator
             }
         }
 
-        public static bool IsValidDateOfBirth(string dateOfBirth, string pattern)
+        public static bool IsValidDate(string date, string pattern)
         {
             string days = "01", months = "01", years = "2000";
             string currentDate = DateTime.Now.ToString("MM/dd/yyyy"); // Format current date to MM/dd/yyyy
             Regex regex = new Regex(pattern);
-            foreach (Match item in regex.Matches(dateOfBirth.ToString()))
+            foreach (Match item in regex.Matches(date.ToString()))
             {
                 days = item.Groups["days"].ToString();
                 months = item.Groups["months"].ToString();
@@ -186,6 +186,30 @@ namespace DoAnPBL3.Validator
             else
             {
                 return true;
+            }
+        }
+
+        public static bool IsExistID_Employee(string ID_Employee)
+        {
+            using(BookStoreContext context = new BookStoreContext())
+            {
+                var employee = context.Employees.Where(em => em.ID_Employee == ID_Employee).ToList().FirstOrDefault();
+                if (employee != null)
+                    return true;
+                else
+                    return false;
+            }
+        }
+
+        public static bool IsExistID_Book(string ID_Book)
+        {
+            using (BookStoreContext context = new BookStoreContext())
+            {
+                var book = context.Books.Where(b => b.ID_Book == ID_Book).ToList().FirstOrDefault();
+                if (book != null)
+                    return true;
+                else
+                    return false;
             }
         }
 

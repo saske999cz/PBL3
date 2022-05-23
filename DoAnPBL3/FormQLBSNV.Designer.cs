@@ -30,9 +30,9 @@ namespace DoAnPBL3
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormQLBSNV));
             this.xuiSegmentSach = new XanderUI.XUISegment();
             this.dgvQLBSNV = new System.Windows.Forms.DataGridView();
@@ -51,14 +51,17 @@ namespace DoAnPBL3
             this.rjbtnOrder = new DoAnPBL3.RJButton();
             this.rjbtnBuy = new DoAnPBL3.RJButton();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQLBSNV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // xuiSegmentSach
             // 
+            this.xuiSegmentSach.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.xuiSegmentSach.Cursor = System.Windows.Forms.Cursors.Hand;
             this.xuiSegmentSach.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xuiSegmentSach.Items = "Tất cả, Tiếng Việt , Tiếng Anh";
@@ -76,20 +79,23 @@ namespace DoAnPBL3
             // 
             // dgvQLBSNV
             // 
+            this.dgvQLBSNV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvQLBSNV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvQLBSNV.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvQLBSNV.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.dgvQLBSNV.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvQLBSNV.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvQLBSNV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvQLBSNV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvQLBSNV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvQLBSNV.ColumnHeadersHeight = 20;
             this.dgvQLBSNV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvQLBSNV.EnableHeadersVisualStyles = false;
@@ -98,22 +104,22 @@ namespace DoAnPBL3
             this.dgvQLBSNV.Margin = new System.Windows.Forms.Padding(2);
             this.dgvQLBSNV.Name = "dgvQLBSNV";
             this.dgvQLBSNV.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvQLBSNV.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvQLBSNV.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvQLBSNV.RowHeadersVisible = false;
             this.dgvQLBSNV.RowHeadersWidth = 51;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvQLBSNV.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvQLBSNV.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvQLBSNV.RowTemplate.Height = 24;
             this.dgvQLBSNV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvQLBSNV.Size = new System.Drawing.Size(821, 413);
@@ -209,6 +215,7 @@ namespace DoAnPBL3
             // 
             // rjbtnAddCart
             // 
+            this.rjbtnAddCart.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.rjbtnAddCart.BackColor = System.Drawing.Color.DodgerBlue;
             this.rjbtnAddCart.BackgroundColor = System.Drawing.Color.DodgerBlue;
             this.rjbtnAddCart.BorderColor = System.Drawing.Color.PaleVioletRed;
@@ -221,7 +228,7 @@ namespace DoAnPBL3
             this.rjbtnAddCart.ForeColor = System.Drawing.Color.White;
             this.rjbtnAddCart.Image = global::DoAnPBL3.Properties.Resources.icons8_add_shopping_cart_30px;
             this.rjbtnAddCart.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.rjbtnAddCart.Location = new System.Drawing.Point(830, 284);
+            this.rjbtnAddCart.Location = new System.Drawing.Point(0, 112);
             this.rjbtnAddCart.Name = "rjbtnAddCart";
             this.rjbtnAddCart.Padding = new System.Windows.Forms.Padding(18, 0, 16, 0);
             this.rjbtnAddCart.Size = new System.Drawing.Size(150, 40);
@@ -281,6 +288,7 @@ namespace DoAnPBL3
             // 
             // rjbtnOrder
             // 
+            this.rjbtnOrder.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.rjbtnOrder.BackColor = System.Drawing.Color.Goldenrod;
             this.rjbtnOrder.BackgroundColor = System.Drawing.Color.Goldenrod;
             this.rjbtnOrder.BorderColor = System.Drawing.Color.PaleVioletRed;
@@ -293,7 +301,7 @@ namespace DoAnPBL3
             this.rjbtnOrder.ForeColor = System.Drawing.Color.White;
             this.rjbtnOrder.Image = global::DoAnPBL3.Properties.Resources.icons8_drop_shipping_30px;
             this.rjbtnOrder.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.rjbtnOrder.Location = new System.Drawing.Point(830, 227);
+            this.rjbtnOrder.Location = new System.Drawing.Point(0, 58);
             this.rjbtnOrder.Name = "rjbtnOrder";
             this.rjbtnOrder.Size = new System.Drawing.Size(150, 40);
             this.rjbtnOrder.TabIndex = 39;
@@ -304,6 +312,7 @@ namespace DoAnPBL3
             // 
             // rjbtnBuy
             // 
+            this.rjbtnBuy.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.rjbtnBuy.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.rjbtnBuy.BackgroundColor = System.Drawing.Color.MediumSeaGreen;
             this.rjbtnBuy.BorderColor = System.Drawing.Color.PaleVioletRed;
@@ -316,7 +325,7 @@ namespace DoAnPBL3
             this.rjbtnBuy.ForeColor = System.Drawing.Color.White;
             this.rjbtnBuy.Image = global::DoAnPBL3.Properties.Resources.icons8_cheap_2_30px;
             this.rjbtnBuy.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.rjbtnBuy.Location = new System.Drawing.Point(830, 170);
+            this.rjbtnBuy.Location = new System.Drawing.Point(0, 3);
             this.rjbtnBuy.Name = "rjbtnBuy";
             this.rjbtnBuy.Size = new System.Drawing.Size(150, 40);
             this.rjbtnBuy.TabIndex = 38;
@@ -331,12 +340,23 @@ namespace DoAnPBL3
             this.guna2Elipse1.BorderRadius = 5;
             this.guna2Elipse1.TargetControl = this.xuiSegmentSach;
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.rjbtnBuy);
+            this.panel1.Controls.Add(this.rjbtnAddCart);
+            this.panel1.Controls.Add(this.rjbtnOrder);
+            this.panel1.Location = new System.Drawing.Point(832, 170);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(150, 155);
+            this.panel1.TabIndex = 66;
+            // 
             // FormQLBSNV
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(53)))), ((int)(((byte)(70)))));
             this.ClientSize = new System.Drawing.Size(980, 585);
-            this.Controls.Add(this.rjbtnAddCart);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
@@ -347,8 +367,6 @@ namespace DoAnPBL3
             this.Controls.Add(this.lblTSSDB);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnTKS);
-            this.Controls.Add(this.rjbtnOrder);
-            this.Controls.Add(this.rjbtnBuy);
             this.Controls.Add(this.rjtbTKS);
             this.Controls.Add(this.xuiSegmentSach);
             this.Controls.Add(this.dgvQLBSNV);
@@ -359,6 +377,7 @@ namespace DoAnPBL3
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -382,5 +401,6 @@ namespace DoAnPBL3
         private System.Windows.Forms.Label label2;
         private RJButton rjbtnAddCart;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private System.Windows.Forms.Panel panel1;
     }
 }
