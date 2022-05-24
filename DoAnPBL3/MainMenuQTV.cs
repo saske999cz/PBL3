@@ -276,6 +276,10 @@ namespace DoAnPBL3
         {
             rjddmAdminSettingMenu.Show(AdminPicture, new Point(0, AdminPicture.Height));
         }
+        private void lblAdminUsername_Click(object sender, EventArgs e)
+        {
+            AdminPicture_Click(sender, e);
+        }
 
         private void rjddmAdminSettingMenu_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
@@ -360,6 +364,7 @@ namespace DoAnPBL3
             lblAdminName.ForeColor = Color.White;
             iconPictureBox1.IconColor = Color.White;
             iconPictureBox2.IconColor = Color.White;
+            lblAdminUsername.ForeColor = Color.White;
         }
 
         public void ApplyThemeLight()
@@ -389,6 +394,7 @@ namespace DoAnPBL3
             lblAdminName.ForeColor = Color.Black;
             iconPictureBox1.IconColor = Color.Black;
             iconPictureBox2.IconColor = Color.Black;
+            lblAdminUsername.ForeColor = Color.Black;
         }
 
         public void ApplyThemeAdmin()
@@ -418,6 +424,7 @@ namespace DoAnPBL3
             lblAdminName.ForeColor = Color.White;
             iconPictureBox1.IconColor = Color.White;
             iconPictureBox2.IconColor = Color.White;
+            lblAdminUsername.ForeColor = Color.White;
         }
 
         private void timer1_Tick(object sender, EventArgs e)

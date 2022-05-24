@@ -441,8 +441,6 @@ namespace DoAnPBL3
             }
         }
 
-        //private List<CBBAuthor> 
-
         private void tbNameNV_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)

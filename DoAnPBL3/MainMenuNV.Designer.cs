@@ -218,13 +218,15 @@ namespace DoAnPBL3
             // 
             this.lblEmployeeUsername.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblEmployeeUsername.AutoSize = true;
+            this.lblEmployeeUsername.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblEmployeeUsername.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.lblEmployeeUsername.ForeColor = System.Drawing.Color.White;
             this.lblEmployeeUsername.Location = new System.Drawing.Point(800, 28);
             this.lblEmployeeUsername.Name = "lblEmployeeUsername";
-            this.lblEmployeeUsername.Size = new System.Drawing.Size(54, 19);
+            this.lblEmployeeUsername.Size = new System.Drawing.Size(85, 19);
             this.lblEmployeeUsername.TabIndex = 14;
-            this.lblEmployeeUsername.Text = "label4";
+            this.lblEmployeeUsername.Text = "Employee";
+            this.lblEmployeeUsername.Click += new System.EventHandler(this.lblEmployeeUsername_Click);
             // 
             // EmployeePicture
             // 

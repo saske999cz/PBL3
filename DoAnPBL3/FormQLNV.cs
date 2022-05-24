@@ -63,9 +63,9 @@ namespace DoAnPBL3
                 case "Light":
                     btnAddNV.Parent.BackColor = Color.FromArgb(220, 220, 220);
                     btnAddNV.Parent.Parent.BackColor = Color.FromArgb(220, 220, 220);
-                    label2.ForeColor = Color.FromArgb(124, 141, 181);
-                    label5.ForeColor = Color.FromArgb(124, 141, 181);
-                    label7.ForeColor = Color.FromArgb(124, 141, 181);
+                    label2.ForeColor = Color.Black;
+                    label5.ForeColor = Color.Black;
+                    label7.ForeColor = Color.Black;
                     lblTSNV.ForeColor = Color.Black;
                     lblSNVNu.ForeColor = Color.Black;
                     lblSNVNam.ForeColor = Color.Black;

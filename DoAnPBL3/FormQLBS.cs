@@ -22,8 +22,8 @@ namespace DoAnPBL3
                     label2.ForeColor = Color.FromArgb(124, 141, 181);
                     label5.ForeColor = Color.FromArgb(124, 141, 181);
                     label7.ForeColor = Color.FromArgb(124, 141, 181);
-                    lblSTA.ForeColor = Color.White;
-                    lblSTV.ForeColor = Color.White;
+                    lblSSTA.ForeColor = Color.White;
+                    lblSSTV.ForeColor = Color.White;
                     lblTSSDB.ForeColor = Color.White;
                     xuiSegmentBS.SegmentActiveTextColor = Color.HotPink;
                     xuiSegmentBS.SegmentBackColor = Color.SlateBlue;
@@ -40,8 +40,8 @@ namespace DoAnPBL3
                     label2.ForeColor = Color.FromArgb(124, 141, 181);
                     label5.ForeColor = Color.FromArgb(124, 141, 181);
                     label7.ForeColor = Color.FromArgb(124, 141, 181);
-                    lblSTA.ForeColor = Color.White;
-                    lblSTV.ForeColor = Color.White;
+                    lblSSTA.ForeColor = Color.White;
+                    lblSSTV.ForeColor = Color.White;
                     lblTSSDB.ForeColor = Color.White;
                     xuiSegmentBS.SegmentActiveTextColor = Color.HotPink;
                     xuiSegmentBS.SegmentBackColor = Color.SlateBlue;
@@ -58,8 +58,8 @@ namespace DoAnPBL3
                     label2.ForeColor = Color.FromArgb(124, 141, 181);
                     label5.ForeColor = Color.FromArgb(124, 141, 181);
                     label7.ForeColor = Color.FromArgb(124, 141, 181);
-                    lblSTA.ForeColor = Color.Black;
-                    lblSTV.ForeColor = Color.Black;
+                    lblSSTA.ForeColor = Color.Black;
+                    lblSSTV.ForeColor = Color.Black;
                     lblTSSDB.ForeColor = Color.Black;
                     xuiSegmentBS.SegmentActiveTextColor = Color.HotPink;
                     xuiSegmentBS.SegmentBackColor = Color.SlateBlue;
@@ -121,6 +121,27 @@ namespace DoAnPBL3
 
         private void FormQLBS_Load(object sender, EventArgs e)
         {
+            using (BookStoreContext context = new BookStoreContext())
+            {
+                var listBooks = context.Books.Join(
+                                        context.Languages,
+                                        book => book.ID_Language,
+                                        lang => lang.ID_Language,
+                                        (book, lang) => new
+                                        {
+                                            book.ID_Book,
+                                            book.NameBook,
+                                            lang.NameLanguage,
+                                            book.Quantity,
+                                            book.Price
+                                        });
+                var listVietnameseBooks = listBooks.Where(book => book.NameLanguage == "Tiếng Việt");
+                var listEnglishBooks = listBooks.Where(book => book.NameLanguage == "Tiếng Anh");
+                dgvQLBS.DataSource = listBooks.ToList();
+                lblTSSDB.Text = listBooks.ToList().Count().ToString();
+                lblSSTV.Text = listVietnameseBooks.ToList().Count().ToString();
+                lblSSTA.Text = listEnglishBooks.ToList().Count().ToString();
+            }
             rjDropDownMenuSXS.IsMainMenu = false;
         }
 

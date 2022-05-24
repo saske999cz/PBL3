@@ -240,6 +240,7 @@ namespace DoAnPBL3
             // 
             this.lblAdminUsername.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblAdminUsername.AutoSize = true;
+            this.lblAdminUsername.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblAdminUsername.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAdminUsername.ForeColor = System.Drawing.Color.White;
             this.lblAdminUsername.Location = new System.Drawing.Point(806, 33);
@@ -247,6 +248,7 @@ namespace DoAnPBL3
             this.lblAdminUsername.Size = new System.Drawing.Size(58, 19);
             this.lblAdminUsername.TabIndex = 14;
             this.lblAdminUsername.Text = "Admin";
+            this.lblAdminUsername.Click += new System.EventHandler(this.lblAdminUsername_Click);
             // 
             // AdminPicture
             // 

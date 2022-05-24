@@ -28,6 +28,7 @@ namespace DoAnPBL3
 
         private void FormQLS_Load(object sender, EventArgs e)
         {
+            timer1.Tick += new System.EventHandler(timer1_Tick);
             using (BookStoreContext context = new BookStoreContext())
             {
                 var listBooks = context.Books.Join(
@@ -60,15 +61,16 @@ namespace DoAnPBL3
 
         private void btnSuaSach_Click(object sender, EventArgs e)
         {
-            if (dgvQLSNV.CurrentRow == null)
-            {
-                RJMessageBox.Show("Hệ thống chưa có mặt hàng sách nào", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                string ID_Book = dgvQLSNV.CurrentRow.Cells["ID"].Value.ToString();
-                new FormSuaNV(ID_Book).Show();
-            }
+            RJMessageBox.Show("Edit");
+            //if (dgvQLSNV.CurrentRow == null)
+            //{
+            //    RJMessageBox.Show("Hệ thống chưa có mặt hàng sách nào", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //}
+            //else
+            //{
+            //    string ID_Book = dgvQLSNV.CurrentRow.Cells["ID"].Value.ToString();
+            //    new FormSuaNV(ID_Book).Show();
+            //}
         }
 
         private void btnDeleteSach_Click(object sender, EventArgs e)

@@ -16,12 +16,13 @@ namespace DoAnPBL3.Models
 
         }
 
-        public Account(string Username, string Password, string Email, bool Role)
+        public Account(string Username, string Password, string Email, bool Role, byte[] Avatar)
         {
             this.Username = Username;
             this.Password = Password;
             this.Email = Email;
             this.Role = Role;
+            this.Avatar = Avatar;
         }
 
         [Key]
@@ -39,6 +40,9 @@ namespace DoAnPBL3.Models
         [StringLength(255)]
         [Required(ErrorMessage = "Email của tài khoản không được để trống")]
         public string Email { get; set; }
+
+        [Column("AnhDaiDien")]
+        public byte[] Avatar { get; set; }
 
         [Column("Quyen")]
         [Required(ErrorMessage = "Quyền không được để trống")]

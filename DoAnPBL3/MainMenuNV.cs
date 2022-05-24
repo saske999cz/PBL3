@@ -219,6 +219,10 @@ namespace DoAnPBL3
         {
             rjddmUserSettingMenu.Show(EmployeePicture, new Point(0, EmployeePicture.Height));
         }
+        private void lblEmployeeUsername_Click(object sender, EventArgs e)
+        {
+            EmployeePicture_Click(sender, e);
+        }
 
         private void rjddmUserSettingMenu_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {

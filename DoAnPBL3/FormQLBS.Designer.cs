@@ -29,20 +29,21 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormQLBS));
             this.dgvQLBS = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NameBook = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PublishDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NameLanguage = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.xuiSegmentBS = new XanderUI.XUISegment();
-            this.lblSTA = new System.Windows.Forms.Label();
+            this.lblSSTA = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.lblSTV = new System.Windows.Forms.Label();
+            this.lblSSTV = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.lblTSSDB = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -78,11 +79,11 @@
             // 
             this.dgvQLBS.AllowUserToAddRows = false;
             this.dgvQLBS.AllowUserToDeleteRows = false;
-            this.dgvQLBS.AllowUserToOrderColumns = true;
             this.dgvQLBS.AllowUserToResizeColumns = false;
             this.dgvQLBS.AllowUserToResizeRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(35)))));
-            this.dgvQLBS.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvQLBS.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvQLBS.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -90,36 +91,44 @@
             this.dgvQLBS.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
             this.dgvQLBS.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvQLBS.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(16)))), ((int)(((byte)(221)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(16)))), ((int)(((byte)(221)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvQLBS.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(16)))), ((int)(((byte)(221)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(16)))), ((int)(((byte)(221)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvQLBS.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvQLBS.ColumnHeadersHeight = 30;
             this.dgvQLBS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvQLBS.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
             this.NameBook,
-            this.PublishDate,
+            this.NameLanguage,
             this.Quantity,
             this.Price});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(43)))), ((int)(((byte)(63)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvQLBS.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 9F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvQLBS.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvQLBS.EnableHeadersVisualStyles = false;
             this.dgvQLBS.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.dgvQLBS.Location = new System.Drawing.Point(11, 170);
             this.dgvQLBS.Margin = new System.Windows.Forms.Padding(2);
             this.dgvQLBS.Name = "dgvQLBS";
             this.dgvQLBS.ReadOnly = true;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvQLBS.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvQLBS.RowHeadersWidth = 51;
             this.dgvQLBS.RowTemplate.Height = 30;
             this.dgvQLBS.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -142,13 +151,13 @@
             this.NameBook.Name = "NameBook";
             this.NameBook.ReadOnly = true;
             // 
-            // PublishDate
+            // NameLanguage
             // 
-            this.PublishDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.PublishDate.DataPropertyName = "PublishDate";
-            this.PublishDate.HeaderText = "Ngày phát hành";
-            this.PublishDate.Name = "PublishDate";
-            this.PublishDate.ReadOnly = true;
+            this.NameLanguage.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NameLanguage.DataPropertyName = "NameLanguage";
+            this.NameLanguage.HeaderText = "Ngôn ngữ";
+            this.NameLanguage.Name = "NameLanguage";
+            this.NameLanguage.ReadOnly = true;
             // 
             // Quantity
             // 
@@ -183,18 +192,18 @@
             this.xuiSegmentBS.Size = new System.Drawing.Size(314, 34);
             this.xuiSegmentBS.TabIndex = 21;
             // 
-            // lblSTA
+            // lblSSTA
             // 
-            this.lblSTA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblSTA.AutoSize = true;
-            this.lblSTA.BackColor = System.Drawing.Color.Transparent;
-            this.lblSTA.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSTA.ForeColor = System.Drawing.Color.White;
-            this.lblSTA.Location = new System.Drawing.Point(812, 49);
-            this.lblSTA.Name = "lblSTA";
-            this.lblSTA.Size = new System.Drawing.Size(29, 16);
-            this.lblSTA.TabIndex = 35;
-            this.lblSTA.Text = "100";
+            this.lblSSTA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblSSTA.AutoSize = true;
+            this.lblSSTA.BackColor = System.Drawing.Color.Transparent;
+            this.lblSSTA.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSSTA.ForeColor = System.Drawing.Color.White;
+            this.lblSSTA.Location = new System.Drawing.Point(812, 49);
+            this.lblSSTA.Name = "lblSSTA";
+            this.lblSSTA.Size = new System.Drawing.Size(29, 16);
+            this.lblSSTA.TabIndex = 35;
+            this.lblSSTA.Text = "100";
             // 
             // label7
             // 
@@ -209,18 +218,18 @@
             this.label7.TabIndex = 34;
             this.label7.Text = "Số sách tiếng Anh";
             // 
-            // lblSTV
+            // lblSSTV
             // 
-            this.lblSTV.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblSTV.AutoSize = true;
-            this.lblSTV.BackColor = System.Drawing.Color.Transparent;
-            this.lblSTV.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSTV.ForeColor = System.Drawing.Color.White;
-            this.lblSTV.Location = new System.Drawing.Point(454, 49);
-            this.lblSTV.Name = "lblSTV";
-            this.lblSTV.Size = new System.Drawing.Size(29, 16);
-            this.lblSTV.TabIndex = 33;
-            this.lblSTV.Text = "100";
+            this.lblSSTV.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblSSTV.AutoSize = true;
+            this.lblSSTV.BackColor = System.Drawing.Color.Transparent;
+            this.lblSSTV.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSSTV.ForeColor = System.Drawing.Color.White;
+            this.lblSSTV.Location = new System.Drawing.Point(454, 49);
+            this.lblSSTV.Name = "lblSSTV";
+            this.lblSSTV.Size = new System.Drawing.Size(29, 16);
+            this.lblSSTV.TabIndex = 33;
+            this.lblSSTV.Text = "100";
             // 
             // label5
             // 
@@ -378,7 +387,7 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.btnSXS);
             this.panel1.Controls.Add(this.btnHDTN);
-            this.panel1.Location = new System.Drawing.Point(833, 170);
+            this.panel1.Location = new System.Drawing.Point(838, 170);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(143, 118);
             this.panel1.TabIndex = 39;
@@ -500,9 +509,9 @@
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.lblSTA);
+            this.Controls.Add(this.lblSSTA);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.lblSTV);
+            this.Controls.Add(this.lblSSTV);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.lblTSSDB);
             this.Controls.Add(this.label2);
@@ -543,9 +552,9 @@
         private System.Windows.Forms.ToolStripMenuItem sốLượngSáchHiệnCóGiảmDầnToolStripMenuItem;
         private XanderUI.XUISegment xuiSegmentBS;
         private Guna.UI2.WinForms.Guna2Button btnTKS;
-        private System.Windows.Forms.Label lblSTA;
+        private System.Windows.Forms.Label lblSSTA;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label lblSTV;
+        private System.Windows.Forms.Label lblSSTV;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblTSSDB;
         private System.Windows.Forms.Label label2;
@@ -558,7 +567,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn NameBook;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PublishDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NameLanguage;
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
     }

@@ -149,6 +149,7 @@ namespace DoAnPBL3
             // 
             // label6
             // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
@@ -160,6 +161,7 @@ namespace DoAnPBL3
             // 
             // lblSSTA
             // 
+            this.lblSSTA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblSSTA.AutoSize = true;
             this.lblSSTA.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSSTA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
@@ -171,6 +173,7 @@ namespace DoAnPBL3
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
@@ -182,6 +185,7 @@ namespace DoAnPBL3
             // 
             // lblSSTV
             // 
+            this.lblSSTV.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblSSTV.AutoSize = true;
             this.lblSSTV.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSSTV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
@@ -250,6 +254,7 @@ namespace DoAnPBL3
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = global::DoAnPBL3.Properties.Resources.united_kingdom_flag;
             this.pictureBox1.Location = new System.Drawing.Point(894, 12);
             this.pictureBox1.Name = "pictureBox1";
@@ -260,6 +265,7 @@ namespace DoAnPBL3
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox2.Image = global::DoAnPBL3.Properties.Resources.vietnam_flag;
             this.pictureBox2.Location = new System.Drawing.Point(537, 12);
             this.pictureBox2.Name = "pictureBox2";
