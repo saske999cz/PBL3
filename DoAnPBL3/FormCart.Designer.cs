@@ -35,23 +35,23 @@ namespace DoAnPBL3
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.xuiObjectEllipse1 = new XanderUI.XUIObjectEllipse();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblNumberBook = new System.Windows.Forms.Label();
             this.panelDesktop = new System.Windows.Forms.Panel();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblTotal = new System.Windows.Forms.Label();
             this.tbTotal = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblTotalNumberBook = new System.Windows.Forms.Label();
             this.tbNumDiverse = new Guna.UI2.WinForms.Guna2TextBox();
             this.tbQuantity = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblQuantity = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.rjbtnCancel = new DoAnPBL3.RJButton();
             this.rjbtnBuy = new DoAnPBL3.RJButton();
             this.btnOK = new DoAnPBL3.RJButton();
-            this.tbNumber = new DoAnPBL3.RJTextBox();
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.tbNumber = new DoAnPBL3.RJTextBox();
             guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.panelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -105,16 +105,16 @@ namespace DoAnPBL3
             this.xuiObjectEllipse1.EffectedControl = this;
             this.xuiObjectEllipse1.EffectedForm = this;
             // 
-            // label2
+            // lblNumberBook
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(194, 69);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(232, 19);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Thêm số loại sách muốn mua";
+            this.lblNumberBook.AutoSize = true;
+            this.lblNumberBook.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumberBook.ForeColor = System.Drawing.Color.White;
+            this.lblNumberBook.Location = new System.Drawing.Point(194, 69);
+            this.lblNumberBook.Name = "lblNumberBook";
+            this.lblNumberBook.Size = new System.Drawing.Size(232, 19);
+            this.lblNumberBook.TabIndex = 3;
+            this.lblNumberBook.Text = "Thêm số loại sách muốn mua";
             // 
             // panelDesktop
             // 
@@ -134,16 +134,16 @@ namespace DoAnPBL3
             this.guna2DragControl1.TargetControl = this.panelTitleBar;
             this.guna2DragControl1.UseTransparentDrag = true;
             // 
-            // label3
+            // lblTotal
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(785, 359);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 18);
-            this.label3.TabIndex = 41;
-            this.label3.Text = "Tổng:";
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.ForeColor = System.Drawing.Color.White;
+            this.lblTotal.Location = new System.Drawing.Point(785, 359);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(49, 18);
+            this.lblTotal.TabIndex = 41;
+            this.lblTotal.Text = "Tổng:";
             // 
             // tbTotal
             // 
@@ -166,19 +166,19 @@ namespace DoAnPBL3
             this.tbTotal.PlaceholderText = "";
             this.tbTotal.ReadOnly = true;
             this.tbTotal.SelectedText = "";
-            this.tbTotal.Size = new System.Drawing.Size(223, 36);
+            this.tbTotal.Size = new System.Drawing.Size(223, 30);
             this.tbTotal.TabIndex = 44;
             // 
-            // label4
+            // lblTotalNumberBook
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(0, 351);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(86, 16);
-            this.label4.TabIndex = 45;
-            this.label4.Text = "Số loại sách";
+            this.lblTotalNumberBook.AutoSize = true;
+            this.lblTotalNumberBook.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold);
+            this.lblTotalNumberBook.ForeColor = System.Drawing.Color.White;
+            this.lblTotalNumberBook.Location = new System.Drawing.Point(34, 359);
+            this.lblTotalNumberBook.Name = "lblTotalNumberBook";
+            this.lblTotalNumberBook.Size = new System.Drawing.Size(93, 18);
+            this.lblTotalNumberBook.TabIndex = 45;
+            this.lblTotalNumberBook.Text = "Số loại sách";
             // 
             // tbNumDiverse
             // 
@@ -194,19 +194,20 @@ namespace DoAnPBL3
             this.tbNumDiverse.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbNumDiverse.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbNumDiverse.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbNumDiverse.Location = new System.Drawing.Point(3, 370);
+            this.tbNumDiverse.Location = new System.Drawing.Point(133, 351);
             this.tbNumDiverse.Name = "tbNumDiverse";
             this.tbNumDiverse.PasswordChar = '\0';
             this.tbNumDiverse.PlaceholderText = "";
             this.tbNumDiverse.ReadOnly = true;
             this.tbNumDiverse.SelectedText = "";
-            this.tbNumDiverse.Size = new System.Drawing.Size(83, 30);
+            this.tbNumDiverse.Size = new System.Drawing.Size(130, 30);
             this.tbNumDiverse.TabIndex = 46;
             // 
             // tbQuantity
             // 
             this.tbQuantity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(43)))), ((int)(((byte)(59)))));
             this.tbQuantity.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(43)))), ((int)(((byte)(59)))));
+            this.tbQuantity.BorderRadius = 2;
             this.tbQuantity.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbQuantity.DefaultText = "";
             this.tbQuantity.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(43)))), ((int)(((byte)(59)))));
@@ -219,26 +220,26 @@ namespace DoAnPBL3
             this.tbQuantity.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbQuantity.ForeColor = System.Drawing.Color.LightGray;
             this.tbQuantity.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbQuantity.Location = new System.Drawing.Point(534, 370);
+            this.tbQuantity.Location = new System.Drawing.Point(534, 351);
             this.tbQuantity.Name = "tbQuantity";
             this.tbQuantity.PasswordChar = '\0';
             this.tbQuantity.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(43)))), ((int)(((byte)(59)))));
             this.tbQuantity.PlaceholderText = "";
             this.tbQuantity.ReadOnly = true;
             this.tbQuantity.SelectedText = "";
-            this.tbQuantity.Size = new System.Drawing.Size(111, 30);
+            this.tbQuantity.Size = new System.Drawing.Size(130, 30);
             this.tbQuantity.TabIndex = 48;
             // 
-            // label5
+            // lblQuantity
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(539, 351);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(100, 16);
-            this.label5.TabIndex = 47;
-            this.label5.Text = "Số lượng sách";
+            this.lblQuantity.AutoSize = true;
+            this.lblQuantity.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold);
+            this.lblQuantity.ForeColor = System.Drawing.Color.White;
+            this.lblQuantity.Location = new System.Drawing.Point(416, 359);
+            this.lblQuantity.Name = "lblQuantity";
+            this.lblQuantity.Size = new System.Drawing.Size(112, 18);
+            this.lblQuantity.TabIndex = 47;
+            this.lblQuantity.Text = "Số lượng sách";
             // 
             // timer1
             // 
@@ -260,7 +261,7 @@ namespace DoAnPBL3
             this.rjbtnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.rjbtnCancel.Name = "rjbtnCancel";
             this.rjbtnCancel.Size = new System.Drawing.Size(150, 40);
-            this.rjbtnCancel.TabIndex = 40;
+            this.rjbtnCancel.TabIndex = 5;
             this.rjbtnCancel.Text = "Hủy";
             this.rjbtnCancel.TextColor = System.Drawing.Color.White;
             this.rjbtnCancel.UseVisualStyleBackColor = false;
@@ -281,7 +282,7 @@ namespace DoAnPBL3
             this.rjbtnBuy.Location = new System.Drawing.Point(325, 451);
             this.rjbtnBuy.Name = "rjbtnBuy";
             this.rjbtnBuy.Size = new System.Drawing.Size(150, 40);
-            this.rjbtnBuy.TabIndex = 39;
+            this.rjbtnBuy.TabIndex = 4;
             this.rjbtnBuy.Text = "Mua sách";
             this.rjbtnBuy.TextColor = System.Drawing.Color.White;
             this.rjbtnBuy.UseVisualStyleBackColor = false;
@@ -299,38 +300,14 @@ namespace DoAnPBL3
             this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOK.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOK.ForeColor = System.Drawing.Color.White;
-            this.btnOK.Location = new System.Drawing.Point(707, 63);
+            this.btnOK.Location = new System.Drawing.Point(720, 62);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(128, 31);
-            this.btnOK.TabIndex = 4;
+            this.btnOK.TabIndex = 3;
             this.btnOK.Text = "OK";
             this.btnOK.TextColor = System.Drawing.Color.White;
             this.btnOK.UseVisualStyleBackColor = false;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
-            // 
-            // tbNumber
-            // 
-            this.tbNumber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(43)))), ((int)(((byte)(59)))));
-            this.tbNumber.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.tbNumber.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(43)))), ((int)(((byte)(59)))));
-            this.tbNumber.BorderRadius = 0;
-            this.tbNumber.BorderSize = 2;
-            this.tbNumber.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbNumber.ForeColor = System.Drawing.Color.LightGray;
-            this.tbNumber.Location = new System.Drawing.Point(446, 63);
-            this.tbNumber.Margin = new System.Windows.Forms.Padding(4);
-            this.tbNumber.Multiline = false;
-            this.tbNumber.Name = "tbNumber";
-            this.tbNumber.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.tbNumber.PasswordChar = false;
-            this.tbNumber.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.tbNumber.PlaceholderText = "Nhập";
-            this.tbNumber.Size = new System.Drawing.Size(250, 31);
-            this.tbNumber.TabIndex = 2;
-            this.tbNumber.Texts = "";
-            this.tbNumber.UnderlinedStyle = false;
-            this.tbNumber._TextChanged += new System.EventHandler(this.tbNumber__TextChanged);
-            this.tbNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbNumber_KeyPress);
             // 
             // guna2Elipse2
             // 
@@ -344,23 +321,46 @@ namespace DoAnPBL3
             // 
             this.guna2Elipse4.TargetControl = this.tbTotal;
             // 
+            // tbNumber
+            // 
+            this.tbNumber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(43)))), ((int)(((byte)(59)))));
+            this.tbNumber.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(43)))), ((int)(((byte)(59)))));
+            this.tbNumber.BorderFocusColor = System.Drawing.Color.DodgerBlue;
+            this.tbNumber.BorderRadius = 0;
+            this.tbNumber.BorderSize = 2;
+            this.tbNumber.Font = new System.Drawing.Font("Arial", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbNumber.ForeColor = System.Drawing.Color.DimGray;
+            this.tbNumber.Location = new System.Drawing.Point(450, 62);
+            this.tbNumber.Margin = new System.Windows.Forms.Padding(4);
+            this.tbNumber.Multiline = false;
+            this.tbNumber.Name = "tbNumber";
+            this.tbNumber.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.tbNumber.PasswordChar = false;
+            this.tbNumber.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.tbNumber.PlaceholderText = "";
+            this.tbNumber.Size = new System.Drawing.Size(250, 31);
+            this.tbNumber.TabIndex = 0;
+            this.tbNumber.Texts = "";
+            this.tbNumber.UnderlinedStyle = false;
+            this.tbNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbNumber_KeyPress);
+            // 
             // FormCart
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(53)))), ((int)(((byte)(70)))));
             this.ClientSize = new System.Drawing.Size(1115, 503);
+            this.Controls.Add(this.tbNumber);
             this.Controls.Add(this.tbQuantity);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lblQuantity);
             this.Controls.Add(this.tbNumDiverse);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblTotalNumberBook);
             this.Controls.Add(this.tbTotal);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.rjbtnCancel);
             this.Controls.Add(this.rjbtnBuy);
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.btnOK);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.tbNumber);
+            this.Controls.Add(this.lblNumberBook);
             this.Controls.Add(this.panelTitleBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormCart";
@@ -382,22 +382,22 @@ namespace DoAnPBL3
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private XanderUI.XUIObjectEllipse xuiObjectEllipse1;
-        private System.Windows.Forms.Label label2;
-        private RJTextBox tbNumber;
+        private System.Windows.Forms.Label lblNumberBook;
         private RJButton btnOK;
         private System.Windows.Forms.Panel panelDesktop;
         private RJButton rjbtnBuy;
         private RJButton rjbtnCancel;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblTotal;
         private Guna.UI2.WinForms.Guna2TextBox tbTotal;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblTotalNumberBook;
         private Guna.UI2.WinForms.Guna2TextBox tbNumDiverse;
         private Guna.UI2.WinForms.Guna2TextBox tbQuantity;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblQuantity;
         private System.Windows.Forms.Timer timer1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse3;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse4;
+        private RJTextBox tbNumber;
     }
 }

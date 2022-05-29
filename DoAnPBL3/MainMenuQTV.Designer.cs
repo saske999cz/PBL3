@@ -254,17 +254,16 @@ namespace DoAnPBL3
             // 
             this.AdminPicture.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.AdminPicture.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
-            this.AdminPicture.BackgroundImage = global::DoAnPBL3.Properties.Resources.test5;
             this.AdminPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.AdminPicture.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AdminPicture.ForeColor = System.Drawing.SystemColors.ControlText;
             this.AdminPicture.IconChar = FontAwesome.Sharp.IconChar.None;
             this.AdminPicture.IconColor = System.Drawing.SystemColors.ControlText;
             this.AdminPicture.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.AdminPicture.IconSize = 35;
-            this.AdminPicture.Location = new System.Drawing.Point(765, 26);
+            this.AdminPicture.IconSize = 45;
+            this.AdminPicture.Location = new System.Drawing.Point(749, 15);
             this.AdminPicture.Name = "AdminPicture";
-            this.AdminPicture.Size = new System.Drawing.Size(35, 35);
+            this.AdminPicture.Size = new System.Drawing.Size(45, 45);
             this.AdminPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.AdminPicture.TabIndex = 13;
             this.AdminPicture.TabStop = false;
@@ -494,7 +493,7 @@ namespace DoAnPBL3
             this.lblDate.AutoSize = true;
             this.lblDate.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDate.ForeColor = System.Drawing.Color.White;
-            this.lblDate.Location = new System.Drawing.Point(830, 5);
+            this.lblDate.Location = new System.Drawing.Point(815, 5);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(37, 16);
             this.lblDate.TabIndex = 14;

@@ -37,7 +37,10 @@ namespace DoAnPBL3
         {
             using (BookStoreContext context = new BookStoreContext())
             {
-                var employee = context.Employees.Where(em => em.ID_Employee == ID_Employee).ToList().FirstOrDefault();
+                var employee = context.Employees
+                    .Where(em => em.ID_Employee == ID_Employee)
+                    .ToList()
+                    .FirstOrDefault();
                 tbNameNV.Text = employee.FullNameEmployee;
                 tbEmailNV.Text = employee.Email;
                 tbBD.Text = employee.DateOfBirth.ToString("dd/MM/yyyy");
@@ -376,7 +379,10 @@ namespace DoAnPBL3
         {
             using (BookStoreContext context = new BookStoreContext())
             {
-                var employee = context.Employees.Where(em => em.ID_Employee == ID_Employee).ToList().First();
+                var employee = context.Employees
+                    .Where(em => em.ID_Employee == ID_Employee)
+                    .ToList()
+                    .First();
                 bool isNewName, isNewEmail, isNewDateOfBirth, isNewStartDate, isNewGender, isNewPhone, isNewID_Card, isNewAddress, isNewAvatar;
                 isNewName = tbNameNV.Text != employee.FullNameEmployee;
                 isNewEmail = tbEmailNV.Text != employee.Email;

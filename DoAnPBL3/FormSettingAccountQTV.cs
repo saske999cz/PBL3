@@ -15,14 +15,43 @@ using System.Windows.Forms;
 
 namespace DoAnPBL3
 {
-    public partial class FormSettingAccountNV : Form
+    public partial class FormSettingAccountQTV : Form
     {
         private string accountUsername;
-
-        public FormSettingAccountNV(string accountUsername)
+        public FormSettingAccountQTV(string theme, string accountUsername)
         {
-            this.accountUsername = accountUsername;
             InitializeComponent();
+            this.accountUsername = accountUsername;
+            switch (theme)
+            {
+                case "Admin":
+                    btnEditImg.Parent.BackColor = Color.FromArgb(34, 33, 74);
+                    btnSaveChange.Parent.BackColor = Color.FromArgb(34, 33, 74);
+                    lblPassword.ForeColor = Color.White;
+                    lblAvatar.ForeColor = Color.White;
+                    lblConfirmPassword.ForeColor = Color.White;
+                    tbPassword.FillColor = Color.White;
+                    tbPassword.BorderColor = Color.White;
+                    break;
+                case "Dark":
+                    btnEditImg.Parent.BackColor = Color.FromArgb(32, 32, 32);
+                    btnSaveChange.Parent.BackColor = Color.FromArgb(32, 32, 32);
+                    lblPassword.ForeColor = Color.White;
+                    lblAvatar.ForeColor = Color.White;
+                    lblConfirmPassword.ForeColor = Color.White;
+                    tbPassword.FillColor = Color.White;
+                    tbPassword.BorderColor = Color.White;
+                    break;
+                case "Light":
+                    btnEditImg.Parent.BackColor = Color.FromArgb(220, 220, 220);
+                    btnSaveChange.Parent.BackColor = Color.FromArgb(220, 220, 220);
+                    lblPassword.ForeColor = Color.Black;
+                    lblAvatar.ForeColor = Color.Black;
+                    lblConfirmPassword.ForeColor = Color.Black;
+                    tbPassword.FillColor = Color.White;
+                    tbPassword.BorderColor = Color.White;
+                    break;
+            }
         }
 
         public void Alert(string msg, Form_Alert.enmType type)

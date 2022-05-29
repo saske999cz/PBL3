@@ -54,7 +54,7 @@ namespace DoAnPBL3
 
         private void linkLabelForgotPassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            OpenChildForm(new FormSend_Code());
+            OpenChildForm(new FormForgotPassword(username, password, email, emailPassword));
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -135,7 +135,7 @@ namespace DoAnPBL3
             if (txtPassword.PasswordChar == '●')
             {
                 txtPassword.PasswordChar = '\0';
-                Show.BringToFront();
+                ShowPass.BringToFront();
             }
         }
 
@@ -144,7 +144,7 @@ namespace DoAnPBL3
             if (txtPassword.PasswordChar == '\0')
             {
                 txtPassword.PasswordChar = '●';
-                Hide.BringToFront();
+                HidePass.BringToFront();
             }
         }
         private void txtUserName_KeyPress(object sender, KeyPressEventArgs e)
@@ -172,7 +172,6 @@ namespace DoAnPBL3
                 // Open only form
                 currentChildForm.Close();
             }
-
             currentChildForm = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
@@ -182,6 +181,5 @@ namespace DoAnPBL3
             childForm.BringToFront();
             childForm.Show();
         }
-
     }
 }

@@ -34,7 +34,6 @@ namespace DoAnPBL3
         private void FormAddSach_Load(object sender, EventArgs e)
         {
             ShowAllLanguages();
-            ShowAllAuthors();
             ShowAllPublishers();
             ShowAllGenres();
         }
@@ -44,7 +43,7 @@ namespace DoAnPBL3
             bool isPublishDateContainsAlpha, isValidFormatPublishDate, isPublishDateGreaterThanCurrentDate = false,
                 isValidIDBook, isValidNameBook, isValidLanguage, isValidAuthor, isValidPublisher, 
                 isValidGenre, isValidPrice, isValidQuantity, isValidUnit;
-            string ID_Book, nameBook, publishDate, language, author, publisher, genre, price, quantity, unit;
+            string ID_Book, nameBook, publishDate, author, price, quantity, unit;
             byte[] bookImage;
             // Validate id book
             ID_Book = tbIDBook.Text;
@@ -149,29 +148,26 @@ namespace DoAnPBL3
             // Validate language
             if (cbbLanguage.SelectedItem == null)
             {
-                language = "";
                 msgValidateLanguage.ForeColor = Color.Red;
                 msgValidateLanguage.Text = "Ngôn ngữ không được để trống";
                 isValidLanguage = false;
             }
             else
             {
-                language = cbbLanguage.SelectedItem.ToString();
                 msgValidateLanguage.ForeColor = Color.White;
                 msgValidateLanguage.Text = "";
                 isValidLanguage = true;
             }
             // Validate author
-            if (cbbAuthor.SelectedItem == null)
+            author = tbAuthor.Text;
+            if (author == "")
             {
-                author = "";
                 msgValidateAuthor.ForeColor = Color.Red;
                 msgValidateAuthor.Text = "Tác giả không được để trống";
                 isValidAuthor = false;
             }
             else
             {
-                author = cbbAuthor.SelectedItem.ToString();
                 msgValidateAuthor.ForeColor = Color.White;
                 msgValidateAuthor.Text = "";
                 isValidAuthor = true;
@@ -179,14 +175,12 @@ namespace DoAnPBL3
             // Validate publisher
             if (cbbPublisher.SelectedItem == null)
             {
-                publisher = "";
                 msgValidatePublisher.ForeColor = Color.Red;
                 msgValidatePublisher.Text = "Nhà xuất bản không được để trống";
                 isValidPublisher = false;
             }
             else
             {
-                publisher = cbbPublisher.SelectedItem.ToString();
                 msgValidatePublisher.ForeColor = Color.White;
                 msgValidatePublisher.Text = "";
                 isValidPublisher = true;
@@ -194,14 +188,12 @@ namespace DoAnPBL3
             // Validate genre
             if (cbbGenre.SelectedItem == null)
             {
-                genre = "";
                 msgValidateGenre.ForeColor = Color.Red;
                 msgValidateGenre.Text = "Thể loại không được để trống";
                 isValidGenre = false;
             }
             else
             {
-                genre = cbbGenre.SelectedItem.ToString();
                 msgValidateGenre.ForeColor = Color.White;
                 msgValidateGenre.Text = "";
                 isValidGenre = true;
@@ -287,12 +279,48 @@ namespace DoAnPBL3
                         Convert.ToInt32(publishDate.Substring(0, 2))
                     );
 
-                    Book newBook = new Book(ID_Book, nameBook, dateOfPublish, Convert.ToInt32(quantity), Convert.ToInt32(price), unit, 
-                      cbbLanguage.SelectedIndex + 1, cbbAuthor.SelectedIndex + 1, cbbPublisher.SelectedIndex + 1, cbbGenre.SelectedIndex + 1, bookImage);
-                    context.Books.Add(newBook);
-                    context.SaveChanges();
-                    Alert("Thêm sách mới thành công", Form_Alert.enmType.Success);
-                    Close();
+                    var findingAuthor = context.Authors
+                        .Where(auth => auth.FullNameAuthor == tbAuthor.Text)
+                        .Select(auth => new { auth.ID_Author })
+                        .ToList()
+                        .FirstOrDefault();
+                    if (findingAuthor == null)
+                    {
+                        DialogResult result = RJMessageBox.Show("Tác giả " + tbAuthor.Text + " chưa có trong hệ thống. Xác nhận thêm mới?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (result == DialogResult.Yes)
+                        {
+                            Author newAuthor;
+                            var lastAuthor = context.Authors
+                                .OrderBy(auth => auth.ID_Author)
+                                .Select(auth => new { auth.ID_Author })
+                                .ToList()
+                                .LastOrDefault();
+                            if (lastAuthor == null)
+                                newAuthor = new Author(1, tbAuthor.Text, "");
+                            else
+                                newAuthor = new Author(lastAuthor.ID_Author + 1, tbAuthor.Text, "");
+                            context.Authors.Add(newAuthor);
+                            context.SaveChanges();
+
+                            Book newBook = new Book(ID_Book, nameBook, dateOfPublish, Convert.ToInt32(quantity), Convert.ToInt32(price), unit,
+                                cbbLanguage.SelectedIndex + 1, lastAuthor.ID_Author, cbbPublisher.SelectedIndex + 1, cbbGenre.SelectedIndex + 1, bookImage);
+                            context.Books.Add(newBook);
+                            context.SaveChanges();
+                            Alert("Thêm sách mới thành công", Form_Alert.enmType.Success);
+                            Close();
+                        }
+                        else
+                            return;
+                    }
+                    else
+                    {
+                        Book newBook = new Book(ID_Book, nameBook, dateOfPublish, Convert.ToInt32(quantity), Convert.ToInt32(price), unit,
+                            cbbLanguage.SelectedIndex + 1, findingAuthor.ID_Author, cbbPublisher.SelectedIndex + 1, cbbGenre.SelectedIndex + 1, bookImage);
+                        context.Books.Add(newBook);
+                        context.SaveChanges();
+                        Alert("Thêm sách mới thành công", Form_Alert.enmType.Success);
+                        Close();
+                    }
                 }
             }
             else
@@ -303,15 +331,16 @@ namespace DoAnPBL3
 
         private void rjbtnCancel_Click(object sender, EventArgs e)
         {
-            string ID_Book, nameBook, publishDate, price, quantity;
+            string ID_Book, nameBook, publishDate, author, price, quantity;
             ID_Book = tbIDBook.Text;
             nameBook = tbNameBook.Text;
             publishDate = tbPublishDate.Text;
+            author = tbAuthor.Text;
             price = tbPrice.Text;
             quantity = tbQuantity.Text;
-            if (ID_Book != "" || nameBook != "" || publishDate != "" || cbbLanguage.SelectedItem != null 
-                || cbbAuthor.SelectedItem != null || cbbPublisher.SelectedItem != null || cbbGenre.SelectedItem != null 
-                || price != "" || quantity != "0" || cbUnit.SelectedItem != null || gpbBookImg.Image != null)
+            if (ID_Book != "" || nameBook != "" || publishDate != "" || cbbLanguage.SelectedItem != null || author != ""
+                || cbbPublisher.SelectedItem != null || cbbGenre.SelectedItem != null || price != "" || quantity != "0" 
+                || cbUnit.SelectedItem != null || gpbBookImg.Image != null)
             {
                 DialogResult result = RJMessageBox.Show("Dữ liệu chưa được lưu. Bạn vẫn muốn thoát?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
                 if (result == DialogResult.Yes)
@@ -321,6 +350,26 @@ namespace DoAnPBL3
             }
             else
                 Close();
+        }
+
+        private void tbAuthor_TextChanged(object sender, EventArgs e)
+        {
+            using (BookStoreContext context = new BookStoreContext())
+            {
+                var author = context.Authors
+                    .Where(auth => auth.FullNameAuthor.Contains(tbAuthor.Text))
+                    .Select(auth => new { auth.FullNameAuthor })
+                    .ToList()
+                    .FirstOrDefault();
+                if (author != null)
+                {
+                    tbAuthor.Text = author.FullNameAuthor;
+                }
+                else
+                {
+                    tbAuthor.Text = "";
+                }
+            }
         }
 
         private byte[] ImageToByteArray(Guna2PictureBox pictureBox)
@@ -364,7 +413,10 @@ namespace DoAnPBL3
         {
             using (BookStoreContext context = new BookStoreContext())
             {
-                var listLanguages = context.Languages.OrderBy(lang => lang.ID_Language).Select(lang => lang).ToList();
+                var listLanguages = context.Languages
+                    .OrderBy(lang => lang.ID_Language)
+                    .Select(lang => lang)
+                    .ToList();
 
                 int numLanguage = listLanguages.Count();
                 if (numLanguage != 0)
@@ -380,32 +432,16 @@ namespace DoAnPBL3
                 }
             }
         }
-        private void ShowAllAuthors()
-        {
-            using (BookStoreContext context = new BookStoreContext())
-            {
-                var listAuthors = context.Authors.OrderBy(author => author.ID_Author).Select(author => author).ToList();
-
-                int numAuthor = listAuthors.Count();
-                if (numAuthor != 0)
-                {
-                    for (int i = 0; i < numAuthor; i++)
-                    {
-                        cbbAuthor.Items.Add(listAuthors[i].FullNameAuthor);
-                    }
-                }
-                else
-                {
-                    cbbAuthor.Items.Add("");
-                }
-            }
-        }
 
         private void ShowAllPublishers()
         {
             using (BookStoreContext context = new BookStoreContext())
             {
-                var listPublishers = context.Publishers.OrderBy(publisher => publisher.ID_Publisher).Select(publisher => publisher).ToList();
+                var listPublishers = context.Publishers
+                    .OrderBy(publisher => publisher.ID_Publisher)
+                    .Select(publisher => publisher)
+                    .ToList();
+
                 int numPublisher = listPublishers.Count();
                 if (numPublisher != 0)
                 {
@@ -425,7 +461,11 @@ namespace DoAnPBL3
         {
             using (BookStoreContext context = new BookStoreContext())
             {
-                var listGenres = context.Genres.OrderBy(genre => genre.ID_Genre).Select(genre => genre).ToList();
+                var listGenres = context.Genres
+                    .OrderBy(genre => genre.ID_Genre)
+                    .Select(genre => genre)
+                    .ToList();
+
                 int numGenre = listGenres.Count();
                 if (numGenre != 0)
                 {

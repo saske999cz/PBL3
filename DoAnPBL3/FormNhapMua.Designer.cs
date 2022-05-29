@@ -30,39 +30,39 @@ namespace DoAnPBL3
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormNhapMua));
-            this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.btnDelete = new Guna.UI2.WinForms.Guna2CircleButton();
             this.tbPrice = new Guna.UI2.WinForms.Guna2TextBox();
-            this.tbSL = new Guna.UI2.WinForms.Guna2TextBox();
+            this.tbQuantity = new Guna.UI2.WinForms.Guna2TextBox();
             this.tbNameBook = new Guna.UI2.WinForms.Guna2TextBox();
             this.tbIDBook = new Guna.UI2.WinForms.Guna2TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.lblCP = new System.Windows.Forms.Label();
+            this.lblAmount = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.tbCP = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblNameBook = new System.Windows.Forms.Label();
+            this.lblPrice = new System.Windows.Forms.Label();
+            this.lblQuantity = new System.Windows.Forms.Label();
+            this.lblIDBook = new System.Windows.Forms.Label();
+            this.tbAmount = new Guna.UI2.WinForms.Guna2TextBox();
             this.Index = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // guna2CircleButton1
+            // btnDelete
             // 
-            this.guna2CircleButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2CircleButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2CircleButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2CircleButton1.FillColor = System.Drawing.Color.Firebrick;
-            this.guna2CircleButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2CircleButton1.ForeColor = System.Drawing.Color.White;
-            this.guna2CircleButton1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CircleButton1.Image")));
-            this.guna2CircleButton1.Location = new System.Drawing.Point(1049, 5);
-            this.guna2CircleButton1.Name = "guna2CircleButton1";
-            this.guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CircleButton1.Size = new System.Drawing.Size(39, 40);
-            this.guna2CircleButton1.TabIndex = 27;
-            this.guna2CircleButton1.Click += new System.EventHandler(this.guna2CircleButton1_Click);
+            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDelete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDelete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDelete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDelete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDelete.FillColor = System.Drawing.Color.Firebrick;
+            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
+            this.btnDelete.Location = new System.Drawing.Point(1049, 5);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnDelete.Size = new System.Drawing.Size(39, 40);
+            this.btnDelete.TabIndex = 27;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // tbPrice
             // 
@@ -89,30 +89,30 @@ namespace DoAnPBL3
             this.tbPrice.Size = new System.Drawing.Size(114, 27);
             this.tbPrice.TabIndex = 25;
             // 
-            // tbSL
+            // tbQuantity
             // 
-            this.tbSL.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(43)))), ((int)(((byte)(59)))));
-            this.tbSL.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbSL.DefaultText = "";
-            this.tbSL.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tbSL.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tbSL.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbSL.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbSL.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(43)))), ((int)(((byte)(59)))));
-            this.tbSL.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbSL.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.tbSL.ForeColor = System.Drawing.Color.LightGray;
-            this.tbSL.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbSL.Location = new System.Drawing.Point(567, 11);
-            this.tbSL.MaxLength = 10;
-            this.tbSL.Name = "tbSL";
-            this.tbSL.PasswordChar = '\0';
-            this.tbSL.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.tbSL.PlaceholderText = "Nhập";
-            this.tbSL.SelectedText = "";
-            this.tbSL.Size = new System.Drawing.Size(59, 27);
-            this.tbSL.TabIndex = 24;
-            this.tbSL.TextChanged += new System.EventHandler(this.tbSL_TextChanged);
+            this.tbQuantity.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(43)))), ((int)(((byte)(59)))));
+            this.tbQuantity.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbQuantity.DefaultText = "";
+            this.tbQuantity.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tbQuantity.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.tbQuantity.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbQuantity.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbQuantity.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(43)))), ((int)(((byte)(59)))));
+            this.tbQuantity.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbQuantity.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tbQuantity.ForeColor = System.Drawing.Color.LightGray;
+            this.tbQuantity.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbQuantity.Location = new System.Drawing.Point(567, 11);
+            this.tbQuantity.MaxLength = 10;
+            this.tbQuantity.Name = "tbQuantity";
+            this.tbQuantity.PasswordChar = '\0';
+            this.tbQuantity.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.tbQuantity.PlaceholderText = "Nhập";
+            this.tbQuantity.SelectedText = "";
+            this.tbQuantity.Size = new System.Drawing.Size(59, 27);
+            this.tbQuantity.TabIndex = 24;
+            this.tbQuantity.TextChanged += new System.EventHandler(this.tbQuantity_TextChanged);
             // 
             // tbNameBook
             // 
@@ -175,16 +175,16 @@ namespace DoAnPBL3
             this.label7.TabIndex = 22;
             this.label7.Text = "x";
             // 
-            // lblCP
+            // lblAmount
             // 
-            this.lblCP.AutoSize = true;
-            this.lblCP.BackColor = System.Drawing.Color.Transparent;
-            this.lblCP.ForeColor = System.Drawing.Color.White;
-            this.lblCP.Location = new System.Drawing.Point(818, 18);
-            this.lblCP.Name = "lblCP";
-            this.lblCP.Size = new System.Drawing.Size(41, 13);
-            this.lblCP.TabIndex = 21;
-            this.lblCP.Text = "Chi phí";
+            this.lblAmount.AutoSize = true;
+            this.lblAmount.BackColor = System.Drawing.Color.Transparent;
+            this.lblAmount.ForeColor = System.Drawing.Color.White;
+            this.lblAmount.Location = new System.Drawing.Point(818, 18);
+            this.lblAmount.Name = "lblAmount";
+            this.lblAmount.Size = new System.Drawing.Size(41, 13);
+            this.lblAmount.TabIndex = 21;
+            this.lblAmount.Text = "Chi phí";
             // 
             // label5
             // 
@@ -197,74 +197,74 @@ namespace DoAnPBL3
             this.label5.TabIndex = 20;
             this.label5.Text = "=";
             // 
-            // label4
+            // lblNameBook
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(187, 18);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 13);
-            this.label4.TabIndex = 19;
-            this.label4.Text = "Tên sách";
+            this.lblNameBook.AutoSize = true;
+            this.lblNameBook.BackColor = System.Drawing.Color.Transparent;
+            this.lblNameBook.ForeColor = System.Drawing.Color.White;
+            this.lblNameBook.Location = new System.Drawing.Point(187, 18);
+            this.lblNameBook.Name = "lblNameBook";
+            this.lblNameBook.Size = new System.Drawing.Size(52, 13);
+            this.lblNameBook.TabIndex = 19;
+            this.lblNameBook.Text = "Tên sách";
             // 
-            // label3
+            // lblPrice
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(647, 18);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(23, 13);
-            this.label3.TabIndex = 18;
-            this.label3.Text = "Giá";
+            this.lblPrice.AutoSize = true;
+            this.lblPrice.BackColor = System.Drawing.Color.Transparent;
+            this.lblPrice.ForeColor = System.Drawing.Color.White;
+            this.lblPrice.Location = new System.Drawing.Point(647, 18);
+            this.lblPrice.Name = "lblPrice";
+            this.lblPrice.Size = new System.Drawing.Size(23, 13);
+            this.lblPrice.TabIndex = 18;
+            this.lblPrice.Text = "Giá";
             // 
-            // label2
+            // lblQuantity
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(508, 18);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 13);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "Số Lượng";
+            this.lblQuantity.AutoSize = true;
+            this.lblQuantity.BackColor = System.Drawing.Color.Transparent;
+            this.lblQuantity.ForeColor = System.Drawing.Color.White;
+            this.lblQuantity.Location = new System.Drawing.Point(508, 18);
+            this.lblQuantity.Name = "lblQuantity";
+            this.lblQuantity.Size = new System.Drawing.Size(53, 13);
+            this.lblQuantity.TabIndex = 16;
+            this.lblQuantity.Text = "Số Lượng";
             // 
-            // label1
+            // lblIDBook
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(34, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 13);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "ID Sách";
+            this.lblIDBook.AutoSize = true;
+            this.lblIDBook.BackColor = System.Drawing.Color.Transparent;
+            this.lblIDBook.ForeColor = System.Drawing.Color.White;
+            this.lblIDBook.Location = new System.Drawing.Point(34, 18);
+            this.lblIDBook.Name = "lblIDBook";
+            this.lblIDBook.Size = new System.Drawing.Size(46, 13);
+            this.lblIDBook.TabIndex = 15;
+            this.lblIDBook.Text = "ID Sách";
             // 
-            // tbCP
+            // tbAmount
             // 
-            this.tbCP.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(43)))), ((int)(((byte)(59)))));
-            this.tbCP.Cursor = System.Windows.Forms.Cursors.Default;
-            this.tbCP.DefaultText = "";
-            this.tbCP.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(43)))), ((int)(((byte)(59)))));
-            this.tbCP.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(43)))), ((int)(((byte)(59)))));
-            this.tbCP.DisabledState.ForeColor = System.Drawing.Color.LightGray;
-            this.tbCP.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbCP.Enabled = false;
-            this.tbCP.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(43)))), ((int)(((byte)(59)))));
-            this.tbCP.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbCP.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.tbCP.ForeColor = System.Drawing.Color.White;
-            this.tbCP.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbCP.Location = new System.Drawing.Point(860, 11);
-            this.tbCP.Name = "tbCP";
-            this.tbCP.PasswordChar = '\0';
-            this.tbCP.PlaceholderForeColor = System.Drawing.SystemColors.Window;
-            this.tbCP.PlaceholderText = "";
-            this.tbCP.ReadOnly = true;
-            this.tbCP.SelectedText = "";
-            this.tbCP.Size = new System.Drawing.Size(176, 27);
-            this.tbCP.TabIndex = 28;
+            this.tbAmount.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(43)))), ((int)(((byte)(59)))));
+            this.tbAmount.Cursor = System.Windows.Forms.Cursors.Default;
+            this.tbAmount.DefaultText = "";
+            this.tbAmount.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(43)))), ((int)(((byte)(59)))));
+            this.tbAmount.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(43)))), ((int)(((byte)(59)))));
+            this.tbAmount.DisabledState.ForeColor = System.Drawing.Color.LightGray;
+            this.tbAmount.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbAmount.Enabled = false;
+            this.tbAmount.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(43)))), ((int)(((byte)(59)))));
+            this.tbAmount.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbAmount.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tbAmount.ForeColor = System.Drawing.Color.White;
+            this.tbAmount.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbAmount.Location = new System.Drawing.Point(860, 11);
+            this.tbAmount.Name = "tbAmount";
+            this.tbAmount.PasswordChar = '\0';
+            this.tbAmount.PlaceholderForeColor = System.Drawing.SystemColors.Window;
+            this.tbAmount.PlaceholderText = "";
+            this.tbAmount.ReadOnly = true;
+            this.tbAmount.SelectedText = "";
+            this.tbAmount.Size = new System.Drawing.Size(176, 27);
+            this.tbAmount.TabIndex = 28;
             // 
             // Index
             // 
@@ -284,19 +284,19 @@ namespace DoAnPBL3
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(53)))), ((int)(((byte)(70)))));
             this.ClientSize = new System.Drawing.Size(1094, 52);
             this.Controls.Add(this.Index);
-            this.Controls.Add(this.tbCP);
-            this.Controls.Add(this.guna2CircleButton1);
+            this.Controls.Add(this.tbAmount);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.tbPrice);
-            this.Controls.Add(this.tbSL);
+            this.Controls.Add(this.tbQuantity);
             this.Controls.Add(this.tbNameBook);
             this.Controls.Add(this.tbIDBook);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.lblCP);
+            this.Controls.Add(this.lblAmount);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblNameBook);
+            this.Controls.Add(this.lblPrice);
+            this.Controls.Add(this.lblQuantity);
+            this.Controls.Add(this.lblIDBook);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormNhapMua";
@@ -307,19 +307,19 @@ namespace DoAnPBL3
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton1;
+        private Guna.UI2.WinForms.Guna2CircleButton btnDelete;
         private Guna.UI2.WinForms.Guna2TextBox tbPrice;
-        private Guna.UI2.WinForms.Guna2TextBox tbSL;
+        private Guna.UI2.WinForms.Guna2TextBox tbQuantity;
         private Guna.UI2.WinForms.Guna2TextBox tbNameBook;
         private Guna.UI2.WinForms.Guna2TextBox tbIDBook;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label lblCP;
+        private System.Windows.Forms.Label lblAmount;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2TextBox tbCP;
+        private System.Windows.Forms.Label lblNameBook;
+        private System.Windows.Forms.Label lblPrice;
+        private System.Windows.Forms.Label lblQuantity;
+        private System.Windows.Forms.Label lblIDBook;
+        private Guna.UI2.WinForms.Guna2TextBox tbAmount;
         private System.Windows.Forms.Label Index;
     }
 }

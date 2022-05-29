@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DoAnPBL3
-{
+{   
     public partial class FormQLBS : Form
     {
         public FormQLBS(string theme)
@@ -55,9 +55,9 @@ namespace DoAnPBL3
                     break;
                 case "Light":
                     btnTKS.Parent.BackColor = Color.FromArgb(220, 220, 220);
-                    label2.ForeColor = Color.FromArgb(124, 141, 181);
-                    label5.ForeColor = Color.FromArgb(124, 141, 181);
-                    label7.ForeColor = Color.FromArgb(124, 141, 181);
+                    label2.ForeColor = Color.Black;
+                    label5.ForeColor = Color.Black;
+                    label7.ForeColor = Color.Black;
                     lblSSTA.ForeColor = Color.Black;
                     lblSSTV.ForeColor = Color.Black;
                     lblTSSDB.ForeColor = Color.Black;
@@ -124,30 +124,74 @@ namespace DoAnPBL3
             using (BookStoreContext context = new BookStoreContext())
             {
                 var listBooks = context.Books.Join(
-                                        context.Languages,
-                                        book => book.ID_Language,
-                                        lang => lang.ID_Language,
-                                        (book, lang) => new
-                                        {
-                                            book.ID_Book,
-                                            book.NameBook,
-                                            lang.NameLanguage,
-                                            book.Quantity,
-                                            book.Price
-                                        });
+                    context.Languages,
+                    book => book.ID_Language,
+                    lang => lang.ID_Language,
+                    (book, lang) => new
+                    {
+                        book.ID_Book,
+                        book.NameBook,
+                        lang.NameLanguage,
+                        book.Quantity,
+                        book.Price
+                    })
+                    .ToList();
                 var listVietnameseBooks = listBooks.Where(book => book.NameLanguage == "Tiếng Việt");
                 var listEnglishBooks = listBooks.Where(book => book.NameLanguage == "Tiếng Anh");
-                dgvQLBS.DataSource = listBooks.ToList();
-                lblTSSDB.Text = listBooks.ToList().Count().ToString();
-                lblSSTV.Text = listVietnameseBooks.ToList().Count().ToString();
-                lblSSTA.Text = listEnglishBooks.ToList().Count().ToString();
+                dgvQLBS.DataSource = listBooks;
+                lblTSSDB.Text = listBooks.Count().ToString();
+                lblSSTV.Text = listVietnameseBooks.Count().ToString();
+                lblSSTA.Text = listEnglishBooks.Count().ToString();
             }
             rjDropDownMenuSXS.IsMainMenu = false;
         }
 
-        private void rjtbTKNV__TextChanged(object sender, EventArgs e)
+        private void xuiSegmentBS_Click(object sender, EventArgs e)
         {
-
+            using (BookStoreContext context = new BookStoreContext())
+            {
+                // Tất cả
+                if (xuiSegmentBS.SelectedIndex == 0)
+                {
+                    FormQLBS_Load(sender, e);
+                }
+                // Sách tiếng việt
+                else if (xuiSegmentBS.SelectedIndex == 1)
+                {
+                    dgvQLBS.DataSource = context.Books.Join(
+                        context.Languages,
+                        book => book.ID_Language,
+                        lang => lang.ID_Language,
+                        (book, lang) => new
+                        {
+                            book.ID_Book,
+                            book.NameBook,
+                            lang.NameLanguage,
+                            book.Quantity,
+                            book.Price
+                        })
+                        .Where(lang => lang.NameLanguage == "Tiếng Việt")
+                        .ToList();
+                }
+                // Sách tiếng anh
+                else
+                {
+                    dgvQLBS.DataSource = context.Books.Join(
+                        context.Languages,
+                        book => book.ID_Language,
+                        lang => lang.ID_Language,
+                        (book, lang) => new
+                        {
+                            book.ID_Book,
+                            book.NameBook,
+                            lang.NameLanguage,
+                            book.Quantity,
+                            book.Price
+                        })
+                        .Where(lang => lang.NameLanguage == "Tiếng Anh")
+                        .ToList();
+                }
+            }
         }
     }
 }

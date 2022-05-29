@@ -12,7 +12,6 @@ namespace DoAnPBL3
 {
     public partial class FormNote : Form
     {
-        private int index;
         public FormNote()
         {
             InitializeComponent();
@@ -40,7 +39,6 @@ namespace DoAnPBL3
             rjbtnOK.Parent.Parent.Text = "Changed";
             Hide();
             Alert("Đã thêm ghi chú mới", Form_Alert.enmType.Success);
-           
         }
 
         private void rjbtnCancel_Click(object sender, EventArgs e)

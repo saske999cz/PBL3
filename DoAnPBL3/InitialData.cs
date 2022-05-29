@@ -1,7 +1,9 @@
 ﻿using DoAnPBL3.Models;
+using DoAnPBL3.Properties;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,34 +12,58 @@ namespace DoAnPBL3
 {
     public class InitialData : CreateDatabaseIfNotExists<BookStoreContext>
     {
+        ImageConverter imageConverter = new ImageConverter();
+
         protected override void Seed(BookStoreContext context)
         {
             context.Accounts.AddRange(new Account[]
             {
                 // Admin
-                new Account {Username = "lehoanglong", Password = "lehoanglong", Email = "lelong.ll32@gmail.com", Role = true},
-                new Account {Username = "nguyenkhacthai", Password = "nguyenkhacthai", Email = "zed999cz@gmail.com", Role = true},
-                new Account {Username = "daothuytrang", Password = "daothuytrang", Email = "thuytrangdao240402@gmail.com", Role = true},
-                new Account {Username = "nguyentrongnghia", Password = "nguyentrongnghia", Email = "trongnghia161001@gmail.com", Role = true},
-                new Account {Username = "lyvantanh", Password = "lyvantanh", Email = "lyvantanh1001@gmail.com", Role = true},
-                new Account {Username = "ngoducquockhanh", Password = "ngoducquockhanh", Email = "ngoducquockhanh@gmail.com", Role = true},
-                new Account {Username = "travanthien", Password = "travanthien", Email = "travanthien@gmail.com", Role = true},
-                new Account {Username = "letronghoangminh", Password = "letronghoangminh", Email = "letronghoangminh@gmail.com", Role = true},
-                new Account {Username = "leviettungduong", Password = "leviettungduong", Email = "leviettungduong@gmail.com", Role = true},
-                new Account {Username = "nguyentrongsang", Password = "nguyentrongsang", Email = "nguyentrongsang@gmail.com", Role = true},
-                new Account {Username = "nguyenvanhoangnhan", Password = "nguyenvanhoangnhan", Email = "nguyenvanhoangnhan@gmail.com", Role = true},
+                new Account {Username = "lehoanglong", Password = "lehoanglong", Email = "lelong.ll32@gmail.com", 
+                    Role = true, Avatar = (byte[])imageConverter.ConvertTo(Resources.administrator_man, typeof(byte[]))},
+                new Account {Username = "nguyenkhacthai", Password = "nguyenkhacthai", Email = "zed999cz@gmail.com",
+                    Role = true, Avatar = (byte[])imageConverter.ConvertTo(Resources.administrator_man, typeof(byte[]))},
+                new Account {Username = "daothuytrang", Password = "daothuytrang", Email = "thuytrangdao240402@gmail.com",
+                    Role = true, Avatar = (byte[])imageConverter.ConvertTo(Resources.administrator_woman2, typeof(byte[]))},
+                new Account {Username = "nguyentrongnghia", Password = "nguyentrongnghia", Email = "trongnghia161001@gmail.com",
+                    Role = true, Avatar = (byte[])imageConverter.ConvertTo(Resources.administrator_man, typeof(byte[]))},
+                new Account {Username = "lyvantanh", Password = "lyvantanh", Email = "lyvantanh1001@gmail.com",
+                    Role = true, Avatar = (byte[])imageConverter.ConvertTo(Resources.administrator_man, typeof(byte[]))},
+                new Account {Username = "ngoducquockhanh", Password = "ngoducquockhanh", Email = "ngoducquockhanh@gmail.com",
+                    Role = true, Avatar = (byte[])imageConverter.ConvertTo(Resources.administrator_man, typeof(byte[]))},
+                new Account {Username = "travanthien", Password = "travanthien", Email = "travanthien@gmail.com",
+                    Role = true, Avatar = (byte[])imageConverter.ConvertTo(Resources.administrator_man, typeof(byte[]))},
+                new Account {Username = "letronghoangminh", Password = "letronghoangminh", Email = "letronghoangminh@gmail.com", 
+                    Role = true, Avatar = (byte[])imageConverter.ConvertTo(Resources.administrator_man, typeof(byte[]))},
+                new Account {Username = "leviettungduong", Password = "leviettungduong", Email = "leviettungduong@gmail.com", 
+                    Role = true, Avatar = (byte[])imageConverter.ConvertTo(Resources.administrator_man, typeof(byte[]))},
+                new Account {Username = "nguyentrongsang", Password = "nguyentrongsang", Email = "nguyentrongsang@gmail.com", 
+                    Role = true, Avatar = (byte[])imageConverter.ConvertTo(Resources.administrator_man, typeof(byte[]))},
+                new Account {Username = "nguyenvanhoangnhan", Password = "nguyenvanhoangnhan", Email = "nguyenvanhoangnhan@gmail.com", 
+                    Role = true, Avatar = (byte[])imageConverter.ConvertTo(Resources.administrator_man, typeof(byte[]))},
                 // Employee
-                new Account {Username = "phamtienhuu", Password = "phamtienhuu", Email = "phamtienhuu@gmail.com", Role = false},
-                new Account {Username = "nguyenbatuan", Password = "nguyenbatuan", Email = "nguyenbatuan@gmail.com", Role = false},
-                new Account {Username = "tranchinhhuy", Password = "tranchinhhuy", Email = "tranchinhhuy@gmail.com", Role = false},
-                new Account {Username = "dangvanphuocnguyen", Password = "dangvanphuocnguyen", Email = "dangvanphuocnguyen@gmail.com", Role = false},
-                new Account {Username = "nguyenquangkhai", Password = "nguyenquangkhai", Email = "nguyenquangkhai@gmail.com", Role = false},
-                new Account {Username = "phamhoangson", Password = "phamhoangson", Email = "phamhoangson@gmail.com", Role = false},
-                new Account {Username = "ngotandung", Password = "ngotandung", Email = "ngotandung@gmail.com", Role = false},
-                new Account {Username = "nguyenvankhoa", Password = "nguyenvankhoa", Email = "nguyenvankhoa@gmail.com", Role = false},
-                new Account {Username = "levanthanh", Password = "levanthanh", Email = "levanthanh@gmail.com", Role = false},
-                new Account {Username = "trankhanhphuong", Password = "trankhanhphuong", Email = "trankhanhphuong@gmail.com", Role = false},
-                new Account {Username = "lethihuyentrang", Password = "lethihuyentrang", Email = "lethihuyentrang@gmail.com", Role = false},
+                new Account {Username = "phamtienhuu", Password = "phamtienhuu", Email = "phamtienhuu@gmail.com", 
+                    Role = false, Avatar = (byte[])imageConverter.ConvertTo(Resources.male_employee, typeof(byte[]))},
+                new Account {Username = "nguyenbatuan", Password = "nguyenbatuan", Email = "nguyenbatuan@gmail.com", 
+                    Role = false, Avatar = (byte[])imageConverter.ConvertTo(Resources.male_employee, typeof(byte[]))},
+                new Account {Username = "tranchinhhuy", Password = "tranchinhhuy", Email = "tranchinhhuy@gmail.com", 
+                    Role = false, Avatar = (byte[])imageConverter.ConvertTo(Resources.male_employee, typeof(byte[]))},
+                new Account {Username = "dangvanphuocnguyen", Password = "dangvanphuocnguyen", Email = "dangvanphuocnguyen@gmail.com", 
+                    Role = false, Avatar = (byte[])imageConverter.ConvertTo(Resources.male_employee, typeof(byte[]))},
+                new Account {Username = "nguyenquangkhai", Password = "nguyenquangkhai", Email = "nguyenquangkhai@gmail.com", 
+                    Role = false, Avatar = (byte[])imageConverter.ConvertTo(Resources.male_employee, typeof(byte[]))},
+                new Account {Username = "phamhoangson", Password = "phamhoangson", Email = "phamhoangson@gmail.com", 
+                    Role = false, Avatar = (byte[])imageConverter.ConvertTo(Resources.male_employee, typeof(byte[]))},
+                new Account {Username = "ngotandung", Password = "ngotandung", Email = "ngotandung@gmail.com", 
+                    Role = false, Avatar = (byte[])imageConverter.ConvertTo(Resources.male_employee, typeof(byte[]))},
+                new Account {Username = "nguyenvankhoa", Password = "nguyenvankhoa", Email = "nguyenvankhoa@gmail.com", 
+                    Role = false, Avatar = (byte[])imageConverter.ConvertTo(Resources.male_employee, typeof(byte[]))},
+                new Account {Username = "levanthanh", Password = "levanthanh", Email = "levanthanh@gmail.com", 
+                    Role = false, Avatar = (byte[])imageConverter.ConvertTo(Resources.male_employee, typeof(byte[]))},
+                new Account {Username = "trankhanhphuong", Password = "trankhanhphuong", Email = "trankhanhphuong@gmail.com", 
+                    Role = false, Avatar = (byte[])imageConverter.ConvertTo(Resources.female_employee, typeof(byte[]))},
+                new Account {Username = "lethihuyentrang", Password = "lethihuyentrang", Email = "lethihuyentrang@gmail.com", 
+                    Role = false, Avatar = (byte[])imageConverter.ConvertTo(Resources.female_employee, typeof(byte[]))},
             });
 
             context.Admins.AddRange(new Admin[]
@@ -146,18 +172,18 @@ namespace DoAnPBL3
                     Avatar = null, AccountUsername = "lethihuyentrang"},
             });
 
-            context.Authors.AddRange(new Author[]
-            {
-                new Author {ID_Author = 1, FullNameAuthor = "Nguyễn Minh Nhật", Email = "nguyenminhnhat@gmail.com"},
-                new Author {ID_Author = 2, FullNameAuthor = "Gào (Vũ Phương Thanh)", Email = "gao@gmail.com"},
-                new Author {ID_Author = 3, FullNameAuthor = "Hamlet Trương (Lê Văn Trương)", Email = "hamlettruong@gmail.com"},
-                new Author {ID_Author = 4, FullNameAuthor = "Iris Cao", Email = "iriscao@gmail.com"},
-                new Author {ID_Author = 5, FullNameAuthor = "Kawi Hồng Phương", Email = "kawihongphuong@gmail.com"},
-                new Author {ID_Author = 6, FullNameAuthor = "Sơn Paris (Nguyễn Ngọc Sơn)", Email = "sonparis@gmail.com"},
-                new Author {ID_Author = 7, FullNameAuthor = "Nguyễn Ngọc Thạch", Email = "nguyenngocthach@gmail.com"},
-                new Author {ID_Author = 8, FullNameAuthor = "Anh Khang", Email = "anhkhang@gmail.com"},
-                new Author {ID_Author = 9, FullNameAuthor = "Phan Ý Yên", Email = "phanyyen@gmail.com"},
-            });
+            //context.Authors.AddRange(new Author[]
+            //{
+            //    new Author {ID_Author = 1, FullNameAuthor = "Nguyễn Minh Nhật", Email = "nguyenminhnhat@gmail.com"},
+            //    new Author {ID_Author = 2, FullNameAuthor = "Gào (Vũ Phương Thanh)", Email = "gao@gmail.com"},
+            //    new Author {ID_Author = 3, FullNameAuthor = "Hamlet Trương (Lê Văn Trương)", Email = "hamlettruong@gmail.com"},
+            //    new Author {ID_Author = 4, FullNameAuthor = "Iris Cao", Email = "iriscao@gmail.com"},
+            //    new Author {ID_Author = 5, FullNameAuthor = "Kawi Hồng Phương", Email = "kawihongphuong@gmail.com"},
+            //    new Author {ID_Author = 6, FullNameAuthor = "Sơn Paris (Nguyễn Ngọc Sơn)", Email = "sonparis@gmail.com"},
+            //    new Author {ID_Author = 7, FullNameAuthor = "Nguyễn Ngọc Thạch", Email = "nguyenngocthach@gmail.com"},
+            //    new Author {ID_Author = 8, FullNameAuthor = "Anh Khang", Email = "anhkhang@gmail.com"},
+            //    new Author {ID_Author = 9, FullNameAuthor = "Phan Ý Yên", Email = "phanyyen@gmail.com"},
+            //});
 
             context.Languages.AddRange(new Language[]
             {

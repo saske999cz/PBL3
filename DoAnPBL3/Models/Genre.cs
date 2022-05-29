@@ -16,7 +16,7 @@ namespace DoAnPBL3.Models
     {
         public Genre()
         {
-            //Book_Genres = new HashSet<Book_Genre>();
+
         }
 
         public Genre(int id_genre, string nameGenre)
@@ -35,7 +35,5 @@ namespace DoAnPBL3.Models
         [StringLength(255)]
         [Required]
         public string NameGenre { get; set; }
-
-        //public virtual ICollection<Book_Genre> Book_Genres { get; set; }
     }
 }

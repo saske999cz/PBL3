@@ -124,20 +124,9 @@ namespace DoAnPBL3
                                 publisher.NamePublisher
                             })
                         .Where(b => b.ID_Book == ID_Book)
-                        .Select(b => new
-                        {
-                            b.ID_Book,
-                            b.NameBook,
-                            b.PublishDate,
-                            b.Price,
-                            b.Quantity,
-                            b.Unit,
-                            b.NameLanguage,
-                            b.FullNameAuthor,
-                            b.NameGenre,
-                            b.NamePublisher,
-                            b.Image
-                        }).ToList().FirstOrDefault();
+                        .Select(b => b)
+                        .ToList()
+                        .FirstOrDefault();
                 tbIDBook.Text = ID_Book;
                 tbNameBook.Text = book.NameBook;
                 tbPublishDate.Text = book.PublishDate.ToString("dd/MM/yyyy");

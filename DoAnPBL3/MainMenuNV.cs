@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -111,7 +112,7 @@ namespace DoAnPBL3
         private void btnBS_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color2);
-            OpenChildForm(new FormQLBSNV());
+            OpenChildForm(new FormQLBSNV(accountUsername));
         }
 
         private void btnQLKH_Click(object sender, EventArgs e)
@@ -200,7 +201,7 @@ namespace DoAnPBL3
             WindowState = FormWindowState.Minimized;
         }
 
-        private void MainMenuQTV_Load(object sender, EventArgs e)
+        private void MainMenuNV_Load(object sender, EventArgs e)
         {
             timer1.Start();
             lblDate.Text = DateTime.Now.ToLongDateString();
@@ -208,10 +209,26 @@ namespace DoAnPBL3
             using (BookStoreContext context = new BookStoreContext())
             {
                 var employee = context.Employees
+                                    .Join(
+                                        context.Accounts, 
+                                        em => em.AccountUsername, 
+                                        acc => acc.Username, 
+                                        (em, acc) => new { em.FullNameEmployee, em.AccountUsername, acc.Avatar})
                                    .Where(em => em.AccountUsername == accountUsername)
-                                   .Select(em => new { em.FullNameEmployee, em.AccountUsername });
-                lblUserName.Text = employee.ToList().FirstOrDefault().FullNameEmployee;
-                lblEmployeeUsername.Text = employee.ToList().FirstOrDefault().AccountUsername;
+                                   .Select(em => new { em.FullNameEmployee, em.AccountUsername, em.Avatar })
+                                   .ToList()
+                                   .FirstOrDefault();
+                lblUserName.Text = employee.FullNameEmployee;
+                lblEmployeeUsername.Text = employee.AccountUsername;
+                if (employee.Avatar != null)
+                {
+                    MemoryStream memoryStream = new MemoryStream(employee.Avatar);
+                    EmployeePicture.Image = Image.FromStream(memoryStream);
+                }
+                else
+                {
+                    EmployeePicture.Image = null;
+                }
             }
         }
 
@@ -237,7 +254,7 @@ namespace DoAnPBL3
             {
                 DisableButton();
                 btnLeftBorder.Visible = false;
-                OpenChildForm(new FormSettingAccountNV());
+                OpenChildForm(new FormSettingAccountNV(accountUsername));
             }
         }
     }

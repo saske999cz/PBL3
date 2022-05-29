@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace DoAnPBL3
 {
-    public partial class FormSend_Code : Form
+    public partial class FormForgotPassword : Form
     {
         private string username;
         private string password;
@@ -21,7 +21,7 @@ namespace DoAnPBL3
         public static string toAddress; // Địa chỉ Email (from -> to)
         private const string EMAIL_REGEX = "^([\\w\\.\\-]+)@([\\w\\-]+)((\\.(\\w){2,3})+)$";
 
-        public FormSend_Code(string username = "", string password = "", string email = "", string emailPassword = "")
+        public FormForgotPassword(string username = "", string password = "", string email = "", string emailPassword = "")
         {
             InitializeComponent();
             this.username = username;
@@ -109,7 +109,7 @@ namespace DoAnPBL3
             if (txtEmailPassword.PasswordChar == '●')
             {
                 txtEmailPassword.PasswordChar = '\0';
-                Show.BringToFront();
+                ShowPass.BringToFront();
             }
         }
 
@@ -118,7 +118,7 @@ namespace DoAnPBL3
             if (txtEmailPassword.PasswordChar == '\0')
             {
                 txtEmailPassword.PasswordChar = '●';
-                Hide.BringToFront();
+                HidePass.BringToFront();
             }
         }
     }

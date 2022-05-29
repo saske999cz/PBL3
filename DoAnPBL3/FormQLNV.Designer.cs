@@ -36,7 +36,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormQLNV));
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.label1 = new System.Windows.Forms.Label();
-            this.DataSetListEmployees = new System.Windows.Forms.BindingSource(this.components);
             this.xuiSegmentNV = new XanderUI.XUISegment();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnDeleteNV = new FontAwesome.Sharp.IconButton();
@@ -45,12 +44,6 @@
             this.btnTKNV = new Guna.UI2.WinForms.Guna2Button();
             this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
             this.dgvQLNV = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rjtbTKNV = new DoAnPBL3.RJTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -61,7 +54,12 @@
             this.lblTSNV = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.DataSetListEmployees)).BeginInit();
+            this.rjtbTKNV = new DoAnPBL3.RJTextBox();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NameEmployee = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQLNV)).BeginInit();
@@ -244,7 +242,6 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvQLNV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvQLNV.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
-            this.dgvQLNV.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvQLNV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(16)))), ((int)(((byte)(221)))));
@@ -252,13 +249,13 @@
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(16)))), ((int)(((byte)(221)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvQLNV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvQLNV.ColumnHeadersHeight = 30;
             this.dgvQLNV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvQLNV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
-            this.Name,
+            this.NameEmployee,
             this.Gender,
             this.Email,
             this.Phone});
@@ -269,7 +266,7 @@
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvQLNV.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvQLNV.EnableHeadersVisualStyles = false;
             this.dgvQLNV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
@@ -291,74 +288,6 @@
             this.dgvQLNV.Size = new System.Drawing.Size(816, 413);
             this.dgvQLNV.TabIndex = 30;
             this.dgvQLNV.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvQLNV_RowHeaderMouseClick);
-            // 
-            // ID
-            // 
-            this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ID.DataPropertyName = "ID_Employee";
-            this.ID.FillWeight = 72.53177F;
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            // 
-            // Name
-            // 
-            this.Name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Name.DataPropertyName = "FullNameEmployee";
-            this.Name.FillWeight = 139.5939F;
-            this.Name.HeaderText = "Họ và tên";
-            this.Name.Name = "Name";
-            this.Name.ReadOnly = true;
-            // 
-            // Gender
-            // 
-            this.Gender.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Gender.DataPropertyName = "Gender";
-            this.Gender.FillWeight = 68.39316F;
-            this.Gender.HeaderText = "Giới tính";
-            this.Gender.Name = "Gender";
-            this.Gender.ReadOnly = true;
-            // 
-            // Email
-            // 
-            this.Email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Email.DataPropertyName = "Email";
-            this.Email.FillWeight = 112.803F;
-            this.Email.HeaderText = "Email";
-            this.Email.Name = "Email";
-            this.Email.ReadOnly = true;
-            // 
-            // Phone
-            // 
-            this.Phone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Phone.DataPropertyName = "Phone";
-            this.Phone.FillWeight = 106.6781F;
-            this.Phone.HeaderText = "SĐT";
-            this.Phone.Name = "Phone";
-            this.Phone.ReadOnly = true;
-            // 
-            // rjtbTKNV
-            // 
-            this.rjtbTKNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(35)))));
-            this.rjtbTKNV.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(35)))));
-            this.rjtbTKNV.BorderFocusColor = System.Drawing.Color.DeepSkyBlue;
-            this.rjtbTKNV.BorderRadius = 15;
-            this.rjtbTKNV.BorderSize = 1;
-            this.rjtbTKNV.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjtbTKNV.ForeColor = System.Drawing.Color.Silver;
-            this.rjtbTKNV.Location = new System.Drawing.Point(7, 134);
-            this.rjtbTKNV.Margin = new System.Windows.Forms.Padding(4);
-            this.rjtbTKNV.Multiline = false;
-            this.rjtbTKNV.Name = "rjtbTKNV";
-            this.rjtbTKNV.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
-            this.rjtbTKNV.PasswordChar = false;
-            this.rjtbTKNV.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(83)))), ((int)(((byte)(103)))));
-            this.rjtbTKNV.PlaceholderText = "Tìm kiếm theo tên hoặc SĐT";
-            this.rjtbTKNV.Size = new System.Drawing.Size(250, 29);
-            this.rjtbTKNV.TabIndex = 14;
-            this.rjtbTKNV.Texts = "";
-            this.rjtbTKNV.UnderlinedStyle = false;
-            this.rjtbTKNV.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.rjtbTKNV_KeyPress);
             // 
             // pictureBox1
             // 
@@ -474,6 +403,74 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // rjtbTKNV
+            // 
+            this.rjtbTKNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(35)))));
+            this.rjtbTKNV.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(35)))));
+            this.rjtbTKNV.BorderFocusColor = System.Drawing.Color.DeepSkyBlue;
+            this.rjtbTKNV.BorderRadius = 15;
+            this.rjtbTKNV.BorderSize = 1;
+            this.rjtbTKNV.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjtbTKNV.ForeColor = System.Drawing.Color.Silver;
+            this.rjtbTKNV.Location = new System.Drawing.Point(7, 134);
+            this.rjtbTKNV.Margin = new System.Windows.Forms.Padding(4);
+            this.rjtbTKNV.Multiline = false;
+            this.rjtbTKNV.Name = "rjtbTKNV";
+            this.rjtbTKNV.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
+            this.rjtbTKNV.PasswordChar = false;
+            this.rjtbTKNV.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(83)))), ((int)(((byte)(103)))));
+            this.rjtbTKNV.PlaceholderText = "Tìm kiếm theo tên hoặc SĐT";
+            this.rjtbTKNV.Size = new System.Drawing.Size(250, 29);
+            this.rjtbTKNV.TabIndex = 14;
+            this.rjtbTKNV.Texts = "";
+            this.rjtbTKNV.UnderlinedStyle = false;
+            this.rjtbTKNV.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.rjtbTKNV_KeyPress);
+            // 
+            // ID
+            // 
+            this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ID.DataPropertyName = "ID_Employee";
+            this.ID.FillWeight = 72.53177F;
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            // 
+            // NameEmployee
+            // 
+            this.NameEmployee.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NameEmployee.DataPropertyName = "FullNameEmployee";
+            this.NameEmployee.FillWeight = 139.5939F;
+            this.NameEmployee.HeaderText = "Họ và tên";
+            this.NameEmployee.Name = "NameEmployee";
+            this.NameEmployee.ReadOnly = true;
+            // 
+            // Gender
+            // 
+            this.Gender.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Gender.DataPropertyName = "Gender";
+            this.Gender.FillWeight = 68.39316F;
+            this.Gender.HeaderText = "Giới tính";
+            this.Gender.Name = "Gender";
+            this.Gender.ReadOnly = true;
+            // 
+            // Email
+            // 
+            this.Email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Email.DataPropertyName = "Email";
+            this.Email.FillWeight = 112.803F;
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
+            // 
+            // Phone
+            // 
+            this.Phone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Phone.DataPropertyName = "Phone";
+            this.Phone.FillWeight = 106.6781F;
+            this.Phone.HeaderText = "SĐT";
+            this.Phone.Name = "Phone";
+            this.Phone.ReadOnly = true;
+            // 
             // FormQLNV
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -498,9 +495,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "FormQLNV";
             this.Text = "Quản lý nhân viên";
             this.Load += new System.EventHandler(this.FormQLNV_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.DataSetListEmployees)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQLNV)).EndInit();
@@ -524,7 +521,6 @@
         private XanderUI.XUISegment xuiSegmentNV;
         private Guna.UI2.WinForms.Guna2Button btnTKNV;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.BindingSource DataSetListEmployees;
         private System.Windows.Forms.DataGridView dgvQLNV;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox3;
@@ -537,7 +533,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NameEmployee;
         private System.Windows.Forms.DataGridViewTextBoxColumn Gender;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
         private System.Windows.Forms.DataGridViewTextBoxColumn Phone;

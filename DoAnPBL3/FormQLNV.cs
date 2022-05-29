@@ -177,14 +177,14 @@ namespace DoAnPBL3
             using (BookStoreContext context = new BookStoreContext())
             {
                 var listEmployees = context.Employees
-                                    .Select(employee => new
-                                    {
-                                        employee.ID_Employee,
-                                        employee.FullNameEmployee,
-                                        employee.Gender,
-                                        employee.Email,
-                                        employee.Phone
-                                    });
+                    .Select(employee => new
+                    {
+                        employee.ID_Employee,
+                        employee.FullNameEmployee,
+                        employee.Gender,
+                        employee.Email,
+                        employee.Phone
+                    });
                 var listMaleEmployees = listEmployees.Where(employee => employee.Gender == "Nam");
                 var listFemaleEmployees = listEmployees.Where(employee => employee.Gender == "Nữ");
                 count = listEmployees.ToList().Count();
@@ -222,7 +222,7 @@ namespace DoAnPBL3
             else
             {
                 string ID_Employee = dgvQLNV.CurrentRow.Cells["ID"].Value.ToString();
-                string name = dgvQLNV.CurrentRow.Cells["Name"].Value.ToString();
+                string name = dgvQLNV.CurrentRow.Cells["NameEmployee"].Value.ToString();
                 DialogResult result = RJMessageBox.Show("Xác nhận xóa nhân viên " + name + "?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
@@ -257,36 +257,38 @@ namespace DoAnPBL3
                 else if (Validator.Validators.IsValidPhoneNumber(rjtbTKNV.Texts, Validator.Validators.PHONE_REGEX))
                 {
                     var listEmployees = context.Employees
-                                        .Where(employee => employee.Phone == rjtbTKNV.Texts)
-                                        .Select(employee => new
-                                        {
-                                            employee.ID_Employee,
-                                            employee.FullNameEmployee,
-                                            employee.Gender,
-                                            employee.Email,
-                                            employee.Phone
-                                        });
-                    if (listEmployees.ToList().Count == 0)
+                        .Where(employee => employee.Phone == rjtbTKNV.Texts)
+                        .Select(employee => new
+                        {
+                            employee.ID_Employee,
+                            employee.FullNameEmployee,
+                            employee.Gender,
+                            employee.Email,
+                            employee.Phone
+                        })
+                        .ToList();
+                    if (listEmployees.Count == 0)
                         RJMessageBox.Show("Không tìm thấy", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     else
-                        dgvQLNV.DataSource = listEmployees.ToList();
+                        dgvQLNV.DataSource = listEmployees;
                 }
                 else
                 {
                     var listEmployees = context.Employees
-                                        .Where(employee => employee.FullNameEmployee.Contains(rjtbTKNV.Texts))
-                                        .Select(employee => new
-                                        {
-                                            employee.ID_Employee,
-                                            employee.FullNameEmployee,
-                                            employee.Gender,
-                                            employee.Email,
-                                            employee.Phone
-                                        });
-                    if (listEmployees.ToList().Count == 0)
+                        .Where(employee => employee.FullNameEmployee.Contains(rjtbTKNV.Texts))
+                        .Select(employee => new
+                        {
+                            employee.ID_Employee,
+                            employee.FullNameEmployee,
+                            employee.Gender,
+                            employee.Email,
+                            employee.Phone
+                        })
+                        .ToList();
+                    if (listEmployees.Count == 0)
                         RJMessageBox.Show("Không tìm thấy", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     else
-                        dgvQLNV.DataSource = listEmployees.ToList();
+                        dgvQLNV.DataSource = listEmployees;
                 }
             }
         }
@@ -313,29 +315,31 @@ namespace DoAnPBL3
                 else if (xuiSegmentNV.SelectedIndex == 1)
                 {
                     dgvQLNV.DataSource = context.Employees
-                                        .Where(employee => employee.Gender == "Nam")
-                                        .Select(employee => new
-                                        {
-                                            employee.ID_Employee,
-                                            employee.FullNameEmployee,
-                                            employee.Gender,
-                                            employee.Email,
-                                            employee.Phone
-                                        }).ToList();
+                        .Where(employee => employee.Gender == "Nam")
+                        .Select(employee => new
+                        {
+                            employee.ID_Employee,
+                            employee.FullNameEmployee,
+                            employee.Gender,
+                            employee.Email,
+                            employee.Phone
+                        })
+                        .ToList();
                 }
                 // Nữ
                 else
                 {
                     dgvQLNV.DataSource = context.Employees
-                                        .Where(employee => employee.Gender == "Nữ")
-                                        .Select(employee => new
-                                        {
-                                            employee.ID_Employee,
-                                            employee.FullNameEmployee,
-                                            employee.Gender,
-                                            employee.Email,
-                                            employee.Phone
-                                        }).ToList();
+                        .Where(employee => employee.Gender == "Nữ")
+                        .Select(employee => new
+                        {
+                            employee.ID_Employee,
+                            employee.FullNameEmployee,
+                            employee.Gender,
+                            employee.Email,
+                            employee.Phone
+                        })
+                        .ToList();
                 }
             }
         }
@@ -345,23 +349,23 @@ namespace DoAnPBL3
             using (BookStoreContext context = new BookStoreContext())
             {
                 var listEmployees = context.Employees
-                                    .Select(employee => new
-                                    {
-                                        employee.ID_Employee,
-                                        employee.FullNameEmployee,
-                                        employee.Gender,
-                                        employee.Email,
-                                        employee.Phone
-                                    });
+                        .Select(employee => new
+                        {
+                            employee.ID_Employee,
+                            employee.FullNameEmployee,
+                            employee.Gender,
+                            employee.Email,
+                            employee.Phone
+                        });
                 var listMaleEmployees = listEmployees.Where(employee => employee.Gender == "Nam");
                 var listFemaleEmployees = listEmployees.Where(employee => employee.Gender == "Nữ");
                 if (listEmployees.ToList().Count() != count)
                 {
                     dgvQLNV.DataSource = listEmployees.ToList();
                     lblTSNV.Text = listEmployees.ToList().Count().ToString();
-                    lblSNVNam.Text = listMaleEmployees.ToList().Count().ToString();
-                    lblSNVNu.Text = listFemaleEmployees.ToList().Count().ToString();
-                    count = listEmployees.ToList().Count();
+                    lblSNVNam.Text = listMaleEmployees.Count().ToString();
+                    lblSNVNu.Text = listFemaleEmployees.Count().ToString();
+                    count = listEmployees.Count();
                 }
             }
         }

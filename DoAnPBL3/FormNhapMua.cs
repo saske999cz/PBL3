@@ -24,48 +24,27 @@ namespace DoAnPBL3
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            RJMessageBox.Show("You pressed the button");
-        }
-
         private void tbIDBook_TextChanged(object sender, EventArgs e)
         {
-            if (tbIDBook.Text == "1")
+            using (BookStoreContext context = new BookStoreContext())
             {
-                tbNameBook.Text = "abc";
-                tbPrice.Text = "40000";
-            }
-            else
-            if (tbIDBook.Text == "2")
-            {
-                tbNameBook.Text = "kkk";
-                tbPrice.Text = "50000";
-            }
-            else
-            if (tbIDBook.Text == "3")
-            {
-                tbNameBook.Text = "ooo";
-                tbPrice.Text = "60000";
-            }
-            else
-            if(tbIDBook.Text == "4")
-            {
-                tbNameBook.Text = "iii";
-                tbPrice.Text = "70000";
-            }
-            else
-            {
-                tbNameBook.Text = "";
-                tbPrice.Text = "";
+                var book = context.Books
+                    .Where(b => b.ID_Book == tbIDBook.Text)
+                    .Select(b => new { b.NameBook, b.Price })
+                    .ToList()
+                    .FirstOrDefault();
+                if (book != null)
+                {
+                    tbNameBook.Text = book.NameBook;
+                    tbPrice.Text = book.Price.ToString();
+                }
             }
         }
 
-        private void tbSL_TextChanged(object sender, EventArgs e)
+        private void tbQuantity_TextChanged(object sender, EventArgs e)
         {
-            
             bool flag = true;
-            byte[] asciiBytes = Encoding.ASCII.GetBytes(tbSL.Text);
+            byte[] asciiBytes = Encoding.ASCII.GetBytes(tbQuantity.Text);
             foreach (byte b in asciiBytes)
             {
                 if (b > 57 || b < 47)
@@ -78,55 +57,56 @@ namespace DoAnPBL3
             {
 
                 RJMessageBox.Show("Chỉ được nhập số", "Lỗi ", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                tbSL.Text = "";
+                tbQuantity.Text = "";
             }
             else
             {
-                if (tbSL.Text != "")
+                if (tbQuantity.Text != "")
                 {
                     if (tbPrice.Text == "")
                     {
                         RJMessageBox.Show("ID sách không hợp lệ", "Lỗi ", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        tbSL.Text = "";
+                        tbQuantity.Text = "";
                     }
                     else
-                        tbCP.Text = (Convert.ToInt64(tbSL.Text) * Convert.ToInt64(tbPrice.Text)).ToString();
+                        tbAmount.Text = (Convert.ToInt64(tbQuantity.Text) * Convert.ToInt64(tbPrice.Text)).ToString();
                 }
                 else
-                    tbCP.Text = "";
+                    tbAmount.Text = "";
                 Parent.Refresh();
             }
             Parent.Refresh();
         }
-        private void guna2CircleButton1_Click(object sender, EventArgs e)
+
+        private void btnDelete_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        public long GetCP()
-        {   long CP = 0;
-            if (tbCP.Text != "")
-                CP = Convert.ToInt64(tbCP.Text);
+        public long GetAmount()
+        {
+            if (tbAmount.Text != "")
+                return Convert.ToInt64(tbAmount.Text);
             else
-                CP = 0;
-            return CP;
+                return 0;
         }
 
-        public string GetCPText()
+        public int GetQuantity()
         {
-            return tbCP.Text;
+            if (tbQuantity.Text != "")
+                return Convert.ToInt32(tbQuantity.Text);
+            else
+                return 0;
+        }
+
+        public string GetAmountText()
+        {
+            return tbAmount.Text;
         }
         
-        public int GetSL()
+        public string GetQuantityText()
         {
-            int SL = 0;
-            if (tbSL.Text != "")
-                SL = Convert.ToInt32(tbSL.Text);
-            return SL;
-        }
-        public string GetSLText()
-        {
-            return tbSL.Text;
+            return tbQuantity.Text;
         }
 
         public void SetIndex(int index)
@@ -137,16 +117,6 @@ namespace DoAnPBL3
         public void SetIndexText()
         {
             Index.Text = index.ToString();
-        }
-
-        public int GetIndex()
-        {
-            return index;
-        }
-
-        public void TextChanged()
-        {  
-            Index.Refresh();
         }
 
         private void Index_Paint(object sender, PaintEventArgs e)

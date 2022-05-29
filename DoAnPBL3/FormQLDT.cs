@@ -74,15 +74,15 @@ namespace DoAnPBL3
                     break;
                 case "Light":
                     btnOK.Parent.BackColor = Color.FromArgb(220, 220, 220);
-                    label10.ForeColor = Color.FromArgb(124, 141, 181);
-                    label8.ForeColor = Color.FromArgb(124, 141, 181);
-                    label7.ForeColor = Color.FromArgb(124, 141, 181);
+                    label10.ForeColor = Color.Black;
+                    label8.ForeColor = Color.Black;
+                    label7.ForeColor = Color.Black;
                     lblCustomerNumber.ForeColor = Color.Black;
                     lblProductNumberConLai.ForeColor = Color.Black;
                     lblSellNumber.ForeColor = Color.Black;
-                    lblNumberOfOrders.ForeColor = Color.FromArgb(124, 141, 181);
-                    lblProfit.ForeColor = Color.FromArgb(124, 141, 181);
-                    lblTotalRevenue.ForeColor = Color.FromArgb(124, 141, 181);
+                    lblNumberOfOrders.ForeColor = Color.Black;
+                    lblProfit.ForeColor = Color.Black;
+                    lblTotalRevenue.ForeColor = Color.Black;
                     lblProfitNumber.ForeColor = Color.Black;
                     lblTotalRevenueNumber.ForeColor = Color.Black;
                     lblOrderNumber.ForeColor = Color.Black;

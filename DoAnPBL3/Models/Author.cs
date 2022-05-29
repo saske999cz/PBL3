@@ -13,7 +13,7 @@ namespace DoAnPBL3.Models
     {
         public Author()
         {
-            //Book_Authors = new HashSet<Book_Author>();
+
         }
 
         public Author(int id_author, string fullNameAuthor, string email)
@@ -34,9 +34,6 @@ namespace DoAnPBL3.Models
         public string FullNameAuthor { get; set; }
 
         [StringLength(255)]
-        [Required(ErrorMessage = "Email của tác giả không được để trống")]
         public string Email { get; set; }
-
-        //public virtual ICollection<Book_Author> Book_Authors { get; set; }
     }
 }

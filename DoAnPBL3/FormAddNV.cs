@@ -15,12 +15,12 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Guna.UI2.WinForms;
 using System.Drawing.Imaging;
+using DoAnPBL3.Properties;
 
 namespace DoAnPBL3
 {
     public partial class FormAddNV : Form
     {
-
         //Constructor
         public FormAddNV()
         {
@@ -38,7 +38,7 @@ namespace DoAnPBL3
             bool isDateOfBirthContainsAlpha, isValidFormatDateOfBirth, isValidAge = false, isDateOfBirthGreaterThanCurrentDate, 
                 isStartDateContainsAlpha, isValidFormatStartDate, isStartDateGreaterThanCurrentDate = false,
                 isValidID, isValidName, isValidEmail, isValidGender, isValidPhone, isValidIdCard, isValidAddress;
-            string id, name, email, dateOfBirth, startDate, gender, phone, idCard, address;
+            string id, name, email, dateOfBirth, startDate, gender, phone, idCard, address, username, password;
             byte[] ava;
             // Validate id employee
             id = tbIDNV.Text;
@@ -342,9 +342,39 @@ namespace DoAnPBL3
                         Convert.ToInt32(startDate.Substring(3, 2)),
                         Convert.ToInt32(startDate.Substring(0, 2))
                     );
+
+                    username = ReplaceWhiteSpace(name.ToLower());
+                    StringBuilder sb = new StringBuilder();
+                    foreach (char c in username)
+                    {
+                        sb.Append(ConvertVietnameseToAlphabet(c));
+                    }
+                    foreach (char c in id)
+                    {
+                        sb.Append(c);
+                    }
+                    username = sb.ToString();
+                    password = sb.ToString();
+
+                    ImageConverter imageConverter = new ImageConverter();
+
+                    if (gender == "Nam")
+                    {
+                        Account newAccount = new Account(username, password, email, false, 
+                            (byte[])imageConverter.ConvertTo(Resources.male_employee, typeof(byte[])));
+                        context.Accounts.Add(newAccount);
+                        context.SaveChanges();
+                    }
+                    else
+                    {
+                        Account newAccount = new Account(username, password, email, false,
+                            (byte[])imageConverter.ConvertTo(Resources.female_employee, typeof(byte[])));
+                        context.Accounts.Add(newAccount);
+                        context.SaveChanges();
+                    }
+
                     Employee newEmployee = new Employee(id, name, email, birthday, startDateTime,
-                        gender, phone, idCard, address, ava, null);
-                    // Save to DB
+                        gender, phone, idCard, address, ava, username);
                     context.Employees.Add(newEmployee);
                     context.SaveChanges();
                     Alert("Thêm nhân viên mới thành công", Form_Alert.enmType.Success);
@@ -417,6 +447,51 @@ namespace DoAnPBL3
                 avatar.ImageLocation = "";
                 avatar.Image = null;
             }
+        }
+
+        private char ConvertVietnameseToAlphabet(char alphaName)
+        {
+            if (alphaName == 'á' || alphaName == 'Á' || alphaName == 'à' || alphaName == 'À' || alphaName == 'ả' || alphaName == 'Ả'
+                || alphaName == 'ã' || alphaName == 'Ã' || alphaName == 'ạ' || alphaName == 'Ạ' || alphaName == 'ă' || alphaName == 'Ă'
+                || alphaName == 'ắ' || alphaName == 'Ắ' || alphaName == 'ằ' || alphaName == 'Ằ' || alphaName == 'ẳ' || alphaName == 'Ẳ'
+                || alphaName == 'ẵ' || alphaName == 'Ẵ' || alphaName == 'ặ' || alphaName == 'Ặ' || alphaName == 'â' || alphaName == 'Â'
+                || alphaName == 'ấ' || alphaName == 'Ấ' || alphaName == 'ầ' || alphaName == 'Ầ' || alphaName == 'ẩ' || alphaName == 'Ẩ'
+                || alphaName == 'ẫ' || alphaName == 'Ẫ' || alphaName == 'ậ' || alphaName == 'Ậ')
+                return 'a';
+            else if (alphaName == 'đ' || alphaName == 'Đ')
+                return 'd';
+            else if (alphaName == 'é' || alphaName == 'É' || alphaName == 'è' || alphaName == 'È' || alphaName == 'ẻ' || alphaName == 'Ẻ'
+                || alphaName == 'ẽ' || alphaName == 'Ẽ' || alphaName == 'ẹ' || alphaName == 'Ẹ' || alphaName == 'ê' || alphaName == 'Ê'
+                || alphaName == 'ế' || alphaName == 'Ế' || alphaName == 'ề' || alphaName == 'Ề' || alphaName == 'ể' || alphaName == 'Ể'
+                || alphaName == 'ể' || alphaName == 'Ể' || alphaName == 'ệ' || alphaName == 'Ệ')
+                return 'e';
+            else if (alphaName == 'í' || alphaName == 'Í' || alphaName == 'ì' || alphaName == 'Ì' || alphaName == 'ỉ' || alphaName == 'Ỉ'
+                || alphaName == 'ĩ' || alphaName == 'Ĩ' || alphaName == 'ị' || alphaName == 'Ị')
+                return 'i';
+            else if (alphaName == 'ó' || alphaName == 'Ó' || alphaName == 'ò' || alphaName == 'Ò' || alphaName == 'ỏ' || alphaName == 'Ỏ'
+                || alphaName == 'õ' || alphaName == 'Õ' || alphaName == 'ọ' || alphaName == 'Ọ' || alphaName == 'ô' || alphaName == 'Ô'
+                || alphaName == 'ố' || alphaName == 'Ố' || alphaName == 'ồ' || alphaName == 'Ồ' || alphaName == 'ổ' || alphaName == 'Ổ'
+                || alphaName == 'ỗ' || alphaName == 'Ỗ' || alphaName == 'ộ' || alphaName == 'Ộ' || alphaName == 'ơ' || alphaName == 'Ơ'
+                || alphaName == 'ớ' || alphaName == 'Ớ' || alphaName == 'ờ' || alphaName == 'Ờ' || alphaName == 'ở' || alphaName == 'Ở'
+                || alphaName == 'ỡ' || alphaName == 'Ỡ' || alphaName == 'ợ' || alphaName == 'Ợ')
+                return 'o';
+            else if (alphaName == 'ú' || alphaName == 'Ú' || alphaName == 'ù' || alphaName == 'Ù' || alphaName == 'ủ' || alphaName == 'Ủ'
+                || alphaName == 'ũ' || alphaName == 'Ũ' || alphaName == 'ụ' || alphaName == 'Ụ' || alphaName == 'ư' || alphaName == 'Ư'
+                || alphaName == 'ứ' || alphaName == 'Ứ' || alphaName == 'ừ' || alphaName == 'Ừ' || alphaName == 'ử' || alphaName == 'Ử'
+                || alphaName == 'ữ' || alphaName == 'Ữ' || alphaName == 'ự' || alphaName == 'Ự')
+                return 'u';
+            else if (alphaName == 'ý' || alphaName == 'Ý' || alphaName == 'ỳ' || alphaName == 'Ỳ' || alphaName == 'ỷ' || alphaName == 'Ỷ'
+                || alphaName == 'ỹ' || alphaName == 'Ỹ' || alphaName == 'ỵ' || alphaName == 'Ỵ')
+                return 'y';
+            else
+                return alphaName;
+        }
+
+        private static string ReplaceWhiteSpace(string input)
+        {
+            return new string(input.ToCharArray()
+                    .Where(c => !Char.IsWhiteSpace(c))
+                    .ToArray());
         }
 
         private void tbNameNV_KeyPress(object sender, KeyPressEventArgs e)

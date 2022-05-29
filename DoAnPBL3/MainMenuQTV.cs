@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -148,7 +149,7 @@ namespace DoAnPBL3
             if (childForm.Text == "Admin" || childForm.Text == "Dark" || childForm.Text == "Light" || childForm.Text == "")
                 lblTitleChildForm.Text = "Theme";
             else
-            lblTitleChildForm.Text = childForm.Text;
+                lblTitleChildForm.Text = childForm.Text;
         }
 
         private void btnQLNV_Click(object sender, EventArgs e)
@@ -265,10 +266,26 @@ namespace DoAnPBL3
             using (BookStoreContext context = new BookStoreContext())
             {
                 var admin = context.Admins
-                                   .Where(ad => ad.AccountUsername == accountUsername)
-                                   .Select(ad => new { ad.FullNameAdmin, ad.AccountUsername });
-                lblAdminName.Text = admin.ToList().FirstOrDefault().FullNameAdmin;
-                lblAdminUsername.Text = admin.ToList().FirstOrDefault().AccountUsername;
+                    .Join(
+                        context.Accounts,
+                        ad => ad.AccountUsername,
+                        acc => acc.Username,
+                        (ad, acc) => new { ad.FullNameAdmin, ad.AccountUsername, acc.Avatar })
+                    .Where(ad => ad.AccountUsername == accountUsername)
+                    .Select(ad => new { ad.FullNameAdmin, ad.AccountUsername, ad.Avatar })
+                    .ToList()
+                    .FirstOrDefault();
+                lblAdminName.Text = admin.FullNameAdmin;
+                lblAdminUsername.Text = admin.AccountUsername;
+                if (admin.Avatar != null)
+                {
+                    MemoryStream memoryStream = new MemoryStream(admin.Avatar);
+                    AdminPicture.Image = Image.FromStream(memoryStream);
+                }
+                else
+                {
+                    AdminPicture.Image = null;
+                }
             }
         }
 
@@ -294,9 +311,9 @@ namespace DoAnPBL3
                 DisableButton();
                 iconCurrentChildForm.IconChar = IconChar.Cog;
                 btnLeftBorder.Visible = false;
-                OpenChildForm(new FormSettingAccount(theme));
+                OpenChildForm(new FormSettingAccountQTV(theme, accountUsername));
             }
-            if(thayĐổiThemeToolStripMenuItem.Selected == true)
+            if (thayĐổiThemeToolStripMenuItem.Selected == true)
             {
                 DisableButton();
                 iconCurrentChildForm.IconChar = IconChar.Moon;
@@ -304,7 +321,7 @@ namespace DoAnPBL3
                 OpenChildForm(new FormTheme(theme));
             }
 
-            if(ghiChúToolStripMenuItem.Selected == true)
+            if (ghiChúToolStripMenuItem.Selected == true)
             {
                 DisableButton();
                 iconCurrentChildForm.IconChar = IconChar.Pen;
@@ -331,7 +348,7 @@ namespace DoAnPBL3
 
             }
             else
-                if(theme == "Admin")
+                if (theme == "Admin")
             {
                 ApplyThemeAdmin();
             }
@@ -341,7 +358,7 @@ namespace DoAnPBL3
         {
             lblTitleChildForm.ForeColor = Color.Gainsboro;
             panelMenu.BackColor = Color.FromArgb(26, 26, 26);
-            panelTitleBar.BackColor = Color.FromArgb(20,20,20);
+            panelTitleBar.BackColor = Color.FromArgb(20, 20, 20);
             panelDesktop.BackColor = Color.FromArgb(32, 32, 32);
             panelShadow.BackColor = Color.FromArgb(20, 20, 20);
             btnQLBS.BackColor = Color.FromArgb(26, 26, 26);
@@ -386,7 +403,7 @@ namespace DoAnPBL3
             btnQLKH.BackColor = Color.FromArgb(210, 210, 210);
             btnQLKH.ForeColor = Color.Black;
             btnQLKH.IconColor = Color.Black;
-            rjddmAdminSettingMenu.BackColor = Color.FromArgb(190, 190,190);
+            rjddmAdminSettingMenu.BackColor = Color.FromArgb(190, 190, 190);
             label3.ForeColor = Color.Black;
             lblDate.ForeColor = Color.Black;
             label1.ForeColor = Color.Black;

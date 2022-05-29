@@ -25,7 +25,10 @@ namespace DoAnPBL3
         {
             using (BookStoreContext context = new BookStoreContext())
             {
-                var employee = context.Employees.Where(em => em.ID_Employee == ID_Employee).ToList().FirstOrDefault();
+                var employee = context.Employees
+                    .Where(em => em.ID_Employee == ID_Employee)
+                    .ToList()
+                    .FirstOrDefault();
                 tbIDNV.Text = employee.ID_Employee;
                 tbNameNV.Text = employee.FullNameEmployee;
                 tbEmailNV.Text = employee.Email;

@@ -231,8 +231,7 @@ namespace DoAnPBL3
             // EmployeePicture
             // 
             this.EmployeePicture.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.EmployeePicture.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
-            this.EmployeePicture.BackgroundImage = global::DoAnPBL3.Properties.Resources.test2;
+            this.EmployeePicture.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(43)))), ((int)(((byte)(59)))));
             this.EmployeePicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.EmployeePicture.Cursor = System.Windows.Forms.Cursors.Hand;
             this.EmployeePicture.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -243,8 +242,8 @@ namespace DoAnPBL3
             this.EmployeePicture.Location = new System.Drawing.Point(749, 15);
             this.EmployeePicture.Margin = new System.Windows.Forms.Padding(2);
             this.EmployeePicture.Name = "EmployeePicture";
-            this.EmployeePicture.Size = new System.Drawing.Size(46, 45);
-            this.EmployeePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.EmployeePicture.Size = new System.Drawing.Size(45, 45);
+            this.EmployeePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.EmployeePicture.TabIndex = 13;
             this.EmployeePicture.TabStop = false;
             this.EmployeePicture.Click += new System.EventHandler(this.EmployeePicture_Click);
@@ -479,7 +478,7 @@ namespace DoAnPBL3
             this.lblDate.AutoSize = true;
             this.lblDate.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDate.ForeColor = System.Drawing.Color.White;
-            this.lblDate.Location = new System.Drawing.Point(830, 5);
+            this.lblDate.Location = new System.Drawing.Point(815, 5);
             this.lblDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(37, 16);
@@ -635,7 +634,7 @@ namespace DoAnPBL3
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainMenuNV";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Load += new System.EventHandler(this.MainMenuQTV_Load);
+            this.Load += new System.EventHandler(this.MainMenuNV_Load);
             this.panelMenu.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).EndInit();

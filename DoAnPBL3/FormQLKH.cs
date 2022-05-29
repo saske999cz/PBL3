@@ -55,9 +55,9 @@ namespace DoAnPBL3
                     break;
                 case "Light":
                     btnTKKH.Parent.BackColor = Color.FromArgb(220, 220, 220);
-                    label2.ForeColor = Color.FromArgb(124, 141, 181);
-                    label5.ForeColor = Color.FromArgb(124, 141, 181);
-                    label7.ForeColor = Color.FromArgb(124, 141, 181);
+                    label2.ForeColor = Color.Black;
+                    label5.ForeColor = Color.Black;
+                    label7.ForeColor = Color.Black;
                     lblKHN.ForeColor = Color.Black;
                     lblKHNu.ForeColor = Color.Black;
                     lblTSKH.ForeColor = Color.Black;

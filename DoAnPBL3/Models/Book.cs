@@ -13,8 +13,6 @@ namespace DoAnPBL3.Models
     {
         public Book()
         {
-            //Book_Genres = new HashSet<Book_Genre>();
-            //Book_Authors = new HashSet<Book_Author>();
             OrderDetails = new HashSet<OrderDetail>();
         }
 
@@ -92,10 +90,6 @@ namespace DoAnPBL3.Models
 
         [Column("Anh")]
         public byte[] Image { get; set; }
-
-        //public virtual ICollection<Book_Author> Book_Authors { get; set; }
-
-        //public virtual ICollection<Book_Genre> Book_Genres { get; set; }
 
         public virtual ICollection<OrderDetail> OrderDetails { get; set; }
     }

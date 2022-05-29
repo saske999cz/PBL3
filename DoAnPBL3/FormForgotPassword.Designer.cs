@@ -1,7 +1,7 @@
 ﻿
 namespace DoAnPBL3
 {
-    partial class FormSend_Code
+    partial class FormForgotPassword
     {
         /// <summary>
         /// Required designer variable.
@@ -32,13 +32,13 @@ namespace DoAnPBL3
             this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtEmailPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.Hide = new System.Windows.Forms.PictureBox();
-            this.Show = new System.Windows.Forms.PictureBox();
+            this.HidePass = new System.Windows.Forms.PictureBox();
+            this.ShowPass = new System.Windows.Forms.PictureBox();
             this.btnSendCode = new Guna.UI2.WinForms.Guna2Button();
             this.btnBack = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Hide)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Show)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HidePass)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ShowPass)).BeginInit();
             this.SuspendLayout();
             // 
             // txtEmail
@@ -102,31 +102,31 @@ namespace DoAnPBL3
             this.guna2PictureBox1.TabStop = false;
             this.guna2PictureBox1.UseTransparentBackground = true;
             // 
-            // Hide
+            // HidePass
             // 
-            this.Hide.BackColor = System.Drawing.Color.Transparent;
-            this.Hide.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Hide.Image = global::DoAnPBL3.Properties.Resources.icons8_hide_24px;
-            this.Hide.Location = new System.Drawing.Point(255, 287);
-            this.Hide.Name = "Hide";
-            this.Hide.Size = new System.Drawing.Size(23, 23);
-            this.Hide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Hide.TabIndex = 19;
-            this.Hide.TabStop = false;
-            this.Hide.Click += new System.EventHandler(this.Show_Click);
+            this.HidePass.BackColor = System.Drawing.Color.Transparent;
+            this.HidePass.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.HidePass.Image = global::DoAnPBL3.Properties.Resources.icons8_hide_24px;
+            this.HidePass.Location = new System.Drawing.Point(255, 287);
+            this.HidePass.Name = "HidePass";
+            this.HidePass.Size = new System.Drawing.Size(23, 23);
+            this.HidePass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.HidePass.TabIndex = 19;
+            this.HidePass.TabStop = false;
+            this.HidePass.Click += new System.EventHandler(this.Show_Click);
             // 
-            // Show
+            // ShowPass
             // 
-            this.Show.BackColor = System.Drawing.Color.Transparent;
-            this.Show.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Show.Image = global::DoAnPBL3.Properties.Resources.icons8_eye_24px;
-            this.Show.Location = new System.Drawing.Point(255, 287);
-            this.Show.Name = "Show";
-            this.Show.Size = new System.Drawing.Size(23, 23);
-            this.Show.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Show.TabIndex = 18;
-            this.Show.TabStop = false;
-            this.Show.Click += new System.EventHandler(this.Hide_Click);
+            this.ShowPass.BackColor = System.Drawing.Color.Transparent;
+            this.ShowPass.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ShowPass.Image = global::DoAnPBL3.Properties.Resources.icons8_eye_24px;
+            this.ShowPass.Location = new System.Drawing.Point(255, 287);
+            this.ShowPass.Name = "ShowPass";
+            this.ShowPass.Size = new System.Drawing.Size(23, 23);
+            this.ShowPass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ShowPass.TabIndex = 18;
+            this.ShowPass.TabStop = false;
+            this.ShowPass.Click += new System.EventHandler(this.Hide_Click);
             // 
             // btnSendCode
             // 
@@ -164,7 +164,7 @@ namespace DoAnPBL3
             this.btnBack.UseTransparentBackground = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // FormSend_Code
+            // FormForgotPassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -174,14 +174,14 @@ namespace DoAnPBL3
             this.Controls.Add(this.btnSendCode);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.guna2PictureBox1);
-            this.Controls.Add(this.Hide);
-            this.Controls.Add(this.Show);
+            this.Controls.Add(this.HidePass);
+            this.Controls.Add(this.ShowPass);
             this.Controls.Add(this.txtEmailPassword);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FormSend_Code";
+            this.Name = "FormForgotPassword";
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Hide)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Show)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HidePass)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ShowPass)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -190,8 +190,8 @@ namespace DoAnPBL3
 
         private Guna.UI2.WinForms.Guna2TextBox txtEmail;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private System.Windows.Forms.PictureBox Hide;
-        private System.Windows.Forms.PictureBox Show;
+        private System.Windows.Forms.PictureBox HidePass;
+        private System.Windows.Forms.PictureBox ShowPass;
         private Guna.UI2.WinForms.Guna2TextBox txtEmailPassword;
         private Guna.UI2.WinForms.Guna2Button btnSendCode;
         private Guna.UI2.WinForms.Guna2Button btnBack;
