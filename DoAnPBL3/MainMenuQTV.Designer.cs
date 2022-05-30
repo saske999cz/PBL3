@@ -55,7 +55,6 @@ namespace DoAnPBL3
             this.iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
             this.iconPictureBox4 = new FontAwesome.Sharp.IconPictureBox();
             this.lblDate = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
@@ -63,6 +62,7 @@ namespace DoAnPBL3
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.BookStoreLogo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.rjddmAdminSettingMenu = new DoAnPBL3.RJDropDownMenu(this.components);
             this.chỉnhSửaTàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thayĐổiThemeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -84,6 +84,7 @@ namespace DoAnPBL3
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BookStoreLogo)).BeginInit();
             this.rjddmAdminSettingMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -363,6 +364,7 @@ namespace DoAnPBL3
             // panelDesktop
             // 
             this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.panelDesktop.Controls.Add(this.BookStoreLogo);
             this.panelDesktop.Controls.Add(this.xuiClock1);
             this.panelDesktop.Controls.Add(this.lblAdminName);
             this.panelDesktop.Controls.Add(this.iconPictureBox6);
@@ -370,7 +372,6 @@ namespace DoAnPBL3
             this.panelDesktop.Controls.Add(this.iconPictureBox3);
             this.panelDesktop.Controls.Add(this.iconPictureBox4);
             this.panelDesktop.Controls.Add(this.lblDate);
-            this.panelDesktop.Controls.Add(this.label3);
             this.panelDesktop.Controls.Add(this.iconPictureBox1);
             this.panelDesktop.Controls.Add(this.label2);
             this.panelDesktop.Controls.Add(this.iconPictureBox2);
@@ -499,18 +500,6 @@ namespace DoAnPBL3
             this.lblDate.TabIndex = 14;
             this.lblDate.Text = "Date";
             // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(360, 77);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(295, 24);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "Ứng dụng quản lý bán sách ";
-            // 
             // iconPictureBox1
             // 
             this.iconPictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -579,6 +568,20 @@ namespace DoAnPBL3
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // BookStoreLogo
+            // 
+            this.BookStoreLogo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.BookStoreLogo.FillColor = System.Drawing.Color.Transparent;
+            this.BookStoreLogo.Image = global::DoAnPBL3.Properties.Resources.logo_book_store;
+            this.BookStoreLogo.ImageRotate = 0F;
+            this.BookStoreLogo.Location = new System.Drawing.Point(197, 5);
+            this.BookStoreLogo.Name = "BookStoreLogo";
+            this.BookStoreLogo.Size = new System.Drawing.Size(613, 507);
+            this.BookStoreLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.BookStoreLogo.TabIndex = 24;
+            this.BookStoreLogo.TabStop = false;
             // 
             // rjddmAdminSettingMenu
             // 
@@ -666,6 +669,7 @@ namespace DoAnPBL3
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BookStoreLogo)).EndInit();
             this.rjddmAdminSettingMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -692,7 +696,6 @@ namespace DoAnPBL3
         private FontAwesome.Sharp.IconPictureBox btnMinimize;
         private FontAwesome.Sharp.IconPictureBox btnMaximize;
         private FontAwesome.Sharp.IconPictureBox btnClose;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblDate;
         private RJDropDownMenu rjddmAdminSettingMenu;
         private System.Windows.Forms.ToolStripMenuItem chỉnhSửaTàiKhoảnToolStripMenuItem;
@@ -710,6 +713,7 @@ namespace DoAnPBL3
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label lblAdminUsername;
+        private Guna.UI2.WinForms.Guna2PictureBox BookStoreLogo;
     }
 }
 

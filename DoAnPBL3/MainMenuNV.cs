@@ -148,7 +148,7 @@ namespace DoAnPBL3
         private void panelTitleBar_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
+            SendMessage(Handle, 0x112, 0xf012, 0);
         }
 
         private void btnMaximize_Click(object sender, EventArgs e)
@@ -206,6 +206,7 @@ namespace DoAnPBL3
             timer1.Start();
             lblDate.Text = DateTime.Now.ToLongDateString();
             rjddmUserSettingMenu.IsMainMenu = true;
+            guna2ShadowForm1.SetShadowForm(this);
             using (BookStoreContext context = new BookStoreContext())
             {
                 var employee = context.Employees

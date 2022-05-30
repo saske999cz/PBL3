@@ -30,6 +30,7 @@ namespace DoAnPBL3
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTTS));
             this.panelContainer = new System.Windows.Forms.Panel();
             this.tbNameBook = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblNameBook = new System.Windows.Forms.Label();
@@ -554,6 +555,7 @@ namespace DoAnPBL3
             this.ClientSize = new System.Drawing.Size(812, 757);
             this.Controls.Add(this.panelContainer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormTTS";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormTTS";

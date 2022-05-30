@@ -29,13 +29,14 @@ namespace DoAnPBL3
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormForgotPassword));
             this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtEmailPassword = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnSendCode = new Guna.UI2.WinForms.Guna2Button();
+            this.btnBack = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.HidePass = new System.Windows.Forms.PictureBox();
             this.ShowPass = new System.Windows.Forms.PictureBox();
-            this.btnSendCode = new Guna.UI2.WinForms.Guna2Button();
-            this.btnBack = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HidePass)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ShowPass)).BeginInit();
@@ -89,6 +90,42 @@ namespace DoAnPBL3
             this.txtEmailPassword.TabIndex = 17;
             this.txtEmailPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEmailPassword_KeyPress);
             // 
+            // btnSendCode
+            // 
+            this.btnSendCode.Animated = true;
+            this.btnSendCode.BackColor = System.Drawing.Color.Transparent;
+            this.btnSendCode.BorderRadius = 10;
+            this.btnSendCode.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSendCode.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(20)))), ((int)(((byte)(137)))));
+            this.btnSendCode.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSendCode.ForeColor = System.Drawing.Color.White;
+            this.btnSendCode.HoverState.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnSendCode.Location = new System.Drawing.Point(27, 354);
+            this.btnSendCode.Name = "btnSendCode";
+            this.btnSendCode.Size = new System.Drawing.Size(129, 39);
+            this.btnSendCode.TabIndex = 20;
+            this.btnSendCode.Text = "Gửi mã";
+            this.btnSendCode.UseTransparentBackground = true;
+            this.btnSendCode.Click += new System.EventHandler(this.btnSendCode_ClickAsync);
+            // 
+            // btnBack
+            // 
+            this.btnBack.Animated = true;
+            this.btnBack.BackColor = System.Drawing.Color.Transparent;
+            this.btnBack.BorderRadius = 10;
+            this.btnBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBack.FillColor = System.Drawing.Color.DarkGray;
+            this.btnBack.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.ForeColor = System.Drawing.Color.Black;
+            this.btnBack.HoverState.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnBack.Location = new System.Drawing.Point(162, 354);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(129, 39);
+            this.btnBack.TabIndex = 21;
+            this.btnBack.Text = "Quay về";
+            this.btnBack.UseTransparentBackground = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // guna2PictureBox1
             // 
             this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
@@ -128,42 +165,6 @@ namespace DoAnPBL3
             this.ShowPass.TabStop = false;
             this.ShowPass.Click += new System.EventHandler(this.Hide_Click);
             // 
-            // btnSendCode
-            // 
-            this.btnSendCode.Animated = true;
-            this.btnSendCode.BackColor = System.Drawing.Color.Transparent;
-            this.btnSendCode.BorderRadius = 10;
-            this.btnSendCode.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSendCode.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(20)))), ((int)(((byte)(137)))));
-            this.btnSendCode.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSendCode.ForeColor = System.Drawing.Color.White;
-            this.btnSendCode.HoverState.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnSendCode.Location = new System.Drawing.Point(27, 354);
-            this.btnSendCode.Name = "btnSendCode";
-            this.btnSendCode.Size = new System.Drawing.Size(129, 39);
-            this.btnSendCode.TabIndex = 20;
-            this.btnSendCode.Text = "Gửi mã";
-            this.btnSendCode.UseTransparentBackground = true;
-            this.btnSendCode.Click += new System.EventHandler(this.btnSendCode_ClickAsync);
-            // 
-            // btnBack
-            // 
-            this.btnBack.Animated = true;
-            this.btnBack.BackColor = System.Drawing.Color.Transparent;
-            this.btnBack.BorderRadius = 10;
-            this.btnBack.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBack.FillColor = System.Drawing.Color.DarkGray;
-            this.btnBack.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.ForeColor = System.Drawing.Color.Black;
-            this.btnBack.HoverState.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnBack.Location = new System.Drawing.Point(162, 354);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(129, 39);
-            this.btnBack.TabIndex = 21;
-            this.btnBack.Text = "Quay về";
-            this.btnBack.UseTransparentBackground = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
             // FormForgotPassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -178,6 +179,7 @@ namespace DoAnPBL3
             this.Controls.Add(this.ShowPass);
             this.Controls.Add(this.txtEmailPassword);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormForgotPassword";
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HidePass)).EndInit();

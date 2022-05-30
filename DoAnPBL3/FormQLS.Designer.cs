@@ -37,6 +37,11 @@ namespace DoAnPBL3
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormQLS));
             this.xuiSegmentSach = new XanderUI.XUISegment();
             this.dgvQLSNV = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NameBook = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Language = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblSSTA = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lblSSTV = new System.Windows.Forms.Label();
@@ -57,11 +62,6 @@ namespace DoAnPBL3
             this.panel1 = new System.Windows.Forms.Panel();
             this.rjtbTKS = new DoAnPBL3.RJTextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NameBook = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Language = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQLSNV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -147,6 +147,51 @@ namespace DoAnPBL3
             this.dgvQLSNV.Size = new System.Drawing.Size(821, 413);
             this.dgvQLSNV.TabIndex = 40;
             this.dgvQLSNV.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvQLSNV_RowHeaderMouseClick);
+            // 
+            // ID
+            // 
+            this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ID.DataPropertyName = "ID_Book";
+            this.ID.FillWeight = 50.76143F;
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            // 
+            // NameBook
+            // 
+            this.NameBook.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NameBook.DataPropertyName = "NameBook";
+            this.NameBook.FillWeight = 155.2978F;
+            this.NameBook.HeaderText = "Tên sách";
+            this.NameBook.Name = "NameBook";
+            this.NameBook.ReadOnly = true;
+            // 
+            // Language
+            // 
+            this.Language.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Language.DataPropertyName = "NameLanguage";
+            this.Language.FillWeight = 85.87595F;
+            this.Language.HeaderText = "Ngôn ngữ";
+            this.Language.Name = "Language";
+            this.Language.ReadOnly = true;
+            // 
+            // Price
+            // 
+            this.Price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Price.DataPropertyName = "Price";
+            this.Price.FillWeight = 90.46779F;
+            this.Price.HeaderText = "Giá tiền";
+            this.Price.Name = "Price";
+            this.Price.ReadOnly = true;
+            // 
+            // Quantity
+            // 
+            this.Quantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Quantity.DataPropertyName = "Quantity";
+            this.Quantity.FillWeight = 117.5971F;
+            this.Quantity.HeaderText = "Số lượng";
+            this.Quantity.Name = "Quantity";
+            this.Quantity.ReadOnly = true;
             // 
             // lblSSTA
             // 
@@ -394,51 +439,6 @@ namespace DoAnPBL3
             this.rjtbTKS.UnderlinedStyle = false;
             this.rjtbTKS.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.rjtbTKS_KeyPress);
             // 
-            // ID
-            // 
-            this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ID.DataPropertyName = "ID_Book";
-            this.ID.FillWeight = 50.76143F;
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            // 
-            // NameBook
-            // 
-            this.NameBook.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.NameBook.DataPropertyName = "NameBook";
-            this.NameBook.FillWeight = 155.2978F;
-            this.NameBook.HeaderText = "Tên sách";
-            this.NameBook.Name = "NameBook";
-            this.NameBook.ReadOnly = true;
-            // 
-            // Language
-            // 
-            this.Language.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Language.DataPropertyName = "NameLanguage";
-            this.Language.FillWeight = 85.87595F;
-            this.Language.HeaderText = "Ngôn ngữ";
-            this.Language.Name = "Language";
-            this.Language.ReadOnly = true;
-            // 
-            // Price
-            // 
-            this.Price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Price.DataPropertyName = "Price";
-            this.Price.FillWeight = 90.46779F;
-            this.Price.HeaderText = "Giá tiền";
-            this.Price.Name = "Price";
-            this.Price.ReadOnly = true;
-            // 
-            // Quantity
-            // 
-            this.Quantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Quantity.DataPropertyName = "Quantity";
-            this.Quantity.FillWeight = 117.5971F;
-            this.Quantity.HeaderText = "Số lượng";
-            this.Quantity.Name = "Quantity";
-            this.Quantity.ReadOnly = true;
-            // 
             // FormQLS
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -459,6 +459,7 @@ namespace DoAnPBL3
             this.Controls.Add(this.xuiSegmentSach);
             this.Controls.Add(this.dgvQLSNV);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormQLS";
             this.Text = "Quản lý sách";
             this.Load += new System.EventHandler(this.FormQLS_Load);

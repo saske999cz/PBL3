@@ -29,6 +29,7 @@ namespace DoAnPBL3
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSettingAccountQTV));
             this.tbPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblPassword = new System.Windows.Forms.Label();
             this.lblAvatar = new System.Windows.Forms.Label();
@@ -230,7 +231,7 @@ namespace DoAnPBL3
             this.lblConfirmPassword.TabIndex = 14;
             this.lblConfirmPassword.Text = "Xác nhận mật khẩu";
             // 
-            // FormSettingAccountQT
+            // FormSettingAccountQTV
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
@@ -247,7 +248,8 @@ namespace DoAnPBL3
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblAvatar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FormSettingAccountQT";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "FormSettingAccountQTV";
             this.Text = "FormSettingAccount";
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).EndInit();
             this.ResumeLayout(false);

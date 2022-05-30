@@ -31,10 +31,10 @@ namespace DoAnPBL3
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMinNote));
             this.panelNote = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2CircleButton3 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.lblNoteDate = new System.Windows.Forms.Label();
             this.lblNoteTitle = new System.Windows.Forms.Label();
-            this.guna2CircleButton3 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.panelNote.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,6 +53,24 @@ namespace DoAnPBL3
             this.panelNote.Size = new System.Drawing.Size(978, 57);
             this.panelNote.TabIndex = 3;
             this.panelNote.Click += new System.EventHandler(this.panelNote_Click);
+            // 
+            // guna2CircleButton3
+            // 
+            this.guna2CircleButton3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2CircleButton3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2CircleButton3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2CircleButton3.FillColor = System.Drawing.Color.Firebrick;
+            this.guna2CircleButton3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2CircleButton3.ForeColor = System.Drawing.Color.White;
+            this.guna2CircleButton3.Image = ((System.Drawing.Image)(resources.GetObject("guna2CircleButton3.Image")));
+            this.guna2CircleButton3.Location = new System.Drawing.Point(898, 7);
+            this.guna2CircleButton3.Name = "guna2CircleButton3";
+            this.guna2CircleButton3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CircleButton3.Size = new System.Drawing.Size(39, 40);
+            this.guna2CircleButton3.TabIndex = 29;
+            this.guna2CircleButton3.Click += new System.EventHandler(this.guna2CircleButton3_Click);
             // 
             // guna2CircleButton1
             // 
@@ -91,24 +109,6 @@ namespace DoAnPBL3
             this.lblNoteTitle.TabIndex = 0;
             this.lblNoteTitle.Text = "label1";
             // 
-            // guna2CircleButton3
-            // 
-            this.guna2CircleButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2CircleButton3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2CircleButton3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2CircleButton3.FillColor = System.Drawing.Color.Firebrick;
-            this.guna2CircleButton3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2CircleButton3.ForeColor = System.Drawing.Color.White;
-            this.guna2CircleButton3.Image = ((System.Drawing.Image)(resources.GetObject("guna2CircleButton3.Image")));
-            this.guna2CircleButton3.Location = new System.Drawing.Point(898, 7);
-            this.guna2CircleButton3.Name = "guna2CircleButton3";
-            this.guna2CircleButton3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CircleButton3.Size = new System.Drawing.Size(39, 40);
-            this.guna2CircleButton3.TabIndex = 29;
-            this.guna2CircleButton3.Click += new System.EventHandler(this.guna2CircleButton3_Click);
-            // 
             // FormMinNote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -117,6 +117,7 @@ namespace DoAnPBL3
             this.ClientSize = new System.Drawing.Size(978, 57);
             this.Controls.Add(this.panelNote);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormMinNote";
             this.Text = "FormMinNote";
             this.panelNote.ResumeLayout(false);

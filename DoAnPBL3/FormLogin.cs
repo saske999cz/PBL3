@@ -30,6 +30,7 @@ namespace DoAnPBL3
 
         private void Login_Load(object sender, EventArgs e)
         {
+            guna2ShadowForm1.SetShadowForm(this);
             using (BookStoreContext context = new BookStoreContext())
             {
                 // tương tác với DB 1 lần để rend ra CSDL
@@ -180,6 +181,12 @@ namespace DoAnPBL3
             panelDesktop.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
+        }
+
+        private void guna2ControlBox1_Click(object sender, EventArgs e)
+        {
+            Close();
+            Application.Exit();
         }
     }
 }

@@ -29,6 +29,7 @@ namespace DoAnPBL3
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTheme));
             this.btnSave = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
             this.cbTheme = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -99,6 +100,7 @@ namespace DoAnPBL3
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSave);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormTheme";
             this.ResumeLayout(false);
             this.PerformLayout();

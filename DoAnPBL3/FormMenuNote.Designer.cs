@@ -30,6 +30,7 @@ namespace DoAnPBL3
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMenuNote));
             this.Notes = new Guna.UI2.WinForms.Guna2Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.btnAddNote = new DoAnPBL3.RJButton();
@@ -82,6 +83,7 @@ namespace DoAnPBL3
             this.Controls.Add(this.Notes);
             this.Controls.Add(this.btnAddNote);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormMenuNote";
             this.Text = "Ghi chú";
             this.Load += new System.EventHandler(this.FormMenuNote_Load);

@@ -29,6 +29,7 @@ namespace DoAnPBL3
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSettingAccountNV));
             this.msgValidateConfirmPassword = new System.Windows.Forms.Label();
             this.tbConfirmPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblConfirmPassword = new System.Windows.Forms.Label();
@@ -249,6 +250,7 @@ namespace DoAnPBL3
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblAvatar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormSettingAccountNV";
             this.Text = "FormSettingAccountNV";
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).EndInit();

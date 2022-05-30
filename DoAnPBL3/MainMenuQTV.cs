@@ -263,6 +263,7 @@ namespace DoAnPBL3
             timer1.Start();
             lblDate.Text = DateTime.Now.ToLongDateString();
             rjddmAdminSettingMenu.IsMainMenu = true;
+            guna2ShadowForm1.SetShadowForm(this);
             using (BookStoreContext context = new BookStoreContext())
             {
                 var admin = context.Admins
@@ -374,7 +375,6 @@ namespace DoAnPBL3
             btnQLKH.ForeColor = Color.Gainsboro;
             btnQLKH.IconColor = Color.Gainsboro;
             rjddmAdminSettingMenu.BackColor = Color.FromArgb(26, 26, 26);
-            label3.ForeColor = Color.White;
             lblDate.ForeColor = Color.White;
             label1.ForeColor = Color.White;
             label2.ForeColor = Color.White;
@@ -404,7 +404,6 @@ namespace DoAnPBL3
             btnQLKH.ForeColor = Color.Black;
             btnQLKH.IconColor = Color.Black;
             rjddmAdminSettingMenu.BackColor = Color.FromArgb(190, 190, 190);
-            label3.ForeColor = Color.Black;
             lblDate.ForeColor = Color.Black;
             label1.ForeColor = Color.Black;
             label2.ForeColor = Color.Black;
@@ -434,7 +433,6 @@ namespace DoAnPBL3
             btnQLKH.ForeColor = Color.White;
             btnQLKH.IconColor = Color.White;
             rjddmAdminSettingMenu.BackColor = Color.DarkSlateBlue;
-            label3.ForeColor = Color.White;
             lblDate.ForeColor = Color.White;
             label1.ForeColor = Color.White;
             label2.ForeColor = Color.White;

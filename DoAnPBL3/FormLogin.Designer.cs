@@ -219,26 +219,26 @@ namespace DoAnPBL3
             this.guna2PictureBox1.TabStop = false;
             this.guna2PictureBox1.UseTransparentBackground = true;
             // 
-            // HidePass
+            // Hide
             // 
             this.HidePass.BackColor = System.Drawing.Color.Transparent;
             this.HidePass.Cursor = System.Windows.Forms.Cursors.Hand;
             this.HidePass.Image = global::DoAnPBL3.Properties.Resources.icons8_hide_24px;
             this.HidePass.Location = new System.Drawing.Point(255, 287);
-            this.HidePass.Name = "HidePass";
+            this.HidePass.Name = "Hide";
             this.HidePass.Size = new System.Drawing.Size(23, 23);
             this.HidePass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.HidePass.TabIndex = 14;
             this.HidePass.TabStop = false;
             this.HidePass.Click += new System.EventHandler(this.Show_Click);
             // 
-            // ShowPass
+            // Show
             // 
             this.ShowPass.BackColor = System.Drawing.Color.Transparent;
             this.ShowPass.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ShowPass.Image = global::DoAnPBL3.Properties.Resources.icons8_eye_24px;
             this.ShowPass.Location = new System.Drawing.Point(255, 287);
-            this.ShowPass.Name = "ShowPass";
+            this.ShowPass.Name = "Show";
             this.ShowPass.Size = new System.Drawing.Size(23, 23);
             this.ShowPass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ShowPass.TabIndex = 13;
@@ -301,6 +301,7 @@ namespace DoAnPBL3
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.Size = new System.Drawing.Size(35, 28);
             this.guna2ControlBox1.TabIndex = 2;
+            this.guna2ControlBox1.Click += new System.EventHandler(this.guna2ControlBox1_Click);
             // 
             // guna2PictureBox2
             // 
@@ -330,7 +331,6 @@ namespace DoAnPBL3
             // 
             this.guna2AnimateWindow1.AnimationType = Guna.UI2.WinForms.Guna2AnimateWindow.AnimateWindowType.AW_BLEND;
             this.guna2AnimateWindow1.Interval = 0;
-            this.guna2AnimateWindow1.TargetForm = this;
             // 
             // FormLogin
             // 
