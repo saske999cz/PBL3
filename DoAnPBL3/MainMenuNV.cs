@@ -19,14 +19,16 @@ namespace DoAnPBL3
         private Panel btnLeftBorder;
         private Form currentChildForm;
         private string accountUsername;
+        private string password;
 
-        public MainMenuNV(string accountUsername)
+        public MainMenuNV(string accountUsername, string password)
         {
             InitializeComponent();
             btnLeftBorder = new Panel();
             btnLeftBorder.Size = new Size(7, 77);
             panelMenu.Controls.Add(btnLeftBorder);
             this.accountUsername = accountUsername;
+            this.password = password;
             //Form
             Text = string.Empty;
             ControlBox = false;
@@ -106,7 +108,7 @@ namespace DoAnPBL3
         private void btnQLS_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color6);
-            OpenChildForm(new FormQLS());
+            OpenChildForm(new FormQLS(accountUsername, password));
         }
 
         private void btnBS_Click(object sender, EventArgs e)

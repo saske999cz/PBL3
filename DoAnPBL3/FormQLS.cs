@@ -14,10 +14,14 @@ namespace DoAnPBL3
     public partial class FormQLS : Form
     {
         private int count;
+        private string accountUsername;
+        private string password;
 
-        public FormQLS()
+        public FormQLS(string accountUsername, string password)
         {
             InitializeComponent();
+            this.accountUsername = accountUsername;
+            this.password = password;
         }
 
         public void Alert(string msg, Form_Alert.enmType type)
@@ -57,7 +61,7 @@ namespace DoAnPBL3
 
         private void btnAddNV_Click(object sender, EventArgs e)
         {
-            new FormAddSach().Show();
+            new FormAddSach(accountUsername, password).Show();
             timer1.Start();
         }
 
@@ -79,14 +83,8 @@ namespace DoAnPBL3
                 DialogResult result = RJMessageBox.Show("Xác nhận xóa mặt hàng sách " + NameBook + "?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 if (result == DialogResult.Yes)
                 {
-                    using (BookStoreContext context = new BookStoreContext())
-                    {
-                        Book book = context.Books.Find(ID_Book);
-                        context.Books.Remove(book);
-                        context.SaveChanges();
-                    }
-                    FormQLS_Load(sender, e);
-                    Alert("Xóa mặt hàng sách thành công", Form_Alert.enmType.Success);
+                    new FormIdentify(accountUsername, password, ID_Book).Show();
+                    timer1.Start();
                 }
                 else
                     return;

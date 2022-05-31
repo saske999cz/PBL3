@@ -22,8 +22,8 @@ namespace DoAnPBL3
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            rocket.Left += 5;
-            panel2.Width += 5;
+            rocket.Left += 3;
+            panel2.Width += 3;
 
             percent = (panel2.Width / 7) - 3;
             status.Text = percent.ToString() + "%";

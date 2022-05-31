@@ -78,8 +78,9 @@ namespace DoAnPBL3
                                                 .Where(account => account.Role == true) // Admin
                                                 .Where(account => account.Username == username)
                                                 .Where(account => account.Password == password)
-                                                .Select(account => new { account.Username, account.Password });
-                        if (listAdminAccounts.ToList().Count > 0)
+                                                .Select(account => new { account.Username, account.Password })
+                                                .ToList();
+                        if (listAdminAccounts.Count > 0)
                         {
                             Hide();
                             if (cbSaveAcc.Checked)
@@ -91,7 +92,8 @@ namespace DoAnPBL3
                             }
                             else
                                 Properties.Settings.Default.Reset();
-                            MainMenuQTV mainMenuQTV = new MainMenuQTV(listAdminAccounts.ToList().FirstOrDefault().Username);
+                            MainMenuQTV mainMenuQTV = new MainMenuQTV(listAdminAccounts.FirstOrDefault().Username, 
+                                listAdminAccounts.FirstOrDefault().Password);
                             mainMenuQTV.ShowDialog();
                             Close();
                         }
@@ -107,8 +109,9 @@ namespace DoAnPBL3
                                                 .Where(account => account.Role == false) // Employee
                                                 .Where(account => account.Username == username)
                                                 .Where(account => account.Password == password)
-                                                .Select(account => new { account.Username, account.Password });
-                        if (listEmployeeAccounts.ToList().Count > 0)
+                                                .Select(account => new { account.Username, account.Password })
+                                                .ToList();
+                        if (listEmployeeAccounts.Count > 0)
                         {
                             Hide();
                             if (cbSaveAcc.Checked)
@@ -120,7 +123,8 @@ namespace DoAnPBL3
                             }
                             else
                                 Properties.Settings.Default.Reset();
-                            MainMenuNV mainMenuNV = new MainMenuNV(listEmployeeAccounts.ToList().FirstOrDefault().Username);
+                            MainMenuNV mainMenuNV = new MainMenuNV(listEmployeeAccounts.FirstOrDefault().Username, 
+                                listEmployeeAccounts.FirstOrDefault().Password);
                             mainMenuNV.ShowDialog();
                             Close();
                         }

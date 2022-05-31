@@ -31,40 +31,43 @@ namespace DoAnPBL3
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormIdentify));
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.tbConfirmPass = new Guna.UI2.WinForms.Guna2TextBox();
             this.rjbtnOK = new DoAnPBL3.RJButton();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblConfirmPass = new System.Windows.Forms.Label();
             this.panelTitleBar = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.rjbtnCancel = new DoAnPBL3.RJButton();
+            this.msgValidatePass = new System.Windows.Forms.Label();
             this.panelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // guna2TextBox1
+            // tbConfirmPass
             // 
-            this.guna2TextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
-            this.guna2TextBox1.BorderRadius = 6;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(202, 145);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(509, 36);
-            this.guna2TextBox1.TabIndex = 0;
+            this.tbConfirmPass.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.tbConfirmPass.BorderRadius = 6;
+            this.tbConfirmPass.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbConfirmPass.DefaultText = "";
+            this.tbConfirmPass.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tbConfirmPass.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.tbConfirmPass.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbConfirmPass.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbConfirmPass.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.tbConfirmPass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbConfirmPass.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbConfirmPass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbConfirmPass.Location = new System.Drawing.Point(188, 166);
+            this.tbConfirmPass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbConfirmPass.Name = "tbConfirmPass";
+            this.tbConfirmPass.PasswordChar = '●';
+            this.tbConfirmPass.PlaceholderText = "";
+            this.tbConfirmPass.SelectedText = "";
+            this.tbConfirmPass.Size = new System.Drawing.Size(509, 36);
+            this.tbConfirmPass.TabIndex = 0;
+            this.tbConfirmPass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbConfirmPass_KeyPress);
             // 
             // rjbtnOK
             // 
@@ -86,6 +89,7 @@ namespace DoAnPBL3
             this.rjbtnOK.Text = "Xác nhận";
             this.rjbtnOK.TextColor = System.Drawing.Color.White;
             this.rjbtnOK.UseVisualStyleBackColor = false;
+            this.rjbtnOK.Click += new System.EventHandler(this.rjbtnOK_Click);
             // 
             // guna2Elipse1
             // 
@@ -98,16 +102,16 @@ namespace DoAnPBL3
             this.guna2ShadowForm1.ShadowColor = System.Drawing.Color.White;
             this.guna2ShadowForm1.TargetForm = this;
             // 
-            // label1
+            // lblConfirmPass
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Location = new System.Drawing.Point(65, 153);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(128, 19);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Nhập mật khẩu \r\n";
+            this.lblConfirmPass.AutoSize = true;
+            this.lblConfirmPass.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConfirmPass.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblConfirmPass.Location = new System.Drawing.Point(51, 174);
+            this.lblConfirmPass.Name = "lblConfirmPass";
+            this.lblConfirmPass.Size = new System.Drawing.Size(128, 19);
+            this.lblConfirmPass.TabIndex = 12;
+            this.lblConfirmPass.Text = "Nhập mật khẩu ";
             // 
             // panelTitleBar
             // 
@@ -165,17 +169,28 @@ namespace DoAnPBL3
             this.rjbtnCancel.Text = "Hủy";
             this.rjbtnCancel.TextColor = System.Drawing.Color.White;
             this.rjbtnCancel.UseVisualStyleBackColor = false;
+            this.rjbtnCancel.Click += new System.EventHandler(this.rjbtnCancel_Click);
+            // 
+            // msgValidatePass
+            // 
+            this.msgValidatePass.AutoSize = true;
+            this.msgValidatePass.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.msgValidatePass.Location = new System.Drawing.Point(185, 205);
+            this.msgValidatePass.Name = "msgValidatePass";
+            this.msgValidatePass.Size = new System.Drawing.Size(0, 16);
+            this.msgValidatePass.TabIndex = 55;
             // 
             // FormIdentify
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(37)))), ((int)(((byte)(65)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.msgValidatePass);
             this.Controls.Add(this.rjbtnCancel);
             this.Controls.Add(this.panelTitleBar);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblConfirmPass);
             this.Controls.Add(this.rjbtnOK);
-            this.Controls.Add(this.guna2TextBox1);
+            this.Controls.Add(this.tbConfirmPass);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormIdentify";
@@ -191,14 +206,15 @@ namespace DoAnPBL3
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox tbConfirmPass;
         private RJButton rjbtnOK;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblConfirmPass;
         private System.Windows.Forms.Panel panelTitleBar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
         private RJButton rjbtnCancel;
+        private System.Windows.Forms.Label msgValidatePass;
     }
 }

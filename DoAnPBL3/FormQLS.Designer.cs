@@ -350,7 +350,7 @@ namespace DoAnPBL3
             this.btnDeleteSach.IconColor = System.Drawing.Color.White;
             this.btnDeleteSach.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDeleteSach.IconSize = 30;
-            this.btnDeleteSach.Location = new System.Drawing.Point(8, 99);
+            this.btnDeleteSach.Location = new System.Drawing.Point(7, 99);
             this.btnDeleteSach.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeleteSach.Name = "btnDeleteSach";
             this.btnDeleteSach.Size = new System.Drawing.Size(143, 44);

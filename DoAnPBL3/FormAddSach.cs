@@ -19,11 +19,15 @@ namespace DoAnPBL3
 {
     public partial class FormAddSach : Form
     {
-        
+        private string accountUsername;
+        private string password;
+        private string beforeNameAuthor = "";
         //Constructor
-        public FormAddSach()
+        public FormAddSach(string accountUsername, string password)
         {
-            InitializeComponent();   
+            InitializeComponent();
+            this.accountUsername = accountUsername;
+            this.password = password;
         }
 
         public void Alert(string msg, Form_Alert.enmType type)
@@ -289,25 +293,27 @@ namespace DoAnPBL3
                         DialogResult result = RJMessageBox.Show("Tác giả " + tbAuthor.Text + " chưa có trong hệ thống. Xác nhận thêm mới?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                         if (result == DialogResult.Yes)
                         {
-                            Author newAuthor;
-                            var lastAuthor = context.Authors
-                                .OrderBy(auth => auth.ID_Author)
+                            new FormIdentify(accountUsername, password, ID_Book, tbAuthor.Text).ShowDialog();
+
+                            var newAuthor = context.Authors
+                                .Where(auth => auth.FullNameAuthor == tbAuthor.Text)
                                 .Select(auth => new { auth.ID_Author })
                                 .ToList()
                                 .LastOrDefault();
-                            if (lastAuthor == null)
-                                newAuthor = new Author(1, tbAuthor.Text, "");
+                            if (newAuthor == null)
+                            {
+                                return;
+                            }
                             else
-                                newAuthor = new Author(lastAuthor.ID_Author + 1, tbAuthor.Text, "");
-                            context.Authors.Add(newAuthor);
-                            context.SaveChanges();
-
-                            Book newBook = new Book(ID_Book, nameBook, dateOfPublish, Convert.ToInt32(quantity), Convert.ToInt32(price), unit,
-                                cbbLanguage.SelectedIndex + 1, lastAuthor.ID_Author, cbbPublisher.SelectedIndex + 1, cbbGenre.SelectedIndex + 1, bookImage);
-                            context.Books.Add(newBook);
-                            context.SaveChanges();
-                            Alert("Thêm sách mới thành công", Form_Alert.enmType.Success);
-                            Close();
+                            {
+                                Book newBook = new Book(ID_Book, nameBook, dateOfPublish, Convert.ToInt32(quantity), Convert.ToInt32(price), unit,
+                                                                cbbLanguage.SelectedIndex + 1, newAuthor.ID_Author, cbbPublisher.SelectedIndex + 1,
+                                                                cbbGenre.SelectedIndex + 1, bookImage);
+                                context.Books.Add(newBook);
+                                context.SaveChanges();
+                                Alert("Thêm sách mới thành công", Form_Alert.enmType.Success);
+                                Close();
+                            }                            
                         }
                         else
                             return;
@@ -354,20 +360,36 @@ namespace DoAnPBL3
 
         private void tbAuthor_TextChanged(object sender, EventArgs e)
         {
-            using (BookStoreContext context = new BookStoreContext())
+            MessageBox.Show(tbAuthor.Text);
+            MessageBox.Show(beforeNameAuthor);
+            if (beforeNameAuthor.Length > tbAuthor.Text.Length && beforeNameAuthor != "")
             {
-                var author = context.Authors
-                    .Where(auth => auth.FullNameAuthor.Contains(tbAuthor.Text))
-                    .Select(auth => new { auth.FullNameAuthor })
-                    .ToList()
-                    .FirstOrDefault();
-                if (author != null)
+                beforeNameAuthor = tbAuthor.Text;
+            }
+            else
+            {
+                using (BookStoreContext context = new BookStoreContext())
                 {
-                    tbAuthor.Text = author.FullNameAuthor;
-                }
-                else
-                {
-                    tbAuthor.Text = "";
+                    if (tbAuthor.Text == "")
+                    {
+                        return;
+                    }
+                    else
+                    {
+                        var author = context.Authors
+                        .Where(auth => auth.FullNameAuthor.Contains(tbAuthor.Text))
+                        .Select(auth => new { auth.FullNameAuthor })
+                        .ToList()
+                        .FirstOrDefault();
+                        if (author != null)
+                        {
+                            tbAuthor.Text = author.FullNameAuthor;
+                        }
+                        else
+                        {
+                            tbAuthor.Text = beforeNameAuthor;
+                        }
+                    }
                 }
             }
         }

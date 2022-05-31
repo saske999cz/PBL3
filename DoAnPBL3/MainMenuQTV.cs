@@ -20,14 +20,16 @@ namespace DoAnPBL3
         private Form currentChildForm;
         private string theme = "Admin";
         private string accountUsername;
+        private string password;
 
-        public MainMenuQTV(string accountUsername)
+        public MainMenuQTV(string accountUsername, string password)
         {
             InitializeComponent();
             btnLeftBorder = new Panel();
             btnLeftBorder.Size = new Size(7, 77);
             panelMenu.Controls.Add(btnLeftBorder);
             this.accountUsername = accountUsername;
+            this.password = password;
             //Form
             Text = string.Empty;
             ControlBox = false;
@@ -155,7 +157,7 @@ namespace DoAnPBL3
         private void btnQLNV_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color1);
-            OpenChildForm(new FormQLNV(theme));
+            OpenChildForm(new FormQLNV(theme, accountUsername, password));
         }
 
         private void btnQLBS_Click(object sender, EventArgs e)
@@ -273,7 +275,7 @@ namespace DoAnPBL3
                         acc => acc.Username,
                         (ad, acc) => new { ad.FullNameAdmin, ad.AccountUsername, acc.Avatar })
                     .Where(ad => ad.AccountUsername == accountUsername)
-                    .Select(ad => new { ad.FullNameAdmin, ad.AccountUsername, ad.Avatar })
+                    .Select(ad => ad)
                     .ToList()
                     .FirstOrDefault();
                 lblAdminName.Text = admin.FullNameAdmin;

@@ -18,9 +18,14 @@ namespace DoAnPBL3
     {
         private int count;
         private IconButton btnCurrent;
-        public FormQLNV(string theme)
+        private string accountUsername;
+        private string password;
+
+        public FormQLNV(string theme, string accountUsername, string password)
         {
             InitializeComponent();
+            this.accountUsername = accountUsername;
+            this.password = password;
             switch (theme)
             {
                 case "Admin":
@@ -187,11 +192,11 @@ namespace DoAnPBL3
                     });
                 var listMaleEmployees = listEmployees.Where(employee => employee.Gender == "Nam");
                 var listFemaleEmployees = listEmployees.Where(employee => employee.Gender == "Nữ");
-                count = listEmployees.ToList().Count();
                 dgvQLNV.DataSource = listEmployees.ToList();
-                lblTSNV.Text = listEmployees.ToList().Count().ToString();
-                lblSNVNam.Text = listMaleEmployees.ToList().Count().ToString();
-                lblSNVNu.Text = listFemaleEmployees.ToList().Count().ToString();
+                count = listEmployees.Count();
+                lblTSNV.Text = listEmployees.Count().ToString();
+                lblSNVNam.Text = listMaleEmployees.Count().ToString();
+                lblSNVNu.Text = listFemaleEmployees.Count().ToString();
             }
         }
 
@@ -213,6 +218,7 @@ namespace DoAnPBL3
                 new FormSuaNV(ID_Employee).Show();
             }
         }
+
         private void btnDeleteNV_Click(object sender, EventArgs e)
         {
             if (dgvQLNV.CurrentRow == null)
@@ -226,14 +232,8 @@ namespace DoAnPBL3
                 DialogResult result = RJMessageBox.Show("Xác nhận xóa nhân viên " + name + "?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
-                    using (BookStoreContext context = new BookStoreContext())
-                    {
-                        Employee employee = context.Employees.Find(ID_Employee);
-                        context.Employees.Remove(employee);
-                        context.SaveChanges();
-                    }
-                    FormQLNV_Load(sender, e);
-                    Alert("Xóa nhân viên thành công", Form_Alert.enmType.Success);
+                    new FormIdentify(accountUsername ,password, ID_Employee).Show();
+                    timer1.Start();
                 }
                 else
                     return;
@@ -254,7 +254,7 @@ namespace DoAnPBL3
                 {
                     RJMessageBox.Show("Vui lòng điền thông tin nhân viên cần tìm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                else if (Validator.Validators.IsValidPhoneNumber(rjtbTKNV.Texts, Validator.Validators.PHONE_REGEX))
+                else if (Validators.IsValidPhoneNumber(rjtbTKNV.Texts, Validators.PHONE_REGEX))
                 {
                     var listEmployees = context.Employees
                         .Where(employee => employee.Phone == rjtbTKNV.Texts)
@@ -295,7 +295,7 @@ namespace DoAnPBL3
 
         private void rjtbTKNV_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == (Char)Keys.Enter)
+            if (e.KeyChar == (char)Keys.Enter)
             {
                 btnTKNV.PerformClick();
                 e.Handled = true;
@@ -359,10 +359,10 @@ namespace DoAnPBL3
                         });
                 var listMaleEmployees = listEmployees.Where(employee => employee.Gender == "Nam");
                 var listFemaleEmployees = listEmployees.Where(employee => employee.Gender == "Nữ");
-                if (listEmployees.ToList().Count() != count)
+                if (listEmployees.Count() != count)
                 {
                     dgvQLNV.DataSource = listEmployees.ToList();
-                    lblTSNV.Text = listEmployees.ToList().Count().ToString();
+                    lblTSNV.Text = listEmployees.Count().ToString();
                     lblSNVNam.Text = listMaleEmployees.Count().ToString();
                     lblSNVNu.Text = listFemaleEmployees.Count().ToString();
                     count = listEmployees.Count();
