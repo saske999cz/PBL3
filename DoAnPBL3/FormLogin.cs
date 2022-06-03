@@ -11,21 +11,17 @@ using DoAnPBL3.Models;
 
 namespace DoAnPBL3
 {
-    public partial class FormLogin : System.Windows.Forms.Form
+    public partial class FormLogin : Form
     {
-        private string username;
-        private string password;
-        private string email;
-        private string emailPassword;
+        private readonly string username;
+        private readonly string password;
         private Form currentChildForm;
 
-        public FormLogin(string username = "", string password = "", string email = "", string emailPassword = "")
+        public FormLogin(string username = "", string password = "")
         {
             InitializeComponent();
             this.username = username;
             this.password = password;
-            this.email = email;
-            this.emailPassword = emailPassword;
         }
 
         private void Login_Load(object sender, EventArgs e)
@@ -55,7 +51,7 @@ namespace DoAnPBL3
 
         private void linkLabelForgotPassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            OpenChildForm(new FormForgotPassword(username, password, email, emailPassword));
+            OpenChildForm(new FormForgotPassword());
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -92,9 +88,7 @@ namespace DoAnPBL3
                             }
                             else
                                 Properties.Settings.Default.Reset();
-                            MainMenuQTV mainMenuQTV = new MainMenuQTV(listAdminAccounts.FirstOrDefault().Username, 
-                                listAdminAccounts.FirstOrDefault().Password);
-                            mainMenuQTV.ShowDialog();
+                            new MainMenuQTV(listAdminAccounts.FirstOrDefault().Username, listAdminAccounts.FirstOrDefault().Password).ShowDialog();
                             Close();
                         }
                         else
@@ -123,9 +117,7 @@ namespace DoAnPBL3
                             }
                             else
                                 Properties.Settings.Default.Reset();
-                            MainMenuNV mainMenuNV = new MainMenuNV(listEmployeeAccounts.FirstOrDefault().Username, 
-                                listEmployeeAccounts.FirstOrDefault().Password);
-                            mainMenuNV.ShowDialog();
+                            new MainMenuNV(listEmployeeAccounts.FirstOrDefault().Username, listEmployeeAccounts.FirstOrDefault().Password).ShowDialog();
                             Close();
                         }
                         else

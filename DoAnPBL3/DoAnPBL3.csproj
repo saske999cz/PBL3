@@ -203,6 +203,12 @@
     <Compile Include="FlatCombobox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="FormAuthenticateCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAuthenticateCustomer.Designer.cs">
+      <DependentUpon>FormAuthenticateCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormIdentify.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -452,6 +458,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormAlert.resx">
       <DependentUpon>FormAlert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAuthenticateCustomer.resx">
+      <DependentUpon>FormAuthenticateCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormIdentify.resx">
       <DependentUpon>FormIdentify.cs</DependentUpon>

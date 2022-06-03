@@ -38,6 +38,11 @@ namespace DoAnPBL3
                     tbNameBook.Text = book.NameBook;
                     tbPrice.Text = book.Price.ToString();
                 }
+                else
+                {
+                    tbNameBook.Text = "";
+                    tbPrice.Text = "";
+                }    
             }
         }
 
@@ -112,6 +117,29 @@ namespace DoAnPBL3
         public void SetIndex(int index)
         {
             this.index = index;
+        }
+
+        public string GetIndex()
+        {
+            return Index.Text;
+        }
+
+        public string GetID_Book()
+        {
+            return tbIDBook.Text;
+        }
+
+        public string GetNameBook()
+        {
+            return tbNameBook.Text;
+        }
+
+        public int GetPrice()
+        {
+            if (tbPrice.Text != "")
+                return Convert.ToInt32(tbPrice.Text);
+            else
+                return 0;
         }
 
         public void SetIndexText()

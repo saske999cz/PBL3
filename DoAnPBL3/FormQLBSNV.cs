@@ -70,7 +70,7 @@ namespace DoAnPBL3
 
         private void rjtbTKS_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == (Char)Keys.Enter)
+            if (e.KeyChar == (char)Keys.Enter)
             {
                 btnTKS.PerformClick();
                 e.Handled = true;

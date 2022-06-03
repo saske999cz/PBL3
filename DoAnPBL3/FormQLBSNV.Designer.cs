@@ -30,9 +30,9 @@ namespace DoAnPBL3
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormQLBSNV));
             this.xuiSegmentSach = new XanderUI.XUISegment();
             this.dgvQLBSNV = new System.Windows.Forms.DataGridView();
@@ -96,14 +96,14 @@ namespace DoAnPBL3
             this.dgvQLBSNV.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.dgvQLBSNV.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvQLBSNV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvQLBSNV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvQLBSNV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvQLBSNV.ColumnHeadersHeight = 30;
             this.dgvQLBSNV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvQLBSNV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -112,27 +112,28 @@ namespace DoAnPBL3
             this.NameLanguage,
             this.Price,
             this.Quantity});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 9F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvQLBSNV.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial", 9F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvQLBSNV.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvQLBSNV.EnableHeadersVisualStyles = false;
             this.dgvQLBSNV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(53)))), ((int)(((byte)(70)))));
             this.dgvQLBSNV.Location = new System.Drawing.Point(4, 170);
             this.dgvQLBSNV.Margin = new System.Windows.Forms.Padding(2);
             this.dgvQLBSNV.Name = "dgvQLBSNV";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvQLBSNV.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvQLBSNV.ReadOnly = true;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvQLBSNV.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvQLBSNV.RowHeadersWidth = 51;
             this.dgvQLBSNV.RowTemplate.Height = 24;
             this.dgvQLBSNV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -317,7 +318,7 @@ namespace DoAnPBL3
             this.panel1.Controls.Add(this.rjbtnBuy);
             this.panel1.Controls.Add(this.rjbtnAddCart);
             this.panel1.Controls.Add(this.rjbtnOrder);
-            this.panel1.Location = new System.Drawing.Point(830, 170);
+            this.panel1.Location = new System.Drawing.Point(826, 170);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(150, 155);
             this.panel1.TabIndex = 66;
@@ -362,7 +363,7 @@ namespace DoAnPBL3
             this.rjbtnAddCart.ForeColor = System.Drawing.Color.White;
             this.rjbtnAddCart.Image = global::DoAnPBL3.Properties.Resources.icons8_add_shopping_cart_30px;
             this.rjbtnAddCart.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.rjbtnAddCart.Location = new System.Drawing.Point(0, 112);
+            this.rjbtnAddCart.Location = new System.Drawing.Point(0, 58);
             this.rjbtnAddCart.Name = "rjbtnAddCart";
             this.rjbtnAddCart.Padding = new System.Windows.Forms.Padding(18, 0, 16, 0);
             this.rjbtnAddCart.Size = new System.Drawing.Size(150, 40);
@@ -388,7 +389,7 @@ namespace DoAnPBL3
             this.rjbtnOrder.ForeColor = System.Drawing.Color.White;
             this.rjbtnOrder.Image = global::DoAnPBL3.Properties.Resources.icons8_drop_shipping_30px;
             this.rjbtnOrder.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.rjbtnOrder.Location = new System.Drawing.Point(0, 58);
+            this.rjbtnOrder.Location = new System.Drawing.Point(0, 112);
             this.rjbtnOrder.Name = "rjbtnOrder";
             this.rjbtnOrder.Size = new System.Drawing.Size(150, 40);
             this.rjbtnOrder.TabIndex = 39;

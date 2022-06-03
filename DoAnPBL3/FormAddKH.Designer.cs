@@ -34,22 +34,20 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panelContainer = new System.Windows.Forms.Panel();
+            this.msgValidateAddress = new System.Windows.Forms.Label();
+            this.msgValidatePhone = new System.Windows.Forms.Label();
+            this.msgValidateGender = new System.Windows.Forms.Label();
+            this.msgValidateName = new System.Windows.Forms.Label();
             this.rjbtnCancel = new DoAnPBL3.RJButton();
             this.rjbtnOK = new DoAnPBL3.RJButton();
-            this.tbEmailKH = new Guna.UI2.WinForms.Guna2TextBox();
-            this.tbSDTKH = new Guna.UI2.WinForms.Guna2TextBox();
+            this.tbPhoneKH = new Guna.UI2.WinForms.Guna2TextBox();
             this.tbAddressKH = new Guna.UI2.WinForms.Guna2TextBox();
-            this.tbCMNDKH = new Guna.UI2.WinForms.Guna2TextBox();
-            this.tbBDKH = new Guna.UI2.WinForms.Guna2TextBox();
             this.tbNameKH = new Guna.UI2.WinForms.Guna2TextBox();
-            this.cbGenderKh = new DoAnPBL3.RJComboBox();
-            this.lblCMND = new System.Windows.Forms.Label();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.lblSDT = new System.Windows.Forms.Label();
-            this.lblAddress = new System.Windows.Forms.Label();
-            this.lblGender = new System.Windows.Forms.Label();
-            this.lblBD = new System.Windows.Forms.Label();
-            this.lblNameNV = new System.Windows.Forms.Label();
+            this.cbbGenderKH = new DoAnPBL3.RJComboBox();
+            this.lblPhoneKH = new System.Windows.Forms.Label();
+            this.lblAddressKH = new System.Windows.Forms.Label();
+            this.lblGenderKH = new System.Windows.Forms.Label();
+            this.lblNameKH = new System.Windows.Forms.Label();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2DragControl2 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
@@ -99,30 +97,64 @@
             // panelContainer
             // 
             this.panelContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(53)))), ((int)(((byte)(70)))));
+            this.panelContainer.Controls.Add(this.msgValidateAddress);
+            this.panelContainer.Controls.Add(this.msgValidatePhone);
+            this.panelContainer.Controls.Add(this.msgValidateGender);
+            this.panelContainer.Controls.Add(this.msgValidateName);
             this.panelContainer.Controls.Add(this.rjbtnCancel);
             this.panelContainer.Controls.Add(this.rjbtnOK);
-            this.panelContainer.Controls.Add(this.tbEmailKH);
-            this.panelContainer.Controls.Add(this.tbSDTKH);
+            this.panelContainer.Controls.Add(this.tbPhoneKH);
             this.panelContainer.Controls.Add(this.tbAddressKH);
-            this.panelContainer.Controls.Add(this.tbCMNDKH);
-            this.panelContainer.Controls.Add(this.tbBDKH);
             this.panelContainer.Controls.Add(this.tbNameKH);
-            this.panelContainer.Controls.Add(this.cbGenderKh);
-            this.panelContainer.Controls.Add(this.lblCMND);
-            this.panelContainer.Controls.Add(this.lblEmail);
-            this.panelContainer.Controls.Add(this.lblSDT);
-            this.panelContainer.Controls.Add(this.lblAddress);
-            this.panelContainer.Controls.Add(this.lblGender);
-            this.panelContainer.Controls.Add(this.lblBD);
-            this.panelContainer.Controls.Add(this.lblNameNV);
+            this.panelContainer.Controls.Add(this.cbbGenderKH);
+            this.panelContainer.Controls.Add(this.lblPhoneKH);
+            this.panelContainer.Controls.Add(this.lblAddressKH);
+            this.panelContainer.Controls.Add(this.lblGenderKH);
+            this.panelContainer.Controls.Add(this.lblNameKH);
             this.panelContainer.Controls.Add(this.panelTitleBar);
             this.panelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContainer.ForeColor = System.Drawing.SystemColors.ControlText;
             this.panelContainer.Location = new System.Drawing.Point(0, 0);
             this.panelContainer.Margin = new System.Windows.Forms.Padding(2);
             this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(812, 686);
+            this.panelContainer.Size = new System.Drawing.Size(812, 471);
             this.panelContainer.TabIndex = 1;
+            // 
+            // msgValidateAddress
+            // 
+            this.msgValidateAddress.AutoSize = true;
+            this.msgValidateAddress.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.msgValidateAddress.Location = new System.Drawing.Point(194, 332);
+            this.msgValidateAddress.Name = "msgValidateAddress";
+            this.msgValidateAddress.Size = new System.Drawing.Size(0, 16);
+            this.msgValidateAddress.TabIndex = 58;
+            // 
+            // msgValidatePhone
+            // 
+            this.msgValidatePhone.AutoSize = true;
+            this.msgValidatePhone.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.msgValidatePhone.Location = new System.Drawing.Point(194, 257);
+            this.msgValidatePhone.Name = "msgValidatePhone";
+            this.msgValidatePhone.Size = new System.Drawing.Size(0, 16);
+            this.msgValidatePhone.TabIndex = 57;
+            // 
+            // msgValidateGender
+            // 
+            this.msgValidateGender.AutoSize = true;
+            this.msgValidateGender.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.msgValidateGender.Location = new System.Drawing.Point(194, 186);
+            this.msgValidateGender.Name = "msgValidateGender";
+            this.msgValidateGender.Size = new System.Drawing.Size(0, 16);
+            this.msgValidateGender.TabIndex = 56;
+            // 
+            // msgValidateName
+            // 
+            this.msgValidateName.AutoSize = true;
+            this.msgValidateName.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.msgValidateName.Location = new System.Drawing.Point(194, 113);
+            this.msgValidateName.Name = "msgValidateName";
+            this.msgValidateName.Size = new System.Drawing.Size(0, 16);
+            this.msgValidateName.TabIndex = 55;
             // 
             // rjbtnCancel
             // 
@@ -136,11 +168,11 @@
             this.rjbtnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjbtnCancel.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjbtnCancel.ForeColor = System.Drawing.Color.White;
-            this.rjbtnCancel.Location = new System.Drawing.Point(444, 605);
+            this.rjbtnCancel.Location = new System.Drawing.Point(432, 395);
             this.rjbtnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.rjbtnCancel.Name = "rjbtnCancel";
             this.rjbtnCancel.Size = new System.Drawing.Size(145, 36);
-            this.rjbtnCancel.TabIndex = 37;
+            this.rjbtnCancel.TabIndex = 6;
             this.rjbtnCancel.Text = "Hủy";
             this.rjbtnCancel.TextColor = System.Drawing.Color.White;
             this.rjbtnCancel.UseVisualStyleBackColor = false;
@@ -158,61 +190,39 @@
             this.rjbtnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjbtnOK.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjbtnOK.ForeColor = System.Drawing.Color.White;
-            this.rjbtnOK.Location = new System.Drawing.Point(240, 605);
+            this.rjbtnOK.Location = new System.Drawing.Point(232, 395);
             this.rjbtnOK.Margin = new System.Windows.Forms.Padding(2);
             this.rjbtnOK.Name = "rjbtnOK";
             this.rjbtnOK.Size = new System.Drawing.Size(145, 36);
-            this.rjbtnOK.TabIndex = 36;
+            this.rjbtnOK.TabIndex = 5;
             this.rjbtnOK.Text = "OK";
             this.rjbtnOK.TextColor = System.Drawing.Color.White;
             this.rjbtnOK.UseVisualStyleBackColor = false;
             this.rjbtnOK.Click += new System.EventHandler(this.rjbtnOK_Click);
             // 
-            // tbEmailKH
+            // tbPhoneKH
             // 
-            this.tbEmailKH.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
-            this.tbEmailKH.BorderRadius = 6;
-            this.tbEmailKH.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbEmailKH.DefaultText = "";
-            this.tbEmailKH.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
-            this.tbEmailKH.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
-            this.tbEmailKH.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.tbEmailKH.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.tbEmailKH.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
-            this.tbEmailKH.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbEmailKH.Font = new System.Drawing.Font("Arial", 11.25F);
-            this.tbEmailKH.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.tbEmailKH.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbEmailKH.Location = new System.Drawing.Point(197, 470);
-            this.tbEmailKH.Name = "tbEmailKH";
-            this.tbEmailKH.PasswordChar = '\0';
-            this.tbEmailKH.PlaceholderText = "Nhập email";
-            this.tbEmailKH.SelectedText = "";
-            this.tbEmailKH.Size = new System.Drawing.Size(487, 30);
-            this.tbEmailKH.TabIndex = 35;
-            // 
-            // tbSDTKH
-            // 
-            this.tbSDTKH.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
-            this.tbSDTKH.BorderRadius = 6;
-            this.tbSDTKH.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbSDTKH.DefaultText = "";
-            this.tbSDTKH.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
-            this.tbSDTKH.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
-            this.tbSDTKH.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.tbSDTKH.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.tbSDTKH.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
-            this.tbSDTKH.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbSDTKH.Font = new System.Drawing.Font("Arial", 11.25F);
-            this.tbSDTKH.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.tbSDTKH.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbSDTKH.Location = new System.Drawing.Point(197, 404);
-            this.tbSDTKH.Name = "tbSDTKH";
-            this.tbSDTKH.PasswordChar = '\0';
-            this.tbSDTKH.PlaceholderText = "Nhập số điện thoại";
-            this.tbSDTKH.SelectedText = "";
-            this.tbSDTKH.Size = new System.Drawing.Size(487, 30);
-            this.tbSDTKH.TabIndex = 34;
+            this.tbPhoneKH.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
+            this.tbPhoneKH.BorderRadius = 6;
+            this.tbPhoneKH.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbPhoneKH.DefaultText = "";
+            this.tbPhoneKH.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.tbPhoneKH.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.tbPhoneKH.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.tbPhoneKH.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.tbPhoneKH.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
+            this.tbPhoneKH.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbPhoneKH.Font = new System.Drawing.Font("Arial", 11.25F);
+            this.tbPhoneKH.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.tbPhoneKH.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbPhoneKH.Location = new System.Drawing.Point(197, 223);
+            this.tbPhoneKH.Name = "tbPhoneKH";
+            this.tbPhoneKH.PasswordChar = '\0';
+            this.tbPhoneKH.PlaceholderText = "Nhập số điện thoại";
+            this.tbPhoneKH.SelectedText = "";
+            this.tbPhoneKH.Size = new System.Drawing.Size(487, 30);
+            this.tbPhoneKH.TabIndex = 3;
+            this.tbPhoneKH.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbPhoneKH_KeyPress);
             // 
             // tbAddressKH
             // 
@@ -229,59 +239,14 @@
             this.tbAddressKH.Font = new System.Drawing.Font("Arial", 11.25F);
             this.tbAddressKH.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.tbAddressKH.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbAddressKH.Location = new System.Drawing.Point(197, 338);
+            this.tbAddressKH.Location = new System.Drawing.Point(197, 299);
             this.tbAddressKH.Name = "tbAddressKH";
             this.tbAddressKH.PasswordChar = '\0';
             this.tbAddressKH.PlaceholderText = "Nhập địa chỉ";
             this.tbAddressKH.SelectedText = "";
             this.tbAddressKH.Size = new System.Drawing.Size(487, 30);
-            this.tbAddressKH.TabIndex = 33;
-            // 
-            // tbCMNDKH
-            // 
-            this.tbCMNDKH.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
-            this.tbCMNDKH.BorderRadius = 6;
-            this.tbCMNDKH.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbCMNDKH.DefaultText = "";
-            this.tbCMNDKH.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
-            this.tbCMNDKH.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
-            this.tbCMNDKH.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.tbCMNDKH.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.tbCMNDKH.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
-            this.tbCMNDKH.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbCMNDKH.Font = new System.Drawing.Font("Arial", 11.25F);
-            this.tbCMNDKH.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.tbCMNDKH.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbCMNDKH.Location = new System.Drawing.Point(197, 270);
-            this.tbCMNDKH.Name = "tbCMNDKH";
-            this.tbCMNDKH.PasswordChar = '\0';
-            this.tbCMNDKH.PlaceholderText = "Nhập CMND";
-            this.tbCMNDKH.SelectedText = "";
-            this.tbCMNDKH.Size = new System.Drawing.Size(487, 30);
-            this.tbCMNDKH.TabIndex = 32;
-            // 
-            // tbBDKH
-            // 
-            this.tbBDKH.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
-            this.tbBDKH.BorderRadius = 6;
-            this.tbBDKH.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbBDKH.DefaultText = "";
-            this.tbBDKH.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
-            this.tbBDKH.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
-            this.tbBDKH.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.tbBDKH.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.tbBDKH.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
-            this.tbBDKH.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbBDKH.Font = new System.Drawing.Font("Arial", 11.25F);
-            this.tbBDKH.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.tbBDKH.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbBDKH.Location = new System.Drawing.Point(197, 142);
-            this.tbBDKH.Name = "tbBDKH";
-            this.tbBDKH.PasswordChar = '\0';
-            this.tbBDKH.PlaceholderText = "Nhập ngày sinh";
-            this.tbBDKH.SelectedText = "";
-            this.tbBDKH.Size = new System.Drawing.Size(487, 30);
-            this.tbBDKH.TabIndex = 31;
+            this.tbAddressKH.TabIndex = 4;
+            this.tbAddressKH.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbAddressKH_KeyPress);
             // 
             // tbNameKH
             // 
@@ -304,115 +269,80 @@
             this.tbNameKH.PlaceholderText = "Nhập họ và tên";
             this.tbNameKH.SelectedText = "";
             this.tbNameKH.Size = new System.Drawing.Size(487, 30);
-            this.tbNameKH.TabIndex = 30;
+            this.tbNameKH.TabIndex = 1;
+            this.tbNameKH.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbNameKH_KeyPress);
             // 
-            // cbGenderKh
+            // cbbGenderKH
             // 
-            this.cbGenderKh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
-            this.cbGenderKh.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
-            this.cbGenderKh.BorderSize = 2;
-            this.cbGenderKh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbGenderKh.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbGenderKh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.cbGenderKh.IconColor = System.Drawing.Color.RoyalBlue;
-            this.cbGenderKh.Items.AddRange(new object[] {
+            this.cbbGenderKH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
+            this.cbbGenderKH.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
+            this.cbbGenderKH.BorderSize = 2;
+            this.cbbGenderKH.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbGenderKH.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbGenderKH.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.cbbGenderKH.IconColor = System.Drawing.Color.RoyalBlue;
+            this.cbbGenderKH.Items.AddRange(new object[] {
             "Nam",
             "Nữ",
             "Giới tính thứ 3"});
-            this.cbGenderKh.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
-            this.cbGenderKh.ListTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.cbGenderKh.Location = new System.Drawing.Point(197, 204);
-            this.cbGenderKh.MinimumSize = new System.Drawing.Size(188, 29);
-            this.cbGenderKh.Name = "cbGenderKh";
-            this.cbGenderKh.Padding = new System.Windows.Forms.Padding(2);
-            this.cbGenderKh.Size = new System.Drawing.Size(487, 32);
-            this.cbGenderKh.TabIndex = 29;
-            this.cbGenderKh.Texts = "Giới tính";
+            this.cbbGenderKH.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
+            this.cbbGenderKH.ListTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.cbbGenderKH.Location = new System.Drawing.Point(197, 151);
+            this.cbbGenderKH.MinimumSize = new System.Drawing.Size(188, 29);
+            this.cbbGenderKH.Name = "cbbGenderKH";
+            this.cbbGenderKH.Padding = new System.Windows.Forms.Padding(2);
+            this.cbbGenderKH.Size = new System.Drawing.Size(487, 32);
+            this.cbbGenderKH.TabIndex = 2;
+            this.cbbGenderKH.Texts = "Giới tính";
             // 
-            // lblCMND
+            // lblPhoneKH
             // 
-            this.lblCMND.AutoSize = true;
-            this.lblCMND.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCMND.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblCMND.Location = new System.Drawing.Point(67, 275);
-            this.lblCMND.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblCMND.Name = "lblCMND";
-            this.lblCMND.Size = new System.Drawing.Size(58, 19);
-            this.lblCMND.TabIndex = 26;
-            this.lblCMND.Text = "CMND";
+            this.lblPhoneKH.AutoSize = true;
+            this.lblPhoneKH.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPhoneKH.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblPhoneKH.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblPhoneKH.Location = new System.Drawing.Point(67, 227);
+            this.lblPhoneKH.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPhoneKH.Name = "lblPhoneKH";
+            this.lblPhoneKH.Size = new System.Drawing.Size(86, 19);
+            this.lblPhoneKH.TabIndex = 27;
+            this.lblPhoneKH.Text = "Điện thoại";
             // 
-            // lblEmail
+            // lblAddressKH
             // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblEmail.Location = new System.Drawing.Point(67, 475);
-            this.lblEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(51, 19);
-            this.lblEmail.TabIndex = 28;
-            this.lblEmail.Text = "Email";
+            this.lblAddressKH.AutoSize = true;
+            this.lblAddressKH.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddressKH.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblAddressKH.Location = new System.Drawing.Point(67, 303);
+            this.lblAddressKH.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAddressKH.Name = "lblAddressKH";
+            this.lblAddressKH.Size = new System.Drawing.Size(61, 19);
+            this.lblAddressKH.TabIndex = 25;
+            this.lblAddressKH.Text = "Địa chỉ";
             // 
-            // lblSDT
+            // lblGenderKH
             // 
-            this.lblSDT.AutoSize = true;
-            this.lblSDT.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSDT.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblSDT.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblSDT.Location = new System.Drawing.Point(67, 408);
-            this.lblSDT.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblSDT.Name = "lblSDT";
-            this.lblSDT.Size = new System.Drawing.Size(86, 19);
-            this.lblSDT.TabIndex = 27;
-            this.lblSDT.Text = "Điện thoại";
+            this.lblGenderKH.AutoSize = true;
+            this.lblGenderKH.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGenderKH.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblGenderKH.Location = new System.Drawing.Point(67, 156);
+            this.lblGenderKH.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblGenderKH.Name = "lblGenderKH";
+            this.lblGenderKH.Size = new System.Drawing.Size(73, 19);
+            this.lblGenderKH.TabIndex = 24;
+            this.lblGenderKH.Text = "Giới tính";
             // 
-            // lblAddress
+            // lblNameKH
             // 
-            this.lblAddress.AutoSize = true;
-            this.lblAddress.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddress.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblAddress.Location = new System.Drawing.Point(67, 342);
-            this.lblAddress.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(61, 19);
-            this.lblAddress.TabIndex = 25;
-            this.lblAddress.Text = "Địa chỉ";
-            // 
-            // lblGender
-            // 
-            this.lblGender.AutoSize = true;
-            this.lblGender.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGender.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblGender.Location = new System.Drawing.Point(67, 209);
-            this.lblGender.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblGender.Name = "lblGender";
-            this.lblGender.Size = new System.Drawing.Size(73, 19);
-            this.lblGender.TabIndex = 24;
-            this.lblGender.Text = "Giới tính";
-            // 
-            // lblBD
-            // 
-            this.lblBD.AutoSize = true;
-            this.lblBD.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBD.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblBD.Location = new System.Drawing.Point(67, 147);
-            this.lblBD.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblBD.Name = "lblBD";
-            this.lblBD.Size = new System.Drawing.Size(86, 19);
-            this.lblBD.TabIndex = 23;
-            this.lblBD.Text = "Ngày sinh";
-            // 
-            // lblNameNV
-            // 
-            this.lblNameNV.AutoSize = true;
-            this.lblNameNV.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNameNV.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblNameNV.Location = new System.Drawing.Point(67, 85);
-            this.lblNameNV.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblNameNV.Name = "lblNameNV";
-            this.lblNameNV.Size = new System.Drawing.Size(81, 19);
-            this.lblNameNV.TabIndex = 22;
-            this.lblNameNV.Text = "Họ và tên";
+            this.lblNameKH.AutoSize = true;
+            this.lblNameKH.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNameKH.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblNameKH.Location = new System.Drawing.Point(67, 85);
+            this.lblNameKH.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNameKH.Name = "lblNameKH";
+            this.lblNameKH.Size = new System.Drawing.Size(81, 19);
+            this.lblNameKH.TabIndex = 22;
+            this.lblNameKH.Text = "Họ và tên";
             // 
             // guna2DragControl1
             // 
@@ -429,7 +359,7 @@
             // guna2Elipse1
             // 
             this.guna2Elipse1.BorderRadius = 10;
-            this.guna2Elipse1.TargetControl = this.cbGenderKh;
+            this.guna2Elipse1.TargetControl = this.cbbGenderKH;
             // 
             // guna2ShadowForm1
             // 
@@ -446,7 +376,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(812, 686);
+            this.ClientSize = new System.Drawing.Size(812, 471);
             this.Controls.Add(this.panelContainer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -454,6 +384,7 @@
             this.Name = "FormAddKH";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm khách hàng";
+            this.Load += new System.EventHandler(this.FormAddKH_Load);
             this.panelTitleBar.ResumeLayout(false);
             this.panelTitleBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -471,24 +402,22 @@
         private System.Windows.Forms.Panel panelContainer;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl2;
-        private Guna.UI2.WinForms.Guna2TextBox tbEmailKH;
-        private Guna.UI2.WinForms.Guna2TextBox tbSDTKH;
+        private Guna.UI2.WinForms.Guna2TextBox tbPhoneKH;
         private Guna.UI2.WinForms.Guna2TextBox tbAddressKH;
-        private Guna.UI2.WinForms.Guna2TextBox tbCMNDKH;
-        private Guna.UI2.WinForms.Guna2TextBox tbBDKH;
         private Guna.UI2.WinForms.Guna2TextBox tbNameKH;
-        private RJComboBox cbGenderKh;
-        private System.Windows.Forms.Label lblCMND;
-        private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.Label lblSDT;
-        private System.Windows.Forms.Label lblAddress;
-        private System.Windows.Forms.Label lblGender;
-        private System.Windows.Forms.Label lblBD;
-        private System.Windows.Forms.Label lblNameNV;
+        private RJComboBox cbbGenderKH;
+        private System.Windows.Forms.Label lblPhoneKH;
+        private System.Windows.Forms.Label lblAddressKH;
+        private System.Windows.Forms.Label lblGenderKH;
+        private System.Windows.Forms.Label lblNameKH;
         private RJButton rjbtnCancel;
         private RJButton rjbtnOK;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
+        private System.Windows.Forms.Label msgValidateName;
+        private System.Windows.Forms.Label msgValidateGender;
+        private System.Windows.Forms.Label msgValidatePhone;
+        private System.Windows.Forms.Label msgValidateAddress;
     }
 }

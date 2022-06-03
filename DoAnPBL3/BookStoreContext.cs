@@ -19,8 +19,6 @@ namespace DoAnPBL3
         public virtual DbSet<Language> Languages { get; set; }
         public virtual DbSet<Publisher> Publishers { get; set; }
         public virtual DbSet<Book> Books { get; set; }
-        //public virtual DbSet<Book_Author> Book_Authors { get; set; }
-        //public virtual DbSet<Book_Genre> Book_Genres { get; set; }
         public virtual DbSet<Account> Accounts { get; set; }
         public virtual DbSet<Admin> Admins { get; set; }
         public virtual DbSet<Employee> Employees { get; set; }

@@ -1,24 +1,19 @@
 ﻿using DoAnPBL3.Models;
 using DoAnPBL3.Validator;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DoAnPBL3
 {
     public partial class FormSuaNV : Form
     {
-        private string ID_Employee;
+        private readonly string ID_Employee;
 
         //Constructor
         public FormSuaNV(string ID_Employee)
@@ -128,7 +123,7 @@ namespace DoAnPBL3
                     msgValidateDateOfBirth.Text = "";
 
                     // Validate format date of birth
-                    isValidFormatDateOfBirth = Validators.IsValidFormatDate(dateOfBirth,Validators.DATE_TIME_REGEX);
+                    isValidFormatDateOfBirth = Validators.IsValidFormatDate(dateOfBirth, Validators.DATE_TIME_REGEX);
                     if (!isValidFormatDateOfBirth)
                     {
                         msgValidateDateOfBirth.ForeColor = Color.Red;
@@ -331,7 +326,7 @@ namespace DoAnPBL3
                 }
             }
 
-            if (isValidName && isValidEmail && isValidAge && isStartDateGreaterThanCurrentDate 
+            if (isValidName && isValidEmail && isValidAge && isStartDateGreaterThanCurrentDate
                 && isValidGender && isValidIdCard && isValidPhone && isValidAddress)
             {
                 DialogResult result = RJMessageBox.Show("Xác nhận lưu mới dữ liệu?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -377,13 +372,14 @@ namespace DoAnPBL3
 
         private void rjbtnCancel_Click(object sender, EventArgs e)
         {
+            bool isNewName, isNewEmail, isNewDateOfBirth, isNewStartDate, isNewGender, 
+                    isNewPhone, isNewID_Card, isNewAddress, isNewAvatar;
             using (BookStoreContext context = new BookStoreContext())
             {
                 var employee = context.Employees
                     .Where(em => em.ID_Employee == ID_Employee)
                     .ToList()
                     .First();
-                bool isNewName, isNewEmail, isNewDateOfBirth, isNewStartDate, isNewGender, isNewPhone, isNewID_Card, isNewAddress, isNewAvatar;
                 isNewName = tbNameNV.Text != employee.FullNameEmployee;
                 isNewEmail = tbEmailNV.Text != employee.Email;
                 isNewDateOfBirth = tbBD.Text != employee.DateOfBirth.ToString("dd/MM/yyyy");
@@ -421,10 +417,10 @@ namespace DoAnPBL3
                         isNewAvatar = false;
                     }
                 }
-                if (isNewName || isNewEmail || isNewDateOfBirth || isNewStartDate || isNewGender 
+                if (isNewName || isNewEmail || isNewDateOfBirth || isNewStartDate || isNewGender
                     || isNewPhone || isNewID_Card || isNewAddress || isNewAvatar)
                 {
-                    DialogResult result = RJMessageBox.Show("Thông tin cũ đã thay đổi nhưng chưa được lưu. Bạn vẫn muốn thoát?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+                    DialogResult result = RJMessageBox.Show("Thông tin cũ đã thay đổi nhưng chưa được lưu. Bạn vẫn muốn thoát?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
                     if (result == DialogResult.Yes)
                         Close();
                     else

@@ -34,13 +34,12 @@ namespace DoAnPBL3
             this.panelContainer = new System.Windows.Forms.Panel();
             this.tbAuthor = new Guna.UI2.WinForms.Guna2TextBox();
             this.tbQuantity = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.cbUnit = new DoAnPBL3.RJComboBox();
+            this.cbbUnit = new DoAnPBL3.RJComboBox();
             this.msgValidateUnit = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.msgValidateIDBook = new System.Windows.Forms.Label();
             this.tbIDBook = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblIDBook = new System.Windows.Forms.Label();
-            this.cbbPublisher = new DoAnPBL3.RJComboBox();
             this.msgValidateQuantity = new System.Windows.Forms.Label();
             this.lblQuantity = new System.Windows.Forms.Label();
             this.msgValidatePrice = new System.Windows.Forms.Label();
@@ -59,7 +58,6 @@ namespace DoAnPBL3
             this.tbPrice = new Guna.UI2.WinForms.Guna2TextBox();
             this.tbPublishDate = new Guna.UI2.WinForms.Guna2TextBox();
             this.tbNameBook = new Guna.UI2.WinForms.Guna2TextBox();
-            this.cbbLanguage = new DoAnPBL3.RJComboBox();
             this.lblPrice = new System.Windows.Forms.Label();
             this.lblGenre = new System.Windows.Forms.Label();
             this.lblPublisher = new System.Windows.Forms.Label();
@@ -75,6 +73,8 @@ namespace DoAnPBL3
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2DragControl2 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.cbbLanguage = new DoAnPBL3.RJComboBox();
+            this.cbbPublisher = new DoAnPBL3.RJComboBox();
             this.panelContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbQuantity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gpbBookImg)).BeginInit();
@@ -85,15 +85,16 @@ namespace DoAnPBL3
             // panelContainer
             // 
             this.panelContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(53)))), ((int)(((byte)(70)))));
+            this.panelContainer.Controls.Add(this.cbbPublisher);
+            this.panelContainer.Controls.Add(this.cbbLanguage);
             this.panelContainer.Controls.Add(this.tbAuthor);
             this.panelContainer.Controls.Add(this.tbQuantity);
-            this.panelContainer.Controls.Add(this.cbUnit);
+            this.panelContainer.Controls.Add(this.cbbUnit);
             this.panelContainer.Controls.Add(this.msgValidateUnit);
             this.panelContainer.Controls.Add(this.label3);
             this.panelContainer.Controls.Add(this.msgValidateIDBook);
             this.panelContainer.Controls.Add(this.tbIDBook);
             this.panelContainer.Controls.Add(this.lblIDBook);
-            this.panelContainer.Controls.Add(this.cbbPublisher);
             this.panelContainer.Controls.Add(this.msgValidateQuantity);
             this.panelContainer.Controls.Add(this.lblQuantity);
             this.panelContainer.Controls.Add(this.msgValidatePrice);
@@ -112,7 +113,6 @@ namespace DoAnPBL3
             this.panelContainer.Controls.Add(this.tbPrice);
             this.panelContainer.Controls.Add(this.tbPublishDate);
             this.panelContainer.Controls.Add(this.tbNameBook);
-            this.panelContainer.Controls.Add(this.cbbLanguage);
             this.panelContainer.Controls.Add(this.lblPrice);
             this.panelContainer.Controls.Add(this.lblGenre);
             this.panelContainer.Controls.Add(this.lblPublisher);
@@ -143,13 +143,13 @@ namespace DoAnPBL3
             this.tbAuthor.Font = new System.Drawing.Font("Arial", 11.25F);
             this.tbAuthor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.tbAuthor.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbAuthor.Location = new System.Drawing.Point(396, 282);
+            this.tbAuthor.Location = new System.Drawing.Point(398, 278);
             this.tbAuthor.Name = "tbAuthor";
             this.tbAuthor.PasswordChar = '\0';
             this.tbAuthor.PlaceholderText = "Nhập tên tác giả";
             this.tbAuthor.SelectedText = "";
             this.tbAuthor.Size = new System.Drawing.Size(390, 30);
-            this.tbAuthor.TabIndex = 63;
+            this.tbAuthor.TabIndex = 4;
             this.tbAuthor.TextChanged += new System.EventHandler(this.tbAuthor_TextChanged);
             // 
             // tbQuantity
@@ -166,27 +166,27 @@ namespace DoAnPBL3
             this.tbQuantity.TabIndex = 62;
             this.tbQuantity.UpDownButtonFillColor = System.Drawing.Color.RoyalBlue;
             // 
-            // cbUnit
+            // cbbUnit
             // 
-            this.cbUnit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
-            this.cbUnit.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
-            this.cbUnit.BorderSize = 2;
-            this.cbUnit.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbUnit.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbUnit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.cbUnit.IconColor = System.Drawing.Color.RoyalBlue;
-            this.cbUnit.Items.AddRange(new object[] {
+            this.cbbUnit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
+            this.cbbUnit.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
+            this.cbbUnit.BorderSize = 2;
+            this.cbbUnit.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbUnit.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbUnit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.cbbUnit.IconColor = System.Drawing.Color.RoyalBlue;
+            this.cbbUnit.Items.AddRange(new object[] {
             "Quyển",
             "Bộ"});
-            this.cbUnit.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
-            this.cbUnit.ListTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.cbUnit.Location = new System.Drawing.Point(598, 627);
-            this.cbUnit.MinimumSize = new System.Drawing.Size(188, 29);
-            this.cbUnit.Name = "cbUnit";
-            this.cbUnit.Padding = new System.Windows.Forms.Padding(2);
-            this.cbUnit.Size = new System.Drawing.Size(188, 30);
-            this.cbUnit.TabIndex = 10;
-            this.cbUnit.Texts = "Chọn đơn vị";
+            this.cbbUnit.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
+            this.cbbUnit.ListTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.cbbUnit.Location = new System.Drawing.Point(598, 627);
+            this.cbbUnit.MinimumSize = new System.Drawing.Size(188, 29);
+            this.cbbUnit.Name = "cbbUnit";
+            this.cbbUnit.Padding = new System.Windows.Forms.Padding(2);
+            this.cbbUnit.Size = new System.Drawing.Size(188, 30);
+            this.cbbUnit.TabIndex = 10;
+            this.cbbUnit.Texts = "Chọn đơn vị";
             // 
             // msgValidateUnit
             // 
@@ -253,25 +253,6 @@ namespace DoAnPBL3
             this.lblIDBook.TabIndex = 56;
             this.lblIDBook.Text = "Mã sách";
             // 
-            // cbbPublisher
-            // 
-            this.cbbPublisher.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
-            this.cbbPublisher.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
-            this.cbbPublisher.BorderSize = 2;
-            this.cbbPublisher.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbPublisher.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbPublisher.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.cbbPublisher.IconColor = System.Drawing.Color.RoyalBlue;
-            this.cbbPublisher.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
-            this.cbbPublisher.ListTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.cbbPublisher.Location = new System.Drawing.Point(396, 416);
-            this.cbbPublisher.MinimumSize = new System.Drawing.Size(188, 29);
-            this.cbbPublisher.Name = "cbbPublisher";
-            this.cbbPublisher.Padding = new System.Windows.Forms.Padding(2);
-            this.cbbPublisher.Size = new System.Drawing.Size(390, 32);
-            this.cbbPublisher.TabIndex = 6;
-            this.cbbPublisher.Texts = "Chọn nhà xuất bản";
-            // 
             // msgValidateQuantity
             // 
             this.msgValidateQuantity.AutoSize = true;
@@ -324,7 +305,7 @@ namespace DoAnPBL3
             // 
             this.msgValidateAuthor.AutoSize = true;
             this.msgValidateAuthor.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.msgValidateAuthor.Location = new System.Drawing.Point(395, 315);
+            this.msgValidateAuthor.Location = new System.Drawing.Point(397, 304);
             this.msgValidateAuthor.Name = "msgValidateAuthor";
             this.msgValidateAuthor.Size = new System.Drawing.Size(0, 16);
             this.msgValidateAuthor.TabIndex = 51;
@@ -367,7 +348,7 @@ namespace DoAnPBL3
             this.cbbGenre.IconColor = System.Drawing.Color.RoyalBlue;
             this.cbbGenre.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
             this.cbbGenre.ListTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.cbbGenre.Location = new System.Drawing.Point(398, 487);
+            this.cbbGenre.Location = new System.Drawing.Point(397, 487);
             this.cbbGenre.MinimumSize = new System.Drawing.Size(188, 29);
             this.cbbGenre.Name = "cbbGenre";
             this.cbbGenre.Padding = new System.Windows.Forms.Padding(2);
@@ -551,25 +532,6 @@ namespace DoAnPBL3
             this.tbNameBook.TabIndex = 2;
             this.tbNameBook.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbNameNV_KeyPress);
             // 
-            // cbbLanguage
-            // 
-            this.cbbLanguage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
-            this.cbbLanguage.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
-            this.cbbLanguage.BorderSize = 2;
-            this.cbbLanguage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbLanguage.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbLanguage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.cbbLanguage.IconColor = System.Drawing.Color.RoyalBlue;
-            this.cbbLanguage.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
-            this.cbbLanguage.ListTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.cbbLanguage.Location = new System.Drawing.Point(396, 346);
-            this.cbbLanguage.MinimumSize = new System.Drawing.Size(188, 29);
-            this.cbbLanguage.Name = "cbbLanguage";
-            this.cbbLanguage.Padding = new System.Windows.Forms.Padding(2);
-            this.cbbLanguage.Size = new System.Drawing.Size(390, 32);
-            this.cbbLanguage.TabIndex = 4;
-            this.cbbLanguage.Texts = "Chọn ngôn ngữ";
-            // 
             // lblPrice
             // 
             this.lblPrice.AutoSize = true;
@@ -611,7 +573,7 @@ namespace DoAnPBL3
             this.lblAuthor.AutoSize = true;
             this.lblAuthor.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAuthor.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblAuthor.Location = new System.Drawing.Point(284, 286);
+            this.lblAuthor.Location = new System.Drawing.Point(284, 284);
             this.lblAuthor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAuthor.Name = "lblAuthor";
             this.lblAuthor.Size = new System.Drawing.Size(59, 18);
@@ -715,7 +677,44 @@ namespace DoAnPBL3
             // guna2Elipse1
             // 
             this.guna2Elipse1.BorderRadius = 10;
-            this.guna2Elipse1.TargetControl = this.cbbLanguage;
+            // 
+            // cbbLanguage
+            // 
+            this.cbbLanguage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
+            this.cbbLanguage.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
+            this.cbbLanguage.BorderSize = 2;
+            this.cbbLanguage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbLanguage.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbLanguage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.cbbLanguage.IconColor = System.Drawing.Color.RoyalBlue;
+            this.cbbLanguage.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
+            this.cbbLanguage.ListTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.cbbLanguage.Location = new System.Drawing.Point(396, 346);
+            this.cbbLanguage.MinimumSize = new System.Drawing.Size(188, 29);
+            this.cbbLanguage.Name = "cbbLanguage";
+            this.cbbLanguage.Padding = new System.Windows.Forms.Padding(2);
+            this.cbbLanguage.Size = new System.Drawing.Size(390, 32);
+            this.cbbLanguage.TabIndex = 63;
+            this.cbbLanguage.Texts = "Chọn ngôn ngữ";
+            // 
+            // cbbPublisher
+            // 
+            this.cbbPublisher.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
+            this.cbbPublisher.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
+            this.cbbPublisher.BorderSize = 2;
+            this.cbbPublisher.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbPublisher.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbPublisher.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.cbbPublisher.IconColor = System.Drawing.Color.RoyalBlue;
+            this.cbbPublisher.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
+            this.cbbPublisher.ListTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.cbbPublisher.Location = new System.Drawing.Point(396, 418);
+            this.cbbPublisher.MinimumSize = new System.Drawing.Size(188, 29);
+            this.cbbPublisher.Name = "cbbPublisher";
+            this.cbbPublisher.Padding = new System.Windows.Forms.Padding(2);
+            this.cbbPublisher.Size = new System.Drawing.Size(390, 32);
+            this.cbbPublisher.TabIndex = 64;
+            this.cbbPublisher.Texts = "Chọn nhà xuất bản";
             // 
             // FormAddSach
             // 
@@ -757,7 +756,6 @@ namespace DoAnPBL3
         private Guna.UI2.WinForms.Guna2TextBox tbPrice;
         private Guna.UI2.WinForms.Guna2TextBox tbPublishDate;
         private Guna.UI2.WinForms.Guna2TextBox tbNameBook;
-        private RJComboBox cbbLanguage;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private RJButton rjbtnCancel;
         private RJButton rjbtnOK;
@@ -778,14 +776,15 @@ namespace DoAnPBL3
         private System.Windows.Forms.Label msgValidatePublishDate;
         private System.Windows.Forms.Label msgValidateQuantity;
         private System.Windows.Forms.Label lblQuantity;
-        private RJComboBox cbbPublisher;
         private System.Windows.Forms.Label msgValidateIDBook;
         private Guna.UI2.WinForms.Guna2TextBox tbIDBook;
         private System.Windows.Forms.Label lblIDBook;
         private System.Windows.Forms.Label msgValidateUnit;
         private System.Windows.Forms.Label label3;
-        private RJComboBox cbUnit;
+        private RJComboBox cbbUnit;
         private Guna.UI2.WinForms.Guna2NumericUpDown tbQuantity;
         private Guna.UI2.WinForms.Guna2TextBox tbAuthor;
+        private RJComboBox cbbPublisher;
+        private RJComboBox cbbLanguage;
     }
 }

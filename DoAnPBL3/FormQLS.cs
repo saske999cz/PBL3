@@ -14,8 +14,8 @@ namespace DoAnPBL3
     public partial class FormQLS : Form
     {
         private int count;
-        private string accountUsername;
-        private string password;
+        private readonly string accountUsername;
+        private readonly string password;
 
         public FormQLS(string accountUsername, string password)
         {
@@ -32,7 +32,7 @@ namespace DoAnPBL3
 
         private void FormQLS_Load(object sender, EventArgs e)
         {
-            timer1.Tick += new System.EventHandler(timer1_Tick);
+            timer1.Tick += new EventHandler(timer1_Tick);
             using (BookStoreContext context = new BookStoreContext())
             {
                 var listBooks = context.Books
@@ -67,7 +67,15 @@ namespace DoAnPBL3
 
         private void btnSuaSach_Click(object sender, EventArgs e)
         {
-            RJMessageBox.Show("Edit");
+            if (dgvQLSNV.CurrentRow == null)
+            {
+                RJMessageBox.Show("Hệ thống chưa có mặt hàng sách nào", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                string ID_Book = dgvQLSNV.CurrentRow.Cells["ID"].Value.ToString();
+                new FormSuaSach(ID_Book).Show();
+            }
         }
 
         private void btnDeleteSach_Click(object sender, EventArgs e)
@@ -83,7 +91,7 @@ namespace DoAnPBL3
                 DialogResult result = RJMessageBox.Show("Xác nhận xóa mặt hàng sách " + NameBook + "?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 if (result == DialogResult.Yes)
                 {
-                    new FormIdentify(accountUsername, password, ID_Book).Show();
+                    new FormIdentify(accountUsername, password, ID_Book).ShowDialog();
                     timer1.Start();
                 }
                 else

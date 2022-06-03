@@ -13,10 +13,10 @@ namespace DoAnPBL3
 {
     public partial class FormIdentify : Form
     {
-        private string accountUsername;
-        private string password;
-        private string id;
-        private string nameAuthor;
+        private readonly string accountUsername;
+        private readonly string password;
+        private readonly string id;
+        private readonly string nameAuthor;
         public FormIdentify(string accountUsername, string password, string id, string nameAuthor = "")
         {
             InitializeComponent();
@@ -39,13 +39,10 @@ namespace DoAnPBL3
 
         private void rjbtnOK_Click(object sender, EventArgs e)
         {
-            if (password == "")
+            if (tbConfirmPass.Text.Trim() == "")
                 RJMessageBox.Show("Vui lòng nhập mật khẩu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else if (password != tbConfirmPass.Text)
-            {
-                MessageBox.Show(password);
                 RJMessageBox.Show("Sai mật khẩu", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
             else
             {
                 using (BookStoreContext context = new BookStoreContext())

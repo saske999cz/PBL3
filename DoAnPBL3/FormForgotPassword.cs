@@ -15,19 +15,13 @@ namespace DoAnPBL3
 {
     public partial class FormForgotPassword : Form
     {
-        private string username;
-        private string password;
 
         public static string toAddress; // Địa chỉ Email (from -> to)
         private const string EMAIL_REGEX = "^([\\w\\.\\-]+)@([\\w\\-]+)((\\.(\\w){2,3})+)$";
 
-        public FormForgotPassword(string username = "", string password = "", string email = "", string emailPassword = "")
+        public FormForgotPassword()
         {
             InitializeComponent();
-            this.username = username;
-            this.password = password;
-            txtEmail.Text = email;
-            txtEmailPassword.Text = emailPassword;
         }
 
         private void btnBack_Click(object sender, EventArgs e)

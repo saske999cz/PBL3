@@ -16,17 +16,19 @@ namespace DoAnPBL3
     public partial class MainMenuQTV : Form
     {
         private IconButton btnCurrent;
-        private Panel btnLeftBorder;
+        private readonly Panel btnLeftBorder;
         private Form currentChildForm;
         private string theme = "Admin";
-        private string accountUsername;
-        private string password;
+        private readonly string accountUsername;
+        private readonly string password;
 
         public MainMenuQTV(string accountUsername, string password)
         {
             InitializeComponent();
-            btnLeftBorder = new Panel();
-            btnLeftBorder.Size = new Size(7, 77);
+            btnLeftBorder = new Panel
+            {
+                Size = new Size(7, 77)
+            };
             panelMenu.Controls.Add(btnLeftBorder);
             this.accountUsername = accountUsername;
             this.password = password;
@@ -261,7 +263,7 @@ namespace DoAnPBL3
 
         private void MainMenuQTV_Load(object sender, EventArgs e)
         {
-            timer1.Tick += new System.EventHandler(timer1_Tick);
+            timer1.Tick += new EventHandler(timer1_Tick);
             timer1.Start();
             lblDate.Text = DateTime.Now.ToLongDateString();
             rjddmAdminSettingMenu.IsMainMenu = true;

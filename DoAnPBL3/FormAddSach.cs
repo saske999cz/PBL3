@@ -19,8 +19,8 @@ namespace DoAnPBL3
 {
     public partial class FormAddSach : Form
     {
-        private string accountUsername;
-        private string password;
+        private readonly string accountUsername;
+        private readonly string password;
         private string beforeNameAuthor = "";
         //Constructor
         public FormAddSach(string accountUsername, string password)
@@ -240,7 +240,7 @@ namespace DoAnPBL3
                 }
             }
             // Validate unit
-            if (cbUnit.SelectedItem == null)
+            if (cbbUnit.SelectedItem == null)
             {
                 unit = "";
                 msgValidateUnit.ForeColor = Color.Red;
@@ -249,7 +249,7 @@ namespace DoAnPBL3
             }
             else
             {
-                unit = cbUnit.SelectedItem.ToString();
+                unit = cbbUnit.SelectedItem.ToString();
                 msgValidateUnit.ForeColor = Color.White;
                 msgValidateUnit.Text = "";
                 isValidUnit = true;
@@ -346,9 +346,9 @@ namespace DoAnPBL3
             quantity = tbQuantity.Text;
             if (ID_Book != "" || nameBook != "" || publishDate != "" || cbbLanguage.SelectedItem != null || author != ""
                 || cbbPublisher.SelectedItem != null || cbbGenre.SelectedItem != null || price != "" || quantity != "0" 
-                || cbUnit.SelectedItem != null || gpbBookImg.Image != null)
+                || cbbUnit.SelectedItem != null || gpbBookImg.Image != null)
             {
-                DialogResult result = RJMessageBox.Show("Dữ liệu chưa được lưu. Bạn vẫn muốn thoát?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+                DialogResult result = RJMessageBox.Show("Dữ liệu chưa được lưu. Bạn vẫn muốn thoát?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
                 if (result == DialogResult.Yes)
                     Close();
                 else
@@ -360,8 +360,8 @@ namespace DoAnPBL3
 
         private void tbAuthor_TextChanged(object sender, EventArgs e)
         {
-            MessageBox.Show(tbAuthor.Text);
-            MessageBox.Show(beforeNameAuthor);
+            //MessageBox.Show(tbAuthor.Text);
+            //MessageBox.Show(beforeNameAuthor);
             if (beforeNameAuthor.Length > tbAuthor.Text.Length && beforeNameAuthor != "")
             {
                 beforeNameAuthor = tbAuthor.Text;
@@ -387,7 +387,7 @@ namespace DoAnPBL3
                         }
                         else
                         {
-                            tbAuthor.Text = beforeNameAuthor;
+                            beforeNameAuthor = tbAuthor.Text;
                         }
                     }
                 }
@@ -411,6 +411,7 @@ namespace DoAnPBL3
                 return memoryStream.ToArray();
             }
         }
+
         private void btnBookImg_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();

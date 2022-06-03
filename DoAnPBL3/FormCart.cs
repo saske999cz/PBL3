@@ -16,6 +16,7 @@ namespace DoAnPBL3
     {
         private int Count = 0;
         static int z = 0;
+        public static string ID_Customer = "";
         FormNhapMua[] currentChildForm = new FormNhapMua[100];
         private string accountUsername;
 
@@ -42,7 +43,7 @@ namespace DoAnPBL3
 
         private void FormCart_Load(object sender, EventArgs e)
         {
-            timer1.Tick += new System.EventHandler(timer1_Tick);
+            timer1.Tick += new EventHandler(timer1_Tick);
             timer1.Start();
         }
 
@@ -116,51 +117,70 @@ namespace DoAnPBL3
                 }
                 if (check == true)
                 {
-                    using (BookStoreContext context = new BookStoreContext())
+                    new FormAuthenticateCustomer().ShowDialog();
+                    if (ID_Customer == "")
+                        return;
+                    else
                     {
-                        var ID_Order = context.Orders
-                            .OrderBy(order => order.ID_Order)
-                            .Select(order => order.ID_Order)
-                            .ToList()
-                            .LastOrDefault();
-                        var ID_Employee = context.Accounts
-                            .Join(
-                                context.Employees,
-                                account => account.Username,
-                                employee => employee.AccountUsername,
-                                (account, employee) => new
-                                {
-                                    account.Username,
-                                    employee.ID_Employee
-                                })
-                            .Where(account => account.Username == accountUsername)
-                            .Select(employee => employee.ID_Employee)
-                            .ToList()
-                            .FirstOrDefault();
-                        StringBuilder newID_Order = new StringBuilder();
-                        if (ID_Order == null)
+                        using (BookStoreContext context = new BookStoreContext())
                         {
-                            newID_Order.AppendFormat("HD0000");
-                        }
-                        else
-                        {
-                            string id = ID_Order; // HĐ0006
-                            string code = id.Substring(2, id.Length - 1); // 0006
-                            int num = Convert.ToInt32(code); // 6
-                            num++; // 6 + 1 -> 7
-                            string numStr = num.ToString(); // "7"
-                            int lenNumStr = numStr.Length; // 1
-                            newID_Order = newID_Order.Remove(newID_Order.Length - lenNumStr, lenNumStr);// HĐ000
-                            newID_Order.Append(numStr); // HĐ000 + 7 => HĐ0007
+                            var ID_Order = context.Orders
+                                .OrderBy(order => order.ID_Order)
+                                .Select(order => order.ID_Order)
+                                .ToList()
+                                .LastOrDefault();
+                            var ID_Employee = context.Accounts
+                                .Join(
+                                    context.Employees,
+                                    account => account.Username,
+                                    employee => employee.AccountUsername,
+                                    (account, employee) => new
+                                    {
+                                        account.Username,
+                                        employee.ID_Employee
+                                    })
+                                .Where(account => account.Username == accountUsername)
+                                .Select(employee => employee.ID_Employee)
+                                .ToList()
+                                .FirstOrDefault();
+                            StringBuilder newID_Order;
+                            // Chua co hoa don nao
+                            if (ID_Order == null)
+                            {
+                                newID_Order = new StringBuilder("HD0000");
+                            }
+                            else
+                            {
+                                string id = ID_Order; // HD0001
+                                string code = id.Substring(2, id.Length - 2); // 0001
+                                int num = Convert.ToInt32(code); // 1
+                                num++; // 1 + 1 -> 2
+                                string numStr = num.ToString(); // "2"
+                                int lenNumStr = numStr.Length; // 1
+                                newID_Order = new StringBuilder(id.Remove(id.Length - lenNumStr, lenNumStr));// HD000
+                                newID_Order.Append(numStr); // HD000 + 2 => HD0002
+                            }
 
-                            Order order = new Order(newID_Order.ToString(), DateTime.Now, Convert.ToInt32(tbTotal.Text), "", ID_Employee);
+                            Order newOrder = new Order(newID_Order.ToString(), DateTime.Now, Convert.ToInt32(tbTotal.Text), ID_Customer, ID_Employee);
+                            context.Orders.Add(newOrder);
+                            context.SaveChanges();
+
+                            OrderDetail newOrderDetail;
+
+                            for (int i = 0; i < Convert.ToInt32(tbNumDiverse.Text); i++)
+                            {
+                                newOrderDetail = new OrderDetail(newID_Order.ToString(), currentChildForm[i].GetID_Book(), currentChildForm[i].GetNameBook(), 
+                                    currentChildForm[i].GetPrice(), currentChildForm[i].GetQuantity(), (int)currentChildForm[i].GetAmount());
+                                context.OrderDetails.Add(newOrderDetail);
+                                context.SaveChanges();
+                            }
+
+                            Alert("Mua sách thành công", Form_Alert.enmType.Success);
+                            Close();
                         }
-                        MessageBox.Show(newID_Order.ToString());
-                        MessageBox.Show(ID_Employee);
                     }
-                    Alert("Mua sách thành công", Form_Alert.enmType.Success);
                     z = 0;
-                    Close();
+                    ID_Customer = "";
                 }
                 else
                 {

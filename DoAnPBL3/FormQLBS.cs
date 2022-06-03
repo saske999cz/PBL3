@@ -144,6 +144,7 @@ namespace DoAnPBL3
                 lblSSTA.Text = listEnglishBooks.Count().ToString();
             }
             rjDropDownMenuSXS.IsMainMenu = false;
+            dgvQLBS.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI Semibold", 10, FontStyle.Bold);
         }
 
         private void xuiSegmentBS_Click(object sender, EventArgs e)

@@ -30,6 +30,7 @@ namespace DoAnPBL3
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenuNV));
             this.panelMenu = new System.Windows.Forms.Panel();
             this.btnQLKH = new FontAwesome.Sharp.IconButton();
             this.btnBS = new FontAwesome.Sharp.IconButton();
@@ -635,6 +636,7 @@ namespace DoAnPBL3
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainMenuNV";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

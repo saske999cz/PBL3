@@ -343,6 +343,7 @@ namespace DoAnPBL3
             this.tbNumber.TabIndex = 0;
             this.tbNumber.Texts = "";
             this.tbNumber.UnderlinedStyle = false;
+            this.tbNumber._TextChanged += new System.EventHandler(this.tbNumber__TextChanged);
             this.tbNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbNumber_KeyPress);
             // 
             // FormCart
