@@ -491,9 +491,9 @@ namespace DoAnPBL3
             this.lbIDBook.Location = new System.Drawing.Point(286, 85);
             this.lbIDBook.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbIDBook.Name = "lbIDBook";
-            this.lbIDBook.Size = new System.Drawing.Size(73, 18);
+            this.lbIDBook.Size = new System.Drawing.Size(66, 18);
             this.lbIDBook.TabIndex = 7;
-            this.lbIDBook.Text = "Tên sách";
+            this.lbIDBook.Text = "Mã sách";
             // 
             // panelTitleBar
             // 

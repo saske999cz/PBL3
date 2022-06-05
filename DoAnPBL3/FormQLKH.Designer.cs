@@ -29,15 +29,18 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormQLKH));
             this.dgvQLKH = new System.Windows.Forms.DataGridView();
-            this.rjtbTKKH = new DoAnPBL3.RJTextBox();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NameCustomer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.xuiSegmentKH = new XanderUI.XUISegment();
             this.btnHDKH = new FontAwesome.Sharp.IconButton();
-            this.btnTTKH = new FontAwesome.Sharp.IconButton();
             this.btnTKKH = new Guna.UI2.WinForms.Guna2Button();
             this.lblKHNu = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -52,6 +55,7 @@
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.rjtbTKKH = new DoAnPBL3.RJTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQLKH)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -63,68 +67,97 @@
             // 
             this.dgvQLKH.AllowUserToAddRows = false;
             this.dgvQLKH.AllowUserToDeleteRows = false;
-            this.dgvQLKH.AllowUserToOrderColumns = true;
             this.dgvQLKH.AllowUserToResizeColumns = false;
             this.dgvQLKH.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(35)))));
-            this.dgvQLKH.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvQLKH.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvQLKH.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvQLKH.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
-            this.dgvQLKH.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvQLKH.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dgvQLKH.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(16)))), ((int)(((byte)(221)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(16)))), ((int)(((byte)(221)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvQLKH.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvQLKH.ColumnHeadersHeight = 22;
+            this.dgvQLKH.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(16)))), ((int)(((byte)(221)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(16)))), ((int)(((byte)(221)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvQLKH.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvQLKH.ColumnHeadersHeight = 30;
             this.dgvQLKH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(43)))), ((int)(((byte)(63)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvQLKH.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvQLKH.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.NameCustomer,
+            this.Gender,
+            this.Phone,
+            this.Address});
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvQLKH.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvQLKH.EnableHeadersVisualStyles = false;
-            this.dgvQLKH.Location = new System.Drawing.Point(6, 170);
+            this.dgvQLKH.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.dgvQLKH.Location = new System.Drawing.Point(11, 170);
+            this.dgvQLKH.Margin = new System.Windows.Forms.Padding(2);
             this.dgvQLKH.Name = "dgvQLKH";
-            this.dgvQLKH.RowHeadersVisible = false;
+            this.dgvQLKH.ReadOnly = true;
             this.dgvQLKH.RowHeadersWidth = 51;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvQLKH.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvQLKH.RowTemplate.Height = 30;
             this.dgvQLKH.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvQLKH.Size = new System.Drawing.Size(821, 413);
+            this.dgvQLKH.Size = new System.Drawing.Size(816, 413);
             this.dgvQLKH.TabIndex = 16;
             // 
-            // rjtbTKKH
+            // ID
             // 
-            this.rjtbTKKH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(35)))));
-            this.rjtbTKKH.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(35)))));
-            this.rjtbTKKH.BorderFocusColor = System.Drawing.Color.DeepSkyBlue;
-            this.rjtbTKKH.BorderRadius = 15;
-            this.rjtbTKKH.BorderSize = 1;
-            this.rjtbTKKH.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjtbTKKH.ForeColor = System.Drawing.Color.Silver;
-            this.rjtbTKKH.Location = new System.Drawing.Point(6, 133);
-            this.rjtbTKKH.Margin = new System.Windows.Forms.Padding(4);
-            this.rjtbTKKH.Multiline = false;
-            this.rjtbTKKH.Name = "rjtbTKKH";
-            this.rjtbTKKH.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjtbTKKH.PasswordChar = false;
-            this.rjtbTKKH.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(83)))), ((int)(((byte)(103)))));
-            this.rjtbTKKH.PlaceholderText = "Tìm kiếm";
-            this.rjtbTKKH.Size = new System.Drawing.Size(250, 31);
-            this.rjtbTKKH.TabIndex = 17;
-            this.rjtbTKKH.Texts = "";
-            this.rjtbTKKH.UnderlinedStyle = false;
+            this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ID.DataPropertyName = "ID_Customer";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            // 
+            // NameCustomer
+            // 
+            this.NameCustomer.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NameCustomer.DataPropertyName = "FullNameCustomer";
+            this.NameCustomer.HeaderText = "Họ và tên";
+            this.NameCustomer.Name = "NameCustomer";
+            this.NameCustomer.ReadOnly = true;
+            // 
+            // Gender
+            // 
+            this.Gender.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Gender.DataPropertyName = "Gender";
+            this.Gender.HeaderText = "Giới tính";
+            this.Gender.Name = "Gender";
+            this.Gender.ReadOnly = true;
+            // 
+            // Phone
+            // 
+            this.Phone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Phone.DataPropertyName = "Phone";
+            this.Phone.HeaderText = "SĐT";
+            this.Phone.Name = "Phone";
+            this.Phone.ReadOnly = true;
+            // 
+            // Address
+            // 
+            this.Address.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Address.DataPropertyName = "Address";
+            this.Address.HeaderText = "Địa chỉ";
+            this.Address.Name = "Address";
+            this.Address.ReadOnly = true;
             // 
             // xuiSegmentKH
             // 
@@ -142,6 +175,7 @@
             this.xuiSegmentKH.SelectedIndex = 0;
             this.xuiSegmentKH.Size = new System.Drawing.Size(314, 34);
             this.xuiSegmentKH.TabIndex = 18;
+            this.xuiSegmentKH.Click += new System.EventHandler(this.xuiSegmentKH_Click);
             // 
             // btnHDKH
             // 
@@ -157,39 +191,16 @@
             this.btnHDKH.IconColor = System.Drawing.Color.White;
             this.btnHDKH.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnHDKH.IconSize = 30;
-            this.btnHDKH.Location = new System.Drawing.Point(-1, 69);
+            this.btnHDKH.Location = new System.Drawing.Point(0, 3);
             this.btnHDKH.Name = "btnHDKH";
             this.btnHDKH.Size = new System.Drawing.Size(142, 47);
             this.btnHDKH.TabIndex = 10;
             this.btnHDKH.Text = " Hóa đơn khách hàng";
             this.btnHDKH.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnHDKH.UseVisualStyleBackColor = false;
+            this.btnHDKH.Click += new System.EventHandler(this.btnHDKH_Click);
             this.btnHDKH.MouseEnter += new System.EventHandler(this.btnHDKH_MouseEnter);
             this.btnHDKH.MouseLeave += new System.EventHandler(this.btnHDKH_MouseLeave);
-            // 
-            // btnTTKH
-            // 
-            this.btnTTKH.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnTTKH.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnTTKH.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTTKH.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
-            this.btnTTKH.FlatAppearance.BorderSize = 0;
-            this.btnTTKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTTKH.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTTKH.ForeColor = System.Drawing.Color.White;
-            this.btnTTKH.IconChar = FontAwesome.Sharp.IconChar.Info;
-            this.btnTTKH.IconColor = System.Drawing.Color.White;
-            this.btnTTKH.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnTTKH.IconSize = 30;
-            this.btnTTKH.Location = new System.Drawing.Point(2, 3);
-            this.btnTTKH.Name = "btnTTKH";
-            this.btnTTKH.Size = new System.Drawing.Size(142, 47);
-            this.btnTTKH.TabIndex = 8;
-            this.btnTTKH.Text = "Thông tin khách hàng";
-            this.btnTTKH.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTTKH.UseVisualStyleBackColor = false;
-            this.btnTTKH.MouseEnter += new System.EventHandler(this.btnTTKH_MouseEnter);
-            this.btnTTKH.MouseLeave += new System.EventHandler(this.btnTTKH_MouseLeave);
             // 
             // btnTKKH
             // 
@@ -208,6 +219,7 @@
             this.btnTKKH.Size = new System.Drawing.Size(141, 31);
             this.btnTKKH.TabIndex = 19;
             this.btnTKKH.Text = "Tìm kiếm";
+            this.btnTKKH.Click += new System.EventHandler(this.btnTKKH_Click);
             // 
             // lblKHNu
             // 
@@ -327,7 +339,6 @@
             // guna2Elipse2
             // 
             this.guna2Elipse2.BorderRadius = 5;
-            this.guna2Elipse2.TargetControl = this.btnTTKH;
             // 
             // guna2Elipse3
             // 
@@ -337,12 +348,34 @@
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.btnTTKH);
             this.panel1.Controls.Add(this.btnHDKH);
             this.panel1.Location = new System.Drawing.Point(833, 170);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(144, 119);
             this.panel1.TabIndex = 38;
+            // 
+            // rjtbTKKH
+            // 
+            this.rjtbTKKH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(35)))));
+            this.rjtbTKKH.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(35)))));
+            this.rjtbTKKH.BorderFocusColor = System.Drawing.Color.DeepSkyBlue;
+            this.rjtbTKKH.BorderRadius = 15;
+            this.rjtbTKKH.BorderSize = 1;
+            this.rjtbTKKH.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjtbTKKH.ForeColor = System.Drawing.Color.Silver;
+            this.rjtbTKKH.Location = new System.Drawing.Point(6, 133);
+            this.rjtbTKKH.Margin = new System.Windows.Forms.Padding(4);
+            this.rjtbTKKH.Multiline = false;
+            this.rjtbTKKH.Name = "rjtbTKKH";
+            this.rjtbTKKH.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.rjtbTKKH.PasswordChar = false;
+            this.rjtbTKKH.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(83)))), ((int)(((byte)(103)))));
+            this.rjtbTKKH.PlaceholderText = "Tìm kiếm theo tên hoặc SĐT";
+            this.rjtbTKKH.Size = new System.Drawing.Size(250, 31);
+            this.rjtbTKKH.TabIndex = 17;
+            this.rjtbTKKH.Texts = "";
+            this.rjtbTKKH.UnderlinedStyle = false;
+            this.rjtbTKKH.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.rjtbTKKH_KeyPress);
             // 
             // FormQLKH
             // 
@@ -370,6 +403,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormQLKH";
             this.Text = "Quản lý khách hàng";
+            this.Load += new System.EventHandler(this.FormQLKH_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvQLKH)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -381,7 +415,6 @@
         }
 
         #endregion
-        private FontAwesome.Sharp.IconButton btnTTKH;
         private FontAwesome.Sharp.IconButton btnHDKH;
         private System.Windows.Forms.DataGridView dgvQLKH;
         private RJTextBox rjtbTKKH;
@@ -400,5 +433,10 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse3;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NameCustomer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Gender;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Phone;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Address;
     }
 }

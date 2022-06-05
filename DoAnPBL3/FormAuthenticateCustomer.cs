@@ -62,9 +62,14 @@ namespace DoAnPBL3
                     }
                     else
                     {
-                        RJMessageBox.Show("Khách hàng " + customer.FullNameCustomer + " có trong hệ thống", "Xác nhận", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        FormCart.ID_Customer = customer.ID_Customer;
-                        Close();
+                        DialogResult result = RJMessageBox.Show("Khách hàng " + customer.FullNameCustomer + " có trong hệ thống. Xác nhận mua?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                        if (result == DialogResult.Yes)
+                        {
+                            FormCart.ID_Customer = customer.ID_Customer;
+                            Close();
+                        }
+                        else
+                            return;
                     }
                 }
             }

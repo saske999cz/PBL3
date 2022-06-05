@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DoAnPBL3.Validator;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -84,11 +85,6 @@ namespace DoAnPBL3
             public static Color color6 = Color.FromArgb(24, 161, 251);
         }
 
-        private void btnTTKH_MouseEnter(object sender, EventArgs e)
-        {
-            btnTTKH.BackColor = RGBColors.color4;
-        }
-
         private void btnTKKH_MouseEnter(object sender, EventArgs e)
         {
             btnTKKH.BackColor = RGBColors.color4;
@@ -99,11 +95,6 @@ namespace DoAnPBL3
             btnHDKH.BackColor = RGBColors.color4;
         }
 
-        private void btnTTKH_MouseLeave(object sender, EventArgs e)
-        {
-            btnTTKH.BackColor = Color.RoyalBlue;
-        }
-
         private void btnTKKH_MouseLeave(object sender, EventArgs e)
         {
             btnTKKH.BackColor = Color.FromArgb(31, 30, 68);
@@ -112,6 +103,133 @@ namespace DoAnPBL3
         private void btnHDKH_MouseLeave(object sender, EventArgs e)
         {
             btnHDKH.BackColor = Color.RoyalBlue;
+        }
+
+        private void FormQLKH_Load(object sender, EventArgs e)
+        {
+            using (BookStoreContext context = new BookStoreContext())
+            {
+                var listCustomers = context.Customers
+                    .Select(customer => new
+                    {
+                        customer.ID_Customer,
+                        customer.FullNameCustomer,
+                        customer.Gender,
+                        customer.Phone,
+                        customer.Address
+                    });
+                var listMaleCustomers = listCustomers.Where(customer => customer.Gender == "Nam");
+                var listFemaleCustomers = listCustomers.Where(customer => customer.Gender == "Nữ");
+                dgvQLKH.DataSource = listCustomers.ToList();
+                //count = listCustomers.Count();
+                lblTSKH.Text = listCustomers.Count().ToString();
+                lblKHN.Text = listMaleCustomers.Count().ToString();
+                lblKHNu.Text = listFemaleCustomers.Count().ToString();
+                dgvQLKH.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI Semibold", 10, FontStyle.Bold);
+            }
+        }
+
+        private void xuiSegmentKH_Click(object sender, EventArgs e)
+        {
+            using (BookStoreContext context = new BookStoreContext())
+            {
+                // Tất cả
+                if (xuiSegmentKH.SelectedIndex == 0)
+                {
+                    FormQLKH_Load(sender, e);
+                }
+                // Nam
+                else if (xuiSegmentKH.SelectedIndex == 1)
+                {
+                    dgvQLKH.DataSource = context.Customers
+                        .Where(customer => customer.Gender == "Nam")
+                        .Select(customer => new
+                        {
+                            customer.ID_Customer,
+                            customer.FullNameCustomer,
+                            customer.Gender,
+                            customer.Phone,
+                            customer.Address
+                        })
+                        .ToList();
+                }
+                // Nữ
+                else
+                {
+                    dgvQLKH.DataSource = context.Customers
+                        .Where(customer => customer.Gender == "Nữ")
+                        .Select(customer => new
+                        {
+                            customer.ID_Customer,
+                            customer.FullNameCustomer,
+                            customer.Gender,
+                            customer.Phone,
+                            customer.Address
+                        })
+                        .ToList();
+                }
+            }
+        }
+
+        private void btnHDKH_Click(object sender, EventArgs e)
+        {
+            RJMessageBox.Show("Hóa đơn khách hàng");
+        }
+
+        private void rjtbTKKH_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                btnTKKH.PerformClick();
+                e.Handled = true;
+            }
+        }
+
+        private void btnTKKH_Click(object sender, EventArgs e)
+        {
+            using (BookStoreContext context = new BookStoreContext())
+            {
+                if (rjtbTKKH.Texts.Trim() == "")
+                {
+                    RJMessageBox.Show("Vui lòng điền thông tin khách hàng cần tìm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else if (Validators.IsValidPhoneNumber(rjtbTKKH.Texts, Validators.PHONE_REGEX))
+                {
+                    var listCustomers = context.Customers
+                        .Where(customer => customer.Phone == rjtbTKKH.Texts)
+                        .Select(customer => new
+                        {
+                            customer.ID_Customer,
+                            customer.FullNameCustomer,
+                            customer.Gender,
+                            customer.Phone,
+                            customer.Address
+                        })
+                        .ToList();
+                    if (listCustomers.Count == 0)
+                        RJMessageBox.Show("Không tìm thấy", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    else
+                        dgvQLKH.DataSource = listCustomers;
+                }
+                else
+                {
+                    var listCustomers = context.Customers
+                        .Where(customer => customer.FullNameCustomer.Contains(rjtbTKKH.Texts))
+                        .Select(customer => new
+                        {
+                            customer.ID_Customer,
+                            customer.FullNameCustomer,
+                            customer.Gender,
+                            customer.Phone,
+                            customer.Address
+                        })
+                        .ToList();
+                    if (listCustomers.Count == 0)
+                        RJMessageBox.Show("Không tìm thấy", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    else
+                        dgvQLKH.DataSource = listCustomers;
+                }
+            }
         }
     }
 }

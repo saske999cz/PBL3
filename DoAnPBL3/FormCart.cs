@@ -104,25 +104,45 @@ namespace DoAnPBL3
             bool check = true;
             int[] error = new int[100];
             int indexError = 0;
-            if (panelDesktop.Controls.Count != 0)
+            using (BookStoreContext context = new BookStoreContext())
             {
-                foreach (FormNhapMua b in panelDesktop.Controls)
+                if (panelDesktop.Controls.Count != 0)
                 {
-                    if (b.GetQuantityText() == "0" || b.GetQuantityText() == "")
+                    foreach (FormNhapMua b in panelDesktop.Controls)
                     {
-                        check = false;
-                        error[indexError] = panelDesktop.Controls.Count - panelDesktop.Controls.GetChildIndex(b);
-                        indexError++;
+                        string ID_Book = b.GetID_Book();
+                        var book = context.Books
+                            .Where(bk => bk.ID_Book == ID_Book)
+                            .Select(bk => new { bk.NameBook, bk.Quantity })
+                            .ToList()
+                            .FirstOrDefault();
+                        if (b.GetQuantityText() == "0" || b.GetQuantityText() == "")
+                        {
+                            check = false;
+                            error[indexError] = panelDesktop.Controls.Count - panelDesktop.Controls.GetChildIndex(b);
+                            indexError++;
+                        }
+                        if (book.Quantity - b.GetQuantity() < 0)
+                        {
+                            check = false;
+                            error[indexError] = panelDesktop.Controls.Count - panelDesktop.Controls.GetChildIndex(b);
+                            indexError++;
+                            RJMessageBox.Show("Số lượng sách " + book.NameBook + " không đủ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        if (book.Quantity == 0)
+                        {
+                            check = false;
+                            error[indexError] = panelDesktop.Controls.Count - panelDesktop.Controls.GetChildIndex(b);
+                            indexError++;
+                            RJMessageBox.Show("Sách " + book.NameBook + " đã bán hết", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
-                }
-                if (check == true)
-                {
-                    new FormAuthenticateCustomer().ShowDialog();
-                    if (ID_Customer == "")
-                        return;
-                    else
+                    if (check == true)
                     {
-                        using (BookStoreContext context = new BookStoreContext())
+                        new FormAuthenticateCustomer().ShowDialog();
+                        if (ID_Customer == "")
+                            return;
+                        else
                         {
                             var ID_Order = context.Orders
                                 .OrderBy(order => order.ID_Order)
@@ -161,7 +181,10 @@ namespace DoAnPBL3
                                 newID_Order.Append(numStr); // HD000 + 2 => HD0002
                             }
 
-                            Order newOrder = new Order(newID_Order.ToString(), DateTime.Now, Convert.ToInt32(tbTotal.Text), ID_Customer, ID_Employee);
+                            string total = tbTotal.Text;
+
+
+                            Order newOrder = new Order(newID_Order.ToString(), DateTime.Now, Convert.ToInt32(total.Remove(total.Length - 3, 3)), ID_Customer, ID_Employee);
                             context.Orders.Add(newOrder);
                             context.SaveChanges();
 
@@ -169,34 +192,37 @@ namespace DoAnPBL3
 
                             for (int i = 0; i < Convert.ToInt32(tbNumDiverse.Text); i++)
                             {
-                                newOrderDetail = new OrderDetail(newID_Order.ToString(), currentChildForm[i].GetID_Book(), currentChildForm[i].GetNameBook(), 
+                                newOrderDetail = new OrderDetail(newID_Order.ToString(), currentChildForm[i].GetID_Book(), currentChildForm[i].GetNameBook(),
                                     currentChildForm[i].GetPrice(), currentChildForm[i].GetQuantity(), (int)currentChildForm[i].GetAmount());
                                 context.OrderDetails.Add(newOrderDetail);
+                                context.SaveChanges();
+
+                                Book book = context.Books.Find(currentChildForm[i].GetID_Book());
+                                book.Quantity -= currentChildForm[i].GetQuantity();
                                 context.SaveChanges();
                             }
 
                             Alert("Mua sách thành công", Form_Alert.enmType.Success);
                             Close();
                         }
+                        z = 0;
+                        ID_Customer = "";
                     }
-                    z = 0;
-                    ID_Customer = "";
+                    else
+                    {
+                        int o = 0;
+                        int[] v = new int[indexError];
+                        for (int i = indexError - 1; i >= 0; i--)
+                        {
+                            v[i] = error[o];
+                            o++;
+                        }
+                        RJMessageBox.Show("Xuất hiện sai sót tại dòng: " + string.Join(", ", v), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
-                {
-                    int o = 0;
-                    int[] v = new int[indexError];
-                    for (int i = indexError - 1; i >= 0; i--)
-                    {
-                        v[i] = error[o];
-                        o++;
-                    }
-                    RJMessageBox.Show("Vui lòng nhập các thông tin cần thiết trước khi nhấn mua", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    RJMessageBox.Show("Xuất hiện sai sót tại dòng: " + string.Join(", ", v), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
+                    RJMessageBox.Show("Chưa có sách nào trong giỏ hàng của bạn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            else
-                RJMessageBox.Show("Chưa có sách nào trong giỏ hàng của bạn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void rjbtnCancel_Click(object sender, EventArgs e)
@@ -251,7 +277,7 @@ namespace DoAnPBL3
                 else
                     total += b.GetAmount();
             }
-            tbTotal.Text = total.ToString();
+            tbTotal.Text = total.ToString() + "VNĐ";
             tbNumDiverse.Text = panelDesktop.Controls.Count.ToString();
             tbQuantity.Text = quantity.ToString();
         }

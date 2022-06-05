@@ -172,18 +172,11 @@ namespace DoAnPBL3
                     Avatar = null, AccountUsername = "lethihuyentrang"},
             });
 
-            //context.Authors.AddRange(new Author[]
-            //{
-            //    new Author {ID_Author = 1, FullNameAuthor = "Nguyễn Minh Nhật", Email = "nguyenminhnhat@gmail.com"},
-            //    new Author {ID_Author = 2, FullNameAuthor = "Gào (Vũ Phương Thanh)", Email = "gao@gmail.com"},
-            //    new Author {ID_Author = 3, FullNameAuthor = "Hamlet Trương (Lê Văn Trương)", Email = "hamlettruong@gmail.com"},
-            //    new Author {ID_Author = 4, FullNameAuthor = "Iris Cao", Email = "iriscao@gmail.com"},
-            //    new Author {ID_Author = 5, FullNameAuthor = "Kawi Hồng Phương", Email = "kawihongphuong@gmail.com"},
-            //    new Author {ID_Author = 6, FullNameAuthor = "Sơn Paris (Nguyễn Ngọc Sơn)", Email = "sonparis@gmail.com"},
-            //    new Author {ID_Author = 7, FullNameAuthor = "Nguyễn Ngọc Thạch", Email = "nguyenngocthach@gmail.com"},
-            //    new Author {ID_Author = 8, FullNameAuthor = "Anh Khang", Email = "anhkhang@gmail.com"},
-            //    new Author {ID_Author = 9, FullNameAuthor = "Phan Ý Yên", Email = "phanyyen@gmail.com"},
-            //});
+            context.Authors.AddRange(new Author[]
+            {
+                new Author {ID_Author = 1, FullNameAuthor = "Yusuke Murata", Email = "yusukemurata@gmail.com"},
+                new Author {ID_Author = 2, FullNameAuthor = "Bộ Giáo Dục Đào Tạo", Email = "bogiaoducdaotao@gmail.com"},
+            });
 
             context.Languages.AddRange(new Language[]
             {
@@ -202,26 +195,36 @@ namespace DoAnPBL3
             {
                 new Publisher {ID_Publisher = 1, NamePublisher = "Nhà xuất bản Kim Đồng",
                     Email = "cskh_online@nxbkimdong.com.vn", PhoneContact = "(+84) 1900571595"},
+
                 new Publisher {ID_Publisher = 2, NamePublisher = "Nhà xuất bản Trẻ",
                     Email = "hopthubandoc@nxbtre.com.vn", PhoneContact = "(028) 39316289 - 39316211 - 39317849"},
+
                 new Publisher {ID_Publisher = 3, NamePublisher = "Nhà xuất bản Tổng hợp thành phố Hồ Chí Minh",
                     Email = "nstonghop@gmail.com", PhoneContact = "(028) 3825 6804 - 3825 6713 - 3829 6764"},
+
                 new Publisher {ID_Publisher = 4, NamePublisher = "Nhà xuất bản chính trị quốc gia sự thật",
                     Email = "suthat@nxbctqg.vn", PhoneContact = "024 3822 1633"},
+
                 new Publisher {ID_Publisher = 5, NamePublisher = "Nhà xuất bản giáo dục",
                     Email = "nxbgd@gmail.com", PhoneContact = "024 3822 0801"},
+
                 new Publisher {ID_Publisher = 6, NamePublisher = "Nhà xuất bản Hội Nhà văn",
                     Email = "nxbhoinhavan65@gmail.com", PhoneContact = "024.38222135"},
+
                 new Publisher {ID_Publisher = 7, NamePublisher = "Nhà xuất bản Tư pháp",
                     Email = "nxbtp@moj.gov.vn", PhoneContact = "024. 6263 2079"},
+
                 new Publisher {ID_Publisher = 8, NamePublisher = "Nhà xuất bản Thông tin và Truyền thông",
                     Email = "nxb.tttt@mic.gov.vn", PhoneContact = "0243 577 2145"},
+
                 new Publisher {ID_Publisher = 9, NamePublisher = "Nhà xuất bản lao động",
                     Email = "nxblaodong@yahoo.com", PhoneContact = "024 3851 5380"},
+
                 new Publisher {ID_Publisher = 10, NamePublisher = "Nhà xuất bản giao thông vận tải",
                     Email = "nxbgtvt@fpt.vn", PhoneContact = "024 3942 3346"},
+
                 new Publisher {ID_Publisher = 11, NamePublisher = "Nhà xuất bản Đại học Quốc Gia Hà Nội",
-                    Email = "024 3971 4896", PhoneContact = "nxb@vnu.edu.vn"},
+                    Email = "nxb@vnu.edu.vn", PhoneContact = "024 3971 4896"},
             });
 
             context.Genres.AddRange(new Genre[]
@@ -234,6 +237,157 @@ namespace DoAnPBL3
                 new Genre {ID_Genre = 6, NameGenre = "Truyện - Tiểu thuyết"},
                 new Genre {ID_Genre = 7, NameGenre = "Tâm lý - Tâm linh - Tôn giáo"},
                 new Genre {ID_Genre = 8, NameGenre = "Thiếu nhi"},
+            });
+
+            context.Books.AddRange(new Book[]
+            {
+                new Book {ID_Book = "B0000", NameBook = "One Punch Man tập 1", PublishDate = new DateTime(2020, 01, 01),
+                    Quantity = 10, Price = 22000, Unit = "Quyển", ID_Language = 1, ID_Author = 1, ID_Publisher = 1, ID_Genre = 7,
+                    Image = (byte[])imageConverter.ConvertTo(Resources.OPM_tap_1, typeof(byte[]))},
+
+                new Book {ID_Book = "B0001", NameBook = "One Punch Man tập 2", PublishDate = new DateTime(2020, 01, 02),
+                    Quantity = 10, Price = 22000, Unit = "Quyển", ID_Language = 1, ID_Author = 1, ID_Publisher = 1, ID_Genre = 7,
+                    Image = (byte[])imageConverter.ConvertTo(Resources.OPM_tap_2, typeof(byte[]))},
+
+                new Book {ID_Book = "B0002", NameBook = "One Punch Man tập 3", PublishDate = new DateTime(2020, 01, 03),
+                    Quantity = 10, Price = 22000, Unit = "Quyển", ID_Language = 1, ID_Author = 1, ID_Publisher = 1, ID_Genre = 7,
+                    Image = (byte[])imageConverter.ConvertTo(Resources.OPM_tap_3, typeof(byte[]))},
+
+                new Book {ID_Book = "B0003", NameBook = "One Punch Man tập 4", PublishDate = new DateTime(2020, 01, 04),
+                    Quantity = 10, Price = 22000, Unit = "Quyển", ID_Language = 1, ID_Author = 1, ID_Publisher = 1, ID_Genre = 7,
+                    Image = (byte[])imageConverter.ConvertTo(Resources.OPM_tap_4, typeof(byte[]))},
+
+                new Book {ID_Book = "B0004", NameBook = "One Punch Man tập 5", PublishDate = new DateTime(2020, 01, 05),
+                    Quantity = 10, Price = 22000, Unit = "Quyển", ID_Language = 1, ID_Author = 1, ID_Publisher = 1, ID_Genre = 7,
+                    Image = (byte[])imageConverter.ConvertTo(Resources.OPM_tap_5, typeof(byte[]))},
+
+                new Book {ID_Book = "B0005", NameBook = "One Punch Man tập 6", PublishDate = new DateTime(2020, 01, 06),
+                    Quantity = 10, Price = 22000, Unit = "Quyển", ID_Language = 1, ID_Author = 1, ID_Publisher = 1, ID_Genre = 7,
+                    Image = (byte[])imageConverter.ConvertTo(Resources.OPM_tap_6, typeof(byte[]))},
+
+                new Book {ID_Book = "B0006", NameBook = "One Punch Man tập 7", PublishDate = new DateTime(2020, 01, 07),
+                    Quantity = 10, Price = 22000, Unit = "Quyển", ID_Language = 1, ID_Author = 1, ID_Publisher = 1, ID_Genre = 7,
+                    Image = (byte[])imageConverter.ConvertTo(Resources.OPM_tap_7, typeof(byte[]))},
+
+                new Book {ID_Book = "B0007", NameBook = "One Punch Man tập 8", PublishDate = new DateTime(2020, 01, 08),
+                    Quantity = 10, Price = 22000, Unit = "Quyển", ID_Language = 1, ID_Author = 1, ID_Publisher = 1, ID_Genre = 7,
+                    Image = (byte[])imageConverter.ConvertTo(Resources.OPM_tap_8, typeof(byte[]))},
+
+                new Book {ID_Book = "B0008", NameBook = "One Punch Man tập 9", PublishDate = new DateTime(2020, 01, 09),
+                    Quantity = 10, Price = 22000, Unit = "Quyển", ID_Language = 1, ID_Author = 1, ID_Publisher = 1, ID_Genre = 7,
+                    Image = (byte[])imageConverter.ConvertTo(Resources.OPM_tap_9, typeof(byte[]))},
+
+                new Book {ID_Book = "B0009", NameBook = "One Punch Man tập 10", PublishDate = new DateTime(2020, 01, 10),
+                    Quantity = 10, Price = 22000, Unit = "Quyển", ID_Language = 1, ID_Author = 1, ID_Publisher = 1, ID_Genre = 7,
+                    Image = (byte[])imageConverter.ConvertTo(Resources.OPM_tap_10, typeof(byte[]))},
+
+                new Book {ID_Book = "B0010", NameBook = "One Punch Man tập 11", PublishDate = new DateTime(2020, 01, 11),
+                    Quantity = 10, Price = 22000, Unit = "Quyển", ID_Language = 1, ID_Author = 1, ID_Publisher = 1, ID_Genre = 7,
+                    Image = (byte[])imageConverter.ConvertTo(Resources.OPM_tap_11, typeof(byte[]))},
+
+                new Book {ID_Book = "B0011", NameBook = "One Punch Man tập 12", PublishDate = new DateTime(2020, 01, 12),
+                    Quantity = 10, Price = 22000, Unit = "Quyển", ID_Language = 1, ID_Author = 1, ID_Publisher = 1, ID_Genre = 7,
+                    Image = (byte[])imageConverter.ConvertTo(Resources.OPM_tap_12, typeof(byte[]))},
+
+                new Book {ID_Book = "B0012", NameBook = "One Punch Man tập 13", PublishDate = new DateTime(2020, 01, 13),
+                    Quantity = 10, Price = 22000, Unit = "Quyển", ID_Language = 1, ID_Author = 1, ID_Publisher = 1, ID_Genre = 7,
+                    Image = (byte[])imageConverter.ConvertTo(Resources.OPM_tap_13, typeof(byte[]))},
+
+                new Book {ID_Book = "B0013", NameBook = "One Punch Man tập 14", PublishDate = new DateTime(2020, 01, 14),
+                    Quantity = 10, Price = 22000, Unit = "Quyển", ID_Language = 1, ID_Author = 1, ID_Publisher = 1, ID_Genre = 7,
+                    Image = (byte[])imageConverter.ConvertTo(Resources.OPM_tap_14, typeof(byte[]))},
+
+                new Book {ID_Book = "B0014", NameBook = "One Punch Man tập 15", PublishDate = new DateTime(2020, 01, 15),
+                    Quantity = 10, Price = 22000, Unit = "Quyển", ID_Language = 1, ID_Author = 1, ID_Publisher = 1, ID_Genre = 7,
+                    Image = (byte[])imageConverter.ConvertTo(Resources.OPM_tap_15, typeof(byte[]))},
+
+                new Book {ID_Book = "B0015", NameBook = "One Punch Man tập 16", PublishDate = new DateTime(2020, 01, 16),
+                    Quantity = 10, Price = 22000, Unit = "Quyển", ID_Language = 1, ID_Author = 1, ID_Publisher = 1, ID_Genre = 7,
+                    Image = (byte[])imageConverter.ConvertTo(Resources.OPM_tap_16, typeof(byte[]))},
+
+                new Book {ID_Book = "B0016", NameBook = "One Punch Man tập 17", PublishDate = new DateTime(2020, 01, 17),
+                    Quantity = 10, Price = 22000, Unit = "Quyển", ID_Language = 1, ID_Author = 1, ID_Publisher = 1, ID_Genre = 7,
+                    Image = (byte[])imageConverter.ConvertTo(Resources.OPM_tap_17, typeof(byte[]))},
+
+                new Book {ID_Book = "B0017", NameBook = "One Punch Man tập 18", PublishDate = new DateTime(2020, 01, 18),
+                    Quantity = 10, Price = 22000, Unit = "Quyển", ID_Language = 1, ID_Author = 1, ID_Publisher = 1, ID_Genre = 7,
+                    Image = (byte[])imageConverter.ConvertTo(Resources.OPM_tap_18, typeof(byte[]))},
+
+                new Book {ID_Book = "B0018", NameBook = "One Punch Man tập 19", PublishDate = new DateTime(2020, 01, 19),
+                    Quantity = 10, Price = 22000, Unit = "Quyển", ID_Language = 1, ID_Author = 1, ID_Publisher = 1, ID_Genre = 7,
+                    Image = (byte[])imageConverter.ConvertTo(Resources.OPM_tap_19, typeof(byte[]))},
+
+                new Book {ID_Book = "B0019", NameBook = "One Punch Man tập 20", PublishDate = new DateTime(2020, 01, 20),
+                    Quantity = 10, Price = 22000, Unit = "Quyển", ID_Language = 1, ID_Author = 1, ID_Publisher = 1, ID_Genre = 7,
+                    Image = (byte[])imageConverter.ConvertTo(Resources.OPM_tap_20, typeof(byte[]))},
+
+                new Book {ID_Book = "B0020", NameBook = "One Punch Man tập 21", PublishDate = new DateTime(2020, 01, 21),
+                    Quantity = 10, Price = 22000, Unit = "Quyển", ID_Language = 1, ID_Author = 1, ID_Publisher = 1, ID_Genre = 7,
+                    Image = (byte[])imageConverter.ConvertTo(Resources.OPM_tap_21, typeof(byte[]))},
+
+                new Book {ID_Book = "B0021", NameBook = "One Punch Man tập 22", PublishDate = new DateTime(2020, 01, 22),
+                    Quantity = 10, Price = 22000, Unit = "Quyển", ID_Language = 1, ID_Author = 1, ID_Publisher = 1, ID_Genre = 7,
+                    Image = (byte[])imageConverter.ConvertTo(Resources.OPM_tap_22, typeof(byte[]))},
+
+                new Book {ID_Book = "B0022", NameBook = "One Punch Man tập 23", PublishDate = new DateTime(2020, 01, 23),
+                    Quantity = 10, Price = 22000, Unit = "Quyển", ID_Language = 1, ID_Author = 1, ID_Publisher = 1, ID_Genre = 7,
+                    Image = (byte[])imageConverter.ConvertTo(Resources.OPM_tap_23, typeof(byte[]))},
+
+                new Book {ID_Book = "B0023", NameBook = "One Punch Man tập 24", PublishDate = new DateTime(2020, 01, 24),
+                    Quantity = 10, Price = 22000, Unit = "Quyển", ID_Language = 1, ID_Author = 1, ID_Publisher = 1, ID_Genre = 7,
+                    Image = (byte[])imageConverter.ConvertTo(Resources.OPM_tap_24, typeof(byte[]))},
+
+                new Book {ID_Book = "B0024", NameBook = "One Punch Man tập 25", PublishDate = new DateTime(2020, 01, 25),
+                    Quantity = 10, Price = 22000, Unit = "Quyển", ID_Language = 1, ID_Author = 1, ID_Publisher = 1, ID_Genre = 7,
+                    Image = (byte[])imageConverter.ConvertTo(Resources.OPM_tap_25, typeof(byte[]))},
+
+                new Book {ID_Book = "B0025", NameBook = "Giải tích 12", PublishDate = new DateTime(2020, 01, 01),
+                    Quantity = 20, Price = 22000, Unit = "Quyển", ID_Language = 1, ID_Author = 2, ID_Publisher = 5, ID_Genre = 5,
+                    Image = (byte[])imageConverter.ConvertTo(Resources.sach_giao_khoa_giai_tich_12, typeof(byte[]))},
+
+                new Book {ID_Book = "B0026", NameBook = "Hình học 12", PublishDate = new DateTime(2020, 01, 2),
+                    Quantity = 20, Price = 22000, Unit = "Quyển", ID_Language = 1, ID_Author = 2, ID_Publisher = 5, ID_Genre = 5,
+                    Image = (byte[])imageConverter.ConvertTo(Resources.Hinh_hoc_12_346267_2, typeof(byte[]))},
+
+                new Book {ID_Book = "B0027", NameBook = "Ngữ Văn 12 tập 1", PublishDate = new DateTime(2020, 01, 3),
+                    Quantity = 20, Price = 22000, Unit = "Quyển", ID_Language = 1, ID_Author = 2, ID_Publisher = 5, ID_Genre = 5,
+                    Image = (byte[])imageConverter.ConvertTo(Resources.Sach_giao_khoa_ngu_van_12_tap_1_500x554, typeof(byte[]))},
+
+                new Book {ID_Book = "B0028", NameBook = "Ngữ Văn 12 tập 2", PublishDate = new DateTime(2020, 01, 4),
+                    Quantity = 20, Price = 22000, Unit = "Quyển", ID_Language = 1, ID_Author = 2, ID_Publisher = 5, ID_Genre = 5,
+                    Image = (byte[])imageConverter.ConvertTo(Resources.Sach_giao_khoa_ngu_van_12_tap_2_500x554, typeof(byte[]))},
+
+                new Book {ID_Book = "B0029", NameBook = "Vật lý 12", PublishDate = new DateTime(2020, 01, 5),
+                    Quantity = 20, Price = 22000, Unit = "Quyển", ID_Language = 1, ID_Author = 2, ID_Publisher = 5, ID_Genre = 5,
+                    Image = (byte[])imageConverter.ConvertTo(Resources.sach_giao_khoa_vat_ly_12, typeof(byte[]))},
+
+                new Book {ID_Book = "B0030", NameBook = "Hóa học 12", PublishDate = new DateTime(2020, 01, 6),
+                    Quantity = 20, Price = 22000, Unit = "Quyển", ID_Language = 1, ID_Author = 2, ID_Publisher = 5, ID_Genre = 5,
+                    Image = (byte[])imageConverter.ConvertTo(Resources.sach_giao_khoa_hoa_hoc_lop_12, typeof(byte[]))},
+
+                new Book {ID_Book = "B0031", NameBook = "Sinh học 12", PublishDate = new DateTime(2020, 01, 7),
+                    Quantity = 20, Price = 22000, Unit = "Quyển", ID_Language = 1, ID_Author = 2, ID_Publisher = 5, ID_Genre = 5,
+                    Image = (byte[])imageConverter.ConvertTo(Resources.sach_giao_khoa_sinh_hoc_lop_12, typeof(byte[]))},
+
+                new Book {ID_Book = "B0032", NameBook = "Địa lí 12", PublishDate = new DateTime(2020, 01, 8),
+                    Quantity = 20, Price = 22000, Unit = "Quyển", ID_Language = 1, ID_Author = 2, ID_Publisher = 5, ID_Genre = 5,
+                    Image = (byte[])imageConverter.ConvertTo(Resources.sach_giao_khoa_dia_li_lop_12, typeof(byte[]))},
+
+                new Book {ID_Book = "B0033", NameBook = "Lịch sử 12", PublishDate = new DateTime(2020, 01, 9),
+                    Quantity = 20, Price = 22000, Unit = "Quyển", ID_Language = 1, ID_Author = 2, ID_Publisher = 5, ID_Genre = 5,
+                    Image = (byte[])imageConverter.ConvertTo(Resources.sach_giao_khoa_lich_su_lop_12, typeof(byte[]))},
+
+                new Book {ID_Book = "B0034", NameBook = "Tiếng anh 12", PublishDate = new DateTime(2020, 01, 10),
+                    Quantity = 20, Price = 22000, Unit = "Quyển", ID_Language = 1, ID_Author = 2, ID_Publisher = 5, ID_Genre = 5,
+                    Image = (byte[])imageConverter.ConvertTo(Resources.sach_giao_khoa_tieng_anh_12, typeof(byte[]))},
+
+                new Book {ID_Book = "B0035", NameBook = "Tiếng anh thí điểm 12 tập 1", PublishDate = new DateTime(2020, 01, 11),
+                    Quantity = 20, Price = 22000, Unit = "Quyển", ID_Language = 1, ID_Author = 2, ID_Publisher = 5, ID_Genre = 5,
+                    Image = (byte[])imageConverter.ConvertTo(Resources.tieng_anh_thi_diem_12_tap_1, typeof(byte[]))},
+
+                new Book {ID_Book = "B0036", NameBook = "Tiếng anh thí điểm 12 tập 2", PublishDate = new DateTime(2020, 01, 12),
+                    Quantity = 20, Price = 22000, Unit = "Quyển", ID_Language = 1, ID_Author = 2, ID_Publisher = 5, ID_Genre = 5,
+                    Image = (byte[])imageConverter.ConvertTo(Resources.tieng_anh_thi_diem_12_tap_2, typeof(byte[]))},
             });
         }
     }

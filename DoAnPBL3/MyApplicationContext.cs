@@ -22,8 +22,6 @@ namespace DoAnPBL3
             var forms = new List<Form>() 
             {
                 new FormLoading(),
-                //new FormIntro(),
-                //new FormLogin()
             };
 
             foreach (var form in forms)

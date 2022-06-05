@@ -18,8 +18,8 @@ namespace DoAnPBL3
     {
         private int count;
         private IconButton btnCurrent;
-        private string accountUsername;
-        private string password;
+        private readonly string accountUsername;
+        private readonly string password;
 
         public FormQLNV(string theme, string accountUsername, string password)
         {
@@ -132,53 +132,54 @@ namespace DoAnPBL3
             frm.showAlert(msg, type);
         }
 
-        private void btnAddNV_MouseEnter(object sender, EventArgs e)
+        private void BtnAddNV_MouseEnter(object sender, EventArgs e)
         {
             btnAddNV.BackColor = RGBColors.color4;
         }
 
-        private void iconButton1_MouseEnter(object sender, EventArgs e)
+        private void IconButton1_MouseEnter(object sender, EventArgs e)
         {
             btnDeleteNV.BackColor = RGBColors.color4;
         }
 
-        private void btnSuaNV_MouseEnter(object sender, EventArgs e)
+        private void BtnEditNV_MouseEnter(object sender, EventArgs e)
         {
             btnSuaNV.BackColor = RGBColors.color4;
         }
 
-        private void btnAddNV_MouseLeave(object sender, EventArgs e)
+        private void BtnAddNV_MouseLeave(object sender, EventArgs e)
         {
             btnAddNV.BackColor = Color.MediumSeaGreen;
         }
 
-        private void btnDeleteNV_MouseLeave(object sender, EventArgs e)
+        private void BtnDeleteNV_MouseLeave(object sender, EventArgs e)
         {
             btnDeleteNV.BackColor = Color.Firebrick;
         }
 
-        private void btnSuaNV_MouseLeave(object sender, EventArgs e)
+        private void BtnEditNV_MouseLeave(object sender, EventArgs e)
         {
             btnSuaNV.BackColor = Color.DodgerBlue;
         }
 
-        private void btnAll_Click(object sender, EventArgs e)
+        private void BtnAll_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, Color.Gainsboro);
         }
 
-        private void btnNam_Click(object sender, EventArgs e)
+        private void BtnNam_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, Color.Gainsboro);
         }
 
-        private void btnNu_Click(object sender, EventArgs e)
+        private void BtnNu_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, Color.Gainsboro);
         }
 
         private void FormQLNV_Load(object sender, EventArgs e)
         {
+            dgvQLNV.RowHeadersVisible = true;
             using (BookStoreContext context = new BookStoreContext())
             {
                 var listEmployees = context.Employees
@@ -200,13 +201,13 @@ namespace DoAnPBL3
             }
         }
 
-        private void btnAddNV_Click(object sender, EventArgs e)
+        private void BtnAddNV_Click(object sender, EventArgs e)
         {
             new FormAddNV().Show();
             timer1.Start();        
         }
 
-        private void btnSuaNV_Click(object sender, EventArgs e)
+        private void BtnEditNV_Click(object sender, EventArgs e)
         {
             if (dgvQLNV.CurrentRow == null)
             {
@@ -214,12 +215,12 @@ namespace DoAnPBL3
             }
             else
             {
-                string ID_Employee = dgvQLNV.CurrentRow.Cells["ID"].Value.ToString();
+                string ID_Employee = dgvQLNV.CurrentRow.Cells["ID_Employee"].Value.ToString();
                 new FormSuaNV(ID_Employee).Show();
             }
         }
 
-        private void btnDeleteNV_Click(object sender, EventArgs e)
+        private void BtnDeleteNV_Click(object sender, EventArgs e)
         {
             if (dgvQLNV.CurrentRow == null)
             {
@@ -227,8 +228,8 @@ namespace DoAnPBL3
             }
             else
             {
-                string ID_Employee = dgvQLNV.CurrentRow.Cells["ID"].Value.ToString();
-                string name = dgvQLNV.CurrentRow.Cells["NameEmployee"].Value.ToString();
+                string ID_Employee = dgvQLNV.CurrentRow.Cells["ID_Employee"].Value.ToString();
+                string name = dgvQLNV.CurrentRow.Cells["FullNameEmployee"].Value.ToString();
                 DialogResult result = RJMessageBox.Show("Xác nhận xóa nhân viên " + name + "?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
@@ -240,13 +241,13 @@ namespace DoAnPBL3
             }
         }
 
-        private void dgvQLNV_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        private void DgvQLNV_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            string ID_Employee = dgvQLNV.CurrentRow.Cells["ID"].Value.ToString();
+            string ID_Employee = dgvQLNV.CurrentRow.Cells["ID_Employee"].Value.ToString();
             new FormTTNV(ID_Employee).Show();
         }
 
-        private void btnTKNV_Click(object sender, EventArgs e)
+        private void BtnTKNV_Click(object sender, EventArgs e)
         {
             using (BookStoreContext context = new BookStoreContext())
             {
@@ -293,7 +294,7 @@ namespace DoAnPBL3
             }
         }
 
-        private void rjtbTKNV_KeyPress(object sender, KeyPressEventArgs e)
+        private void RjtbTKNV_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
             {
@@ -302,7 +303,7 @@ namespace DoAnPBL3
             }
         }
 
-        private void xuiSegmentNV_Click(object sender, EventArgs e)
+        private void XuiSegmentNV_Click(object sender, EventArgs e)
         {
             using (BookStoreContext context = new BookStoreContext())
             {
@@ -344,7 +345,7 @@ namespace DoAnPBL3
             }
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void Timer1_Tick(object sender, EventArgs e)
         {
             using (BookStoreContext context = new BookStoreContext())
             {

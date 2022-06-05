@@ -1,4 +1,5 @@
 ﻿using DoAnPBL3.Models;
+using PagedList;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +17,8 @@ namespace DoAnPBL3
         private int count;
         private readonly string accountUsername;
         private readonly string password;
+        private int pageNumber = 1;
+        IPagedList<Book> listBooks;
 
         public FormQLS(string accountUsername, string password)
         {
@@ -30,12 +33,83 @@ namespace DoAnPBL3
             frm.showAlert(msg, type);
         }
 
-        private void FormQLS_Load(object sender, EventArgs e)
+        public async Task<IPagedList<Book>> GetPagedListAsync(int pageNumber = 1)
         {
-            timer1.Tick += new EventHandler(timer1_Tick);
+            return await Task.Factory.StartNew(() =>
+            {
+                using (BookStoreContext context = new BookStoreContext())
+                {
+                    if (MainMenuNV.windowState == FormWindowState.Maximized)
+                        return context.Books.OrderBy(book => book.ID_Book).ToPagedList(pageNumber, 22);
+                    else
+                        return context.Books.OrderBy(book => book.ID_Book).ToPagedList(pageNumber, 14);
+                }
+            });
+        }
+
+        private async void btnPrevious_Click(object sender, EventArgs e)
+        {
             using (BookStoreContext context = new BookStoreContext())
             {
-                var listBooks = context.Books
+                if (listBooks.HasPreviousPage)
+                {
+                    listBooks = await GetPagedListAsync(--pageNumber);
+                    btnPrevious.Enabled = listBooks.HasPreviousPage;
+                    btnNext.Enabled = listBooks.HasNextPage;
+                    dgvQLSNV.DataSource = listBooks
+                                    .Join(
+                                        context.Languages,
+                                        book => book.ID_Language,
+                                        language => language.ID_Language,
+                                        (book, language) => new
+                                        {
+                                            book.ID_Book,
+                                            book.NameBook,
+                                            language.NameLanguage,
+                                            book.Quantity,
+                                            book.Price
+                                        })
+                                    .ToList();
+                    lblPageNumber.Text = string.Format("Trang {0}/{1}", pageNumber, listBooks.PageCount);
+                }
+            }
+        }
+
+        private async void btnNext_Click(object sender, EventArgs e)
+        {
+            using (BookStoreContext context = new BookStoreContext())
+            {
+                if (listBooks.HasNextPage)
+                {
+                    listBooks = await GetPagedListAsync(++pageNumber);
+                    btnPrevious.Enabled = listBooks.HasPreviousPage;
+                    btnNext.Enabled = listBooks.HasNextPage;
+                    dgvQLSNV.DataSource = listBooks
+                                    .Join(
+                                        context.Languages,
+                                        book => book.ID_Language,
+                                        language => language.ID_Language,
+                                        (book, language) => new
+                                        {
+                                            book.ID_Book,
+                                            book.NameBook,
+                                            language.NameLanguage,
+                                            book.Quantity,
+                                            book.Price
+                                        })
+                                    .ToList();
+                    lblPageNumber.Text = string.Format("Trang {0}/{1}", pageNumber, listBooks.PageCount);
+                }
+            }
+        }
+
+        private async void FormQLS_Load(object sender, EventArgs e)
+        {
+            timer1.Tick += new EventHandler(timer1_Tick);
+            listBooks = await GetPagedListAsync();
+            using (BookStoreContext context = new BookStoreContext())
+            {
+                var listAllBooks = context.Books
                     .Join(
                         context.Languages,
                         book => book.ID_Language,
@@ -49,20 +123,36 @@ namespace DoAnPBL3
                             book.Price
                         })
                     .ToList();
-                var listVietnameseBooks = listBooks.Where(book => book.NameLanguage == "Tiếng Việt");
-                var listEnglishBooks = listBooks.Where(book => book.NameLanguage == "Tiếng Anh");
-                count = listBooks.Count();
-                dgvQLSNV.DataSource = listBooks;
-                lblTSSDB.Text = listBooks.Count().ToString();
+                var listVietnameseBooks = listAllBooks.Where(book => book.NameLanguage == "Tiếng Việt");
+                var listEnglishBooks = listAllBooks.Where(book => book.NameLanguage == "Tiếng Anh");
+                lblTSSDB.Text = listAllBooks.Count().ToString();
                 lblSSTV.Text = listVietnameseBooks.Count().ToString();
                 lblSSTA.Text = listEnglishBooks.Count().ToString();
+                btnPrevious.Enabled = listBooks.HasPreviousPage;
+                btnNext.Enabled = listBooks.HasNextPage;
+                dgvQLSNV.DataSource = listBooks
+                                .Join(
+                                    context.Languages,
+                                    book => book.ID_Language,
+                                    language => language.ID_Language,
+                                    (book, language) => new
+                                    {
+                                        book.ID_Book,
+                                        book.NameBook,
+                                        language.NameLanguage,
+                                        book.Quantity,
+                                        book.Price
+                                    })
+                                .ToList();
+                lblPageNumber.Text = string.Format("Trang {0}/{1}", pageNumber, listBooks.PageCount);
             }
         }
 
-        private void btnAddNV_Click(object sender, EventArgs e)
+        private void btnAddSach_Click(object sender, EventArgs e)
         {
-            new FormAddSach(accountUsername, password).Show();
+            new FormAddSach(accountUsername, password).ShowDialog();
             timer1.Start();
+            //FormQLS_Load(sender, e);
         }
 
         private void btnSuaSach_Click(object sender, EventArgs e)
@@ -74,7 +164,7 @@ namespace DoAnPBL3
             else
             {
                 string ID_Book = dgvQLSNV.CurrentRow.Cells["ID"].Value.ToString();
-                new FormSuaSach(ID_Book).Show();
+                new FormSuaSach(ID_Book).ShowDialog();
             }
         }
 
@@ -92,6 +182,7 @@ namespace DoAnPBL3
                 if (result == DialogResult.Yes)
                 {
                     new FormIdentify(accountUsername, password, ID_Book).ShowDialog();
+                    //FormQLS_Load(sender, e);
                     timer1.Start();
                 }
                 else
@@ -102,12 +193,12 @@ namespace DoAnPBL3
         private void dgvQLSNV_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             string ID_Book = dgvQLSNV.CurrentRow.Cells["ID"].Value.ToString();
-            new FormTTS(ID_Book).Show();
+            new FormTTS(ID_Book).ShowDialog();
         }
 
         private void rjtbTKS_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == (Char)Keys.Enter)
+            if (e.KeyChar == (char)Keys.Enter)
             {
                 btnTKS.PerformClick();
                 e.Handled = true;
@@ -174,10 +265,31 @@ namespace DoAnPBL3
             }
         }
 
-        private void xuiSegmentSach_Click(object sender, EventArgs e)
+        private async void xuiSegmentSach_Click(object sender, EventArgs e)
         {
+            listBooks = await GetPagedListAsync(pageNumber);
+
             using (BookStoreContext context = new BookStoreContext())
             {
+                var listAllBooks = context.Books
+                        .Join(
+                            context.Languages,
+                            book => book.ID_Language,
+                            language => language.ID_Language,
+                            (book, language) => new
+                            {
+                                book.ID_Book,
+                                book.NameBook,
+                                language.NameLanguage,
+                                book.Quantity,
+                                book.Price
+                            })
+                        .ToList();
+                var listVietnameseBooks = listAllBooks.Where(book => book.NameLanguage == "Tiếng Việt");
+                var listEnglishBooks = listAllBooks.Where(book => book.NameLanguage == "Tiếng Anh");
+                lblTSSDB.Text = listAllBooks.Count().ToString();
+                lblSSTV.Text = listVietnameseBooks.Count().ToString();
+                lblSSTA.Text = listEnglishBooks.Count().ToString();
                 // Tất cả
                 if (xuiSegmentSach.SelectedIndex == 0)
                 {
@@ -186,49 +298,83 @@ namespace DoAnPBL3
                 // Sách tiếng việt
                 else if (xuiSegmentSach.SelectedIndex == 1)
                 {
-                    dgvQLSNV.DataSource = context.Books
-                        .Join(
-                            context.Languages,
-                            book => book.ID_Language,
-                            language => language.ID_Language,
-                            (book, language) => new
-                            {
-                                book.ID_Book,
-                                book.NameBook,
-                                language.NameLanguage,
-                                book.Quantity,
-                                book.Price,
-                            })
-                        .Where(lang => lang.NameLanguage == "Tiếng Việt")
-                        .ToList();
+                    btnPrevious.Enabled = listBooks.HasPreviousPage;
+                    btnNext.Enabled = listBooks.HasNextPage;
+                    dgvQLSNV.DataSource = listBooks
+                                    .Join(
+                                        context.Languages,
+                                        book => book.ID_Language,
+                                        language => language.ID_Language,
+                                        (book, language) => new
+                                        {
+                                            book.ID_Book,
+                                            book.NameBook,
+                                            language.NameLanguage,
+                                            book.Quantity,
+                                            book.Price
+                                        })
+                                    .Where(book => book.NameLanguage == "Tiếng Việt")
+                                    .ToList();
+                    lblPageNumber.Text = string.Format("Trang {0}/{1}", pageNumber, listBooks.PageCount);
                 }
                 // Sách tiếng anh
                 else
                 {
-                    dgvQLSNV.DataSource = context.Books
-                        .Join(
-                            context.Languages,
-                            book => book.ID_Language,
-                            language => language.ID_Language,
-                            (book, language) => new
-                            {
-                                book.ID_Book,
-                                book.NameBook,
-                                language.NameLanguage,
-                                book.Quantity,
-                                book.Price,
-                            })
-                        .Where(lang => lang.NameLanguage == "Tiếng Anh")
-                        .ToList();
+                    btnPrevious.Enabled = listBooks.HasPreviousPage;
+                    btnNext.Enabled = listBooks.HasNextPage;
+                    dgvQLSNV.DataSource = listBooks
+                                    .Join(
+                                        context.Languages,
+                                        book => book.ID_Language,
+                                        language => language.ID_Language,
+                                        (book, language) => new
+                                        {
+                                            book.ID_Book,
+                                            book.NameBook,
+                                            language.NameLanguage,
+                                            book.Quantity,
+                                            book.Price
+                                        })
+                                    .Where(book => book.NameLanguage == "Tiếng Anh")
+                                    .ToList();
+                    lblPageNumber.Text = string.Format("Trang {0}/{1}", pageNumber, listBooks.PageCount);
                 }
             }
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private async void timer1_Tick(object sender, EventArgs e)
         {
+            //using (BookStoreContext context = new BookStoreContext())
+            //{
+            //    var listBooks = context.Books
+            //        .Join(
+            //            context.Languages,
+            //            book => book.ID_Language,
+            //            language => language.ID_Language,
+            //            (book, language) => new
+            //            {
+            //                book.ID_Book,
+            //                book.NameBook,
+            //                language.NameLanguage,
+            //                book.Quantity,
+            //                book.Price,
+            //            })
+            //        .ToList();
+            //    var listVietnameseBooks = listBooks.Where(book => book.NameLanguage == "Tiếng Việt");
+            //    var listEnglishBooks = listBooks.Where(book => book.NameLanguage == "Tiếng Anh");
+            //    if (listBooks.Count() != count)
+            //    {
+            //        dgvQLSNV.DataSource = listBooks;
+            //        lblTSSDB.Text = listBooks.Count().ToString();
+            //        lblSSTV.Text = listVietnameseBooks.Count().ToString();
+            //        lblSSTA.Text = listEnglishBooks.Count().ToString();
+            //        count = listBooks.Count();
+            //    }
+            //}
+            listBooks = await GetPagedListAsync(pageNumber);
             using (BookStoreContext context = new BookStoreContext())
             {
-                var listBooks = context.Books
+                var listAllBooks = context.Books
                     .Join(
                         context.Languages,
                         book => book.ID_Language,
@@ -239,19 +385,31 @@ namespace DoAnPBL3
                             book.NameBook,
                             language.NameLanguage,
                             book.Quantity,
-                            book.Price,
+                            book.Price
                         })
                     .ToList();
-                var listVietnameseBooks = listBooks.Where(book => book.NameLanguage == "Tiếng Việt");
-                var listEnglishBooks = listBooks.Where(book => book.NameLanguage == "Tiếng Anh");
-                if (listBooks.Count() != count)
-                {
-                    dgvQLSNV.DataSource = listBooks;
-                    lblTSSDB.Text = listBooks.Count().ToString();
-                    lblSSTV.Text = listVietnameseBooks.Count().ToString();
-                    lblSSTA.Text = listEnglishBooks.Count().ToString();
-                    count = listBooks.Count();
-                }
+                var listVietnameseBooks = listAllBooks.Where(book => book.NameLanguage == "Tiếng Việt");
+                var listEnglishBooks = listAllBooks.Where(book => book.NameLanguage == "Tiếng Anh");
+                lblTSSDB.Text = listAllBooks.Count().ToString();
+                lblSSTV.Text = listVietnameseBooks.Count().ToString();
+                lblSSTA.Text = listEnglishBooks.Count().ToString();
+                btnPrevious.Enabled = listBooks.HasPreviousPage;
+                btnNext.Enabled = listBooks.HasNextPage;
+                dgvQLSNV.DataSource = listBooks
+                                .Join(
+                                    context.Languages,
+                                    book => book.ID_Language,
+                                    language => language.ID_Language,
+                                    (book, language) => new
+                                    {
+                                        book.ID_Book,
+                                        book.NameBook,
+                                        language.NameLanguage,
+                                        book.Quantity,
+                                        book.Price
+                                    })
+                                .ToList();
+                lblPageNumber.Text = string.Format("Trang {0}/{1}", pageNumber, listBooks.PageCount);
             }
         }
     }

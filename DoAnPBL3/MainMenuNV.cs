@@ -20,6 +20,7 @@ namespace DoAnPBL3
         private Form currentChildForm;
         private string accountUsername;
         private string password;
+        public static FormWindowState windowState = FormWindowState.Normal;
 
         public MainMenuNV(string accountUsername, string password)
         {
@@ -158,8 +159,13 @@ namespace DoAnPBL3
             if (WindowState == FormWindowState.Normal)
             {
                 WindowState = FormWindowState.Maximized;
+                windowState = FormWindowState.Maximized;
             }
-            else WindowState = FormWindowState.Normal;
+            else
+            {
+                WindowState = FormWindowState.Normal;
+                windowState = FormWindowState.Normal;
+            }
         }
 
 

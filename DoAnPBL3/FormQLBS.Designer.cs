@@ -48,6 +48,12 @@
             this.btnHDTN = new FontAwesome.Sharp.IconButton();
             this.btnSXS = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dgvQLBS = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rjtbTKS = new DoAnPBL3.RJTextBox();
             this.rjDropDownMenuSXS = new DoAnPBL3.RJDropDownMenu(this.components);
             this.chữCáiGiảmDầnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -58,18 +64,12 @@
             this.mứcĐộBánChạyGiảmDầnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sốLượngSáchHiệnCóTăngDầnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sốLượngSáchHiệnCóGiảmDầnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dgvQLBS = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
-            this.rjDropDownMenuSXS.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQLBS)).BeginInit();
+            this.rjDropDownMenuSXS.SuspendLayout();
             this.SuspendLayout();
             // 
             // xuiSegmentBS
@@ -274,113 +274,6 @@
             this.panel1.Size = new System.Drawing.Size(143, 118);
             this.panel1.TabIndex = 39;
             // 
-            // rjtbTKS
-            // 
-            this.rjtbTKS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(35)))));
-            this.rjtbTKS.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(35)))));
-            this.rjtbTKS.BorderFocusColor = System.Drawing.Color.DeepSkyBlue;
-            this.rjtbTKS.BorderRadius = 15;
-            this.rjtbTKS.BorderSize = 1;
-            this.rjtbTKS.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjtbTKS.ForeColor = System.Drawing.Color.Silver;
-            this.rjtbTKS.Location = new System.Drawing.Point(6, 133);
-            this.rjtbTKS.Margin = new System.Windows.Forms.Padding(4);
-            this.rjtbTKS.Multiline = false;
-            this.rjtbTKS.Name = "rjtbTKS";
-            this.rjtbTKS.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjtbTKS.PasswordChar = false;
-            this.rjtbTKS.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(83)))), ((int)(((byte)(103)))));
-            this.rjtbTKS.PlaceholderText = "Tìm kiếm theo ID hoặc tên sách";
-            this.rjtbTKS.Size = new System.Drawing.Size(250, 31);
-            this.rjtbTKS.TabIndex = 16;
-            this.rjtbTKS.Texts = "";
-            this.rjtbTKS.UnderlinedStyle = false;
-            // 
-            // rjDropDownMenuSXS
-            // 
-            this.rjDropDownMenuSXS.BackColor = System.Drawing.Color.Silver;
-            this.rjDropDownMenuSXS.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjDropDownMenuSXS.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.rjDropDownMenuSXS.IsMainMenu = false;
-            this.rjDropDownMenuSXS.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.chữCáiGiảmDầnToolStripMenuItem,
-            this.chữCáiTăngDầnToolStripMenuItem,
-            this.giáMuaSáchTăngDầnToolStripMenuItem,
-            this.giáMuaSáchGiảmDầnToolStripMenuItem,
-            this.mứcĐộBánChạyTăngDầnToolStripMenuItem,
-            this.mứcĐộBánChạyGiảmDầnToolStripMenuItem,
-            this.sốLượngSáchHiệnCóTăngDầnToolStripMenuItem,
-            this.sốLượngSáchHiệnCóGiảmDầnToolStripMenuItem});
-            this.rjDropDownMenuSXS.MenuItemHeight = 25;
-            this.rjDropDownMenuSXS.MenuItemTextColor = System.Drawing.Color.DarkSlateBlue;
-            this.rjDropDownMenuSXS.Name = "rjDropDownMenu1";
-            this.rjDropDownMenuSXS.PrimaryColor = System.Drawing.Color.DarkSlateBlue;
-            this.rjDropDownMenuSXS.Size = new System.Drawing.Size(258, 180);
-            // 
-            // chữCáiGiảmDầnToolStripMenuItem
-            // 
-            this.chữCáiGiảmDầnToolStripMenuItem.BackColor = System.Drawing.Color.MediumPurple;
-            this.chữCáiGiảmDầnToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.chữCáiGiảmDầnToolStripMenuItem.Name = "chữCáiGiảmDầnToolStripMenuItem";
-            this.chữCáiGiảmDầnToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
-            this.chữCáiGiảmDầnToolStripMenuItem.Text = "Chữ cái giảm dần";
-            // 
-            // chữCáiTăngDầnToolStripMenuItem
-            // 
-            this.chữCáiTăngDầnToolStripMenuItem.BackColor = System.Drawing.Color.MediumPurple;
-            this.chữCáiTăngDầnToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.chữCáiTăngDầnToolStripMenuItem.Name = "chữCáiTăngDầnToolStripMenuItem";
-            this.chữCáiTăngDầnToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
-            this.chữCáiTăngDầnToolStripMenuItem.Text = "Chữ cái tăng dần";
-            // 
-            // giáMuaSáchTăngDầnToolStripMenuItem
-            // 
-            this.giáMuaSáchTăngDầnToolStripMenuItem.BackColor = System.Drawing.Color.MediumPurple;
-            this.giáMuaSáchTăngDầnToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.giáMuaSáchTăngDầnToolStripMenuItem.Name = "giáMuaSáchTăngDầnToolStripMenuItem";
-            this.giáMuaSáchTăngDầnToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
-            this.giáMuaSáchTăngDầnToolStripMenuItem.Text = "Giá mua sách tăng dần";
-            // 
-            // giáMuaSáchGiảmDầnToolStripMenuItem
-            // 
-            this.giáMuaSáchGiảmDầnToolStripMenuItem.BackColor = System.Drawing.Color.MediumPurple;
-            this.giáMuaSáchGiảmDầnToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.giáMuaSáchGiảmDầnToolStripMenuItem.Name = "giáMuaSáchGiảmDầnToolStripMenuItem";
-            this.giáMuaSáchGiảmDầnToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
-            this.giáMuaSáchGiảmDầnToolStripMenuItem.Text = "Giá mua sách giảm dần";
-            // 
-            // mứcĐộBánChạyTăngDầnToolStripMenuItem
-            // 
-            this.mứcĐộBánChạyTăngDầnToolStripMenuItem.BackColor = System.Drawing.Color.MediumPurple;
-            this.mứcĐộBánChạyTăngDầnToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.mứcĐộBánChạyTăngDầnToolStripMenuItem.Name = "mứcĐộBánChạyTăngDầnToolStripMenuItem";
-            this.mứcĐộBánChạyTăngDầnToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
-            this.mứcĐộBánChạyTăngDầnToolStripMenuItem.Text = "Mức độ bán chạy tăng dần";
-            // 
-            // mứcĐộBánChạyGiảmDầnToolStripMenuItem
-            // 
-            this.mứcĐộBánChạyGiảmDầnToolStripMenuItem.BackColor = System.Drawing.Color.MediumPurple;
-            this.mứcĐộBánChạyGiảmDầnToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.mứcĐộBánChạyGiảmDầnToolStripMenuItem.Name = "mứcĐộBánChạyGiảmDầnToolStripMenuItem";
-            this.mứcĐộBánChạyGiảmDầnToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
-            this.mứcĐộBánChạyGiảmDầnToolStripMenuItem.Text = "Mức độ bán chạy giảm dần";
-            // 
-            // sốLượngSáchHiệnCóTăngDầnToolStripMenuItem
-            // 
-            this.sốLượngSáchHiệnCóTăngDầnToolStripMenuItem.BackColor = System.Drawing.Color.MediumPurple;
-            this.sốLượngSáchHiệnCóTăngDầnToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.sốLượngSáchHiệnCóTăngDầnToolStripMenuItem.Name = "sốLượngSáchHiệnCóTăngDầnToolStripMenuItem";
-            this.sốLượngSáchHiệnCóTăngDầnToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
-            this.sốLượngSáchHiệnCóTăngDầnToolStripMenuItem.Text = "Số lượng sách hiện có tăng dần";
-            // 
-            // sốLượngSáchHiệnCóGiảmDầnToolStripMenuItem
-            // 
-            this.sốLượngSáchHiệnCóGiảmDầnToolStripMenuItem.BackColor = System.Drawing.Color.MediumPurple;
-            this.sốLượngSáchHiệnCóGiảmDầnToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.sốLượngSáchHiệnCóGiảmDầnToolStripMenuItem.Name = "sốLượngSáchHiệnCóGiảmDầnToolStripMenuItem";
-            this.sốLượngSáchHiệnCóGiảmDầnToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
-            this.sốLượngSáchHiệnCóGiảmDầnToolStripMenuItem.Text = "Số lượng sách hiện có giảm dần";
-            // 
             // dgvQLBS
             // 
             this.dgvQLBS.AllowUserToAddRows = false;
@@ -398,7 +291,7 @@
             this.dgvQLBS.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(16)))), ((int)(((byte)(221)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(16)))), ((int)(((byte)(221)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
@@ -485,6 +378,121 @@
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
+            // rjtbTKS
+            // 
+            this.rjtbTKS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(35)))));
+            this.rjtbTKS.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(35)))));
+            this.rjtbTKS.BorderFocusColor = System.Drawing.Color.DeepSkyBlue;
+            this.rjtbTKS.BorderRadius = 15;
+            this.rjtbTKS.BorderSize = 1;
+            this.rjtbTKS.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjtbTKS.ForeColor = System.Drawing.Color.Silver;
+            this.rjtbTKS.Location = new System.Drawing.Point(6, 133);
+            this.rjtbTKS.Margin = new System.Windows.Forms.Padding(4);
+            this.rjtbTKS.Multiline = false;
+            this.rjtbTKS.Name = "rjtbTKS";
+            this.rjtbTKS.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.rjtbTKS.PasswordChar = false;
+            this.rjtbTKS.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(83)))), ((int)(((byte)(103)))));
+            this.rjtbTKS.PlaceholderText = "Tìm kiếm theo ID hoặc tên sách";
+            this.rjtbTKS.Size = new System.Drawing.Size(250, 31);
+            this.rjtbTKS.TabIndex = 16;
+            this.rjtbTKS.Texts = "";
+            this.rjtbTKS.UnderlinedStyle = false;
+            // 
+            // rjDropDownMenuSXS
+            // 
+            this.rjDropDownMenuSXS.BackColor = System.Drawing.Color.Silver;
+            this.rjDropDownMenuSXS.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjDropDownMenuSXS.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.rjDropDownMenuSXS.IsMainMenu = false;
+            this.rjDropDownMenuSXS.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.chữCáiTăngDầnToolStripMenuItem,
+            this.chữCáiGiảmDầnToolStripMenuItem,
+            this.giáMuaSáchTăngDầnToolStripMenuItem,
+            this.giáMuaSáchGiảmDầnToolStripMenuItem,
+            this.mứcĐộBánChạyTăngDầnToolStripMenuItem,
+            this.mứcĐộBánChạyGiảmDầnToolStripMenuItem,
+            this.sốLượngSáchHiệnCóTăngDầnToolStripMenuItem,
+            this.sốLượngSáchHiệnCóGiảmDầnToolStripMenuItem});
+            this.rjDropDownMenuSXS.MenuItemHeight = 25;
+            this.rjDropDownMenuSXS.MenuItemTextColor = System.Drawing.Color.DarkSlateBlue;
+            this.rjDropDownMenuSXS.Name = "rjDropDownMenu1";
+            this.rjDropDownMenuSXS.PrimaryColor = System.Drawing.Color.DarkSlateBlue;
+            this.rjDropDownMenuSXS.Size = new System.Drawing.Size(258, 202);
+            // 
+            // chữCáiGiảmDầnToolStripMenuItem
+            // 
+            this.chữCáiGiảmDầnToolStripMenuItem.BackColor = System.Drawing.Color.MediumPurple;
+            this.chữCáiGiảmDầnToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.chữCáiGiảmDầnToolStripMenuItem.Name = "chữCáiGiảmDầnToolStripMenuItem";
+            this.chữCáiGiảmDầnToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
+            this.chữCáiGiảmDầnToolStripMenuItem.Text = "Chữ cái giảm dần";
+            this.chữCáiGiảmDầnToolStripMenuItem.Click += new System.EventHandler(this.chữCáiGiảmDầnToolStripMenuItem_Click);
+            // 
+            // chữCáiTăngDầnToolStripMenuItem
+            // 
+            this.chữCáiTăngDầnToolStripMenuItem.BackColor = System.Drawing.Color.MediumPurple;
+            this.chữCáiTăngDầnToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.chữCáiTăngDầnToolStripMenuItem.Name = "chữCáiTăngDầnToolStripMenuItem";
+            this.chữCáiTăngDầnToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
+            this.chữCáiTăngDầnToolStripMenuItem.Text = "Chữ cái tăng dần";
+            this.chữCáiTăngDầnToolStripMenuItem.Click += new System.EventHandler(this.chữCáiTăngDầnToolStripMenuItem_Click);
+            // 
+            // giáMuaSáchTăngDầnToolStripMenuItem
+            // 
+            this.giáMuaSáchTăngDầnToolStripMenuItem.BackColor = System.Drawing.Color.MediumPurple;
+            this.giáMuaSáchTăngDầnToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.giáMuaSáchTăngDầnToolStripMenuItem.Name = "giáMuaSáchTăngDầnToolStripMenuItem";
+            this.giáMuaSáchTăngDầnToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
+            this.giáMuaSáchTăngDầnToolStripMenuItem.Text = "Giá mua sách tăng dần";
+            this.giáMuaSáchTăngDầnToolStripMenuItem.Click += new System.EventHandler(this.giáMuaSáchTăngDầnToolStripMenuItem_Click);
+            // 
+            // giáMuaSáchGiảmDầnToolStripMenuItem
+            // 
+            this.giáMuaSáchGiảmDầnToolStripMenuItem.BackColor = System.Drawing.Color.MediumPurple;
+            this.giáMuaSáchGiảmDầnToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.giáMuaSáchGiảmDầnToolStripMenuItem.Name = "giáMuaSáchGiảmDầnToolStripMenuItem";
+            this.giáMuaSáchGiảmDầnToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
+            this.giáMuaSáchGiảmDầnToolStripMenuItem.Text = "Giá mua sách giảm dần";
+            this.giáMuaSáchGiảmDầnToolStripMenuItem.Click += new System.EventHandler(this.giáMuaSáchGiảmDầnToolStripMenuItem_Click);
+            // 
+            // mứcĐộBánChạyTăngDầnToolStripMenuItem
+            // 
+            this.mứcĐộBánChạyTăngDầnToolStripMenuItem.BackColor = System.Drawing.Color.MediumPurple;
+            this.mứcĐộBánChạyTăngDầnToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.mứcĐộBánChạyTăngDầnToolStripMenuItem.Name = "mứcĐộBánChạyTăngDầnToolStripMenuItem";
+            this.mứcĐộBánChạyTăngDầnToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
+            this.mứcĐộBánChạyTăngDầnToolStripMenuItem.Text = "Mức độ bán chạy tăng dần";
+            this.mứcĐộBánChạyTăngDầnToolStripMenuItem.Click += new System.EventHandler(this.mứcĐộBánChạyTăngDầnToolStripMenuItem_Click);
+            // 
+            // mứcĐộBánChạyGiảmDầnToolStripMenuItem
+            // 
+            this.mứcĐộBánChạyGiảmDầnToolStripMenuItem.BackColor = System.Drawing.Color.MediumPurple;
+            this.mứcĐộBánChạyGiảmDầnToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.mứcĐộBánChạyGiảmDầnToolStripMenuItem.Name = "mứcĐộBánChạyGiảmDầnToolStripMenuItem";
+            this.mứcĐộBánChạyGiảmDầnToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
+            this.mứcĐộBánChạyGiảmDầnToolStripMenuItem.Text = "Mức độ bán chạy giảm dần";
+            this.mứcĐộBánChạyGiảmDầnToolStripMenuItem.Click += new System.EventHandler(this.mứcĐộBánChạyGiảmDầnToolStripMenuItem_Click);
+            // 
+            // sốLượngSáchHiệnCóTăngDầnToolStripMenuItem
+            // 
+            this.sốLượngSáchHiệnCóTăngDầnToolStripMenuItem.BackColor = System.Drawing.Color.MediumPurple;
+            this.sốLượngSáchHiệnCóTăngDầnToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.sốLượngSáchHiệnCóTăngDầnToolStripMenuItem.Name = "sốLượngSáchHiệnCóTăngDầnToolStripMenuItem";
+            this.sốLượngSáchHiệnCóTăngDầnToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
+            this.sốLượngSáchHiệnCóTăngDầnToolStripMenuItem.Text = "Số lượng sách hiện có tăng dần";
+            this.sốLượngSáchHiệnCóTăngDầnToolStripMenuItem.Click += new System.EventHandler(this.sốLượngSáchHiệnCóTăngDầnToolStripMenuItem_Click);
+            // 
+            // sốLượngSáchHiệnCóGiảmDầnToolStripMenuItem
+            // 
+            this.sốLượngSáchHiệnCóGiảmDầnToolStripMenuItem.BackColor = System.Drawing.Color.MediumPurple;
+            this.sốLượngSáchHiệnCóGiảmDầnToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.sốLượngSáchHiệnCóGiảmDầnToolStripMenuItem.Name = "sốLượngSáchHiệnCóGiảmDầnToolStripMenuItem";
+            this.sốLượngSáchHiệnCóGiảmDầnToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
+            this.sốLượngSáchHiệnCóGiảmDầnToolStripMenuItem.Text = "Số lượng sách hiện có giảm dần";
+            this.sốLượngSáchHiệnCóGiảmDầnToolStripMenuItem.Click += new System.EventHandler(this.sốLượngSáchHiệnCóGiảmDầnToolStripMenuItem_Click);
+            // 
             // FormQLBS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -516,8 +524,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.rjDropDownMenuSXS.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvQLBS)).EndInit();
+            this.rjDropDownMenuSXS.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

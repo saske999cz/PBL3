@@ -117,7 +117,7 @@ namespace DoAnPBL3
                             }
                             else
                                 Properties.Settings.Default.Reset();
-                            new MainMenuNV(listEmployeeAccounts.FirstOrDefault().Username, listEmployeeAccounts.FirstOrDefault().Password).ShowDialog();
+                            new MainMenuNV(listEmployeeAccounts.FirstOrDefault().Username, listEmployeeAccounts.FirstOrDefault().Password).Show();
                             Close();
                         }
                         else

@@ -223,6 +223,16 @@ namespace DoAnPBL3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Hinh_hoc_12_346267_2 {
+            get {
+                object obj = ResourceManager.GetObject("Hinh-hoc-12-346267-2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_add_shopping_cart_30px {
             get {
                 object obj = ResourceManager.GetObject("icons8_add_shopping_cart_30px", resourceCulture);
@@ -393,6 +403,16 @@ namespace DoAnPBL3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap khi_tai_nang_khong_theo_kip_giac_mo {
+            get {
+                object obj = ResourceManager.GetObject("khi tai nang khong theo kip giac mo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap logo_book_store {
             get {
                 object obj = ResourceManager.GetObject("logo book store", resourceCulture);
@@ -483,6 +503,256 @@ namespace DoAnPBL3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap OPM_tap_1 {
+            get {
+                object obj = ResourceManager.GetObject("OPM tap 1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap OPM_tap_10 {
+            get {
+                object obj = ResourceManager.GetObject("OPM tap 10", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap OPM_tap_11 {
+            get {
+                object obj = ResourceManager.GetObject("OPM tap 11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap OPM_tap_12 {
+            get {
+                object obj = ResourceManager.GetObject("OPM tap 12", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap OPM_tap_13 {
+            get {
+                object obj = ResourceManager.GetObject("OPM tap 13", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap OPM_tap_14 {
+            get {
+                object obj = ResourceManager.GetObject("OPM tap 14", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap OPM_tap_15 {
+            get {
+                object obj = ResourceManager.GetObject("OPM tap 15", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap OPM_tap_16 {
+            get {
+                object obj = ResourceManager.GetObject("OPM tap 16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap OPM_tap_17 {
+            get {
+                object obj = ResourceManager.GetObject("OPM tap 17", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap OPM_tap_18 {
+            get {
+                object obj = ResourceManager.GetObject("OPM tap 18", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap OPM_tap_19 {
+            get {
+                object obj = ResourceManager.GetObject("OPM tap 19", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap OPM_tap_2 {
+            get {
+                object obj = ResourceManager.GetObject("OPM tap 2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap OPM_tap_20 {
+            get {
+                object obj = ResourceManager.GetObject("OPM tap 20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap OPM_tap_21 {
+            get {
+                object obj = ResourceManager.GetObject("OPM tap 21", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap OPM_tap_22 {
+            get {
+                object obj = ResourceManager.GetObject("OPM tap 22", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap OPM_tap_23 {
+            get {
+                object obj = ResourceManager.GetObject("OPM tap 23", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap OPM_tap_24 {
+            get {
+                object obj = ResourceManager.GetObject("OPM tap 24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap OPM_tap_25 {
+            get {
+                object obj = ResourceManager.GetObject("OPM tap 25", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap OPM_tap_3 {
+            get {
+                object obj = ResourceManager.GetObject("OPM tap 3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap OPM_tap_4 {
+            get {
+                object obj = ResourceManager.GetObject("OPM tap 4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap OPM_tap_5 {
+            get {
+                object obj = ResourceManager.GetObject("OPM tap 5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap OPM_tap_6 {
+            get {
+                object obj = ResourceManager.GetObject("OPM tap 6", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap OPM_tap_7 {
+            get {
+                object obj = ResourceManager.GetObject("OPM tap 7", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap OPM_tap_8 {
+            get {
+                object obj = ResourceManager.GetObject("OPM tap 8", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap OPM_tap_9 {
+            get {
+                object obj = ResourceManager.GetObject("OPM tap 9", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap package2 {
             get {
                 object obj = ResourceManager.GetObject("package2", resourceCulture);
@@ -563,6 +833,96 @@ namespace DoAnPBL3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap sach_giao_khoa_dia_li_lop_12 {
+            get {
+                object obj = ResourceManager.GetObject("sach-giao-khoa-dia-li-lop-12", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sach_giao_khoa_giai_tich_12 {
+            get {
+                object obj = ResourceManager.GetObject("sach-giao-khoa-giai-tich-12", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sach_giao_khoa_hoa_hoc_lop_12 {
+            get {
+                object obj = ResourceManager.GetObject("sach-giao-khoa-hoa-hoc-lop-12", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sach_giao_khoa_lich_su_lop_12 {
+            get {
+                object obj = ResourceManager.GetObject("sach-giao-khoa-lich-su-lop-12", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Sach_giao_khoa_ngu_van_12_tap_1_500x554 {
+            get {
+                object obj = ResourceManager.GetObject("Sach-giao-khoa-ngu-van-12-tap-1-500x554", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Sach_giao_khoa_ngu_van_12_tap_2_500x554 {
+            get {
+                object obj = ResourceManager.GetObject("Sach-giao-khoa-ngu-van-12-tap-2-500x554", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sach_giao_khoa_sinh_hoc_lop_12 {
+            get {
+                object obj = ResourceManager.GetObject("sach-giao-khoa-sinh-hoc-lop-12", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sach_giao_khoa_tieng_anh_12 {
+            get {
+                object obj = ResourceManager.GetObject("sach-giao-khoa-tieng-anh-12", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sach_giao_khoa_vat_ly_12 {
+            get {
+                object obj = ResourceManager.GetObject("sach-giao-khoa-vat-ly-12", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap shield {
             get {
                 object obj = ResourceManager.GetObject("shield", resourceCulture);
@@ -616,6 +976,36 @@ namespace DoAnPBL3.Properties {
         internal static System.Drawing.Bitmap test_2_digital_art_x4_cleanup {
             get {
                 object obj = ResourceManager.GetObject("test 2_digital_art_x4_cleanup", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tieng_anh_thi_diem_12_tap_1 {
+            get {
+                object obj = ResourceManager.GetObject("tieng-anh-thi-diem-12-tap-1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tieng_anh_thi_diem_12_tap_2 {
+            get {
+                object obj = ResourceManager.GetObject("tieng-anh-thi-diem-12-tap-2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tuoi_tre_dang_gia_bao_nhieu_min {
+            get {
+                object obj = ResourceManager.GetObject("tuoi-tre-dang-gia-bao-nhieu-min", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

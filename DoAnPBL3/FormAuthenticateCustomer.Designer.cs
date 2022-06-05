@@ -59,7 +59,7 @@ namespace DoAnPBL3
             this.tbConfirmPhone.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbConfirmPhone.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbConfirmPhone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbConfirmPhone.Location = new System.Drawing.Point(188, 189);
+            this.tbConfirmPhone.Location = new System.Drawing.Point(188, 190);
             this.tbConfirmPhone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbConfirmPhone.Name = "tbConfirmPhone";
             this.tbConfirmPhone.PasswordChar = '\0';
@@ -107,7 +107,7 @@ namespace DoAnPBL3
             this.lblConfirmPhone.AutoSize = true;
             this.lblConfirmPhone.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConfirmPhone.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblConfirmPhone.Location = new System.Drawing.Point(73, 196);
+            this.lblConfirmPhone.Location = new System.Drawing.Point(73, 197);
             this.lblConfirmPhone.Name = "lblConfirmPhone";
             this.lblConfirmPhone.Size = new System.Drawing.Size(87, 19);
             this.lblConfirmPhone.TabIndex = 12;

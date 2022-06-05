@@ -298,6 +298,7 @@ namespace DoAnPBL3
         {
             rjddmAdminSettingMenu.Show(AdminPicture, new Point(0, AdminPicture.Height));
         }
+
         private void lblAdminUsername_Click(object sender, EventArgs e)
         {
             AdminPicture_Click(sender, e);

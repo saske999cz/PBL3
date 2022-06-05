@@ -47,6 +47,7 @@ namespace DoAnPBL3
                 var listVietnameseBooks = listBooks.Where(book => book.NameLanguage == "Tiếng Việt");
                 var listEnglishBooks = listBooks.Where(book => book.NameLanguage == "Tiếng Anh");
                 dgvQLBSNV.DataSource = listBooks;
+                dgvQLBSNV.CellBorderStyle = DataGridViewCellBorderStyle.Single;
                 lblTSSDB.Text = listBooks.Count().ToString();
                 lblSSTV.Text = listVietnameseBooks.Count().ToString();
                 lblSSTA.Text = listEnglishBooks.Count().ToString();
@@ -55,7 +56,8 @@ namespace DoAnPBL3
 
         private void rjbtnBuy_Click(object sender, EventArgs e)
         {
-            new FormCart(accountUsername).Show();
+            new FormCart(accountUsername).ShowDialog();
+            FormQLBSNV_Load(sender, e);
         }
 
         private void rjbtnOrder_Click(object sender, EventArgs e)

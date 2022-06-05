@@ -120,6 +120,9 @@
     <Reference Include="Microsoft.Extensions.Primitives, Version=3.1.24.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Extensions.Primitives.3.1.24\lib\netstandard2.0\Microsoft.Extensions.Primitives.dll</HintPath>
     </Reference>
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="ServiceStack.Interfaces, Version=6.0.0.0, Culture=neutral, PublicKeyToken=02c12cbda47e6587, processorArchitecture=MSIL">
@@ -573,6 +576,45 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="books11.ico" />
+    <None Include="Resources\khi tai nang khong theo kip giac mo.jpg" />
+    <None Include="Resources\tuoi-tre-dang-gia-bao-nhieu-min.png" />
+    <None Include="Resources\sach-giao-khoa-dia-li-lop-12.jpg" />
+    <None Include="Resources\tieng-anh-thi-diem-12-tap-2.jpg" />
+    <None Include="Resources\tieng-anh-thi-diem-12-tap-1.jpg" />
+    <None Include="Resources\sach-giao-khoa-lich-su-lop-12.jpg" />
+    <None Include="Resources\sach-giao-khoa-tieng-anh-12.jpg" />
+    <None Include="Resources\Sach-giao-khoa-ngu-van-12-tap-1-500x554.jpg" />
+    <None Include="Resources\Sach-giao-khoa-ngu-van-12-tap-2-500x554.jpg" />
+    <None Include="Resources\sach-giao-khoa-sinh-hoc-lop-12.jpg" />
+    <None Include="Resources\sach-giao-khoa-vat-ly-12.jpg" />
+    <None Include="Resources\sach-giao-khoa-hoa-hoc-lop-12.jpg" />
+    <None Include="Resources\Hinh-hoc-12-346267-2.jpg" />
+    <None Include="Resources\sach-giao-khoa-giai-tich-12.jpg" />
+    <None Include="Resources\OPM tap 25.jpg" />
+    <None Include="Resources\OPM tap 24.jpg" />
+    <None Include="Resources\OPM tap 23.jpg" />
+    <None Include="Resources\OPM tap 22.jpg" />
+    <None Include="Resources\OPM tap 21.jpg" />
+    <None Include="Resources\OPM tap 20.jpg" />
+    <None Include="Resources\OPM tap 19.jpg" />
+    <None Include="Resources\OPM tap 18.jpg" />
+    <None Include="Resources\OPM tap 17.jpg" />
+    <None Include="Resources\OPM tap 16.jpg" />
+    <None Include="Resources\OPM tap 15.jpg" />
+    <None Include="Resources\OPM tap 14.jpg" />
+    <None Include="Resources\OPM tap 13.jpg" />
+    <None Include="Resources\OPM tap 12.jpg" />
+    <None Include="Resources\OPM tap 11.jpg" />
+    <None Include="Resources\OPM tap 10.jpg" />
+    <None Include="Resources\OPM tap 9.jpg" />
+    <None Include="Resources\OPM tap 8.jpg" />
+    <None Include="Resources\OPM tap 7.jpg" />
+    <None Include="Resources\OPM tap 6.jpg" />
+    <None Include="Resources\OPM tap 5.jpg" />
+    <None Include="Resources\OPM tap 4.jpg" />
+    <None Include="Resources\OPM tap 3.jpg" />
+    <None Include="Resources\OPM tap 2.jpg" />
+    <None Include="Resources\OPM tap 1.jpg" />
     <None Include="Resources\male admin.bmp" />
     <None Include="Resources\test2.png" />
     <None Include="Resources\writing.png" />

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DoAnPBL3
-{   
+{
     public partial class FormQLBS : Form
     {
         public FormQLBS(string theme)
@@ -192,6 +192,160 @@ namespace DoAnPBL3
                         .Where(lang => lang.NameLanguage == "Tiếng Anh")
                         .ToList();
                 }
+            }
+        }
+
+        private void chữCáiGiảmDầnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (BookStoreContext context = new BookStoreContext())
+            {
+                dgvQLBS.DataSource = context.Books
+                    .Join(
+                        context.Languages,
+                        book => book.ID_Language,
+                        language => language.ID_Language,
+                        (book, language) => new
+                        {
+                            book.ID_Book,
+                            book.NameBook,
+                            language.NameLanguage,
+                            book.Quantity,
+                            book.Price
+                        })
+                    .OrderByDescending(book => book.NameBook)
+                    .Select(book => book)
+                    .ToList();
+            }
+        }
+
+        private void chữCáiTăngDầnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (BookStoreContext context = new BookStoreContext())
+            {
+                dgvQLBS.DataSource = context.Books
+                    .Join(
+                        context.Languages,
+                        book => book.ID_Language,
+                        language => language.ID_Language,
+                        (book, language) => new
+                        {
+                            book.ID_Book,
+                            book.NameBook,
+                            language.NameLanguage,
+                            book.Quantity,
+                            book.Price
+                        })
+                    .OrderBy(book => book.NameBook)
+                    .Select(book => book)
+                    .ToList();
+            }
+        }
+
+        private void giáMuaSáchTăngDầnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (BookStoreContext context = new BookStoreContext())
+            {
+                dgvQLBS.DataSource = context.Books
+                    .Join(
+                        context.Languages,
+                        book => book.ID_Language,
+                        language => language.ID_Language,
+                        (book, language) => new
+                        {
+                            book.ID_Book,
+                            book.NameBook,
+                            language.NameLanguage,
+                            book.Quantity,
+                            book.Price
+                        })
+                    .OrderBy(book => book.Price)
+                    .Select(book => book)
+                    .ToList();
+            }
+        }
+
+        private void giáMuaSáchGiảmDầnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (BookStoreContext context = new BookStoreContext())
+            {
+                dgvQLBS.DataSource = context.Books
+                    .Join(
+                        context.Languages,
+                        book => book.ID_Language,
+                        language => language.ID_Language,
+                        (book, language) => new
+                        {
+                            book.ID_Book,
+                            book.NameBook,
+                            language.NameLanguage,
+                            book.Quantity,
+                            book.Price
+                        })
+                    .OrderByDescending(book => book.Price)
+                    .Select(book => book)
+                    .ToList();
+            }
+        }
+
+        private void mứcĐộBánChạyTăngDầnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (BookStoreContext context = new BookStoreContext())
+            {
+                MessageBox.Show("mứcĐộBánChạyTăngDần");
+            }
+        }
+
+        private void mứcĐộBánChạyGiảmDầnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (BookStoreContext context = new BookStoreContext())
+            {
+                MessageBox.Show("mứcĐộBánChạyGiảmDần");
+            }
+        }
+
+        private void sốLượngSáchHiệnCóTăngDầnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (BookStoreContext context = new BookStoreContext())
+            {
+                dgvQLBS.DataSource = context.Books
+                    .Join(
+                        context.Languages,
+                        book => book.ID_Language,
+                        language => language.ID_Language,
+                        (book, language) => new
+                        {
+                            book.ID_Book,
+                            book.NameBook,
+                            language.NameLanguage,
+                            book.Quantity,
+                            book.Price
+                        })
+                    .OrderBy(book => book.Quantity)
+                    .Select(book => book)
+                    .ToList();
+            }
+        }
+
+        private void sốLượngSáchHiệnCóGiảmDầnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (BookStoreContext context = new BookStoreContext())
+            {
+                dgvQLBS.DataSource = context.Books
+                    .Join(
+                        context.Languages,
+                        book => book.ID_Language,
+                        language => language.ID_Language,
+                        (book, language) => new
+                        {
+                            book.ID_Book,
+                            book.NameBook,
+                            language.NameLanguage,
+                            book.Quantity,
+                            book.Price
+                        })
+                    .OrderByDescending(book => book.Quantity)
+                    .Select(book => book)
+                    .ToList();
             }
         }
     }
