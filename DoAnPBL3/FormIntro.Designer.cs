@@ -158,7 +158,7 @@ namespace DoAnPBL3
             this.CloseForm.Name = "CloseForm";
             this.CloseForm.Size = new System.Drawing.Size(35, 28);
             this.CloseForm.TabIndex = 11;
-            this.CloseForm.Click += new System.EventHandler(this.guna2ControlBox1_Click);
+            this.CloseForm.Click += new System.EventHandler(this.Guna2ControlBox1_Click);
             // 
             // btnNext
             // 
@@ -175,7 +175,7 @@ namespace DoAnPBL3
             this.btnNext.Size = new System.Drawing.Size(30, 30);
             this.btnNext.TabIndex = 12;
             this.btnNext.UseVisualStyleBackColor = false;
-            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+            this.btnNext.Click += new System.EventHandler(this.BtnNext_Click);
             // 
             // btnPrevious
             // 
@@ -192,7 +192,7 @@ namespace DoAnPBL3
             this.btnPrevious.Size = new System.Drawing.Size(30, 30);
             this.btnPrevious.TabIndex = 13;
             this.btnPrevious.UseVisualStyleBackColor = false;
-            this.btnPrevious.Click += new System.EventHandler(this.btnPrevious_Click);
+            this.btnPrevious.Click += new System.EventHandler(this.BtnPrevious_Click);
             // 
             // label10
             // 

@@ -156,32 +156,32 @@ namespace DoAnPBL3
                 lblTitleChildForm.Text = childForm.Text;
         }
 
-        private void btnQLNV_Click(object sender, EventArgs e)
+        private void BtnQLNV_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color1);
             OpenChildForm(new FormQLNV(theme, accountUsername, password));
         }
 
-        private void btnQLBS_Click(object sender, EventArgs e)
+        private void BtnQLBS_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color2);
             OpenChildForm(new FormQLBS(theme));
         }
 
-        private void btnQLDT_Click(object sender, EventArgs e)
+        private void BtnQLDT_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color3);
             OpenChildForm(new FormQLDT(theme));
         }
 
-        private void btnQLKH_Click(object sender, EventArgs e)
+        private void BtnQLKH_Click(object sender, EventArgs e)
         {
 
             ActivateButton(sender, RGBColors.color4);
             OpenChildForm(new FormQLKH(theme));
         }
 
-        private void btnHome_Click(object sender, EventArgs e)
+        private void BtnHome_Click(object sender, EventArgs e)
         {
             if (currentChildForm != null)
             {
@@ -205,13 +205,13 @@ namespace DoAnPBL3
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-        private void panelTitleBar_MouseDown(object sender, MouseEventArgs e)
+        private void PanelTitleBar_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(Handle, 0x112, 0xf012, 0);
         }
 
-        private void btnMaximize_Click(object sender, EventArgs e)
+        private void BtnMaximize_Click(object sender, EventArgs e)
         {
             if (WindowState == FormWindowState.Normal)
             {
@@ -221,49 +221,49 @@ namespace DoAnPBL3
         }
 
 
-        private void btnClose_Click(object sender, EventArgs e)
+        private void BtnClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void btnClose_MouseEnter(object sender, EventArgs e)
+        private void BtnClose_MouseEnter(object sender, EventArgs e)
         {
             btnClose.BackColor = RGBColors.color5;
         }
 
-        private void btnClose_MouseLeave(object sender, EventArgs e)
+        private void BtnClose_MouseLeave(object sender, EventArgs e)
         {
             btnClose.BackColor = Color.FromArgb(64, 64, 64);
         }
 
-        private void btnMaximize_MouseEnter(object sender, EventArgs e)
+        private void BtnMaximize_MouseEnter(object sender, EventArgs e)
         {
             btnMaximize.BackColor = RGBColors.color1;
         }
 
-        private void btnMaximize_MouseLeave(object sender, EventArgs e)
+        private void BtnMaximize_MouseLeave(object sender, EventArgs e)
         {
             btnMaximize.BackColor = Color.FromArgb(64, 64, 64);
         }
 
-        private void btnMinimize_MouseEnter(object sender, EventArgs e)
+        private void BtnMinimize_MouseEnter(object sender, EventArgs e)
         {
             btnMinimize.BackColor = RGBColors.color6;
         }
 
-        private void btnMinimize_MouseLeave(object sender, EventArgs e)
+        private void BtnMinimize_MouseLeave(object sender, EventArgs e)
         {
             btnMinimize.BackColor = Color.FromArgb(64, 64, 64);
         }
 
-        private void btnMinimize_Click(object sender, EventArgs e)
+        private void BtnMinimize_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
         }
 
         private void MainMenuQTV_Load(object sender, EventArgs e)
         {
-            timer1.Tick += new EventHandler(timer1_Tick);
+            timer1.Tick += new EventHandler(Timer1_Tick);
             timer1.Start();
             lblDate.Text = DateTime.Now.ToLongDateString();
             rjddmAdminSettingMenu.IsMainMenu = true;
@@ -299,12 +299,12 @@ namespace DoAnPBL3
             rjddmAdminSettingMenu.Show(AdminPicture, new Point(0, AdminPicture.Height));
         }
 
-        private void lblAdminUsername_Click(object sender, EventArgs e)
+        private void LblAdminUsername_Click(object sender, EventArgs e)
         {
             AdminPicture_Click(sender, e);
         }
 
-        private void rjddmAdminSettingMenu_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        private void RjddmAdminSettingMenu_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
             if (đăngXuấtToolStripMenuItem.Selected == true)
             {
@@ -447,7 +447,7 @@ namespace DoAnPBL3
             lblAdminUsername.ForeColor = Color.White;
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void Timer1_Tick(object sender, EventArgs e)
         {
             if (currentChildForm != null)
             {

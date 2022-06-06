@@ -29,16 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormQLKH));
-            this.dgvQLKH = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NameCustomer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.xuiSegmentKH = new XanderUI.XUISegment();
             this.btnHDKH = new FontAwesome.Sharp.IconButton();
             this.btnTKKH = new Guna.UI2.WinForms.Guna2Button();
@@ -56,108 +50,17 @@
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.rjtbTKKH = new DoAnPBL3.RJTextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvQLKH)).BeginInit();
+            this.dgvQLKH = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.ID_Customer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FullNameCustomer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvQLKH)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dgvQLKH
-            // 
-            this.dgvQLKH.AllowUserToAddRows = false;
-            this.dgvQLKH.AllowUserToDeleteRows = false;
-            this.dgvQLKH.AllowUserToResizeColumns = false;
-            this.dgvQLKH.AllowUserToResizeRows = false;
-            this.dgvQLKH.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvQLKH.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvQLKH.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
-            this.dgvQLKH.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(16)))), ((int)(((byte)(221)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(16)))), ((int)(((byte)(221)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvQLKH.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvQLKH.ColumnHeadersHeight = 30;
-            this.dgvQLKH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgvQLKH.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
-            this.NameCustomer,
-            this.Gender,
-            this.Phone,
-            this.Address});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvQLKH.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvQLKH.EnableHeadersVisualStyles = false;
-            this.dgvQLKH.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.dgvQLKH.Location = new System.Drawing.Point(11, 170);
-            this.dgvQLKH.Margin = new System.Windows.Forms.Padding(2);
-            this.dgvQLKH.Name = "dgvQLKH";
-            this.dgvQLKH.ReadOnly = true;
-            this.dgvQLKH.RowHeadersWidth = 51;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvQLKH.RowsDefaultCellStyle = dataGridViewCellStyle6;
-            this.dgvQLKH.RowTemplate.Height = 30;
-            this.dgvQLKH.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvQLKH.Size = new System.Drawing.Size(816, 413);
-            this.dgvQLKH.TabIndex = 16;
-            // 
-            // ID
-            // 
-            this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ID.DataPropertyName = "ID_Customer";
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            // 
-            // NameCustomer
-            // 
-            this.NameCustomer.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.NameCustomer.DataPropertyName = "FullNameCustomer";
-            this.NameCustomer.HeaderText = "Họ và tên";
-            this.NameCustomer.Name = "NameCustomer";
-            this.NameCustomer.ReadOnly = true;
-            // 
-            // Gender
-            // 
-            this.Gender.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Gender.DataPropertyName = "Gender";
-            this.Gender.HeaderText = "Giới tính";
-            this.Gender.Name = "Gender";
-            this.Gender.ReadOnly = true;
-            // 
-            // Phone
-            // 
-            this.Phone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Phone.DataPropertyName = "Phone";
-            this.Phone.HeaderText = "SĐT";
-            this.Phone.Name = "Phone";
-            this.Phone.ReadOnly = true;
-            // 
-            // Address
-            // 
-            this.Address.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Address.DataPropertyName = "Address";
-            this.Address.HeaderText = "Địa chỉ";
-            this.Address.Name = "Address";
-            this.Address.ReadOnly = true;
             // 
             // xuiSegmentKH
             // 
@@ -175,7 +78,7 @@
             this.xuiSegmentKH.SelectedIndex = 0;
             this.xuiSegmentKH.Size = new System.Drawing.Size(314, 34);
             this.xuiSegmentKH.TabIndex = 18;
-            this.xuiSegmentKH.Click += new System.EventHandler(this.xuiSegmentKH_Click);
+            this.xuiSegmentKH.Click += new System.EventHandler(this.XuiSegmentKH_Click);
             // 
             // btnHDKH
             // 
@@ -198,9 +101,9 @@
             this.btnHDKH.Text = " Hóa đơn khách hàng";
             this.btnHDKH.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnHDKH.UseVisualStyleBackColor = false;
-            this.btnHDKH.Click += new System.EventHandler(this.btnHDKH_Click);
-            this.btnHDKH.MouseEnter += new System.EventHandler(this.btnHDKH_MouseEnter);
-            this.btnHDKH.MouseLeave += new System.EventHandler(this.btnHDKH_MouseLeave);
+            this.btnHDKH.Click += new System.EventHandler(this.BtnHDKH_Click);
+            this.btnHDKH.MouseEnter += new System.EventHandler(this.BtnHDKH_MouseEnter);
+            this.btnHDKH.MouseLeave += new System.EventHandler(this.BtnHDKH_MouseLeave);
             // 
             // btnTKKH
             // 
@@ -219,7 +122,7 @@
             this.btnTKKH.Size = new System.Drawing.Size(141, 31);
             this.btnTKKH.TabIndex = 19;
             this.btnTKKH.Text = "Tìm kiếm";
-            this.btnTKKH.Click += new System.EventHandler(this.btnTKKH_Click);
+            this.btnTKKH.Click += new System.EventHandler(this.BtnTKKH_Click);
             // 
             // lblKHNu
             // 
@@ -375,7 +278,112 @@
             this.rjtbTKKH.TabIndex = 17;
             this.rjtbTKKH.Texts = "";
             this.rjtbTKKH.UnderlinedStyle = false;
-            this.rjtbTKKH.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.rjtbTKKH_KeyPress);
+            this.rjtbTKKH.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.RjtbTKKH_KeyPress);
+            // 
+            // dgvQLKH
+            // 
+            this.dgvQLKH.AllowUserToAddRows = false;
+            this.dgvQLKH.AllowUserToDeleteRows = false;
+            this.dgvQLKH.AllowUserToResizeColumns = false;
+            this.dgvQLKH.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgvQLKH.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvQLKH.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvQLKH.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvQLKH.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
+            this.dgvQLKH.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvQLKH.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvQLKH.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(16)))), ((int)(((byte)(221)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(16)))), ((int)(((byte)(221)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvQLKH.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvQLKH.ColumnHeadersHeight = 30;
+            this.dgvQLKH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvQLKH.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID_Customer,
+            this.FullNameCustomer,
+            this.Phone,
+            this.Address});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 9F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvQLKH.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvQLKH.EnableHeadersVisualStyles = false;
+            this.dgvQLKH.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.dgvQLKH.Location = new System.Drawing.Point(11, 170);
+            this.dgvQLKH.Name = "dgvQLKH";
+            this.dgvQLKH.ReadOnly = true;
+            this.dgvQLKH.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgvQLKH.RowHeadersVisible = false;
+            this.dgvQLKH.RowHeadersWidth = 60;
+            this.dgvQLKH.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvQLKH.Size = new System.Drawing.Size(816, 413);
+            this.dgvQLKH.TabIndex = 39;
+            this.dgvQLKH.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvQLKH.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dgvQLKH.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dgvQLKH.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dgvQLKH.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dgvQLKH.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
+            this.dgvQLKH.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.dgvQLKH.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dgvQLKH.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgvQLKH.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvQLKH.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvQLKH.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvQLKH.ThemeStyle.HeaderStyle.Height = 30;
+            this.dgvQLKH.ThemeStyle.ReadOnly = true;
+            this.dgvQLKH.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvQLKH.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvQLKH.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvQLKH.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Gainsboro;
+            this.dgvQLKH.ThemeStyle.RowsStyle.Height = 22;
+            this.dgvQLKH.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvQLKH.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvQLKH.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DgvQLKH_RowHeaderMouseClick);
+            // 
+            // ID_Customer
+            // 
+            this.ID_Customer.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ID_Customer.DataPropertyName = "ID_Customer";
+            this.ID_Customer.HeaderText = "ID";
+            this.ID_Customer.Name = "ID_Customer";
+            this.ID_Customer.ReadOnly = true;
+            // 
+            // FullNameCustomer
+            // 
+            this.FullNameCustomer.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.FullNameCustomer.DataPropertyName = "FullNameCustomer";
+            this.FullNameCustomer.HeaderText = "Họ và tên";
+            this.FullNameCustomer.Name = "FullNameCustomer";
+            this.FullNameCustomer.ReadOnly = true;
+            // 
+            // Phone
+            // 
+            this.Phone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Phone.DataPropertyName = "Phone";
+            this.Phone.HeaderText = "Số điện thoại";
+            this.Phone.Name = "Phone";
+            this.Phone.ReadOnly = true;
+            // 
+            // Address
+            // 
+            this.Address.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Address.DataPropertyName = "Address";
+            this.Address.HeaderText = "Địa chỉ";
+            this.Address.Name = "Address";
+            this.Address.ReadOnly = true;
             // 
             // FormQLKH
             // 
@@ -383,6 +391,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(980, 585);
+            this.Controls.Add(this.dgvQLKH);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox3);
@@ -396,7 +405,6 @@
             this.Controls.Add(this.btnTKKH);
             this.Controls.Add(this.xuiSegmentKH);
             this.Controls.Add(this.rjtbTKKH);
-            this.Controls.Add(this.dgvQLKH);
             this.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.Gainsboro;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -404,11 +412,11 @@
             this.Name = "FormQLKH";
             this.Text = "Quản lý khách hàng";
             this.Load += new System.EventHandler(this.FormQLKH_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvQLKH)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvQLKH)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -416,7 +424,6 @@
 
         #endregion
         private FontAwesome.Sharp.IconButton btnHDKH;
-        private System.Windows.Forms.DataGridView dgvQLKH;
         private RJTextBox rjtbTKKH;
         private XanderUI.XUISegment xuiSegmentKH;
         private Guna.UI2.WinForms.Guna2Button btnTKKH;
@@ -433,9 +440,9 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse3;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NameCustomer;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Gender;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvQLKH;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID_Customer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FullNameCustomer;
         private System.Windows.Forms.DataGridViewTextBoxColumn Phone;
         private System.Windows.Forms.DataGridViewTextBoxColumn Address;
     }

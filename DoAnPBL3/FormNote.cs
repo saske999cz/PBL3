@@ -15,7 +15,7 @@ namespace DoAnPBL3
         public FormNote()
         {
             InitializeComponent();
-            this.Text = "Ghi chú";
+            Text = "Ghi chú";
         }
 
         public string GetTitle()
@@ -28,20 +28,20 @@ namespace DoAnPBL3
             return tbContent.Text;
         }
 
-        public void Alert(string msg, Form_Alert.enmType type)
+        public void Alert(string msg, Form_Alert.EnmType type)
         {
             Form_Alert frm = new Form_Alert();
-            frm.showAlert(msg, type);
+            frm.ShowAlert(msg, type);
         }
 
-        private void rjbtnOK_Click(object sender, EventArgs e)
+        private void RjbtnOK_Click(object sender, EventArgs e)
         {
             rjbtnOK.Parent.Parent.Text = "Changed";
             Hide();
-            Alert("Đã thêm ghi chú mới", Form_Alert.enmType.Success);
+            Alert("Đã thêm ghi chú mới", Form_Alert.EnmType.Success);
         }
 
-        private void rjbtnCancel_Click(object sender, EventArgs e)
+        private void RjbtnCancel_Click(object sender, EventArgs e)
         {
             Hide();
         }

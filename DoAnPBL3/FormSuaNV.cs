@@ -22,10 +22,10 @@ namespace DoAnPBL3
             this.ID_Employee = ID_Employee;
         }
 
-        public void Alert(string msg, Form_Alert.enmType type)
+        public void Alert(string msg, Form_Alert.EnmType type)
         {
             Form_Alert frm = new Form_Alert();
-            frm.showAlert(msg, type);
+            frm.ShowAlert(msg, type);
         }
 
         private void FormSuaNV_Load(object sender, EventArgs e)
@@ -56,7 +56,7 @@ namespace DoAnPBL3
             }
         }
 
-        private void rjbtnOK_Click(object sender, EventArgs e)
+        private void RjbtnOK_Click(object sender, EventArgs e)
         {
             bool isDateOfBirthContainsAlpha, isValidFormatDateOfBirth, isValidAge = false, isDateOfBirthGreaterThanCurrentDate,
                 isStartDateContainsAlpha, isValidFormatStartDate, isStartDateGreaterThanCurrentDate = false,
@@ -355,7 +355,7 @@ namespace DoAnPBL3
                         employee.Avatar = ava;
                         // Update to DB
                         context.SaveChanges();
-                        Alert("Thay đổi thông tin nhân viên thành công", Form_Alert.enmType.Success);
+                        Alert("Thay đổi thông tin nhân viên thành công", Form_Alert.EnmType.Success);
                         Close();
                     }
                 }
@@ -366,11 +366,11 @@ namespace DoAnPBL3
             }
             else
             {
-                Alert("Dữ liệu không hợp lệ", Form_Alert.enmType.Error);
+                Alert("Dữ liệu không hợp lệ", Form_Alert.EnmType.Error);
             }
         }
 
-        private void rjbtnCancel_Click(object sender, EventArgs e)
+        private void RjbtnCancel_Click(object sender, EventArgs e)
         {
             bool isNewName, isNewEmail, isNewDateOfBirth, isNewStartDate, isNewGender, 
                     isNewPhone, isNewID_Card, isNewAddress, isNewAvatar;
@@ -449,7 +449,7 @@ namespace DoAnPBL3
             }
         }
 
-        private void btnNVImg_Click(object sender, EventArgs e)
+        private void BtnNVImg_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Title = "Chọn ảnh";
@@ -460,12 +460,12 @@ namespace DoAnPBL3
             }
         }
 
-        private void btnDeleteImg_Click(object sender, EventArgs e)
+        private void BtnDeleteImg_Click(object sender, EventArgs e)
         {
             avatar.Image = null;
         }
 
-        private void tbNameNV_KeyPress(object sender, KeyPressEventArgs e)
+        private void TbNameNV_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
             {
@@ -474,7 +474,7 @@ namespace DoAnPBL3
             }
         }
 
-        private void tbEmailNV_KeyPress(object sender, KeyPressEventArgs e)
+        private void TbEmailNV_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
             {
@@ -483,7 +483,7 @@ namespace DoAnPBL3
             }
         }
 
-        private void tbBD_KeyPress(object sender, KeyPressEventArgs e)
+        private void TbBD_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
             {
@@ -492,7 +492,7 @@ namespace DoAnPBL3
             }
         }
 
-        private void tbSDTNV_KeyPress(object sender, KeyPressEventArgs e)
+        private void TbSDTNV_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
             {
@@ -501,7 +501,7 @@ namespace DoAnPBL3
             }
         }
 
-        private void tbCMNDNV_KeyPress(object sender, KeyPressEventArgs e)
+        private void TbCMNDNV_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
             {
@@ -510,7 +510,7 @@ namespace DoAnPBL3
             }
         }
 
-        private void tbAddressNV_KeyPress(object sender, KeyPressEventArgs e)
+        private void TbAddressNV_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
             {

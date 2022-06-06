@@ -34,9 +34,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panelContainer = new System.Windows.Forms.Panel();
-            this.msgValidateAddress = new System.Windows.Forms.Label();
-            this.msgValidatePhone = new System.Windows.Forms.Label();
-            this.msgValidateGender = new System.Windows.Forms.Label();
             this.msgValidateName = new System.Windows.Forms.Label();
             this.rjbtnCancel = new DoAnPBL3.RJButton();
             this.rjbtnOK = new DoAnPBL3.RJButton();
@@ -53,6 +50,9 @@
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.msgValidateGender = new System.Windows.Forms.Label();
+            this.msgValidatePhone = new System.Windows.Forms.Label();
+            this.msgValidateAddress = new System.Windows.Forms.Label();
             this.panelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelContainer.SuspendLayout();
@@ -120,33 +120,6 @@
             this.panelContainer.Size = new System.Drawing.Size(812, 471);
             this.panelContainer.TabIndex = 1;
             // 
-            // msgValidateAddress
-            // 
-            this.msgValidateAddress.AutoSize = true;
-            this.msgValidateAddress.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.msgValidateAddress.Location = new System.Drawing.Point(194, 332);
-            this.msgValidateAddress.Name = "msgValidateAddress";
-            this.msgValidateAddress.Size = new System.Drawing.Size(0, 16);
-            this.msgValidateAddress.TabIndex = 58;
-            // 
-            // msgValidatePhone
-            // 
-            this.msgValidatePhone.AutoSize = true;
-            this.msgValidatePhone.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.msgValidatePhone.Location = new System.Drawing.Point(194, 257);
-            this.msgValidatePhone.Name = "msgValidatePhone";
-            this.msgValidatePhone.Size = new System.Drawing.Size(0, 16);
-            this.msgValidatePhone.TabIndex = 57;
-            // 
-            // msgValidateGender
-            // 
-            this.msgValidateGender.AutoSize = true;
-            this.msgValidateGender.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.msgValidateGender.Location = new System.Drawing.Point(194, 186);
-            this.msgValidateGender.Name = "msgValidateGender";
-            this.msgValidateGender.Size = new System.Drawing.Size(0, 16);
-            this.msgValidateGender.TabIndex = 56;
-            // 
             // msgValidateName
             // 
             this.msgValidateName.AutoSize = true;
@@ -176,7 +149,7 @@
             this.rjbtnCancel.Text = "Hủy";
             this.rjbtnCancel.TextColor = System.Drawing.Color.White;
             this.rjbtnCancel.UseVisualStyleBackColor = false;
-            this.rjbtnCancel.Click += new System.EventHandler(this.rjbtnCancel_Click);
+            this.rjbtnCancel.Click += new System.EventHandler(this.RjbtnCancel_Click);
             // 
             // rjbtnOK
             // 
@@ -198,7 +171,7 @@
             this.rjbtnOK.Text = "OK";
             this.rjbtnOK.TextColor = System.Drawing.Color.White;
             this.rjbtnOK.UseVisualStyleBackColor = false;
-            this.rjbtnOK.Click += new System.EventHandler(this.rjbtnOK_Click);
+            this.rjbtnOK.Click += new System.EventHandler(this.RjbtnOK_Click);
             // 
             // tbPhoneKH
             // 
@@ -222,7 +195,7 @@
             this.tbPhoneKH.SelectedText = "";
             this.tbPhoneKH.Size = new System.Drawing.Size(487, 30);
             this.tbPhoneKH.TabIndex = 3;
-            this.tbPhoneKH.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbPhoneKH_KeyPress);
+            this.tbPhoneKH.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbPhoneKH_KeyPress);
             // 
             // tbAddressKH
             // 
@@ -246,7 +219,7 @@
             this.tbAddressKH.SelectedText = "";
             this.tbAddressKH.Size = new System.Drawing.Size(487, 30);
             this.tbAddressKH.TabIndex = 4;
-            this.tbAddressKH.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbAddressKH_KeyPress);
+            this.tbAddressKH.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbAddressKH_KeyPress);
             // 
             // tbNameKH
             // 
@@ -270,7 +243,7 @@
             this.tbNameKH.SelectedText = "";
             this.tbNameKH.Size = new System.Drawing.Size(487, 30);
             this.tbNameKH.TabIndex = 1;
-            this.tbNameKH.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbNameKH_KeyPress);
+            this.tbNameKH.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbNameKH_KeyPress);
             // 
             // cbbGenderKH
             // 
@@ -372,6 +345,33 @@
             this.guna2Elipse2.BorderRadius = 10;
             this.guna2Elipse2.TargetControl = this;
             // 
+            // msgValidateGender
+            // 
+            this.msgValidateGender.AutoSize = true;
+            this.msgValidateGender.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.msgValidateGender.Location = new System.Drawing.Point(194, 186);
+            this.msgValidateGender.Name = "msgValidateGender";
+            this.msgValidateGender.Size = new System.Drawing.Size(0, 16);
+            this.msgValidateGender.TabIndex = 56;
+            // 
+            // msgValidatePhone
+            // 
+            this.msgValidatePhone.AutoSize = true;
+            this.msgValidatePhone.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.msgValidatePhone.Location = new System.Drawing.Point(194, 257);
+            this.msgValidatePhone.Name = "msgValidatePhone";
+            this.msgValidatePhone.Size = new System.Drawing.Size(0, 16);
+            this.msgValidatePhone.TabIndex = 57;
+            // 
+            // msgValidateAddress
+            // 
+            this.msgValidateAddress.AutoSize = true;
+            this.msgValidateAddress.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.msgValidateAddress.Location = new System.Drawing.Point(194, 332);
+            this.msgValidateAddress.Name = "msgValidateAddress";
+            this.msgValidateAddress.Size = new System.Drawing.Size(0, 16);
+            this.msgValidateAddress.TabIndex = 58;
+            // 
             // FormAddKH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -416,8 +416,8 @@
         private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
         private System.Windows.Forms.Label msgValidateName;
-        private System.Windows.Forms.Label msgValidateGender;
-        private System.Windows.Forms.Label msgValidatePhone;
         private System.Windows.Forms.Label msgValidateAddress;
+        private System.Windows.Forms.Label msgValidatePhone;
+        private System.Windows.Forms.Label msgValidateGender;
     }
 }

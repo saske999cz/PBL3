@@ -44,12 +44,12 @@ namespace DoAnPBL3
             }
         }
 
-        private void cbTheme_SelectedIndexChanged(object sender, EventArgs e)
+        private void CbTheme_SelectedIndexChanged(object sender, EventArgs e)
         {
             btnSave.Show();
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             cbTheme.Parent.Text = cbTheme.SelectedItem.ToString();
             switch (cbTheme.Parent.Text)

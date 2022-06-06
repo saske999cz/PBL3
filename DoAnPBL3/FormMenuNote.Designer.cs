@@ -48,7 +48,7 @@ namespace DoAnPBL3
             // 
             // timer1
             // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
             // btnAddNote
             // 
@@ -72,7 +72,7 @@ namespace DoAnPBL3
             this.btnAddNote.TextColor = System.Drawing.Color.White;
             this.btnAddNote.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAddNote.UseVisualStyleBackColor = false;
-            this.btnAddNote.Click += new System.EventHandler(this.btnAddNote_Click);
+            this.btnAddNote.Click += new System.EventHandler(this.BtnAddNote_Click);
             // 
             // FormMenuNote
             // 

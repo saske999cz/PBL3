@@ -13,7 +13,7 @@ namespace DoAnPBL3
 {
     public partial class FormTTS : Form
     {
-        private string ID_Book;
+        private readonly string ID_Book;
         public FormTTS(string ID_Book)
         {
             InitializeComponent();
@@ -24,31 +24,6 @@ namespace DoAnPBL3
         {
             using (BookStoreContext context = new BookStoreContext())
             {
-                // ==========================     LINQ Cách 1    ========================== 
-                //var book = (from b in context.Books
-                //           join language in context.Languages
-                //           on b.ID_Language equals language.ID_Language
-                //           join author in context.Authors
-                //           on b.ID_Author equals author.ID_Author
-                //           join publisher in context.Publishers
-                //           on b.ID_Publisher equals publisher.ID_Publisher
-                //           join genre in context.Genres
-                //           on b.ID_Genre equals genre.ID_Genre
-                //           where (b.ID_Book == ID_Book)
-                //           select new
-                //           {
-                //               b.ID_Book,
-                //               b.NameBook,
-                //               b.PublishDate,
-                //               b.Quantity,
-                //               b.Price,
-                //               b.Image,
-                //               author.FullNameAuthor,
-                //               language.NameLanguage,
-                //               genre.NameGenre,
-                //               publisher.NamePublisher
-                //           }).ToList().FirstOrDefault();
-                // ==========================     LINQ Cách 2 (Lambda Expression) ==========================
                 var book = context.Books
                         .Join(
                             context.Languages,
@@ -149,7 +124,7 @@ namespace DoAnPBL3
             }
         }
 
-        private void rjbtnCancel_Click(object sender, EventArgs e)
+        private void RjbtnCancel_Click(object sender, EventArgs e)
         {
             Close();
         }

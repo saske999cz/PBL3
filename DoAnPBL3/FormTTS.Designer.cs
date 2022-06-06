@@ -265,7 +265,7 @@ namespace DoAnPBL3
             this.rjbtnOK.Text = "OK";
             this.rjbtnOK.TextColor = System.Drawing.Color.White;
             this.rjbtnOK.UseVisualStyleBackColor = false;
-            this.rjbtnOK.Click += new System.EventHandler(this.rjbtnCancel_Click);
+            this.rjbtnOK.Click += new System.EventHandler(this.RjbtnCancel_Click);
             // 
             // tbPrice
             // 

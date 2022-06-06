@@ -67,7 +67,7 @@ namespace DoAnPBL3
             this.tbConfirmPhone.SelectedText = "";
             this.tbConfirmPhone.Size = new System.Drawing.Size(467, 36);
             this.tbConfirmPhone.TabIndex = 0;
-            this.tbConfirmPhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbConfirmPass_KeyPress);
+            this.tbConfirmPhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbConfirmPass_KeyPress);
             // 
             // rjbtnOK
             // 
@@ -89,7 +89,7 @@ namespace DoAnPBL3
             this.rjbtnOK.Text = "Xác nhận";
             this.rjbtnOK.TextColor = System.Drawing.Color.White;
             this.rjbtnOK.UseVisualStyleBackColor = false;
-            this.rjbtnOK.Click += new System.EventHandler(this.rjbtnOK_Click);
+            this.rjbtnOK.Click += new System.EventHandler(this.RjbtnOK_Click);
             // 
             // guna2Elipse1
             // 
@@ -170,7 +170,7 @@ namespace DoAnPBL3
             this.rjbtnCancel.Text = "Hủy";
             this.rjbtnCancel.TextColor = System.Drawing.Color.White;
             this.rjbtnCancel.UseVisualStyleBackColor = false;
-            this.rjbtnCancel.Click += new System.EventHandler(this.rjbtnCancel_Click);
+            this.rjbtnCancel.Click += new System.EventHandler(this.RjbtnCancel_Click);
             // 
             // msgValidatePass
             // 
@@ -201,7 +201,7 @@ namespace DoAnPBL3
             this.rjbtnAdd.Text = "Thêm mới";
             this.rjbtnAdd.TextColor = System.Drawing.Color.White;
             this.rjbtnAdd.UseVisualStyleBackColor = false;
-            this.rjbtnAdd.Click += new System.EventHandler(this.rjbtnAdd_Click);
+            this.rjbtnAdd.Click += new System.EventHandler(this.RjbtnAdd_Click);
             // 
             // FormAuthenticateCustomer
             // 

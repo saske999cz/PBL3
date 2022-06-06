@@ -125,9 +125,9 @@ namespace DoAnPBL3
             this.panelDesktop.Name = "panelDesktop";
             this.panelDesktop.Size = new System.Drawing.Size(1115, 245);
             this.panelDesktop.TabIndex = 5;
-            this.panelDesktop.ControlAdded += new System.Windows.Forms.ControlEventHandler(this.panelDesktop_ControlAdded);
-            this.panelDesktop.ControlRemoved += new System.Windows.Forms.ControlEventHandler(this.panelDesktop_ControlRemoved);
-            this.panelDesktop.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDesktop_Paint);
+            this.panelDesktop.ControlAdded += new System.Windows.Forms.ControlEventHandler(this.PanelDesktop_ControlAdded);
+            this.panelDesktop.ControlRemoved += new System.Windows.Forms.ControlEventHandler(this.PanelDesktop_ControlRemoved);
+            this.panelDesktop.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelDesktop_Paint);
             // 
             // guna2DragControl1
             // 
@@ -244,7 +244,7 @@ namespace DoAnPBL3
             // 
             // timer1
             // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
             // rjbtnCancel
             // 
@@ -266,7 +266,7 @@ namespace DoAnPBL3
             this.rjbtnCancel.Text = "Hủy";
             this.rjbtnCancel.TextColor = System.Drawing.Color.White;
             this.rjbtnCancel.UseVisualStyleBackColor = false;
-            this.rjbtnCancel.Click += new System.EventHandler(this.rjbtnCancel_Click);
+            this.rjbtnCancel.Click += new System.EventHandler(this.RjbtnCancel_Click);
             // 
             // rjbtnBuy
             // 
@@ -287,7 +287,7 @@ namespace DoAnPBL3
             this.rjbtnBuy.Text = "Mua sách";
             this.rjbtnBuy.TextColor = System.Drawing.Color.White;
             this.rjbtnBuy.UseVisualStyleBackColor = false;
-            this.rjbtnBuy.Click += new System.EventHandler(this.rjbtnBuy_Click);
+            this.rjbtnBuy.Click += new System.EventHandler(this.RjbtnBuy_Click);
             // 
             // btnOK
             // 
@@ -308,7 +308,7 @@ namespace DoAnPBL3
             this.btnOK.Text = "OK";
             this.btnOK.TextColor = System.Drawing.Color.White;
             this.btnOK.UseVisualStyleBackColor = false;
-            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
+            this.btnOK.Click += new System.EventHandler(this.BtnOK_Click);
             // 
             // guna2Elipse2
             // 
@@ -343,8 +343,8 @@ namespace DoAnPBL3
             this.tbNumber.TabIndex = 0;
             this.tbNumber.Texts = "";
             this.tbNumber.UnderlinedStyle = false;
-            this.tbNumber._TextChanged += new System.EventHandler(this.tbNumber__TextChanged);
-            this.tbNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbNumber_KeyPress);
+            this.tbNumber._TextChanged += new System.EventHandler(this.TbNumber__TextChanged);
+            this.tbNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbNumber_KeyPress);
             // 
             // FormCart
             // 
@@ -370,7 +370,7 @@ namespace DoAnPBL3
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormMuaSach";
             this.Load += new System.EventHandler(this.FormCart_Load);
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDesktop_Paint);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelDesktop_Paint);
             this.panelTitleBar.ResumeLayout(false);
             this.panelTitleBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

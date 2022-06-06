@@ -48,16 +48,16 @@
             this.btnHDTN = new FontAwesome.Sharp.IconButton();
             this.btnSXS = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dgvQLBS = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvQLBS = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.ID_Book = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NameBook = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NameLanguage = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rjtbTKS = new DoAnPBL3.RJTextBox();
             this.rjDropDownMenuSXS = new DoAnPBL3.RJDropDownMenu(this.components);
-            this.chữCáiGiảmDầnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chữCáiTăngDầnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.chữCáiGiảmDầnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.giáMuaSáchTăngDầnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.giáMuaSáchGiảmDầnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mứcĐộBánChạyTăngDầnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -88,6 +88,7 @@
             this.xuiSegmentBS.SelectedIndex = 0;
             this.xuiSegmentBS.Size = new System.Drawing.Size(314, 34);
             this.xuiSegmentBS.TabIndex = 21;
+            this.xuiSegmentBS.Click += new System.EventHandler(this.XuiSegmentBS_Click);
             // 
             // lblSSTA
             // 
@@ -213,6 +214,8 @@
             this.btnTKS.Size = new System.Drawing.Size(141, 31);
             this.btnTKS.TabIndex = 22;
             this.btnTKS.Text = "Tìm kiếm";
+            this.btnTKS.MouseEnter += new System.EventHandler(this.BtnTKS_MouseEnter);
+            this.btnTKS.MouseLeave += new System.EventHandler(this.BtnTKS_MouseLeave);
             // 
             // btnHDTN
             // 
@@ -235,8 +238,8 @@
             this.btnHDTN.Text = "  Hóa đơn trong ngày";
             this.btnHDTN.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnHDTN.UseVisualStyleBackColor = false;
-            this.btnHDTN.MouseEnter += new System.EventHandler(this.btnHDTN_MouseEnter);
-            this.btnHDTN.MouseLeave += new System.EventHandler(this.btnHDTN_MouseLeave);
+            this.btnHDTN.MouseEnter += new System.EventHandler(this.BtnHDTN_MouseEnter);
+            this.btnHDTN.MouseLeave += new System.EventHandler(this.BtnHDTN_MouseLeave);
             // 
             // btnSXS
             // 
@@ -260,9 +263,9 @@
             this.btnSXS.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSXS.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSXS.UseVisualStyleBackColor = false;
-            this.btnSXS.Click += new System.EventHandler(this.btnSXS_Click);
-            this.btnSXS.MouseEnter += new System.EventHandler(this.btnSXS_MouseEnter);
-            this.btnSXS.MouseLeave += new System.EventHandler(this.btnSXS_MouseLeave);
+            this.btnSXS.Click += new System.EventHandler(this.BtnSXS_Click);
+            this.btnSXS.MouseEnter += new System.EventHandler(this.BtnSXS_MouseEnter);
+            this.btnSXS.MouseLeave += new System.EventHandler(this.BtnSXS_MouseLeave);
             // 
             // panel1
             // 
@@ -280,14 +283,15 @@
             this.dgvQLBS.AllowUserToDeleteRows = false;
             this.dgvQLBS.AllowUserToResizeColumns = false;
             this.dgvQLBS.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.dgvQLBS.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvQLBS.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvQLBS.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvQLBS.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
+            this.dgvQLBS.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvQLBS.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvQLBS.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(16)))), ((int)(((byte)(221)))));
@@ -300,13 +304,13 @@
             this.dgvQLBS.ColumnHeadersHeight = 30;
             this.dgvQLBS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvQLBS.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4});
+            this.ID_Book,
+            this.NameBook,
+            this.NameLanguage,
+            this.Price,
+            this.Quantity});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Gainsboro;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -315,68 +319,83 @@
             this.dgvQLBS.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvQLBS.EnableHeadersVisualStyles = false;
             this.dgvQLBS.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.dgvQLBS.Location = new System.Drawing.Point(6, 173);
-            this.dgvQLBS.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvQLBS.Location = new System.Drawing.Point(12, 173);
             this.dgvQLBS.Name = "dgvQLBS";
             this.dgvQLBS.ReadOnly = true;
-            this.dgvQLBS.RowHeadersWidth = 51;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgvQLBS.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgvQLBS.RowHeadersVisible = false;
+            this.dgvQLBS.RowHeadersWidth = 60;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 9F);
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvQLBS.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvQLBS.RowTemplate.Height = 24;
             this.dgvQLBS.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvQLBS.Size = new System.Drawing.Size(821, 413);
-            this.dgvQLBS.TabIndex = 41;
+            this.dgvQLBS.Size = new System.Drawing.Size(816, 413);
+            this.dgvQLBS.TabIndex = 40;
+            this.dgvQLBS.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvQLBS.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dgvQLBS.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dgvQLBS.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dgvQLBS.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dgvQLBS.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
+            this.dgvQLBS.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.dgvQLBS.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dgvQLBS.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgvQLBS.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvQLBS.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvQLBS.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvQLBS.ThemeStyle.HeaderStyle.Height = 30;
+            this.dgvQLBS.ThemeStyle.ReadOnly = true;
+            this.dgvQLBS.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvQLBS.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvQLBS.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvQLBS.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Gainsboro;
+            this.dgvQLBS.ThemeStyle.RowsStyle.Height = 22;
+            this.dgvQLBS.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvQLBS.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvQLBS.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvQLBS_RowHeaderMouseClick);
             // 
-            // ID
+            // ID_Book
             // 
-            this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ID.DataPropertyName = "ID_Book";
-            this.ID.FillWeight = 48.4852F;
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
+            this.ID_Book.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ID_Book.DataPropertyName = "ID_Book";
+            this.ID_Book.HeaderText = "ID";
+            this.ID_Book.Name = "ID_Book";
+            this.ID_Book.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn1
+            // NameBook
             // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "NameBook";
-            this.dataGridViewTextBoxColumn1.FillWeight = 153.6631F;
-            this.dataGridViewTextBoxColumn1.HeaderText = "Tên sách";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.NameBook.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NameBook.DataPropertyName = "NameBook";
+            this.NameBook.HeaderText = "Tên sách";
+            this.NameBook.Name = "NameBook";
+            this.NameBook.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn2
+            // NameLanguage
             // 
-            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "NameLanguage";
-            this.dataGridViewTextBoxColumn2.FillWeight = 83.06437F;
-            this.dataGridViewTextBoxColumn2.HeaderText = "Ngôn ngữ";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.NameLanguage.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NameLanguage.DataPropertyName = "NameLanguage";
+            this.NameLanguage.HeaderText = "Ngôn ngữ";
+            this.NameLanguage.Name = "NameLanguage";
+            this.NameLanguage.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn3
+            // Price
             // 
-            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Price";
-            this.dataGridViewTextBoxColumn3.FillWeight = 116.7513F;
-            this.dataGridViewTextBoxColumn3.HeaderText = "Giá tiền";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.Price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Price.DataPropertyName = "Price";
+            this.Price.HeaderText = "Giá tiền";
+            this.Price.Name = "Price";
+            this.Price.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn4
+            // Quantity
             // 
-            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Quantity";
-            this.dataGridViewTextBoxColumn4.FillWeight = 98.036F;
-            this.dataGridViewTextBoxColumn4.HeaderText = "Số lượng";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.Quantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Quantity.DataPropertyName = "Quantity";
+            this.Quantity.HeaderText = "Số lượng";
+            this.Quantity.Name = "Quantity";
+            this.Quantity.ReadOnly = true;
             // 
             // rjtbTKS
             // 
@@ -419,16 +438,7 @@
             this.rjDropDownMenuSXS.MenuItemTextColor = System.Drawing.Color.DarkSlateBlue;
             this.rjDropDownMenuSXS.Name = "rjDropDownMenu1";
             this.rjDropDownMenuSXS.PrimaryColor = System.Drawing.Color.DarkSlateBlue;
-            this.rjDropDownMenuSXS.Size = new System.Drawing.Size(258, 202);
-            // 
-            // chữCáiGiảmDầnToolStripMenuItem
-            // 
-            this.chữCáiGiảmDầnToolStripMenuItem.BackColor = System.Drawing.Color.MediumPurple;
-            this.chữCáiGiảmDầnToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.chữCáiGiảmDầnToolStripMenuItem.Name = "chữCáiGiảmDầnToolStripMenuItem";
-            this.chữCáiGiảmDầnToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
-            this.chữCáiGiảmDầnToolStripMenuItem.Text = "Chữ cái giảm dần";
-            this.chữCáiGiảmDầnToolStripMenuItem.Click += new System.EventHandler(this.chữCáiGiảmDầnToolStripMenuItem_Click);
+            this.rjDropDownMenuSXS.Size = new System.Drawing.Size(258, 180);
             // 
             // chữCáiTăngDầnToolStripMenuItem
             // 
@@ -437,7 +447,16 @@
             this.chữCáiTăngDầnToolStripMenuItem.Name = "chữCáiTăngDầnToolStripMenuItem";
             this.chữCáiTăngDầnToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
             this.chữCáiTăngDầnToolStripMenuItem.Text = "Chữ cái tăng dần";
-            this.chữCáiTăngDầnToolStripMenuItem.Click += new System.EventHandler(this.chữCáiTăngDầnToolStripMenuItem_Click);
+            this.chữCáiTăngDầnToolStripMenuItem.Click += new System.EventHandler(this.ChữCáiTăngDầnToolStripMenuItem_Click);
+            // 
+            // chữCáiGiảmDầnToolStripMenuItem
+            // 
+            this.chữCáiGiảmDầnToolStripMenuItem.BackColor = System.Drawing.Color.MediumPurple;
+            this.chữCáiGiảmDầnToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.chữCáiGiảmDầnToolStripMenuItem.Name = "chữCáiGiảmDầnToolStripMenuItem";
+            this.chữCáiGiảmDầnToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
+            this.chữCáiGiảmDầnToolStripMenuItem.Text = "Chữ cái giảm dần";
+            this.chữCáiGiảmDầnToolStripMenuItem.Click += new System.EventHandler(this.ChữCáiGiảmDầnToolStripMenuItem_Click);
             // 
             // giáMuaSáchTăngDầnToolStripMenuItem
             // 
@@ -446,7 +465,7 @@
             this.giáMuaSáchTăngDầnToolStripMenuItem.Name = "giáMuaSáchTăngDầnToolStripMenuItem";
             this.giáMuaSáchTăngDầnToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
             this.giáMuaSáchTăngDầnToolStripMenuItem.Text = "Giá mua sách tăng dần";
-            this.giáMuaSáchTăngDầnToolStripMenuItem.Click += new System.EventHandler(this.giáMuaSáchTăngDầnToolStripMenuItem_Click);
+            this.giáMuaSáchTăngDầnToolStripMenuItem.Click += new System.EventHandler(this.GiáMuaSáchTăngDầnToolStripMenuItem_Click);
             // 
             // giáMuaSáchGiảmDầnToolStripMenuItem
             // 
@@ -455,7 +474,7 @@
             this.giáMuaSáchGiảmDầnToolStripMenuItem.Name = "giáMuaSáchGiảmDầnToolStripMenuItem";
             this.giáMuaSáchGiảmDầnToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
             this.giáMuaSáchGiảmDầnToolStripMenuItem.Text = "Giá mua sách giảm dần";
-            this.giáMuaSáchGiảmDầnToolStripMenuItem.Click += new System.EventHandler(this.giáMuaSáchGiảmDầnToolStripMenuItem_Click);
+            this.giáMuaSáchGiảmDầnToolStripMenuItem.Click += new System.EventHandler(this.GiáMuaSáchGiảmDầnToolStripMenuItem_Click);
             // 
             // mứcĐộBánChạyTăngDầnToolStripMenuItem
             // 
@@ -464,7 +483,7 @@
             this.mứcĐộBánChạyTăngDầnToolStripMenuItem.Name = "mứcĐộBánChạyTăngDầnToolStripMenuItem";
             this.mứcĐộBánChạyTăngDầnToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
             this.mứcĐộBánChạyTăngDầnToolStripMenuItem.Text = "Mức độ bán chạy tăng dần";
-            this.mứcĐộBánChạyTăngDầnToolStripMenuItem.Click += new System.EventHandler(this.mứcĐộBánChạyTăngDầnToolStripMenuItem_Click);
+            this.mứcĐộBánChạyTăngDầnToolStripMenuItem.Click += new System.EventHandler(this.MứcĐộBánChạyTăngDầnToolStripMenuItem_Click);
             // 
             // mứcĐộBánChạyGiảmDầnToolStripMenuItem
             // 
@@ -473,7 +492,7 @@
             this.mứcĐộBánChạyGiảmDầnToolStripMenuItem.Name = "mứcĐộBánChạyGiảmDầnToolStripMenuItem";
             this.mứcĐộBánChạyGiảmDầnToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
             this.mứcĐộBánChạyGiảmDầnToolStripMenuItem.Text = "Mức độ bán chạy giảm dần";
-            this.mứcĐộBánChạyGiảmDầnToolStripMenuItem.Click += new System.EventHandler(this.mứcĐộBánChạyGiảmDầnToolStripMenuItem_Click);
+            this.mứcĐộBánChạyGiảmDầnToolStripMenuItem.Click += new System.EventHandler(this.MứcĐộBánChạyGiảmDầnToolStripMenuItem_Click);
             // 
             // sốLượngSáchHiệnCóTăngDầnToolStripMenuItem
             // 
@@ -482,7 +501,7 @@
             this.sốLượngSáchHiệnCóTăngDầnToolStripMenuItem.Name = "sốLượngSáchHiệnCóTăngDầnToolStripMenuItem";
             this.sốLượngSáchHiệnCóTăngDầnToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
             this.sốLượngSáchHiệnCóTăngDầnToolStripMenuItem.Text = "Số lượng sách hiện có tăng dần";
-            this.sốLượngSáchHiệnCóTăngDầnToolStripMenuItem.Click += new System.EventHandler(this.sốLượngSáchHiệnCóTăngDầnToolStripMenuItem_Click);
+            this.sốLượngSáchHiệnCóTăngDầnToolStripMenuItem.Click += new System.EventHandler(this.SốLượngSáchHiệnCóTăngDầnToolStripMenuItem_Click);
             // 
             // sốLượngSáchHiệnCóGiảmDầnToolStripMenuItem
             // 
@@ -491,7 +510,7 @@
             this.sốLượngSáchHiệnCóGiảmDầnToolStripMenuItem.Name = "sốLượngSáchHiệnCóGiảmDầnToolStripMenuItem";
             this.sốLượngSáchHiệnCóGiảmDầnToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
             this.sốLượngSáchHiệnCóGiảmDầnToolStripMenuItem.Text = "Số lượng sách hiện có giảm dần";
-            this.sốLượngSáchHiệnCóGiảmDầnToolStripMenuItem.Click += new System.EventHandler(this.sốLượngSáchHiệnCóGiảmDầnToolStripMenuItem_Click);
+            this.sốLượngSáchHiệnCóGiảmDầnToolStripMenuItem.Click += new System.EventHandler(this.SốLượngSáchHiệnCóGiảmDầnToolStripMenuItem_Click);
             // 
             // FormQLBS
             // 
@@ -556,11 +575,11 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dgvQLBS;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvQLBS;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID_Book;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NameBook;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NameLanguage;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
     }
 }

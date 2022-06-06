@@ -13,14 +13,14 @@ namespace DoAnPBL3
 {
     public partial class Form_Alert : Form
     {
-        public enum enmAction
+        public enum EnmAction
         {
             wait,
             start,
             close
         }
 
-        public enum enmType
+        public enum EnmType
         {
             Success,
             Warning,
@@ -28,7 +28,7 @@ namespace DoAnPBL3
             Info
         }
 
-        private enmAction action;
+        private EnmAction action;
         private int x, y;
 
         public Form_Alert()
@@ -36,7 +36,7 @@ namespace DoAnPBL3
             InitializeComponent();
         }
 
-        public void showAlert(string msg, enmType type)
+        public void ShowAlert(string msg, EnmType type)
         {
             Opacity = 0.0;
             StartPosition = FormStartPosition.Manual;
@@ -61,39 +61,39 @@ namespace DoAnPBL3
             string projectDirectory = Directory.GetParent(Environment.CurrentDirectory).Parent.FullName;
             switch (type)
             {
-                case enmType.Success:
+                case EnmType.Success:
                     pictureBox1.Image = Image.FromFile(Path.Combine(projectDirectory, @"NotificationIcons\success.png"));
                     BackColor = Color.SeaGreen;
                     break;
-                case enmType.Error:
+                case EnmType.Error:
                     pictureBox1.Image = Image.FromFile(Path.Combine(projectDirectory, @"NotificationIcons\error.png"));
                     BackColor = Color.DarkRed;
                     break;
-                case enmType.Info:
+                case EnmType.Info:
                     pictureBox1.Image = Image.FromFile(Path.Combine(projectDirectory, @"NotificationIcons\info.png"));
                     BackColor = Color.RoyalBlue;
                     break;
-                case enmType.Warning:
+                case EnmType.Warning:
                     pictureBox1.Image = Image.FromFile(Path.Combine(projectDirectory, @"NotificationIcons\warning.png"));
                     BackColor = Color.DarkOrange;
                     break;
             }
             lblMsg.Text = msg;
             Show();
-            action = enmAction.start;
+            action = EnmAction.start;
             timer1.Interval = 1;
             timer1.Start();
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void Timer1_Tick(object sender, EventArgs e)
         {
             switch (action)
             {
-                case enmAction.wait:
+                case EnmAction.wait:
                     timer1.Interval = 5000;
-                    action = enmAction.close;
+                    action = EnmAction.close;
                     break;
-                case enmAction.start:
+                case EnmAction.start:
                     timer1.Interval = 1;
                     Opacity += 0.1;
                     if (x < Location.X)
@@ -104,11 +104,11 @@ namespace DoAnPBL3
                     {
                         if (Opacity == 1.0)
                         {
-                            action = Form_Alert.enmAction.wait;
+                            action = Form_Alert.EnmAction.wait;
                         }
                     }
                     break;
-                case enmAction.close:
+                case EnmAction.close:
                     timer1.Interval = 1;
                     Opacity -= 0.1;
                     Left -= 3;
@@ -120,15 +120,15 @@ namespace DoAnPBL3
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        public void Alert(string msg, Form_Alert.enmType type)
+        public void Alert(string msg, Form_Alert.EnmType type)
         {
             Form_Alert frm = new Form_Alert();
-            frm.showAlert(msg, type);
+            frm.ShowAlert(msg, type);
         }
     }
 }

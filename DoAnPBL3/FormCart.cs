@@ -17,8 +17,8 @@ namespace DoAnPBL3
         private int Count = 0;
         static int z = 0;
         public static string ID_Customer = "";
-        FormNhapMua[] currentChildForm = new FormNhapMua[100];
-        private string accountUsername;
+        readonly FormNhapMua[] currentChildForm = new FormNhapMua[100];
+        private readonly string accountUsername;
 
         public FormCart(string accountUsername)
         {
@@ -35,31 +35,30 @@ namespace DoAnPBL3
             childForm.Show();
         }
 
-        public void Alert(string msg, Form_Alert.enmType type)
+        public void Alert(string msg, Form_Alert.EnmType type)
         {
             Form_Alert frm = new Form_Alert();
-            frm.showAlert(msg, type);
+            frm.ShowAlert(msg, type);
         }
 
         private void FormCart_Load(object sender, EventArgs e)
         {
-            timer1.Tick += new EventHandler(timer1_Tick);
+            timer1.Tick += new EventHandler(Timer1_Tick);
             timer1.Start();
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void Timer1_Tick(object sender, EventArgs e)
         {
             Tinh();
         }
 
-        private void btnOK_Click(object sender, EventArgs e)
+        private void BtnOK_Click(object sender, EventArgs e)
         {
-            int Num = 0;
             if (tbNumber.Texts == "")
                 RJMessageBox.Show("Vui lòng nhập số lượng loại sách muốn mua", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             else
             {
-                Num = Convert.ToInt32(tbNumber.Texts);
+                int Num = Convert.ToInt32(tbNumber.Texts);
                 Count += Num;
                 if (Count <= 100)
                 {
@@ -80,7 +79,7 @@ namespace DoAnPBL3
             panelDesktop.Focus();
         }
 
-        private void tbNumber__TextChanged(object sender, EventArgs e)
+        private void TbNumber__TextChanged(object sender, EventArgs e)
         {
             bool flag = true;
             byte[] asciiBytes = Encoding.ASCII.GetBytes(tbNumber.Texts);
@@ -99,7 +98,7 @@ namespace DoAnPBL3
             }
         }
 
-        private void rjbtnBuy_Click(object sender, EventArgs e)
+        private void RjbtnBuy_Click(object sender, EventArgs e)
         {
             bool check = true;
             int[] error = new int[100];
@@ -202,7 +201,7 @@ namespace DoAnPBL3
                                 context.SaveChanges();
                             }
 
-                            Alert("Mua sách thành công", Form_Alert.enmType.Success);
+                            Alert("Mua sách thành công", Form_Alert.EnmType.Success);
                             Close();
                         }
                         z = 0;
@@ -225,13 +224,13 @@ namespace DoAnPBL3
             }
         }
 
-        private void rjbtnCancel_Click(object sender, EventArgs e)
+        private void RjbtnCancel_Click(object sender, EventArgs e)
         {
             z = 0;
             Close();
         }
 
-        private void tbNumber_KeyPress(object sender, KeyPressEventArgs e)
+        private void TbNumber_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
             {
@@ -240,12 +239,12 @@ namespace DoAnPBL3
             }
         }
 
-        private void panelDesktop_ControlAdded(object sender, ControlEventArgs e)
+        private void PanelDesktop_ControlAdded(object sender, ControlEventArgs e)
         {
             Tinh();
         }
 
-        private void panelDesktop_ControlRemoved(object sender, ControlEventArgs e)
+        private void PanelDesktop_ControlRemoved(object sender, ControlEventArgs e)
         {
             z = panelDesktop.Controls.Count;
             Count--;
@@ -257,7 +256,7 @@ namespace DoAnPBL3
             Tinh();
         }
 
-        private void panelDesktop_Paint(object sender, PaintEventArgs e)
+        private void PanelDesktop_Paint(object sender, PaintEventArgs e)
         {
             Tinh();
         }

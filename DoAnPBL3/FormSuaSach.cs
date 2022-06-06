@@ -26,10 +26,10 @@ namespace DoAnPBL3
             this.ID_Book = ID_Book;
         }
 
-        public void Alert(string msg, Form_Alert.enmType type)
+        public void Alert(string msg, Form_Alert.EnmType type)
         {
             Form_Alert frm = new Form_Alert();
-            frm.showAlert(msg, type);
+            frm.ShowAlert(msg, type);
         }
 
         private void FormSuaSach_Load(object sender, EventArgs e)
@@ -138,7 +138,7 @@ namespace DoAnPBL3
             }
         }
 
-        private void rjbtnOK_Click(object sender, EventArgs e)
+        private void RjbtnOK_Click(object sender, EventArgs e)
         {
             bool isPublishDateContainsAlpha, isValidFormatPublishDate, isPublishDateGreaterThanCurrentDate = false,
                 isValidNameBook, isValidLanguage, isValidAuthor, isValidPublisher, isValidGenre, isValidPrice,
@@ -366,9 +366,10 @@ namespace DoAnPBL3
                         book.Quantity = Convert.ToInt32(quantity);
                         book.Price = Convert.ToInt32(price);
                         book.Unit = cbbUnit.SelectedItem.ToString();
+                        book.Image = bookImage;
                         // Update to DB
                         context.SaveChanges();
-                        Alert("Thay đổi thông tin nhân viên thành công", Form_Alert.enmType.Success);
+                        Alert("Thay đổi thông tin sách thành công", Form_Alert.EnmType.Success);
                         Close();
                     }
                 }
@@ -377,11 +378,11 @@ namespace DoAnPBL3
             }
             else
             {
-                Alert("Dữ liệu không hợp lệ", Form_Alert.enmType.Error);
+                Alert("Dữ liệu không hợp lệ", Form_Alert.EnmType.Error);
             }
         }
 
-        private void rjbtnCancel_Click(object sender, EventArgs e)
+        private void RjbtnCancel_Click(object sender, EventArgs e)
         {
             bool isNewNameBook, isNewPublishDate, isNewAuthor, isNewLanguage, isNewPublisher,
                     isNewGenre, isNewQuantity, isNewPrice, isNewImage;
@@ -520,7 +521,7 @@ namespace DoAnPBL3
 
         private byte[] ImageToByteArray(Guna2PictureBox pictureBox)
         {
-            using (Bitmap bitmap = new Bitmap(gpbBookImg.ImageLocation))
+            using (Bitmap bitmap = new Bitmap(pictureBox.ImageLocation))
             {
                 MemoryStream memoryStream = new MemoryStream();
                 try
@@ -536,18 +537,20 @@ namespace DoAnPBL3
             }
         }
 
-        private void btnBookImg_Click(object sender, EventArgs e)
+        private void BtnBookImg_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Title = "Chọn ảnh";
-            openFileDialog.Filter = "Image Files(*.gif;*.jpg;*.jpeg;*.bmp;*.wmf;*.png)|*.gif;*.jpg;*.jpeg;*.bmp;*.wmf;*.png";
+            OpenFileDialog openFileDialog = new OpenFileDialog
+            {
+                Title = "Chọn ảnh",
+                Filter = "Image Files(*.gif;*.jpg;*.jpeg;*.bmp;*.wmf;*.png)|*.gif;*.jpg;*.jpeg;*.bmp;*.wmf;*.png"
+            };
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 gpbBookImg.ImageLocation = openFileDialog.FileName;
             }
         }
 
-        private void btnDeleteImg_Click(object sender, EventArgs e)
+        private void BtnDeleteImg_Click(object sender, EventArgs e)
         {
             if (gpbBookImg.ImageLocation != null)
             {

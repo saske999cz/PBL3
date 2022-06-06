@@ -64,7 +64,7 @@ namespace DoAnPBL3
             this.txtEmail.SelectedText = "";
             this.txtEmail.Size = new System.Drawing.Size(251, 36);
             this.txtEmail.TabIndex = 16;
-            this.txtEmail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEmail_KeyPress);
+            this.txtEmail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtEmail_KeyPress);
             // 
             // txtEmailPassword
             // 
@@ -88,7 +88,7 @@ namespace DoAnPBL3
             this.txtEmailPassword.SelectedText = "";
             this.txtEmailPassword.Size = new System.Drawing.Size(251, 36);
             this.txtEmailPassword.TabIndex = 17;
-            this.txtEmailPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEmailPassword_KeyPress);
+            this.txtEmailPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtEmailPassword_KeyPress);
             // 
             // btnSendCode
             // 
@@ -106,7 +106,7 @@ namespace DoAnPBL3
             this.btnSendCode.TabIndex = 20;
             this.btnSendCode.Text = "Gửi mã";
             this.btnSendCode.UseTransparentBackground = true;
-            this.btnSendCode.Click += new System.EventHandler(this.btnSendCode_ClickAsync);
+            this.btnSendCode.Click += new System.EventHandler(this.BtnSendCode_ClickAsync);
             // 
             // btnBack
             // 
@@ -124,7 +124,7 @@ namespace DoAnPBL3
             this.btnBack.TabIndex = 21;
             this.btnBack.Text = "Quay về";
             this.btnBack.UseTransparentBackground = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            this.btnBack.Click += new System.EventHandler(this.BtnBack_Click);
             // 
             // guna2PictureBox1
             // 

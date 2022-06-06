@@ -84,43 +84,46 @@ namespace DoAnPBL3
             public static Color color6 = Color.FromArgb(24, 161, 251);
         }
 
-        private void btnTKS_MouseEnter(object sender, EventArgs e)
+        private void BtnTKS_MouseEnter(object sender, EventArgs e)
         {
             btnTKS.BackColor = RGBColors.color4;
         }
 
-        private void btnSXS_MouseEnter(object sender, EventArgs e)
+        private void BtnSXS_MouseEnter(object sender, EventArgs e)
         {
             btnSXS.BackColor = RGBColors.color4;
         }
 
-        private void btnHDTN_MouseEnter(object sender, EventArgs e)
+        private void BtnHDTN_MouseEnter(object sender, EventArgs e)
         {
             btnHDTN.BackColor = RGBColors.color4;
         }
 
-        private void btnTKS_MouseLeave(object sender, EventArgs e)
+        private void BtnTKS_MouseLeave(object sender, EventArgs e)
         {
             btnTKS.BackColor = Color.FromArgb(31, 30, 68);
         }
 
-        private void btnSXS_MouseLeave(object sender, EventArgs e)
+        private void BtnSXS_MouseLeave(object sender, EventArgs e)
         {
             btnSXS.BackColor = Color.RoyalBlue;
         }
 
-        private void btnHDTN_MouseLeave(object sender, EventArgs e)
+        private void BtnHDTN_MouseLeave(object sender, EventArgs e)
         {
             btnHDTN.BackColor = Color.RoyalBlue;
         }
 
-        private void btnSXS_Click(object sender, EventArgs e)
+        private void BtnSXS_Click(object sender, EventArgs e)
         {
             rjDropDownMenuSXS.Show(btnSXS, new Point(0, btnSXS.Height));
         }
 
         private void FormQLBS_Load(object sender, EventArgs e)
         {
+            dgvQLBS.RowHeadersVisible = true;
+            dgvQLBS.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            dgvQLBS.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI Semibold", 10, FontStyle.Bold);
             using (BookStoreContext context = new BookStoreContext())
             {
                 var listBooks = context.Books.Join(
@@ -144,58 +147,44 @@ namespace DoAnPBL3
                 lblSSTA.Text = listEnglishBooks.Count().ToString();
             }
             rjDropDownMenuSXS.IsMainMenu = false;
-            dgvQLBS.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI Semibold", 10, FontStyle.Bold);
         }
 
-        private void xuiSegmentBS_Click(object sender, EventArgs e)
+        private void XuiSegmentBS_Click(object sender, EventArgs e)
         {
             using (BookStoreContext context = new BookStoreContext())
             {
+                var listBooks = context.Books
+                        .Join(
+                            context.Languages,
+                            book => book.ID_Language,
+                            language => language.ID_Language,
+                            (book, language) => new
+                            {
+                                book.ID_Book,
+                                book.NameBook,
+                                language.NameLanguage,
+                                book.Quantity,
+                                book.Price
+                            })
+                        .ToList();
+                var listVietnameseBooks = listBooks.Where(book => book.NameLanguage == "Tiếng Việt").ToList();
+                var listEnglishBooks = listBooks.Where(book => book.NameLanguage == "Tiếng Anh").ToList();
+                lblTSSDB.Text = listBooks.Count().ToString();
+                lblSSTV.Text = listVietnameseBooks.Count().ToString();
+                lblSSTA.Text = listEnglishBooks.Count().ToString();
                 // Tất cả
                 if (xuiSegmentBS.SelectedIndex == 0)
-                {
-                    FormQLBS_Load(sender, e);
-                }
+                    dgvQLBS.DataSource = listBooks;
                 // Sách tiếng việt
                 else if (xuiSegmentBS.SelectedIndex == 1)
-                {
-                    dgvQLBS.DataSource = context.Books.Join(
-                        context.Languages,
-                        book => book.ID_Language,
-                        lang => lang.ID_Language,
-                        (book, lang) => new
-                        {
-                            book.ID_Book,
-                            book.NameBook,
-                            lang.NameLanguage,
-                            book.Quantity,
-                            book.Price
-                        })
-                        .Where(lang => lang.NameLanguage == "Tiếng Việt")
-                        .ToList();
-                }
+                    dgvQLBS.DataSource = listVietnameseBooks;
                 // Sách tiếng anh
                 else
-                {
-                    dgvQLBS.DataSource = context.Books.Join(
-                        context.Languages,
-                        book => book.ID_Language,
-                        lang => lang.ID_Language,
-                        (book, lang) => new
-                        {
-                            book.ID_Book,
-                            book.NameBook,
-                            lang.NameLanguage,
-                            book.Quantity,
-                            book.Price
-                        })
-                        .Where(lang => lang.NameLanguage == "Tiếng Anh")
-                        .ToList();
-                }
+                    dgvQLBS.DataSource = listEnglishBooks;
             }
         }
 
-        private void chữCáiGiảmDầnToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ChữCáiGiảmDầnToolStripMenuItem_Click(object sender, EventArgs e)
         {
             using (BookStoreContext context = new BookStoreContext())
             {
@@ -218,7 +207,7 @@ namespace DoAnPBL3
             }
         }
 
-        private void chữCáiTăngDầnToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ChữCáiTăngDầnToolStripMenuItem_Click(object sender, EventArgs e)
         {
             using (BookStoreContext context = new BookStoreContext())
             {
@@ -241,7 +230,7 @@ namespace DoAnPBL3
             }
         }
 
-        private void giáMuaSáchTăngDầnToolStripMenuItem_Click(object sender, EventArgs e)
+        private void GiáMuaSáchTăngDầnToolStripMenuItem_Click(object sender, EventArgs e)
         {
             using (BookStoreContext context = new BookStoreContext())
             {
@@ -264,7 +253,7 @@ namespace DoAnPBL3
             }
         }
 
-        private void giáMuaSáchGiảmDầnToolStripMenuItem_Click(object sender, EventArgs e)
+        private void GiáMuaSáchGiảmDầnToolStripMenuItem_Click(object sender, EventArgs e)
         {
             using (BookStoreContext context = new BookStoreContext())
             {
@@ -287,7 +276,7 @@ namespace DoAnPBL3
             }
         }
 
-        private void mứcĐộBánChạyTăngDầnToolStripMenuItem_Click(object sender, EventArgs e)
+        private void MứcĐộBánChạyTăngDầnToolStripMenuItem_Click(object sender, EventArgs e)
         {
             using (BookStoreContext context = new BookStoreContext())
             {
@@ -295,7 +284,7 @@ namespace DoAnPBL3
             }
         }
 
-        private void mứcĐộBánChạyGiảmDầnToolStripMenuItem_Click(object sender, EventArgs e)
+        private void MứcĐộBánChạyGiảmDầnToolStripMenuItem_Click(object sender, EventArgs e)
         {
             using (BookStoreContext context = new BookStoreContext())
             {
@@ -303,7 +292,7 @@ namespace DoAnPBL3
             }
         }
 
-        private void sốLượngSáchHiệnCóTăngDầnToolStripMenuItem_Click(object sender, EventArgs e)
+        private void SốLượngSáchHiệnCóTăngDầnToolStripMenuItem_Click(object sender, EventArgs e)
         {
             using (BookStoreContext context = new BookStoreContext())
             {
@@ -326,7 +315,7 @@ namespace DoAnPBL3
             }
         }
 
-        private void sốLượngSáchHiệnCóGiảmDầnToolStripMenuItem_Click(object sender, EventArgs e)
+        private void SốLượngSáchHiệnCóGiảmDầnToolStripMenuItem_Click(object sender, EventArgs e)
         {
             using (BookStoreContext context = new BookStoreContext())
             {
@@ -347,6 +336,12 @@ namespace DoAnPBL3
                     .Select(book => book)
                     .ToList();
             }
+        }
+
+        private void dgvQLBS_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            string ID_Book = dgvQLBS.CurrentRow.Cells["ID_Book"].Value.ToString();
+            new FormTTS(ID_Book).ShowDialog();
         }
     }
 }

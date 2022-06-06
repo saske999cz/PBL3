@@ -126,7 +126,7 @@ namespace DoAnPBL3
             this.btnDeleteImg.TextColor = System.Drawing.Color.White;
             this.btnDeleteImg.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDeleteImg.UseVisualStyleBackColor = false;
-            this.btnDeleteImg.Click += new System.EventHandler(this.btnDeleteImg_Click);
+            this.btnDeleteImg.Click += new System.EventHandler(this.BtnDeleteImg_Click);
             // 
             // btnEditImg
             // 
@@ -151,7 +151,7 @@ namespace DoAnPBL3
             this.btnEditImg.TextColor = System.Drawing.Color.White;
             this.btnEditImg.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEditImg.UseVisualStyleBackColor = false;
-            this.btnEditImg.Click += new System.EventHandler(this.btnEditImg_Click);
+            this.btnEditImg.Click += new System.EventHandler(this.BtnEditImg_Click);
             // 
             // btnSaveChange
             // 
@@ -170,7 +170,7 @@ namespace DoAnPBL3
             this.btnSaveChange.Size = new System.Drawing.Size(110, 36);
             this.btnSaveChange.TabIndex = 5;
             this.btnSaveChange.Text = "Lưu";
-            this.btnSaveChange.Click += new System.EventHandler(this.btnSaveChange_Click);
+            this.btnSaveChange.Click += new System.EventHandler(this.BtnSaveChange_Click);
             // 
             // pbAvatar
             // 
@@ -252,7 +252,7 @@ namespace DoAnPBL3
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormSettingAccountNV";
-            this.Text = "FormSettingAccountNV";
+            this.Text = "Thay đổi tài khoản";
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

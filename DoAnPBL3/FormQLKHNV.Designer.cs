@@ -151,7 +151,7 @@ namespace DoAnPBL3
             this.btnAddKH.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAddKH.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAddKH.UseVisualStyleBackColor = false;
-            this.btnAddKH.Click += new System.EventHandler(this.btnAddKH_Click);
+            this.btnAddKH.Click += new System.EventHandler(this.BtnAddKH_Click);
             // 
             // btnTKKH
             // 

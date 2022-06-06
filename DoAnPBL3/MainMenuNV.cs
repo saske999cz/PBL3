@@ -16,11 +16,10 @@ namespace DoAnPBL3
     public partial class MainMenuNV : Form
     {
         private IconButton btnCurrent;
-        private Panel btnLeftBorder;
+        private readonly Panel btnLeftBorder;
         private Form currentChildForm;
-        private string accountUsername;
-        private string password;
-        public static FormWindowState windowState = FormWindowState.Normal;
+        private readonly string accountUsername;
+        private readonly string password;
 
         public MainMenuNV(string accountUsername, string password)
         {
@@ -106,25 +105,25 @@ namespace DoAnPBL3
             lblTitleChildForm.Text = childForm.Text;
         }
 
-        private void btnQLS_Click(object sender, EventArgs e)
+        private void BtnQLS_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color6);
             OpenChildForm(new FormQLS(accountUsername, password));
         }
 
-        private void btnBS_Click(object sender, EventArgs e)
+        private void BtnBS_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color2);
             OpenChildForm(new FormQLBSNV(accountUsername));
         }
 
-        private void btnQLKH_Click(object sender, EventArgs e)
+        private void BtnQLKH_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color4);
             OpenChildForm(new FormQLKHNV());
         }
 
-        private void btnHome_Click(object sender, EventArgs e)
+        private void BtnHome_Click(object sender, EventArgs e)
         {
             if (currentChildForm != null)
             {
@@ -148,63 +147,61 @@ namespace DoAnPBL3
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-        private void panelTitleBar_MouseDown(object sender, MouseEventArgs e)
+        private void PanelTitleBar_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(Handle, 0x112, 0xf012, 0);
         }
 
-        private void btnMaximize_Click(object sender, EventArgs e)
+        private void BtnMaximize_Click(object sender, EventArgs e)
         {
             if (WindowState == FormWindowState.Normal)
             {
                 WindowState = FormWindowState.Maximized;
-                windowState = FormWindowState.Maximized;
             }
             else
             {
                 WindowState = FormWindowState.Normal;
-                windowState = FormWindowState.Normal;
             }
         }
 
 
-        private void btnClose_Click(object sender, EventArgs e)
+        private void BtnClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void btnClose_MouseEnter(object sender, EventArgs e)
+        private void BtnClose_MouseEnter(object sender, EventArgs e)
         {
             btnClose.BackColor = RGBColors.color5;
         }
 
-        private void btnClose_MouseLeave(object sender, EventArgs e)
+        private void BtnClose_MouseLeave(object sender, EventArgs e)
         {
             btnClose.BackColor = Color.FromArgb(64, 64, 64);
         }
 
-        private void btnMaximize_MouseEnter(object sender, EventArgs e)
+        private void BtnMaximize_MouseEnter(object sender, EventArgs e)
         {
             btnMaximize.BackColor = RGBColors.color1;
         }
 
-        private void btnMaximize_MouseLeave(object sender, EventArgs e)
+        private void BtnMaximize_MouseLeave(object sender, EventArgs e)
         {
             btnMaximize.BackColor = Color.FromArgb(64, 64, 64);
         }
 
-        private void btnMinimize_MouseEnter(object sender, EventArgs e)
+        private void BtnMinimize_MouseEnter(object sender, EventArgs e)
         {
             btnMinimize.BackColor = RGBColors.color6;
         }
 
-        private void btnMinimize_MouseLeave(object sender, EventArgs e)
+        private void BtnMinimize_MouseLeave(object sender, EventArgs e)
         {
             btnMinimize.BackColor = Color.FromArgb(64, 64, 64);
         }
 
-        private void btnMinimize_Click(object sender, EventArgs e)
+        private void BtnMinimize_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
         }
@@ -245,12 +242,12 @@ namespace DoAnPBL3
         {
             rjddmUserSettingMenu.Show(EmployeePicture, new Point(0, EmployeePicture.Height));
         }
-        private void lblEmployeeUsername_Click(object sender, EventArgs e)
+        private void LblEmployeeUsername_Click(object sender, EventArgs e)
         {
             EmployeePicture_Click(sender, e);
         }
 
-        private void rjddmUserSettingMenu_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        private void RjddmUserSettingMenu_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
             if (đăngXuấtToolStripMenuItem.Selected == true)
             {

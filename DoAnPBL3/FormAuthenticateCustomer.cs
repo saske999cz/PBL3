@@ -25,13 +25,13 @@ namespace DoAnPBL3
             guna2ShadowForm1.SetShadowForm(this);
         }
 
-        public void Alert(string msg, Form_Alert.enmType type)
+        public void Alert(string msg, Form_Alert.EnmType type)
         {
             Form_Alert frm = new Form_Alert();
-            frm.showAlert(msg, type);
+            frm.ShowAlert(msg, type);
         }
 
-        private void rjbtnOK_Click(object sender, EventArgs e)
+        private void RjbtnOK_Click(object sender, EventArgs e)
         {
             if (tbConfirmPhone.Text.Trim() == "")
                 RJMessageBox.Show("Vui lòng nhập SĐT của khách hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -75,17 +75,17 @@ namespace DoAnPBL3
             }
         }
 
-        private void rjbtnAdd_Click(object sender, EventArgs e)
+        private void RjbtnAdd_Click(object sender, EventArgs e)
         {
             new FormAddKH().ShowDialog();
         }
 
-        private void rjbtnCancel_Click(object sender, EventArgs e)
+        private void RjbtnCancel_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void tbConfirmPass_KeyPress(object sender, KeyPressEventArgs e)
+        private void TbConfirmPass_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
             {

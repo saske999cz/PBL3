@@ -24,7 +24,7 @@ namespace DoAnPBL3
             }
         }
 
-        private void tbIDBook_TextChanged(object sender, EventArgs e)
+        private void TbIDBook_TextChanged(object sender, EventArgs e)
         {
             using (BookStoreContext context = new BookStoreContext())
             {
@@ -46,7 +46,7 @@ namespace DoAnPBL3
             }
         }
 
-        private void tbQuantity_TextChanged(object sender, EventArgs e)
+        private void TbQuantity_TextChanged(object sender, EventArgs e)
         {
             bool flag = true;
             byte[] asciiBytes = Encoding.ASCII.GetBytes(tbQuantity.Text);
@@ -83,7 +83,7 @@ namespace DoAnPBL3
             Parent.Refresh();
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
+        private void BtnDelete_Click(object sender, EventArgs e)
         {
             Close();
         }

@@ -19,9 +19,9 @@ namespace DoAnPBL3
             tbTitle.Text = title;
         }
 
-        private void rjbtnCancel_Click(object sender, EventArgs e)
+        private void RjbtnCancel_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
     }
 }

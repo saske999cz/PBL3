@@ -12,7 +12,7 @@ namespace DoAnPBL3
 {
     public partial class FormQLBSNV : Form
     {
-        private string accountUsername;
+        private readonly string accountUsername;
 
         public FormQLBSNV(string accountUsername)
         {
@@ -20,14 +20,17 @@ namespace DoAnPBL3
             this.accountUsername = accountUsername;
         }
 
-        public void Alert(string msg, Form_Alert.enmType type)
+        public void Alert(string msg, Form_Alert.EnmType type)
         {
             Form_Alert frm = new Form_Alert();
-            frm.showAlert(msg, type);
+            frm.ShowAlert(msg, type);
         }
 
         private void FormQLBSNV_Load(object sender, EventArgs e)
         {
+            dgvQLBSNV.RowHeadersVisible = true;
+            dgvQLBSNV.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            dgvQLBSNV.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI Semibold", 10, FontStyle.Bold);
             using (BookStoreContext context = new BookStoreContext())
             {
                 var listBooks = context.Books
@@ -54,23 +57,23 @@ namespace DoAnPBL3
             }
         }
 
-        private void rjbtnBuy_Click(object sender, EventArgs e)
+        private void RjbtnBuy_Click(object sender, EventArgs e)
         {
             new FormCart(accountUsername).ShowDialog();
             FormQLBSNV_Load(sender, e);
         }
 
-        private void rjbtnOrder_Click(object sender, EventArgs e)
+        private void RjbtnOrder_Click(object sender, EventArgs e)
         {
             RJMessageBox.Show("Đặt hàng");
         }
 
-        private void rjbtnAddCart_Click(object sender, EventArgs e)
+        private void RjbtnAddCart_Click(object sender, EventArgs e)
         {
             RJMessageBox.Show("Thêm vào giỏ hàng");
         }
 
-        private void rjtbTKS_KeyPress(object sender, KeyPressEventArgs e)
+        private void RjtbTKS_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
             {
@@ -79,19 +82,15 @@ namespace DoAnPBL3
             }
         }
 
-        private void btnTKS_Click(object sender, EventArgs e)
+        private void BtnTKS_Click(object sender, EventArgs e)
         {
             using (BookStoreContext context = new BookStoreContext())
             {
                 if (rjtbTKS.Texts.Trim() == "")
-                {
                     RJMessageBox.Show("Vui lòng điền thông tin sách cần tìm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
                 else
                 {
-                    if (rjtbTKS.Texts.Length == 5)
-                    {
-                        var listBooks = context.Books
+                    var listBooks = context.Books
                             .Join(
                                 context.Languages,
                                 book => book.ID_Language,
@@ -104,95 +103,74 @@ namespace DoAnPBL3
                                     book.Quantity,
                                     book.Price
                                 })
+                            .Select(book => book);
+                    if (rjtbTKS.Texts.Length == 5)
+                    {
+                        int numFindBook = listBooks
                             .Where(book => book.ID_Book == rjtbTKS.Texts)
-                            .Select(book => book)
-                            .ToList();
-                        if (listBooks.Count() == 0)
+                            .Count();
+                        if (numFindBook == 0)
                             RJMessageBox.Show("Không tìm thấy", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         else
-                            dgvQLBSNV.DataSource = listBooks;
+                            dgvQLBSNV.DataSource = listBooks
+                                .Where(book => book.ID_Book == rjtbTKS.Texts)
+                                .ToList();
                     }
                     else
                     {
-                        var listBooks = context.Books
-                            .Join(
-                                context.Languages,
-                                book => book.ID_Language,
-                                lang => lang.ID_Language,
-                                (book, lang) => new
-                                {
-                                    book.ID_Book,
-                                    book.NameBook,
-                                    lang.NameLanguage,
-                                    book.Quantity,
-                                    book.Price
-                                })
+                        int numFindBook = listBooks
                             .Where(book => book.NameBook.Contains(rjtbTKS.Texts))
-                            .Select(book => book)
-                            .ToList();
-                        if (listBooks.Count() == 0)
+                            .Count();
+                        if (numFindBook == 0)
                             RJMessageBox.Show("Không tìm thấy", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         else
-                            dgvQLBSNV.DataSource = listBooks;
+                            dgvQLBSNV.DataSource = listBooks
+                                .Where(book => book.NameBook.Contains(rjtbTKS.Texts))
+                                .ToList();
                     }
                 }
             }
         }
 
-        private void xuiSegmentSach_Click(object sender, EventArgs e)
+        private void XuiSegmentSach_Click(object sender, EventArgs e)
         {
             using (BookStoreContext context = new BookStoreContext())
             {
+                var listBooks = context.Books
+                        .Join(
+                            context.Languages,
+                            book => book.ID_Language,
+                            language => language.ID_Language,
+                            (book, language) => new
+                            {
+                                book.ID_Book,
+                                book.NameBook,
+                                language.NameLanguage,
+                                book.Quantity,
+                                book.Price
+                            })
+                        .ToList();
+                var listVietnameseBooks = listBooks.Where(book => book.NameLanguage == "Tiếng Việt").ToList();
+                var listEnglishBooks = listBooks.Where(book => book.NameLanguage == "Tiếng Anh").ToList();
+                lblTSSDB.Text = listBooks.Count().ToString();
+                lblSSTV.Text = listVietnameseBooks.Count().ToString();
+                lblSSTA.Text = listEnglishBooks.Count().ToString();
                 // Tất cả
                 if (xuiSegmentSach.SelectedIndex == 0)
-                {
-                    FormQLBSNV_Load(sender, e);
-                }
+                    dgvQLBSNV.DataSource = listBooks;
                 // Sách tiếng việt
                 else if (xuiSegmentSach.SelectedIndex == 1)
-                {
-                    dgvQLBSNV.DataSource = context.Books
-                        .Join(
-                            context.Languages,
-                            book => book.ID_Language,
-                            language => language.ID_Language,
-                            (book, language) => new
-                            {
-                                book.ID_Book,
-                                book.NameBook,
-                                language.NameLanguage,
-                                book.Quantity,
-                                book.Price,
-                            })
-                        .Where(lang => lang.NameLanguage == "Tiếng Việt")
-                        .ToList();
-                }
+                    dgvQLBSNV.DataSource = listVietnameseBooks;
                 // Sách tiếng anh
                 else
-                {
-                    dgvQLBSNV.DataSource = context.Books
-                        .Join(
-                            context.Languages,
-                            book => book.ID_Language,
-                            language => language.ID_Language,
-                            (book, language) => new
-                            {
-                                book.ID_Book,
-                                book.NameBook,
-                                language.NameLanguage,
-                                book.Quantity,
-                                book.Price,
-                            })
-                        .Where(lang => lang.NameLanguage == "Tiếng Anh")
-                        .ToList();
-                }
+                    dgvQLBSNV.DataSource = listEnglishBooks;
             }
         }
 
-        private void dgvQLBSNV_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        private void DgvQLBSNV_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            string ID_Book = dgvQLBSNV.CurrentRow.Cells["ID"].Value.ToString();
-            new FormTTS(ID_Book).Show();
+            string ID_Book = dgvQLBSNV.CurrentRow.Cells["ID_Book"].Value.ToString();
+            new FormTTS(ID_Book).ShowDialog();
         }
     }
 }

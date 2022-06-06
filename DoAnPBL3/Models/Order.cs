@@ -16,10 +16,10 @@ namespace DoAnPBL3.Models
             OrderDetails = new HashSet<OrderDetail>();
         }
 
-        public Order(string id_order, DateTime date, int totalPrice, string id_customer, string id_employee)
+        public Order(string id_order, DateTime orderDate, int totalPrice, string id_customer, string id_employee)
         {
             ID_Order = id_order;
-            Date = date;
+            OrderDate = orderDate;
             TotalPrice = totalPrice;
             ID_Customer = id_customer;
             ID_Employee = id_employee;
@@ -33,7 +33,7 @@ namespace DoAnPBL3.Models
 
         [Column("NgayTaoHoaDon")]
         [Required(ErrorMessage = "Ngày tạo hóa đơn không được để trống")]
-        public DateTime Date { get; set; }
+        public DateTime OrderDate { get; set; }
 
         [Column("TongTien")]
         [Required(ErrorMessage = "Tổng tiền của hóa đơn không được để trống")]

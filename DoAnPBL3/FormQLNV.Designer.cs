@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormQLNV));
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.label1 = new System.Windows.Forms.Label();
@@ -52,13 +53,13 @@
             this.lblTSNV = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.rjtbTKNV = new DoAnPBL3.RJTextBox();
             this.dgvQLNV = new Guna.UI2.WinForms.Guna2DataGridView();
             this.ID_Employee = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FullNameEmployee = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rjtbTKNV = new DoAnPBL3.RJTextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -341,29 +342,6 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
-            // rjtbTKNV
-            // 
-            this.rjtbTKNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(35)))));
-            this.rjtbTKNV.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(35)))));
-            this.rjtbTKNV.BorderFocusColor = System.Drawing.Color.DeepSkyBlue;
-            this.rjtbTKNV.BorderRadius = 15;
-            this.rjtbTKNV.BorderSize = 1;
-            this.rjtbTKNV.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjtbTKNV.ForeColor = System.Drawing.Color.Silver;
-            this.rjtbTKNV.Location = new System.Drawing.Point(7, 134);
-            this.rjtbTKNV.Margin = new System.Windows.Forms.Padding(4);
-            this.rjtbTKNV.Multiline = false;
-            this.rjtbTKNV.Name = "rjtbTKNV";
-            this.rjtbTKNV.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
-            this.rjtbTKNV.PasswordChar = false;
-            this.rjtbTKNV.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(83)))), ((int)(((byte)(103)))));
-            this.rjtbTKNV.PlaceholderText = "Tìm kiếm theo tên hoặc SĐT";
-            this.rjtbTKNV.Size = new System.Drawing.Size(250, 29);
-            this.rjtbTKNV.TabIndex = 14;
-            this.rjtbTKNV.Texts = "";
-            this.rjtbTKNV.UnderlinedStyle = false;
-            this.rjtbTKNV.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.RjtbTKNV_KeyPress);
-            // 
             // dgvQLNV
             // 
             this.dgvQLNV.AllowUserToAddRows = false;
@@ -378,7 +356,6 @@
             this.dgvQLNV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvQLNV.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
             this.dgvQLNV.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvQLNV.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvQLNV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(16)))), ((int)(((byte)(221)))));
@@ -409,7 +386,16 @@
             this.dgvQLNV.Location = new System.Drawing.Point(11, 170);
             this.dgvQLNV.Name = "dgvQLNV";
             this.dgvQLNV.ReadOnly = true;
-            this.dgvQLNV.RowHeadersWidth = 51;
+            this.dgvQLNV.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvQLNV.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvQLNV.RowHeadersWidth = 60;
             this.dgvQLNV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvQLNV.Size = new System.Drawing.Size(816, 413);
             this.dgvQLNV.TabIndex = 47;
@@ -434,6 +420,7 @@
             this.dgvQLNV.ThemeStyle.RowsStyle.Height = 22;
             this.dgvQLNV.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvQLNV.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvQLNV.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DgvQLNV_RowHeaderMouseClick);
             // 
             // ID_Employee
             // 
@@ -471,9 +458,32 @@
             // 
             this.Phone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Phone.DataPropertyName = "Phone";
-            this.Phone.HeaderText = "Phone";
+            this.Phone.HeaderText = "Số điện thoại";
             this.Phone.Name = "Phone";
             this.Phone.ReadOnly = true;
+            // 
+            // rjtbTKNV
+            // 
+            this.rjtbTKNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(35)))));
+            this.rjtbTKNV.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(35)))));
+            this.rjtbTKNV.BorderFocusColor = System.Drawing.Color.DeepSkyBlue;
+            this.rjtbTKNV.BorderRadius = 15;
+            this.rjtbTKNV.BorderSize = 1;
+            this.rjtbTKNV.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjtbTKNV.ForeColor = System.Drawing.Color.Silver;
+            this.rjtbTKNV.Location = new System.Drawing.Point(7, 134);
+            this.rjtbTKNV.Margin = new System.Windows.Forms.Padding(4);
+            this.rjtbTKNV.Multiline = false;
+            this.rjtbTKNV.Name = "rjtbTKNV";
+            this.rjtbTKNV.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
+            this.rjtbTKNV.PasswordChar = false;
+            this.rjtbTKNV.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(83)))), ((int)(((byte)(103)))));
+            this.rjtbTKNV.PlaceholderText = "Tìm kiếm theo tên hoặc SĐT";
+            this.rjtbTKNV.Size = new System.Drawing.Size(250, 29);
+            this.rjtbTKNV.TabIndex = 14;
+            this.rjtbTKNV.Texts = "";
+            this.rjtbTKNV.UnderlinedStyle = false;
+            this.rjtbTKNV.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.RjtbTKNV_KeyPress);
             // 
             // FormQLNV
             // 

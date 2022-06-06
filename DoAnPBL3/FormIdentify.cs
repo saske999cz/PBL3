@@ -31,13 +31,13 @@ namespace DoAnPBL3
             guna2ShadowForm1.SetShadowForm(this);
         }
 
-        public void Alert(string msg, Form_Alert.enmType type)
+        public void Alert(string msg, Form_Alert.EnmType type)
         {
             Form_Alert frm = new Form_Alert();
-            frm.showAlert(msg, type);
+            frm.ShowAlert(msg, type);
         }
 
-        private void rjbtnOK_Click(object sender, EventArgs e)
+        private void RjbtnOK_Click(object sender, EventArgs e)
         {
             if (tbConfirmPass.Text.Trim() == "")
                 RJMessageBox.Show("Vui lòng nhập mật khẩu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -54,7 +54,7 @@ namespace DoAnPBL3
                         Employee employee = context.Employees.Find(id);
                         context.Employees.Remove(employee);
                         context.SaveChanges();
-                        Alert("Xóa nhân viên thành công", Form_Alert.enmType.Success);
+                        Alert("Xóa nhân viên thành công", Form_Alert.EnmType.Success);
                         Close();
                     }
                     // Employee
@@ -66,7 +66,7 @@ namespace DoAnPBL3
                             Book book = context.Books.Find(id);
                             context.Books.Remove(book);
                             context.SaveChanges();
-                            Alert("Xóa mặt hàng sách thành công", Form_Alert.enmType.Success);
+                            Alert("Xóa mặt hàng sách thành công", Form_Alert.EnmType.Success);
                             Close();
                         }
                         // Them moi tac gia
@@ -91,12 +91,12 @@ namespace DoAnPBL3
             }
         }
 
-        private void rjbtnCancel_Click(object sender, EventArgs e)
+        private void RjbtnCancel_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void tbConfirmPass_KeyPress(object sender, KeyPressEventArgs e)
+        private void TbConfirmPass_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
             {

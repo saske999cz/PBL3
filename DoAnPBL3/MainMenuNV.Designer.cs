@@ -124,7 +124,7 @@ namespace DoAnPBL3
             this.btnQLKH.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnQLKH.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnQLKH.UseVisualStyleBackColor = true;
-            this.btnQLKH.Click += new System.EventHandler(this.btnQLKH_Click);
+            this.btnQLKH.Click += new System.EventHandler(this.BtnQLKH_Click);
             // 
             // btnBS
             // 
@@ -149,7 +149,7 @@ namespace DoAnPBL3
             this.btnBS.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBS.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBS.UseVisualStyleBackColor = true;
-            this.btnBS.Click += new System.EventHandler(this.btnBS_Click);
+            this.btnBS.Click += new System.EventHandler(this.BtnBS_Click);
             // 
             // btnQLS
             // 
@@ -174,7 +174,7 @@ namespace DoAnPBL3
             this.btnQLS.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnQLS.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnQLS.UseVisualStyleBackColor = true;
-            this.btnQLS.Click += new System.EventHandler(this.btnQLS_Click);
+            this.btnQLS.Click += new System.EventHandler(this.BtnQLS_Click);
             // 
             // panel1
             // 
@@ -198,7 +198,7 @@ namespace DoAnPBL3
             this.btnHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnHome.TabIndex = 0;
             this.btnHome.TabStop = false;
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            this.btnHome.Click += new System.EventHandler(this.BtnHome_Click);
             // 
             // panelTitleBar
             // 
@@ -216,7 +216,7 @@ namespace DoAnPBL3
             this.panelTitleBar.Name = "panelTitleBar";
             this.panelTitleBar.Size = new System.Drawing.Size(983, 74);
             this.panelTitleBar.TabIndex = 2;
-            this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
+            this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelTitleBar_MouseDown);
             // 
             // lblEmployeeUsername
             // 
@@ -230,7 +230,7 @@ namespace DoAnPBL3
             this.lblEmployeeUsername.Size = new System.Drawing.Size(85, 19);
             this.lblEmployeeUsername.TabIndex = 14;
             this.lblEmployeeUsername.Text = "Employee";
-            this.lblEmployeeUsername.Click += new System.EventHandler(this.lblEmployeeUsername_Click);
+            this.lblEmployeeUsername.Click += new System.EventHandler(this.LblEmployeeUsername_Click);
             // 
             // EmployeePicture
             // 
@@ -268,9 +268,9 @@ namespace DoAnPBL3
             this.btnMinimize.Size = new System.Drawing.Size(30, 20);
             this.btnMinimize.TabIndex = 10;
             this.btnMinimize.TabStop = false;
-            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
-            this.btnMinimize.MouseEnter += new System.EventHandler(this.btnMinimize_MouseEnter);
-            this.btnMinimize.MouseLeave += new System.EventHandler(this.btnMinimize_MouseLeave);
+            this.btnMinimize.Click += new System.EventHandler(this.BtnMinimize_Click);
+            this.btnMinimize.MouseEnter += new System.EventHandler(this.BtnMinimize_MouseEnter);
+            this.btnMinimize.MouseLeave += new System.EventHandler(this.BtnMinimize_MouseLeave);
             // 
             // btnMaximize
             // 
@@ -288,9 +288,9 @@ namespace DoAnPBL3
             this.btnMaximize.Size = new System.Drawing.Size(30, 20);
             this.btnMaximize.TabIndex = 9;
             this.btnMaximize.TabStop = false;
-            this.btnMaximize.Click += new System.EventHandler(this.btnMaximize_Click);
-            this.btnMaximize.MouseEnter += new System.EventHandler(this.btnMaximize_MouseEnter);
-            this.btnMaximize.MouseLeave += new System.EventHandler(this.btnMaximize_MouseLeave);
+            this.btnMaximize.Click += new System.EventHandler(this.BtnMaximize_Click);
+            this.btnMaximize.MouseEnter += new System.EventHandler(this.BtnMaximize_MouseEnter);
+            this.btnMaximize.MouseLeave += new System.EventHandler(this.BtnMaximize_MouseLeave);
             // 
             // btnClose
             // 
@@ -308,9 +308,9 @@ namespace DoAnPBL3
             this.btnClose.Size = new System.Drawing.Size(30, 20);
             this.btnClose.TabIndex = 8;
             this.btnClose.TabStop = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            this.btnClose.MouseEnter += new System.EventHandler(this.btnClose_MouseEnter);
-            this.btnClose.MouseHover += new System.EventHandler(this.btnClose_MouseLeave);
+            this.btnClose.Click += new System.EventHandler(this.BtnClose_Click);
+            this.btnClose.MouseEnter += new System.EventHandler(this.BtnClose_MouseEnter);
+            this.btnClose.MouseHover += new System.EventHandler(this.BtnClose_MouseLeave);
             // 
             // lblTitleChildForm
             // 
@@ -597,7 +597,7 @@ namespace DoAnPBL3
             this.rjddmUserSettingMenu.Name = "rjddmAdminSettingMenu";
             this.rjddmUserSettingMenu.PrimaryColor = System.Drawing.Color.MediumSlateBlue;
             this.rjddmUserSettingMenu.Size = new System.Drawing.Size(208, 82);
-            this.rjddmUserSettingMenu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.rjddmUserSettingMenu_ItemClicked);
+            this.rjddmUserSettingMenu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.RjddmUserSettingMenu_ItemClicked);
             // 
             // chỉnhSửaTàiKhoảnToolStripMenuItem
             // 

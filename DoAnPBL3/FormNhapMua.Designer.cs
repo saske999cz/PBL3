@@ -62,7 +62,7 @@ namespace DoAnPBL3
             this.btnDelete.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.btnDelete.Size = new System.Drawing.Size(39, 40);
             this.btnDelete.TabIndex = 27;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            this.btnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
             // tbPrice
             // 
@@ -112,7 +112,7 @@ namespace DoAnPBL3
             this.tbQuantity.SelectedText = "";
             this.tbQuantity.Size = new System.Drawing.Size(59, 27);
             this.tbQuantity.TabIndex = 24;
-            this.tbQuantity.TextChanged += new System.EventHandler(this.tbQuantity_TextChanged);
+            this.tbQuantity.TextChanged += new System.EventHandler(this.TbQuantity_TextChanged);
             // 
             // tbNameBook
             // 
@@ -162,7 +162,7 @@ namespace DoAnPBL3
             this.tbIDBook.SelectedText = "";
             this.tbIDBook.Size = new System.Drawing.Size(99, 27);
             this.tbIDBook.TabIndex = 17;
-            this.tbIDBook.TextChanged += new System.EventHandler(this.tbIDBook_TextChanged);
+            this.tbIDBook.TextChanged += new System.EventHandler(this.TbIDBook_TextChanged);
             // 
             // label7
             // 

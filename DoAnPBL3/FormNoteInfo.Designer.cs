@@ -191,7 +191,7 @@ namespace DoAnPBL3
             this.rjbtnCancel.Text = "Hủy";
             this.rjbtnCancel.TextColor = System.Drawing.Color.White;
             this.rjbtnCancel.UseVisualStyleBackColor = false;
-            this.rjbtnCancel.Click += new System.EventHandler(this.rjbtnCancel_Click);
+            this.rjbtnCancel.Click += new System.EventHandler(this.RjbtnCancel_Click);
             // 
             // guna2Elipse1
             // 

@@ -14,7 +14,7 @@ namespace DoAnPBL3
 {
     public partial class FormTTNV : Form
     {
-        private string ID_Employee;
+        private readonly string ID_Employee;
         public FormTTNV(string ID_Employee)
         {
             InitializeComponent();
@@ -50,7 +50,7 @@ namespace DoAnPBL3
             }
         }
 
-        private void rjbtnCancel_Click(object sender, EventArgs e)
+        private void RjbtnCancel_Click(object sender, EventArgs e)
         {
             Close();
         }

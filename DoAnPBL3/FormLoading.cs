@@ -20,7 +20,7 @@ namespace DoAnPBL3
             InitializeComponent();
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void Timer1_Tick(object sender, EventArgs e)
         {
             rocket.Left += 3;
             panel2.Width += 3;
@@ -44,7 +44,7 @@ namespace DoAnPBL3
             iconButton1.Hide();
         }
 
-        private void timer2_Tick(object sender, EventArgs e)
+        private void Timer2_Tick(object sender, EventArgs e)
         {
             wait_time += 5;
             if (wait_time == 20)

@@ -15,7 +15,7 @@ namespace DoAnPBL3
     {
         //Fields
         private Color primaryColor = Color.CornflowerBlue;
-        private int borderSize = 2;
+        private readonly int borderSize = 2;
 
         //Properties
         public Color PrimaryColor
@@ -276,7 +276,7 @@ namespace DoAnPBL3
         }
 
         //-> Events Methods
-        private void btnClose_Click(object sender, EventArgs e)
+        private void BtnClose_Click(object sender, EventArgs e)
         {
             Close();
         }
@@ -286,10 +286,10 @@ namespace DoAnPBL3
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
-        private void panelTitleBar_MouseDown(object sender, MouseEventArgs e)
+        private void PanelTitleBar_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
+            SendMessage(Handle, 0x112, 0xf012, 0);
         }
         #endregion
     }

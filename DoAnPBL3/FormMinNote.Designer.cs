@@ -52,7 +52,7 @@ namespace DoAnPBL3
             this.panelNote.Name = "panelNote";
             this.panelNote.Size = new System.Drawing.Size(978, 57);
             this.panelNote.TabIndex = 3;
-            this.panelNote.Click += new System.EventHandler(this.panelNote_Click);
+            this.panelNote.Click += new System.EventHandler(this.PanelNote_Click);
             // 
             // guna2CircleButton3
             // 
@@ -70,7 +70,7 @@ namespace DoAnPBL3
             this.guna2CircleButton3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CircleButton3.Size = new System.Drawing.Size(39, 40);
             this.guna2CircleButton3.TabIndex = 29;
-            this.guna2CircleButton3.Click += new System.EventHandler(this.guna2CircleButton3_Click);
+            this.guna2CircleButton3.Click += new System.EventHandler(this.Guna2CircleButton3_Click);
             // 
             // guna2CircleButton1
             // 

@@ -13,10 +13,10 @@ namespace DoAnPBL3
     public partial class FormMenuNote : Form
     {
         FormNote note = new FormNote();
-        FormMinNote[] minNote = new FormMinNote[100];
-        static int count = 0;
+        readonly FormMinNote[] minNote = new FormMinNote[100];
+        private static int count = 0;
         static int index = 0;
-        private string theme;
+        private readonly string theme;
         string[] content = new string[100];
         public FormMenuNote(string theme)
         {
@@ -49,7 +49,7 @@ namespace DoAnPBL3
             childForm.Show();
         }
 
-        private void btnAddNote_Click(object sender, EventArgs e)
+        private void BtnAddNote_Click(object sender, EventArgs e)
         {
             note = new FormNote();
             note.Show();
@@ -60,14 +60,14 @@ namespace DoAnPBL3
            
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void Timer1_Tick(object sender, EventArgs e)
         {
             Notes.Refresh();
         }
 
         private void FormMenuNote_Load(object sender, EventArgs e)
         {
-            timer1.Tick += new System.EventHandler(timer1_Tick);
+            timer1.Tick += new System.EventHandler(Timer1_Tick);
             timer1.Start();
         }
 

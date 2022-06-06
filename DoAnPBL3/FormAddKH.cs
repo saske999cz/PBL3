@@ -16,7 +16,7 @@ namespace DoAnPBL3
 {
     public partial class FormAddKH : Form
     {
-        private string phoneNumber;
+        private readonly string phoneNumber;
 
         //Constructor
         public FormAddKH(string phoneNumber = "")
@@ -30,13 +30,13 @@ namespace DoAnPBL3
             tbPhoneKH.Text = phoneNumber;
         }
 
-        public void Alert(string msg, Form_Alert.enmType type)
+        public void Alert(string msg, Form_Alert.EnmType type)
         {
             Form_Alert frm = new Form_Alert();
-            frm.showAlert(msg, type);
+            frm.ShowAlert(msg, type);
         }
 
-        private void rjbtnOK_Click(object sender, EventArgs e)
+        private void RjbtnOK_Click(object sender, EventArgs e)
         {
             bool isValidName, isValidGender, isValidPhone, isValidAddress;
             string name, gender, phone, address;
@@ -137,13 +137,13 @@ namespace DoAnPBL3
                     }
                     context.Customers.Add(customer);
                     context.SaveChanges();
-                    Alert("Thêm mới khách hàng thành công", Form_Alert.enmType.Success);
+                    Alert("Thêm mới khách hàng thành công", Form_Alert.EnmType.Success);
                     Close();
                 }
             }
         }
 
-        private void rjbtnCancel_Click(object sender, EventArgs e)
+        private void RjbtnCancel_Click(object sender, EventArgs e)
         {
             string nameCustomer, phone, address;
             nameCustomer = tbNameKH.Text;
@@ -161,7 +161,7 @@ namespace DoAnPBL3
                 Close();
         }
 
-        private void tbNameKH_KeyPress(object sender, KeyPressEventArgs e)
+        private void TbNameKH_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
             {
@@ -170,7 +170,7 @@ namespace DoAnPBL3
             }
         }
 
-        private void tbPhoneKH_KeyPress(object sender, KeyPressEventArgs e)
+        private void TbPhoneKH_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
             {
@@ -179,7 +179,7 @@ namespace DoAnPBL3
             }
         }
 
-        private void tbAddressKH_KeyPress(object sender, KeyPressEventArgs e)
+        private void TbAddressKH_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
             {

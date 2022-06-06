@@ -85,28 +85,21 @@ namespace DoAnPBL3
             public static Color color6 = Color.FromArgb(24, 161, 251);
         }
 
-        private void btnTKKH_MouseEnter(object sender, EventArgs e)
-        {
-            btnTKKH.BackColor = RGBColors.color4;
-        }
-
-        private void btnHDKH_MouseEnter(object sender, EventArgs e)
+        private void BtnHDKH_MouseEnter(object sender, EventArgs e)
         {
             btnHDKH.BackColor = RGBColors.color4;
         }
 
-        private void btnTKKH_MouseLeave(object sender, EventArgs e)
-        {
-            btnTKKH.BackColor = Color.FromArgb(31, 30, 68);
-        }
-
-        private void btnHDKH_MouseLeave(object sender, EventArgs e)
+        private void BtnHDKH_MouseLeave(object sender, EventArgs e)
         {
             btnHDKH.BackColor = Color.RoyalBlue;
         }
 
         private void FormQLKH_Load(object sender, EventArgs e)
         {
+            dgvQLKH.RowHeadersVisible = true;
+            dgvQLKH.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            dgvQLKH.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI Semibold", 10, FontStyle.Bold);
             using (BookStoreContext context = new BookStoreContext())
             {
                 var listCustomers = context.Customers
@@ -121,7 +114,6 @@ namespace DoAnPBL3
                 var listMaleCustomers = listCustomers.Where(customer => customer.Gender == "Nam");
                 var listFemaleCustomers = listCustomers.Where(customer => customer.Gender == "Nữ");
                 dgvQLKH.DataSource = listCustomers.ToList();
-                //count = listCustomers.Count();
                 lblTSKH.Text = listCustomers.Count().ToString();
                 lblKHN.Text = listMaleCustomers.Count().ToString();
                 lblKHNu.Text = listFemaleCustomers.Count().ToString();
@@ -129,54 +121,43 @@ namespace DoAnPBL3
             }
         }
 
-        private void xuiSegmentKH_Click(object sender, EventArgs e)
+        private void XuiSegmentKH_Click(object sender, EventArgs e)
         {
             using (BookStoreContext context = new BookStoreContext())
             {
+                var listCustomers = context.Customers
+                        .Select(customer => new
+                        {
+                            customer.ID_Customer,
+                            customer.FullNameCustomer,
+                            customer.Gender,
+                            customer.Phone,
+                            customer.Address
+                        })
+                        .ToList();
+                var listMaleCustomers = listCustomers.Where(customer => customer.Gender == "Nam").ToList();
+                var listFemaleCustomers = listCustomers.Where(customer => customer.Gender == "Nữ").ToList();
+                lblTSKH.Text = listCustomers.Count().ToString();
+                lblKHN.Text = listMaleCustomers.Count().ToString();
+                lblKHNu.Text = listFemaleCustomers.Count().ToString();
                 // Tất cả
                 if (xuiSegmentKH.SelectedIndex == 0)
-                {
-                    FormQLKH_Load(sender, e);
-                }
+                    dgvQLKH.DataSource = listCustomers;
                 // Nam
                 else if (xuiSegmentKH.SelectedIndex == 1)
-                {
-                    dgvQLKH.DataSource = context.Customers
-                        .Where(customer => customer.Gender == "Nam")
-                        .Select(customer => new
-                        {
-                            customer.ID_Customer,
-                            customer.FullNameCustomer,
-                            customer.Gender,
-                            customer.Phone,
-                            customer.Address
-                        })
-                        .ToList();
-                }
-                // Nữ
+                    dgvQLKH.DataSource = listMaleCustomers;
+                // Nữ
                 else
-                {
-                    dgvQLKH.DataSource = context.Customers
-                        .Where(customer => customer.Gender == "Nữ")
-                        .Select(customer => new
-                        {
-                            customer.ID_Customer,
-                            customer.FullNameCustomer,
-                            customer.Gender,
-                            customer.Phone,
-                            customer.Address
-                        })
-                        .ToList();
-                }
+                    dgvQLKH.DataSource = listFemaleCustomers;
             }
         }
 
-        private void btnHDKH_Click(object sender, EventArgs e)
+        private void BtnHDKH_Click(object sender, EventArgs e)
         {
             RJMessageBox.Show("Hóa đơn khách hàng");
         }
 
-        private void rjtbTKKH_KeyPress(object sender, KeyPressEventArgs e)
+        private void RjtbTKKH_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
             {
@@ -185,7 +166,7 @@ namespace DoAnPBL3
             }
         }
 
-        private void btnTKKH_Click(object sender, EventArgs e)
+        private void BtnTKKH_Click(object sender, EventArgs e)
         {
             using (BookStoreContext context = new BookStoreContext())
             {
@@ -230,6 +211,12 @@ namespace DoAnPBL3
                         dgvQLKH.DataSource = listCustomers;
                 }
             }
+        }
+
+        private void DgvQLKH_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            string ID_Customer = dgvQLKH.CurrentRow.Cells["ID_Customer"].Value.ToString();
+            new FormTTKH(ID_Customer).ShowDialog();
         }
     }
 }

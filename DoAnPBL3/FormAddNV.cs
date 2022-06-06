@@ -27,10 +27,10 @@ namespace DoAnPBL3
             InitializeComponent();
         }
 
-        public void Alert(string msg, Form_Alert.enmType type)
+        public void Alert(string msg, Form_Alert.EnmType type)
         {
             Form_Alert frm = new Form_Alert();
-            frm.showAlert(msg, type);
+            frm.ShowAlert(msg, type);
         }
 
         private void rjbtnOK_Click(object sender, EventArgs e)
@@ -377,13 +377,13 @@ namespace DoAnPBL3
                         gender, phone, idCard, address, ava, username);
                     context.Employees.Add(newEmployee);
                     context.SaveChanges();
-                    Alert("Thêm nhân viên mới thành công", Form_Alert.enmType.Success);
+                    Alert("Thêm nhân viên mới thành công", Form_Alert.EnmType.Success);
                     Close();
                 }
             }
             else
             {
-                Alert("Dữ liệu không hợp lệ", Form_Alert.enmType.Error);
+                Alert("Dữ liệu không hợp lệ", Form_Alert.EnmType.Error);
             }
         }
 

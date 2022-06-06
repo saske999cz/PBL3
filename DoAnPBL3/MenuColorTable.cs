@@ -11,11 +11,11 @@ namespace DoAnPBL3
     public class MenuColorTable : ProfessionalColorTable
     {
         //Fields
-        private Color backColor;
+        private readonly Color backColor;
         public Color leftColumnColor;
-        private Color borderColor;
-        private Color menuItemBorderColor;
-        private Color menuItemSelectedColor;
+        private readonly Color borderColor;
+        private readonly Color menuItemBorderColor;
+        private readonly Color menuItemSelectedColor;
         //Constructor
         public MenuColorTable(bool isMainMenu, Color primaryColor)
         {

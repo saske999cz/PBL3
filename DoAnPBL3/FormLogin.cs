@@ -49,12 +49,12 @@ namespace DoAnPBL3
                 radioEmployee.Checked = true;
         }
 
-        private void linkLabelForgotPassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void LinkLabelForgotPassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             OpenChildForm(new FormForgotPassword());
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
+        private void BtnLogin_Click(object sender, EventArgs e)
         {
             string username = txtUserName.Text;
             string password = txtPassword.Text;
@@ -144,7 +144,7 @@ namespace DoAnPBL3
                 HidePass.BringToFront();
             }
         }
-        private void txtUserName_KeyPress(object sender, KeyPressEventArgs e)
+        private void TxtUserName_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
             {
@@ -153,7 +153,7 @@ namespace DoAnPBL3
             }
         }
 
-        private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
+        private void TxtPassword_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
             {
@@ -179,7 +179,7 @@ namespace DoAnPBL3
             childForm.Show();
         }
 
-        private void guna2ControlBox1_Click(object sender, EventArgs e)
+        private void Guna2ControlBox1_Click(object sender, EventArgs e)
         {
             Close();
             Application.Exit();

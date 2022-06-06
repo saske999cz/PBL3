@@ -51,7 +51,7 @@ namespace DoAnPBL3
             // 
             // timer1
             // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
             // pictureBox1
             // 
@@ -85,7 +85,7 @@ namespace DoAnPBL3
             this.button1.Size = new System.Drawing.Size(52, 52);
             this.button1.TabIndex = 28;
             this.button1.UseTransparentBackground = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // Form_Alert
             // 

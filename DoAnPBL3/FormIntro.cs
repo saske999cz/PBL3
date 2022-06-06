@@ -22,12 +22,12 @@ namespace DoAnPBL3
             guna2ShadowForm1.SetShadowForm(this);
         }
 
-        private void guna2ControlBox1_Click(object sender, EventArgs e)
+        private void Guna2ControlBox1_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void btnNext_Click(object sender, EventArgs e)
+        private void BtnNext_Click(object sender, EventArgs e)
         {
             btnPrevious.Show();
             btnNext.Hide();
@@ -39,7 +39,7 @@ namespace DoAnPBL3
             label9.Hide();
         }
 
-        private void btnPrevious_Click(object sender, EventArgs e)
+        private void BtnPrevious_Click(object sender, EventArgs e)
         {
             btnNext.Show();
             btnPrevious.Hide();

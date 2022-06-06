@@ -592,7 +592,7 @@ namespace DoAnPBL3
             this.btnDeleteImg.TextColor = System.Drawing.Color.White;
             this.btnDeleteImg.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDeleteImg.UseVisualStyleBackColor = false;
-            this.btnDeleteImg.Click += new System.EventHandler(this.btnDeleteImg_Click);
+            this.btnDeleteImg.Click += new System.EventHandler(this.BtnDeleteImg_Click);
             // 
             // btnNVImg
             // 
@@ -616,7 +616,7 @@ namespace DoAnPBL3
             this.btnNVImg.TextColor = System.Drawing.Color.White;
             this.btnNVImg.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnNVImg.UseVisualStyleBackColor = false;
-            this.btnNVImg.Click += new System.EventHandler(this.btnBookImg_Click);
+            this.btnNVImg.Click += new System.EventHandler(this.BtnBookImg_Click);
             // 
             // rjbtnCancel
             // 
@@ -638,7 +638,7 @@ namespace DoAnPBL3
             this.rjbtnCancel.Text = "Hủy";
             this.rjbtnCancel.TextColor = System.Drawing.Color.White;
             this.rjbtnCancel.UseVisualStyleBackColor = false;
-            this.rjbtnCancel.Click += new System.EventHandler(this.rjbtnCancel_Click);
+            this.rjbtnCancel.Click += new System.EventHandler(this.RjbtnCancel_Click);
             // 
             // rjbtnOK
             // 
@@ -660,7 +660,7 @@ namespace DoAnPBL3
             this.rjbtnOK.Text = "Lưu";
             this.rjbtnOK.TextColor = System.Drawing.Color.White;
             this.rjbtnOK.UseVisualStyleBackColor = false;
-            this.rjbtnOK.Click += new System.EventHandler(this.rjbtnOK_Click);
+            this.rjbtnOK.Click += new System.EventHandler(this.RjbtnOK_Click);
             // 
             // FormSuaSach
             // 

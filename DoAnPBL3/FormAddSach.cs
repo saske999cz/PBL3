@@ -30,10 +30,10 @@ namespace DoAnPBL3
             this.password = password;
         }
 
-        public void Alert(string msg, Form_Alert.enmType type)
+        public void Alert(string msg, Form_Alert.EnmType type)
         {
             Form_Alert frm = new Form_Alert();
-            frm.showAlert(msg, type);
+            frm.ShowAlert(msg, type);
         }
         private void FormAddSach_Load(object sender, EventArgs e)
         {
@@ -311,7 +311,7 @@ namespace DoAnPBL3
                                                                 cbbGenre.SelectedIndex + 1, bookImage);
                                 context.Books.Add(newBook);
                                 context.SaveChanges();
-                                Alert("Thêm sách mới thành công", Form_Alert.enmType.Success);
+                                Alert("Thêm sách mới thành công", Form_Alert.EnmType.Success);
                                 Close();
                             }                            
                         }
@@ -324,14 +324,14 @@ namespace DoAnPBL3
                             cbbLanguage.SelectedIndex + 1, findingAuthor.ID_Author, cbbPublisher.SelectedIndex + 1, cbbGenre.SelectedIndex + 1, bookImage);
                         context.Books.Add(newBook);
                         context.SaveChanges();
-                        Alert("Thêm sách mới thành công", Form_Alert.enmType.Success);
+                        Alert("Thêm sách mới thành công", Form_Alert.EnmType.Success);
                         Close();
                     }
                 }
             }
             else
             {
-                Alert("Dữ liệu không hợp lệ", Form_Alert.enmType.Error);
+                Alert("Dữ liệu không hợp lệ", Form_Alert.EnmType.Error);
             }
         }
 

@@ -104,7 +104,7 @@ namespace DoAnPBL3
             this.linkLabelForgotPassword.TabIndex = 4;
             this.linkLabelForgotPassword.TabStop = true;
             this.linkLabelForgotPassword.Text = "Quên Mật Khẩu?";
-            this.linkLabelForgotPassword.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelForgotPassword_LinkClicked);
+            this.linkLabelForgotPassword.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabelForgotPassword_LinkClicked);
             // 
             // radioEmployee
             // 
@@ -150,7 +150,7 @@ namespace DoAnPBL3
             this.btnLogin.TabIndex = 6;
             this.btnLogin.Text = "Đăng nhập";
             this.btnLogin.UseTransparentBackground = true;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            this.btnLogin.Click += new System.EventHandler(this.BtnLogin_Click);
             // 
             // label1
             // 
@@ -204,7 +204,7 @@ namespace DoAnPBL3
             this.txtUserName.SelectedText = "";
             this.txtUserName.Size = new System.Drawing.Size(251, 36);
             this.txtUserName.TabIndex = 1;
-            this.txtUserName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUserName_KeyPress);
+            this.txtUserName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtUserName_KeyPress);
             // 
             // txtPassword
             // 
@@ -228,7 +228,7 @@ namespace DoAnPBL3
             this.txtPassword.SelectedText = "";
             this.txtPassword.Size = new System.Drawing.Size(251, 36);
             this.txtPassword.TabIndex = 2;
-            this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
+            this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtPassword_KeyPress);
             // 
             // guna2Panel1
             // 
@@ -262,7 +262,7 @@ namespace DoAnPBL3
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.Size = new System.Drawing.Size(35, 28);
             this.guna2ControlBox1.TabIndex = 2;
-            this.guna2ControlBox1.Click += new System.EventHandler(this.guna2ControlBox1_Click);
+            this.guna2ControlBox1.Click += new System.EventHandler(this.Guna2ControlBox1_Click);
             // 
             // guna2ShadowForm1
             // 

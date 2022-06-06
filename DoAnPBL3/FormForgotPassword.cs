@@ -24,12 +24,12 @@ namespace DoAnPBL3
             InitializeComponent();
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
+        private void BtnBack_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void btnSendCode_ClickAsync(object sender, EventArgs e)
+        private void BtnSendCode_ClickAsync(object sender, EventArgs e)
         {
             if (txtEmail.Text.Trim() == "" && txtEmailPassword.Text.Trim() == "")
                 MessageBox.Show("Vui lòng nhập email và mật khẩu email", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -61,16 +61,20 @@ namespace DoAnPBL3
                                     password = pass.Password.ToString();
                                 }
                             }
-                            MailMessage mailMessage = new MailMessage();
-                            mailMessage.From = new MailAddress("BookShop@gmail.com");
+                            MailMessage mailMessage = new MailMessage
+                            {
+                                From = new MailAddress("BookShop@gmail.com")
+                            };
                             mailMessage.To.Add(txtEmail.Text);
                             mailMessage.Body = "Mật khẩu của bạn là: " + password.ToString();
                             mailMessage.Subject = "Nhắc nhở mật khẩu";
 
-                            SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
-                            smtp.EnableSsl = true;
-                            smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
-                            smtp.Credentials = new NetworkCredential(txtEmail.Text, txtEmailPassword.Text);
+                            SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587)
+                            {
+                                EnableSsl = true,
+                                DeliveryMethod = SmtpDeliveryMethod.Network,
+                                Credentials = new NetworkCredential(txtEmail.Text, txtEmailPassword.Text)
+                            };
                             try
                             {
                                 smtp.Send(mailMessage);
@@ -86,13 +90,13 @@ namespace DoAnPBL3
             }
         }
 
-        private void txtEmail_KeyPress(object sender, KeyPressEventArgs e)
+        private void TxtEmail_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
                 btnSendCode.PerformClick();
         }
 
-        private void txtEmailPassword_KeyPress(object sender, KeyPressEventArgs e)
+        private void TxtEmailPassword_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
                 btnSendCode.PerformClick();

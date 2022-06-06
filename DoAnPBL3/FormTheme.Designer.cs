@@ -51,7 +51,7 @@ namespace DoAnPBL3
             this.btnSave.Size = new System.Drawing.Size(94, 29);
             this.btnSave.TabIndex = 23;
             this.btnSave.Text = "Lưu";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // label1
             // 
@@ -89,7 +89,7 @@ namespace DoAnPBL3
             this.cbTheme.Size = new System.Drawing.Size(227, 36);
             this.cbTheme.TabIndex = 0;
             this.cbTheme.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.cbTheme.SelectedIndexChanged += new System.EventHandler(this.cbTheme_SelectedIndexChanged);
+            this.cbTheme.SelectedIndexChanged += new System.EventHandler(this.CbTheme_SelectedIndexChanged);
             // 
             // FormTheme
             // 

@@ -130,7 +130,7 @@ namespace DoAnPBL3
             this.rjbtnOK.Text = "Lưu";
             this.rjbtnOK.TextColor = System.Drawing.Color.White;
             this.rjbtnOK.UseVisualStyleBackColor = false;
-            this.rjbtnOK.Click += new System.EventHandler(this.rjbtnOK_Click);
+            this.rjbtnOK.Click += new System.EventHandler(this.RjbtnOK_Click);
             // 
             // panelContainer
             // 
@@ -238,7 +238,7 @@ namespace DoAnPBL3
             this.btnDeleteImg.TextColor = System.Drawing.Color.White;
             this.btnDeleteImg.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDeleteImg.UseVisualStyleBackColor = false;
-            this.btnDeleteImg.Click += new System.EventHandler(this.btnDeleteImg_Click);
+            this.btnDeleteImg.Click += new System.EventHandler(this.BtnDeleteImg_Click);
             // 
             // rjbtnCancel
             // 
@@ -260,7 +260,7 @@ namespace DoAnPBL3
             this.rjbtnCancel.Text = "Hủy";
             this.rjbtnCancel.TextColor = System.Drawing.Color.White;
             this.rjbtnCancel.UseVisualStyleBackColor = false;
-            this.rjbtnCancel.Click += new System.EventHandler(this.rjbtnCancel_Click);
+            this.rjbtnCancel.Click += new System.EventHandler(this.RjbtnCancel_Click);
             // 
             // avatar
             // 
@@ -358,7 +358,7 @@ namespace DoAnPBL3
             this.btnNVImg.TextColor = System.Drawing.Color.White;
             this.btnNVImg.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnNVImg.UseVisualStyleBackColor = false;
-            this.btnNVImg.Click += new System.EventHandler(this.btnNVImg_Click);
+            this.btnNVImg.Click += new System.EventHandler(this.BtnNVImg_Click);
             // 
             // tbEmailNV
             // 
@@ -382,7 +382,7 @@ namespace DoAnPBL3
             this.tbEmailNV.SelectedText = "";
             this.tbEmailNV.Size = new System.Drawing.Size(409, 30);
             this.tbEmailNV.TabIndex = 1;
-            this.tbEmailNV.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbEmailNV_KeyPress);
+            this.tbEmailNV.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbEmailNV_KeyPress);
             // 
             // tbSDTNV
             // 
@@ -406,7 +406,7 @@ namespace DoAnPBL3
             this.tbSDTNV.SelectedText = "";
             this.tbSDTNV.Size = new System.Drawing.Size(409, 30);
             this.tbSDTNV.TabIndex = 5;
-            this.tbSDTNV.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbSDTNV_KeyPress);
+            this.tbSDTNV.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbSDTNV_KeyPress);
             // 
             // tbAddressNV
             // 
@@ -430,7 +430,7 @@ namespace DoAnPBL3
             this.tbAddressNV.SelectedText = "";
             this.tbAddressNV.Size = new System.Drawing.Size(409, 30);
             this.tbAddressNV.TabIndex = 7;
-            this.tbAddressNV.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbAddressNV_KeyPress);
+            this.tbAddressNV.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbAddressNV_KeyPress);
             // 
             // tbCMNDNV
             // 
@@ -454,7 +454,7 @@ namespace DoAnPBL3
             this.tbCMNDNV.SelectedText = "";
             this.tbCMNDNV.Size = new System.Drawing.Size(409, 30);
             this.tbCMNDNV.TabIndex = 6;
-            this.tbCMNDNV.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCMNDNV_KeyPress);
+            this.tbCMNDNV.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbCMNDNV_KeyPress);
             // 
             // tbBD
             // 
@@ -478,7 +478,7 @@ namespace DoAnPBL3
             this.tbBD.SelectedText = "";
             this.tbBD.Size = new System.Drawing.Size(409, 30);
             this.tbBD.TabIndex = 2;
-            this.tbBD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbBD_KeyPress);
+            this.tbBD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbBD_KeyPress);
             // 
             // tbNameNV
             // 
@@ -502,7 +502,7 @@ namespace DoAnPBL3
             this.tbNameNV.SelectedText = "";
             this.tbNameNV.Size = new System.Drawing.Size(409, 30);
             this.tbNameNV.TabIndex = 0;
-            this.tbNameNV.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbNameNV_KeyPress);
+            this.tbNameNV.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbNameNV_KeyPress);
             // 
             // cbGenderNV
             // 

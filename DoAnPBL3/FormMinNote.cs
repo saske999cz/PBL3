@@ -36,7 +36,7 @@ namespace DoAnPBL3
             }
         }
 
-        private void guna2CircleButton3_Click(object sender, EventArgs e)
+        private void Guna2CircleButton3_Click(object sender, EventArgs e)
         {
             Close();
         }
@@ -56,7 +56,7 @@ namespace DoAnPBL3
             this.content = content;
         }
 
-        private void panelNote_Click(object sender, EventArgs e)
+        private void PanelNote_Click(object sender, EventArgs e)
         {
             new FormNoteInfo(lblNoteTitle.Text, content).Show();
         }
