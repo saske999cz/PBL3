@@ -16,14 +16,15 @@ namespace DoAnPBL3.Models
 
         }
 
-        public Admin(string id_admin, string nameAdmin, string email, DateTime dateOfBirth, DateTime startDate, 
-            string gender, string phone, string ID_Card, string address, byte[] avatar, string accountUsername)
+        public Admin(string id_admin, string nameAdmin, string email, DateTime dateOfBirth, DateTime startDate,
+            DateTime? endDate, string gender, string phone, string ID_Card, string address, byte[] avatar, string accountUsername)
         {
             ID_Admin = id_admin;
             FullNameAdmin = nameAdmin;
             Email = email;
             DateOfBirth = dateOfBirth;
             StartDate = startDate;
+            EndDate = endDate;
             Gender = gender;
             Phone = phone;
             this.ID_Card = ID_Card;
@@ -52,9 +53,12 @@ namespace DoAnPBL3.Models
         [Required(ErrorMessage = "Ngày sinh của quản trị không được để trống")]
         public DateTime DateOfBirth { get; set; }
 
-        [Column("NgayBatDauLamViec")]
+        [Column("NgayLamViec")]
         [Required(ErrorMessage = "Ngày bắt đầu làm việc của quản trị không được để trống")]
         public DateTime StartDate { get; set; }
+
+        [Column("NgayNghiViec")]
+        public DateTime? EndDate { get; set; }
 
         [Column("GioiTinh")]
         [StringLength(20)]

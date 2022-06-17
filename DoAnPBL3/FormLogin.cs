@@ -88,7 +88,7 @@ namespace DoAnPBL3
                             }
                             else
                                 Properties.Settings.Default.Reset();
-                            new MainMenuQTV(listAdminAccounts.FirstOrDefault().Username, listAdminAccounts.FirstOrDefault().Password).ShowDialog();
+                            new MainMenuQTV(listAdminAccounts.FirstOrDefault().Username, listAdminAccounts.FirstOrDefault().Password).Show();
                             Close();
                         }
                         else

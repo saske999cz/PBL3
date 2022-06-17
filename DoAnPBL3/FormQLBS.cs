@@ -34,6 +34,7 @@ namespace DoAnPBL3
                     rjtbTKS.BorderColor = Color.FromArgb(23, 21, 35);
                     rjtbTKS.ForeColor = Color.Silver;
                     rjtbTKS.PlaceholderColor = Color.FromArgb(87, 83, 103);
+                    dgvQLBS.BackgroundColor = Color.FromArgb(24, 37, 65);
                     break;
                 case "Dark":
                     btnTKS.Parent.BackColor = Color.FromArgb(32, 32, 32);
@@ -52,6 +53,7 @@ namespace DoAnPBL3
                     rjtbTKS.BorderColor = Color.FromArgb(18, 18, 18);
                     rjtbTKS.ForeColor = Color.Silver;
                     rjtbTKS.PlaceholderColor = Color.FromArgb(87, 83, 103);
+                    dgvQLBS.BackgroundColor = Color.FromArgb(34, 31, 46);
                     break;
                 case "Light":
                     btnTKS.Parent.BackColor = Color.FromArgb(220, 220, 220);
@@ -70,6 +72,7 @@ namespace DoAnPBL3
                     rjtbTKS.BorderColor = Color.FromArgb(180, 180, 180);
                     rjtbTKS.ForeColor = Color.DimGray;
                     rjtbTKS.PlaceholderColor = Color.FromArgb(87, 83, 103);
+                    dgvQLBS.BackgroundColor = Color.Silver;
                     break;
             }
         }
@@ -84,11 +87,6 @@ namespace DoAnPBL3
             public static Color color6 = Color.FromArgb(24, 161, 251);
         }
 
-        private void BtnTKS_MouseEnter(object sender, EventArgs e)
-        {
-            btnTKS.BackColor = RGBColors.color4;
-        }
-
         private void BtnSXS_MouseEnter(object sender, EventArgs e)
         {
             btnSXS.BackColor = RGBColors.color4;
@@ -97,11 +95,6 @@ namespace DoAnPBL3
         private void BtnHDTN_MouseEnter(object sender, EventArgs e)
         {
             btnHDTN.BackColor = RGBColors.color4;
-        }
-
-        private void BtnTKS_MouseLeave(object sender, EventArgs e)
-        {
-            btnTKS.BackColor = Color.FromArgb(31, 30, 68);
         }
 
         private void BtnSXS_MouseLeave(object sender, EventArgs e)
@@ -122,6 +115,7 @@ namespace DoAnPBL3
         private void FormQLBS_Load(object sender, EventArgs e)
         {
             dgvQLBS.RowHeadersVisible = true;
+            dgvQLBS.BorderStyle = BorderStyle.FixedSingle;
             dgvQLBS.CellBorderStyle = DataGridViewCellBorderStyle.Single;
             dgvQLBS.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI Semibold", 10, FontStyle.Bold);
             using (BookStoreContext context = new BookStoreContext())

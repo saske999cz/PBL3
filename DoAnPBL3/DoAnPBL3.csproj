@@ -72,6 +72,9 @@
     <Reference Include="Guna.UI2, Version=2.0.3.2, Culture=neutral, PublicKeyToken=4015e4865bda28a4, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.3.2\lib\net40\Guna.UI2.dll</HintPath>
     </Reference>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.6.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
@@ -657,6 +660,58 @@
     <None Include="Img\icons8_create_document_30px.png" />
     <None Include="Img\female employee.png" />
     <None Include="Img\icons8_launch_40px.png" />
+    <None Include="Img\GI\aether.png" />
+    <None Include="Img\GI\albedo.png" />
+    <None Include="Img\GI\aloy.png" />
+    <None Include="Img\GI\amber.png" />
+    <None Include="Img\GI\ayaka.png" />
+    <None Include="Img\GI\ayato.png" />
+    <None Include="Img\GI\barbara.png" />
+    <None Include="Img\GI\beidou.png" />
+    <None Include="Img\GI\bennett.png" />
+    <None Include="Img\GI\childe.png" />
+    <None Include="Img\GI\chongyun.png" />
+    <None Include="Img\GI\diluc.png" />
+    <None Include="Img\GI\diona.png" />
+    <None Include="Img\GI\eula.png" />
+    <None Include="Img\GI\fischl.png" />
+    <None Include="Img\GI\ganyu.png" />
+    <None Include="Img\GI\gorou.png" />
+    <None Include="Img\GI\heizou.png" />
+    <None Include="Img\GI\hutao.png" />
+    <None Include="Img\GI\itto.png" />
+    <None Include="Img\GI\jean.png" />
+    <None Include="Img\GI\kaeya.png" />
+    <None Include="Img\GI\kazuha.png" />
+    <None Include="Img\GI\keqing.png" />
+    <None Include="Img\GI\klee.png" />
+    <None Include="Img\GI\kokomi.png" />
+    <None Include="Img\GI\kujou sara.png" />
+    <None Include="Img\GI\kuki shinobu.png" />
+    <None Include="Img\GI\lisa.png" />
+    <None Include="Img\GI\lumine.png" />
+    <None Include="Img\GI\mona.png" />
+    <None Include="Img\GI\ningguang.png" />
+    <None Include="Img\GI\noelle.png" />
+    <None Include="Img\GI\qiqi.png" />
+    <None Include="Img\GI\raiden shogun.png" />
+    <None Include="Img\GI\razor.png" />
+    <None Include="Img\GI\rosaria.png" />
+    <None Include="Img\GI\sayu.png" />
+    <None Include="Img\GI\shenhe.png" />
+    <None Include="Img\GI\sucrose.png" />
+    <None Include="Img\GI\thoma.png" />
+    <None Include="Img\GI\venti.png" />
+    <None Include="Img\GI\xiangling.png" />
+    <None Include="Img\GI\xiao.png" />
+    <None Include="Img\GI\xingqiu.png" />
+    <None Include="Img\GI\xinyan.png" />
+    <None Include="Img\GI\yae miko.png" />
+    <None Include="Img\GI\yanfei.png" />
+    <None Include="Img\GI\yelan.png" />
+    <None Include="Img\GI\yoimiya.png" />
+    <None Include="Img\GI\yunjin.png" />
+    <None Include="Img\GI\zhongli.png" />
     <Content Include="Img\information.png" />
     <None Include="Img\java.png" />
     <None Include="Img\money-bag.png" />

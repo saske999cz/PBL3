@@ -109,7 +109,7 @@ namespace DoAnPBL3
                 tbAuthor.Text = book.FullNameAuthor;
                 tbPublisher.Text = book.NameLanguage;
                 tbGenre.Text = book.NameGenre;
-                tbPrice.Text = book.Price.ToString() + "VNĐ";
+                tbPrice.Text = book.Price.ToString("##,#") + "VNĐ";
                 tbQuantity.Text = book.Quantity.ToString();
                 tbUnit.Text = book.Unit;
                 if (book.Image != null)

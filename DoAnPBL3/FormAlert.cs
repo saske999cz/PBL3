@@ -104,7 +104,7 @@ namespace DoAnPBL3
                     {
                         if (Opacity == 1.0)
                         {
-                            action = Form_Alert.EnmAction.wait;
+                            action = EnmAction.wait;
                         }
                     }
                     break;
@@ -125,7 +125,7 @@ namespace DoAnPBL3
             Close();
         }
 
-        public void Alert(string msg, Form_Alert.EnmType type)
+        public void Alert(string msg, EnmType type)
         {
             Form_Alert frm = new Form_Alert();
             frm.ShowAlert(msg, type);

@@ -22,6 +22,9 @@ namespace DoAnPBL3
         private readonly string accountUsername;
         private readonly string password;
         private string beforeNameAuthor = "";
+        public delegate void LoadData(object sender, EventArgs e);
+        public LoadData RefreshData { get; set; }
+
         //Constructor
         public FormAddSach(string accountUsername, string password)
         {
@@ -42,7 +45,7 @@ namespace DoAnPBL3
             ShowAllGenres();
         }
 
-        private void rjbtnOK_Click(object sender, EventArgs e)
+        private void RjbtnOK_Click(object sender, EventArgs e)
         {
             bool isPublishDateContainsAlpha, isValidFormatPublishDate, isPublishDateGreaterThanCurrentDate = false,
                 isValidIDBook, isValidNameBook, isValidLanguage, isValidAuthor, isValidPublisher, 
@@ -311,6 +314,7 @@ namespace DoAnPBL3
                                                                 cbbGenre.SelectedIndex + 1, bookImage);
                                 context.Books.Add(newBook);
                                 context.SaveChanges();
+                                RefreshData(sender, e);
                                 Alert("Thêm sách mới thành công", Form_Alert.EnmType.Success);
                                 Close();
                             }                            
@@ -324,6 +328,7 @@ namespace DoAnPBL3
                             cbbLanguage.SelectedIndex + 1, findingAuthor.ID_Author, cbbPublisher.SelectedIndex + 1, cbbGenre.SelectedIndex + 1, bookImage);
                         context.Books.Add(newBook);
                         context.SaveChanges();
+                        RefreshData(sender, e);
                         Alert("Thêm sách mới thành công", Form_Alert.EnmType.Success);
                         Close();
                     }
@@ -335,7 +340,7 @@ namespace DoAnPBL3
             }
         }
 
-        private void rjbtnCancel_Click(object sender, EventArgs e)
+        private void RjbtnCancel_Click(object sender, EventArgs e)
         {
             string ID_Book, nameBook, publishDate, author, price, quantity;
             ID_Book = tbIDBook.Text;
@@ -358,10 +363,8 @@ namespace DoAnPBL3
                 Close();
         }
 
-        private void tbAuthor_TextChanged(object sender, EventArgs e)
+        private void TbAuthor_TextChanged(object sender, EventArgs e)
         {
-            //MessageBox.Show(tbAuthor.Text);
-            //MessageBox.Show(beforeNameAuthor);
             if (beforeNameAuthor.Length > tbAuthor.Text.Length && beforeNameAuthor != "")
             {
                 beforeNameAuthor = tbAuthor.Text;
@@ -396,7 +399,7 @@ namespace DoAnPBL3
 
         private byte[] ImageToByteArray(Guna2PictureBox pictureBox)
         {
-            using (Bitmap bitmap = new Bitmap(gpbBookImg.ImageLocation))
+            using (Bitmap bitmap = new Bitmap(pictureBox.ImageLocation))
             {
                 MemoryStream memoryStream = new MemoryStream();
                 try
@@ -412,18 +415,20 @@ namespace DoAnPBL3
             }
         }
 
-        private void btnBookImg_Click(object sender, EventArgs e)
+        private void BtnBookImg_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Title = "Chọn ảnh";
-            openFileDialog.Filter = "Image Files(*.gif;*.jpg;*.jpeg;*.bmp;*.wmf;*.png)|*.gif;*.jpg;*.jpeg;*.bmp;*.wmf;*.png";
+            OpenFileDialog openFileDialog = new OpenFileDialog
+            {
+                Title = "Chọn ảnh",
+                Filter = "Image Files(*.gif;*.jpg;*.jpeg;*.bmp;*.wmf;*.png)|*.gif;*.jpg;*.jpeg;*.bmp;*.wmf;*.png"
+            };
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 gpbBookImg.ImageLocation = openFileDialog.FileName;
             }
         }
 
-        private void btnDeleteImg_Click(object sender, EventArgs e)
+        private void BtnDeleteImg_Click(object sender, EventArgs e)
         {
             if (gpbBookImg.ImageLocation != null)
             {
@@ -504,7 +509,7 @@ namespace DoAnPBL3
             }
         }
 
-        private void tbNameNV_KeyPress(object sender, KeyPressEventArgs e)
+        private void TbNameNV_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
             {
@@ -513,7 +518,7 @@ namespace DoAnPBL3
             }
         }
 
-        private void tbBD_KeyPress(object sender, KeyPressEventArgs e)
+        private void TbBD_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
             {
@@ -522,7 +527,7 @@ namespace DoAnPBL3
             }
         }
 
-        private void tbCMNDNV_KeyPress(object sender, KeyPressEventArgs e)
+        private void TbCMNDNV_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
             {
@@ -532,7 +537,7 @@ namespace DoAnPBL3
         }
 
 
-        private void tbAddressNV_KeyPress(object sender, KeyPressEventArgs e)
+        private void TbAddressNV_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
             {
@@ -541,7 +546,7 @@ namespace DoAnPBL3
             }
         }
 
-        private void tbEmailNV_KeyPress(object sender, KeyPressEventArgs e)
+        private void TbEmailNV_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
             {

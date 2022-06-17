@@ -35,6 +35,7 @@ namespace DoAnPBL3
                     rjtbTKKH.BorderColor = Color.FromArgb(23, 21, 35);
                     rjtbTKKH.ForeColor = Color.Silver;
                     rjtbTKKH.PlaceholderColor = Color.FromArgb(87, 83, 103);
+                    dgvQLKH.BackgroundColor = Color.FromArgb(24, 37, 65);
                     break;
                 case "Dark":
                     btnTKKH.Parent.BackColor = Color.FromArgb(32, 32, 32);
@@ -53,6 +54,7 @@ namespace DoAnPBL3
                     rjtbTKKH.BorderColor = Color.FromArgb(18, 18, 18);
                     rjtbTKKH.ForeColor = Color.Silver;
                     rjtbTKKH.PlaceholderColor = Color.FromArgb(87, 83, 103);
+                    dgvQLKH.BackgroundColor = Color.FromArgb(34, 31, 46);
                     break;
                 case "Light":
                     btnTKKH.Parent.BackColor = Color.FromArgb(220, 220, 220);
@@ -71,6 +73,7 @@ namespace DoAnPBL3
                     rjtbTKKH.BorderColor = Color.FromArgb(180, 180, 180);
                     rjtbTKKH.ForeColor = Color.DimGray;
                     rjtbTKKH.PlaceholderColor = Color.FromArgb(87, 83, 103);
+                    dgvQLKH.BackgroundColor = Color.Silver;
                     break;
             }
         }
@@ -98,6 +101,7 @@ namespace DoAnPBL3
         private void FormQLKH_Load(object sender, EventArgs e)
         {
             dgvQLKH.RowHeadersVisible = true;
+            dgvQLKH.BorderStyle = BorderStyle.FixedSingle;
             dgvQLKH.CellBorderStyle = DataGridViewCellBorderStyle.Single;
             dgvQLKH.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI Semibold", 10, FontStyle.Bold);
             using (BookStoreContext context = new BookStoreContext())

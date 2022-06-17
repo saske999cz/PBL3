@@ -34,6 +34,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panelContainer = new System.Windows.Forms.Panel();
+            this.msgValidateAddress = new System.Windows.Forms.Label();
+            this.msgValidatePhone = new System.Windows.Forms.Label();
+            this.msgValidateGender = new System.Windows.Forms.Label();
             this.msgValidateName = new System.Windows.Forms.Label();
             this.rjbtnCancel = new DoAnPBL3.RJButton();
             this.rjbtnOK = new DoAnPBL3.RJButton();
@@ -50,9 +53,6 @@
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.msgValidateGender = new System.Windows.Forms.Label();
-            this.msgValidatePhone = new System.Windows.Forms.Label();
-            this.msgValidateAddress = new System.Windows.Forms.Label();
             this.panelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelContainer.SuspendLayout();
@@ -120,6 +120,33 @@
             this.panelContainer.Size = new System.Drawing.Size(812, 471);
             this.panelContainer.TabIndex = 1;
             // 
+            // msgValidateAddress
+            // 
+            this.msgValidateAddress.AutoSize = true;
+            this.msgValidateAddress.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.msgValidateAddress.Location = new System.Drawing.Point(194, 332);
+            this.msgValidateAddress.Name = "msgValidateAddress";
+            this.msgValidateAddress.Size = new System.Drawing.Size(0, 16);
+            this.msgValidateAddress.TabIndex = 58;
+            // 
+            // msgValidatePhone
+            // 
+            this.msgValidatePhone.AutoSize = true;
+            this.msgValidatePhone.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.msgValidatePhone.Location = new System.Drawing.Point(194, 257);
+            this.msgValidatePhone.Name = "msgValidatePhone";
+            this.msgValidatePhone.Size = new System.Drawing.Size(0, 16);
+            this.msgValidatePhone.TabIndex = 57;
+            // 
+            // msgValidateGender
+            // 
+            this.msgValidateGender.AutoSize = true;
+            this.msgValidateGender.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.msgValidateGender.Location = new System.Drawing.Point(194, 186);
+            this.msgValidateGender.Name = "msgValidateGender";
+            this.msgValidateGender.Size = new System.Drawing.Size(0, 16);
+            this.msgValidateGender.TabIndex = 56;
+            // 
             // msgValidateName
             // 
             this.msgValidateName.AutoSize = true;
@@ -175,6 +202,7 @@
             // 
             // tbPhoneKH
             // 
+            this.tbPhoneKH.Animated = true;
             this.tbPhoneKH.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
             this.tbPhoneKH.BorderRadius = 6;
             this.tbPhoneKH.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -199,6 +227,7 @@
             // 
             // tbAddressKH
             // 
+            this.tbAddressKH.Animated = true;
             this.tbAddressKH.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
             this.tbAddressKH.BorderRadius = 6;
             this.tbAddressKH.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -223,6 +252,7 @@
             // 
             // tbNameKH
             // 
+            this.tbNameKH.Animated = true;
             this.tbNameKH.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
             this.tbNameKH.BorderRadius = 6;
             this.tbNameKH.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -344,33 +374,6 @@
             // 
             this.guna2Elipse2.BorderRadius = 10;
             this.guna2Elipse2.TargetControl = this;
-            // 
-            // msgValidateGender
-            // 
-            this.msgValidateGender.AutoSize = true;
-            this.msgValidateGender.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.msgValidateGender.Location = new System.Drawing.Point(194, 186);
-            this.msgValidateGender.Name = "msgValidateGender";
-            this.msgValidateGender.Size = new System.Drawing.Size(0, 16);
-            this.msgValidateGender.TabIndex = 56;
-            // 
-            // msgValidatePhone
-            // 
-            this.msgValidatePhone.AutoSize = true;
-            this.msgValidatePhone.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.msgValidatePhone.Location = new System.Drawing.Point(194, 257);
-            this.msgValidatePhone.Name = "msgValidatePhone";
-            this.msgValidatePhone.Size = new System.Drawing.Size(0, 16);
-            this.msgValidatePhone.TabIndex = 57;
-            // 
-            // msgValidateAddress
-            // 
-            this.msgValidateAddress.AutoSize = true;
-            this.msgValidateAddress.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.msgValidateAddress.Location = new System.Drawing.Point(194, 332);
-            this.msgValidateAddress.Name = "msgValidateAddress";
-            this.msgValidateAddress.Size = new System.Drawing.Size(0, 16);
-            this.msgValidateAddress.TabIndex = 58;
             // 
             // FormAddKH
             // 

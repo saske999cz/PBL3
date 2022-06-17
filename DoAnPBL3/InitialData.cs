@@ -69,52 +69,52 @@ namespace DoAnPBL3
             context.Admins.AddRange(new Admin[]
             {
                 new Admin {ID_Admin = "AD0001", FullNameAdmin = "Lê Hoàng Long", Email = "lelong.ll32@gmail.com",
-                    DateOfBirth = new DateTime(2000, 01, 01), StartDate = new DateTime(2020, 01, 01),
-                    Gender = "Nam", Phone = "0905000001", ID_Card = "201800001", Address = "Đà Nẵng",
+                    DateOfBirth = new DateTime(2000, 01, 01), StartDate = new DateTime(2020, 01, 01), EndDate = null, 
+                    Gender = "Nam", Phone = "0905000001", ID_Card = "201800001", Address = "Đà Nẵng", 
                     Avatar = null, AccountUsername = "lehoanglong"},
 
                 new Admin {ID_Admin = "AD0002", FullNameAdmin = "Nguyễn Khắc Thái", Email = "nguyenkhacthai@gmail.com",
-                    DateOfBirth = new DateTime(2000, 01, 01), StartDate = new DateTime(2020, 01, 01),
+                    DateOfBirth = new DateTime(2000, 01, 01), StartDate = new DateTime(2020, 01, 01), EndDate = null,
                     Gender = "Nam", Phone = "0905000002", ID_Card = "201800002", Address = "Đà Nẵng",
                     Avatar = null, AccountUsername = "nguyenkhacthai"},
 
                 new Admin {ID_Admin = "AD0003", FullNameAdmin = "Đào Thủy Trang", Email = "daothuytrang@gmail.com",
-                    DateOfBirth = new DateTime(2000, 01, 01), StartDate = new DateTime(2020, 01, 01),
+                    DateOfBirth = new DateTime(2000, 01, 01), StartDate = new DateTime(2020, 01, 01), EndDate = null,
                     Gender = "Nữ", Phone = "0905000003", ID_Card = "201800003", Address = "Đà Nẵng",
                     Avatar = null, AccountUsername = "daothuytrang"},
 
                 new Admin {ID_Admin = "AD0004", FullNameAdmin = "Lý Văn Tánh", Email = "lyvantanh@gmail.com",
-                    DateOfBirth = new DateTime(2000, 01, 01), StartDate = new DateTime(2020, 01, 01),
+                    DateOfBirth = new DateTime(2000, 01, 01), StartDate = new DateTime(2020, 01, 01), EndDate = null,
                     Gender = "Nam", Phone = "0905000001", ID_Card = "201800004", Address = "Đà Nẵng",
                     Avatar = null, AccountUsername = "lyvantanh"},
 
                 new Admin {ID_Admin = "AD0005", FullNameAdmin = "Ngô Đức Quốc Khánh", Email = "ngoducquockhanh@gmail.com",
-                    DateOfBirth = new DateTime(2000, 01, 01), StartDate = new DateTime(2020, 01, 01),
+                    DateOfBirth = new DateTime(2000, 01, 01), StartDate = new DateTime(2020, 01, 01), EndDate = null,
                     Gender = "Nam", Phone = "0905000004", ID_Card = "201800005", Address = "Đà Nẵng",
                     Avatar = null, AccountUsername = "ngoducquockhanh"},
 
                 new Admin {ID_Admin = "AD0006", FullNameAdmin = "Trà Văn Thiên", Email = "travanthien@gmail.com",
-                    DateOfBirth = new DateTime(2000, 01, 01), StartDate = new DateTime(2020, 01, 01),
+                    DateOfBirth = new DateTime(2000, 01, 01), StartDate = new DateTime(2020, 01, 01), EndDate = null,
                     Gender = "Nam", Phone = "0905000005", ID_Card = "201800006", Address = "Đà Nẵng",
                     Avatar = null, AccountUsername = "travanthien"},
 
                 new Admin {ID_Admin = "AD0007", FullNameAdmin = "Lê Trọng Hoàng Minh", Email = "letronghoangminh@gmail.com",
-                    DateOfBirth = new DateTime(2000, 01, 01), StartDate = new DateTime(2020, 01, 01),
+                    DateOfBirth = new DateTime(2000, 01, 01), StartDate = new DateTime(2020, 01, 01), EndDate = null,
                     Gender = "Nam", Phone = "0905000006", ID_Card = "201800007", Address = "Đà Nẵng",
                     Avatar = null, AccountUsername = "letronghoangminh"},
 
                 new Admin {ID_Admin = "AD0008", FullNameAdmin = "Lê Viết Tùng Dương", Email = "leviettungduong@gmail.com",
-                    DateOfBirth = new DateTime(2000, 01, 01), StartDate = new DateTime(2020, 01, 01),
+                    DateOfBirth = new DateTime(2000, 01, 01), StartDate = new DateTime(2020, 01, 01), EndDate = null,
                     Gender = "Nam", Phone = "0905000007", ID_Card = "201800008", Address = "Đà Nẵng",
                     Avatar = null, AccountUsername = "leviettungduong"},
 
                 new Admin {ID_Admin = "AD0009", FullNameAdmin = "Nguyễn Trọng Sang", Email = "nguyentrongsang@gmail.com",
-                    DateOfBirth = new DateTime(2000, 01, 01), StartDate = new DateTime(2020, 01, 01),
+                    DateOfBirth = new DateTime(2000, 01, 01), StartDate = new DateTime(2020, 01, 01), EndDate = null,
                     Gender = "Nam", Phone = "0905000008", ID_Card = "201800009", Address = "Đà Nẵng",
                     Avatar = null, AccountUsername = "nguyentrongsang"},
 
                 new Admin {ID_Admin = "AD0010", FullNameAdmin = "Nguyễn Văn Hoàng Nhân", Email = "nguyenvanhoangnhan@gmail.com",
-                    DateOfBirth = new DateTime(2000, 01, 01), StartDate = new DateTime(2020, 01, 01),
+                    DateOfBirth = new DateTime(2000, 01, 01), StartDate = new DateTime(2020, 01, 01), EndDate = null,
                     Gender = "Nam", Phone = "0905000009", ID_Card = "201800010", Address = "Đà Nẵng",
                     Avatar = null, AccountUsername = "nguyenvanhoangnhan"},
             });
@@ -122,52 +122,52 @@ namespace DoAnPBL3
             context.Employees.AddRange(new Employee[]
             {
                 new Employee {ID_Employee = "E0000", FullNameEmployee = "Phạm Tiến Hữu", Email = "phamtienhuu@gmail.com",
-                    DateOfBirth = new DateTime(2000, 01, 01), StartDate = new DateTime(2020, 01, 01),
+                    DateOfBirth = new DateTime(2000, 01, 01), StartDate = new DateTime(2020, 01, 01), EndDate = null,
                     Gender = "Nam", Phone = "0905000001", Id_Card = "201800001", Address = "Đà Nẵng",
                     Avatar = null, AccountUsername = "phamtienhuu"},
 
                 new Employee {ID_Employee = "E0001", FullNameEmployee = "Nguyễn Bá Tuấn", Email = "nguyenbatuan@gmail.com",
-                    DateOfBirth = new DateTime(2000, 01, 01), StartDate = new DateTime(2020, 01, 01),
+                    DateOfBirth = new DateTime(2000, 01, 01), StartDate = new DateTime(2020, 01, 01), EndDate = null,
                     Gender = "Nam", Phone = "0905000002", Id_Card = "201800002", Address = "Đà Nẵng",
                     Avatar = null, AccountUsername = "nguyenbatuan"},
 
                 new Employee {ID_Employee = "E0002", FullNameEmployee = "Trần Chính Huy", Email = "tranchinhhuy@gmail.com",
-                    DateOfBirth = new DateTime(2000, 01, 01), StartDate = new DateTime(2020, 01, 01),
+                    DateOfBirth = new DateTime(2000, 01, 01), StartDate = new DateTime(2020, 01, 01), EndDate = null,
                     Gender = "Nam", Phone = "0905000003", Id_Card = "201800003", Address = "Đà Nẵng",
                     Avatar = null, AccountUsername = "tranchinhhuy"},
 
                 new Employee {ID_Employee = "E0003", FullNameEmployee = "Nguyễn Quang Khải", Email = "nguyenquankhai@gmail.com",
-                    DateOfBirth = new DateTime(2000, 01, 01), StartDate = new DateTime(2020, 01, 01),
+                    DateOfBirth = new DateTime(2000, 01, 01), StartDate = new DateTime(2020, 01, 01), EndDate = null,
                     Gender = "Nam", Phone = "0905000004", Id_Card = "201800004", Address = "Đà Nẵng",
                     Avatar = null, AccountUsername = "nguyenquangkhai"},
 
                 new Employee {ID_Employee = "E0004", FullNameEmployee = "Phạm Hoàng Sơn", Email = "phamhoangson@gmail.com",
-                    DateOfBirth = new DateTime(2000, 01, 01), StartDate = new DateTime(2020, 01, 01),
+                    DateOfBirth = new DateTime(2000, 01, 01), StartDate = new DateTime(2020, 01, 01), EndDate = null,
                     Gender = "Nam", Phone = "0905000005", Id_Card = "201800005", Address = "Đà Nẵng",
                     Avatar = null, AccountUsername = "phamhoangson"},
 
                 new Employee {ID_Employee = "E0005", FullNameEmployee = "Ngô Tấn Dũng", Email = "ngotandung@gmail.com",
-                    DateOfBirth = new DateTime(2000, 01, 01), StartDate = new DateTime(2020, 01, 01),
+                    DateOfBirth = new DateTime(2000, 01, 01), StartDate = new DateTime(2020, 01, 01), EndDate = null,
                     Gender = "Nam", Phone = "0905000006", Id_Card = "201800006", Address = "Đà Nẵng",
                     Avatar = null, AccountUsername = "ngotandung"},
 
                 new Employee {ID_Employee = "E0006", FullNameEmployee = "Nguyễn Văn Khoa", Email = "nguyenvankhoa@gmail.com",
-                    DateOfBirth = new DateTime(2000, 01, 01), StartDate = new DateTime(2020, 01, 01),
+                    DateOfBirth = new DateTime(2000, 01, 01), StartDate = new DateTime(2020, 01, 01), EndDate = null,
                     Gender = "Nam", Phone = "0905000007", Id_Card = "201800007", Address = "Đà Nẵng",
                     Avatar = null, AccountUsername = "nguyenvankhoa"},
 
                 new Employee {ID_Employee = "E0007", FullNameEmployee = "Lê Văn Thành", Email = "levanthanh@gmail.com",
-                    DateOfBirth = new DateTime(2000, 01, 01), StartDate = new DateTime(2020, 01, 01),
+                    DateOfBirth = new DateTime(2000, 01, 01), StartDate = new DateTime(2020, 01, 01), EndDate = null,
                     Gender = "Nam", Phone = "0905000008", Id_Card = "201800008", Address = "Đà Nẵng",
                     Avatar = null, AccountUsername = "levanthanh"},
 
                 new Employee {ID_Employee = "E0008", FullNameEmployee = "Trần Khánh Phương", Email = "trankhanhphuong@gmail.com",
-                    DateOfBirth = new DateTime(2000, 01, 01), StartDate = new DateTime(2020, 01, 01),
+                    DateOfBirth = new DateTime(2000, 01, 01), StartDate = new DateTime(2020, 01, 01), EndDate = null,
                     Gender = "Nữ", Phone = "0905000009", Id_Card = "201800009", Address = "Đà Nẵng",
                     Avatar = null, AccountUsername = "trankhanhphuong"},
 
                 new Employee {ID_Employee = "E0009", FullNameEmployee = "Lê Thị Huyền Trang", Email = "lethihuyentrang@gmail.com",
-                    DateOfBirth = new DateTime(2000, 01, 01), StartDate = new DateTime(2020, 01, 01),
+                    DateOfBirth = new DateTime(2000, 01, 01), StartDate = new DateTime(2020, 01, 01), EndDate = null,
                     Gender = "Nữ", Phone = "0905000010", Id_Card = "201800010", Address = "Đà Nẵng",
                     Avatar = null, AccountUsername = "lethihuyentrang"},
             });

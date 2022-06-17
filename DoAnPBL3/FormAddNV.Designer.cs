@@ -181,6 +181,7 @@
             // 
             // tbStartDate
             // 
+            this.tbStartDate.Animated = true;
             this.tbStartDate.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
             this.tbStartDate.BorderRadius = 6;
             this.tbStartDate.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -234,6 +235,7 @@
             // 
             // tbIDNV
             // 
+            this.tbIDNV.Animated = true;
             this.tbIDNV.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
             this.tbIDNV.BorderRadius = 6;
             this.tbIDNV.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -289,7 +291,7 @@
             this.btnDeleteImg.TextColor = System.Drawing.Color.White;
             this.btnDeleteImg.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDeleteImg.UseVisualStyleBackColor = false;
-            this.btnDeleteImg.Click += new System.EventHandler(this.btnDeleteImg_Click);
+            this.btnDeleteImg.Click += new System.EventHandler(this.BtnDeleteImg_Click);
             // 
             // avatar
             // 
@@ -387,10 +389,11 @@
             this.btnNVImg.TextColor = System.Drawing.Color.White;
             this.btnNVImg.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnNVImg.UseVisualStyleBackColor = false;
-            this.btnNVImg.Click += new System.EventHandler(this.btnNVImg_Click);
+            this.btnNVImg.Click += new System.EventHandler(this.BtnNVImg_Click);
             // 
             // tbEmailNV
             // 
+            this.tbEmailNV.Animated = true;
             this.tbEmailNV.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
             this.tbEmailNV.BorderRadius = 6;
             this.tbEmailNV.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -411,10 +414,11 @@
             this.tbEmailNV.SelectedText = "";
             this.tbEmailNV.Size = new System.Drawing.Size(409, 30);
             this.tbEmailNV.TabIndex = 2;
-            this.tbEmailNV.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbEmailNV_KeyPress);
+            this.tbEmailNV.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbEmailNV_KeyPress);
             // 
             // tbSDTNV
             // 
+            this.tbSDTNV.Animated = true;
             this.tbSDTNV.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
             this.tbSDTNV.BorderRadius = 6;
             this.tbSDTNV.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -435,10 +439,11 @@
             this.tbSDTNV.SelectedText = "";
             this.tbSDTNV.Size = new System.Drawing.Size(409, 30);
             this.tbSDTNV.TabIndex = 6;
-            this.tbSDTNV.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbSDTNV_KeyPress);
+            this.tbSDTNV.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbSDTNV_KeyPress);
             // 
             // tbAddressNV
             // 
+            this.tbAddressNV.Animated = true;
             this.tbAddressNV.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
             this.tbAddressNV.BorderRadius = 6;
             this.tbAddressNV.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -459,10 +464,11 @@
             this.tbAddressNV.SelectedText = "";
             this.tbAddressNV.Size = new System.Drawing.Size(409, 30);
             this.tbAddressNV.TabIndex = 8;
-            this.tbAddressNV.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbAddressNV_KeyPress);
+            this.tbAddressNV.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbAddressNV_KeyPress);
             // 
             // tbCMNDNV
             // 
+            this.tbCMNDNV.Animated = true;
             this.tbCMNDNV.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
             this.tbCMNDNV.BorderRadius = 6;
             this.tbCMNDNV.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -483,10 +489,11 @@
             this.tbCMNDNV.SelectedText = "";
             this.tbCMNDNV.Size = new System.Drawing.Size(409, 30);
             this.tbCMNDNV.TabIndex = 7;
-            this.tbCMNDNV.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCMNDNV_KeyPress);
+            this.tbCMNDNV.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbCMNDNV_KeyPress);
             // 
             // tbBD
             // 
+            this.tbBD.Animated = true;
             this.tbBD.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
             this.tbBD.BorderRadius = 6;
             this.tbBD.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -507,10 +514,11 @@
             this.tbBD.SelectedText = "";
             this.tbBD.Size = new System.Drawing.Size(409, 30);
             this.tbBD.TabIndex = 3;
-            this.tbBD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbBD_KeyPress);
+            this.tbBD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbBD_KeyPress);
             // 
             // tbNameNV
             // 
+            this.tbNameNV.Animated = true;
             this.tbNameNV.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
             this.tbNameNV.BorderRadius = 6;
             this.tbNameNV.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -531,7 +539,7 @@
             this.tbNameNV.SelectedText = "";
             this.tbNameNV.Size = new System.Drawing.Size(409, 30);
             this.tbNameNV.TabIndex = 1;
-            this.tbNameNV.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbNameNV_KeyPress);
+            this.tbNameNV.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbNameNV_KeyPress);
             // 
             // cbGenderNV
             // 
@@ -576,7 +584,7 @@
             this.rjbtnCancel.Text = "Hủy";
             this.rjbtnCancel.TextColor = System.Drawing.Color.White;
             this.rjbtnCancel.UseVisualStyleBackColor = false;
-            this.rjbtnCancel.Click += new System.EventHandler(this.rjbtnCancel_Click);
+            this.rjbtnCancel.Click += new System.EventHandler(this.RjbtnCancel_Click);
             // 
             // rjbtnOK
             // 
@@ -598,7 +606,7 @@
             this.rjbtnOK.Text = "OK";
             this.rjbtnOK.TextColor = System.Drawing.Color.White;
             this.rjbtnOK.UseVisualStyleBackColor = false;
-            this.rjbtnOK.Click += new System.EventHandler(this.rjbtnOK_Click);
+            this.rjbtnOK.Click += new System.EventHandler(this.RjbtnOK_Click);
             // 
             // lblCMND
             // 

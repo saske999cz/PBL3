@@ -32,6 +32,12 @@ namespace DoAnPBL3
                 tbGenderKH.Text = infoCustomer.Gender;
                 tbPhoneKH.Text = infoCustomer.Phone;
                 tbAddressKH.Text = infoCustomer.Address;
+                var startDate = context.Orders
+                    .Where(order => order.ID_Customer == ID_Customer)
+                    .OrderBy(order => order.OrderDate)
+                    .Select(order => order.OrderDate)
+                    .FirstOrDefault();
+                tbStartDate.Text = startDate.ToString("dd/MM/yyyy");
                 var totalPrice = context.Customers
                     .Join(
                         context.Orders,
@@ -40,7 +46,7 @@ namespace DoAnPBL3
                         (cus, order) => new { cus.ID_Customer, order.TotalPrice })
                     .Where(cus => cus.ID_Customer == ID_Customer)
                     .Sum(order => order.TotalPrice);
-                tbTotalPrice.Text = totalPrice + "VNĐ";
+                tbTotalPrice.Text = totalPrice.ToString("##,#") + "VNĐ";
                 var numberOrder = context.Customers
                     .Join(
                         context.Orders,
@@ -54,7 +60,7 @@ namespace DoAnPBL3
             }
         }
 
-        private void rjbtnOK_Click(object sender, EventArgs e)
+        private void RjbtnOK_Click(object sender, EventArgs e)
         {
             Close();
         }

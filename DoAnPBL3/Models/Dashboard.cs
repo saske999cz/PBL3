@@ -81,6 +81,8 @@ namespace DoAnPBL3.Models
                 }
                 TotalProfit = ToTalRevenue * 0.2m; // 20%
                 // Group by hours
+                // Select btn Today
+                RJMessageBox.Show(numberDays.ToString());
                 if (numberDays <= 1)
                 {
                     GrossRevenueList = (from orderList in result
@@ -93,16 +95,24 @@ namespace DoAnPBL3.Models
                                         }).ToList();
                 }
                 // Group by days
-                if (numberDays <= 30)
+                else if (numberDays <= 30)
                 {
-                    foreach(var item in result)
-                    {
-                        GrossRevenueList.Add(new RevenueByDate()
-                        {
-                            Date = item.Key.ToString("dd/MM"),
-                            TotalAmount = item.Value
-                        });
-                    }
+                    GrossRevenueList = (from orderList in result
+                                        group orderList by orderList.Key.ToString("dd/MM")
+                                        into order
+                                        select new RevenueByDate
+                                        {
+                                            Date = order.Key,
+                                            TotalAmount = order.Sum(amount => amount.Value)
+                                        }).ToList(); 
+                    //foreach(var item in result)
+                    //{
+                    //    GrossRevenueList.Add(new RevenueByDate()
+                    //    {
+                    //        Date = item.Key.ToString("dd/MM"),
+                    //        TotalAmount = item.Value
+                    //    });
+                    //}
                 }
                 // Group by weeks
                 else if (numberDays <= 92)

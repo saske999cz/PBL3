@@ -21,10 +21,125 @@ namespace DoAnPBL3
 {
     public partial class FormAddNV : Form
     {
+        public delegate void LoadData(object sender, EventArgs e);
+        public LoadData RefreshData { get; set; }
+        private readonly string theme;
+
         //Constructor
-        public FormAddNV()
+        public FormAddNV(string theme)
         {
+            this.theme = theme;
             InitializeComponent();
+            switch(theme)
+            {
+                case "Admin":
+                    panelContainer.BackColor = Color.FromArgb(24, 37, 65);
+                    lblIDNV.ForeColor = Color.WhiteSmoke;
+                    lblNameNV.ForeColor = Color.WhiteSmoke;
+                    lblEmail.ForeColor = Color.WhiteSmoke;
+                    lblBD.ForeColor = Color.WhiteSmoke;
+                    lblStartDate.ForeColor = Color.WhiteSmoke;
+                    lblGender.ForeColor = Color.WhiteSmoke;
+                    lblSDT.ForeColor = Color.WhiteSmoke;
+                    lblCMND.ForeColor = Color.WhiteSmoke;
+                    lblAddress.ForeColor = Color.WhiteSmoke;
+                    tbIDNV.FillColor = Color.FromArgb(15, 27, 57);
+                    tbIDNV.ForeColor = Color.FromArgb(193, 200, 207);
+                    tbNameNV.FillColor = Color.FromArgb(15, 27, 57);
+                    tbNameNV.ForeColor = Color.FromArgb(193, 200, 207);
+                    tbEmailNV.FillColor = Color.FromArgb(15, 27, 57);
+                    tbEmailNV.ForeColor = Color.FromArgb(193, 200, 207);
+                    tbBD.FillColor = Color.FromArgb(15, 27, 57);
+                    tbBD.ForeColor = Color.FromArgb(193, 200, 207);
+                    tbStartDate.FillColor = Color.FromArgb(15, 27, 57);
+                    tbStartDate.ForeColor = Color.FromArgb(193, 200, 207);
+                    cbGenderNV.BackColor = Color.FromArgb(15, 27, 57);
+                    cbGenderNV.BorderColor = Color.FromArgb(15, 27, 57);
+                    cbGenderNV.ListBackColor = Color.FromArgb(15, 27, 57);
+                    cbGenderNV.ListTextColor = Color.FromArgb(193, 200, 207);
+                    cbGenderNV.ForeColor = Color.FromArgb(193, 200, 207);
+                    tbSDTNV.FillColor = Color.FromArgb(15, 27, 57);
+                    tbSDTNV.ForeColor = Color.FromArgb(193, 200, 207);
+                    tbCMNDNV.FillColor = Color.FromArgb(15, 27, 57);
+                    tbCMNDNV.ForeColor = Color.FromArgb(193, 200, 207);
+                    tbAddressNV.FillColor = Color.FromArgb(15, 27, 57);
+                    tbAddressNV.ForeColor = Color.FromArgb(193, 200, 207);
+                    break;
+                case "Dark":
+                    panelContainer.BackColor = Color.FromArgb(32, 32, 32);
+                    lblIDNV.ForeColor = Color.WhiteSmoke;
+                    lblNameNV.ForeColor = Color.WhiteSmoke;
+                    lblEmail.ForeColor = Color.WhiteSmoke;
+                    lblBD.ForeColor = Color.WhiteSmoke;
+                    lblStartDate.ForeColor = Color.WhiteSmoke;
+                    lblGender.ForeColor = Color.WhiteSmoke;
+                    lblSDT.ForeColor = Color.WhiteSmoke;
+                    lblCMND.ForeColor = Color.WhiteSmoke;
+                    lblAddress.ForeColor = Color.WhiteSmoke;
+                    tbIDNV.FillColor = Color.FromArgb(40, 35, 40);
+                    tbIDNV.ForeColor = Color.FromArgb(193, 200, 207);
+                    tbNameNV.FillColor = Color.FromArgb(40, 35, 40);
+                    tbNameNV.ForeColor = Color.FromArgb(193, 200, 207);
+                    tbEmailNV.FillColor = Color.FromArgb(40, 35, 40);
+                    tbEmailNV.ForeColor = Color.FromArgb(193, 200, 207);
+                    tbBD.FillColor = Color.FromArgb(40, 35, 40);
+                    tbBD.ForeColor = Color.FromArgb(193, 200, 207);
+                    tbStartDate.FillColor = Color.FromArgb(40, 35, 40);
+                    tbStartDate.ForeColor = Color.FromArgb(193, 200, 207);
+                    cbGenderNV.BackColor = Color.FromArgb(40, 35, 40);
+                    cbGenderNV.ForeColor = Color.FromArgb(193, 200, 207);
+                    cbGenderNV.BorderColor = Color.FromArgb(40, 35, 40);
+                    cbGenderNV.ListBackColor = Color.FromArgb(40, 35, 40);
+                    cbGenderNV.ListTextColor = Color.FromArgb(193, 200, 207);
+                    tbSDTNV.FillColor = Color.FromArgb(40, 35, 40);
+                    tbSDTNV.ForeColor = Color.FromArgb(193, 200, 207);
+                    tbCMNDNV.FillColor = Color.FromArgb(40, 35, 40);
+                    tbCMNDNV.ForeColor = Color.FromArgb(193, 200, 207);
+                    tbAddressNV.FillColor = Color.FromArgb(40, 35, 40);
+                    tbAddressNV.ForeColor = Color.FromArgb(193, 200, 207);
+                    break;
+                case "Light":
+                    panelContainer.BackColor = Color.Gainsboro;
+                    lblIDNV.ForeColor = Color.Black;
+                    lblNameNV.ForeColor = Color.Black;
+                    lblEmail.ForeColor = Color.Black;
+                    lblBD.ForeColor = Color.Black;
+                    lblStartDate.ForeColor = Color.Black;
+                    lblGender.ForeColor = Color.Black;
+                    lblSDT.ForeColor = Color.Black;
+                    lblCMND.ForeColor = Color.Black;
+                    lblAddress.ForeColor = Color.Black;
+                    tbIDNV.FillColor = Color.Silver;
+                    tbIDNV.ForeColor = Color.Black;
+                    tbIDNV.PlaceholderForeColor = Color.Black;
+                    tbNameNV.FillColor = Color.Silver;
+                    tbNameNV.ForeColor = Color.Black;
+                    tbNameNV.PlaceholderForeColor = Color.Black;
+                    tbEmailNV.FillColor = Color.Silver;
+                    tbEmailNV.ForeColor = Color.Black;
+                    tbEmailNV.PlaceholderForeColor = Color.Black;
+                    tbBD.FillColor = Color.Silver;
+                    tbBD.ForeColor = Color.Black;
+                    tbBD.PlaceholderForeColor = Color.Black;
+                    tbStartDate.FillColor = Color.Silver;
+                    tbStartDate.ForeColor = Color.Black;
+                    tbStartDate.PlaceholderForeColor = Color.Black;
+                    cbGenderNV.BackColor = Color.Silver;
+                    cbGenderNV.BorderColor = Color.Silver;
+                    cbGenderNV.ListBackColor = Color.Silver;
+                    cbGenderNV.ListTextColor = Color.Black;
+                    cbGenderNV.ForeColor = Color.Black;
+                    tbSDTNV.FillColor = Color.Silver;
+                    tbSDTNV.ForeColor = Color.Black;
+                    tbSDTNV.PlaceholderForeColor = Color.Black;
+                    tbCMNDNV.FillColor = Color.Silver;
+                    tbCMNDNV.ForeColor = Color.Black;
+                    tbCMNDNV.PlaceholderForeColor = Color.Black;
+                    tbAddressNV.FillColor = Color.Silver;
+                    tbAddressNV.ForeColor = Color.Black;
+                    tbAddressNV.PlaceholderForeColor = Color.Black;
+                    break;
+            }
         }
 
         public void Alert(string msg, Form_Alert.EnmType type)
@@ -33,7 +148,7 @@ namespace DoAnPBL3
             frm.ShowAlert(msg, type);
         }
 
-        private void rjbtnOK_Click(object sender, EventArgs e)
+        private void RjbtnOK_Click(object sender, EventArgs e)
         {
             bool isDateOfBirthContainsAlpha, isValidFormatDateOfBirth, isValidAge = false, isDateOfBirthGreaterThanCurrentDate, 
                 isStartDateContainsAlpha, isValidFormatStartDate, isStartDateGreaterThanCurrentDate = false,
@@ -373,10 +488,11 @@ namespace DoAnPBL3
                         context.SaveChanges();
                     }
 
-                    Employee newEmployee = new Employee(id, name, email, birthday, startDateTime,
+                    Employee newEmployee = new Employee(id, name, email, birthday, startDateTime, null,
                         gender, phone, idCard, address, ava, username);
                     context.Employees.Add(newEmployee);
                     context.SaveChanges();
+                    RefreshData(sender, e);
                     Alert("Thêm nhân viên mới thành công", Form_Alert.EnmType.Success);
                     Close();
                 }
@@ -387,7 +503,7 @@ namespace DoAnPBL3
             }
         }
 
-        private void rjbtnCancel_Click(object sender, EventArgs e)
+        private void RjbtnCancel_Click(object sender, EventArgs e)
         {
             string id, name, email, dateOfBirth, startDate, phone, idCard, address;
             id = tbIDNV.Text;
@@ -413,7 +529,7 @@ namespace DoAnPBL3
 
         private byte[] ImageToByteArray(Guna2PictureBox pictureBox)
         {
-            using (Bitmap bitmap = new Bitmap(avatar.ImageLocation))
+            using (Bitmap bitmap = new Bitmap(pictureBox.ImageLocation))
             {
                 MemoryStream memoryStream = new MemoryStream();
                 try
@@ -429,18 +545,20 @@ namespace DoAnPBL3
             } 
         }
 
-        private void btnNVImg_Click(object sender, EventArgs e)
+        private void BtnNVImg_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Title = "Chọn ảnh";
-            openFileDialog.Filter = "Image Files(*.gif;*.jpg;*.jpeg;*.bmp;*.wmf;*.png)|*.gif;*.jpg;*.jpeg;*.bmp;*.wmf;*.png";
+            OpenFileDialog openFileDialog = new OpenFileDialog
+            {
+                Title = "Chọn ảnh",
+                Filter = "Image Files(*.gif;*.jpg;*.jpeg;*.bmp;*.wmf;*.png)|*.gif;*.jpg;*.jpeg;*.bmp;*.wmf;*.png"
+            };
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 avatar.ImageLocation = openFileDialog.FileName;
             }
         }
 
-        private void btnDeleteImg_Click(object sender, EventArgs e)
+        private void BtnDeleteImg_Click(object sender, EventArgs e)
         {
             if (avatar.ImageLocation != null)
             {
@@ -463,7 +581,7 @@ namespace DoAnPBL3
             else if (alphaName == 'é' || alphaName == 'É' || alphaName == 'è' || alphaName == 'È' || alphaName == 'ẻ' || alphaName == 'Ẻ'
                 || alphaName == 'ẽ' || alphaName == 'Ẽ' || alphaName == 'ẹ' || alphaName == 'Ẹ' || alphaName == 'ê' || alphaName == 'Ê'
                 || alphaName == 'ế' || alphaName == 'Ế' || alphaName == 'ề' || alphaName == 'Ề' || alphaName == 'ể' || alphaName == 'Ể'
-                || alphaName == 'ể' || alphaName == 'Ể' || alphaName == 'ệ' || alphaName == 'Ệ')
+                || alphaName == 'ễ' || alphaName == 'Ễ' || alphaName == 'ệ' || alphaName == 'Ệ')
                 return 'e';
             else if (alphaName == 'í' || alphaName == 'Í' || alphaName == 'ì' || alphaName == 'Ì' || alphaName == 'ỉ' || alphaName == 'Ỉ'
                 || alphaName == 'ĩ' || alphaName == 'Ĩ' || alphaName == 'ị' || alphaName == 'Ị')
@@ -494,7 +612,7 @@ namespace DoAnPBL3
                     .ToArray());
         }
 
-        private void tbNameNV_KeyPress(object sender, KeyPressEventArgs e)
+        private void TbNameNV_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
             {
@@ -503,7 +621,7 @@ namespace DoAnPBL3
             }
         }
 
-        private void tbEmailNV_KeyPress(object sender, KeyPressEventArgs e)
+        private void TbEmailNV_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
             {
@@ -512,7 +630,7 @@ namespace DoAnPBL3
             }
         }
 
-        private void tbBD_KeyPress(object sender, KeyPressEventArgs e)
+        private void TbBD_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
             {
@@ -521,7 +639,7 @@ namespace DoAnPBL3
             }
         }
 
-        private void tbSDTNV_KeyPress(object sender, KeyPressEventArgs e)
+        private void TbSDTNV_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
             {
@@ -530,7 +648,7 @@ namespace DoAnPBL3
             }
         }
 
-        private void tbCMNDNV_KeyPress(object sender, KeyPressEventArgs e)
+        private void TbCMNDNV_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
             {
@@ -539,7 +657,7 @@ namespace DoAnPBL3
             }
         }
 
-        private void tbAddressNV_KeyPress(object sender, KeyPressEventArgs e)
+        private void TbAddressNV_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
             {

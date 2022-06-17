@@ -14,7 +14,6 @@ namespace DoAnPBL3
 {
     public partial class FormQLS : Form
     {
-        private int count;
         private readonly string accountUsername;
         private readonly string password;
 
@@ -36,7 +35,6 @@ namespace DoAnPBL3
             dgvQLSNV.RowHeadersVisible = true;
             dgvQLSNV.CellBorderStyle = DataGridViewCellBorderStyle.Single;
             dgvQLSNV.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI Semibold", 10, FontStyle.Bold);
-            timer1.Tick += new EventHandler(Timer1_Tick);
             using (BookStoreContext context = new BookStoreContext())
             {
                 var listBooks = context.Books
@@ -59,14 +57,14 @@ namespace DoAnPBL3
                 lblTSSDB.Text = listBooks.Count().ToString();
                 lblSSTV.Text = listVietnameseBooks.Count().ToString();
                 lblSSTA.Text = listEnglishBooks.Count().ToString();
-                count = listBooks.Count();
             }
         }
 
         private void BtnAddSach_Click(object sender, EventArgs e)
         {
-            new FormAddSach(accountUsername, password).ShowDialog();
-            timer1.Start();
+            FormAddSach formAddSach = new FormAddSach(accountUsername, password);
+            formAddSach.RefreshData += new FormAddSach.LoadData(FormQLS_Load);
+            formAddSach.ShowDialog();
         }
 
         private void BtnSuaSach_Click(object sender, EventArgs e)
@@ -76,7 +74,9 @@ namespace DoAnPBL3
             else
             {
                 string ID_Book = dgvQLSNV.CurrentRow.Cells["ID_Book"].Value.ToString();
-                new FormSuaSach(ID_Book).ShowDialog();
+                FormSuaSach formSuaSach = new FormSuaSach(ID_Book);
+                formSuaSach.RefreshData += new FormSuaSach.LoadData(FormQLS_Load);
+                formSuaSach.ShowDialog();
             }
         }
 
@@ -91,8 +91,9 @@ namespace DoAnPBL3
                 DialogResult result = RJMessageBox.Show("Xác nhận xóa mặt hàng sách " + NameBook + "?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 if (result == DialogResult.Yes)
                 {
-                    new FormIdentify(accountUsername, password, ID_Book).ShowDialog();
-                    timer1.Start();
+                    FormIdentify formIdentify = new FormIdentify(accountUsername, password, ID_Book);
+                    formIdentify.RefreshData += new FormIdentify.LoadData(FormQLS_Load);
+                    formIdentify.Show();
                 }
                 else
                     return;
@@ -196,37 +197,6 @@ namespace DoAnPBL3
                 // Sách tiếng anh
                 else
                     dgvQLSNV.DataSource = listEnglishBooks;
-            }
-        }
-
-        private void Timer1_Tick(object sender, EventArgs e)
-        {
-            using (BookStoreContext context = new BookStoreContext())
-            {
-                var listBooks = context.Books
-                    .Join(
-                        context.Languages,
-                        book => book.ID_Language,
-                        language => language.ID_Language,
-                        (book, language) => new
-                        {
-                            book.ID_Book,
-                            book.NameBook,
-                            language.NameLanguage,
-                            book.Quantity,
-                            book.Price,
-                        })
-                    .ToList();
-                var listVietnameseBooks = listBooks.Where(book => book.NameLanguage == "Tiếng Việt");
-                var listEnglishBooks = listBooks.Where(book => book.NameLanguage == "Tiếng Anh");
-                if (listBooks.Count() != count)
-                {
-                    dgvQLSNV.DataSource = listBooks;
-                    lblTSSDB.Text = listBooks.Count().ToString();
-                    lblSSTV.Text = listVietnameseBooks.Count().ToString();
-                    lblSSTA.Text = listEnglishBooks.Count().ToString();
-                    count = listBooks.Count();
-                }
             }
         }
     }

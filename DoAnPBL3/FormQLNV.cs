@@ -16,14 +16,15 @@ namespace DoAnPBL3
 {
     public partial class FormQLNV : Form
     {
-        private int count;
         private IconButton btnCurrent;
         private readonly string accountUsername;
         private readonly string password;
+        private readonly string theme;
 
         public FormQLNV(string theme, string accountUsername, string password)
         {
             InitializeComponent();
+            this.theme = theme;
             this.accountUsername = accountUsername;
             this.password = password;
             switch (theme)
@@ -45,6 +46,7 @@ namespace DoAnPBL3
                     rjtbTKNV.BorderColor = Color.FromArgb(23, 21, 35);
                     rjtbTKNV.ForeColor = Color.Silver;
                     rjtbTKNV.PlaceholderColor = Color.FromArgb(87, 83, 103);
+                    dgvQLNV.BackgroundColor = Color.FromArgb(24, 37, 65);
                     break;
                 case "Dark":
                     btnAddNV.Parent.BackColor = Color.FromArgb(32, 32, 32);
@@ -64,6 +66,7 @@ namespace DoAnPBL3
                     rjtbTKNV.BorderColor = Color.FromArgb(18, 18, 18);
                     rjtbTKNV.ForeColor = Color.Silver;
                     rjtbTKNV.PlaceholderColor = Color.FromArgb(87, 83, 103);
+                    dgvQLNV.BackgroundColor = Color.FromArgb(34, 31, 46);
                     break;
                 case "Light":
                     btnAddNV.Parent.BackColor = Color.FromArgb(220, 220, 220);
@@ -83,6 +86,7 @@ namespace DoAnPBL3
                     rjtbTKNV.BorderColor = Color.FromArgb(180, 180, 180);
                     rjtbTKNV.ForeColor = Color.DimGray;
                     rjtbTKNV.PlaceholderColor = Color.FromArgb(87, 83, 103);
+                    dgvQLNV.BackgroundColor = Color.Silver;
                     break;
             }
         }
@@ -162,6 +166,16 @@ namespace DoAnPBL3
             btnSuaNV.BackColor = Color.DodgerBlue;
         }
 
+        private void BtnEmployeeQuitJob_MouseEnter(object sender, EventArgs e)
+        {
+            btnEmployeeQuitJob.BackColor = RGBColors.color4;
+        }
+
+        private void BtnEmployeeQuitJob_MouseLeave(object sender, EventArgs e)
+        {
+            btnEmployeeQuitJob.BackColor = Color.MidnightBlue;
+        }
+
         private void BtnAll_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, Color.Gainsboro);
@@ -180,23 +194,25 @@ namespace DoAnPBL3
         private void FormQLNV_Load(object sender, EventArgs e)
         {
             dgvQLNV.RowHeadersVisible = true;
+            dgvQLNV.BorderStyle = BorderStyle.FixedSingle;
             dgvQLNV.CellBorderStyle = DataGridViewCellBorderStyle.Single;
             dgvQLNV.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI Semibold", 10, FontStyle.Bold);
             using (BookStoreContext context = new BookStoreContext())
             {
                 var listEmployees = context.Employees
+                    .Where(employee => employee.AccountUsername != null)
                     .Select(employee => new
                     {
                         employee.ID_Employee,
                         employee.FullNameEmployee,
                         employee.Gender,
                         employee.Email,
-                        employee.Phone
+                        employee.Phone,
                     });
                 var listMaleEmployees = listEmployees.Where(employee => employee.Gender == "Nam");
                 var listFemaleEmployees = listEmployees.Where(employee => employee.Gender == "Nữ");
                 dgvQLNV.DataSource = listEmployees.ToList();
-                count = listEmployees.Count();
+                label2.Text = "Tổng số nhân viên làm việc";
                 lblTSNV.Text = listEmployees.Count().ToString();
                 lblSNVNam.Text = listMaleEmployees.Count().ToString();
                 lblSNVNu.Text = listFemaleEmployees.Count().ToString();
@@ -205,8 +221,9 @@ namespace DoAnPBL3
 
         private void BtnAddNV_Click(object sender, EventArgs e)
         {
-            new FormAddNV().ShowDialog();
-            timer1.Start();        
+            FormAddNV formAddNV = new FormAddNV(theme);
+            formAddNV.RefreshData += new FormAddNV.LoadData(FormQLNV_Load);
+            formAddNV.ShowDialog();
         }
 
         private void BtnEditNV_Click(object sender, EventArgs e)
@@ -218,7 +235,9 @@ namespace DoAnPBL3
             else
             {
                 string ID_Employee = dgvQLNV.CurrentRow.Cells["ID_Employee"].Value.ToString();
-                new FormSuaNV(ID_Employee).ShowDialog();
+                FormSuaNV formSuaNV = new FormSuaNV(theme, ID_Employee);
+                formSuaNV.RefreshData += new FormSuaNV.LoadData(FormQLNV_Load);
+                formSuaNV.ShowDialog();
             }
         }
 
@@ -235,18 +254,46 @@ namespace DoAnPBL3
                 DialogResult result = RJMessageBox.Show("Xác nhận xóa nhân viên " + name + "?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
-                    new FormIdentify(accountUsername ,password, ID_Employee).ShowDialog();
-                    timer1.Start();
+                    FormIdentify formIdentify = new FormIdentify(accountUsername, password, ID_Employee);
+                    formIdentify.RefreshData += new FormIdentify.LoadData(FormQLNV_Load);
+                    formIdentify.Show();
                 }
                 else
                     return;
             }
         }
 
+        private void BtnEmployeeQuitJob_Click(object sender, EventArgs e)
+        {
+            dgvQLNV.RowHeadersVisible = true;
+            dgvQLNV.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            dgvQLNV.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI Semibold", 10, FontStyle.Bold);
+            using (BookStoreContext context = new BookStoreContext())
+            {
+                var listEmployeesQuitJob = context.Employees
+                    .Where(employee => employee.AccountUsername == null)
+                    .Select(employee => new
+                    {
+                        employee.ID_Employee,
+                        employee.FullNameEmployee,
+                        employee.Gender,
+                        employee.Email,
+                        employee.Phone,
+                    });
+                var listMaleEmployees = listEmployeesQuitJob.Where(employee => employee.Gender == "Nam");
+                var listFemaleEmployees = listEmployeesQuitJob.Where(employee => employee.Gender == "Nữ");
+                label2.Text = "Tổng số nhân viên nghỉ việc";
+                dgvQLNV.DataSource = listEmployeesQuitJob.ToList();
+                lblTSNV.Text = listEmployeesQuitJob.Count().ToString();
+                lblSNVNam.Text = listMaleEmployees.Count().ToString();
+                lblSNVNu.Text = listFemaleEmployees.Count().ToString();
+            }
+        }
+
         private void DgvQLNV_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             string ID_Employee = dgvQLNV.CurrentRow.Cells["ID_Employee"].Value.ToString();
-            new FormTTNV(ID_Employee).ShowDialog();
+            new FormTTNV(theme, ID_Employee).ShowDialog();
         }
 
         private void BtnTKNV_Click(object sender, EventArgs e)
@@ -310,6 +357,7 @@ namespace DoAnPBL3
             using (BookStoreContext context = new BookStoreContext())
             {
                 var listEmployees = context.Employees
+                        .Where(employee => employee.AccountUsername != null)
                         .Select(employee => new
                         {
                             employee.ID_Employee,
@@ -319,6 +367,7 @@ namespace DoAnPBL3
                             employee.Phone
                         })
                         .ToList();
+                label2.Text = "Tổng số nhân viên làm việc";
                 var listMaleEmployees = listEmployees.Where(employee => employee.Gender == "Nam").ToList();
                 var listFemaleEmployees = listEmployees.Where(employee => employee.Gender == "Nữ").ToList();
                 lblTSNV.Text = listEmployees.Count().ToString();
@@ -333,32 +382,6 @@ namespace DoAnPBL3
                 // Nữ
                 else
                     dgvQLNV.DataSource = listFemaleEmployees;
-            }
-        }
-
-        private void Timer1_Tick(object sender, EventArgs e)
-        {
-            using (BookStoreContext context = new BookStoreContext())
-            {
-                var listEmployees = context.Employees
-                        .Select(employee => new
-                        {
-                            employee.ID_Employee,
-                            employee.FullNameEmployee,
-                            employee.Gender,
-                            employee.Email,
-                            employee.Phone
-                        });
-                var listMaleEmployees = listEmployees.Where(employee => employee.Gender == "Nam");
-                var listFemaleEmployees = listEmployees.Where(employee => employee.Gender == "Nữ");
-                if (listEmployees.Count() != count)
-                {
-                    dgvQLNV.DataSource = listEmployees.ToList();
-                    lblTSNV.Text = listEmployees.Count().ToString();
-                    lblSNVNam.Text = listMaleEmployees.Count().ToString();
-                    lblSNVNu.Text = listFemaleEmployees.Count().ToString();
-                    count = listEmployees.Count();
-                }
             }
         }
     }

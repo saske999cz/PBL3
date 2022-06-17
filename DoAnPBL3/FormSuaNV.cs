@@ -14,12 +14,117 @@ namespace DoAnPBL3
     public partial class FormSuaNV : Form
     {
         private readonly string ID_Employee;
+        private readonly string theme;
+        public delegate void LoadData(object sender, EventArgs e);
+        public LoadData RefreshData { get; set; }
 
         //Constructor
-        public FormSuaNV(string ID_Employee)
+        public FormSuaNV(string theme, string ID_Employee)
         {
             InitializeComponent();
+            this.theme = theme;
             this.ID_Employee = ID_Employee;
+            switch (theme)
+            {
+                case "Admin":
+                    panelContainer.BackColor = Color.FromArgb(24, 37, 65);
+                    lblNameNV.ForeColor = Color.WhiteSmoke;
+                    lblEmail.ForeColor = Color.WhiteSmoke;
+                    lblBD.ForeColor = Color.WhiteSmoke;
+                    lblStartDate.ForeColor = Color.WhiteSmoke;
+                    lblGender.ForeColor = Color.WhiteSmoke;
+                    lblSDT.ForeColor = Color.WhiteSmoke;
+                    lblCMND.ForeColor = Color.WhiteSmoke;
+                    lblAddress.ForeColor = Color.WhiteSmoke;
+
+                    tbNameNV.FillColor = Color.FromArgb(15, 27, 57);
+                    tbNameNV.ForeColor = Color.FromArgb(193, 200, 207);
+                    tbEmailNV.FillColor = Color.FromArgb(15, 27, 57);
+                    tbEmailNV.ForeColor = Color.FromArgb(193, 200, 207);
+                    tbBD.FillColor = Color.FromArgb(15, 27, 57);
+                    tbBD.ForeColor = Color.FromArgb(193, 200, 207);
+                    tbStartDate.FillColor = Color.FromArgb(15, 27, 57);
+                    tbStartDate.ForeColor = Color.FromArgb(193, 200, 207);
+                    cbGenderNV.BackColor = Color.FromArgb(15, 27, 57);
+                    cbGenderNV.BorderColor = Color.FromArgb(15, 27, 57);
+                    cbGenderNV.ListBackColor = Color.FromArgb(15, 27, 57);
+                    cbGenderNV.ListTextColor = Color.FromArgb(193, 200, 207);
+                    cbGenderNV.ForeColor = Color.FromArgb(193, 200, 207);
+                    tbSDTNV.FillColor = Color.FromArgb(15, 27, 57);
+                    tbSDTNV.ForeColor = Color.FromArgb(193, 200, 207);
+                    tbCMNDNV.FillColor = Color.FromArgb(15, 27, 57);
+                    tbCMNDNV.ForeColor = Color.FromArgb(193, 200, 207);
+                    tbAddressNV.FillColor = Color.FromArgb(15, 27, 57);
+                    tbAddressNV.ForeColor = Color.FromArgb(193, 200, 207);
+                    break;
+                case "Dark":
+                    panelContainer.BackColor = Color.FromArgb(32, 32, 32);
+                    lblNameNV.ForeColor = Color.WhiteSmoke;
+                    lblEmail.ForeColor = Color.WhiteSmoke;
+                    lblBD.ForeColor = Color.WhiteSmoke;
+                    lblStartDate.ForeColor = Color.WhiteSmoke;
+                    lblGender.ForeColor = Color.WhiteSmoke;
+                    lblSDT.ForeColor = Color.WhiteSmoke;
+                    lblCMND.ForeColor = Color.WhiteSmoke;
+                    lblAddress.ForeColor = Color.WhiteSmoke;
+                    tbNameNV.FillColor = Color.FromArgb(40, 35, 40);
+                    tbNameNV.ForeColor = Color.FromArgb(193, 200, 207);
+                    tbEmailNV.FillColor = Color.FromArgb(40, 35, 40);
+                    tbEmailNV.ForeColor = Color.FromArgb(193, 200, 207);
+                    tbBD.FillColor = Color.FromArgb(40, 35, 40);
+                    tbBD.ForeColor = Color.FromArgb(193, 200, 207);
+                    tbStartDate.FillColor = Color.FromArgb(40, 35, 40);
+                    tbStartDate.ForeColor = Color.FromArgb(193, 200, 207);
+                    cbGenderNV.BackColor = Color.FromArgb(40, 35, 40);
+                    cbGenderNV.ForeColor = Color.FromArgb(193, 200, 207);
+                    cbGenderNV.BorderColor = Color.FromArgb(40, 35, 40);
+                    cbGenderNV.ListBackColor = Color.FromArgb(40, 35, 40);
+                    cbGenderNV.ListTextColor = Color.FromArgb(193, 200, 207);
+                    tbSDTNV.FillColor = Color.FromArgb(40, 35, 40);
+                    tbSDTNV.ForeColor = Color.FromArgb(193, 200, 207);
+                    tbCMNDNV.FillColor = Color.FromArgb(40, 35, 40);
+                    tbCMNDNV.ForeColor = Color.FromArgb(193, 200, 207);
+                    tbAddressNV.FillColor = Color.FromArgb(40, 35, 40);
+                    tbAddressNV.ForeColor = Color.FromArgb(193, 200, 207);
+                    break;
+                case "Light":
+                    panelContainer.BackColor = Color.Gainsboro;
+                    lblNameNV.ForeColor = Color.Black;
+                    lblEmail.ForeColor = Color.Black;
+                    lblBD.ForeColor = Color.Black;
+                    lblStartDate.ForeColor = Color.Black;
+                    lblGender.ForeColor = Color.Black;
+                    lblSDT.ForeColor = Color.Black;
+                    lblCMND.ForeColor = Color.Black;
+                    lblAddress.ForeColor = Color.Black;
+                    tbNameNV.FillColor = Color.Silver;
+                    tbNameNV.ForeColor = Color.Black;
+                    tbNameNV.PlaceholderForeColor = Color.Black;
+                    tbEmailNV.FillColor = Color.Silver;
+                    tbEmailNV.ForeColor = Color.Black;
+                    tbEmailNV.PlaceholderForeColor = Color.Black;
+                    tbBD.FillColor = Color.Silver;
+                    tbBD.ForeColor = Color.Black;
+                    tbBD.PlaceholderForeColor = Color.Black;
+                    tbStartDate.FillColor = Color.Silver;
+                    tbStartDate.ForeColor = Color.Black;
+                    tbStartDate.PlaceholderForeColor = Color.Black;
+                    cbGenderNV.BackColor = Color.Silver;
+                    cbGenderNV.BorderColor = Color.Silver;
+                    cbGenderNV.ListBackColor = Color.Silver;
+                    cbGenderNV.ListTextColor = Color.Black;
+                    cbGenderNV.ForeColor = Color.Black;
+                    tbSDTNV.FillColor = Color.Silver;
+                    tbSDTNV.ForeColor = Color.Black;
+                    tbSDTNV.PlaceholderForeColor = Color.Black;
+                    tbCMNDNV.FillColor = Color.Silver;
+                    tbCMNDNV.ForeColor = Color.Black;
+                    tbCMNDNV.PlaceholderForeColor = Color.Black;
+                    tbAddressNV.FillColor = Color.Silver;
+                    tbAddressNV.ForeColor = Color.Black;
+                    tbAddressNV.PlaceholderForeColor = Color.Black;
+                    break;
+            }
         }
 
         public void Alert(string msg, Form_Alert.EnmType type)
@@ -310,7 +415,7 @@ namespace DoAnPBL3
                 isValidAddress = true;
             }
             // Validate image
-            if (avatar.ImageLocation == "" || avatar.ImageLocation == null)
+            if (avatar.Image == null)
             {
                 ava = null;
             }
@@ -355,6 +460,7 @@ namespace DoAnPBL3
                         employee.Avatar = ava;
                         // Update to DB
                         context.SaveChanges();
+                        RefreshData(sender, e);
                         Alert("Thay đổi thông tin nhân viên thành công", Form_Alert.EnmType.Success);
                         Close();
                     }
@@ -433,7 +539,7 @@ namespace DoAnPBL3
 
         private byte[] ImageToByteArray(PictureBox pictureBox)
         {
-            using (Bitmap bitmap = new Bitmap(avatar.ImageLocation))
+            using (Bitmap bitmap = new Bitmap(pictureBox.Image))
             {
                 MemoryStream memoryStream = new MemoryStream();
                 try
@@ -451,9 +557,11 @@ namespace DoAnPBL3
 
         private void BtnNVImg_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Title = "Chọn ảnh";
-            openFileDialog.Filter = "Image Files(*.gif;*.jpg;*.jpeg;*.bmp;*.wmf;*.png)|*.gif;*.jpg;*.jpeg;*.bmp;*.wmf;*.png";
+            OpenFileDialog openFileDialog = new OpenFileDialog
+            {
+                Title = "Chọn ảnh",
+                Filter = "Image Files(*.gif;*.jpg;*.jpeg;*.bmp;*.wmf;*.png)|*.gif;*.jpg;*.jpeg;*.bmp;*.wmf;*.png"
+            };
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 avatar.ImageLocation = openFileDialog.FileName;

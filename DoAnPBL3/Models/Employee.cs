@@ -17,14 +17,15 @@ namespace DoAnPBL3.Models
             Orders = new HashSet<Order>();
         }
 
-        public Employee(string id_employee, string nameEmployee, string email, DateTime dateOfBirth, DateTime startDate,
-                string gender, string phone, string ID_Card, string address, byte[] avatar, string accountUsername)
+        public Employee(string id_employee, string nameEmployee, string email, DateTime dateOfBirth, DateTime startDate, 
+            DateTime? endDate, string gender, string phone, string ID_Card, string address, byte[] avatar, string accountUsername)
         {
             ID_Employee = id_employee;
             FullNameEmployee = nameEmployee;
             Email = email;
             DateOfBirth = dateOfBirth;
             StartDate = startDate;
+            EndDate = endDate;
             Gender = gender;
             Phone = phone;
             Id_Card = ID_Card;
@@ -52,9 +53,12 @@ namespace DoAnPBL3.Models
         [Required(ErrorMessage = "Ngày sinh của nhân viên không được để trống")]
         public DateTime DateOfBirth { get; set; }
 
-        [Column("NgayBatDau")]
+        [Column("NgayVaoLam")]
         [Required(ErrorMessage = "Ngày bắt đầu làm việc của nhân viên không được để trống")]
         public DateTime StartDate { get; set; }
+
+        [Column("NgayNghiLam")]
+        public DateTime? EndDate { get; set; }
 
         [Column("GioiTinh")]
         [StringLength(20)]

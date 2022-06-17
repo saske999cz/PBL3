@@ -17,6 +17,9 @@ namespace DoAnPBL3
         private readonly string password;
         private readonly string id;
         private readonly string nameAuthor;
+        public delegate void LoadData(object sender, EventArgs e);
+        public LoadData RefreshData { get; set; }
+
         public FormIdentify(string accountUsername, string password, string id, string nameAuthor = "")
         {
             InitializeComponent();
@@ -51,9 +54,21 @@ namespace DoAnPBL3
                     // Admin
                     if (user.Role)
                     {
-                        Employee employee = context.Employees.Find(id);
-                        context.Employees.Remove(employee);
+                        var accountUsername = context.Employees
+                            .Where(em => em.ID_Employee == id)
+                            .Select(em => em.AccountUsername)
+                            .ToList()   
+                            .FirstOrDefault();
+
+                        var employee = context.Employees.Find(id);
+                        employee.EndDate = DateTime.Now;
+                        employee.AccountUsername = null;
                         context.SaveChanges();
+
+                        Account account = context.Accounts.Find(accountUsername);
+                        context.Accounts.Remove(account);
+                        context.SaveChanges();
+                        RefreshData(sender, e);
                         Alert("Xóa nhân viên thành công", Form_Alert.EnmType.Success);
                         Close();
                     }
@@ -66,6 +81,7 @@ namespace DoAnPBL3
                             Book book = context.Books.Find(id);
                             context.Books.Remove(book);
                             context.SaveChanges();
+                            RefreshData(sender, e);
                             Alert("Xóa mặt hàng sách thành công", Form_Alert.EnmType.Success);
                             Close();
                         }

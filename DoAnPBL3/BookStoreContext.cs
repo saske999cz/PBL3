@@ -66,6 +66,7 @@ namespace DoAnPBL3
                      .Delete(d => d.HasName("Employee_Delete", "dbo")
                                    .Parameter(e => e.ID_Employee, "ID_NhanVien"))
                );
+            base.OnModelCreating(modelBuilder);
         }
     }
 }

@@ -132,6 +132,7 @@ namespace DoAnPBL3
             // 
             this.btnThisQuarter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnThisQuarter.BackColor = System.Drawing.Color.Transparent;
+            this.btnThisQuarter.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThisQuarter.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
             this.btnThisQuarter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThisQuarter.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -142,11 +143,14 @@ namespace DoAnPBL3
             this.btnThisQuarter.Text = "Quý này";
             this.btnThisQuarter.UseVisualStyleBackColor = false;
             this.btnThisQuarter.Click += new System.EventHandler(this.BtnThisQuarter_Click);
+            this.btnThisQuarter.MouseEnter += new System.EventHandler(this.BtnThisQuarter_MouseEnter);
+            this.btnThisQuarter.MouseLeave += new System.EventHandler(this.BtnThisQuarter_MouseLeave);
             // 
             // btnThisMonth
             // 
             this.btnThisMonth.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnThisMonth.BackColor = System.Drawing.Color.Transparent;
+            this.btnThisMonth.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThisMonth.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
             this.btnThisMonth.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThisMonth.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -157,11 +161,14 @@ namespace DoAnPBL3
             this.btnThisMonth.Text = "Tháng này";
             this.btnThisMonth.UseVisualStyleBackColor = false;
             this.btnThisMonth.Click += new System.EventHandler(this.BtnThisMonth_Click);
+            this.btnThisMonth.MouseEnter += new System.EventHandler(this.BtnThisMonth_MouseEnter);
+            this.btnThisMonth.MouseLeave += new System.EventHandler(this.BtnThisMonth_MouseLeave);
             // 
             // btnLast7Days
             // 
             this.btnLast7Days.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLast7Days.BackColor = System.Drawing.Color.Transparent;
+            this.btnLast7Days.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLast7Days.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
             this.btnLast7Days.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLast7Days.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -172,11 +179,14 @@ namespace DoAnPBL3
             this.btnLast7Days.Text = "7 ngày qua";
             this.btnLast7Days.UseVisualStyleBackColor = false;
             this.btnLast7Days.Click += new System.EventHandler(this.BtnLast7Days_Click);
+            this.btnLast7Days.MouseEnter += new System.EventHandler(this.BtnLast7Days_MouseEnter);
+            this.btnLast7Days.MouseLeave += new System.EventHandler(this.BtnLast7Days_MouseLeave);
             // 
             // btnToday
             // 
             this.btnToday.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnToday.BackColor = System.Drawing.Color.Transparent;
+            this.btnToday.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnToday.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
             this.btnToday.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnToday.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -187,11 +197,14 @@ namespace DoAnPBL3
             this.btnToday.Text = "Hôm nay";
             this.btnToday.UseVisualStyleBackColor = false;
             this.btnToday.Click += new System.EventHandler(this.BtnToday_Click);
+            this.btnToday.MouseEnter += new System.EventHandler(this.BtnToday_MouseEnter);
+            this.btnToday.MouseLeave += new System.EventHandler(this.BtnToday_MouseLeave);
             // 
             // btnCustomDate
             // 
             this.btnCustomDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCustomDate.BackColor = System.Drawing.Color.Transparent;
+            this.btnCustomDate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCustomDate.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
             this.btnCustomDate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCustomDate.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -202,11 +215,14 @@ namespace DoAnPBL3
             this.btnCustomDate.Text = "Tùy chọn";
             this.btnCustomDate.UseVisualStyleBackColor = false;
             this.btnCustomDate.Click += new System.EventHandler(this.BtnCustomDate_Click);
+            this.btnCustomDate.MouseEnter += new System.EventHandler(this.BtnCustomDate_MouseEnter);
+            this.btnCustomDate.MouseLeave += new System.EventHandler(this.BtnCustomDate_MouseLeave);
             // 
             // btnOK
             // 
             this.btnOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnOK.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnOK.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnOK.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
             this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOK.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -276,7 +292,8 @@ namespace DoAnPBL3
             // 
             // panel2
             // 
-            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.pictureBox2);
@@ -289,6 +306,7 @@ namespace DoAnPBL3
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
@@ -300,6 +318,7 @@ namespace DoAnPBL3
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox2.BackgroundImage = global::DoAnPBL3.Properties.Resources.money_bag;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Location = new System.Drawing.Point(22, 4);
@@ -311,6 +330,7 @@ namespace DoAnPBL3
             // 
             // totalRevenue
             // 
+            this.totalRevenue.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.totalRevenue.AutoSize = true;
             this.totalRevenue.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalRevenue.ForeColor = System.Drawing.Color.WhiteSmoke;
@@ -322,6 +342,7 @@ namespace DoAnPBL3
             // 
             // lblTotalRevenue
             // 
+            this.lblTotalRevenue.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblTotalRevenue.AutoSize = true;
             this.lblTotalRevenue.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalRevenue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
@@ -461,7 +482,9 @@ namespace DoAnPBL3
             this.chartTopFiveBooks.ChartAreas.Add(chartArea2);
             legend2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             legend2.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            legend2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             legend2.ForeColor = System.Drawing.Color.Gainsboro;
+            legend2.IsTextAutoFit = false;
             legend2.Name = "Legend1";
             this.chartTopFiveBooks.Legends.Add(legend2);
             this.chartTopFiveBooks.Location = new System.Drawing.Point(603, 147);

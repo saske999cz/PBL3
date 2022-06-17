@@ -317,7 +317,9 @@ namespace DoAnPBL3
                 DisableButton();
                 iconCurrentChildForm.IconChar = IconChar.Cog;
                 btnLeftBorder.Visible = false;
-                OpenChildForm(new FormSettingAccountQTV(theme, accountUsername));
+                FormSettingAccountQTV formSettingAccountQTV = new FormSettingAccountQTV(theme, accountUsername);
+                formSettingAccountQTV.RefreshData += new FormSettingAccountQTV.LoadData(MainMenuQTV_Load);
+                OpenChildForm(formSettingAccountQTV);
             }
             if (thayĐổiThemeToolStripMenuItem.Selected == true)
             {

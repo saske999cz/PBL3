@@ -14,7 +14,8 @@ namespace DoAnPBL3
 {
     public partial class FormAuthenticateCustomer : Form
     {
-
+        public delegate void LoadData(object sender, EventArgs e);
+        public LoadData RefreshData { get; set; }
         public FormAuthenticateCustomer()
         {
             InitializeComponent();

@@ -19,6 +19,8 @@ namespace DoAnPBL3
     public partial class FormSuaSach : Form
     {
         private readonly string ID_Book;
+        public delegate void LoadData(object sender, EventArgs e);
+        public LoadData RefreshData { get; set; }
 
         public FormSuaSach(string ID_Book)
         {

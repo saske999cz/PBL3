@@ -38,6 +38,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.xuiSegmentNV = new XanderUI.XUISegment();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnEmployeeQuitJob = new FontAwesome.Sharp.IconButton();
             this.btnDeleteNV = new FontAwesome.Sharp.IconButton();
             this.btnAddNV = new FontAwesome.Sharp.IconButton();
             this.btnSuaNV = new FontAwesome.Sharp.IconButton();
@@ -52,7 +53,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.lblTSNV = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.dgvQLNV = new Guna.UI2.WinForms.Guna2DataGridView();
             this.ID_Employee = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FullNameEmployee = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -108,18 +108,46 @@
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.btnEmployeeQuitJob);
             this.panel1.Controls.Add(this.btnDeleteNV);
             this.panel1.Controls.Add(this.btnAddNV);
             this.panel1.Controls.Add(this.btnSuaNV);
             this.panel1.Location = new System.Drawing.Point(827, 170);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(149, 149);
+            this.panel1.Size = new System.Drawing.Size(149, 200);
             this.panel1.TabIndex = 27;
+            // 
+            // btnEmployeeQuitJob
+            // 
+            this.btnEmployeeQuitJob.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnEmployeeQuitJob.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnEmployeeQuitJob.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEmployeeQuitJob.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
+            this.btnEmployeeQuitJob.FlatAppearance.BorderSize = 0;
+            this.btnEmployeeQuitJob.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmployeeQuitJob.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmployeeQuitJob.ForeColor = System.Drawing.Color.White;
+            this.btnEmployeeQuitJob.IconChar = FontAwesome.Sharp.IconChar.UserMinus;
+            this.btnEmployeeQuitJob.IconColor = System.Drawing.Color.White;
+            this.btnEmployeeQuitJob.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnEmployeeQuitJob.IconSize = 30;
+            this.btnEmployeeQuitJob.Location = new System.Drawing.Point(4, 154);
+            this.btnEmployeeQuitJob.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEmployeeQuitJob.Name = "btnEmployeeQuitJob";
+            this.btnEmployeeQuitJob.Size = new System.Drawing.Size(143, 44);
+            this.btnEmployeeQuitJob.TabIndex = 3;
+            this.btnEmployeeQuitJob.Text = "Danh sách nghỉ việc";
+            this.btnEmployeeQuitJob.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEmployeeQuitJob.UseVisualStyleBackColor = false;
+            this.btnEmployeeQuitJob.Click += new System.EventHandler(this.BtnEmployeeQuitJob_Click);
+            this.btnEmployeeQuitJob.MouseEnter += new System.EventHandler(this.BtnEmployeeQuitJob_MouseEnter);
+            this.btnEmployeeQuitJob.MouseLeave += new System.EventHandler(this.BtnEmployeeQuitJob_MouseLeave);
             // 
             // btnDeleteNV
             // 
             this.btnDeleteNV.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnDeleteNV.BackColor = System.Drawing.Color.Firebrick;
+            this.btnDeleteNV.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDeleteNV.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
             this.btnDeleteNV.FlatAppearance.BorderSize = 0;
             this.btnDeleteNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -129,7 +157,7 @@
             this.btnDeleteNV.IconColor = System.Drawing.Color.White;
             this.btnDeleteNV.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDeleteNV.IconSize = 30;
-            this.btnDeleteNV.Location = new System.Drawing.Point(4, 98);
+            this.btnDeleteNV.Location = new System.Drawing.Point(4, 104);
             this.btnDeleteNV.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeleteNV.Name = "btnDeleteNV";
             this.btnDeleteNV.Size = new System.Drawing.Size(143, 44);
@@ -146,6 +174,7 @@
             // 
             this.btnAddNV.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnAddNV.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnAddNV.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddNV.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
             this.btnAddNV.FlatAppearance.BorderSize = 0;
             this.btnAddNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -155,7 +184,7 @@
             this.btnAddNV.IconColor = System.Drawing.Color.White;
             this.btnAddNV.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAddNV.IconSize = 30;
-            this.btnAddNV.Location = new System.Drawing.Point(4, 2);
+            this.btnAddNV.Location = new System.Drawing.Point(4, 4);
             this.btnAddNV.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddNV.Name = "btnAddNV";
             this.btnAddNV.Size = new System.Drawing.Size(143, 44);
@@ -172,6 +201,7 @@
             // 
             this.btnSuaNV.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSuaNV.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnSuaNV.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSuaNV.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
             this.btnSuaNV.FlatAppearance.BorderSize = 0;
             this.btnSuaNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -181,7 +211,7 @@
             this.btnSuaNV.IconColor = System.Drawing.Color.White;
             this.btnSuaNV.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSuaNV.IconSize = 30;
-            this.btnSuaNV.Location = new System.Drawing.Point(4, 50);
+            this.btnSuaNV.Location = new System.Drawing.Point(4, 54);
             this.btnSuaNV.Margin = new System.Windows.Forms.Padding(2);
             this.btnSuaNV.Name = "btnSuaNV";
             this.btnSuaNV.Size = new System.Drawing.Size(143, 44);
@@ -197,6 +227,7 @@
             // btnTKNV
             // 
             this.btnTKNV.BorderRadius = 15;
+            this.btnTKNV.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTKNV.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnTKNV.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnTKNV.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -231,7 +262,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::DoAnPBL3.Properties.Resources.division;
-            this.pictureBox1.Location = new System.Drawing.Point(181, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(214, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(38, 33);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -332,15 +363,11 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
-            this.label2.Location = new System.Drawing.Point(45, 18);
+            this.label2.Location = new System.Drawing.Point(25, 18);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(125, 16);
+            this.label2.Size = new System.Drawing.Size(183, 16);
             this.label2.TabIndex = 38;
-            this.label2.Text = "Tổng số nhân viên";
-            // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
+            this.label2.Text = "Tổng số nhân viên làm việc";
             // 
             // dgvQLNV
             // 
@@ -354,8 +381,8 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvQLNV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvQLNV.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
-            this.dgvQLNV.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvQLNV.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(37)))), ((int)(((byte)(65)))));
+            this.dgvQLNV.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvQLNV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(16)))), ((int)(((byte)(221)))));
@@ -395,6 +422,7 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvQLNV.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvQLNV.RowHeadersVisible = false;
             this.dgvQLNV.RowHeadersWidth = 60;
             this.dgvQLNV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvQLNV.Size = new System.Drawing.Size(816, 413);
@@ -404,7 +432,7 @@
             this.dgvQLNV.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
             this.dgvQLNV.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.dgvQLNV.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dgvQLNV.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
+            this.dgvQLNV.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(37)))), ((int)(((byte)(65)))));
             this.dgvQLNV.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.dgvQLNV.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.dgvQLNV.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -544,12 +572,12 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblTSNV;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Timer timer1;
         private Guna.UI2.WinForms.Guna2DataGridView dgvQLNV;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_Employee;
         private System.Windows.Forms.DataGridViewTextBoxColumn FullNameEmployee;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
         private System.Windows.Forms.DataGridViewTextBoxColumn Gender;
         private System.Windows.Forms.DataGridViewTextBoxColumn Phone;
+        private FontAwesome.Sharp.IconButton btnEmployeeQuitJob;
     }
 }

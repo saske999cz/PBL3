@@ -18,6 +18,9 @@ namespace DoAnPBL3
     public partial class FormSettingAccountQTV : Form
     {
         private readonly string accountUsername;
+        public delegate void LoadData(object sender, EventArgs e);
+        public LoadData RefreshData { get; set; }
+
         public FormSettingAccountQTV(string theme, string accountUsername)
         {
             InitializeComponent();
@@ -173,6 +176,7 @@ namespace DoAnPBL3
                         // Update to DB
                         context.SaveChanges();
                         Alert("Lưu mới dữ liệu thành công", Form_Alert.EnmType.Success);
+                        RefreshData(sender, e);
                         Close();
                     }
                     else
