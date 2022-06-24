@@ -363,7 +363,8 @@ namespace DoAnPBL3
             // 
             // BookStoreLogo
             // 
-            this.BookStoreLogo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.BookStoreLogo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.BookStoreLogo.FillColor = System.Drawing.Color.Transparent;
             this.BookStoreLogo.Image = global::DoAnPBL3.Properties.Resources.logo_book_store;

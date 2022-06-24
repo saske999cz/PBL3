@@ -384,7 +384,8 @@ namespace DoAnPBL3
             // 
             // BookStoreLogo
             // 
-            this.BookStoreLogo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.BookStoreLogo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.BookStoreLogo.FillColor = System.Drawing.Color.Transparent;
             this.BookStoreLogo.Image = global::DoAnPBL3.Properties.Resources.logo_book_store;
@@ -598,7 +599,7 @@ namespace DoAnPBL3
             this.rjddmAdminSettingMenu.MenuItemTextColor = System.Drawing.Color.DimGray;
             this.rjddmAdminSettingMenu.Name = "rjddmAdminSettingMenu";
             this.rjddmAdminSettingMenu.PrimaryColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjddmAdminSettingMenu.Size = new System.Drawing.Size(208, 130);
+            this.rjddmAdminSettingMenu.Size = new System.Drawing.Size(208, 108);
             this.rjddmAdminSettingMenu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.RjddmAdminSettingMenu_ItemClicked);
             // 
             // chỉnhSửaTàiKhoảnToolStripMenuItem

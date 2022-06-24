@@ -82,7 +82,6 @@ namespace DoAnPBL3.Models
                 TotalProfit = ToTalRevenue * 0.2m; // 20%
                 // Group by hours
                 // Select btn Today
-                RJMessageBox.Show(numberDays.ToString());
                 if (numberDays <= 1)
                 {
                     GrossRevenueList = (from orderList in result
@@ -114,8 +113,8 @@ namespace DoAnPBL3.Models
                     //    });
                     //}
                 }
-                // Group by weeks
-                else if (numberDays <= 92)
+                // Group by weeks (4 weeks -> 14 weeks)
+                else if (numberDays <= 98)
                 {
                     GrossRevenueList = (from orderList in result
                                        group orderList by CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(

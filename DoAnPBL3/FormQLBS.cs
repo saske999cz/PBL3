@@ -114,6 +114,7 @@ namespace DoAnPBL3
 
         private void FormQLBS_Load(object sender, EventArgs e)
         {
+            dgvQLBS.Columns["Quantity"].HeaderCell.Value = "Số lượng hiện có";
             dgvQLBS.RowHeadersVisible = true;
             dgvQLBS.BorderStyle = BorderStyle.FixedSingle;
             dgvQLBS.CellBorderStyle = DataGridViewCellBorderStyle.Single;
@@ -145,6 +146,7 @@ namespace DoAnPBL3
 
         private void XuiSegmentBS_Click(object sender, EventArgs e)
         {
+            dgvQLBS.Columns["Quantity"].HeaderCell.Value = "Số lượng hiện có";
             using (BookStoreContext context = new BookStoreContext())
             {
                 var listBooks = context.Books
@@ -180,6 +182,7 @@ namespace DoAnPBL3
 
         private void ChữCáiGiảmDầnToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            dgvQLBS.Columns["Quantity"].HeaderCell.Value = "Số lượng hiện có";
             using (BookStoreContext context = new BookStoreContext())
             {
                 dgvQLBS.DataSource = context.Books
@@ -203,6 +206,7 @@ namespace DoAnPBL3
 
         private void ChữCáiTăngDầnToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            dgvQLBS.Columns["Quantity"].HeaderCell.Value = "Số lượng hiện có";
             using (BookStoreContext context = new BookStoreContext())
             {
                 dgvQLBS.DataSource = context.Books
@@ -226,6 +230,7 @@ namespace DoAnPBL3
 
         private void GiáMuaSáchTăngDầnToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            dgvQLBS.Columns["Quantity"].HeaderCell.Value = "Số lượng hiện có";
             using (BookStoreContext context = new BookStoreContext())
             {
                 dgvQLBS.DataSource = context.Books
@@ -249,6 +254,7 @@ namespace DoAnPBL3
 
         private void GiáMuaSáchGiảmDầnToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            dgvQLBS.Columns["Quantity"].HeaderCell.Value = "Số lượng hiện có";
             using (BookStoreContext context = new BookStoreContext())
             {
                 dgvQLBS.DataSource = context.Books
@@ -272,22 +278,61 @@ namespace DoAnPBL3
 
         private void MứcĐộBánChạyTăngDầnToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            dgvQLBS.Columns["Quantity"].HeaderCell.Value = "Số lượng đã bán";
             using (BookStoreContext context = new BookStoreContext())
             {
-                MessageBox.Show("mứcĐộBánChạyTăngDần");
+                dgvQLBS.DataSource = (from orderDetail in context.OrderDetails
+                                      group orderDetail by orderDetail.ID_Book into ord
+                                      select new
+                                      {
+                                          ID_Book = ord.Key,
+                                          Quantity = ord.Sum(o => o.Quantity)
+                                      } into o
+                                      join book in context.Books on o.ID_Book equals book.ID_Book
+                                      join lang in context.Languages on book.ID_Language equals lang.ID_Language
+                                      select new
+                                      {
+                                          book.ID_Book,
+                                          book.NameBook,
+                                          lang.NameLanguage,
+                                          o.Quantity,
+                                          book.Price
+                                      })
+                                      .OrderBy(b => b.Quantity)
+                                      .ToList();
             }
         }
 
         private void MứcĐộBánChạyGiảmDầnToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            dgvQLBS.Columns["Quantity"].HeaderCell.Value = "Số lượng đã bán";
             using (BookStoreContext context = new BookStoreContext())
             {
-                MessageBox.Show("mứcĐộBánChạyGiảmDần");
+                dgvQLBS.DataSource = (from orderDetail in context.OrderDetails
+                                      group orderDetail by orderDetail.ID_Book into ord
+                                      select new
+                                      {
+                                          ID_Book = ord.Key,
+                                          Quantity = ord.Sum(o => o.Quantity)
+                                      } into o
+                                      join book in context.Books on o.ID_Book equals book.ID_Book
+                                      join lang in context.Languages on book.ID_Language equals lang.ID_Language
+                                      select new
+                                      {
+                                          book.ID_Book,
+                                          book.NameBook,
+                                          lang.NameLanguage,
+                                          o.Quantity,
+                                          book.Price
+                                      })
+                                      .OrderByDescending(b => b.Quantity)
+                                      .ToList();
             }
         }
 
         private void SốLượngSáchHiệnCóTăngDầnToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            dgvQLBS.Columns["Quantity"].HeaderCell.Value = "Số lượng hiện có";
             using (BookStoreContext context = new BookStoreContext())
             {
                 dgvQLBS.DataSource = context.Books
@@ -311,6 +356,7 @@ namespace DoAnPBL3
 
         private void SốLượngSáchHiệnCóGiảmDầnToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            dgvQLBS.Columns["Quantity"].HeaderCell.Value = "Số lượng hiện có";
             using (BookStoreContext context = new BookStoreContext())
             {
                 dgvQLBS.DataSource = context.Books
@@ -332,7 +378,7 @@ namespace DoAnPBL3
             }
         }
 
-        private void dgvQLBS_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        private void DgvQLBS_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             string ID_Book = dgvQLBS.CurrentRow.Cells["ID_Book"].Value.ToString();
             new FormTTS(ID_Book).ShowDialog();

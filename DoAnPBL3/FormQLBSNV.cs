@@ -29,6 +29,7 @@ namespace DoAnPBL3
         private void FormQLBSNV_Load(object sender, EventArgs e)
         {
             dgvQLBSNV.RowHeadersVisible = true;
+            dgvQLBSNV.BorderStyle = BorderStyle.FixedSingle;
             dgvQLBSNV.CellBorderStyle = DataGridViewCellBorderStyle.Single;
             dgvQLBSNV.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI Semibold", 10, FontStyle.Bold);
             using (BookStoreContext context = new BookStoreContext())

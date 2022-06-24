@@ -161,31 +161,31 @@ namespace DoAnPBL3
                 Close();
         }
 
-        private void TbNameKH_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == (char)Keys.Enter)
+            private void TbNameKH_KeyPress(object sender, KeyPressEventArgs e)
             {
-                rjbtnOK.PerformClick();
-                e.Handled = true;
+                if (e.KeyChar == (char)Keys.Enter)
+                {
+                    rjbtnOK.PerformClick();
+                    e.Handled = true;
+                }
             }
-        }
 
-        private void TbPhoneKH_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == (char)Keys.Enter)
+            private void TbPhoneKH_KeyPress(object sender, KeyPressEventArgs e)
             {
-                rjbtnOK.PerformClick();
-                e.Handled = true;
+                if (e.KeyChar == (char)Keys.Enter)
+                {
+                    rjbtnOK.PerformClick();
+                    e.Handled = true;
+                }
             }
-        }
 
-        private void TbAddressKH_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == (char)Keys.Enter)
+            private void TbAddressKH_KeyPress(object sender, KeyPressEventArgs e)
             {
-                rjbtnOK.PerformClick();
-                e.Handled = true;
+                if (e.KeyChar == (char)Keys.Enter)
+                {
+                    rjbtnOK.PerformClick();
+                    e.Handled = true;
+                }
             }
-        }
     }
 }

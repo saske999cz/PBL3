@@ -323,9 +323,7 @@ namespace DoAnPBL3
             DisableButton();
             ActivateButton(sender, Color.FromArgb(107, 83, 255));
             dtpStartDate.Value = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, 0, 0, 0);
-            MessageBox.Show(dtpStartDate.Value.ToString());
             dtpEndDate.Value = DateTime.Now;
-            MessageBox.Show(dtpEndDate.Value.ToString());
             LoadData();
         }
 
