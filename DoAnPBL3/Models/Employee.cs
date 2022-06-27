@@ -18,7 +18,7 @@ namespace DoAnPBL3.Models
         }
 
         public Employee(string id_employee, string nameEmployee, string email, DateTime dateOfBirth, DateTime startDate, 
-            DateTime? endDate, string gender, string phone, string ID_Card, string address, byte[] avatar, string accountUsername)
+            DateTime? endDate, string gender, string phone, string ID_Card, string address, string avatar, string accountUsername)
         {
             ID_Employee = id_employee;
             FullNameEmployee = nameEmployee;
@@ -81,7 +81,7 @@ namespace DoAnPBL3.Models
         public string Address { get; set; }
 
         [Column("Anh")]
-        public byte[] Avatar { get; set; }
+        public string Avatar { get; set; }
 
         [Column("TaiKhoanDangNhap")]
         [StringLength(255)]

@@ -16,17 +16,17 @@ namespace DoAnPBL3.Models
             OrderDetails = new HashSet<OrderDetail>();
         }
 
-        public Book(string id_book, string nameBook, DateTime publishDate, int quantity, int price, 
-            string unit, int ID_Language, int ID_Author, int ID_Publisher, int ID_Genre, byte[] bookImage)
+        public Book(string id_book, string nameBook, DateTime publishDate, string nameAuthor, 
+            int quantity, int price, string unit, int ID_Language, int ID_Publisher, int ID_Genre, string bookImage)
         {
             ID_Book = id_book;
             NameBook = nameBook;
             PublishDate = publishDate;
+            NameAuthor = nameAuthor;
             Quantity = quantity;
             Price = price;
             Unit = unit;
             this.ID_Language = ID_Language;
-            this.ID_Author = ID_Author;
             this.ID_Publisher = ID_Publisher;
             this.ID_Genre = ID_Genre;
             Image = bookImage;
@@ -47,6 +47,10 @@ namespace DoAnPBL3.Models
         [Required(ErrorMessage = "Ngày phát hành của sách không được để trống")]
         public DateTime PublishDate { get; set; }
 
+        [Column("TacGia")]
+        [Required(ErrorMessage = "Tác giả của sách không được để trống")]
+        public string NameAuthor { get; set; }
+
         [Column("SoLuong")]
         [Required(ErrorMessage = "Số lượng sách không được để trống")]
         public int Quantity { get; set; }
@@ -64,10 +68,6 @@ namespace DoAnPBL3.Models
         [Required(ErrorMessage = "ID ngôn ngữ của sách không được để trống")]
         public int ID_Language { get; set; }
 
-        [Column("ID_TacGia")]
-        [Required]
-        public int ID_Author { get; set; }
-
         [Column("ID_NhaXuatBan")]
         [Required(ErrorMessage = "ID nhà xuất bản của sách không được để trống")]
         public int ID_Publisher { get; set; }
@@ -79,9 +79,6 @@ namespace DoAnPBL3.Models
         [ForeignKey("ID_Language")]
         public virtual Language Language { get; set; }
 
-        [ForeignKey("ID_Author")]
-        public virtual Author Author { get; set; }
-
         [ForeignKey("ID_Publisher")]
         public virtual Publisher Publisher { get; set; }
 
@@ -89,7 +86,7 @@ namespace DoAnPBL3.Models
         public virtual Genre Genre { get; set; }
 
         [Column("Anh")]
-        public byte[] Image { get; set; }
+        public string Image { get; set; }
 
         public virtual ICollection<OrderDetail> OrderDetails { get; set; }
     }

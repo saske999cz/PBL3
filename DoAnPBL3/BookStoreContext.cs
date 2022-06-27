@@ -14,7 +14,6 @@ namespace DoAnPBL3
             Database.SetInitializer<BookStoreContext>(new InitialData());
         }
 
-        public virtual DbSet<Author> Authors { get; set; }
         public virtual DbSet<Genre> Genres { get; set; }
         public virtual DbSet<Language> Languages { get; set; }
         public virtual DbSet<Publisher> Publishers { get; set; }
