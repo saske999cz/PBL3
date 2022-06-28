@@ -129,21 +129,8 @@ namespace DoAnPBL3
 
         private void BtnHDKH_Click(object sender, EventArgs e)
         {
-            string ID_Customer = dgvQLKHNV.CurrentRow.Cells["ID_Customer"].Value.ToString();
-            using (BookStoreContext context = new BookStoreContext())
-            {
-                var listOrder = context.Orders
-                        .Where(customer => customer.ID_Customer == ID_Customer)
-                        .Select(orderInfo => new
-                        {
-                            orderInfo.ID_Order,
-                            orderInfo.OrderDate,
-                            orderInfo.TotalPrice,
-                            orderInfo.ID_Employee,
-                        })
-                        .ToList();
-                MessageBox.Show(listOrder.Count.ToString());
-            }
+            string nameCustomer = dgvQLKHNV.CurrentRow.Cells["FullNameCustomer"].Value.ToString();
+            new FormHoaDonKhachHang(GetID_Customer(), nameCustomer).Show();
         }
 
         private void RjtbTKKH_KeyPress(object sender, KeyPressEventArgs e)

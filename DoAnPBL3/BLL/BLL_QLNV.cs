@@ -107,6 +107,11 @@ namespace DoAnPBL3.BLL
             return DAL_QLNV.Instance.GetAvatar(accountUsername);
         }
 
+        public string GetNameEmployeeByID(string ID_Employee)
+        {
+            return DAL_QLNV.Instance.GetNameEmployeeByID(ID_Employee);
+        }
+
         public string CreateNewEmployeeID(string ID_Employee)
         {
             StringBuilder newEmployeeID;

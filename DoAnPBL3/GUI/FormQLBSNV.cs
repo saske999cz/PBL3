@@ -14,14 +14,12 @@ namespace DoAnPBL3
 {
     public partial class FormQLBSNV : Form
     {
-        private readonly string accountUsername;
-        FormCart b;
+        FormCart formCart;
 
         public FormQLBSNV(string accountUsername)
         {
             InitializeComponent();
-            this.accountUsername = accountUsername;
-            b = new FormCart(accountUsername);
+            formCart = new FormCart(accountUsername);
             NotificationCircle.Hide();
             lblNotificationCounter.Hide();
         }
@@ -63,7 +61,7 @@ namespace DoAnPBL3
 
         private void RjbtnOrder_Click(object sender, EventArgs e)
         {
-            b.Show();
+            formCart.Show();
         }
 
         private void RjbtnAddCart_Click(object sender, EventArgs e)
@@ -74,7 +72,7 @@ namespace DoAnPBL3
             else
             {
                 ID_BookChosen = dgvQLBSNV.CurrentRow.Cells["ID_Book"].Value.ToString();
-                b.Them_Sach(ID_BookChosen);
+                formCart.Them_Sach(ID_BookChosen);
             }
         }
 
@@ -233,25 +231,30 @@ namespace DoAnPBL3
 
         private void Timer1_Tick(object sender, EventArgs e)
         {
-            if (b.GetVariety() != 0)
+            if (formCart.GetVariety() != 0)
             {
-                lblNotificationCounter.Text = b.GetVariety().ToString();
+                lblNotificationCounter.Text = formCart.GetVariety().ToString();
                 NotificationCircle.Show();
                 lblNotificationCounter.Show();
                 lblNotificationCounter.BringToFront();
-                if (b.GetVariety() > 99)
+                if (formCart.GetVariety() > 99)
                     lblNotificationCounter.Location = new Point(NotificationCircle.Location.X + 2, NotificationCircle.Location.Y + 7);
-                else if (b.GetVariety() > 9)
+                else if (formCart.GetVariety() > 9)
                     lblNotificationCounter.Location = new Point(NotificationCircle.Location.X + 5, NotificationCircle.Location.Y + 7);
                 else
                     lblNotificationCounter.Location = new Point(NotificationCircle.Location.X + 8, NotificationCircle.Location.Y + 7);
             }
             else
             {
-                lblNotificationCounter.Text = b.GetVariety().ToString();
+                lblNotificationCounter.Text = formCart.GetVariety().ToString();
                 NotificationCircle.Hide();
                 lblNotificationCounter.Hide();
             }
+        }
+
+        private void PictureBox4_Click(object sender, EventArgs e)
+        {
+            formCart.Show();
         }
     }
 }

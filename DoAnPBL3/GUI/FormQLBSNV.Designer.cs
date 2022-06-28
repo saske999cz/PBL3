@@ -30,9 +30,9 @@ namespace DoAnPBL3
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormQLBSNV));
             this.xuiSegmentSach = new XanderUI.XUISegment();
             this.totalEnglishBooks = new System.Windows.Forms.Label();
@@ -44,18 +44,7 @@ namespace DoAnPBL3
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.rjbtnAddCart = new DoAnPBL3.RJButton();
-            this.rjbtnOrder = new DoAnPBL3.RJButton();
             this.dgvQLBSNV = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.NotificationCircle = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.lblNotificationCounter = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnTKS = new Guna.UI2.WinForms.Guna2Button();
-            this.rjtbTKS = new DoAnPBL3.RJTextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.ID_Book = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NameBook = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PublishDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,9 +53,19 @@ namespace DoAnPBL3
             this.NameGenre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NotificationCircle = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.lblNotificationCounter = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.CartIcon = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnTKS = new Guna.UI2.WinForms.Guna2Button();
+            this.rjtbTKS = new DoAnPBL3.RJTextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQLBSNV)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CartIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -170,11 +169,10 @@ namespace DoAnPBL3
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.rjbtnOrder);
             this.panel1.Controls.Add(this.rjbtnAddCart);
-            this.panel1.Location = new System.Drawing.Point(828, 177);
+            this.panel1.Location = new System.Drawing.Point(828, 186);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(150, 97);
+            this.panel1.Size = new System.Drawing.Size(150, 51);
             this.panel1.TabIndex = 66;
             // 
             // rjbtnAddCart
@@ -203,39 +201,14 @@ namespace DoAnPBL3
             this.rjbtnAddCart.UseVisualStyleBackColor = false;
             this.rjbtnAddCart.Click += new System.EventHandler(this.RjbtnAddCart_Click);
             // 
-            // rjbtnOrder
-            // 
-            this.rjbtnOrder.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.rjbtnOrder.BackColor = System.Drawing.Color.Goldenrod;
-            this.rjbtnOrder.BackgroundColor = System.Drawing.Color.Goldenrod;
-            this.rjbtnOrder.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjbtnOrder.BorderRadius = 20;
-            this.rjbtnOrder.BorderSize = 0;
-            this.rjbtnOrder.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rjbtnOrder.FlatAppearance.BorderSize = 0;
-            this.rjbtnOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjbtnOrder.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjbtnOrder.ForeColor = System.Drawing.Color.White;
-            this.rjbtnOrder.Image = global::DoAnPBL3.Properties.Resources.icons8_buying_30;
-            this.rjbtnOrder.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.rjbtnOrder.Location = new System.Drawing.Point(0, 54);
-            this.rjbtnOrder.Name = "rjbtnOrder";
-            this.rjbtnOrder.Size = new System.Drawing.Size(150, 40);
-            this.rjbtnOrder.TabIndex = 39;
-            this.rjbtnOrder.Text = "Xem giỏ hàng";
-            this.rjbtnOrder.TextColor = System.Drawing.Color.White;
-            this.rjbtnOrder.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.rjbtnOrder.UseVisualStyleBackColor = false;
-            this.rjbtnOrder.Click += new System.EventHandler(this.RjbtnOrder_Click);
-            // 
             // dgvQLBSNV
             // 
             this.dgvQLBSNV.AllowUserToAddRows = false;
             this.dgvQLBSNV.AllowUserToDeleteRows = false;
             this.dgvQLBSNV.AllowUserToResizeColumns = false;
             this.dgvQLBSNV.AllowUserToResizeRows = false;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            this.dgvQLBSNV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.dgvQLBSNV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvQLBSNV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -244,14 +217,14 @@ namespace DoAnPBL3
             this.dgvQLBSNV.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvQLBSNV.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvQLBSNV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvQLBSNV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvQLBSNV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvQLBSNV.ColumnHeadersHeight = 30;
             this.dgvQLBSNV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvQLBSNV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -263,14 +236,14 @@ namespace DoAnPBL3
             this.NameGenre,
             this.Price,
             this.Quantity});
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Arial", 9F);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvQLBSNV.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Arial", 11F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvQLBSNV.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvQLBSNV.EnableHeadersVisualStyles = false;
             this.dgvQLBSNV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(53)))), ((int)(((byte)(70)))));
             this.dgvQLBSNV.Location = new System.Drawing.Point(6, 169);
@@ -304,6 +277,78 @@ namespace DoAnPBL3
             this.dgvQLBSNV.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvQLBSNV.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DgvQLBSNV_RowHeaderMouseClick);
             // 
+            // ID_Book
+            // 
+            this.ID_Book.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ID_Book.DataPropertyName = "ID_Book";
+            this.ID_Book.FillWeight = 78.04252F;
+            this.ID_Book.HeaderText = "ID";
+            this.ID_Book.Name = "ID_Book";
+            this.ID_Book.ReadOnly = true;
+            // 
+            // NameBook
+            // 
+            this.NameBook.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NameBook.DataPropertyName = "NameBook";
+            this.NameBook.FillWeight = 129.9492F;
+            this.NameBook.HeaderText = "Tên sách";
+            this.NameBook.Name = "NameBook";
+            this.NameBook.ReadOnly = true;
+            // 
+            // PublishDate
+            // 
+            this.PublishDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.PublishDate.DataPropertyName = "PublishDate";
+            this.PublishDate.FillWeight = 98.66805F;
+            this.PublishDate.HeaderText = "Ngày xuất bản";
+            this.PublishDate.Name = "PublishDate";
+            this.PublishDate.ReadOnly = true;
+            // 
+            // NameAuthor
+            // 
+            this.NameAuthor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NameAuthor.DataPropertyName = "NameAuthor";
+            this.NameAuthor.FillWeight = 98.66805F;
+            this.NameAuthor.HeaderText = "Tác giả";
+            this.NameAuthor.Name = "NameAuthor";
+            this.NameAuthor.ReadOnly = true;
+            // 
+            // NameLanguage
+            // 
+            this.NameLanguage.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NameLanguage.DataPropertyName = "NameLanguage";
+            this.NameLanguage.FillWeight = 98.66805F;
+            this.NameLanguage.HeaderText = "Ngôn ngữ";
+            this.NameLanguage.Name = "NameLanguage";
+            this.NameLanguage.ReadOnly = true;
+            // 
+            // NameGenre
+            // 
+            this.NameGenre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NameGenre.DataPropertyName = "NameGenre";
+            this.NameGenre.FillWeight = 98.66805F;
+            this.NameGenre.HeaderText = "Thể loại";
+            this.NameGenre.Name = "NameGenre";
+            this.NameGenre.ReadOnly = true;
+            // 
+            // Price
+            // 
+            this.Price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Price.DataPropertyName = "Price";
+            this.Price.FillWeight = 98.66805F;
+            this.Price.HeaderText = "Giá";
+            this.Price.Name = "Price";
+            this.Price.ReadOnly = true;
+            // 
+            // Quantity
+            // 
+            this.Quantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Quantity.DataPropertyName = "Quantity";
+            this.Quantity.FillWeight = 98.66805F;
+            this.Quantity.HeaderText = "Số lượng";
+            this.Quantity.Name = "Quantity";
+            this.Quantity.ReadOnly = true;
+            // 
             // NotificationCircle
             // 
             this.NotificationCircle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -315,7 +360,7 @@ namespace DoAnPBL3
             this.NotificationCircle.FillColor = System.Drawing.Color.Firebrick;
             this.NotificationCircle.Font = new System.Drawing.Font("Arial", 5.25F);
             this.NotificationCircle.ForeColor = System.Drawing.Color.White;
-            this.NotificationCircle.Location = new System.Drawing.Point(914, 118);
+            this.NotificationCircle.Location = new System.Drawing.Point(914, 122);
             this.NotificationCircle.Name = "NotificationCircle";
             this.NotificationCircle.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.NotificationCircle.Size = new System.Drawing.Size(28, 28);
@@ -329,7 +374,7 @@ namespace DoAnPBL3
             this.lblNotificationCounter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblNotificationCounter.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNotificationCounter.ForeColor = System.Drawing.Color.White;
-            this.lblNotificationCounter.Location = new System.Drawing.Point(922, 125);
+            this.lblNotificationCounter.Location = new System.Drawing.Point(922, 129);
             this.lblNotificationCounter.Name = "lblNotificationCounter";
             this.lblNotificationCounter.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblNotificationCounter.Size = new System.Drawing.Size(13, 14);
@@ -341,16 +386,18 @@ namespace DoAnPBL3
             // 
             this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
-            // pictureBox4
+            // CartIcon
             // 
-            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox4.Image = global::DoAnPBL3.Properties.Resources.icons8_shopping_cart_52;
-            this.pictureBox4.Location = new System.Drawing.Point(854, 127);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(99, 44);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 68;
-            this.pictureBox4.TabStop = false;
+            this.CartIcon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.CartIcon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CartIcon.Image = global::DoAnPBL3.Properties.Resources.icons8_shopping_cart_52;
+            this.CartIcon.Location = new System.Drawing.Point(854, 131);
+            this.CartIcon.Name = "CartIcon";
+            this.CartIcon.Size = new System.Drawing.Size(99, 44);
+            this.CartIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.CartIcon.TabIndex = 68;
+            this.CartIcon.TabStop = false;
+            this.CartIcon.Click += new System.EventHandler(this.PictureBox4_Click);
             // 
             // pictureBox3
             // 
@@ -445,78 +492,6 @@ namespace DoAnPBL3
             this.panel2.Size = new System.Drawing.Size(957, 95);
             this.panel2.TabIndex = 71;
             // 
-            // ID_Book
-            // 
-            this.ID_Book.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ID_Book.DataPropertyName = "ID_Book";
-            this.ID_Book.FillWeight = 78.04252F;
-            this.ID_Book.HeaderText = "ID";
-            this.ID_Book.Name = "ID_Book";
-            this.ID_Book.ReadOnly = true;
-            // 
-            // NameBook
-            // 
-            this.NameBook.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.NameBook.DataPropertyName = "NameBook";
-            this.NameBook.FillWeight = 129.9492F;
-            this.NameBook.HeaderText = "Tên sách";
-            this.NameBook.Name = "NameBook";
-            this.NameBook.ReadOnly = true;
-            // 
-            // PublishDate
-            // 
-            this.PublishDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.PublishDate.DataPropertyName = "PublishDate";
-            this.PublishDate.FillWeight = 98.66805F;
-            this.PublishDate.HeaderText = "Ngày xuất bản";
-            this.PublishDate.Name = "PublishDate";
-            this.PublishDate.ReadOnly = true;
-            // 
-            // NameAuthor
-            // 
-            this.NameAuthor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.NameAuthor.DataPropertyName = "NameAuthor";
-            this.NameAuthor.FillWeight = 98.66805F;
-            this.NameAuthor.HeaderText = "Tác giả";
-            this.NameAuthor.Name = "NameAuthor";
-            this.NameAuthor.ReadOnly = true;
-            // 
-            // NameLanguage
-            // 
-            this.NameLanguage.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.NameLanguage.DataPropertyName = "NameLanguage";
-            this.NameLanguage.FillWeight = 98.66805F;
-            this.NameLanguage.HeaderText = "Ngôn ngữ";
-            this.NameLanguage.Name = "NameLanguage";
-            this.NameLanguage.ReadOnly = true;
-            // 
-            // NameGenre
-            // 
-            this.NameGenre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.NameGenre.DataPropertyName = "NameGenre";
-            this.NameGenre.FillWeight = 98.66805F;
-            this.NameGenre.HeaderText = "Thể loại";
-            this.NameGenre.Name = "NameGenre";
-            this.NameGenre.ReadOnly = true;
-            // 
-            // Price
-            // 
-            this.Price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Price.DataPropertyName = "Price";
-            this.Price.FillWeight = 98.66805F;
-            this.Price.HeaderText = "Giá";
-            this.Price.Name = "Price";
-            this.Price.ReadOnly = true;
-            // 
-            // Quantity
-            // 
-            this.Quantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Quantity.DataPropertyName = "Quantity";
-            this.Quantity.FillWeight = 98.66805F;
-            this.Quantity.HeaderText = "Số lượng";
-            this.Quantity.Name = "Quantity";
-            this.Quantity.ReadOnly = true;
-            // 
             // FormQLBSNV
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -525,7 +500,7 @@ namespace DoAnPBL3
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.lblNotificationCounter);
             this.Controls.Add(this.NotificationCircle);
-            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.CartIcon);
             this.Controls.Add(this.dgvQLBSNV);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnTKS);
@@ -538,7 +513,7 @@ namespace DoAnPBL3
             this.Load += new System.EventHandler(this.FormQLBSNV_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvQLBSNV)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CartIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -552,7 +527,6 @@ namespace DoAnPBL3
         #endregion
         private XanderUI.XUISegment xuiSegmentSach;
         private RJTextBox rjtbTKS;
-        private RJButton rjbtnOrder;
         private Guna.UI2.WinForms.Guna2Button btnTKS;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -567,7 +541,7 @@ namespace DoAnPBL3
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2DataGridView dgvQLBSNV;
-        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox CartIcon;
         private Guna.UI2.WinForms.Guna2CircleButton NotificationCircle;
         private System.Windows.Forms.Label lblNotificationCounter;
         private System.Windows.Forms.Timer timer1;

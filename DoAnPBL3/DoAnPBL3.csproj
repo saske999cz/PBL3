@@ -500,6 +500,12 @@
     <EmbeddedResource Include="GUI\FormAuthenticateCustomer.resx">
       <DependentUpon>FormAuthenticateCustomer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormChiTietHoaDon.resx">
+      <DependentUpon>FormChiTietHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormHoaDonKhachHang.resx">
+      <DependentUpon>FormHoaDonKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormIdentify.resx">
       <DependentUpon>FormIdentify.cs</DependentUpon>
     </EmbeddedResource>

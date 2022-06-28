@@ -30,13 +30,18 @@ namespace DoAnPBL3
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormQLKHNV));
             this.rjtbTKKH = new DoAnPBL3.RJTextBox();
             this.dgvQLKHNV = new System.Windows.Forms.DataGridView();
+            this.ID_Customer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FullNameCustomer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnTKKH = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -51,13 +56,8 @@ namespace DoAnPBL3
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnHDKH = new FontAwesome.Sharp.IconButton();
             this.panelHeader = new System.Windows.Forms.Panel();
-            this.ID_Customer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FullNameCustomer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnHDKH = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQLKHNV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -102,14 +102,14 @@ namespace DoAnPBL3
             this.dgvQLKHNV.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.dgvQLKHNV.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvQLKHNV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvQLKHNV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvQLKHNV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvQLKHNV.ColumnHeadersHeight = 30;
             this.dgvQLKHNV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvQLKHNV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -118,14 +118,14 @@ namespace DoAnPBL3
             this.Gender,
             this.Phone,
             this.Address});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 11F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvQLKHNV.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Arial", 11F);
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvQLKHNV.DefaultCellStyle = dataGridViewCellStyle10;
             this.dgvQLKHNV.EnableHeadersVisualStyles = false;
             this.dgvQLKHNV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(53)))), ((int)(((byte)(70)))));
             this.dgvQLKHNV.Location = new System.Drawing.Point(11, 170);
@@ -133,28 +133,73 @@ namespace DoAnPBL3
             this.dgvQLKHNV.Name = "dgvQLKHNV";
             this.dgvQLKHNV.ReadOnly = true;
             this.dgvQLKHNV.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvQLKHNV.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvQLKHNV.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dgvQLKHNV.RowHeadersVisible = false;
             this.dgvQLKHNV.RowHeadersWidth = 60;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 11F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvQLKHNV.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Arial", 11F);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvQLKHNV.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.dgvQLKHNV.RowTemplate.Height = 24;
             this.dgvQLKHNV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvQLKHNV.Size = new System.Drawing.Size(816, 413);
             this.dgvQLKHNV.TabIndex = 48;
             this.dgvQLKHNV.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DgvQLKH_RowHeaderMouseClick);
+            // 
+            // ID_Customer
+            // 
+            this.ID_Customer.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ID_Customer.DataPropertyName = "ID_Customer";
+            this.ID_Customer.FillWeight = 55.83756F;
+            this.ID_Customer.HeaderText = "ID";
+            this.ID_Customer.Name = "ID_Customer";
+            this.ID_Customer.ReadOnly = true;
+            // 
+            // FullNameCustomer
+            // 
+            this.FullNameCustomer.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.FullNameCustomer.DataPropertyName = "FullNameCustomer";
+            this.FullNameCustomer.FillWeight = 111.0406F;
+            this.FullNameCustomer.HeaderText = "Họ và tên";
+            this.FullNameCustomer.Name = "FullNameCustomer";
+            this.FullNameCustomer.ReadOnly = true;
+            // 
+            // Gender
+            // 
+            this.Gender.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Gender.DataPropertyName = "Gender";
+            this.Gender.FillWeight = 111.0406F;
+            this.Gender.HeaderText = "Giới tính";
+            this.Gender.Name = "Gender";
+            this.Gender.ReadOnly = true;
+            // 
+            // Phone
+            // 
+            this.Phone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Phone.DataPropertyName = "Phone";
+            this.Phone.FillWeight = 111.0406F;
+            this.Phone.HeaderText = "Số điện thoại";
+            this.Phone.Name = "Phone";
+            this.Phone.ReadOnly = true;
+            // 
+            // Address
+            // 
+            this.Address.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Address.DataPropertyName = "Address";
+            this.Address.FillWeight = 111.0406F;
+            this.Address.HeaderText = "Địa chỉ";
+            this.Address.Name = "Address";
+            this.Address.ReadOnly = true;
             // 
             // btnTKKH
             // 
@@ -315,31 +360,6 @@ namespace DoAnPBL3
             this.panel1.Size = new System.Drawing.Size(143, 51);
             this.panel1.TabIndex = 64;
             // 
-            // btnHDKH
-            // 
-            this.btnHDKH.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnHDKH.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnHDKH.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnHDKH.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
-            this.btnHDKH.FlatAppearance.BorderSize = 0;
-            this.btnHDKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHDKH.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHDKH.ForeColor = System.Drawing.Color.White;
-            this.btnHDKH.IconChar = FontAwesome.Sharp.IconChar.DollarSign;
-            this.btnHDKH.IconColor = System.Drawing.Color.White;
-            this.btnHDKH.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnHDKH.IconSize = 30;
-            this.btnHDKH.Location = new System.Drawing.Point(5, 1);
-            this.btnHDKH.Name = "btnHDKH";
-            this.btnHDKH.Size = new System.Drawing.Size(142, 47);
-            this.btnHDKH.TabIndex = 65;
-            this.btnHDKH.Text = " Hóa đơn khách hàng";
-            this.btnHDKH.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnHDKH.UseVisualStyleBackColor = false;
-            this.btnHDKH.Click += new System.EventHandler(this.BtnHDKH_Click);
-            this.btnHDKH.MouseEnter += new System.EventHandler(this.BtnHDKH_MouseEnter);
-            this.btnHDKH.MouseLeave += new System.EventHandler(this.BtnHDKH_MouseLeave);
-            // 
             // panelHeader
             // 
             this.panelHeader.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -359,50 +379,28 @@ namespace DoAnPBL3
             this.panelHeader.Size = new System.Drawing.Size(957, 95);
             this.panelHeader.TabIndex = 65;
             // 
-            // ID_Customer
+            // btnHDKH
             // 
-            this.ID_Customer.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ID_Customer.DataPropertyName = "ID_Customer";
-            this.ID_Customer.FillWeight = 55.83756F;
-            this.ID_Customer.HeaderText = "ID";
-            this.ID_Customer.Name = "ID_Customer";
-            this.ID_Customer.ReadOnly = true;
-            // 
-            // FullNameCustomer
-            // 
-            this.FullNameCustomer.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.FullNameCustomer.DataPropertyName = "FullNameCustomer";
-            this.FullNameCustomer.FillWeight = 111.0406F;
-            this.FullNameCustomer.HeaderText = "Họ và tên";
-            this.FullNameCustomer.Name = "FullNameCustomer";
-            this.FullNameCustomer.ReadOnly = true;
-            // 
-            // Gender
-            // 
-            this.Gender.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Gender.DataPropertyName = "Gender";
-            this.Gender.FillWeight = 111.0406F;
-            this.Gender.HeaderText = "Giới tính";
-            this.Gender.Name = "Gender";
-            this.Gender.ReadOnly = true;
-            // 
-            // Phone
-            // 
-            this.Phone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Phone.DataPropertyName = "Phone";
-            this.Phone.FillWeight = 111.0406F;
-            this.Phone.HeaderText = "Số điện thoại";
-            this.Phone.Name = "Phone";
-            this.Phone.ReadOnly = true;
-            // 
-            // Address
-            // 
-            this.Address.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Address.DataPropertyName = "Address";
-            this.Address.FillWeight = 111.0406F;
-            this.Address.HeaderText = "Địa chỉ";
-            this.Address.Name = "Address";
-            this.Address.ReadOnly = true;
+            this.btnHDKH.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnHDKH.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnHDKH.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHDKH.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
+            this.btnHDKH.FlatAppearance.BorderSize = 0;
+            this.btnHDKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHDKH.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHDKH.ForeColor = System.Drawing.Color.White;
+            this.btnHDKH.IconChar = FontAwesome.Sharp.IconChar.DollarSign;
+            this.btnHDKH.IconColor = System.Drawing.Color.White;
+            this.btnHDKH.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnHDKH.IconSize = 30;
+            this.btnHDKH.Location = new System.Drawing.Point(0, 0);
+            this.btnHDKH.Name = "btnHDKH";
+            this.btnHDKH.Size = new System.Drawing.Size(142, 47);
+            this.btnHDKH.TabIndex = 11;
+            this.btnHDKH.Text = " Hóa đơn khách hàng";
+            this.btnHDKH.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnHDKH.UseVisualStyleBackColor = false;
+            this.btnHDKH.Click += new System.EventHandler(this.BtnHDKH_Click);
             // 
             // FormQLKHNV
             // 
@@ -448,12 +446,12 @@ namespace DoAnPBL3
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
         private System.Windows.Forms.Panel panel1;
-        private FontAwesome.Sharp.IconButton btnHDKH;
         private System.Windows.Forms.Panel panelHeader;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_Customer;
         private System.Windows.Forms.DataGridViewTextBoxColumn FullNameCustomer;
         private System.Windows.Forms.DataGridViewTextBoxColumn Gender;
         private System.Windows.Forms.DataGridViewTextBoxColumn Phone;
         private System.Windows.Forms.DataGridViewTextBoxColumn Address;
+        private FontAwesome.Sharp.IconButton btnHDKH;
     }
 }
