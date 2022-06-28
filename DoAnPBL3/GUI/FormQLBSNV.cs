@@ -15,11 +15,15 @@ namespace DoAnPBL3
     public partial class FormQLBSNV : Form
     {
         private readonly string accountUsername;
+        FormCart b;
 
         public FormQLBSNV(string accountUsername)
         {
             InitializeComponent();
             this.accountUsername = accountUsername;
+            b = new FormCart(accountUsername);
+            NotificationCircle.Hide();
+            lblNotificationCounter.Hide();
         }
 
         public void Alert(string msg, Form_Alert.EnmType type)
@@ -30,6 +34,7 @@ namespace DoAnPBL3
 
         private void FormQLBSNV_Load(object sender, EventArgs e)
         {
+            timer1.Start();
             GetAllInfoBooks();
             dgvQLBSNV.RowHeadersVisible = true;
             dgvQLBSNV.BorderStyle = BorderStyle.FixedSingle;
@@ -50,26 +55,27 @@ namespace DoAnPBL3
             else
             {
                 dgvQLBSNV.DataSource = null;
-                totalBook.Text = "0";
-                vietnameseBook.Text = "0";
-                englishBook.Text = "0";
+                totalBooks.Text = "0";
+                totalVietnameseBooks.Text = "0";
+                totalEnglishBooks.Text = "0";
             }
-        }
-
-        private void RjbtnBuy_Click(object sender, EventArgs e)
-        {
-            new FormCart(accountUsername).ShowDialog();
-            FormQLBSNV_Load(sender, e);
         }
 
         private void RjbtnOrder_Click(object sender, EventArgs e)
         {
-            RJMessageBox.Show("Đặt hàng");
+            b.Show();
         }
 
         private void RjbtnAddCart_Click(object sender, EventArgs e)
         {
-            RJMessageBox.Show("Thêm vào giỏ hàng");
+            string ID_BookChosen;
+            if (dgvQLBSNV.CurrentRow == null)
+                RJMessageBox.Show("Hệ thống chưa có sách nào", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else
+            {
+                ID_BookChosen = dgvQLBSNV.CurrentRow.Cells["ID_Book"].Value.ToString();
+                b.Them_Sach(ID_BookChosen);
+            }
         }
 
         private void RjtbTKS_KeyPress(object sender, KeyPressEventArgs e)
@@ -192,9 +198,9 @@ namespace DoAnPBL3
 
         private void GetAllInfoBooks()
         {
-            totalBook.Text = BLL_QLBS.Instance.GetNumberTotalBook().ToString();
-            vietnameseBook.Text = BLL_QLBS.Instance.GetNumberTotalVietnameseBook().ToString();
-            englishBook.Text = BLL_QLBS.Instance.GetNumberTotalEnglishBook().ToString();
+            totalBooks.Text = BLL_QLBS.Instance.GetNumberTotalBook().ToString();
+            totalVietnameseBooks.Text = BLL_QLBS.Instance.GetNumberTotalVietnameseBook().ToString();
+            totalEnglishBooks.Text = BLL_QLBS.Instance.GetNumberTotalEnglishBook().ToString();
         }
 
         private void CreateCol(DataTable data)
@@ -223,6 +229,29 @@ namespace DoAnPBL3
             dataRow["Price"] = book.Price.ToString("##,#") + "VNĐ";
             dataRow["Quantity"] = book.Quantity;
             return dataRow;
+        }
+
+        private void Timer1_Tick(object sender, EventArgs e)
+        {
+            if (b.GetVariety() != 0)
+            {
+                lblNotificationCounter.Text = b.GetVariety().ToString();
+                NotificationCircle.Show();
+                lblNotificationCounter.Show();
+                lblNotificationCounter.BringToFront();
+                if (b.GetVariety() > 99)
+                    lblNotificationCounter.Location = new Point(NotificationCircle.Location.X + 2, NotificationCircle.Location.Y + 7);
+                else if (b.GetVariety() > 9)
+                    lblNotificationCounter.Location = new Point(NotificationCircle.Location.X + 5, NotificationCircle.Location.Y + 7);
+                else
+                    lblNotificationCounter.Location = new Point(NotificationCircle.Location.X + 8, NotificationCircle.Location.Y + 7);
+            }
+            else
+            {
+                lblNotificationCounter.Text = b.GetVariety().ToString();
+                NotificationCircle.Hide();
+                lblNotificationCounter.Hide();
+            }
         }
     }
 }

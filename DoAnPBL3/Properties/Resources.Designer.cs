@@ -283,6 +283,16 @@ namespace DoAnPBL3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bill {
+            get {
+                object obj = ResourceManager.GetObject("bill", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap book_info_2 {
             get {
                 object obj = ResourceManager.GetObject("book info 2", resourceCulture);
@@ -703,6 +713,16 @@ namespace DoAnPBL3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap file {
+            get {
+                object obj = ResourceManager.GetObject("file", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap fischl {
             get {
                 object obj = ResourceManager.GetObject("fischl", resourceCulture);
@@ -836,6 +856,16 @@ namespace DoAnPBL3.Properties {
         internal static System.Drawing.Bitmap icons8_add_shopping_cart_30px {
             get {
                 object obj = ResourceManager.GetObject("icons8_add_shopping_cart_30px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_buying_30 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-buying-30", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1026,6 +1056,26 @@ namespace DoAnPBL3.Properties {
         internal static System.Drawing.Bitmap icons8_search_20px {
             get {
                 object obj = ResourceManager.GetObject("icons8_search_20px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_shopping_cart_30 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-shopping-cart-30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_shopping_cart_52 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-shopping-cart-52", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1433,6 +1483,16 @@ namespace DoAnPBL3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap multiply_60px {
+            get {
+                object obj = ResourceManager.GetObject("multiply_60px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap nano_technology {
             get {
                 object obj = ResourceManager.GetObject("nano-technology", resourceCulture);
@@ -1776,6 +1836,16 @@ namespace DoAnPBL3.Properties {
         internal static System.Drawing.Bitmap pencil {
             get {
                 object obj = ResourceManager.GetObject("pencil", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pencil_60px {
+            get {
+                object obj = ResourceManager.GetObject("pencil_60px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

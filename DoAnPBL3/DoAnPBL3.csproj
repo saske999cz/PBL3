@@ -229,6 +229,18 @@
     <Compile Include="GUI\FormAuthenticateCustomer.Designer.cs">
       <DependentUpon>FormAuthenticateCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\FormChiTietHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormChiTietHoaDon.Designer.cs">
+      <DependentUpon>FormChiTietHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormHoaDonKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormHoaDonKhachHang.Designer.cs">
+      <DependentUpon>FormHoaDonKhachHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\FormIdentify.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -602,6 +614,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="books11.ico" />
+    <None Include="Img\Icon\pencil_60px.png" />
+    <None Include="Img\Icon\multiply_60px.png" />
+    <None Include="Img\Icon\icons8-shopping-cart-52.png" />
+    <None Include="Img\Icon\icons8-shopping-cart-30.png" />
+    <None Include="Img\Icon\icons8-buying-30.png" />
+    <None Include="Img\Icon\file.png" />
+    <None Include="Img\Icon\bill.png" />
     <None Include="Img\Icon\warning.png" />
     <None Include="Img\Icon\success.png" />
     <None Include="Img\Icon\info.png" />
