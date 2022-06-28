@@ -301,5 +301,103 @@ namespace DoAnPBL3.DAL
                     .NameGenre;
             }
         }
+
+        public List<Language> GetAllLanguages()
+        {
+            using (BookStoreContext db = new BookStoreContext())
+            {
+                List<Language> listLanguages = db.Languages
+                                    .OrderBy(lang => lang.ID_Language)
+                                    .Select(lang => lang)
+                                    .ToList();
+                if (listLanguages.Count > 0)
+                    return listLanguages;
+                else
+                    return null;
+            }
+        }
+
+        public List<Publisher> GetAllPublishers()
+        {
+            using (BookStoreContext db = new BookStoreContext())
+            {
+                List<Publisher> listPublishers = db.Publishers
+                                    .OrderBy(publisher => publisher.ID_Publisher)
+                                    .Select(publisher => publisher)
+                                    .ToList();
+                if (listPublishers.Count > 0)
+                    return listPublishers;
+                else
+                    return null;
+            }
+        }
+
+        public List<Genre> GetAllGenres()
+        {
+            using (BookStoreContext db = new BookStoreContext())
+            {
+                List<Genre> listGenres = db.Genres
+                                    .OrderBy(genre => genre.ID_Genre)
+                                    .Select(genre => genre)
+                                    .ToList();
+                if (listGenres.Count > 0)
+                    return listGenres;
+                else
+                    return null;
+            }
+        }
+
+        public bool IsExistIDBook(string ID_Book)
+        {
+            using (BookStoreContext db = new BookStoreContext())
+            {
+                var id = db.Books.Where(book => book.ID_Book == ID_Book);
+                if (id.Count() > 0)
+                    return true;
+                else
+                    return false;
+            }
+        }
+
+        public bool AddNewBook(Book book)
+        {
+            using (BookStoreContext db = new BookStoreContext())
+            {
+                db.Books.Add(book);
+                int result = db.SaveChanges();
+                return result > 0;
+            }
+        }
+
+        public bool UpdateBook(Book newBookInfo)
+        {
+            using (BookStoreContext db = new BookStoreContext())
+            {
+                Book oldBook = db.Books.Find(newBookInfo.ID_Book);
+                oldBook.NameBook = newBookInfo.NameBook;
+                oldBook.PublishDate = newBookInfo.PublishDate;
+                oldBook.NameAuthor = newBookInfo.NameAuthor;
+                oldBook.ID_Language = newBookInfo.ID_Language;
+                oldBook.ID_Publisher = newBookInfo.ID_Publisher;
+                oldBook.ID_Genre = newBookInfo.ID_Genre;
+                oldBook.Quantity = newBookInfo.Quantity;
+                oldBook.Price = newBookInfo.Price;
+                oldBook.Unit = newBookInfo.Unit;
+                oldBook.Image = newBookInfo.Image;
+                int result = db.SaveChanges();
+                return result > 0;
+            }
+        }
+
+        public bool DeleteBook(string ID_Book)
+        {
+            using (BookStoreContext db = new BookStoreContext())
+            {
+                Book book = db.Books.Find(ID_Book);
+                db.Books.Remove(book);
+                int result = db.SaveChanges();
+                return result > 0;
+            }
+        }
     }
 }

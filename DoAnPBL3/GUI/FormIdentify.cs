@@ -57,23 +57,23 @@ namespace DoAnPBL3
                     }
                     else
                     {
-                        Alert("Xóa nhân viên thành công", Form_Alert.EnmType.Error);
+                        Alert("Xóa thất bại. Vui lòng thử lại", Form_Alert.EnmType.Error);
                         Dispose();
                     }
                 }
                 else
                 {
-                    //if (BLL_QLBS.Instance.DeleteBook(id))
-                    //{
-                    //    MessageBox.Show("Xóa mặt hàng thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    //    RefreshData(sender, e);
-                    //    Dispose();
-                    //}
-                    //else
-                    //{
-                    //    MessageBox.Show("Xóa thất bại. Vui lòng thử lại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    //    Dispose();
-                    //}
+                    if (BLL_QLBS.Instance.DeleteBook(id))
+                    {
+                        Alert("Xóa mặt hàng sách thành công", Form_Alert.EnmType.Success);
+                        RefreshData(sender, e);
+                        Dispose();
+                    }
+                    else
+                    {
+                        Alert("Xóa thất bại. Vui lòng thử lại", Form_Alert.EnmType.Error);
+                        Dispose();
+                    }
                 }
             }
         }

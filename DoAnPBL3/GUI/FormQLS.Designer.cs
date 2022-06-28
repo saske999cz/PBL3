@@ -31,10 +31,10 @@ namespace DoAnPBL3
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormQLS));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.xuiSegmentSach = new XanderUI.XUISegment();
             this.englishBook = new System.Windows.Forms.Label();
             this.lblEnglishBook = new System.Windows.Forms.Label();
@@ -56,7 +56,6 @@ namespace DoAnPBL3
             this.panel1 = new System.Windows.Forms.Panel();
             this.rjtbTKS = new DoAnPBL3.RJTextBox();
             this.dgvQLSNV = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.panelHeader = new System.Windows.Forms.Panel();
             this.ID_Book = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NameBook = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PublishDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,6 +64,7 @@ namespace DoAnPBL3
             this.NameGenre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panelHeader = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -197,6 +197,7 @@ namespace DoAnPBL3
             // btnTKS
             // 
             this.btnTKS.BorderRadius = 15;
+            this.btnTKS.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTKS.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnTKS.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnTKS.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -216,6 +217,7 @@ namespace DoAnPBL3
             // 
             this.btnSuaSach.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSuaSach.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnSuaSach.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSuaSach.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
             this.btnSuaSach.FlatAppearance.BorderSize = 0;
             this.btnSuaSach.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -240,6 +242,7 @@ namespace DoAnPBL3
             // 
             this.btnDeleteSach.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnDeleteSach.BackColor = System.Drawing.Color.Firebrick;
+            this.btnDeleteSach.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDeleteSach.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
             this.btnDeleteSach.FlatAppearance.BorderSize = 0;
             this.btnDeleteSach.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -264,6 +267,7 @@ namespace DoAnPBL3
             // 
             this.btnAddSach.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnAddSach.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnAddSach.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddSach.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
             this.btnAddSach.FlatAppearance.BorderSize = 0;
             this.btnAddSach.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -344,8 +348,8 @@ namespace DoAnPBL3
             this.dgvQLSNV.AllowUserToDeleteRows = false;
             this.dgvQLSNV.AllowUserToResizeColumns = false;
             this.dgvQLSNV.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgvQLSNV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
+            this.dgvQLSNV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
             this.dgvQLSNV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -354,14 +358,14 @@ namespace DoAnPBL3
             this.dgvQLSNV.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvQLSNV.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvQLSNV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvQLSNV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvQLSNV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.dgvQLSNV.ColumnHeadersHeight = 30;
             this.dgvQLSNV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvQLSNV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -373,14 +377,14 @@ namespace DoAnPBL3
             this.NameGenre,
             this.Price,
             this.Quantity});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 11F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvQLSNV.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Arial", 11F);
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvQLSNV.DefaultCellStyle = dataGridViewCellStyle15;
             this.dgvQLSNV.EnableHeadersVisualStyles = false;
             this.dgvQLSNV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(53)))), ((int)(((byte)(70)))));
             this.dgvQLSNV.Location = new System.Drawing.Point(12, 173);
@@ -389,12 +393,12 @@ namespace DoAnPBL3
             this.dgvQLSNV.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgvQLSNV.RowHeadersVisible = false;
             this.dgvQLSNV.RowHeadersWidth = 60;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 11F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvQLSNV.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Arial", 11F);
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvQLSNV.RowsDefaultCellStyle = dataGridViewCellStyle16;
             this.dgvQLSNV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvQLSNV.Size = new System.Drawing.Size(816, 413);
             this.dgvQLSNV.TabIndex = 66;
@@ -420,25 +424,6 @@ namespace DoAnPBL3
             this.dgvQLSNV.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvQLSNV.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvQLSNV.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DgvQLSNV_RowHeaderMouseClick);
-            // 
-            // panelHeader
-            // 
-            this.panelHeader.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(57)))), ((int)(((byte)(80)))));
-            this.panelHeader.Controls.Add(this.lblEnglishBook);
-            this.panelHeader.Controls.Add(this.lblTotalBook);
-            this.panelHeader.Controls.Add(this.totalBook);
-            this.panelHeader.Controls.Add(this.pictureBox3);
-            this.panelHeader.Controls.Add(this.lblVietnameseBook);
-            this.panelHeader.Controls.Add(this.pictureBox1);
-            this.panelHeader.Controls.Add(this.vietnameseBook);
-            this.panelHeader.Controls.Add(this.pictureBox2);
-            this.panelHeader.Controls.Add(this.englishBook);
-            this.panelHeader.Location = new System.Drawing.Point(12, 12);
-            this.panelHeader.Name = "panelHeader";
-            this.panelHeader.Size = new System.Drawing.Size(957, 95);
-            this.panelHeader.TabIndex = 67;
             // 
             // ID_Book
             // 
@@ -511,6 +496,25 @@ namespace DoAnPBL3
             this.Quantity.HeaderText = "Số lượng";
             this.Quantity.Name = "Quantity";
             this.Quantity.ReadOnly = true;
+            // 
+            // panelHeader
+            // 
+            this.panelHeader.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(57)))), ((int)(((byte)(80)))));
+            this.panelHeader.Controls.Add(this.lblEnglishBook);
+            this.panelHeader.Controls.Add(this.lblTotalBook);
+            this.panelHeader.Controls.Add(this.totalBook);
+            this.panelHeader.Controls.Add(this.pictureBox3);
+            this.panelHeader.Controls.Add(this.lblVietnameseBook);
+            this.panelHeader.Controls.Add(this.pictureBox1);
+            this.panelHeader.Controls.Add(this.vietnameseBook);
+            this.panelHeader.Controls.Add(this.pictureBox2);
+            this.panelHeader.Controls.Add(this.englishBook);
+            this.panelHeader.Location = new System.Drawing.Point(12, 12);
+            this.panelHeader.Name = "panelHeader";
+            this.panelHeader.Size = new System.Drawing.Size(957, 95);
+            this.panelHeader.TabIndex = 67;
             // 
             // FormQLS
             // 

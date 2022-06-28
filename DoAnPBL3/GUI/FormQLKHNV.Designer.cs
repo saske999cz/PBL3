@@ -33,29 +33,37 @@ namespace DoAnPBL3
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormQLKHNV));
             this.rjtbTKKH = new DoAnPBL3.RJTextBox();
             this.dgvQLKHNV = new System.Windows.Forms.DataGridView();
-            this.btnAddKH = new FontAwesome.Sharp.IconButton();
             this.btnTKKH = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.totalFemaleCustomers = new System.Windows.Forms.Label();
+            this.lblTotalFemaleCustomers = new System.Windows.Forms.Label();
+            this.totalMaleCustomers = new System.Windows.Forms.Label();
+            this.lblTotalMaleCustomers = new System.Windows.Forms.Label();
+            this.totalCustomers = new System.Windows.Forms.Label();
+            this.lblTotalCustomers = new System.Windows.Forms.Label();
             this.xuiSegmentKH = new XanderUI.XUISegment();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnHDKH = new FontAwesome.Sharp.IconButton();
+            this.panelHeader = new System.Windows.Forms.Panel();
+            this.ID_Customer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FullNameCustomer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQLKHNV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panelHeader.SuspendLayout();
             this.SuspendLayout();
             // 
             // rjtbTKKH
@@ -74,23 +82,26 @@ namespace DoAnPBL3
             this.rjtbTKKH.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.rjtbTKKH.PasswordChar = false;
             this.rjtbTKKH.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(83)))), ((int)(((byte)(103)))));
-            this.rjtbTKKH.PlaceholderText = "Tìm kiếm";
+            this.rjtbTKKH.PlaceholderText = "Tìm kiếm theo ID, họ và tên hoặc SĐT";
             this.rjtbTKKH.Size = new System.Drawing.Size(250, 31);
             this.rjtbTKKH.TabIndex = 52;
             this.rjtbTKKH.Texts = "";
             this.rjtbTKKH.UnderlinedStyle = false;
+            this.rjtbTKKH.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.RjtbTKKH_KeyPress);
             // 
             // dgvQLKHNV
             // 
+            this.dgvQLKHNV.AllowUserToAddRows = false;
+            this.dgvQLKHNV.AllowUserToDeleteRows = false;
+            this.dgvQLKHNV.AllowUserToResizeColumns = false;
+            this.dgvQLKHNV.AllowUserToResizeRows = false;
             this.dgvQLKHNV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvQLKHNV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgvQLKHNV.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvQLKHNV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvQLKHNV.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.dgvQLKHNV.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvQLKHNV.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvQLKHNV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvQLKHNV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.HotTrack;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -99,59 +110,51 @@ namespace DoAnPBL3
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvQLKHNV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvQLKHNV.ColumnHeadersHeight = 20;
+            this.dgvQLKHNV.ColumnHeadersHeight = 30;
             this.dgvQLKHNV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvQLKHNV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID_Customer,
+            this.FullNameCustomer,
+            this.Gender,
+            this.Phone,
+            this.Address});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 11F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvQLKHNV.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvQLKHNV.EnableHeadersVisualStyles = false;
-            this.dgvQLKHNV.GridColor = System.Drawing.Color.SteelBlue;
-            this.dgvQLKHNV.Location = new System.Drawing.Point(5, 170);
+            this.dgvQLKHNV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(53)))), ((int)(((byte)(70)))));
+            this.dgvQLKHNV.Location = new System.Drawing.Point(11, 170);
             this.dgvQLKHNV.Margin = new System.Windows.Forms.Padding(2);
             this.dgvQLKHNV.Name = "dgvQLKHNV";
+            this.dgvQLKHNV.ReadOnly = true;
             this.dgvQLKHNV.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvQLKHNV.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvQLKHNV.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvQLKHNV.RowHeadersVisible = false;
-            this.dgvQLKHNV.RowHeadersWidth = 51;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvQLKHNV.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvQLKHNV.RowHeadersWidth = 60;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 11F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvQLKHNV.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvQLKHNV.RowTemplate.Height = 24;
             this.dgvQLKHNV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvQLKHNV.Size = new System.Drawing.Size(821, 413);
+            this.dgvQLKHNV.Size = new System.Drawing.Size(816, 413);
             this.dgvQLKHNV.TabIndex = 48;
-            // 
-            // btnAddKH
-            // 
-            this.btnAddKH.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAddKH.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnAddKH.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddKH.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
-            this.btnAddKH.FlatAppearance.BorderSize = 0;
-            this.btnAddKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddKH.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddKH.ForeColor = System.Drawing.Color.White;
-            this.btnAddKH.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
-            this.btnAddKH.IconColor = System.Drawing.Color.White;
-            this.btnAddKH.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAddKH.IconSize = 30;
-            this.btnAddKH.Location = new System.Drawing.Point(2, 2);
-            this.btnAddKH.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAddKH.Name = "btnAddKH";
-            this.btnAddKH.Size = new System.Drawing.Size(143, 44);
-            this.btnAddKH.TabIndex = 53;
-            this.btnAddKH.Text = "Thêm";
-            this.btnAddKH.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAddKH.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAddKH.UseVisualStyleBackColor = false;
-            this.btnAddKH.Click += new System.EventHandler(this.BtnAddKH_Click);
+            this.dgvQLKHNV.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DgvQLKH_RowHeaderMouseClick);
             // 
             // btnTKKH
             // 
@@ -170,11 +173,12 @@ namespace DoAnPBL3
             this.btnTKKH.Size = new System.Drawing.Size(141, 32);
             this.btnTKKH.TabIndex = 54;
             this.btnTKKH.Text = "Tìm kiếm";
+            this.btnTKKH.Click += new System.EventHandler(this.BtnTKKH_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(181, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(158, 17);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(38, 33);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -186,7 +190,7 @@ namespace DoAnPBL3
             this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::DoAnPBL3.Properties.Resources.women;
-            this.pictureBox3.Location = new System.Drawing.Point(889, 12);
+            this.pictureBox3.Location = new System.Drawing.Point(888, 17);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(38, 27);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -197,82 +201,82 @@ namespace DoAnPBL3
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox2.Image = global::DoAnPBL3.Properties.Resources.man_1;
-            this.pictureBox2.Location = new System.Drawing.Point(542, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(530, 17);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(38, 27);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 61;
             this.pictureBox2.TabStop = false;
             // 
-            // label6
+            // totalFemaleCustomers
             // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(817, 49);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(29, 16);
-            this.label6.TabIndex = 60;
-            this.label6.Text = "100";
+            this.totalFemaleCustomers.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.totalFemaleCustomers.AutoSize = true;
+            this.totalFemaleCustomers.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalFemaleCustomers.ForeColor = System.Drawing.Color.White;
+            this.totalFemaleCustomers.Location = new System.Drawing.Point(816, 54);
+            this.totalFemaleCustomers.Name = "totalFemaleCustomers";
+            this.totalFemaleCustomers.Size = new System.Drawing.Size(29, 16);
+            this.totalFemaleCustomers.TabIndex = 60;
+            this.totalFemaleCustomers.Text = "100";
             // 
-            // label7
+            // lblTotalFemaleCustomers
             // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
-            this.label7.Location = new System.Drawing.Point(768, 18);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(124, 16);
-            this.label7.TabIndex = 59;
-            this.label7.Text = "Số khach hàng nữ";
+            this.lblTotalFemaleCustomers.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTotalFemaleCustomers.AutoSize = true;
+            this.lblTotalFemaleCustomers.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalFemaleCustomers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
+            this.lblTotalFemaleCustomers.Location = new System.Drawing.Point(767, 23);
+            this.lblTotalFemaleCustomers.Name = "lblTotalFemaleCustomers";
+            this.lblTotalFemaleCustomers.Size = new System.Drawing.Size(124, 16);
+            this.lblTotalFemaleCustomers.TabIndex = 59;
+            this.lblTotalFemaleCustomers.Text = "Số khach hàng nữ";
             // 
-            // label4
+            // totalMaleCustomers
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(460, 49);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(29, 16);
-            this.label4.TabIndex = 58;
-            this.label4.Text = "100";
+            this.totalMaleCustomers.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.totalMaleCustomers.AutoSize = true;
+            this.totalMaleCustomers.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalMaleCustomers.ForeColor = System.Drawing.Color.White;
+            this.totalMaleCustomers.Location = new System.Drawing.Point(448, 54);
+            this.totalMaleCustomers.Name = "totalMaleCustomers";
+            this.totalMaleCustomers.Size = new System.Drawing.Size(29, 16);
+            this.totalMaleCustomers.TabIndex = 58;
+            this.totalMaleCustomers.Text = "100";
             // 
-            // label5
+            // lblTotalMaleCustomers
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
-            this.label5.Location = new System.Drawing.Point(411, 18);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(135, 16);
-            this.label5.TabIndex = 57;
-            this.label5.Text = "Số khách hàng nam";
+            this.lblTotalMaleCustomers.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblTotalMaleCustomers.AutoSize = true;
+            this.lblTotalMaleCustomers.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalMaleCustomers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
+            this.lblTotalMaleCustomers.Location = new System.Drawing.Point(399, 23);
+            this.lblTotalMaleCustomers.Name = "lblTotalMaleCustomers";
+            this.lblTotalMaleCustomers.Size = new System.Drawing.Size(135, 16);
+            this.lblTotalMaleCustomers.TabIndex = 57;
+            this.lblTotalMaleCustomers.Text = "Số khách hàng nam";
             // 
-            // label3
+            // totalCustomers
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(97, 49);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(29, 16);
-            this.label3.TabIndex = 56;
-            this.label3.Text = "100";
+            this.totalCustomers.AutoSize = true;
+            this.totalCustomers.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalCustomers.ForeColor = System.Drawing.Color.White;
+            this.totalCustomers.Location = new System.Drawing.Point(74, 54);
+            this.totalCustomers.Name = "totalCustomers";
+            this.totalCustomers.Size = new System.Drawing.Size(29, 16);
+            this.totalCustomers.TabIndex = 56;
+            this.totalCustomers.Text = "100";
             // 
-            // label2
+            // lblTotalCustomers
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
-            this.label2.Location = new System.Drawing.Point(45, 18);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(136, 16);
-            this.label2.TabIndex = 55;
-            this.label2.Text = "Tổng số khách hàng";
+            this.lblTotalCustomers.AutoSize = true;
+            this.lblTotalCustomers.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalCustomers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
+            this.lblTotalCustomers.Location = new System.Drawing.Point(22, 23);
+            this.lblTotalCustomers.Name = "lblTotalCustomers";
+            this.lblTotalCustomers.Size = new System.Drawing.Size(136, 16);
+            this.lblTotalCustomers.TabIndex = 55;
+            this.lblTotalCustomers.Text = "Tổng số khách hàng";
             // 
             // xuiSegmentKH
             // 
@@ -291,6 +295,7 @@ namespace DoAnPBL3
             this.xuiSegmentKH.SelectedIndex = 0;
             this.xuiSegmentKH.Size = new System.Drawing.Size(314, 34);
             this.xuiSegmentKH.TabIndex = 50;
+            this.xuiSegmentKH.Click += new System.EventHandler(this.XuiSegmentKH_Click);
             // 
             // guna2Elipse1
             // 
@@ -300,32 +305,112 @@ namespace DoAnPBL3
             // guna2Elipse2
             // 
             this.guna2Elipse2.BorderRadius = 5;
-            this.guna2Elipse2.TargetControl = this.btnAddKH;
             // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.btnAddKH);
+            this.panel1.Controls.Add(this.btnHDKH);
             this.panel1.Location = new System.Drawing.Point(832, 169);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(143, 100);
+            this.panel1.Size = new System.Drawing.Size(143, 51);
             this.panel1.TabIndex = 64;
+            // 
+            // btnHDKH
+            // 
+            this.btnHDKH.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnHDKH.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnHDKH.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHDKH.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
+            this.btnHDKH.FlatAppearance.BorderSize = 0;
+            this.btnHDKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHDKH.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHDKH.ForeColor = System.Drawing.Color.White;
+            this.btnHDKH.IconChar = FontAwesome.Sharp.IconChar.DollarSign;
+            this.btnHDKH.IconColor = System.Drawing.Color.White;
+            this.btnHDKH.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnHDKH.IconSize = 30;
+            this.btnHDKH.Location = new System.Drawing.Point(5, 1);
+            this.btnHDKH.Name = "btnHDKH";
+            this.btnHDKH.Size = new System.Drawing.Size(142, 47);
+            this.btnHDKH.TabIndex = 65;
+            this.btnHDKH.Text = " Hóa đơn khách hàng";
+            this.btnHDKH.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnHDKH.UseVisualStyleBackColor = false;
+            this.btnHDKH.Click += new System.EventHandler(this.BtnHDKH_Click);
+            this.btnHDKH.MouseEnter += new System.EventHandler(this.BtnHDKH_MouseEnter);
+            this.btnHDKH.MouseLeave += new System.EventHandler(this.BtnHDKH_MouseLeave);
+            // 
+            // panelHeader
+            // 
+            this.panelHeader.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(57)))), ((int)(((byte)(80)))));
+            this.panelHeader.Controls.Add(this.lblTotalMaleCustomers);
+            this.panelHeader.Controls.Add(this.lblTotalCustomers);
+            this.panelHeader.Controls.Add(this.pictureBox1);
+            this.panelHeader.Controls.Add(this.totalCustomers);
+            this.panelHeader.Controls.Add(this.pictureBox3);
+            this.panelHeader.Controls.Add(this.totalMaleCustomers);
+            this.panelHeader.Controls.Add(this.pictureBox2);
+            this.panelHeader.Controls.Add(this.lblTotalFemaleCustomers);
+            this.panelHeader.Controls.Add(this.totalFemaleCustomers);
+            this.panelHeader.Location = new System.Drawing.Point(12, 12);
+            this.panelHeader.Name = "panelHeader";
+            this.panelHeader.Size = new System.Drawing.Size(957, 95);
+            this.panelHeader.TabIndex = 65;
+            // 
+            // ID_Customer
+            // 
+            this.ID_Customer.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ID_Customer.DataPropertyName = "ID_Customer";
+            this.ID_Customer.FillWeight = 55.83756F;
+            this.ID_Customer.HeaderText = "ID";
+            this.ID_Customer.Name = "ID_Customer";
+            this.ID_Customer.ReadOnly = true;
+            // 
+            // FullNameCustomer
+            // 
+            this.FullNameCustomer.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.FullNameCustomer.DataPropertyName = "FullNameCustomer";
+            this.FullNameCustomer.FillWeight = 111.0406F;
+            this.FullNameCustomer.HeaderText = "Họ và tên";
+            this.FullNameCustomer.Name = "FullNameCustomer";
+            this.FullNameCustomer.ReadOnly = true;
+            // 
+            // Gender
+            // 
+            this.Gender.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Gender.DataPropertyName = "Gender";
+            this.Gender.FillWeight = 111.0406F;
+            this.Gender.HeaderText = "Giới tính";
+            this.Gender.Name = "Gender";
+            this.Gender.ReadOnly = true;
+            // 
+            // Phone
+            // 
+            this.Phone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Phone.DataPropertyName = "Phone";
+            this.Phone.FillWeight = 111.0406F;
+            this.Phone.HeaderText = "Số điện thoại";
+            this.Phone.Name = "Phone";
+            this.Phone.ReadOnly = true;
+            // 
+            // Address
+            // 
+            this.Address.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Address.DataPropertyName = "Address";
+            this.Address.FillWeight = 111.0406F;
+            this.Address.HeaderText = "Địa chỉ";
+            this.Address.Name = "Address";
+            this.Address.ReadOnly = true;
             // 
             // FormQLKHNV
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(53)))), ((int)(((byte)(70)))));
             this.ClientSize = new System.Drawing.Size(980, 585);
+            this.Controls.Add(this.panelHeader);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnTKKH);
             this.Controls.Add(this.rjtbTKKH);
             this.Controls.Add(this.xuiSegmentKH);
@@ -334,33 +419,41 @@ namespace DoAnPBL3
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormQLKHNV";
             this.Text = "Quản lý khách hàng";
+            this.Load += new System.EventHandler(this.FormQLKH_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvQLKHNV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.panelHeader.ResumeLayout(false);
+            this.panelHeader.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private FontAwesome.Sharp.IconButton btnAddKH;
         private RJTextBox rjtbTKKH;
         private System.Windows.Forms.DataGridView dgvQLKHNV;
         private Guna.UI2.WinForms.Guna2Button btnTKKH;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label totalFemaleCustomers;
+        private System.Windows.Forms.Label lblTotalFemaleCustomers;
+        private System.Windows.Forms.Label totalMaleCustomers;
+        private System.Windows.Forms.Label lblTotalMaleCustomers;
+        private System.Windows.Forms.Label totalCustomers;
+        private System.Windows.Forms.Label lblTotalCustomers;
         private XanderUI.XUISegment xuiSegmentKH;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
         private System.Windows.Forms.Panel panel1;
+        private FontAwesome.Sharp.IconButton btnHDKH;
+        private System.Windows.Forms.Panel panelHeader;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID_Customer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FullNameCustomer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Gender;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Phone;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Address;
     }
 }

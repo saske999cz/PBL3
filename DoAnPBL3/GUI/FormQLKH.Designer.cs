@@ -55,6 +55,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.ID_Customer = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FullNameCustomer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -303,6 +304,7 @@
             this.dgvQLKH.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID_Customer,
             this.FullNameCustomer,
+            this.Gender,
             this.Phone,
             this.Address});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -399,6 +401,14 @@
             this.FullNameCustomer.Name = "FullNameCustomer";
             this.FullNameCustomer.ReadOnly = true;
             // 
+            // Gender
+            // 
+            this.Gender.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Gender.DataPropertyName = "Gender";
+            this.Gender.HeaderText = "Giới tính";
+            this.Gender.Name = "Gender";
+            this.Gender.ReadOnly = true;
+            // 
             // Phone
             // 
             this.Phone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -469,6 +479,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_Customer;
         private System.Windows.Forms.DataGridViewTextBoxColumn FullNameCustomer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Gender;
         private System.Windows.Forms.DataGridViewTextBoxColumn Phone;
         private System.Windows.Forms.DataGridViewTextBoxColumn Address;
     }

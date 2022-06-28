@@ -112,7 +112,7 @@ namespace DoAnPBL3
         private void BtnQLS_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color6);
-            OpenChildForm(new FormQLS(accountUsername, password));
+            OpenChildForm(new FormQLS(password));
         }
 
         private void BtnBS_Click(object sender, EventArgs e)

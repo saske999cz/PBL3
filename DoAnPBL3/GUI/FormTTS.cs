@@ -30,7 +30,6 @@ namespace DoAnPBL3
         private void ShowInfo(Book book)
         {
             string projectDirectory = Directory.GetParent(Environment.CurrentDirectory).Parent.FullName;
-            MessageBox.Show(book.ID_Genre.ToString());
             tbIDBook.Text = book.ID_Book;
             tbNameBook.Text = book.NameBook;
             tbPublishDate.Text = book.PublishDate.ToString("dd/MM/yyyy");

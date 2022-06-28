@@ -15,13 +15,11 @@ namespace DoAnPBL3
 {
     public partial class FormQLS : Form
     {
-        private readonly string accountUsername;
         private readonly string password;
 
-        public FormQLS(string accountUsername, string password)
+        public FormQLS(string password)
         {
             InitializeComponent();
-            this.accountUsername = accountUsername;
             this.password = password;
         }
 
@@ -61,9 +59,9 @@ namespace DoAnPBL3
 
         private void BtnAddSach_Click(object sender, EventArgs e)
         {
-            FormAddSach formAddSach = new FormAddSach(accountUsername, password);
+            FormAddSach formAddSach = new FormAddSach();
             formAddSach.RefreshData += new FormAddSach.LoadData(FormQLS_Load);
-            formAddSach.ShowDialog();
+            formAddSach.Show();
         }
 
         private void BtnSuaSach_Click(object sender, EventArgs e)
@@ -74,7 +72,7 @@ namespace DoAnPBL3
             {
                 FormSuaSach formSuaSach = new FormSuaSach(GetID_Book());
                 formSuaSach.RefreshData += new FormSuaSach.LoadData(FormQLS_Load);
-                formSuaSach.ShowDialog();
+                formSuaSach.Show();
             }
         }
 
@@ -88,7 +86,7 @@ namespace DoAnPBL3
                 DialogResult result = RJMessageBox.Show("Xác nhận xóa mặt hàng sách " + NameBook + "?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 if (result == DialogResult.Yes)
                 {
-                    FormIdentify formIdentify = new FormIdentify(accountUsername, password, GetID_Book());
+                    FormIdentify formIdentify = new FormIdentify("", password, GetID_Book());
                     formIdentify.RefreshData += new FormIdentify.LoadData(FormQLS_Load);
                     formIdentify.Show();
                 }

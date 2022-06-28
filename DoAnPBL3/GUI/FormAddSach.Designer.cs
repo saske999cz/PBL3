@@ -189,7 +189,6 @@ namespace DoAnPBL3
             this.tbAuthor.SelectedText = "";
             this.tbAuthor.Size = new System.Drawing.Size(390, 30);
             this.tbAuthor.TabIndex = 4;
-            this.tbAuthor.TextChanged += new System.EventHandler(this.TbAuthor_TextChanged);
             // 
             // tbQuantity
             // 

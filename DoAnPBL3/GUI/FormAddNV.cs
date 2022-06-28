@@ -364,7 +364,6 @@ namespace DoAnPBL3
                 }
                 else
                     Alert("Thêm thất bại. Vui lòng thử lại", Form_Alert.EnmType.Error);
-                Close();
             }
             else
             {
