@@ -201,7 +201,7 @@
     <Reference Include="System.Xml" />
     <Reference Include="WindowsBase" />
     <Reference Include="XanderUI">
-      <HintPath>..\..\..\Downloads\Compressed\XanderUI-master\XanderUI.dll</HintPath>
+      <HintPath>..\..\..\Downloads\XanderUI-master\XanderUI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

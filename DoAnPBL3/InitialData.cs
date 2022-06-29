@@ -68,6 +68,8 @@ namespace DoAnPBL3
                     Role = false, Avatar = pathEmployeeWoman},
                 new Account {Username = "lethihuyentrang", Password = "lethihuyentrang",
                     Role = false, Avatar = pathEmployeeWoman},
+                new Account {Username = "nguyentrongnghiaE0010", Password = "nguyentrongnghiaE0010",
+                    Role = true, Avatar = pathEmployeeMan},
             });
 
             context.Admins.AddRange(new Admin[]
@@ -174,6 +176,11 @@ namespace DoAnPBL3
                     DateOfBirth = new DateTime(2000, 01, 01), StartDate = new DateTime(2020, 01, 01), EndDate = null,
                     Gender = "Nữ", Phone = "0905000010", Id_Card = "201800010", Address = "Đà Nẵng",
                     Avatar = "Img\\GI\\keqing.png", AccountUsername = "lethihuyentrang"},
+
+                new Employee {ID_Employee = "E0010", FullNameEmployee = "Nguyễn Trọng Nghĩa", Email = "trongnghia161001@gmail.com",
+                    DateOfBirth = new DateTime(2000, 10, 16), StartDate = new DateTime(2021, 01, 01), EndDate = null,
+                    Gender = "Nam", Phone = "0347812458", Id_Card = "204789451", Address = "Quảng Nam",
+                    Avatar = "Img\\GI\\aether.png", AccountUsername = "nguyentrongnghiaE0010"},
             });
 
             context.Customers.AddRange(new Customer[]
@@ -486,124 +493,124 @@ namespace DoAnPBL3
 
             context.Orders.AddRange(new Order[]
             {
-                new Order {ID_Order = "HD0000", OrderDate = new DateTime(2022, 05, 28), TotalPrice = 66000,
+                new Order {ID_Order = "HD0000", OrderDate = new DateTime(2022, 05, 28, 07, 12, 24), TotalPrice = 66000,
                     ID_Customer = "KH0001", ID_Employee = "E0001"},
 
-                new Order {ID_Order = "HD0001", OrderDate = new DateTime(2022, 05, 28), TotalPrice = 22000,
+                new Order {ID_Order = "HD0001", OrderDate = new DateTime(2022, 05, 28, 07, 49, 04), TotalPrice = 22000,
                     ID_Customer = "KH0010", ID_Employee = "E0000"},
 
-                new Order {ID_Order = "HD0002", OrderDate = new DateTime(2022, 05, 28), TotalPrice = 22000,
+                new Order {ID_Order = "HD0002", OrderDate = new DateTime(2022, 05, 28, 08, 24, 32), TotalPrice = 22000,
                     ID_Customer = "KH0030", ID_Employee = "E0002"},
 
-                new Order {ID_Order = "HD0003", OrderDate = new DateTime(2022, 05, 29), TotalPrice = 44000,
+                new Order {ID_Order = "HD0003", OrderDate = new DateTime(2022, 05, 29, 14, 12, 05), TotalPrice = 44000,
                     ID_Customer = "KH0029", ID_Employee = "E0007"},
 
-                new Order {ID_Order = "HD0004", OrderDate = new DateTime(2022, 05, 29), TotalPrice = 66000,
+                new Order {ID_Order = "HD0004", OrderDate = new DateTime(2022, 05, 29, 14, 15, 51), TotalPrice = 66000,
                     ID_Customer = "KH0002", ID_Employee = "E0007"},
 
-                new Order {ID_Order = "HD0005", OrderDate = new DateTime(2022, 05, 29), TotalPrice = 44000,
+                new Order {ID_Order = "HD0005", OrderDate = new DateTime(2022, 05, 29, 15, 44, 18), TotalPrice = 44000,
                     ID_Customer = "KH0009", ID_Employee = "E0004"},
 
-                new Order {ID_Order = "HD0006", OrderDate = new DateTime(2022, 05, 29), TotalPrice = 44000,
+                new Order {ID_Order = "HD0006", OrderDate = new DateTime(2022, 05, 29, 16, 02, 27), TotalPrice = 44000,
                     ID_Customer = "KH0004", ID_Employee = "E0004"},
 
-                new Order {ID_Order = "HD0007", OrderDate = new DateTime(2022, 05, 29), TotalPrice = 66000,
+                new Order {ID_Order = "HD0007", OrderDate = new DateTime(2022, 05, 29, 17, 11, 22), TotalPrice = 66000,
                     ID_Customer = "KH0003", ID_Employee = "E0000"},
 
-                new Order {ID_Order = "HD0008", OrderDate = new DateTime(2022, 05, 29), TotalPrice = 44000,
+                new Order {ID_Order = "HD0008", OrderDate = new DateTime(2022, 05, 29, 20, 21, 29), TotalPrice = 44000,
                     ID_Customer = "KH0006", ID_Employee = "E0004"},
 
-                new Order {ID_Order = "HD0009", OrderDate = new DateTime(2022, 05, 30), TotalPrice = 88000,
+                new Order {ID_Order = "HD0009", OrderDate = new DateTime(2022, 05, 30, 07, 51, 22), TotalPrice = 88000,
                     ID_Customer = "KH0000", ID_Employee = "E0001"},
 
-                new Order {ID_Order = "HD0010", OrderDate = new DateTime(2022, 05, 30), TotalPrice = 88000,
+                new Order {ID_Order = "HD0010", OrderDate = new DateTime(2022, 05, 30, 08, 24, 44), TotalPrice = 88000,
                     ID_Customer = "KH0001", ID_Employee = "E0002"},
 
-                new Order {ID_Order = "HD0011", OrderDate = new DateTime(2022, 05, 30), TotalPrice = 110000,
+                new Order {ID_Order = "HD0011", OrderDate = new DateTime(2022, 05, 30, 09, 21, 51), TotalPrice = 110000,
                     ID_Customer = "KH0012", ID_Employee = "E0002"},
 
-                new Order {ID_Order = "HD0012", OrderDate = new DateTime(2022, 05, 30), TotalPrice = 66000,
+                new Order {ID_Order = "HD0012", OrderDate = new DateTime(2022, 05, 30, 10, 31, 29), TotalPrice = 66000,
                     ID_Customer = "KH0009", ID_Employee = "E0007"},
 
-                new Order {ID_Order = "HD0013", OrderDate = new DateTime(2022, 05, 31), TotalPrice = 110000,
+                new Order {ID_Order = "HD0013", OrderDate = new DateTime(2022, 05, 31, 07, 22, 17), TotalPrice = 110000,
                     ID_Customer = "KH0021", ID_Employee = "E0000"},
 
-                new Order {ID_Order = "HD0014", OrderDate = new DateTime(2022, 05, 31), TotalPrice = 16000,
+                new Order {ID_Order = "HD0014", OrderDate = new DateTime(2022, 05, 31, 08, 12, 39), TotalPrice = 16000,
                     ID_Customer = "KH0023", ID_Employee = "E0002"},
 
-                new Order {ID_Order = "HD0015", OrderDate = new DateTime(2022, 05, 31), TotalPrice = 22000,
+                new Order {ID_Order = "HD0015", OrderDate = new DateTime(2022, 05, 31, 08, 33, 32), TotalPrice = 22000,
                     ID_Customer = "KH0008", ID_Employee = "E0001"},
 
-                new Order {ID_Order = "HD0016", OrderDate = new DateTime(2022, 05, 31), TotalPrice = 22000,
+                new Order {ID_Order = "HD0016", OrderDate = new DateTime(2022, 05, 31, 09, 41, 26), TotalPrice = 22000,
                     ID_Customer = "KH0007", ID_Employee = "E0007"},
 
-                new Order {ID_Order = "HD0017", OrderDate = new DateTime(2022, 05, 31), TotalPrice = 22000,
+                new Order {ID_Order = "HD0017", OrderDate = new DateTime(2022, 05, 31, 14, 22, 55), TotalPrice = 22000,
                     ID_Customer = "KH0015", ID_Employee = "E0007"},
 
-                new Order {ID_Order = "HD0018", OrderDate = new DateTime(2022, 05, 31), TotalPrice = 30000,
+                new Order {ID_Order = "HD0018", OrderDate = new DateTime(2022, 05, 31, 15, 51, 44), TotalPrice = 30000,
                     ID_Customer = "KH0004", ID_Employee = "E0002"},
 
-                new Order {ID_Order = "HD0019", OrderDate = new DateTime(2022, 05, 31), TotalPrice = 30000,
+                new Order {ID_Order = "HD0019", OrderDate = new DateTime(2022, 05, 31, 15, 59, 07), TotalPrice = 30000,
                     ID_Customer = "KH0000", ID_Employee = "E0002"},
 
-                new Order {ID_Order = "HD0020", OrderDate = new DateTime(2022, 05, 31), TotalPrice = 16000,
+                new Order {ID_Order = "HD0020", OrderDate = new DateTime(2022, 05, 31, 16, 28, 02), TotalPrice = 16000,
                     ID_Customer = "KH0005", ID_Employee = "E0006"},
 
-                new Order {ID_Order = "HD0021", OrderDate = new DateTime(2022, 06, 01), TotalPrice = 16000,
+                new Order {ID_Order = "HD0021", OrderDate = new DateTime(2022, 06, 01, 06, 30, 30), TotalPrice = 16000,
                     ID_Customer = "KH0007", ID_Employee = "E0006"},
 
-                new Order {ID_Order = "HD0022", OrderDate = new DateTime(2022, 06, 01), TotalPrice = 16000,
+                new Order {ID_Order = "HD0022", OrderDate = new DateTime(2022, 06, 01, 07, 24, 51), TotalPrice = 16000,
                     ID_Customer = "KH0004", ID_Employee = "E0003"},
 
-                new Order {ID_Order = "HD0023", OrderDate = new DateTime(2022, 06, 01), TotalPrice = 22000,
+                new Order {ID_Order = "HD0023", OrderDate = new DateTime(2022, 06, 01, 08, 33, 39), TotalPrice = 22000,
                     ID_Customer = "KH0006", ID_Employee = "E0004"},
 
-                new Order {ID_Order = "HD0024", OrderDate = new DateTime(2022, 06, 01), TotalPrice = 16000,
+                new Order {ID_Order = "HD0024", OrderDate = new DateTime(2022, 06, 01, 09, 18, 41), TotalPrice = 16000,
                     ID_Customer = "KH0009", ID_Employee = "E0001"},
 
-                new Order {ID_Order = "HD0025", OrderDate = new DateTime(2022, 06, 01), TotalPrice = 22000,
+                new Order {ID_Order = "HD0025", OrderDate = new DateTime(2022, 06, 01, 12, 15, 21), TotalPrice = 22000,
                     ID_Customer = "KH0001", ID_Employee = "E0006"},
 
-                new Order {ID_Order = "HD0026", OrderDate = new DateTime(2022, 06, 02), TotalPrice = 60000,
+                new Order {ID_Order = "HD0026", OrderDate = new DateTime(2022, 06, 02, 11, 22, 23), TotalPrice = 60000,
                     ID_Customer = "KH0005", ID_Employee = "E0007"},
 
-                new Order {ID_Order = "HD0027", OrderDate = new DateTime(2022, 06, 02), TotalPrice = 60000,
+                new Order {ID_Order = "HD0027", OrderDate = new DateTime(2022, 06, 02, 13, 55, 22), TotalPrice = 60000,
                     ID_Customer = "KH0000", ID_Employee = "E0007"},
 
-                new Order {ID_Order = "HD0028", OrderDate = new DateTime(2022, 06, 02), TotalPrice = 52000,
+                new Order {ID_Order = "HD0028", OrderDate = new DateTime(2022, 06, 02, 15, 45, 29), TotalPrice = 52000,
                     ID_Customer = "KH0016", ID_Employee = "E0008"},
 
-                new Order {ID_Order = "HD0029", OrderDate = new DateTime(2022, 06, 02), TotalPrice = 24000,
+                new Order {ID_Order = "HD0029", OrderDate = new DateTime(2022, 06, 02, 21, 42, 41), TotalPrice = 24000,
                     ID_Customer = "KH0017", ID_Employee = "E0001"},
 
-                new Order {ID_Order = "HD0030", OrderDate = new DateTime(2022, 06, 03), TotalPrice = 24000,
+                new Order {ID_Order = "HD0030", OrderDate = new DateTime(2022, 06, 03, 07, 39, 41), TotalPrice = 24000,
                     ID_Customer = "KH0018", ID_Employee = "E0002"},
 
-                new Order {ID_Order = "HD0031", OrderDate = new DateTime(2022, 06, 03), TotalPrice = 22000,
+                new Order {ID_Order = "HD0031", OrderDate = new DateTime(2022, 06, 03, 07, 48, 12), TotalPrice = 22000,
                     ID_Customer = "KH0011", ID_Employee = "E0002"},
 
-                new Order {ID_Order = "HD0032", OrderDate = new DateTime(2022, 06, 03), TotalPrice = 20000,
+                new Order {ID_Order = "HD0032", OrderDate = new DateTime(2022, 06, 03, 08, 30, 42), TotalPrice = 20000,
                     ID_Customer = "KH0001", ID_Employee = "E0005"},
 
-                new Order {ID_Order = "HD0033", OrderDate = new DateTime(2022, 06, 03), TotalPrice = 24000,
+                new Order {ID_Order = "HD0033", OrderDate = new DateTime(2022, 06, 03, 08, 52, 44), TotalPrice = 24000,
                     ID_Customer = "KH0024", ID_Employee = "E0006"},
 
-                new Order {ID_Order = "HD0034", OrderDate = new DateTime(2022, 06, 03), TotalPrice = 44000,
+                new Order {ID_Order = "HD0034", OrderDate = new DateTime(2022, 06, 03, 10, 26, 29), TotalPrice = 44000,
                     ID_Customer = "KH0025", ID_Employee = "E0001"},
 
-                new Order {ID_Order = "HD0035", OrderDate = new DateTime(2022, 06, 03), TotalPrice = 20000,
+                new Order {ID_Order = "HD0035", OrderDate = new DateTime(2022, 06, 03, 12, 24, 11), TotalPrice = 20000,
                     ID_Customer = "KH0000", ID_Employee = "E0008"},
 
-                new Order {ID_Order = "HD0036", OrderDate = new DateTime(2022, 06, 04), TotalPrice = 20000,
+                new Order {ID_Order = "HD0036", OrderDate = new DateTime(2022, 06, 04, 00, 00, 00), TotalPrice = 20000,
                     ID_Customer = "KH0008", ID_Employee = "E0005"},
 
-                new Order {ID_Order = "HD0037", OrderDate = new DateTime(2022, 06, 04), TotalPrice = 20000,
+                new Order {ID_Order = "HD0037", OrderDate = new DateTime(2022, 06, 04, 00, 00, 00), TotalPrice = 20000,
                     ID_Customer = "KH0000", ID_Employee = "E0001"},
 
-                new Order {ID_Order = "HD0038", OrderDate = new DateTime(2022, 06, 04), TotalPrice = 22000,
+                new Order {ID_Order = "HD0038", OrderDate = new DateTime(2022, 06, 04, 00, 00, 00), TotalPrice = 22000,
                     ID_Customer = "KH0020", ID_Employee = "E0009"},
 
-                new Order {ID_Order = "HD0039", OrderDate = new DateTime(2022, 06, 04), TotalPrice = 110000,
+                new Order {ID_Order = "HD0039", OrderDate = new DateTime(2022, 06, 04, 00, 00, 00), TotalPrice = 110000,
                     ID_Customer = "KH0021", ID_Employee = "E0001"},
 
                 new Order {ID_Order = "HD0040", OrderDate = new DateTime(2022, 06, 05), TotalPrice = 20000,
@@ -655,379 +662,379 @@ namespace DoAnPBL3
                     ID_Customer = "KH0021", ID_Employee = "E0003"},
 
                 new Order {ID_Order = "HD0056", OrderDate = new DateTime(2022, 06, 08), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0007"},
+                    ID_Customer = "KH0027", ID_Employee = "E0007"},
 
                 new Order {ID_Order = "HD0057", OrderDate = new DateTime(2022, 06, 08), TotalPrice = 32000,
-                    ID_Customer = "KH0021", ID_Employee = "E0001"},
+                    ID_Customer = "KH0014", ID_Employee = "E0001"},
 
                 new Order {ID_Order = "HD0058", OrderDate = new DateTime(2022, 06, 08), TotalPrice = 60000,
-                    ID_Customer = "KH0021", ID_Employee = "E0009"},
+                    ID_Customer = "KH0008", ID_Employee = "E0009"},
 
                 new Order {ID_Order = "HD0059", OrderDate = new DateTime(2022, 06, 08), TotalPrice = 42000,
-                    ID_Customer = "KH0021", ID_Employee = "E0008"},
+                    ID_Customer = "KH0017", ID_Employee = "E0008"},
 
                 new Order {ID_Order = "HD0060", OrderDate = new DateTime(2022, 06, 08), TotalPrice = 44000,
-                    ID_Customer = "KH0021", ID_Employee = "E0010"},
+                    ID_Customer = "KH0025", ID_Employee = "E0010"},
 
                 new Order {ID_Order = "HD0061", OrderDate = new DateTime(2022, 06, 09), TotalPrice = 34000,
-                    ID_Customer = "KH0021", ID_Employee = "E0002"},
+                    ID_Customer = "KH0016", ID_Employee = "E0002"},
 
                 new Order {ID_Order = "HD0062", OrderDate = new DateTime(2022, 06, 09), TotalPrice = 44000,
-                    ID_Customer = "KH0021", ID_Employee = "E0006"},
+                    ID_Customer = "KH0009", ID_Employee = "E0006"},
 
                 new Order {ID_Order = "HD0063", OrderDate = new DateTime(2022, 06, 09), TotalPrice = 34000,
-                    ID_Customer = "KH0021", ID_Employee = "E0004"},
+                    ID_Customer = "KH0013", ID_Employee = "E0004"},
 
                 new Order {ID_Order = "HD0064", OrderDate = new DateTime(2022, 06, 09), TotalPrice = 38000,
-                    ID_Customer = "KH0021", ID_Employee = "E0003"},
+                    ID_Customer = "KH0020", ID_Employee = "E0003"},
 
                 new Order {ID_Order = "HD0065", OrderDate = new DateTime(2022, 06, 09), TotalPrice = 46000,
-                    ID_Customer = "KH0021", ID_Employee = "E0010"},
+                    ID_Customer = "KH0029", ID_Employee = "E0010"},
 
                 new Order {ID_Order = "HD0066", OrderDate = new DateTime(2022, 06, 10), TotalPrice = 44000,
-                    ID_Customer = "KH0021", ID_Employee = "E0001"},
+                    ID_Customer = "KH0028", ID_Employee = "E0001"},
 
                 new Order {ID_Order = "HD0067", OrderDate = new DateTime(2022, 06, 10), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0003"},
+                    ID_Customer = "KH0017", ID_Employee = "E0003"},
 
                 new Order {ID_Order = "HD0068", OrderDate = new DateTime(2022, 06, 10), TotalPrice = 38000,
-                    ID_Customer = "KH0021", ID_Employee = "E0008"},
+                    ID_Customer = "KH0014", ID_Employee = "E0008"},
 
                 new Order {ID_Order = "HD0069", OrderDate = new DateTime(2022, 06, 10), TotalPrice = 42000,
-                    ID_Customer = "KH0021", ID_Employee = "E0007"},
+                    ID_Customer = "KH0020", ID_Employee = "E0007"},
 
                 new Order {ID_Order = "HD0070", OrderDate = new DateTime(2022, 06, 10), TotalPrice = 72000,
                     ID_Customer = "KH0021", ID_Employee = "E0004"},
 
                 new Order {ID_Order = "HD0071", OrderDate = new DateTime(2022, 06, 11), TotalPrice = 16000,
-                    ID_Customer = "KH0021", ID_Employee = "E0008"},
+                    ID_Customer = "KH0022", ID_Employee = "E0008"},
 
                 new Order {ID_Order = "HD0072", OrderDate = new DateTime(2022, 06, 11), TotalPrice = 52000,
-                    ID_Customer = "KH0021", ID_Employee = "E0003"},
+                    ID_Customer = "KH0026", ID_Employee = "E0003"},
 
                 new Order {ID_Order = "HD0073", OrderDate = new DateTime(2022, 06, 11), TotalPrice = 20000,
-                    ID_Customer = "KH0021", ID_Employee = "E0009"},
+                    ID_Customer = "KH0011", ID_Employee = "E0009"},
 
                 new Order {ID_Order = "HD0074", OrderDate = new DateTime(2022, 06, 11), TotalPrice = 60000,
-                    ID_Customer = "KH0021", ID_Employee = "E0007"},
+                    ID_Customer = "KH0004", ID_Employee = "E0007"},
 
                 new Order {ID_Order = "HD0075", OrderDate = new DateTime(2022, 06, 11), TotalPrice = 66000,
-                    ID_Customer = "KH0021", ID_Employee = "E0004"},
+                    ID_Customer = "KH0018", ID_Employee = "E0004"},
 
                 new Order {ID_Order = "HD0076", OrderDate = new DateTime(2022, 06, 12), TotalPrice = 44000,
-                    ID_Customer = "KH0021", ID_Employee = "E0001"},
+                    ID_Customer = "KH0025", ID_Employee = "E0001"},
 
                 new Order {ID_Order = "HD0077", OrderDate = new DateTime(2022, 06, 12), TotalPrice = 18000,
-                    ID_Customer = "KH0021", ID_Employee = "E0004"},
+                    ID_Customer = "KH0019", ID_Employee = "E0004"},
 
                 new Order {ID_Order = "HD0078", OrderDate = new DateTime(2022, 06, 12), TotalPrice = 20000,
-                    ID_Customer = "KH0021", ID_Employee = "E0003"},
+                    ID_Customer = "KH0007", ID_Employee = "E0003"},
 
                 new Order {ID_Order = "HD0079", OrderDate = new DateTime(2022, 06, 12), TotalPrice = 36000,
-                    ID_Customer = "KH0021", ID_Employee = "E0010"},
+                    ID_Customer = "KH0023", ID_Employee = "E0010"},
 
                 new Order {ID_Order = "HD0080", OrderDate = new DateTime(2022, 06, 12), TotalPrice = 52000,
-                    ID_Customer = "KH0021", ID_Employee = "E0007"},
+                    ID_Customer = "KH0012", ID_Employee = "E0007"},
 
                 new Order {ID_Order = "HD0081", OrderDate = new DateTime(2022, 06, 13), TotalPrice = 34000,
-                    ID_Customer = "KH0021", ID_Employee = "E0006"},
+                    ID_Customer = "KH0017", ID_Employee = "E0006"},
 
                 new Order {ID_Order = "HD0082", OrderDate = new DateTime(2022, 06, 13), TotalPrice = 52000,
-                    ID_Customer = "KH0021", ID_Employee = "E0009"},
+                    ID_Customer = "KH0026", ID_Employee = "E0009"},
 
                 new Order {ID_Order = "HD0083", OrderDate = new DateTime(2022, 06, 13), TotalPrice = 16000,
-                    ID_Customer = "KH0021", ID_Employee = "E0004"},
+                    ID_Customer = "KH0017", ID_Employee = "E0004"},
 
-                new Order {ID_Order = "HD0084", OrderDate = new DateTime(2022, 06, 13), TotalPrice = 20000,
-                    ID_Customer = "KH0021", ID_Employee = "E0005"},
+                new Order {ID_Order = "HD0084", OrderDate = new DateTime(2022, 06, 13), TotalPrice = 24000,
+                    ID_Customer = "KH0009", ID_Employee = "E0005"},
 
-                new Order {ID_Order = "HD0085", OrderDate = new DateTime(2022, 06, 13), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0010"},
+                new Order {ID_Order = "HD0085", OrderDate = new DateTime(2022, 06, 13), TotalPrice = 36000,
+                    ID_Customer = "KH0022", ID_Employee = "E0010"},
 
-                new Order {ID_Order = "HD0086", OrderDate = new DateTime(2022, 06, 14), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0007"},
+                new Order {ID_Order = "HD0086", OrderDate = new DateTime(2022, 06, 14), TotalPrice = 44000,
+                    ID_Customer = "KH0011", ID_Employee = "E0007"},
 
-                new Order {ID_Order = "HD0087", OrderDate = new DateTime(2022, 06, 14), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0006"},
+                new Order {ID_Order = "HD0087", OrderDate = new DateTime(2022, 06, 14), TotalPrice = 38000,
+                    ID_Customer = "KH0027", ID_Employee = "E0006"},
 
-                new Order {ID_Order = "HD0088", OrderDate = new DateTime(2022, 06, 14), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0004"},
+                new Order {ID_Order = "HD0088", OrderDate = new DateTime(2022, 06, 14), TotalPrice = 20000,
+                    ID_Customer = "KH0014", ID_Employee = "E0004"},
 
                 new Order {ID_Order = "HD0089", OrderDate = new DateTime(2022, 06, 14), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0002"},
+                    ID_Customer = "KH0004", ID_Employee = "E0002"},
 
-                new Order {ID_Order = "HD0090", OrderDate = new DateTime(2022, 06, 14), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0003"},
+                new Order {ID_Order = "HD0090", OrderDate = new DateTime(2022, 06, 14), TotalPrice = 54000,
+                    ID_Customer = "KH0023", ID_Employee = "E0003"},
 
-                new Order {ID_Order = "HD0091", OrderDate = new DateTime(2022, 06, 15), TotalPrice = 24000,
+                new Order {ID_Order = "HD0091", OrderDate = new DateTime(2022, 06, 15), TotalPrice = 16000,
                     ID_Customer = "KH0021", ID_Employee = "E0004"},
 
-                new Order {ID_Order = "HD0092", OrderDate = new DateTime(2022, 06, 15), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0003"},
+                new Order {ID_Order = "HD0092", OrderDate = new DateTime(2022, 06, 15), TotalPrice = 42000,
+                    ID_Customer = "KH0028", ID_Employee = "E0003"},
 
-                new Order {ID_Order = "HD0093", OrderDate = new DateTime(2022, 06, 15), TotalPrice = 24000,
+                new Order {ID_Order = "HD0093", OrderDate = new DateTime(2022, 06, 15), TotalPrice = 34000,
+                    ID_Customer = "KH0019", ID_Employee = "E0008"},
+
+                new Order {ID_Order = "HD0094", OrderDate = new DateTime(2022, 06, 15), TotalPrice = 44000,
+                    ID_Customer = "KH0001", ID_Employee = "E0003"},
+
+                new Order {ID_Order = "HD0095", OrderDate = new DateTime(2022, 06, 15), TotalPrice = 38000,
+                    ID_Customer = "KH0029", ID_Employee = "E0001"},
+
+                new Order {ID_Order = "HD0096", OrderDate = new DateTime(2022, 06, 16), TotalPrice = 30000,
+                    ID_Customer = "KH0027", ID_Employee = "E0003"},
+
+                new Order {ID_Order = "HD0097", OrderDate = new DateTime(2022, 06, 16), TotalPrice = 44000,
+                    ID_Customer = "KH0016", ID_Employee = "E0008"},
+
+                new Order {ID_Order = "HD0098", OrderDate = new DateTime(2022, 06, 16), TotalPrice = 42000,
+                    ID_Customer = "KH0017", ID_Employee = "E0004"},
+
+                new Order {ID_Order = "HD0099", OrderDate = new DateTime(2022, 06, 16), TotalPrice = 52000,
+                    ID_Customer = "KH0007", ID_Employee = "E0003"},
+
+                new Order {ID_Order = "HD0100", OrderDate = new DateTime(2022, 06, 16), TotalPrice = 64000,
+                    ID_Customer = "KH0030", ID_Employee = "E0001"},
+
+                new Order {ID_Order = "HD0101", OrderDate = new DateTime(2022, 06, 17), TotalPrice = 44000,
+                    ID_Customer = "KH0024", ID_Employee = "E0006"},
+
+                new Order {ID_Order = "HD0102", OrderDate = new DateTime(2022, 06, 17), TotalPrice = 52000,
+                    ID_Customer = "KH0017", ID_Employee = "E0009"},
+
+                new Order {ID_Order = "HD0103", OrderDate = new DateTime(2022, 06, 17), TotalPrice = 34000,
+                    ID_Customer = "KH0004", ID_Employee = "E0006"},
+
+                new Order {ID_Order = "HD0104", OrderDate = new DateTime(2022, 06, 17), TotalPrice = 30000,
+                    ID_Customer = "KH0019", ID_Employee = "E0002"},
+
+                new Order {ID_Order = "HD0105", OrderDate = new DateTime(2022, 06, 17), TotalPrice = 64000,
+                    ID_Customer = "KH0016", ID_Employee = "E0009"},
+
+                new Order {ID_Order = "HD0106", OrderDate = new DateTime(2022, 06, 18), TotalPrice = 22000,
+                    ID_Customer = "KH0017", ID_Employee = "E0006"},
+
+                new Order {ID_Order = "HD0107", OrderDate = new DateTime(2022, 06, 18), TotalPrice = 22000,
+                    ID_Customer = "KH0015", ID_Employee = "E0008"},
+
+                new Order {ID_Order = "HD0108", OrderDate = new DateTime(2022, 06, 18), TotalPrice = 12000,
+                    ID_Customer = "KH0013", ID_Employee = "E0002"},
+
+                new Order {ID_Order = "HD0109", OrderDate = new DateTime(2022, 06, 18), TotalPrice = 22000,
+                    ID_Customer = "KH0029", ID_Employee = "E0005"},
+
+                new Order {ID_Order = "HD0110", OrderDate = new DateTime(2022, 06, 18), TotalPrice = 34000,
+                    ID_Customer = "KH0025", ID_Employee = "E0001"},
+
+                new Order {ID_Order = "HD0111", OrderDate = new DateTime(2022, 06, 19), TotalPrice = 52000,
                     ID_Customer = "KH0021", ID_Employee = "E0008"},
 
-                new Order {ID_Order = "HD0094", OrderDate = new DateTime(2022, 06, 15), TotalPrice = 24000,
+                new Order {ID_Order = "HD0112", OrderDate = new DateTime(2022, 06, 19), TotalPrice = 12000,
+                    ID_Customer = "KH0016", ID_Employee = "E0010"},
+
+                new Order {ID_Order = "HD0113", OrderDate = new DateTime(2022, 06, 19), TotalPrice = 42000,
+                    ID_Customer = "KH0017", ID_Employee = "E0004"},
+
+                new Order {ID_Order = "HD0114", OrderDate = new DateTime(2022, 06, 19), TotalPrice = 22000,
+                    ID_Customer = "KH0007", ID_Employee = "E0003"},
+
+                new Order {ID_Order = "HD0115", OrderDate = new DateTime(2022, 06, 19), TotalPrice = 60000,
+                    ID_Customer = "KH0030", ID_Employee = "E0001"},
+
+                new Order {ID_Order = "HD0116", OrderDate = new DateTime(2022, 06, 20), TotalPrice = 44000,
+                    ID_Customer = "KH0027", ID_Employee = "E0003"},
+
+                new Order {ID_Order = "HD0117", OrderDate = new DateTime(2022, 06, 20), TotalPrice = 52000,
+                    ID_Customer = "KH0016", ID_Employee = "E0008"},
+
+                new Order {ID_Order = "HD0118", OrderDate = new DateTime(2022, 06, 20), TotalPrice = 42000,
+                    ID_Customer = "KH0017", ID_Employee = "E0004"},
+
+                new Order {ID_Order = "HD0119", OrderDate = new DateTime(2022, 06, 20), TotalPrice = 52000,
+                    ID_Customer = "KH0007", ID_Employee = "E0003"},
+
+                new Order {ID_Order = "HD0120", OrderDate = new DateTime(2022, 06, 20), TotalPrice = 56000,
+                    ID_Customer = "KH0030", ID_Employee = "E0001"},
+
+                new Order {ID_Order = "HD0121", OrderDate = new DateTime(2022, 06, 21), TotalPrice = 30000,
+                    ID_Customer = "KH0018", ID_Employee = "E0009"},
+
+                new Order {ID_Order = "HD0122", OrderDate = new DateTime(2022, 06, 21), TotalPrice = 44000,
+                    ID_Customer = "KH0017", ID_Employee = "E0006"},
+
+                new Order {ID_Order = "HD0123", OrderDate = new DateTime(2022, 06, 21), TotalPrice = 82000,
+                    ID_Customer = "KH0024", ID_Employee = "E0001"},
+
+                new Order {ID_Order = "HD0124", OrderDate = new DateTime(2022, 06, 21), TotalPrice = 30000,
+                    ID_Customer = "KH0024", ID_Employee = "E0005"},
+
+                new Order {ID_Order = "HD0125", OrderDate = new DateTime(2022, 06, 22), TotalPrice = 44000,
+                    ID_Customer = "KH0014", ID_Employee = "E0009"},
+
+                new Order {ID_Order = "HD0126", OrderDate = new DateTime(2022, 06, 22), TotalPrice = 20000,
+                    ID_Customer = "KH0002", ID_Employee = "E0001"},
+
+                new Order {ID_Order = "HD0127", OrderDate = new DateTime(2022, 06, 22), TotalPrice = 52000,
+                    ID_Customer = "KH0010", ID_Employee = "E0003"},
+
+                new Order {ID_Order = "HD0128", OrderDate = new DateTime(2022, 06, 23), TotalPrice = 52000,
                     ID_Customer = "KH0021", ID_Employee = "E0003"},
 
-                new Order {ID_Order = "HD0095", OrderDate = new DateTime(2022, 06, 15), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0001"},
+                new Order {ID_Order = "HD0129", OrderDate = new DateTime(2022, 06, 23), TotalPrice = 30000,
+                    ID_Customer = "KH0011", ID_Employee = "E0008"},
 
-                new Order {ID_Order = "HD0096", OrderDate = new DateTime(2022, 06, 16), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0003"},
+                new Order {ID_Order = "HD0130", OrderDate = new DateTime(2022, 06, 23), TotalPrice = 42000,
+                    ID_Customer = "KH0017", ID_Employee = "E0004"},
 
-                new Order {ID_Order = "HD0097", OrderDate = new DateTime(2022, 06, 16), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0008"},
+                new Order {ID_Order = "HD0131", OrderDate = new DateTime(2022, 06, 23), TotalPrice = 38000,
+                    ID_Customer = "KH0003", ID_Employee = "E0007"},
 
-                new Order {ID_Order = "HD0098", OrderDate = new DateTime(2022, 06, 16), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0004"},
+                new Order {ID_Order = "HD0132", OrderDate = new DateTime(2022, 06, 23), TotalPrice = 64000,
+                    ID_Customer = "KH0030", ID_Employee = "E0001"},
 
-                new Order {ID_Order = "HD0099", OrderDate = new DateTime(2022, 06, 16), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0003"},
+                new Order {ID_Order = "HD0133", OrderDate = new DateTime(2022, 06, 23), TotalPrice = 90000,
+                    ID_Customer = "KH0022", ID_Employee = "E0010"},
 
-                new Order {ID_Order = "HD0100", OrderDate = new DateTime(2022, 06, 16), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0001"},
+                new Order {ID_Order = "HD0134", OrderDate = new DateTime(2022, 06, 24), TotalPrice = 30000,
+                    ID_Customer = "KH0025", ID_Employee = "E0010"},
 
-                new Order {ID_Order = "HD0101", OrderDate = new DateTime(2022, 06, 17), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0006"},
+                new Order {ID_Order = "HD0135", OrderDate = new DateTime(2022, 06, 24), TotalPrice = 44000,
+                    ID_Customer = "KH0015", ID_Employee = "E0002"},
 
-                new Order {ID_Order = "HD0102", OrderDate = new DateTime(2022, 06, 17), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0009"},
+                new Order {ID_Order = "HD0136", OrderDate = new DateTime(2022, 06, 25), TotalPrice = 22000,
+                    ID_Customer = "KH0027", ID_Employee = "E0003"},
 
-                new Order {ID_Order = "HD0103", OrderDate = new DateTime(2022, 06, 17), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0006"},
-
-                new Order {ID_Order = "HD0104", OrderDate = new DateTime(2022, 06, 17), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0002"},
-
-                new Order {ID_Order = "HD0105", OrderDate = new DateTime(2022, 06, 17), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0009"},
-
-                new Order {ID_Order = "HD0106", OrderDate = new DateTime(2022, 06, 18), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0006"},
-
-                new Order {ID_Order = "HD0107", OrderDate = new DateTime(2022, 06, 18), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0008"},
-
-                new Order {ID_Order = "HD0108", OrderDate = new DateTime(2022, 06, 18), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0002"},
-
-                new Order {ID_Order = "HD0109", OrderDate = new DateTime(2022, 06, 18), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0005"},
-
-                new Order {ID_Order = "HD0110", OrderDate = new DateTime(2022, 06, 18), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0001"},
-
-                new Order {ID_Order = "HD0111", OrderDate = new DateTime(2022, 06, 19), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0008"},
-
-                new Order {ID_Order = "HD0112", OrderDate = new DateTime(2022, 06, 19), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0010"},
-
-                new Order {ID_Order = "HD0113", OrderDate = new DateTime(2022, 06, 19), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0004"},
-
-                new Order {ID_Order = "HD0114", OrderDate = new DateTime(2022, 06, 19), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0003"},
-
-                new Order {ID_Order = "HD0115", OrderDate = new DateTime(2022, 06, 19), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0001"},
-
-                new Order {ID_Order = "HD0116", OrderDate = new DateTime(2022, 06, 20), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0003"},
-
-                new Order {ID_Order = "HD0117", OrderDate = new DateTime(2022, 06, 20), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0008"},
-
-                new Order {ID_Order = "HD0118", OrderDate = new DateTime(2022, 06, 20), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0004"},
-
-                new Order {ID_Order = "HD0119", OrderDate = new DateTime(2022, 06, 20), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0003"},
-
-                new Order {ID_Order = "HD0120", OrderDate = new DateTime(2022, 06, 20), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0001"},
-
-                new Order {ID_Order = "HD0121", OrderDate = new DateTime(2022, 06, 21), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0009"},
-
-                new Order {ID_Order = "HD0122", OrderDate = new DateTime(2022, 06, 21), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0006"},
-
-                new Order {ID_Order = "HD0123", OrderDate = new DateTime(2022, 06, 21), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0001"},
-
-                new Order {ID_Order = "HD0124", OrderDate = new DateTime(2022, 06, 21), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0005"},
-
-                new Order {ID_Order = "HD0125", OrderDate = new DateTime(2022, 06, 22), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0009"},
-
-                new Order {ID_Order = "HD0126", OrderDate = new DateTime(2022, 06, 22), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0001"},
-
-                new Order {ID_Order = "HD0127", OrderDate = new DateTime(2022, 06, 22), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0003"},
-
-                new Order {ID_Order = "HD0128", OrderDate = new DateTime(2022, 06, 23), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0003"},
-
-                new Order {ID_Order = "HD0129", OrderDate = new DateTime(2022, 06, 23), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0008"},
-
-                new Order {ID_Order = "HD0130", OrderDate = new DateTime(2022, 06, 23), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0004"},
-
-                new Order {ID_Order = "HD0131", OrderDate = new DateTime(2022, 06, 23), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0007"},
-
-                new Order {ID_Order = "HD0132", OrderDate = new DateTime(2022, 06, 23), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0001"},
-
-                new Order {ID_Order = "HD0133", OrderDate = new DateTime(2022, 06, 23), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0010"},
-
-                new Order {ID_Order = "HD0134", OrderDate = new DateTime(2022, 06, 24), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0010"},
-
-                new Order {ID_Order = "HD0135", OrderDate = new DateTime(2022, 06, 24), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0002"},
-
-                new Order {ID_Order = "HD0136", OrderDate = new DateTime(2022, 06, 25), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0003"},
-
-                new Order {ID_Order = "HD0137", OrderDate = new DateTime(2022, 06, 25), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0007"},
+                new Order {ID_Order = "HD0137", OrderDate = new DateTime(2022, 06, 25), TotalPrice = 30000,
+                    ID_Customer = "KH0011", ID_Employee = "E0007"},
 
                 new Order {ID_Order = "HD0138", OrderDate = new DateTime(2022, 06, 25), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0010"},
+                    ID_Customer = "KH0016", ID_Employee = "E0010"},
 
-                new Order {ID_Order = "HD0139", OrderDate = new DateTime(2022, 06, 25), TotalPrice = 24000,
+                new Order {ID_Order = "HD0139", OrderDate = new DateTime(2022, 06, 25), TotalPrice = 22000,
+                    ID_Customer = "KH0001", ID_Employee = "E0003"},
+
+                new Order {ID_Order = "HD0140", OrderDate = new DateTime(2022, 06, 25), TotalPrice = 42000,
+                    ID_Customer = "KH0030", ID_Employee = "E0001"},
+
+                new Order {ID_Order = "HD0141", OrderDate = new DateTime(2022, 06, 26), TotalPrice = 30000,
+                    ID_Customer = "KH0027", ID_Employee = "E0003"},
+
+                new Order {ID_Order = "HD0142", OrderDate = new DateTime(2022, 06, 26), TotalPrice = 22000,
+                    ID_Customer = "KH0016", ID_Employee = "E0008"},
+
+                new Order {ID_Order = "HD0143", OrderDate = new DateTime(2022, 06, 26), TotalPrice = 12000,
+                    ID_Customer = "KH0017", ID_Employee = "E0004"},
+
+                new Order {ID_Order = "HD0144", OrderDate = new DateTime(2022, 06, 26), TotalPrice = 52000,
+                    ID_Customer = "KH0007", ID_Employee = "E0003"},
+
+                new Order {ID_Order = "HD0145", OrderDate = new DateTime(2022, 06, 26), TotalPrice = 34000,
+                    ID_Customer = "KH0030", ID_Employee = "E0001"},
+
+                new Order {ID_Order = "HD0146", OrderDate = new DateTime(2022, 06, 27), TotalPrice = 8000,
+                    ID_Customer = "KH0023", ID_Employee = "E0009"},
+
+                new Order {ID_Order = "HD0147", OrderDate = new DateTime(2022, 06, 27), TotalPrice = 52000,
+                    ID_Customer = "KH0013", ID_Employee = "E0007"},
+
+                new Order {ID_Order = "HD0148", OrderDate = new DateTime(2022, 06, 27), TotalPrice = 12000,
+                    ID_Customer = "KH0014", ID_Employee = "E0005"},
+
+                new Order {ID_Order = "HD0149", OrderDate = new DateTime(2022, 06, 27), TotalPrice = 64000,
+                    ID_Customer = "KH0000", ID_Employee = "E0003"},
+
+                new Order {ID_Order = "HD0150", OrderDate = new DateTime(2022, 06, 27), TotalPrice = 12000,
+                    ID_Customer = "KH0004", ID_Employee = "E0005"},
+
+                new Order {ID_Order = "HD0151", OrderDate = new DateTime(2022, 06, 28), TotalPrice = 30000,
                     ID_Customer = "KH0021", ID_Employee = "E0003"},
 
-                new Order {ID_Order = "HD0140", OrderDate = new DateTime(2022, 06, 25), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0001"},
+                new Order {ID_Order = "HD0152", OrderDate = new DateTime(2022, 06, 28), TotalPrice = 44000,
+                    ID_Customer = "KH0016", ID_Employee = "E0008"},
 
-                new Order {ID_Order = "HD0141", OrderDate = new DateTime(2022, 06, 26), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0003"},
+                new Order {ID_Order = "HD0153", OrderDate = new DateTime(2022, 06, 28), TotalPrice = 42000,
+                    ID_Customer = "KH0017", ID_Employee = "E0004"},
 
-                new Order {ID_Order = "HD0142", OrderDate = new DateTime(2022, 06, 26), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0008"},
+                new Order {ID_Order = "HD0154", OrderDate = new DateTime(2022, 06, 28), TotalPrice = 30000,
+                    ID_Customer = "KH0007", ID_Employee = "E0003"},
 
-                new Order {ID_Order = "HD0143", OrderDate = new DateTime(2022, 06, 26), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0004"},
+                new Order {ID_Order = "HD0155", OrderDate = new DateTime(2022, 06, 28, 0, 0, 0), TotalPrice = 46000,
+                    ID_Customer = "KH0030", ID_Employee = "E0001"},
 
-                new Order {ID_Order = "HD0144", OrderDate = new DateTime(2022, 06, 26), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0003"},
+                new Order {ID_Order = "HD0156", OrderDate = new DateTime(2022, 06, 29, 7, 0, 0), TotalPrice = 12000,
+                    ID_Customer = "KH0029", ID_Employee = "E0010"},
 
-                new Order {ID_Order = "HD0145", OrderDate = new DateTime(2022, 06, 26), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0001"},
+                new Order {ID_Order = "HD0157", OrderDate = new DateTime(2022, 06, 29, 8, 0, 0), TotalPrice = 20000,
+                    ID_Customer = "KH0019", ID_Employee = "E0008"},
 
-                new Order {ID_Order = "HD0146", OrderDate = new DateTime(2022, 06, 27), TotalPrice = 24000,
+                new Order {ID_Order = "HD0158", OrderDate = new DateTime(2022, 06, 29, 9, 0, 0), TotalPrice = 30000,
+                    ID_Customer = "KH0012", ID_Employee = "E0006"},
+
+                new Order {ID_Order = "HD0159", OrderDate = new DateTime(2022, 06, 29, 10, 0, 0), TotalPrice = 38000,
+                    ID_Customer = "KH0002", ID_Employee = "E0004"},
+
+                new Order {ID_Order = "HD0160", OrderDate = new DateTime(2022, 06, 29, 11, 0, 0), TotalPrice = 28000,
+                    ID_Customer = "KH0022", ID_Employee = "E0002"},
+
+                new Order {ID_Order = "HD0161", OrderDate = new DateTime(2022, 06, 30), TotalPrice = 30000,
+                    ID_Customer = "KH0027", ID_Employee = "E0010"},
+
+                new Order {ID_Order = "HD0162", OrderDate = new DateTime(2022, 06, 30), TotalPrice = 30000,
+                    ID_Customer = "KH0007", ID_Employee = "E0005"},
+
+                new Order {ID_Order = "HD0163", OrderDate = new DateTime(2022, 06, 30), TotalPrice = 64000,
+                    ID_Customer = "KH0030", ID_Employee = "E0005"},
+
+                new Order {ID_Order = "HD0164", OrderDate = new DateTime(2022, 07, 01), TotalPrice = 16000,
+                    ID_Customer = "KH0028", ID_Employee = "E0003"},
+
+                new Order {ID_Order = "HD0165", OrderDate = new DateTime(2022, 07, 01), TotalPrice = 34000,
+                    ID_Customer = "KH0011", ID_Employee = "E0010"},
+
+                new Order {ID_Order = "HD0166", OrderDate = new DateTime(2022, 07, 01), TotalPrice = 12000,
+                    ID_Customer = "KH0017", ID_Employee = "E0004"},
+
+                new Order {ID_Order = "HD0167", OrderDate = new DateTime(2022, 07, 01), TotalPrice = 60000,
+                    ID_Customer = "KH0007", ID_Employee = "E0003"},
+
+                new Order {ID_Order = "HD0168", OrderDate = new DateTime(2022, 07, 01), TotalPrice = 22000,
+                    ID_Customer = "KH0029", ID_Employee = "E0005"},
+
+                new Order {ID_Order = "HD0169", OrderDate = new DateTime(2022, 07, 01), TotalPrice = 64000,
                     ID_Customer = "KH0021", ID_Employee = "E0009"},
 
-                new Order {ID_Order = "HD0147", OrderDate = new DateTime(2022, 06, 27), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0007"},
+                new Order {ID_Order = "HD0170", OrderDate = new DateTime(2022, 07, 01), TotalPrice = 50000,
+                    ID_Customer = "KH0030", ID_Employee = "E0010"},
 
-                new Order {ID_Order = "HD0148", OrderDate = new DateTime(2022, 06, 27), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0005"},
+                new Order {ID_Order = "HD0171", OrderDate = new DateTime(2022, 07, 02), TotalPrice = 60000,
+                    ID_Customer = "KH0025", ID_Employee = "E0003"},
 
-                new Order {ID_Order = "HD0149", OrderDate = new DateTime(2022, 06, 27), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0003"},
+                new Order {ID_Order = "HD0172", OrderDate = new DateTime(2022, 07, 02), TotalPrice = 44000,
+                    ID_Customer = "KH0016", ID_Employee = "E0008"},
 
-                new Order {ID_Order = "HD0150", OrderDate = new DateTime(2022, 06, 27), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0005"},
+                new Order {ID_Order = "HD0173", OrderDate = new DateTime(2022, 07, 02), TotalPrice = 42000,
+                    ID_Customer = "KH0018", ID_Employee = "E0006"},
 
-                new Order {ID_Order = "HD0151", OrderDate = new DateTime(2022, 06, 28), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0003"},
+                new Order {ID_Order = "HD0174", OrderDate = new DateTime(2022, 07, 02), TotalPrice = 22000,
+                    ID_Customer = "KH0001", ID_Employee = "E0003"},
 
-                new Order {ID_Order = "HD0152", OrderDate = new DateTime(2022, 06, 28), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0008"},
+                new Order {ID_Order = "HD0175", OrderDate = new DateTime(2022, 07, 02), TotalPrice = 52000,
+                    ID_Customer = "KH0030", ID_Employee = "E0005"},
 
-                new Order {ID_Order = "HD0153", OrderDate = new DateTime(2022, 06, 28), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0004"},
+                new Order {ID_Order = "HD0176", OrderDate = new DateTime(2022, 07, 02), TotalPrice = 36000,
+                    ID_Customer = "KH0022", ID_Employee = "E0006"},
 
-                new Order {ID_Order = "HD0154", OrderDate = new DateTime(2022, 06, 28), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0003"},
+                new Order {ID_Order = "HD0177", OrderDate = new DateTime(2022, 07, 02), TotalPrice = 44000,
+                    ID_Customer = "KH0024", ID_Employee = "E0010"},
 
-                new Order {ID_Order = "HD0155", OrderDate = new DateTime(2022, 06, 28), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0001"},
-
-                new Order {ID_Order = "HD0156", OrderDate = new DateTime(2022, 06, 29), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0010"},
-
-                new Order {ID_Order = "HD0157", OrderDate = new DateTime(2022, 06, 29), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0008"},
-
-                new Order {ID_Order = "HD0158", OrderDate = new DateTime(2022, 06, 29), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0006"},
-
-                new Order {ID_Order = "HD0159", OrderDate = new DateTime(2022, 06, 29), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0004"},
-
-                new Order {ID_Order = "HD0160", OrderDate = new DateTime(2022, 06, 29), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0002"},
-
-                new Order {ID_Order = "HD0161", OrderDate = new DateTime(2022, 06, 30), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0010"},
-
-                new Order {ID_Order = "HD0162", OrderDate = new DateTime(2022, 06, 30), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0005"},
-
-                new Order {ID_Order = "HD0163", OrderDate = new DateTime(2022, 06, 30), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0005"},
-
-                new Order {ID_Order = "HD0164", OrderDate = new DateTime(2022, 07, 01), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0003"},
-
-                new Order {ID_Order = "HD0165", OrderDate = new DateTime(2022, 07, 01), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0010"},
-
-                new Order {ID_Order = "HD0166", OrderDate = new DateTime(2022, 07, 01), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0004"},
-
-                new Order {ID_Order = "HD0167", OrderDate = new DateTime(2022, 07, 01), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0003"},
-
-                new Order {ID_Order = "HD0168", OrderDate = new DateTime(2022, 07, 01), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0005"},
-
-                new Order {ID_Order = "HD0169", OrderDate = new DateTime(2022, 07, 01), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0009"},
-
-                new Order {ID_Order = "HD0170", OrderDate = new DateTime(2022, 07, 01), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0010"},
-
-                new Order {ID_Order = "HD0171", OrderDate = new DateTime(2022, 07, 02), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0003"},
-
-                new Order {ID_Order = "HD0172", OrderDate = new DateTime(2022, 07, 02), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0008"},
-
-                new Order {ID_Order = "HD0173", OrderDate = new DateTime(2022, 07, 02), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0006"},
-
-                new Order {ID_Order = "HD0174", OrderDate = new DateTime(2022, 07, 02), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0003"},
-
-                new Order {ID_Order = "HD0175", OrderDate = new DateTime(2022, 07, 02), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0005"},
-
-                new Order {ID_Order = "HD0176", OrderDate = new DateTime(2022, 07, 02), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0006"},
-
-                new Order {ID_Order = "HD0177", OrderDate = new DateTime(2022, 07, 02), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0010"},
-
-                new Order {ID_Order = "HD0178", OrderDate = new DateTime(2022, 07, 02), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0009"},
+                new Order {ID_Order = "HD0178", OrderDate = new DateTime(2022, 07, 02), TotalPrice = 16000,
+                    ID_Customer = "KH0026", ID_Employee = "E0009"},
 
                 new Order {ID_Order = "HD0179", OrderDate = new DateTime(2022, 07, 03), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0006"},
+                    ID_Customer = "KH0028", ID_Employee = "E0006"},
 
-                new Order {ID_Order = "HD0180", OrderDate = new DateTime(2022, 07, 03), TotalPrice = 24000,
-                    ID_Customer = "KH0021", ID_Employee = "E0008"},
+                new Order {ID_Order = "HD0180", OrderDate = new DateTime(2022, 07, 03), TotalPrice = 94000,
+                    ID_Customer = "KH0013 ", ID_Employee = "E0008"},
             });
 
             context.OrderDetails.AddRange(new OrderDetail[]
@@ -1295,6 +1302,647 @@ namespace DoAnPBL3
                     UnitPrice = 8000, Quantity = 2, TotalAmount = 16000},
                 new OrderDetail {ID_Order = "HD0055", ID_Book = "B0026", NameBook = "Hình học 12",
                     UnitPrice = 8000, Quantity = 1, TotalAmount = 8000},
+
+                new OrderDetail {ID_Order = "HD0056", ID_Book = "B0032", NameBook = "Địa lí 12",
+                    UnitPrice = 12000, Quantity = 1, TotalAmount = 12000},
+                new OrderDetail {ID_Order = "HD0056", ID_Book = "B0033", NameBook = "Lịch sử 12",
+                    UnitPrice = 12000, Quantity = 1, TotalAmount = 12000},
+
+                new OrderDetail {ID_Order = "HD0057", ID_Book = "B0024", NameBook = "One Punch Man tập 25",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+                new OrderDetail {ID_Order = "HD0057", ID_Book = "B0027", NameBook = "Ngữ Văn 12 tập 1",
+                    UnitPrice = 10000, Quantity = 1, TotalAmount = 10000},
+
+                new OrderDetail {ID_Order = "HD0058", ID_Book = "B0035", NameBook = "Tiếng anh thí điểm 12 tập 1",
+                    UnitPrice = 30000, Quantity = 1, TotalAmount = 30000},
+                new OrderDetail {ID_Order = "HD0058", ID_Book = "B0036", NameBook = "Tiếng anh thí điểm 12 tập 2",
+                    UnitPrice = 30000, Quantity = 1, TotalAmount = 30000},
+
+                new OrderDetail {ID_Order = "HD0059", ID_Book = "B0033", NameBook = "Lịch sử 12",
+                    UnitPrice = 12000, Quantity = 1, TotalAmount = 12000},
+                new OrderDetail {ID_Order = "HD0059", ID_Book = "B0035", NameBook = "Tiếng anh thí điểm 12 tập 1",
+                    UnitPrice = 30000, Quantity = 1, TotalAmount = 30000},
+
+                new OrderDetail {ID_Order = "HD0060", ID_Book = "B0010", NameBook = "One Punch Man tập 11",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+                new OrderDetail {ID_Order = "HD0060", ID_Book = "B0011", NameBook = "One Punch Man tập 12",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+
+                new OrderDetail {ID_Order = "HD0061", ID_Book = "B0019", NameBook = "One Punch Man tập 20",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+                new OrderDetail {ID_Order = "HD0061", ID_Book = "B0032", NameBook = "Địa lí 12",
+                    UnitPrice = 12000, Quantity = 1, TotalAmount = 12000},
+
+                new OrderDetail {ID_Order = "HD0062", ID_Book = "B0016", NameBook = "One Punch Man tập 17",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+                new OrderDetail {ID_Order = "HD0062", ID_Book = "B0024", NameBook = "One Punch Man tập 25",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+
+                new OrderDetail {ID_Order = "HD0063", ID_Book = "B0013", NameBook = "One Punch Man tập 14",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+                new OrderDetail {ID_Order = "HD0063", ID_Book = "B0029", NameBook = "Vật lý 12",
+                    UnitPrice = 12000, Quantity = 1, TotalAmount = 12000},
+
+                new OrderDetail {ID_Order = "HD0064", ID_Book = "B0026", NameBook = "Hình học 12",
+                    UnitPrice = 8000, Quantity = 1, TotalAmount = 8000},
+                new OrderDetail {ID_Order = "HD0064", ID_Book = "B0035", NameBook = "Tiếng anh thí điểm 12 tập 1",
+                    UnitPrice = 30000, Quantity = 1, TotalAmount = 30000},
+
+                new OrderDetail {ID_Order = "HD0065", ID_Book = "B0017", NameBook = "One Punch Man tập 18",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+                new OrderDetail {ID_Order = "HD0065", ID_Book = "B0031", NameBook = "Sinh học 12",
+                    UnitPrice = 12000, Quantity = 2, TotalAmount = 24000},
+
+                new OrderDetail {ID_Order = "HD0066", ID_Book = "B0012", NameBook = "One Punch Man tập 13",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+                new OrderDetail {ID_Order = "HD0066", ID_Book = "B0021", NameBook = "One Punch Man tập 22",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+
+                new OrderDetail {ID_Order = "HD0067", ID_Book = "B0030", NameBook = "Hóa học 12",
+                    UnitPrice = 12000, Quantity = 1, TotalAmount = 12000},
+                new OrderDetail {ID_Order = "HD0067", ID_Book = "B0031", NameBook = "Sinh học 12",
+                    UnitPrice = 12000, Quantity = 1, TotalAmount = 12000},
+
+                new OrderDetail {ID_Order = "HD0068", ID_Book = "B0025", NameBook = "Giải tích 12",
+                    UnitPrice = 8000, Quantity = 1, TotalAmount = 8000},
+                new OrderDetail {ID_Order = "HD0068", ID_Book = "B0035", NameBook = "Tiếng anh thí điểm 12 tập 1",
+                    UnitPrice = 30000, Quantity = 1, TotalAmount = 30000},
+
+                new OrderDetail {ID_Order = "HD0069", ID_Book = "B0033", NameBook = "Lịch sử 12",
+                    UnitPrice = 12000, Quantity = 1, TotalAmount = 12000},
+                new OrderDetail {ID_Order = "HD0069", ID_Book = "B0036", NameBook = "Tiếng anh thí điểm 12 tập 2",
+                    UnitPrice = 30000, Quantity = 1, TotalAmount = 30000},
+
+                new OrderDetail {ID_Order = "HD0070", ID_Book = "B0034", NameBook = "Tiếng anh 12",
+                    UnitPrice = 12000, Quantity = 1, TotalAmount = 12000},
+                new OrderDetail {ID_Order = "HD0070", ID_Book = "B0035", NameBook = "Tiếng anh thí điểm 12 tập 1",
+                    UnitPrice = 30000, Quantity = 1, TotalAmount = 30000},
+                new OrderDetail {ID_Order = "HD0070", ID_Book = "B0036", NameBook = "Tiếng anh thí điểm 12 tập 2",
+                    UnitPrice = 30000, Quantity = 1, TotalAmount = 30000},
+
+                new OrderDetail {ID_Order = "HD0071", ID_Book = "B0025", NameBook = "Giải tích 12",
+                    UnitPrice = 8000, Quantity = 1, TotalAmount = 8000},
+                new OrderDetail {ID_Order = "HD0071", ID_Book = "B0026", NameBook = "Hình học 12",
+                    UnitPrice = 8000, Quantity = 1, TotalAmount = 8000},
+
+                new OrderDetail {ID_Order = "HD0072", ID_Book = "B0000", NameBook = "One Punch Man tập 1",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+                new OrderDetail {ID_Order = "HD0072", ID_Book = "B0035", NameBook = "Tiếng anh thí điểm 12 tập 1",
+                    UnitPrice = 30000, Quantity = 1, TotalAmount = 30000},
+
+                new OrderDetail {ID_Order = "HD0073", ID_Book = "B0027", NameBook = "Ngữ Văn 12 tập 1",
+                    UnitPrice = 10000, Quantity = 1, TotalAmount = 10000},
+                new OrderDetail {ID_Order = "HD0073", ID_Book = "B0028", NameBook = "Ngữ Văn 12 tập 2",
+                    UnitPrice = 10000, Quantity = 1, TotalAmount = 10000},
+
+                new OrderDetail {ID_Order = "HD0074", ID_Book = "B0035", NameBook = "Tiếng anh thí điểm 12 tập 1",
+                    UnitPrice = 30000, Quantity = 1, TotalAmount = 30000},
+                new OrderDetail {ID_Order = "HD0074", ID_Book = "B0036", NameBook = "Tiếng anh thí điểm 12 tập 2",
+                    UnitPrice = 30000, Quantity = 1, TotalAmount = 30000},
+
+                new OrderDetail {ID_Order = "HD0075", ID_Book = "B0001", NameBook = "One Punch Man tập 1",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+                new OrderDetail {ID_Order = "HD0075", ID_Book = "B0002", NameBook = "Tiếng anh thí điểm 12 tập 1",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+                new OrderDetail {ID_Order = "HD0075", ID_Book = "B0003", NameBook = "Tiếng anh thí điểm 12 tập 1",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+
+                new OrderDetail {ID_Order = "HD0076", ID_Book = "B0014", NameBook = "One Punch Man tập 15",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+                new OrderDetail {ID_Order = "HD0076", ID_Book = "B0015", NameBook = "One Punch Man tập 16",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+
+                new OrderDetail {ID_Order = "HD0077", ID_Book = "B0025", NameBook = "Giải tích 12",
+                    UnitPrice = 8000, Quantity = 1, TotalAmount = 8000},
+                new OrderDetail {ID_Order = "HD0077", ID_Book = "B0028", NameBook = "Ngữ Văn 12 tập 2",
+                    UnitPrice = 10000, Quantity = 1, TotalAmount = 10000},
+
+                new OrderDetail {ID_Order = "HD0078", ID_Book = "B0026", NameBook = "Hình học 12",
+                    UnitPrice = 8000, Quantity = 1, TotalAmount = 8000},
+                new OrderDetail {ID_Order = "HD0078", ID_Book = "B0034", NameBook = "Tiếng anh 12",
+                    UnitPrice = 12000, Quantity = 1, TotalAmount = 12000},
+
+                new OrderDetail {ID_Order = "HD0079", ID_Book = "B0029", NameBook = "Vật lý 12",
+                    UnitPrice = 12000, Quantity = 1, TotalAmount = 12000},
+                new OrderDetail {ID_Order = "HD0079", ID_Book = "B0030", NameBook = "Hóa học 12",
+                    UnitPrice = 12000, Quantity = 1, TotalAmount = 12000},
+                new OrderDetail {ID_Order = "HD0079", ID_Book = "B0031", NameBook = "Sinh học 12",
+                    UnitPrice = 12000, Quantity = 1, TotalAmount = 12000},
+
+                new OrderDetail {ID_Order = "HD0080", ID_Book = "B0024", NameBook = "One Punch Man tập 25",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+                new OrderDetail {ID_Order = "HD0080", ID_Book = "B0035", NameBook = "Tiếng anh thí điểm 12 tập 1",
+                    UnitPrice = 30000, Quantity = 1, TotalAmount = 30000},
+
+                new OrderDetail {ID_Order = "HD0081", ID_Book = "B0016", NameBook = "One Punch Man tập 17",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+                new OrderDetail {ID_Order = "HD0081", ID_Book = "B0034", NameBook = "Tiếng anh 12",
+                    UnitPrice = 12000, Quantity = 1, TotalAmount = 12000},
+
+                new OrderDetail {ID_Order = "HD0082", ID_Book = "B0004", NameBook = "One Punch Man tập 5",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+                new OrderDetail {ID_Order = "HD0082", ID_Book = "B0035", NameBook = "Tiếng anh thí điểm 12 tập 1",
+                    UnitPrice = 30000, Quantity = 1, TotalAmount = 30000},
+
+                new OrderDetail {ID_Order = "HD0083", ID_Book = "B0025", NameBook = "Giải tích 12",
+                    UnitPrice = 8000, Quantity = 1, TotalAmount = 8000},
+                new OrderDetail {ID_Order = "HD0083", ID_Book = "B0026", NameBook = "Hình học 12",
+                    UnitPrice = 8000, Quantity = 1, TotalAmount = 8000},
+
+                new OrderDetail {ID_Order = "HD0084", ID_Book = "B0032", NameBook = "Địa lí 12",
+                    UnitPrice = 12000, Quantity = 1, TotalAmount = 12000},
+                new OrderDetail {ID_Order = "HD0084", ID_Book = "B0033", NameBook = "Lịch sử 12",
+                    UnitPrice = 12000, Quantity = 1, TotalAmount = 12000},
+
+                new OrderDetail {ID_Order = "HD0085", ID_Book = "B0029", NameBook = "Vật lý 12",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+                new OrderDetail {ID_Order = "HD0085", ID_Book = "B0030", NameBook = "Hóa học 12",
+                    UnitPrice = 12000, Quantity = 1, TotalAmount = 12000},
+                new OrderDetail {ID_Order = "HD0085", ID_Book = "B0031", NameBook = "Sinh học 12",
+                    UnitPrice = 12000, Quantity = 1, TotalAmount = 12000},
+
+                new OrderDetail {ID_Order = "HD0086", ID_Book = "B0005", NameBook = "One Punch Man tập 6",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+                new OrderDetail {ID_Order = "HD0086", ID_Book = "B0016", NameBook = "One Punch Man tập 17",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+
+                new OrderDetail {ID_Order = "HD0087", ID_Book = "B0025", NameBook = "Giải tích 12",
+                    UnitPrice = 8000, Quantity = 1, TotalAmount = 8000},
+                new OrderDetail {ID_Order = "HD0087", ID_Book = "B0035", NameBook = "Tiếng anh thí điểm 12 tập 1",
+                    UnitPrice = 30000, Quantity = 1, TotalAmount = 30000},
+
+                new OrderDetail {ID_Order = "HD0088", ID_Book = "B0026", NameBook = "Hình học 12",
+                    UnitPrice = 8000, Quantity = 1, TotalAmount = 8000},
+                new OrderDetail {ID_Order = "HD0088", ID_Book = "B0032", NameBook = "Địa lí 12",
+                    UnitPrice = 12000, Quantity = 1, TotalAmount = 12000},
+
+                new OrderDetail {ID_Order = "HD0089", ID_Book = "B0032", NameBook = "Địa lí 12",
+                    UnitPrice = 12000, Quantity = 1, TotalAmount = 12000},
+                new OrderDetail {ID_Order = "HD0089", ID_Book = "B0033", NameBook = "Lịch sử 12",
+                    UnitPrice = 12000, Quantity = 1, TotalAmount = 12000},
+
+                new OrderDetail {ID_Order = "HD0090", ID_Book = "B0029", NameBook = "Vật lý 12",
+                    UnitPrice = 12000, Quantity = 1, TotalAmount = 12000},
+                new OrderDetail {ID_Order = "HD0090", ID_Book = "B0030", NameBook = "Hóa học 12",
+                    UnitPrice = 12000, Quantity = 1, TotalAmount = 12000},
+                new OrderDetail {ID_Order = "HD0090", ID_Book = "B0036", NameBook = "Tiếng anh thí điểm 12 tập 2",
+                    UnitPrice = 30000, Quantity = 1, TotalAmount = 30000},
+
+                new OrderDetail {ID_Order = "HD0091", ID_Book = "B0025", NameBook = "Giải tích 12",
+                    UnitPrice = 8000, Quantity = 1, TotalAmount = 8000},
+                new OrderDetail {ID_Order = "HD0091", ID_Book = "B0026", NameBook = "Hình học 12",
+                    UnitPrice = 8000, Quantity = 1, TotalAmount = 8000},
+
+                new OrderDetail {ID_Order = "HD0092", ID_Book = "B0034", NameBook = "Tiếng anh 12",
+                    UnitPrice = 12000, Quantity = 1, TotalAmount = 12000},
+                new OrderDetail {ID_Order = "HD0092", ID_Book = "B0035", NameBook = "Tiếng anh thí điểm 12 tập 1",
+                    UnitPrice = 30000, Quantity = 1, TotalAmount = 30000},
+
+                new OrderDetail {ID_Order = "HD0093", ID_Book = "B0004", NameBook = "One Punch Man tập 5",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+                new OrderDetail {ID_Order = "HD0093", ID_Book = "B0031", NameBook = "Sinh học 12",
+                    UnitPrice = 12000, Quantity = 1, TotalAmount = 12000},
+
+                new OrderDetail {ID_Order = "HD0094", ID_Book = "B0023", NameBook = "One Punch Man tập 24",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+                new OrderDetail {ID_Order = "HD0094", ID_Book = "B0024", NameBook = "One Punch Man tập 25",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+
+                new OrderDetail {ID_Order = "HD0095", ID_Book = "B0000", NameBook = "One Punch Man tập 1",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+                new OrderDetail {ID_Order = "HD0095", ID_Book = "B0025", NameBook = "Giải tích 12",
+                    UnitPrice = 8000, Quantity = 1, TotalAmount = 8000},
+                new OrderDetail {ID_Order = "HD0095", ID_Book = "B0026", NameBook = "Hình học 12",
+                    UnitPrice = 8000, Quantity = 1, TotalAmount = 8000},
+
+                new OrderDetail {ID_Order = "HD0096", ID_Book = "B0010", NameBook = "One Punch Man tập 11",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+                new OrderDetail {ID_Order = "HD0096", ID_Book = "B0026", NameBook = "Hình học 12",
+                    UnitPrice = 8000, Quantity = 1, TotalAmount = 8000},
+
+                new OrderDetail {ID_Order = "HD0097", ID_Book = "B0013", NameBook = "One Punch Man tập 14",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+                new OrderDetail {ID_Order = "HD0097", ID_Book = "B0015", NameBook = "One Punch Man tập 16",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+
+                new OrderDetail {ID_Order = "HD0098", ID_Book = "B0030", NameBook = "Hóa học 12",
+                    UnitPrice = 12000, Quantity = 1, TotalAmount = 12000},
+                new OrderDetail {ID_Order = "HD0098", ID_Book = "B0035", NameBook = "Tiếng anh thí điểm 12 tập 1",
+                    UnitPrice = 30000, Quantity = 1, TotalAmount = 30000},
+
+                new OrderDetail {ID_Order = "HD0099", ID_Book = "B0009", NameBook = "One Punch Man tập 10",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+                new OrderDetail {ID_Order = "HD0099", ID_Book = "B0035", NameBook = "Tiếng anh thí điểm 12 tập 1",
+                    UnitPrice = 30000, Quantity = 1, TotalAmount = 30000},
+
+                new OrderDetail {ID_Order = "HD0100", ID_Book = "B0007", NameBook = "One Punch Man tập 8",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+                new OrderDetail {ID_Order = "HD0100", ID_Book = "B0034", NameBook = "Tiếng anh 12",
+                    UnitPrice = 12000, Quantity = 1, TotalAmount = 12000},
+                new OrderDetail {ID_Order = "HD0100", ID_Book = "B0035", NameBook = "Tiếng anh thí điểm 12 tập 1",
+                    UnitPrice = 30000, Quantity = 1, TotalAmount = 30000},
+
+                new OrderDetail {ID_Order = "HD0101", ID_Book = "B0010", NameBook = "One Punch Man tập 11",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+                new OrderDetail {ID_Order = "HD0101", ID_Book = "B0011", NameBook = "One Punch Man tập 12",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+
+                new OrderDetail {ID_Order = "HD0102", ID_Book = "B0013", NameBook = "One Punch Man tập 14",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+                new OrderDetail {ID_Order = "HD0102", ID_Book = "B0035", NameBook = "Tiếng anh thí điểm 12 tập 1",
+                    UnitPrice = 30000, Quantity = 1, TotalAmount = 30000},
+
+                new OrderDetail {ID_Order = "HD0103", ID_Book = "B0000", NameBook = "One Punch Man tập 1",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+                new OrderDetail {ID_Order = "HD0103", ID_Book = "B0030", NameBook = "Hóa học 12",
+                    UnitPrice = 12000, Quantity = 1, TotalAmount = 12000},
+
+                new OrderDetail {ID_Order = "HD0104", ID_Book = "B0009", NameBook = "One Punch Man tập 10",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+                new OrderDetail {ID_Order = "HD0104", ID_Book = "B0025", NameBook = "Giải tích 12",
+                    UnitPrice = 8000, Quantity = 1, TotalAmount = 8000},
+
+                new OrderDetail {ID_Order = "HD0105", ID_Book = "B0007", NameBook = "One Punch Man tập 8",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+                new OrderDetail {ID_Order = "HD0105", ID_Book = "B0034", NameBook = "Tiếng anh 12",
+                    UnitPrice = 12000, Quantity = 1, TotalAmount = 12000},
+                new OrderDetail {ID_Order = "HD0105", ID_Book = "B0035", NameBook = "Tiếng anh thí điểm 12 tập 1",
+                    UnitPrice = 30000, Quantity = 1, TotalAmount = 30000},
+
+                new OrderDetail {ID_Order = "HD0106", ID_Book = "B0010", NameBook = "One Punch Man tập 11",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+
+                new OrderDetail {ID_Order = "HD0107", ID_Book = "B0013", NameBook = "One Punch Man tập 14",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+
+                new OrderDetail {ID_Order = "HD0108", ID_Book = "B0030", NameBook = "Hóa học 12",
+                    UnitPrice = 12000, Quantity = 1, TotalAmount = 12000},
+
+                new OrderDetail {ID_Order = "HD0109", ID_Book = "B0009", NameBook = "One Punch Man tập 10",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+
+                new OrderDetail {ID_Order = "HD0110", ID_Book = "B0007", NameBook = "One Punch Man tập 8",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+                new OrderDetail {ID_Order = "HD0110", ID_Book = "B0034", NameBook = "Tiếng anh 12",
+                    UnitPrice = 12000, Quantity = 1, TotalAmount = 12000},
+
+                new OrderDetail {ID_Order = "HD0111", ID_Book = "B0010", NameBook = "One Punch Man tập 11",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+                new OrderDetail {ID_Order = "HD0111", ID_Book = "B0036", NameBook = "Tiếng anh thí điểm 12 tập 2",
+                    UnitPrice = 30000, Quantity = 1, TotalAmount = 30000},
+
+                new OrderDetail {ID_Order = "HD0112", ID_Book = "B0031", NameBook = "Sinh học 12",
+                    UnitPrice = 12000, Quantity = 1, TotalAmount = 12000},
+
+                new OrderDetail {ID_Order = "HD0113", ID_Book = "B0030", NameBook = "Hóa học 12",
+                    UnitPrice = 12000, Quantity = 1, TotalAmount = 12000},
+                new OrderDetail {ID_Order = "HD0113", ID_Book = "B0035", NameBook = "Tiếng anh thí điểm 12 tập 1",
+                    UnitPrice = 30000, Quantity = 1, TotalAmount = 30000},
+
+                new OrderDetail {ID_Order = "HD0114", ID_Book = "B0009", NameBook = "One Punch Man tập 10",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+
+                new OrderDetail {ID_Order = "HD0115", ID_Book = "B0007", NameBook = "One Punch Man tập 8",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+                new OrderDetail {ID_Order = "HD0115", ID_Book = "B0025", NameBook = "Giải tích 12",
+                    UnitPrice = 8000, Quantity = 1, TotalAmount = 8000},
+                new OrderDetail {ID_Order = "HD0115", ID_Book = "B0035", NameBook = "Tiếng anh thí điểm 12 tập 1",
+                    UnitPrice = 30000, Quantity = 1, TotalAmount = 30000},
+
+                new OrderDetail {ID_Order = "HD0116", ID_Book = "B0010", NameBook = "One Punch Man tập 11",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+                new OrderDetail {ID_Order = "HD0116", ID_Book = "B0015", NameBook = "One Punch Man tập 16",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+
+                new OrderDetail {ID_Order = "HD0117", ID_Book = "B0013", NameBook = "One Punch Man tập 14",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+                new OrderDetail {ID_Order = "HD0117", ID_Book = "B0035", NameBook = "Tiếng anh thí điểm 12 tập 1",
+                    UnitPrice = 30000, Quantity = 1, TotalAmount = 30000},
+
+                new OrderDetail {ID_Order = "HD0118", ID_Book = "B0030", NameBook = "Hóa học 12",
+                    UnitPrice = 8000, Quantity = 1, TotalAmount = 8000},
+                new OrderDetail {ID_Order = "HD0118", ID_Book = "B0035", NameBook = "Tiếng anh thí điểm 12 tập 1",
+                    UnitPrice = 30000, Quantity = 1, TotalAmount = 30000},
+
+                new OrderDetail {ID_Order = "HD0119", ID_Book = "B0009", NameBook = "One Punch Man tập 10",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+                new OrderDetail {ID_Order = "HD0119", ID_Book = "B0035", NameBook = "Tiếng anh thí điểm 12 tập 1",
+                    UnitPrice = 30000, Quantity = 1, TotalAmount = 30000},
+
+                new OrderDetail {ID_Order = "HD0120", ID_Book = "B0007", NameBook = "One Punch Man tập 8",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+                new OrderDetail {ID_Order = "HD0120", ID_Book = "B0009", NameBook = "One Punch Man tập 10",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+                new OrderDetail {ID_Order = "HD0120", ID_Book = "B0034", NameBook = "Tiếng anh 12",
+                    UnitPrice = 12000, Quantity = 1, TotalAmount = 12000},
+
+                new OrderDetail {ID_Order = "HD0121", ID_Book = "B0010", NameBook = "One Punch Man tập 11",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+                new OrderDetail {ID_Order = "HD0121", ID_Book = "B0026", NameBook = "Hình học 12",
+                    UnitPrice = 8000, Quantity = 1, TotalAmount = 8000},
+
+                new OrderDetail {ID_Order = "HD0122", ID_Book = "B0013", NameBook = "One Punch Man tập 14",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+                new OrderDetail {ID_Order = "HD0122", ID_Book = "B0015", NameBook = "One Punch Man tập 16",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+
+                new OrderDetail {ID_Order = "HD0123", ID_Book = "B0000", NameBook = "One Punch Man tập 1",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+                new OrderDetail {ID_Order = "HD0123", ID_Book = "B0035", NameBook = "Tiếng anh thí điểm 12 tập 1",
+                    UnitPrice = 30000, Quantity = 1, TotalAmount = 30000},
+                new OrderDetail {ID_Order = "HD0123", ID_Book = "B0036", NameBook = "Tiếng anh thí điểm 12 tập 2",
+                    UnitPrice = 30000, Quantity = 1, TotalAmount = 30000},
+
+                new OrderDetail {ID_Order = "HD0124", ID_Book = "B0010", NameBook = "One Punch Man tập 11",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+                new OrderDetail {ID_Order = "HD0124", ID_Book = "B0026", NameBook = "Hình học 12",
+                    UnitPrice = 8000, Quantity = 1, TotalAmount = 8000},
+
+                new OrderDetail {ID_Order = "HD0125", ID_Book = "B0013", NameBook = "One Punch Man tập 14",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+                new OrderDetail {ID_Order = "HD0125", ID_Book = "B0014", NameBook = "One Punch Man tập 15",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+
+                new OrderDetail {ID_Order = "HD0126", ID_Book = "B0025", NameBook = "Giải tích 12",
+                    UnitPrice = 8000, Quantity = 1, TotalAmount = 8000},
+                new OrderDetail {ID_Order = "HD0126", ID_Book = "B0030", NameBook = "Hóa học 12",
+                    UnitPrice = 12000, Quantity = 1, TotalAmount = 12000},
+
+                new OrderDetail {ID_Order = "HD0127", ID_Book = "B0009", NameBook = "One Punch Man tập 10",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+                new OrderDetail {ID_Order = "HD0127", ID_Book = "B0035", NameBook = "Tiếng anh thí điểm 12 tập 1",
+                    UnitPrice = 30000, Quantity = 1, TotalAmount = 30000},
+
+                new OrderDetail {ID_Order = "HD0128", ID_Book = "B0010", NameBook = "One Punch Man tập 11",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+                new OrderDetail {ID_Order = "HD0128", ID_Book = "B0035", NameBook = "Tiếng anh thí điểm 12 tập 1",
+                    UnitPrice = 30000, Quantity = 1, TotalAmount = 30000},
+
+                new OrderDetail {ID_Order = "HD0129", ID_Book = "B0013", NameBook = "One Punch Man tập 14",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+                new OrderDetail {ID_Order = "HD0129", ID_Book = "B0026", NameBook = "Hình học 12",
+                    UnitPrice = 8000, Quantity = 1, TotalAmount = 8000},
+
+                new OrderDetail {ID_Order = "HD0130", ID_Book = "B0030", NameBook = "Hóa học 12",
+                    UnitPrice = 12000, Quantity = 1, TotalAmount = 12000},
+                new OrderDetail {ID_Order = "HD0130", ID_Book = "B0035", NameBook = "Tiếng anh thí điểm 12 tập 1",
+                    UnitPrice = 30000, Quantity = 1, TotalAmount = 30000},
+
+                new OrderDetail {ID_Order = "HD0131", ID_Book = "B0025", NameBook = "Giải tích 12",
+                    UnitPrice = 8000, Quantity = 1, TotalAmount = 8000},
+                new OrderDetail {ID_Order = "HD0131", ID_Book = "B0035", NameBook = "Tiếng anh thí điểm 12 tập 1",
+                    UnitPrice = 30000, Quantity = 1, TotalAmount = 30000},
+
+                new OrderDetail {ID_Order = "HD0132", ID_Book = "B0007", NameBook = "One Punch Man tập 8",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+                new OrderDetail {ID_Order = "HD0132", ID_Book = "B0034", NameBook = "Tiếng anh 12",
+                    UnitPrice = 8000, Quantity = 1, TotalAmount = 8000},
+                new OrderDetail {ID_Order = "HD0132", ID_Book = "B0035", NameBook = "Tiếng anh thí điểm 12 tập 1",
+                    UnitPrice = 30000, Quantity = 1, TotalAmount = 30000},
+
+                new OrderDetail {ID_Order = "HD0133", ID_Book = "B0007", NameBook = "One Punch Man tập 8",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+                new OrderDetail {ID_Order = "HD0133", ID_Book = "B0025", NameBook = "Giải tích 12",
+                    UnitPrice = 8000, Quantity = 1, TotalAmount = 8000},
+                new OrderDetail {ID_Order = "HD0133", ID_Book = "B0035", NameBook = "Tiếng anh thí điểm 12 tập 1",
+                    UnitPrice = 30000, Quantity = 1, TotalAmount = 30000},
+                new OrderDetail {ID_Order = "HD0133", ID_Book = "B0036", NameBook = "Tiếng anh thí điểm 12 tập 2",
+                    UnitPrice = 30000, Quantity = 1, TotalAmount = 30000},
+
+                new OrderDetail {ID_Order = "HD0134", ID_Book = "B0010", NameBook = "One Punch Man tập 11",
+                    UnitPrice = 12000, Quantity = 1, TotalAmount = 12000},
+                new OrderDetail {ID_Order = "HD0134", ID_Book = "B0026", NameBook = "Hình học 12",
+                    UnitPrice = 30000, Quantity = 1, TotalAmount = 8000},
+
+                new OrderDetail {ID_Order = "HD0135", ID_Book = "B0030", NameBook = "Hóa học 12",
+                    UnitPrice = 12000, Quantity = 1, TotalAmount = 12000},
+                new OrderDetail {ID_Order = "HD0135", ID_Book = "B0035", NameBook = "Tiếng anh thí điểm 12 tập 1",
+                    UnitPrice = 30000, Quantity = 1, TotalAmount = 30000},
+
+                new OrderDetail {ID_Order = "HD0136", ID_Book = "B0010", NameBook = "One Punch Man tập 11",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+
+                new OrderDetail {ID_Order = "HD0137", ID_Book = "B0015", NameBook = "One Punch Man tập 16",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+                new OrderDetail {ID_Order = "HD0137", ID_Book = "B0025", NameBook = "Giải tích 12",
+                    UnitPrice = 8000, Quantity = 1, TotalAmount = 8000},
+
+                new OrderDetail {ID_Order = "HD0138", ID_Book = "B0030", NameBook = "Hóa học 12",
+                    UnitPrice = 12000, Quantity = 1, TotalAmount = 12000},
+                new OrderDetail {ID_Order = "HD0138", ID_Book = "B0031", NameBook = "Sinh học 12",
+                    UnitPrice = 12000, Quantity = 1, TotalAmount = 12000},
+
+                new OrderDetail {ID_Order = "HD0139", ID_Book = "B0009", NameBook = "One Punch Man tập 10",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+
+                new OrderDetail {ID_Order = "HD0140", ID_Book = "B0007", NameBook = "One Punch Man tập 8",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+                new OrderDetail {ID_Order = "HD0140", ID_Book = "B0025", NameBook = "Giải tích 12",
+                    UnitPrice = 8000, Quantity = 1, TotalAmount = 8000},
+                new OrderDetail {ID_Order = "HD0140", ID_Book = "B0034", NameBook = "Tiếng anh 12",
+                    UnitPrice = 12000, Quantity = 1, TotalAmount = 12000},
+
+                new OrderDetail {ID_Order = "HD0141", ID_Book = "B0010", NameBook = "One Punch Man tập 11",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+                new OrderDetail {ID_Order = "HD0141", ID_Book = "B0026", NameBook = "Hình học 12",
+                    UnitPrice = 8000, Quantity = 1, TotalAmount = 8000},
+
+                new OrderDetail {ID_Order = "HD0142", ID_Book = "B0013", NameBook = "One Punch Man tập 14",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+
+                new OrderDetail {ID_Order = "HD0143", ID_Book = "B0030", NameBook = "Hóa học 12",
+                    UnitPrice = 12000, Quantity = 1, TotalAmount = 12000},
+
+                new OrderDetail {ID_Order = "HD0144", ID_Book = "B0035", NameBook = "Tiếng anh thí điểm 12 tập 1",
+                    UnitPrice = 30000, Quantity = 1, TotalAmount = 30000},
+                new OrderDetail {ID_Order = "HD0144", ID_Book = "B0009", NameBook = "One Punch Man tập 10",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+
+                new OrderDetail {ID_Order = "HD0145", ID_Book = "B0007", NameBook = "One Punch Man tập 8",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+                new OrderDetail {ID_Order = "HD0145", ID_Book = "B0034", NameBook = "Tiếng anh 12",
+                    UnitPrice = 12000, Quantity = 1, TotalAmount = 12000},
+
+                new OrderDetail {ID_Order = "HD0146", ID_Book = "B0026", NameBook = "Hình học 12",
+                    UnitPrice = 8000, Quantity = 1, TotalAmount = 8000},
+
+                new OrderDetail {ID_Order = "HD0147", ID_Book = "B0013", NameBook = "One Punch Man tập 14",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+                new OrderDetail {ID_Order = "HD0147", ID_Book = "B0035", NameBook = "Tiếng anh thí điểm 12 tập 1",
+                    UnitPrice = 30000, Quantity = 1, TotalAmount = 30000},
+
+                new OrderDetail {ID_Order = "HD0146", ID_Book = "B0030", NameBook = "Hóa học 12",
+                    UnitPrice = 12000, Quantity = 1, TotalAmount = 12000},
+
+                new OrderDetail {ID_Order = "HD0149", ID_Book = "B0009", NameBook = "One Punch Man tập 10",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+                new OrderDetail {ID_Order = "HD0149", ID_Book = "B0034", NameBook = "Tiếng anh 12",
+                    UnitPrice = 12000, Quantity = 1, TotalAmount = 12000},
+                new OrderDetail {ID_Order = "HD0149", ID_Book = "B0035", NameBook = "Tiếng anh thí điểm 12 tập 1",
+                    UnitPrice = 30000, Quantity = 1, TotalAmount = 30000},
+
+                new OrderDetail {ID_Order = "HD0150", ID_Book = "B0034", NameBook = "Tiếng anh 12",
+                    UnitPrice = 12000, Quantity = 1, TotalAmount = 12000},
+
+                new OrderDetail {ID_Order = "HD0151", ID_Book = "B0026", NameBook = "Hình học 12",
+                    UnitPrice = 8000, Quantity = 1, TotalAmount = 8000},
+                new OrderDetail {ID_Order = "HD0151", ID_Book = "B0010", NameBook = "One Punch Man tập 11",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+
+                new OrderDetail {ID_Order = "HD0152", ID_Book = "B0013", NameBook = "One Punch Man tập 14",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+                new OrderDetail {ID_Order = "HD0152", ID_Book = "B0024", NameBook = "One Punch Man tập 25",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+
+                new OrderDetail {ID_Order = "HD0153", ID_Book = "B0030", NameBook = "Hóa học 12",
+                    UnitPrice = 12000, Quantity = 1, TotalAmount = 12000},
+                new OrderDetail {ID_Order = "HD0153", ID_Book = "B0035", NameBook = "Tiếng anh thí điểm 12 tập 1",
+                    UnitPrice = 30000, Quantity = 1, TotalAmount = 30000},
+
+                new OrderDetail {ID_Order = "HD0154", ID_Book = "B0009", NameBook = "One Punch Man tập 10",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+                new OrderDetail {ID_Order = "HD0154", ID_Book = "B0025", NameBook = "Giải tích 12",
+                    UnitPrice = 8000, Quantity = 1, TotalAmount = 8000},
+
+                new OrderDetail {ID_Order = "HD0155", ID_Book = "B0007", NameBook = "One Punch Man tập 8",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+                new OrderDetail {ID_Order = "HD0155", ID_Book = "B0030", NameBook = "Hóa học 12",
+                    UnitPrice = 12000, Quantity = 1, TotalAmount = 12000},
+                new OrderDetail {ID_Order = "HD0155", ID_Book = "B0034", NameBook = "Tiếng anh 12",
+                    UnitPrice = 12000, Quantity = 1, TotalAmount = 12000},
+
+                new OrderDetail {ID_Order = "HD0156", ID_Book = "B0034", NameBook = "Tiếng anh 12",
+                    UnitPrice = 12000, Quantity = 1, TotalAmount = 12000},
+
+                new OrderDetail {ID_Order = "HD0157", ID_Book = "B0027", NameBook = "Ngữ Văn 12 tập 1",
+                    UnitPrice = 10000, Quantity = 1, TotalAmount = 10000},
+                new OrderDetail {ID_Order = "HD0157", ID_Book = "B0028", NameBook = "Ngữ Văn 12 tập 2",
+                    UnitPrice = 10000, Quantity = 1, TotalAmount = 10000},
+
+                new OrderDetail {ID_Order = "HD0158", ID_Book = "B0035", NameBook = "Tiếng anh thí điểm 12 tập 1",
+                    UnitPrice = 30000, Quantity = 1, TotalAmount = 30000},
+
+                new OrderDetail {ID_Order = "HD0159", ID_Book = "B0025", NameBook = "Giải tích 12",
+                    UnitPrice = 8000, Quantity = 1, TotalAmount = 8000},
+                new OrderDetail {ID_Order = "HD0159", ID_Book = "B0035", NameBook = "Tiếng anh thí điểm 12 tập 1",
+                    UnitPrice = 30000, Quantity = 1, TotalAmount = 30000},
+
+                new OrderDetail {ID_Order = "HD0160", ID_Book = "B0025", NameBook = "Giải tích 12",
+                    UnitPrice = 8000, Quantity = 1, TotalAmount = 8000},
+                new OrderDetail {ID_Order = "HD0160", ID_Book = "B0026", NameBook = "Hình học 12",
+                    UnitPrice = 8000, Quantity = 1, TotalAmount = 8000},
+                new OrderDetail {ID_Order = "HD0160", ID_Book = "B0034", NameBook = "Tiếng anh 12",
+                    UnitPrice = 12000, Quantity = 1, TotalAmount = 12000},
+
+                new OrderDetail {ID_Order = "HD0161", ID_Book = "B0010", NameBook = "One Punch Man tập 11",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+                new OrderDetail {ID_Order = "HD0161", ID_Book = "B0026", NameBook = "Hình học 12",
+                    UnitPrice = 8000, Quantity = 1, TotalAmount = 8000},
+
+                new OrderDetail {ID_Order = "HD0162", ID_Book = "B0035", NameBook = "Tiếng anh thí điểm 12 tập 1",
+                    UnitPrice = 30000, Quantity = 1, TotalAmount = 30000},
+
+                new OrderDetail {ID_Order = "HD0163", ID_Book = "B0007", NameBook = "One Punch Man tập 8",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+                new OrderDetail {ID_Order = "HD0163", ID_Book = "B0034", NameBook = "Tiếng anh 12",
+                    UnitPrice = 12000, Quantity = 1, TotalAmount = 12000},
+                new OrderDetail {ID_Order = "HD0163", ID_Book = "B0035", NameBook = "Tiếng anh thí điểm 12 tập 1",
+                    UnitPrice = 30000, Quantity = 1, TotalAmount = 30000},
+
+                new OrderDetail {ID_Order = "HD0164", ID_Book = "B0025", NameBook = "Giải tích 12",
+                    UnitPrice = 8000, Quantity = 1, TotalAmount = 8000},
+                new OrderDetail {ID_Order = "HD0164", ID_Book = "B0026", NameBook = "Hình học 12",
+                    UnitPrice = 8000, Quantity = 1, TotalAmount = 8000},
+
+                new OrderDetail {ID_Order = "HD0165", ID_Book = "B0024", NameBook = "One Punch Man tập 25",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+                new OrderDetail {ID_Order = "HD0165", ID_Book = "B0034", NameBook = "Tiếng anh 12",
+                    UnitPrice = 12000, Quantity = 1, TotalAmount = 12000},
+
+                new OrderDetail {ID_Order = "HD0166", ID_Book = "B0030", NameBook = "Hóa học 12",
+                    UnitPrice = 12000, Quantity = 1, TotalAmount = 12000},
+
+                new OrderDetail {ID_Order = "HD0167", ID_Book = "B0035", NameBook = "Tiếng anh thí điểm 12 tập 1",
+                    UnitPrice = 30000, Quantity = 1, TotalAmount = 30000},
+                new OrderDetail {ID_Order = "HD0167", ID_Book = "B0036", NameBook = "Tiếng anh thí điểm 12 tập 2",
+                    UnitPrice = 30000, Quantity = 1, TotalAmount = 30000},
+
+                new OrderDetail {ID_Order = "HD0168", ID_Book = "B0024", NameBook = "One Punch Man tập 25",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+
+                new OrderDetail {ID_Order = "HD0169", ID_Book = "B0012", NameBook = "One Punch Man tập 13",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+                new OrderDetail {ID_Order = "HD0169", ID_Book = "B0030", NameBook = "Hóa học 12",
+                    UnitPrice = 12000, Quantity = 1, TotalAmount = 12000},
+                new OrderDetail {ID_Order = "HD0169", ID_Book = "B0036", NameBook = "Tiếng anh thí điểm 12 tập 2",
+                    UnitPrice = 30000, Quantity = 1, TotalAmount = 30000},
+
+                new OrderDetail {ID_Order = "HD0170", ID_Book = "B0025", NameBook = "Giải tích 12",
+                    UnitPrice = 8000, Quantity = 1, TotalAmount = 8000},
+                new OrderDetail {ID_Order = "HD0170", ID_Book = "B0030", NameBook = "Tiếng anh 12",
+                    UnitPrice = 12000, Quantity = 1, TotalAmount = 12000},
+                new OrderDetail {ID_Order = "HD0170", ID_Book = "B0036", NameBook = "Tiếng anh thí điểm 12 tập 1",
+                    UnitPrice = 30000, Quantity = 1, TotalAmount = 30000},
+
+                new OrderDetail {ID_Order = "HD0171", ID_Book = "B0035", NameBook = "Tiếng anh thí điểm 12 tập 1",
+                    UnitPrice = 30000, Quantity = 1, TotalAmount = 30000},
+                new OrderDetail {ID_Order = "HD0171", ID_Book = "B0036", NameBook = "Tiếng anh thí điểm 12 tập 2",
+                    UnitPrice = 30000, Quantity = 1, TotalAmount = 30000},
+
+                new OrderDetail {ID_Order = "HD0172", ID_Book = "B0023", NameBook = "One Punch Man tập 24",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+                new OrderDetail {ID_Order = "HD0172", ID_Book = "B0024", NameBook = "One Punch Man tập 25",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+
+                new OrderDetail {ID_Order = "HD0173", ID_Book = "B0030", NameBook = "Hóa học 12",
+                    UnitPrice = 12000, Quantity = 1, TotalAmount = 12000},
+                new OrderDetail {ID_Order = "HD0173", ID_Book = "B0035", NameBook = "Tiếng anh thí điểm 12 tập 1",
+                    UnitPrice = 30000, Quantity = 1, TotalAmount = 30000},
+
+                new OrderDetail {ID_Order = "HD0174", ID_Book = "B0009", NameBook = "One Punch Man tập 10",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+
+                new OrderDetail {ID_Order = "HD0175", ID_Book = "B0007", NameBook = "One Punch Man tập 8",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+                new OrderDetail {ID_Order = "HD0175", ID_Book = "B0035", NameBook = "Tiếng anh thí điểm 12 tập 1",
+                    UnitPrice = 30000, Quantity = 1, TotalAmount = 30000},
+
+                new OrderDetail {ID_Order = "HD0176", ID_Book = "B0029", NameBook = "Vật lý 12",
+                    UnitPrice = 12000, Quantity = 1, TotalAmount = 12000},
+                new OrderDetail {ID_Order = "HD0176", ID_Book = "B0030", NameBook = "Hóa học 12",
+                    UnitPrice = 12000, Quantity = 1, TotalAmount = 12000},
+                new OrderDetail {ID_Order = "HD0176", ID_Book = "B0031", NameBook = "Sinh học 12",
+                    UnitPrice = 12000, Quantity = 1, TotalAmount = 12000},
+
+                new OrderDetail {ID_Order = "HD0177", ID_Book = "B0025", NameBook = "Giải tích 12",
+                    UnitPrice = 8000, Quantity = 1, TotalAmount = 8000},
+                new OrderDetail {ID_Order = "HD0177", ID_Book = "B0029", NameBook = "Vật lý 12",
+                    UnitPrice = 12000, Quantity = 1, TotalAmount = 12000},
+                new OrderDetail {ID_Order = "HD0177", ID_Book = "B0030", NameBook = "Hóa học 12",
+                    UnitPrice = 12000, Quantity = 1, TotalAmount = 12000},
+                new OrderDetail {ID_Order = "HD0177", ID_Book = "B0034", NameBook = "Tiếng anh 12",
+                    UnitPrice = 12000, Quantity = 1, TotalAmount = 12000},
+
+                new OrderDetail {ID_Order = "HD0178", ID_Book = "B0025", NameBook = "Giải tích 12",
+                    UnitPrice = 8000, Quantity = 1, TotalAmount = 8000},
+                new OrderDetail {ID_Order = "HD0178", ID_Book = "B0026", NameBook = "Hình học 12",
+                    UnitPrice = 8000, Quantity = 1, TotalAmount = 8000},
+
+                new OrderDetail {ID_Order = "HD0179", ID_Book = "B0029", NameBook = "Vật lý 12",
+                    UnitPrice = 12000, Quantity = 1, TotalAmount = 12000},
+                new OrderDetail {ID_Order = "HD0179", ID_Book = "B0030", NameBook = "Hóa học 12",
+                    UnitPrice = 12000, Quantity = 1, TotalAmount = 12000},
+
+                new OrderDetail {ID_Order = "HD0180", ID_Book = "B0023", NameBook = "One Punch Man tập 24",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+                new OrderDetail {ID_Order = "HD0180", ID_Book = "B0024", NameBook = "One Punch Man tập 25",
+                    UnitPrice = 22000, Quantity = 1, TotalAmount = 22000},
+                new OrderDetail {ID_Order = "HD0180", ID_Book = "B0027", NameBook = "Ngữ Văn 12 tập 1",
+                    UnitPrice = 12000, Quantity = 1, TotalAmount = 12000},
+                new OrderDetail {ID_Order = "HD0180", ID_Book = "B0028", NameBook = "Ngữ Văn 12 tập 2",
+                    UnitPrice = 12000, Quantity = 1, TotalAmount = 12000},
+                new OrderDetail {ID_Order = "HD0180", ID_Book = "B0035", NameBook = "Tiếng anh thí điểm 12 tập 1",
+                    UnitPrice = 30000, Quantity = 1, TotalAmount = 30000},
             });
         }
     }

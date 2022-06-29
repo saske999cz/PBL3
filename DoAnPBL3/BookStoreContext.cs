@@ -11,7 +11,7 @@ namespace DoAnPBL3
             : base("name=BookStoreContext")
         {
             Configuration.LazyLoadingEnabled = true;
-            //Database.SetInitializer<BookStoreContext>(new InitialData());
+            Database.SetInitializer<BookStoreContext>(new InitialData());
         }
 
         public virtual DbSet<Genre> Genres { get; set; }
