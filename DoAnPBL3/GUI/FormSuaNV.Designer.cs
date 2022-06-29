@@ -118,6 +118,7 @@ namespace DoAnPBL3
             this.rjbtnOK.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.rjbtnOK.BorderRadius = 15;
             this.rjbtnOK.BorderSize = 0;
+            this.rjbtnOK.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rjbtnOK.FlatAppearance.BorderSize = 0;
             this.rjbtnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjbtnOK.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

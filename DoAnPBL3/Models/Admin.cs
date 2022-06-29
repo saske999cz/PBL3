@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -17,7 +17,7 @@ namespace DoAnPBL3.Models
         }
 
         public Admin(string id_admin, string nameAdmin, string email, DateTime dateOfBirth, DateTime startDate,
-            DateTime? endDate, string gender, string phone, string ID_Card, string address, byte[] avatar, string accountUsername)
+            DateTime? endDate, string gender, string phone, string ID_Card, string address, string avatar, string accountUsername)
         {
             ID_Admin = id_admin;
             FullNameAdmin = nameAdmin;
@@ -81,7 +81,7 @@ namespace DoAnPBL3.Models
         public string Address { get; set; }
 
         [Column("Anh")]
-        public byte[] Avatar { get; set; }
+        public string Avatar { get; set; }
 
         [Column("TaiKhoanDangNhap")]
         [StringLength(255)]

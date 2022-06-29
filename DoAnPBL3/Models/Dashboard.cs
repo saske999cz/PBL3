@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DoAnPBL3.BLL;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
@@ -36,23 +37,14 @@ namespace DoAnPBL3.Models
 
         private void GetNumberItems()
         {
-            using (BookStoreContext context = new BookStoreContext())
-            {
-                // Số khách hàng
-                NumCustomers = context.Customers.Count();
-                // Số sách đã bán
-                NumSellBooks = context.OrderDetails
-                    .Select(book => book.Quantity)
-                    .Sum();
-                // Số lượng sách còn
-                NumRemainingBooks = context.Books
-                    .Sum(book => book.Quantity);
-                // Số hóa đơn
-                NumOrders = context.Orders
-                    .Where(order => order.OrderDate >= startDate)
-                    .Where(order => order.OrderDate <= endDate)
-                    .Count();
-            }
+            // Số khách hàng
+            NumCustomers = BLL_QLDT.Instance.GetNumCustomers();
+            // Số sách đã bán
+            NumSellBooks = BLL_QLDT.Instance.GetNumSellBooks();
+            // Số lượng sách còn
+            NumRemainingBooks = BLL_QLDT.Instance.GetNumRemainingBooks();
+            // Số hóa đơn
+            NumOrders = BLL_QLDT.Instance.GetNumOrders(startDate, endDate);
         }
 
         private void GetOrderAnalisys()
@@ -67,14 +59,14 @@ namespace DoAnPBL3.Models
                     .Where(order => order.OrderDate >= startDate)
                     .Where(order => order.OrderDate <= endDate)
                     .GroupBy(order => order.OrderDate)
-                    .Select(order => new 
-                    { 
-                        OrderDate = order.Key, 
-                        TotalAmount = order.Sum(x => x.TotalPrice) 
+                    .Select(order => new
+                    {
+                        OrderDate = order.Key,
+                        TotalAmount = order.Sum(x => x.TotalPrice)
                     })
                     .ToList();
                 var result = new List<KeyValuePair<DateTime, decimal>>();
-                for(int i = 0; i < revenue.Count; i++)
+                for (int i = 0; i < revenue.Count; i++)
                 {
                     result.Add(new KeyValuePair<DateTime, decimal>(revenue[i].OrderDate, revenue[i].TotalAmount));
                     ToTalRevenue += revenue[i].TotalAmount;
@@ -103,28 +95,20 @@ namespace DoAnPBL3.Models
                                         {
                                             Date = order.Key,
                                             TotalAmount = order.Sum(amount => amount.Value)
-                                        }).ToList(); 
-                    //foreach(var item in result)
-                    //{
-                    //    GrossRevenueList.Add(new RevenueByDate()
-                    //    {
-                    //        Date = item.Key.ToString("dd/MM"),
-                    //        TotalAmount = item.Value
-                    //    });
-                    //}
+                                        }).ToList();
                 }
                 // Group by weeks (4 weeks -> 14 weeks)
                 else if (numberDays <= 98)
                 {
                     GrossRevenueList = (from orderList in result
-                                       group orderList by CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(
-                                           orderList.Key, CalendarWeekRule.FirstDay, DayOfWeek.Monday)
+                                        group orderList by CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(
+                                            orderList.Key, CalendarWeekRule.FirstDay, DayOfWeek.Monday)
                                        into order
-                                       select new RevenueByDate
-                                       {
-                                           Date = "Tuần " + order.Key.ToString(),
-                                           TotalAmount = order.Sum(amount => amount.Value)
-                                       }).ToList();
+                                        select new RevenueByDate
+                                        {
+                                            Date = "Tuần " + order.Key.ToString(),
+                                            TotalAmount = order.Sum(amount => amount.Value)
+                                        }).ToList();
                 }
                 //Group by months
                 else if (numberDays <= (365 * 2))

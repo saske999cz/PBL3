@@ -9,6 +9,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DoAnPBL3.BLL;
 using FontAwesome.Sharp;
 
 namespace DoAnPBL3
@@ -216,6 +217,12 @@ namespace DoAnPBL3
             lblDate.Text = DateTime.Now.ToLongDateString();
             rjddmUserSettingMenu.IsMainMenu = true;
             guna2ShadowForm1.SetShadowForm(this);
+            string projectDirectory = Directory.GetParent(Environment.CurrentDirectory).Parent.FullName;
+            string avatar = BLL_QLNV.Instance.GetAvatar(accountUsername);
+            if (avatar == null)
+                EmployeePicture.Image = null;
+            else
+                EmployeePicture.Image = Image.FromFile(Path.Combine(projectDirectory, avatar));
             using (BookStoreContext context = new BookStoreContext())
             {
                 var employee = context.Employees

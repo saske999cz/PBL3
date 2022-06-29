@@ -252,7 +252,7 @@ namespace DoAnPBL3
             switch (icon)
             {
                 case MessageBoxIcon.Error: //Error
-                    pictureBoxIcon.Image = Properties.Resources.error;
+                    pictureBoxIcon.Image = Properties.Resources.error_red;
                     PrimaryColor = Color.FromArgb(224, 79, 95);
                     btnClose.FlatAppearance.MouseOverBackColor = Color.Crimson;
                     break;

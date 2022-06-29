@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DoAnPBL3.DAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,6 +27,26 @@ namespace DoAnPBL3.BLL
         private BLL_QLDT()
         {
 
+        }
+
+        public int GetNumCustomers()
+        {
+            return DAL_QLDT.Instance.GetNumCustomers();
+        }
+
+        public int GetNumSellBooks()
+        {
+            return DAL_QLDT.Instance.GetNumSellBooks();
+        }
+
+        public int GetNumRemainingBooks()
+        {
+            return DAL_QLDT.Instance.GetNumRemainingBooks();
+        }
+
+        public int GetNumOrders(DateTime startDate, DateTime endDate)
+        {
+            return DAL_QLDT.Instance.GetNumOrders(startDate, endDate);
         }
     }
 }

@@ -15,6 +15,9 @@ namespace DoAnPBL3
     public partial class FormQLBSNV : Form
     {
         FormCart formCart;
+        private int ID_Language;
+        private int ID_Publisher;
+        private int ID_Genre;
 
         public FormQLBSNV(string accountUsername)
         {
@@ -123,66 +126,7 @@ namespace DoAnPBL3
                         RJMessageBox.Show("Không tìm thấy", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-        }
-
-        private void XuiSegmentSach_Click(object sender, EventArgs e)
-        {
-            DataTable data = new DataTable();
-            CreateCol(data);
-            if (xuiSegmentSach.SelectedIndex == 0)
-            {
-                List<Book> listBooks = BLL_QLBS.Instance.GetBooks();
-                if (listBooks == null)
-                {
-                    dgvQLBSNV.DataSource = null;
-                }
-                else
-                {
-                    foreach (Book book in listBooks)
-                    {
-                        DataRow dataRow = data.NewRow();
-                        data.Rows.Add(CreateRow(dataRow, book));
-                    }
-                    dgvQLBSNV.DataSource = data;
-                }
-            }
-            // Sách tiếng việt
-            else if (xuiSegmentSach.SelectedIndex == 1)
-            {
-                List<Book> listVietnameseBooks = BLL_QLBS.Instance.GetVietnameseBooks();
-                if (listVietnameseBooks == null)
-                {
-                    dgvQLBSNV.DataSource = null;
-                }
-                else
-                {
-                    foreach (Book book in listVietnameseBooks)
-                    {
-                        DataRow dataRow = data.NewRow();
-                        data.Rows.Add(CreateRow(dataRow, book));
-                    }
-                    dgvQLBSNV.DataSource = data;
-                }
-            }
-            // Sách tiếng anh
-            else
-            {
-                List<Book> listEnglishBooks = BLL_QLBS.Instance.GetEnglishBooks();
-                if (listEnglishBooks == null)
-                {
-                    dgvQLBSNV.DataSource = null;
-                }
-                else
-                {
-                    foreach (Book book in listEnglishBooks)
-                    {
-                        DataRow dataRow = data.NewRow();
-                        data.Rows.Add(CreateRow(dataRow, book));
-                    }
-                    dgvQLBSNV.DataSource = data;
-                }
-            }
-        }
+        }   
 
         private void DgvQLBSNV_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
@@ -210,6 +154,7 @@ namespace DoAnPBL3
                 new DataColumn("PublishDate", typeof(string)),
                 new DataColumn("NameAuthor", typeof(string)),
                 new DataColumn("NameLanguage", typeof(string)),
+                new DataColumn("NamePublisher", typeof(string)),
                 new DataColumn("NameGenre", typeof(string)),
                 new DataColumn("Price", typeof(string)),
                 new DataColumn("Quantity", typeof(int)),
@@ -223,6 +168,7 @@ namespace DoAnPBL3
             dataRow["PublishDate"] = book.PublishDate.ToString("dd/MM/yyyy");
             dataRow["NameAuthor"] = book.NameAuthor;
             dataRow["NameLanguage"] = BLL_QLBS.Instance.GetNameLanguageByID(book.ID_Language);
+            dataRow["NamePublisher"] = BLL_QLBS.Instance.GetNamePublisherByID(book.ID_Publisher);
             dataRow["NameGenre"] = BLL_QLBS.Instance.GetNameGenreByID(book.ID_Genre);
             dataRow["Price"] = book.Price.ToString("##,#") + "VNĐ";
             dataRow["Quantity"] = book.Quantity;
@@ -255,6 +201,118 @@ namespace DoAnPBL3
         private void PictureBox4_Click(object sender, EventArgs e)
         {
             formCart.Show();
+        }
+
+        private void CbbCriteria_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbbCriteria.SelectedIndex == 0)
+            {
+                if (cbbCritiaDetail.Items.Count > 0)
+                    cbbCritiaDetail.Items.Clear();
+                List<Language> languages = BLL_QLBS.Instance.GetAllLanguages();
+                if (languages != null)
+                {
+                    foreach (Language language in languages)
+                    {
+                        cbbCritiaDetail.Items.Add(language.NameLanguage);
+                    }
+                }
+                else
+                    cbbCritiaDetail.Items.Add("");
+            }
+            else if (cbbCriteria.SelectedIndex == 1)
+            {
+                if (cbbCritiaDetail.Items.Count > 0)
+                    cbbCritiaDetail.Items.Clear();
+                List<Publisher> publishers = BLL_QLBS.Instance.GetAllPublishers();
+                if (publishers != null)
+                {
+                    foreach (Publisher publisher in publishers)
+                    {
+                        cbbCritiaDetail.Items.Add(publisher.NamePublisher);
+                    }
+                }
+                else
+                    cbbCritiaDetail.Items.Add("");
+            }
+            else
+            {
+                if (cbbCritiaDetail.Items.Count > 0)
+                    cbbCritiaDetail.Items.Clear();
+                List<Genre> genres = BLL_QLBS.Instance.GetAllGenres();
+                if (genres != null)
+                {
+                    foreach (Genre genre in genres)
+                    {
+                        cbbCritiaDetail.Items.Add(genre.NameGenre);
+                    }
+                }
+                else
+                    cbbCritiaDetail.Items.Add("");
+            }
+        }
+
+        private void CbbCritiaDetail_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbbCriteria.SelectedItem.ToString() == "Ngôn ngữ")
+                ID_Language = cbbCritiaDetail.SelectedIndex + 1;
+            else if (cbbCriteria.SelectedItem.ToString() == "Nhà xuất bản")
+                ID_Publisher = cbbCritiaDetail.SelectedIndex + 1;
+            else
+                ID_Genre = cbbCritiaDetail.SelectedIndex + 1;
+        }
+
+        private void BtnFind_Click(object sender, EventArgs e)
+        {
+            DataTable data = new DataTable();
+            CreateCol(data);
+            if (cbbCritiaDetail.SelectedItem == null)
+                RJMessageBox.Show("Vui lòng chọn tiêu chí để lọc danh sách", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else if (cbbCriteria.SelectedItem.ToString() == "Ngôn ngữ")
+            {
+                List<Book> listBooks = BLL_QLBS.Instance.GetBooksByIDLanguage(ID_Language);
+                if (listBooks == null)
+                    dgvQLBSNV.DataSource = null;
+                else
+                {
+                    foreach (Book book in listBooks)
+                    {
+                        DataRow dataRow = data.NewRow();
+                        data.Rows.Add(CreateRow(dataRow, book));
+                    }
+                    dgvQLBSNV.DataSource = data;
+                }
+            }
+            else if (cbbCriteria.SelectedItem.ToString() == "Nhà xuất bản")
+            {
+                List<Book> listBooks = BLL_QLBS.Instance.GetBooksByIDPublisher(ID_Publisher);
+                if (listBooks == null)
+                    dgvQLBSNV.DataSource = null;
+                else
+                {
+                    foreach (Book book in listBooks)
+                    {
+                        DataRow dataRow = data.NewRow();
+                        data.Rows.Add(CreateRow(dataRow, book));
+                    }
+                    dgvQLBSNV.DataSource = data;
+                }
+            }
+            else
+            {
+                List<Book> listBooks = BLL_QLBS.Instance.GetBooksByIDGenre(ID_Genre);
+                if (listBooks == null)
+                    dgvQLBSNV.DataSource = null;
+                else
+                {
+                    foreach (Book book in listBooks)
+                    {
+                        DataRow dataRow = data.NewRow();
+                        data.Rows.Add(CreateRow(dataRow, book));
+                    }
+                    dgvQLBSNV.DataSource = data;
+                }
+            }
         }
     }
 }

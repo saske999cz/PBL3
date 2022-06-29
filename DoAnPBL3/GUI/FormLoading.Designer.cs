@@ -137,14 +137,14 @@ namespace DoAnPBL3
             // 
             this.label5.AutoEllipsis = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(206)))), ((int)(((byte)(247)))));
-            this.label5.Location = new System.Drawing.Point(220, 499);
+            this.label5.Location = new System.Drawing.Point(157, 499);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(497, 17);
+            this.label5.Size = new System.Drawing.Size(563, 17);
             this.label5.TabIndex = 6;
-            this.label5.Text = "Thiết kế bởi nhóm 2: Lê Hoàng Long, Nguyễn Khác Thái, Nguyễn Trọng Nghĩa, Đào Thủ" +
-    "y Trang";
+            this.label5.Text = "Thiết kế bởi nhóm 2: Lê Hoàng Long, Nguyễn Khắc Thái, Nguyễn Trọng Nghĩa, Đào Th" +
+    "ủy Trang";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel2
@@ -175,11 +175,11 @@ namespace DoAnPBL3
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(206)))), ((int)(((byte)(247)))));
-            this.label6.Location = new System.Drawing.Point(45, 181);
+            this.label6.Location = new System.Drawing.Point(27, 174);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(225, 25);
+            this.label6.Size = new System.Drawing.Size(248, 30);
             this.label6.TabIndex = 7;
             this.label6.Text = "Đồ án lập trình ứng dụng";
             // 

@@ -36,6 +36,21 @@ namespace DoAnPBL3.BLL
             return DAL_QLBS.Instance.GetListBooks();
         }
 
+        public List<Book> GetBooksByIDLanguage(int ID_Language)
+        {
+            return DAL_QLBS.Instance.GetListBooksByIDLanguage(ID_Language);
+        }
+
+        public List<Book> GetBooksByIDPublisher(int ID_Publisher)
+        {
+            return DAL_QLBS.Instance.GetListBooksByIDPublisher(ID_Publisher);
+        }
+
+        public List<Book> GetBooksByIDGenre(int ID_Genre)
+        {
+            return DAL_QLBS.Instance.GetListBooksByIDGenre(ID_Genre);
+        }
+
         public List<Book> GetVietnameseBooks()
         {
             return DAL_QLBS.Instance.GetListVietnameseBooks();

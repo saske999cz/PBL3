@@ -248,15 +248,20 @@ namespace DoAnPBL3
             {
                 Employee employee = BLL_QLNV.Instance.GetEmployeeByID(GetID_Employee());
                 string name = dgvQLNV.CurrentRow.Cells["FullNameEmployee"].Value.ToString();
-                DialogResult result = RJMessageBox.Show("Xác nhận xóa nhân viên " + name + "?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (result == DialogResult.Yes)
+                if (employee != null)
                 {
-                    FormIdentify formIdentify = new FormIdentify(employee.AccountUsername, password, "");
-                    formIdentify.RefreshData += new FormIdentify.LoadData(FormQLNV_Load);
-                    formIdentify.Show();
+                    DialogResult result = RJMessageBox.Show("Xác nhận xóa nhân viên " + name + "?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (result == DialogResult.Yes)
+                    {
+                        FormIdentify formIdentify = new FormIdentify(employee.AccountUsername, password, "");
+                        formIdentify.RefreshData += new FormIdentify.LoadData(FormQLNV_Load);
+                        formIdentify.Show();
+                    }
+                    else
+                        return;
                 }
                 else
-                    return;
+                    RJMessageBox.Show("Nhân viên " + name + " đã nghỉ việc", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 

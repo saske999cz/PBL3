@@ -182,7 +182,7 @@ namespace DoAnPBL3
             this.tbAuthor.Font = new System.Drawing.Font("Arial", 11.25F);
             this.tbAuthor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.tbAuthor.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbAuthor.Location = new System.Drawing.Point(398, 278);
+            this.tbAuthor.Location = new System.Drawing.Point(395, 278);
             this.tbAuthor.Name = "tbAuthor";
             this.tbAuthor.PasswordChar = '\0';
             this.tbAuthor.PlaceholderText = "Nhập tên tác giả";
@@ -272,7 +272,7 @@ namespace DoAnPBL3
             this.tbIDBook.Font = new System.Drawing.Font("Arial", 11.25F);
             this.tbIDBook.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.tbIDBook.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbIDBook.Location = new System.Drawing.Point(398, 81);
+            this.tbIDBook.Location = new System.Drawing.Point(395, 81);
             this.tbIDBook.Name = "tbIDBook";
             this.tbIDBook.PasswordChar = '\0';
             this.tbIDBook.PlaceholderText = "Nhập mã sách";
@@ -344,7 +344,7 @@ namespace DoAnPBL3
             // 
             this.msgValidateAuthor.AutoSize = true;
             this.msgValidateAuthor.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.msgValidateAuthor.Location = new System.Drawing.Point(397, 304);
+            this.msgValidateAuthor.Location = new System.Drawing.Point(397, 311);
             this.msgValidateAuthor.Name = "msgValidateAuthor";
             this.msgValidateAuthor.Size = new System.Drawing.Size(0, 16);
             this.msgValidateAuthor.TabIndex = 51;
@@ -540,7 +540,7 @@ namespace DoAnPBL3
             this.tbPublishDate.Font = new System.Drawing.Font("Arial", 11.25F);
             this.tbPublishDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.tbPublishDate.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbPublishDate.Location = new System.Drawing.Point(398, 213);
+            this.tbPublishDate.Location = new System.Drawing.Point(395, 213);
             this.tbPublishDate.Name = "tbPublishDate";
             this.tbPublishDate.PasswordChar = '\0';
             this.tbPublishDate.PlaceholderText = "Nhập ngày xuất bản";
@@ -565,7 +565,7 @@ namespace DoAnPBL3
             this.tbNameBook.Font = new System.Drawing.Font("Arial", 11.25F);
             this.tbNameBook.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.tbNameBook.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbNameBook.Location = new System.Drawing.Point(398, 148);
+            this.tbNameBook.Location = new System.Drawing.Point(395, 148);
             this.tbNameBook.Name = "tbNameBook";
             this.tbNameBook.PasswordChar = '\0';
             this.tbNameBook.PlaceholderText = "Nhập tên sách";

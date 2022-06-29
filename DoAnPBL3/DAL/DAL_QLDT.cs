@@ -27,5 +27,44 @@ namespace DoAnPBL3.DAL
         {
 
         }
+
+        public int GetNumCustomers()
+        {
+            using (BookStoreContext db = new BookStoreContext())
+            {
+                return db.Customers.Count();
+            }
+        }
+        
+        public int GetNumSellBooks()
+        {
+            using (BookStoreContext db = new BookStoreContext())
+            {
+                return db.OrderDetails
+                    .Select(book => book.Quantity)
+                    .Sum();
+            }
+        }
+
+        public int GetNumRemainingBooks()
+        {
+            using (BookStoreContext db = new BookStoreContext())
+            {
+                return db.Books
+                    .Select(book => book.Quantity)
+                    .Sum();
+            }
+        }
+
+        public int GetNumOrders(DateTime startDate, DateTime endDate)
+        {
+            using (BookStoreContext db = new BookStoreContext())
+            {
+                return db.Orders
+                    .Where(order => order.OrderDate >= startDate)
+                    .Where(order => order.OrderDate <= endDate)
+                    .Count();
+            }
+        }
     }
 }

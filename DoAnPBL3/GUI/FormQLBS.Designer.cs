@@ -29,26 +29,38 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormQLBS));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.xuiSegmentBS = new XanderUI.XUISegment();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormQLBS));
             this.englishBook = new System.Windows.Forms.Label();
             this.lblEnglishBook = new System.Windows.Forms.Label();
             this.vietnameseBook = new System.Windows.Forms.Label();
             this.lblVietnameseBook = new System.Windows.Forms.Label();
             this.totalBook = new System.Windows.Forms.Label();
             this.lblTotalBook = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnTKS = new Guna.UI2.WinForms.Guna2Button();
-            this.btnSXS = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvQLBS = new Guna.UI2.WinForms.Guna2DataGridView();
             this.panelHeader = new System.Windows.Forms.Panel();
+            this.lblSort = new System.Windows.Forms.Label();
+            this.cbbCritiaDetail = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cbbCriteria = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.btnFind = new FontAwesome.Sharp.IconButton();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnSXS = new FontAwesome.Sharp.IconButton();
+            this.btnTKS = new Guna.UI2.WinForms.Guna2Button();
+            this.ID_Book = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NameBook = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PublishDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NameAuthor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NameLanguage = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NamePublisher = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NameGenre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rjtbTKS = new DoAnPBL3.RJTextBox();
             this.rjDropDownMenuSXS = new DoAnPBL3.RJDropDownMenu(this.components);
             this.chữCáiTăngDầnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -59,40 +71,14 @@
             this.mứcĐộBánChạyGiảmDầnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sốLượngSáchHiệnCóTăngDầnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sốLượngSáchHiệnCóGiảmDầnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ID_Book = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NameBook = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PublishDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NameAuthor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NameLanguage = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NameGenre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQLBS)).BeginInit();
             this.panelHeader.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.rjDropDownMenuSXS.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // xuiSegmentBS
-            // 
-            this.xuiSegmentBS.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.xuiSegmentBS.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.xuiSegmentBS.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xuiSegmentBS.Items = "Tất cả, Tiếng Việt, Tiếng Anh";
-            this.xuiSegmentBS.Location = new System.Drawing.Point(513, 130);
-            this.xuiSegmentBS.Name = "xuiSegmentBS";
-            this.xuiSegmentBS.SegmentActiveTextColor = System.Drawing.Color.HotPink;
-            this.xuiSegmentBS.SegmentBackColor = System.Drawing.Color.SlateBlue;
-            this.xuiSegmentBS.SegmentColor = System.Drawing.Color.DarkMagenta;
-            this.xuiSegmentBS.SegmentInactiveTextColor = System.Drawing.Color.White;
-            this.xuiSegmentBS.SegmentStyle = XanderUI.XUISegment.Style.Material;
-            this.xuiSegmentBS.SelectedIndex = 0;
-            this.xuiSegmentBS.Size = new System.Drawing.Size(314, 34);
-            this.xuiSegmentBS.TabIndex = 21;
-            this.xuiSegmentBS.Click += new System.EventHandler(this.XuiSegmentBS_Click);
             // 
             // englishBook
             // 
@@ -170,82 +156,6 @@
             this.lblTotalBook.TabIndex = 30;
             this.lblTotalBook.Text = "Tổng số sách đang bán";
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(197, 19);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(38, 27);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 38;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = global::DoAnPBL3.Properties.Resources.united_kingdom_flag;
-            this.pictureBox1.Location = new System.Drawing.Point(880, 19);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(38, 27);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 37;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox2.Image = global::DoAnPBL3.Properties.Resources.vietnam_flag;
-            this.pictureBox2.Location = new System.Drawing.Point(523, 19);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(38, 27);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 36;
-            this.pictureBox2.TabStop = false;
-            // 
-            // btnTKS
-            // 
-            this.btnTKS.BorderRadius = 15;
-            this.btnTKS.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnTKS.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnTKS.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnTKS.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnTKS.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
-            this.btnTKS.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnTKS.ForeColor = System.Drawing.Color.White;
-            this.btnTKS.Image = global::DoAnPBL3.Properties.Resources.icons8_search_20px;
-            this.btnTKS.Location = new System.Drawing.Point(294, 133);
-            this.btnTKS.Name = "btnTKS";
-            this.btnTKS.Size = new System.Drawing.Size(141, 31);
-            this.btnTKS.TabIndex = 22;
-            this.btnTKS.Text = "Tìm kiếm";
-            this.btnTKS.Click += new System.EventHandler(this.BtnTKS_Click);
-            // 
-            // btnSXS
-            // 
-            this.btnSXS.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnSXS.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnSXS.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSXS.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
-            this.btnSXS.FlatAppearance.BorderSize = 0;
-            this.btnSXS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSXS.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSXS.ForeColor = System.Drawing.Color.White;
-            this.btnSXS.IconChar = FontAwesome.Sharp.IconChar.SortAmountDownAlt;
-            this.btnSXS.IconColor = System.Drawing.Color.White;
-            this.btnSXS.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSXS.IconSize = 30;
-            this.btnSXS.Location = new System.Drawing.Point(0, 2);
-            this.btnSXS.Name = "btnSXS";
-            this.btnSXS.Size = new System.Drawing.Size(142, 47);
-            this.btnSXS.TabIndex = 12;
-            this.btnSXS.Text = "Sắp xếp";
-            this.btnSXS.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSXS.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSXS.UseVisualStyleBackColor = false;
-            this.btnSXS.Click += new System.EventHandler(this.BtnSXS_Click);
-            this.btnSXS.MouseEnter += new System.EventHandler(this.BtnSXS_MouseEnter);
-            this.btnSXS.MouseLeave += new System.EventHandler(this.BtnSXS_MouseLeave);
-            // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -287,6 +197,7 @@
             this.PublishDate,
             this.NameAuthor,
             this.NameLanguage,
+            this.NamePublisher,
             this.NameGenre,
             this.Price,
             this.Quantity});
@@ -356,6 +267,243 @@
             this.panelHeader.Name = "panelHeader";
             this.panelHeader.Size = new System.Drawing.Size(957, 95);
             this.panelHeader.TabIndex = 41;
+            // 
+            // lblSort
+            // 
+            this.lblSort.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblSort.AutoSize = true;
+            this.lblSort.BackColor = System.Drawing.Color.Transparent;
+            this.lblSort.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSort.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
+            this.lblSort.Location = new System.Drawing.Point(456, 138);
+            this.lblSort.Name = "lblSort";
+            this.lblSort.Size = new System.Drawing.Size(31, 16);
+            this.lblSort.TabIndex = 43;
+            this.lblSort.Text = "Lọc";
+            // 
+            // cbbCritiaDetail
+            // 
+            this.cbbCritiaDetail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbbCritiaDetail.BackColor = System.Drawing.Color.Transparent;
+            this.cbbCritiaDetail.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbCritiaDetail.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbCritiaDetail.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbCritiaDetail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbCritiaDetail.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbbCritiaDetail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbbCritiaDetail.ItemHeight = 30;
+            this.cbbCritiaDetail.ItemsAppearance.ForeColor = System.Drawing.Color.Black;
+            this.cbbCritiaDetail.ItemsAppearance.SelectedBackColor = System.Drawing.Color.Gainsboro;
+            this.cbbCritiaDetail.Location = new System.Drawing.Point(649, 128);
+            this.cbbCritiaDetail.Name = "cbbCritiaDetail";
+            this.cbbCritiaDetail.Size = new System.Drawing.Size(96, 36);
+            this.cbbCritiaDetail.TabIndex = 42;
+            this.cbbCritiaDetail.SelectedIndexChanged += new System.EventHandler(this.CbbCritiaDetail_SelectedIndexChanged);
+            // 
+            // cbbCriteria
+            // 
+            this.cbbCriteria.BackColor = System.Drawing.Color.Transparent;
+            this.cbbCriteria.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbCriteria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbCriteria.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbCriteria.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbCriteria.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbbCriteria.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbbCriteria.ItemHeight = 30;
+            this.cbbCriteria.Items.AddRange(new object[] {
+            "Ngôn ngữ",
+            "Nhà xuất bản",
+            "Thể loại"});
+            this.cbbCriteria.ItemsAppearance.ForeColor = System.Drawing.Color.Black;
+            this.cbbCriteria.ItemsAppearance.SelectedBackColor = System.Drawing.Color.Gainsboro;
+            this.cbbCriteria.Location = new System.Drawing.Point(493, 128);
+            this.cbbCriteria.Name = "cbbCriteria";
+            this.cbbCriteria.Size = new System.Drawing.Size(150, 36);
+            this.cbbCriteria.TabIndex = 42;
+            this.cbbCriteria.SelectedIndexChanged += new System.EventHandler(this.CbbCriteria_SelectedIndexChanged);
+            // 
+            // btnFind
+            // 
+            this.btnFind.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFind.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnFind.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFind.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
+            this.btnFind.FlatAppearance.BorderSize = 0;
+            this.btnFind.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFind.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFind.ForeColor = System.Drawing.Color.White;
+            this.btnFind.IconChar = FontAwesome.Sharp.IconChar.SortAmountDownAlt;
+            this.btnFind.IconColor = System.Drawing.Color.White;
+            this.btnFind.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnFind.IconSize = 30;
+            this.btnFind.Location = new System.Drawing.Point(751, 128);
+            this.btnFind.Name = "btnFind";
+            this.btnFind.Size = new System.Drawing.Size(77, 36);
+            this.btnFind.TabIndex = 44;
+            this.btnFind.Text = "OK";
+            this.btnFind.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnFind.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnFind.UseVisualStyleBackColor = false;
+            this.btnFind.Click += new System.EventHandler(this.BtnFind_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(197, 19);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(38, 27);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 38;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = global::DoAnPBL3.Properties.Resources.united_kingdom_flag;
+            this.pictureBox1.Location = new System.Drawing.Point(880, 19);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(38, 27);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 37;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureBox2.Image = global::DoAnPBL3.Properties.Resources.vietnam_flag;
+            this.pictureBox2.Location = new System.Drawing.Point(523, 19);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(38, 27);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 36;
+            this.pictureBox2.TabStop = false;
+            // 
+            // btnSXS
+            // 
+            this.btnSXS.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnSXS.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnSXS.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSXS.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
+            this.btnSXS.FlatAppearance.BorderSize = 0;
+            this.btnSXS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSXS.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSXS.ForeColor = System.Drawing.Color.White;
+            this.btnSXS.IconChar = FontAwesome.Sharp.IconChar.SortAmountDownAlt;
+            this.btnSXS.IconColor = System.Drawing.Color.White;
+            this.btnSXS.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSXS.IconSize = 30;
+            this.btnSXS.Location = new System.Drawing.Point(0, 2);
+            this.btnSXS.Name = "btnSXS";
+            this.btnSXS.Size = new System.Drawing.Size(142, 47);
+            this.btnSXS.TabIndex = 12;
+            this.btnSXS.Text = "Sắp xếp";
+            this.btnSXS.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSXS.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSXS.UseVisualStyleBackColor = false;
+            this.btnSXS.Click += new System.EventHandler(this.BtnSXS_Click);
+            this.btnSXS.MouseEnter += new System.EventHandler(this.BtnSXS_MouseEnter);
+            this.btnSXS.MouseLeave += new System.EventHandler(this.BtnSXS_MouseLeave);
+            // 
+            // btnTKS
+            // 
+            this.btnTKS.BorderRadius = 15;
+            this.btnTKS.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnTKS.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnTKS.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnTKS.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnTKS.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
+            this.btnTKS.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnTKS.ForeColor = System.Drawing.Color.White;
+            this.btnTKS.Image = global::DoAnPBL3.Properties.Resources.icons8_search_20px;
+            this.btnTKS.Location = new System.Drawing.Point(294, 133);
+            this.btnTKS.Name = "btnTKS";
+            this.btnTKS.Size = new System.Drawing.Size(141, 31);
+            this.btnTKS.TabIndex = 22;
+            this.btnTKS.Text = "Tìm kiếm";
+            this.btnTKS.Click += new System.EventHandler(this.BtnTKS_Click);
+            // 
+            // ID_Book
+            // 
+            this.ID_Book.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ID_Book.DataPropertyName = "ID_Book";
+            this.ID_Book.FillWeight = 73.05836F;
+            this.ID_Book.HeaderText = "ID";
+            this.ID_Book.Name = "ID_Book";
+            this.ID_Book.ReadOnly = true;
+            // 
+            // NameBook
+            // 
+            this.NameBook.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NameBook.DataPropertyName = "NameBook";
+            this.NameBook.FillWeight = 151.5565F;
+            this.NameBook.HeaderText = "Tên sách";
+            this.NameBook.Name = "NameBook";
+            this.NameBook.ReadOnly = true;
+            // 
+            // PublishDate
+            // 
+            this.PublishDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.PublishDate.DataPropertyName = "PublishDate";
+            this.PublishDate.FillWeight = 70.97385F;
+            this.PublishDate.HeaderText = "Ngày xuất bản";
+            this.PublishDate.Name = "PublishDate";
+            this.PublishDate.ReadOnly = true;
+            // 
+            // NameAuthor
+            // 
+            this.NameAuthor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NameAuthor.DataPropertyName = "NameAuthor";
+            this.NameAuthor.FillWeight = 118.0675F;
+            this.NameAuthor.HeaderText = "Tác giả";
+            this.NameAuthor.Name = "NameAuthor";
+            this.NameAuthor.ReadOnly = true;
+            // 
+            // NameLanguage
+            // 
+            this.NameLanguage.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NameLanguage.DataPropertyName = "NameLanguage";
+            this.NameLanguage.FillWeight = 118.0675F;
+            this.NameLanguage.HeaderText = "Ngôn ngữ";
+            this.NameLanguage.Name = "NameLanguage";
+            this.NameLanguage.ReadOnly = true;
+            // 
+            // NamePublisher
+            // 
+            this.NamePublisher.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NamePublisher.DataPropertyName = "NamePublisher";
+            this.NamePublisher.FillWeight = 116.6275F;
+            this.NamePublisher.HeaderText = "Nhà xuất bản";
+            this.NamePublisher.Name = "NamePublisher";
+            this.NamePublisher.ReadOnly = true;
+            // 
+            // NameGenre
+            // 
+            this.NameGenre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NameGenre.DataPropertyName = "NameGenre";
+            this.NameGenre.FillWeight = 92.63647F;
+            this.NameGenre.HeaderText = "Thể loại";
+            this.NameGenre.Name = "NameGenre";
+            this.NameGenre.ReadOnly = true;
+            // 
+            // Price
+            // 
+            this.Price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Price.DataPropertyName = "Price";
+            this.Price.FillWeight = 76.77856F;
+            this.Price.HeaderText = "Giá tiền";
+            this.Price.Name = "Price";
+            this.Price.ReadOnly = true;
+            // 
+            // Quantity
+            // 
+            this.Quantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Quantity.DataPropertyName = "Quantity";
+            this.Quantity.FillWeight = 82.2335F;
+            this.Quantity.HeaderText = "Số lượng";
+            this.Quantity.Name = "Quantity";
+            this.Quantity.ReadOnly = true;
             // 
             // rjtbTKS
             // 
@@ -474,89 +622,20 @@
             this.sốLượngSáchHiệnCóGiảmDầnToolStripMenuItem.Text = "Số lượng sách hiện có giảm dần";
             this.sốLượngSáchHiệnCóGiảmDầnToolStripMenuItem.Click += new System.EventHandler(this.SốLượngSáchHiệnCóGiảmDầnToolStripMenuItem_Click);
             // 
-            // ID_Book
-            // 
-            this.ID_Book.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ID_Book.DataPropertyName = "ID_Book";
-            this.ID_Book.FillWeight = 62.64247F;
-            this.ID_Book.HeaderText = "ID";
-            this.ID_Book.Name = "ID_Book";
-            this.ID_Book.ReadOnly = true;
-            // 
-            // NameBook
-            // 
-            this.NameBook.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.NameBook.DataPropertyName = "NameBook";
-            this.NameBook.FillWeight = 129.9492F;
-            this.NameBook.HeaderText = "Tên sách";
-            this.NameBook.Name = "NameBook";
-            this.NameBook.ReadOnly = true;
-            // 
-            // PublishDate
-            // 
-            this.PublishDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.PublishDate.DataPropertyName = "PublishDate";
-            this.PublishDate.FillWeight = 101.2347F;
-            this.PublishDate.HeaderText = "Ngày phát hành";
-            this.PublishDate.Name = "PublishDate";
-            this.PublishDate.ReadOnly = true;
-            // 
-            // NameAuthor
-            // 
-            this.NameAuthor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.NameAuthor.DataPropertyName = "NameAuthor";
-            this.NameAuthor.FillWeight = 101.2347F;
-            this.NameAuthor.HeaderText = "Tác giả";
-            this.NameAuthor.Name = "NameAuthor";
-            this.NameAuthor.ReadOnly = true;
-            // 
-            // NameLanguage
-            // 
-            this.NameLanguage.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.NameLanguage.DataPropertyName = "NameLanguage";
-            this.NameLanguage.FillWeight = 101.2347F;
-            this.NameLanguage.HeaderText = "Ngôn ngữ";
-            this.NameLanguage.Name = "NameLanguage";
-            this.NameLanguage.ReadOnly = true;
-            // 
-            // NameGenre
-            // 
-            this.NameGenre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.NameGenre.DataPropertyName = "NameGenre";
-            this.NameGenre.FillWeight = 101.2347F;
-            this.NameGenre.HeaderText = "Thể loại";
-            this.NameGenre.Name = "NameGenre";
-            this.NameGenre.ReadOnly = true;
-            // 
-            // Price
-            // 
-            this.Price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Price.DataPropertyName = "Price";
-            this.Price.FillWeight = 101.2347F;
-            this.Price.HeaderText = "Giá tiền";
-            this.Price.Name = "Price";
-            this.Price.ReadOnly = true;
-            // 
-            // Quantity
-            // 
-            this.Quantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Quantity.DataPropertyName = "Quantity";
-            this.Quantity.FillWeight = 101.2347F;
-            this.Quantity.HeaderText = "Số lượng";
-            this.Quantity.Name = "Quantity";
-            this.Quantity.ReadOnly = true;
-            // 
             // FormQLBS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(980, 585);
+            this.Controls.Add(this.btnFind);
+            this.Controls.Add(this.lblSort);
+            this.Controls.Add(this.cbbCritiaDetail);
+            this.Controls.Add(this.cbbCriteria);
             this.Controls.Add(this.panelHeader);
             this.Controls.Add(this.dgvQLBS);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnTKS);
-            this.Controls.Add(this.xuiSegmentBS);
             this.Controls.Add(this.rjtbTKS);
             this.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.Gainsboro;
@@ -565,15 +644,16 @@
             this.Name = "FormQLBS";
             this.Text = "Quản lý bán sách";
             this.Load += new System.EventHandler(this.FormQLBS_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvQLBS)).EndInit();
             this.panelHeader.ResumeLayout(false);
             this.panelHeader.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.rjDropDownMenuSXS.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -587,7 +667,6 @@
         private System.Windows.Forms.ToolStripMenuItem giáMuaSáchGiảmDầnToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sốLượngSáchHiệnCóTăngDầnToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sốLượngSáchHiệnCóGiảmDầnToolStripMenuItem;
-        private XanderUI.XUISegment xuiSegmentBS;
         private Guna.UI2.WinForms.Guna2Button btnTKS;
         private System.Windows.Forms.Label englishBook;
         private System.Windows.Forms.Label lblEnglishBook;
@@ -603,11 +682,16 @@
         private System.Windows.Forms.Panel panelHeader;
         private System.Windows.Forms.ToolStripMenuItem mứcĐộBánChạyTăngDầnToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mứcĐộBánChạyGiảmDầnToolStripMenuItem;
+        private System.Windows.Forms.Label lblSort;
+        private Guna.UI2.WinForms.Guna2ComboBox cbbCritiaDetail;
+        private FontAwesome.Sharp.IconButton btnFind;
+        private Guna.UI2.WinForms.Guna2ComboBox cbbCriteria;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_Book;
         private System.Windows.Forms.DataGridViewTextBoxColumn NameBook;
         private System.Windows.Forms.DataGridViewTextBoxColumn PublishDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn NameAuthor;
         private System.Windows.Forms.DataGridViewTextBoxColumn NameLanguage;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NamePublisher;
         private System.Windows.Forms.DataGridViewTextBoxColumn NameGenre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;

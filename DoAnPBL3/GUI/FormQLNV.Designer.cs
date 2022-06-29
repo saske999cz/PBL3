@@ -505,7 +505,7 @@
             // 
             this.ID_Employee.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.ID_Employee.DataPropertyName = "ID_Employee";
-            this.ID_Employee.FillWeight = 64.97462F;
+            this.ID_Employee.FillWeight = 61.65406F;
             this.ID_Employee.HeaderText = "ID";
             this.ID_Employee.Name = "ID_Employee";
             this.ID_Employee.ReadOnly = true;
@@ -514,7 +514,7 @@
             // 
             this.FullNameEmployee.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.FullNameEmployee.DataPropertyName = "FullNameEmployee";
-            this.FullNameEmployee.FillWeight = 105.0036F;
+            this.FullNameEmployee.FillWeight = 120.9246F;
             this.FullNameEmployee.HeaderText = "Họ và tên";
             this.FullNameEmployee.Name = "FullNameEmployee";
             this.FullNameEmployee.ReadOnly = true;
@@ -523,7 +523,7 @@
             // 
             this.Email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Email.DataPropertyName = "Email";
-            this.Email.FillWeight = 105.0036F;
+            this.Email.FillWeight = 146.5077F;
             this.Email.HeaderText = "Email";
             this.Email.Name = "Email";
             this.Email.ReadOnly = true;
@@ -532,7 +532,7 @@
             // 
             this.DateOfBirth.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.DateOfBirth.DataPropertyName = "DateOfBirth";
-            this.DateOfBirth.FillWeight = 105.0036F;
+            this.DateOfBirth.FillWeight = 91.75087F;
             this.DateOfBirth.HeaderText = "Ngày sinh";
             this.DateOfBirth.Name = "DateOfBirth";
             this.DateOfBirth.ReadOnly = true;
@@ -541,7 +541,7 @@
             // 
             this.Gender.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Gender.DataPropertyName = "Gender";
-            this.Gender.FillWeight = 105.0036F;
+            this.Gender.FillWeight = 83.07114F;
             this.Gender.HeaderText = "Giới tính";
             this.Gender.Name = "Gender";
             this.Gender.ReadOnly = true;
@@ -550,7 +550,7 @@
             // 
             this.ID_Card.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.ID_Card.DataPropertyName = "Id_Card";
-            this.ID_Card.FillWeight = 105.0036F;
+            this.ID_Card.FillWeight = 83.07114F;
             this.ID_Card.HeaderText = "CMND";
             this.ID_Card.Name = "ID_Card";
             this.ID_Card.ReadOnly = true;
@@ -559,8 +559,8 @@
             // 
             this.Phone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Phone.DataPropertyName = "Phone";
-            this.Phone.FillWeight = 105.0036F;
-            this.Phone.HeaderText = "Số điện thoại";
+            this.Phone.FillWeight = 83.07114F;
+            this.Phone.HeaderText = "SĐT";
             this.Phone.Name = "Phone";
             this.Phone.ReadOnly = true;
             // 
@@ -568,7 +568,7 @@
             // 
             this.Address.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Address.DataPropertyName = "Address";
-            this.Address.FillWeight = 105.0036F;
+            this.Address.FillWeight = 129.9492F;
             this.Address.HeaderText = "Địa chỉ";
             this.Address.Name = "Address";
             this.Address.ReadOnly = true;

@@ -265,12 +265,6 @@
     <Compile Include="GUI\FormSuaSach.Designer.cs">
       <DependentUpon>FormSuaSach.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\test.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\test.Designer.cs">
-      <DependentUpon>test.cs</DependentUpon>
-    </Compile>
     <Compile Include="InitialData.cs" />
     <Compile Include="GUI\FormAddKH.cs">
       <SubType>Form</SubType>
@@ -593,9 +587,6 @@
     <EmbeddedResource Include="GUI\MainMenuQTV.resx">
       <DependentUpon>MainMenuQTV.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\test.resx">
-      <DependentUpon>test.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -620,6 +611,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="books11.ico" />
+    <None Include="Img\Icon\male employee.png" />
     <None Include="Img\Icon\pencil_60px.png" />
     <None Include="Img\Icon\multiply_60px.png" />
     <None Include="Img\Icon\icons8-shopping-cart-52.png" />
@@ -804,7 +796,6 @@
     <None Include="Img\Icon\test 2_digital_art_x4_cleanup.jpg" />
     <None Include="Img\Icon\test background.jpg" />
     <None Include="Img\Icon\test2.png" />
-    <None Include="Img\Icon\test5.png" />
     <None Include="Img\Icon\united-kingdom flag.png" />
     <None Include="Img\Icon\user icon.jpg" />
     <None Include="Img\Icon\user info.png" />

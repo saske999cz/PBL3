@@ -35,7 +35,6 @@ namespace DoAnPBL3
             {
                 case "Admin":
                     panelContainer.BackColor = Color.FromArgb(24, 37, 65);
-                    lblIDNV.ForeColor = Color.WhiteSmoke;
                     lblNameNV.ForeColor = Color.WhiteSmoke;
                     lblEmail.ForeColor = Color.WhiteSmoke;
                     lblBD.ForeColor = Color.WhiteSmoke;
@@ -44,8 +43,6 @@ namespace DoAnPBL3
                     lblSDT.ForeColor = Color.WhiteSmoke;
                     lblCMND.ForeColor = Color.WhiteSmoke;
                     lblAddress.ForeColor = Color.WhiteSmoke;
-                    tbIDNV.FillColor = Color.FromArgb(15, 27, 57);
-                    tbIDNV.ForeColor = Color.FromArgb(193, 200, 207);
                     tbNameNV.FillColor = Color.FromArgb(15, 27, 57);
                     tbNameNV.ForeColor = Color.FromArgb(193, 200, 207);
                     tbEmailNV.FillColor = Color.FromArgb(15, 27, 57);
@@ -68,7 +65,6 @@ namespace DoAnPBL3
                     break;
                 case "Dark":
                     panelContainer.BackColor = Color.FromArgb(32, 32, 32);
-                    lblIDNV.ForeColor = Color.WhiteSmoke;
                     lblNameNV.ForeColor = Color.WhiteSmoke;
                     lblEmail.ForeColor = Color.WhiteSmoke;
                     lblBD.ForeColor = Color.WhiteSmoke;
@@ -77,8 +73,6 @@ namespace DoAnPBL3
                     lblSDT.ForeColor = Color.WhiteSmoke;
                     lblCMND.ForeColor = Color.WhiteSmoke;
                     lblAddress.ForeColor = Color.WhiteSmoke;
-                    tbIDNV.FillColor = Color.FromArgb(40, 35, 40);
-                    tbIDNV.ForeColor = Color.FromArgb(193, 200, 207);
                     tbNameNV.FillColor = Color.FromArgb(40, 35, 40);
                     tbNameNV.ForeColor = Color.FromArgb(193, 200, 207);
                     tbEmailNV.FillColor = Color.FromArgb(40, 35, 40);
@@ -101,7 +95,6 @@ namespace DoAnPBL3
                     break;
                 case "Light":
                     panelContainer.BackColor = Color.Gainsboro;
-                    lblIDNV.ForeColor = Color.Black;
                     lblNameNV.ForeColor = Color.Black;
                     lblEmail.ForeColor = Color.Black;
                     lblBD.ForeColor = Color.Black;
@@ -110,9 +103,6 @@ namespace DoAnPBL3
                     lblSDT.ForeColor = Color.Black;
                     lblCMND.ForeColor = Color.Black;
                     lblAddress.ForeColor = Color.Black;
-                    tbIDNV.FillColor = Color.Silver;
-                    tbIDNV.ForeColor = Color.Black;
-                    tbIDNV.PlaceholderForeColor = Color.Black;
                     tbNameNV.FillColor = Color.Silver;
                     tbNameNV.ForeColor = Color.Black;
                     tbNameNV.PlaceholderForeColor = Color.Black;
@@ -374,7 +364,6 @@ namespace DoAnPBL3
         private void RjbtnCancel_Click(object sender, EventArgs e)
         {
             string id, name, email, dateOfBirth, startDate, phone, idCard, address;
-            id = tbIDNV.Text;
             name = tbNameNV.Text;
             email = tbEmailNV.Text;
             dateOfBirth = tbBD.Text;
@@ -382,7 +371,7 @@ namespace DoAnPBL3
             phone = tbSDTNV.Text;
             idCard = tbCMNDNV.Text;
             address = tbAddressNV.Text;
-            if (id != "" || name != "" || email != "" || dateOfBirth != "" || startDate != ""
+            if (name != "" || email != "" || dateOfBirth != "" || startDate != ""
                 || cbGenderNV.SelectedItem != null || phone != "" || idCard != "" || address != "" || avatar.Image != null)
             {
                 DialogResult result = RJMessageBox.Show("Dữ liệu chưa được lưu. Bạn vẫn muốn thoát?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);

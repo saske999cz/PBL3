@@ -45,6 +45,57 @@ namespace DoAnPBL3.DAL
             }
         }
 
+        public List<Book> GetListBooksByIDLanguage(int ID_Language)
+        {
+            using (BookStoreContext db = new BookStoreContext())
+            {
+                List<Book> listBooks = new List<Book>();
+
+                listBooks = db.Books
+                    .Where(book => book.ID_Language == ID_Language)
+                    .Select(book => book)
+                    .ToList();
+                if (listBooks.Count > 0)
+                    return listBooks;
+                else
+                    return null;
+            }
+        }
+
+        public List<Book> GetListBooksByIDPublisher(int ID_Publisher)
+        {
+            using (BookStoreContext db = new BookStoreContext())
+            {
+                List<Book> listBooks = new List<Book>();
+
+                listBooks = db.Books
+                    .Where(book => book.ID_Publisher == ID_Publisher)
+                    .Select(book => book)
+                    .ToList();
+                if (listBooks.Count > 0)
+                    return listBooks;
+                else
+                    return null;
+            }
+        }
+
+        public List<Book> GetListBooksByIDGenre(int ID_Genre)
+        {
+            using (BookStoreContext db = new BookStoreContext())
+            {
+                List<Book> listBooks = new List<Book>();
+
+                listBooks = db.Books
+                    .Where(book => book.ID_Genre == ID_Genre)
+                    .Select(book => book)
+                    .ToList();
+                if (listBooks.Count > 0)
+                    return listBooks;
+                else
+                    return null;
+            }
+        }
+
         public List<Book> GetListVietnameseBooks()
         {
             using (BookStoreContext db = new BookStoreContext())

@@ -423,7 +423,7 @@ namespace DoAnPBL3
             this.iconPictureBox6.IconColor = System.Drawing.Color.Gainsboro;
             this.iconPictureBox6.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPictureBox6.IconSize = 50;
-            this.iconPictureBox6.Location = new System.Drawing.Point(463, 536);
+            this.iconPictureBox6.Location = new System.Drawing.Point(389, 535);
             this.iconPictureBox6.Margin = new System.Windows.Forms.Padding(2);
             this.iconPictureBox6.Name = "iconPictureBox6";
             this.iconPictureBox6.Padding = new System.Windows.Forms.Padding(4, 2, 0, 0);
@@ -443,7 +443,7 @@ namespace DoAnPBL3
             this.iconPictureBox5.IconColor = System.Drawing.Color.Gainsboro;
             this.iconPictureBox5.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPictureBox5.IconSize = 46;
-            this.iconPictureBox5.Location = new System.Drawing.Point(401, 536);
+            this.iconPictureBox5.Location = new System.Drawing.Point(339, 536);
             this.iconPictureBox5.Margin = new System.Windows.Forms.Padding(2);
             this.iconPictureBox5.Name = "iconPictureBox5";
             this.iconPictureBox5.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
@@ -463,7 +463,7 @@ namespace DoAnPBL3
             this.iconPictureBox3.IconColor = System.Drawing.Color.Gainsboro;
             this.iconPictureBox3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPictureBox3.IconSize = 46;
-            this.iconPictureBox3.Location = new System.Drawing.Point(337, 536);
+            this.iconPictureBox3.Location = new System.Drawing.Point(289, 536);
             this.iconPictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.iconPictureBox3.Name = "iconPictureBox3";
             this.iconPictureBox3.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
@@ -483,7 +483,7 @@ namespace DoAnPBL3
             this.iconPictureBox4.IconColor = System.Drawing.Color.Gainsboro;
             this.iconPictureBox4.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPictureBox4.IconSize = 46;
-            this.iconPictureBox4.Location = new System.Drawing.Point(270, 536);
+            this.iconPictureBox4.Location = new System.Drawing.Point(239, 536);
             this.iconPictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.iconPictureBox4.Name = "iconPictureBox4";
             this.iconPictureBox4.Size = new System.Drawing.Size(46, 47);
@@ -524,12 +524,12 @@ namespace DoAnPBL3
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label2.Location = new System.Drawing.Point(23, 566);
+            this.label2.Location = new System.Drawing.Point(21, 564);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(178, 12);
+            this.label2.Size = new System.Drawing.Size(212, 13);
             this.label2.TabIndex = 9;
             this.label2.Text = "Giáo viên hướng dẫn: Nguyễn Thị Minh Hỷ ";
             // 
@@ -553,12 +553,12 @@ namespace DoAnPBL3
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label1.Location = new System.Drawing.Point(546, 566);
+            this.label1.Location = new System.Drawing.Point(461, 564);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(412, 12);
+            this.label1.Size = new System.Drawing.Size(499, 13);
             this.label1.TabIndex = 6;
             this.label1.Text = "Developed by Group 2: Nguyễn Khắc Thái, Lê Hoàng Long, Nguyễn Trọng Nghĩa and Đào" +
     " Thủy Trang";

@@ -35,6 +35,8 @@ namespace DoAnPBL3
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panelContainer = new System.Windows.Forms.Panel();
+            this.tbEndDate = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblEndDate = new System.Windows.Forms.Label();
             this.tbStartDate = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblStartDate = new System.Windows.Forms.Label();
             this.tbIDNV = new Guna.UI2.WinForms.Guna2TextBox();
@@ -60,8 +62,6 @@ namespace DoAnPBL3
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2DragControl2 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.tbEndDate = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lblEndDate = new System.Windows.Forms.Label();
             this.panelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelContainer.SuspendLayout();
@@ -136,6 +136,42 @@ namespace DoAnPBL3
             this.panelContainer.Name = "panelContainer";
             this.panelContainer.Size = new System.Drawing.Size(812, 733);
             this.panelContainer.TabIndex = 3;
+            // 
+            // tbEndDate
+            // 
+            this.tbEndDate.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.tbEndDate.BorderRadius = 6;
+            this.tbEndDate.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbEndDate.DefaultText = "Ngày nghỉ việc";
+            this.tbEndDate.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.tbEndDate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.tbEndDate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.tbEndDate.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.tbEndDate.Enabled = false;
+            this.tbEndDate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.tbEndDate.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbEndDate.Font = new System.Drawing.Font("Arial", 11.25F);
+            this.tbEndDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.tbEndDate.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbEndDate.Location = new System.Drawing.Point(395, 350);
+            this.tbEndDate.Name = "tbEndDate";
+            this.tbEndDate.PasswordChar = '\0';
+            this.tbEndDate.PlaceholderText = "";
+            this.tbEndDate.SelectedText = "";
+            this.tbEndDate.Size = new System.Drawing.Size(409, 30);
+            this.tbEndDate.TabIndex = 58;
+            // 
+            // lblEndDate
+            // 
+            this.lblEndDate.AutoSize = true;
+            this.lblEndDate.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEndDate.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblEndDate.Location = new System.Drawing.Point(286, 356);
+            this.lblEndDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblEndDate.Name = "lblEndDate";
+            this.lblEndDate.Size = new System.Drawing.Size(112, 18);
+            this.lblEndDate.TabIndex = 57;
+            this.lblEndDate.Text = "Ngày nghỉ việc";
             // 
             // tbStartDate
             // 
@@ -394,6 +430,7 @@ namespace DoAnPBL3
             this.rjbtnOK.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.rjbtnOK.BorderRadius = 15;
             this.rjbtnOK.BorderSize = 0;
+            this.rjbtnOK.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rjbtnOK.FlatAppearance.BorderSize = 0;
             this.rjbtnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjbtnOK.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -519,42 +556,6 @@ namespace DoAnPBL3
             this.guna2DragControl2.DockIndicatorTransparencyValue = 0.6D;
             this.guna2DragControl2.TargetControl = this.panelTitleBar;
             this.guna2DragControl2.UseTransparentDrag = true;
-            // 
-            // tbEndDate
-            // 
-            this.tbEndDate.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
-            this.tbEndDate.BorderRadius = 6;
-            this.tbEndDate.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbEndDate.DefaultText = "Ngày nghỉ việc";
-            this.tbEndDate.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
-            this.tbEndDate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
-            this.tbEndDate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.tbEndDate.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.tbEndDate.Enabled = false;
-            this.tbEndDate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
-            this.tbEndDate.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbEndDate.Font = new System.Drawing.Font("Arial", 11.25F);
-            this.tbEndDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.tbEndDate.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbEndDate.Location = new System.Drawing.Point(395, 350);
-            this.tbEndDate.Name = "tbEndDate";
-            this.tbEndDate.PasswordChar = '\0';
-            this.tbEndDate.PlaceholderText = "";
-            this.tbEndDate.SelectedText = "";
-            this.tbEndDate.Size = new System.Drawing.Size(409, 30);
-            this.tbEndDate.TabIndex = 58;
-            // 
-            // lblEndDate
-            // 
-            this.lblEndDate.AutoSize = true;
-            this.lblEndDate.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEndDate.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblEndDate.Location = new System.Drawing.Point(286, 356);
-            this.lblEndDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblEndDate.Name = "lblEndDate";
-            this.lblEndDate.Size = new System.Drawing.Size(112, 18);
-            this.lblEndDate.TabIndex = 57;
-            this.lblEndDate.Text = "Ngày nghỉ việc";
             // 
             // FormTTNV
             // 

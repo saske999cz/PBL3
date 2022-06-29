@@ -1353,6 +1353,16 @@ namespace DoAnPBL3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap male_employee {
+            get {
+                object obj = ResourceManager.GetObject("male employee", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap male_employee_1 {
             get {
                 object obj = ResourceManager.GetObject("male employee 1", resourceCulture);
@@ -2326,16 +2336,6 @@ namespace DoAnPBL3.Properties {
         internal static System.Drawing.Bitmap test2 {
             get {
                 object obj = ResourceManager.GetObject("test2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap test5 {
-            get {
-                object obj = ResourceManager.GetObject("test5", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

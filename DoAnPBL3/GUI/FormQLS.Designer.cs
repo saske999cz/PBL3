@@ -31,11 +31,10 @@ namespace DoAnPBL3
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormQLS));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.xuiSegmentSach = new XanderUI.XUISegment();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.englishBook = new System.Windows.Forms.Label();
             this.lblEnglishBook = new System.Windows.Forms.Label();
             this.vietnameseBook = new System.Windows.Forms.Label();
@@ -55,42 +54,28 @@ namespace DoAnPBL3
             this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.rjtbTKS = new DoAnPBL3.RJTextBox();
-            this.dgvQLSNV = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.ID_Book = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NameBook = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PublishDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NameAuthor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NameLanguage = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NameGenre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelHeader = new System.Windows.Forms.Panel();
+            this.btnFind = new FontAwesome.Sharp.IconButton();
+            this.lblSort = new System.Windows.Forms.Label();
+            this.cbbCritiaDetail = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cbbCriteria = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.dgvQLSNV = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvQLSNV)).BeginInit();
             this.panelHeader.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvQLSNV)).BeginInit();
             this.SuspendLayout();
-            // 
-            // xuiSegmentSach
-            // 
-            this.xuiSegmentSach.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.xuiSegmentSach.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.xuiSegmentSach.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xuiSegmentSach.Items = "Tất cả, Tiếng Việt , Tiếng Anh";
-            this.xuiSegmentSach.Location = new System.Drawing.Point(511, 130);
-            this.xuiSegmentSach.Margin = new System.Windows.Forms.Padding(2);
-            this.xuiSegmentSach.Name = "xuiSegmentSach";
-            this.xuiSegmentSach.SegmentActiveTextColor = System.Drawing.SystemColors.Highlight;
-            this.xuiSegmentSach.SegmentBackColor = System.Drawing.Color.CornflowerBlue;
-            this.xuiSegmentSach.SegmentColor = System.Drawing.Color.Blue;
-            this.xuiSegmentSach.SegmentInactiveTextColor = System.Drawing.Color.White;
-            this.xuiSegmentSach.SegmentStyle = XanderUI.XUISegment.Style.Material;
-            this.xuiSegmentSach.SelectedIndex = 0;
-            this.xuiSegmentSach.Size = new System.Drawing.Size(314, 34);
-            this.xuiSegmentSach.TabIndex = 42;
-            this.xuiSegmentSach.Click += new System.EventHandler(this.XuiSegmentSach_Click);
             // 
             // englishBook
             // 
@@ -291,7 +276,6 @@ namespace DoAnPBL3
             // guna2Elipse1
             // 
             this.guna2Elipse1.BorderRadius = 5;
-            this.guna2Elipse1.TargetControl = this.xuiSegmentSach;
             // 
             // guna2Elipse2
             // 
@@ -342,14 +326,113 @@ namespace DoAnPBL3
             this.rjtbTKS.UnderlinedStyle = false;
             this.rjtbTKS.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.RjtbTKS_KeyPress);
             // 
+            // panelHeader
+            // 
+            this.panelHeader.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(57)))), ((int)(((byte)(80)))));
+            this.panelHeader.Controls.Add(this.lblEnglishBook);
+            this.panelHeader.Controls.Add(this.lblTotalBook);
+            this.panelHeader.Controls.Add(this.totalBook);
+            this.panelHeader.Controls.Add(this.pictureBox3);
+            this.panelHeader.Controls.Add(this.lblVietnameseBook);
+            this.panelHeader.Controls.Add(this.pictureBox1);
+            this.panelHeader.Controls.Add(this.vietnameseBook);
+            this.panelHeader.Controls.Add(this.pictureBox2);
+            this.panelHeader.Controls.Add(this.englishBook);
+            this.panelHeader.Location = new System.Drawing.Point(12, 12);
+            this.panelHeader.Name = "panelHeader";
+            this.panelHeader.Size = new System.Drawing.Size(957, 95);
+            this.panelHeader.TabIndex = 67;
+            // 
+            // btnFind
+            // 
+            this.btnFind.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFind.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnFind.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFind.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
+            this.btnFind.FlatAppearance.BorderSize = 0;
+            this.btnFind.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFind.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFind.ForeColor = System.Drawing.Color.White;
+            this.btnFind.IconChar = FontAwesome.Sharp.IconChar.SortAmountDownAlt;
+            this.btnFind.IconColor = System.Drawing.Color.White;
+            this.btnFind.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnFind.IconSize = 30;
+            this.btnFind.Location = new System.Drawing.Point(751, 128);
+            this.btnFind.Name = "btnFind";
+            this.btnFind.Size = new System.Drawing.Size(77, 36);
+            this.btnFind.TabIndex = 68;
+            this.btnFind.Text = "OK";
+            this.btnFind.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnFind.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnFind.UseVisualStyleBackColor = false;
+            this.btnFind.Click += new System.EventHandler(this.BtnFind_Click);
+            // 
+            // lblSort
+            // 
+            this.lblSort.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblSort.AutoSize = true;
+            this.lblSort.BackColor = System.Drawing.Color.Transparent;
+            this.lblSort.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSort.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
+            this.lblSort.Location = new System.Drawing.Point(456, 138);
+            this.lblSort.Name = "lblSort";
+            this.lblSort.Size = new System.Drawing.Size(31, 16);
+            this.lblSort.TabIndex = 67;
+            this.lblSort.Text = "Lọc";
+            // 
+            // cbbCritiaDetail
+            // 
+            this.cbbCritiaDetail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbbCritiaDetail.BackColor = System.Drawing.Color.Transparent;
+            this.cbbCritiaDetail.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbCritiaDetail.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbCritiaDetail.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbCritiaDetail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbCritiaDetail.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbbCritiaDetail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbbCritiaDetail.ItemHeight = 30;
+            this.cbbCritiaDetail.ItemsAppearance.ForeColor = System.Drawing.Color.Black;
+            this.cbbCritiaDetail.ItemsAppearance.SelectedBackColor = System.Drawing.Color.Gainsboro;
+            this.cbbCritiaDetail.Location = new System.Drawing.Point(649, 128);
+            this.cbbCritiaDetail.Name = "cbbCritiaDetail";
+            this.cbbCritiaDetail.Size = new System.Drawing.Size(96, 36);
+            this.cbbCritiaDetail.TabIndex = 65;
+            this.cbbCritiaDetail.SelectedIndexChanged += new System.EventHandler(this.CbbCritiaDetail_SelectedIndexChanged);
+            // 
+            // cbbCriteria
+            // 
+            this.cbbCriteria.BackColor = System.Drawing.Color.Transparent;
+            this.cbbCriteria.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbCriteria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbCriteria.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbCriteria.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbCriteria.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbbCriteria.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbbCriteria.ItemHeight = 30;
+            this.cbbCriteria.Items.AddRange(new object[] {
+            "Ngôn ngữ",
+            "Nhà xuất bản",
+            "Thể loại"});
+            this.cbbCriteria.ItemsAppearance.ForeColor = System.Drawing.Color.Black;
+            this.cbbCriteria.ItemsAppearance.SelectedBackColor = System.Drawing.Color.Gainsboro;
+            this.cbbCriteria.Location = new System.Drawing.Point(493, 128);
+            this.cbbCriteria.Name = "cbbCriteria";
+            this.cbbCriteria.Size = new System.Drawing.Size(150, 36);
+            this.cbbCriteria.TabIndex = 66;
+            this.cbbCriteria.SelectedIndexChanged += new System.EventHandler(this.CbbCriteria_SelectedIndexChanged);
+            // 
             // dgvQLSNV
             // 
             this.dgvQLSNV.AllowUserToAddRows = false;
             this.dgvQLSNV.AllowUserToDeleteRows = false;
             this.dgvQLSNV.AllowUserToResizeColumns = false;
             this.dgvQLSNV.AllowUserToResizeRows = false;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
-            this.dgvQLSNV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            this.dgvQLSNV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvQLSNV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -358,33 +441,34 @@ namespace DoAnPBL3
             this.dgvQLSNV.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvQLSNV.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvQLSNV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvQLSNV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvQLSNV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvQLSNV.ColumnHeadersHeight = 30;
             this.dgvQLSNV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvQLSNV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID_Book,
-            this.NameBook,
-            this.PublishDate,
-            this.NameAuthor,
-            this.NameLanguage,
-            this.NameGenre,
-            this.Price,
-            this.Quantity});
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Arial", 11F);
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvQLSNV.DefaultCellStyle = dataGridViewCellStyle15;
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9});
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvQLSNV.DefaultCellStyle = dataGridViewCellStyle7;
             this.dgvQLSNV.EnableHeadersVisualStyles = false;
             this.dgvQLSNV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(53)))), ((int)(((byte)(70)))));
             this.dgvQLSNV.Location = new System.Drawing.Point(12, 173);
@@ -393,15 +477,15 @@ namespace DoAnPBL3
             this.dgvQLSNV.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgvQLSNV.RowHeadersVisible = false;
             this.dgvQLSNV.RowHeadersWidth = 60;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Arial", 11F);
-            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvQLSNV.RowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Arial", 11F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvQLSNV.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvQLSNV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvQLSNV.Size = new System.Drawing.Size(816, 413);
-            this.dgvQLSNV.TabIndex = 66;
+            this.dgvQLSNV.TabIndex = 69;
             this.dgvQLSNV.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvQLSNV.ThemeStyle.AlternatingRowsStyle.Font = null;
             this.dgvQLSNV.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
@@ -423,110 +507,102 @@ namespace DoAnPBL3
             this.dgvQLSNV.ThemeStyle.RowsStyle.Height = 22;
             this.dgvQLSNV.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvQLSNV.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgvQLSNV.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DgvQLSNV_RowHeaderMouseClick);
             // 
-            // ID_Book
+            // dataGridViewTextBoxColumn1
             // 
-            this.ID_Book.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ID_Book.DataPropertyName = "ID_Book";
-            this.ID_Book.FillWeight = 62.64247F;
-            this.ID_Book.HeaderText = "ID";
-            this.ID_Book.Name = "ID_Book";
-            this.ID_Book.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "ID_Book";
+            this.dataGridViewTextBoxColumn1.FillWeight = 73.05836F;
+            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
-            // NameBook
+            // dataGridViewTextBoxColumn2
             // 
-            this.NameBook.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.NameBook.DataPropertyName = "NameBook";
-            this.NameBook.FillWeight = 129.9493F;
-            this.NameBook.HeaderText = "Tên sách";
-            this.NameBook.Name = "NameBook";
-            this.NameBook.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "NameBook";
+            this.dataGridViewTextBoxColumn2.FillWeight = 151.5565F;
+            this.dataGridViewTextBoxColumn2.HeaderText = "Tên sách";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
-            // PublishDate
+            // dataGridViewTextBoxColumn3
             // 
-            this.PublishDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.PublishDate.DataPropertyName = "PublishDate";
-            this.PublishDate.FillWeight = 101.2347F;
-            this.PublishDate.HeaderText = "Ngày xuất bản";
-            this.PublishDate.Name = "PublishDate";
-            this.PublishDate.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "PublishDate";
+            this.dataGridViewTextBoxColumn3.FillWeight = 70.97385F;
+            this.dataGridViewTextBoxColumn3.HeaderText = "Ngày xuất bản";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
-            // NameAuthor
+            // dataGridViewTextBoxColumn4
             // 
-            this.NameAuthor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.NameAuthor.DataPropertyName = "NameAuthor";
-            this.NameAuthor.FillWeight = 101.2347F;
-            this.NameAuthor.HeaderText = "Tác giả";
-            this.NameAuthor.Name = "NameAuthor";
-            this.NameAuthor.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "NameAuthor";
+            this.dataGridViewTextBoxColumn4.FillWeight = 118.0675F;
+            this.dataGridViewTextBoxColumn4.HeaderText = "Tác giả";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
-            // NameLanguage
+            // dataGridViewTextBoxColumn5
             // 
-            this.NameLanguage.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.NameLanguage.DataPropertyName = "NameLanguage";
-            this.NameLanguage.FillWeight = 101.2347F;
-            this.NameLanguage.HeaderText = "Ngôn ngữ";
-            this.NameLanguage.Name = "NameLanguage";
-            this.NameLanguage.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "NameLanguage";
+            this.dataGridViewTextBoxColumn5.FillWeight = 118.0675F;
+            this.dataGridViewTextBoxColumn5.HeaderText = "Ngôn ngữ";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
-            // NameGenre
+            // dataGridViewTextBoxColumn6
             // 
-            this.NameGenre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.NameGenre.DataPropertyName = "NameGenre";
-            this.NameGenre.FillWeight = 101.2347F;
-            this.NameGenre.HeaderText = "Thể loại";
-            this.NameGenre.Name = "NameGenre";
-            this.NameGenre.ReadOnly = true;
+            this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "NamePublisher";
+            this.dataGridViewTextBoxColumn6.FillWeight = 116.6275F;
+            this.dataGridViewTextBoxColumn6.HeaderText = "Nhà xuất bản";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
             // 
-            // Price
+            // dataGridViewTextBoxColumn7
             // 
-            this.Price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Price.DataPropertyName = "Price";
-            this.Price.FillWeight = 101.2347F;
-            this.Price.HeaderText = "Giá tiền";
-            this.Price.Name = "Price";
-            this.Price.ReadOnly = true;
+            this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "NameGenre";
+            this.dataGridViewTextBoxColumn7.FillWeight = 92.63647F;
+            this.dataGridViewTextBoxColumn7.HeaderText = "Thể loại";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
             // 
-            // Quantity
+            // dataGridViewTextBoxColumn8
             // 
-            this.Quantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Quantity.DataPropertyName = "Quantity";
-            this.Quantity.FillWeight = 101.2347F;
-            this.Quantity.HeaderText = "Số lượng";
-            this.Quantity.Name = "Quantity";
-            this.Quantity.ReadOnly = true;
+            this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "Price";
+            this.dataGridViewTextBoxColumn8.FillWeight = 76.77856F;
+            this.dataGridViewTextBoxColumn8.HeaderText = "Giá tiền";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
             // 
-            // panelHeader
+            // dataGridViewTextBoxColumn9
             // 
-            this.panelHeader.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(57)))), ((int)(((byte)(80)))));
-            this.panelHeader.Controls.Add(this.lblEnglishBook);
-            this.panelHeader.Controls.Add(this.lblTotalBook);
-            this.panelHeader.Controls.Add(this.totalBook);
-            this.panelHeader.Controls.Add(this.pictureBox3);
-            this.panelHeader.Controls.Add(this.lblVietnameseBook);
-            this.panelHeader.Controls.Add(this.pictureBox1);
-            this.panelHeader.Controls.Add(this.vietnameseBook);
-            this.panelHeader.Controls.Add(this.pictureBox2);
-            this.panelHeader.Controls.Add(this.englishBook);
-            this.panelHeader.Location = new System.Drawing.Point(12, 12);
-            this.panelHeader.Name = "panelHeader";
-            this.panelHeader.Size = new System.Drawing.Size(957, 95);
-            this.panelHeader.TabIndex = 67;
+            this.dataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "Quantity";
+            this.dataGridViewTextBoxColumn9.FillWeight = 82.2335F;
+            this.dataGridViewTextBoxColumn9.HeaderText = "Số lượng";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
             // 
             // FormQLS
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(53)))), ((int)(((byte)(70)))));
             this.ClientSize = new System.Drawing.Size(980, 585);
-            this.Controls.Add(this.panelHeader);
             this.Controls.Add(this.dgvQLSNV);
+            this.Controls.Add(this.btnFind);
+            this.Controls.Add(this.panelHeader);
+            this.Controls.Add(this.lblSort);
+            this.Controls.Add(this.cbbCritiaDetail);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.cbbCriteria);
             this.Controls.Add(this.btnTKS);
             this.Controls.Add(this.rjtbTKS);
-            this.Controls.Add(this.xuiSegmentSach);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormQLS";
@@ -536,17 +612,17 @@ namespace DoAnPBL3
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvQLSNV)).EndInit();
             this.panelHeader.ResumeLayout(false);
             this.panelHeader.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvQLSNV)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private RJTextBox rjtbTKS;
-        private XanderUI.XUISegment xuiSegmentSach;
         private FontAwesome.Sharp.IconButton btnSuaSach;
         private FontAwesome.Sharp.IconButton btnDeleteSach;
         private FontAwesome.Sharp.IconButton btnAddSach;
@@ -565,15 +641,20 @@ namespace DoAnPBL3
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse3;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse4;
         private System.Windows.Forms.Panel panel1;
-        private Guna.UI2.WinForms.Guna2DataGridView dgvQLSNV;
         private System.Windows.Forms.Panel panelHeader;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID_Book;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NameBook;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PublishDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NameAuthor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NameLanguage;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NameGenre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
+        private FontAwesome.Sharp.IconButton btnFind;
+        private System.Windows.Forms.Label lblSort;
+        private Guna.UI2.WinForms.Guna2ComboBox cbbCritiaDetail;
+        private Guna.UI2.WinForms.Guna2ComboBox cbbCriteria;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvQLSNV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
     }
 }

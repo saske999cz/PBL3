@@ -146,6 +146,7 @@ namespace DoAnPBL3
         {
             dgvHHTLI.CellBorderStyle = DataGridViewCellBorderStyle.Single;
             dgvHHTLI.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI Semibold", 10, FontStyle.Bold);
+            dgvHHTLI.DefaultCellStyle.Font = new Font("Arial", 11, FontStyle.Regular);
         }
 
         private void LoadData()
