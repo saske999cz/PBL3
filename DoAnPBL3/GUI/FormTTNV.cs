@@ -151,7 +151,7 @@ namespace DoAnPBL3
         private void FormTTNV_Load(object sender, EventArgs e)
         {
             guna2ShadowForm1.SetShadowForm(this);
-            ShowInfo(BLL_QLNV.Instance.GetEmployeeByID(ID_Employee));
+             ShowInfo(BLL_QLNV.Instance.GetEmployeeByID(ID_Employee));
         }
 
         private void ShowInfo(Employee employee)

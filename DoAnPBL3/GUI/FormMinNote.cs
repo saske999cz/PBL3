@@ -36,9 +36,13 @@ namespace DoAnPBL3
             }
         }
 
-        private void Guna2CircleButton3_Click(object sender, EventArgs e)
+        private void BtnDelete_Click(object sender, EventArgs e)
         {
-            Close();
+            DialogResult result = RJMessageBox.Show("Xác nhận xóa ghi chú?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+                Close();
+            else
+                return;
         }
 
         public void SetTitle(string Title)
@@ -59,6 +63,11 @@ namespace DoAnPBL3
         private void PanelNote_Click(object sender, EventArgs e)
         {
             new FormNoteInfo(lblNoteTitle.Text, content).Show();
+        }
+
+        private void BtnExport_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

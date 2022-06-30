@@ -123,9 +123,17 @@ namespace DoAnPBL3
             CreateCol(data);
             if (rjtbTKS.Texts.Trim() == "")
                 RJMessageBox.Show("Vui lòng điền thông tin sách cần tìm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            else if (rjtbTKS.Texts.Contains(""))
+            else if (rjtbTKS.Texts.Contains("B0"))
             {
-
+                Book book = BLL_QLBS.Instance.GetBookByID(rjtbTKS.Texts);
+                if (book == null)
+                    RJMessageBox.Show("Không tìm thấy", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
+                {
+                    DataRow dataRow = data.NewRow();
+                    data.Rows.Add(CreateRow(dataRow, book));
+                    dgvQLSNV.DataSource = data;
+                }
             }
             else
             {

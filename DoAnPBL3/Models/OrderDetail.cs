@@ -28,15 +28,16 @@ namespace DoAnPBL3.Models
         }
 
         [Key]
-        [Column("ID_HoaDon", Order = 0)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Column("ID", Order = 0)]
+        public int Id { get; set; }
+
+        [Column("ID_HoaDon", Order = 1)]
         [StringLength(100)]
-        [Required(ErrorMessage = "ID hóa đơn không được để trống")]
         public string ID_Order { get; set; }
 
-        [Key]
-        [Column("ID_Sach", Order = 1)]
+        [Column("ID_Sach", Order = 2)]
         [StringLength(100)]
-        [Required(ErrorMessage = "ID sách không được để trống")]
         public string ID_Book { get; set; }
 
         [Column("TenSach")]

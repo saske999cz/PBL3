@@ -31,7 +31,8 @@ namespace DoAnPBL3
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMinNote));
             this.panelNote = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2CircleButton3 = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.btnExport = new DoAnPBL3.RJButton();
+            this.btnDelete = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.lblNoteDate = new System.Windows.Forms.Label();
             this.lblNoteTitle = new System.Windows.Forms.Label();
@@ -43,10 +44,12 @@ namespace DoAnPBL3
             this.panelNote.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(20)))), ((int)(((byte)(137)))));
             this.panelNote.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
             this.panelNote.BorderThickness = 1;
-            this.panelNote.Controls.Add(this.guna2CircleButton3);
+            this.panelNote.Controls.Add(this.btnExport);
+            this.panelNote.Controls.Add(this.btnDelete);
             this.panelNote.Controls.Add(this.guna2CircleButton1);
             this.panelNote.Controls.Add(this.lblNoteDate);
             this.panelNote.Controls.Add(this.lblNoteTitle);
+            this.panelNote.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panelNote.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelNote.Location = new System.Drawing.Point(0, 0);
             this.panelNote.Name = "panelNote";
@@ -54,23 +57,48 @@ namespace DoAnPBL3
             this.panelNote.TabIndex = 3;
             this.panelNote.Click += new System.EventHandler(this.PanelNote_Click);
             // 
-            // guna2CircleButton3
+            // btnExport
             // 
-            this.guna2CircleButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2CircleButton3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2CircleButton3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2CircleButton3.FillColor = System.Drawing.Color.Firebrick;
-            this.guna2CircleButton3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2CircleButton3.ForeColor = System.Drawing.Color.White;
-            this.guna2CircleButton3.Image = ((System.Drawing.Image)(resources.GetObject("guna2CircleButton3.Image")));
-            this.guna2CircleButton3.Location = new System.Drawing.Point(898, 7);
-            this.guna2CircleButton3.Name = "guna2CircleButton3";
-            this.guna2CircleButton3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CircleButton3.Size = new System.Drawing.Size(39, 40);
-            this.guna2CircleButton3.TabIndex = 29;
-            this.guna2CircleButton3.Click += new System.EventHandler(this.Guna2CircleButton3_Click);
+            this.btnExport.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnExport.BackgroundColor = System.Drawing.Color.DodgerBlue;
+            this.btnExport.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnExport.BorderRadius = 20;
+            this.btnExport.BorderSize = 0;
+            this.btnExport.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExport.FlatAppearance.BorderSize = 0;
+            this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExport.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExport.ForeColor = System.Drawing.Color.White;
+            this.btnExport.Image = global::DoAnPBL3.Properties.Resources.export_file;
+            this.btnExport.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnExport.Location = new System.Drawing.Point(748, 7);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(110, 40);
+            this.btnExport.TabIndex = 30;
+            this.btnExport.Text = "Xuất file";
+            this.btnExport.TextColor = System.Drawing.Color.White;
+            this.btnExport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnExport.UseVisualStyleBackColor = false;
+            this.btnExport.Click += new System.EventHandler(this.BtnExport_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDelete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDelete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDelete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDelete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDelete.FillColor = System.Drawing.Color.Firebrick;
+            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
+            this.btnDelete.Location = new System.Drawing.Point(898, 7);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnDelete.Size = new System.Drawing.Size(39, 40);
+            this.btnDelete.TabIndex = 29;
+            this.btnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
             // guna2CircleButton1
             // 
@@ -132,6 +160,7 @@ namespace DoAnPBL3
         private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton1;
         private System.Windows.Forms.Label lblNoteDate;
         private System.Windows.Forms.Label lblNoteTitle;
-        private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton3;
+        private Guna.UI2.WinForms.Guna2CircleButton btnDelete;
+        private RJButton btnExport;
     }
 }

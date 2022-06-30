@@ -36,6 +36,7 @@ namespace DoAnPBL3.DAL
                 List<Book> listBooks = new List<Book>();
 
                 listBooks = db.Books
+                    .Where(book => book.SaleStatus == true)
                     .Select(book => book)
                     .ToList();
                 if (listBooks.Count > 0)
@@ -53,6 +54,7 @@ namespace DoAnPBL3.DAL
 
                 listBooks = db.Books
                     .Where(book => book.ID_Language == ID_Language)
+                    .Where(book => book.SaleStatus == true)
                     .Select(book => book)
                     .ToList();
                 if (listBooks.Count > 0)
@@ -70,6 +72,7 @@ namespace DoAnPBL3.DAL
 
                 listBooks = db.Books
                     .Where(book => book.ID_Publisher == ID_Publisher)
+                    .Where(book => book.SaleStatus == true)
                     .Select(book => book)
                     .ToList();
                 if (listBooks.Count > 0)
@@ -87,6 +90,7 @@ namespace DoAnPBL3.DAL
 
                 listBooks = db.Books
                     .Where(book => book.ID_Genre == ID_Genre)
+                    .Where(book => book.SaleStatus == true)
                     .Select(book => book)
                     .ToList();
                 if (listBooks.Count > 0)
@@ -108,6 +112,7 @@ namespace DoAnPBL3.DAL
                     .ID_Language;
                 listVietnameseBooks = db.Books
                     .Where(book => book.ID_Language == ID_Language)
+                    .Where(book => book.SaleStatus == true)
                     .Select(book => book)
                     .ToList();
                 if (listVietnameseBooks.Count > 0)
@@ -129,6 +134,7 @@ namespace DoAnPBL3.DAL
                     .ID_Language;
                 listEnglishBooks = db.Books
                     .Where(book => book.ID_Language == ID_Language)
+                    .Where(book => book.SaleStatus == true)
                     .Select(book => book)
                     .ToList();
                 if (listEnglishBooks.Count > 0)
@@ -146,6 +152,7 @@ namespace DoAnPBL3.DAL
 
                 listBooks = db.Books
                     .Where(book => book.NameBook.Contains(nameBook))
+                    .Where(book => book.SaleStatus == true)
                     .Select(book => book)
                     .ToList();
                 if (listBooks.Count > 0)
@@ -163,6 +170,7 @@ namespace DoAnPBL3.DAL
 
                 listBooks = db.Books
                     .Where(book => book.NameAuthor.Contains(nameAuthor))
+                    .Where(book => book.SaleStatus == true)
                     .Select(book => book)
                     .ToList();
                 if (listBooks.Count > 0)
@@ -180,6 +188,7 @@ namespace DoAnPBL3.DAL
                 listBooks = db.Books
                     .Select(book => book)
                     .OrderBy(book => book.NameBook)
+                    .Where(book => book.SaleStatus == true)
                     .ToList();
                 if (listBooks.Count > 0)
                     return listBooks;
@@ -196,6 +205,7 @@ namespace DoAnPBL3.DAL
                 listBooks = db.Books
                     .Select(book => book)
                     .OrderByDescending(book => book.NameBook)
+                    .Where(book => book.SaleStatus == true)
                     .ToList();
                 if (listBooks.Count > 0)
                     return listBooks;
@@ -212,6 +222,7 @@ namespace DoAnPBL3.DAL
                 listBooks = db.Books
                     .Select(book => book)
                     .OrderBy(book => book.Price)
+                    .Where(book => book.SaleStatus == true)
                     .ToList();
                 if (listBooks.Count > 0)
                     return listBooks;
@@ -228,6 +239,7 @@ namespace DoAnPBL3.DAL
                 listBooks = db.Books
                     .Select(book => book)
                     .OrderByDescending(book => book.Price)
+                    .Where(book => book.SaleStatus == true)
                     .ToList();
                 if (listBooks.Count > 0)
                     return listBooks;
@@ -244,6 +256,7 @@ namespace DoAnPBL3.DAL
                 listBooks = db.Books
                     .Select(book => book)
                     .OrderBy(book => book.Quantity)
+                    .Where(book => book.SaleStatus == true)
                     .ToList();
                 if (listBooks.Count > 0)
                     return listBooks;
@@ -260,6 +273,7 @@ namespace DoAnPBL3.DAL
                 listBooks = db.Books
                     .Select(book => book)
                     .OrderByDescending(book => book.Quantity)
+                    .Where(book => book.SaleStatus == true)
                     .ToList();
                 if (listBooks.Count > 0)
                     return listBooks;
@@ -283,7 +297,9 @@ namespace DoAnPBL3.DAL
         {
             using (BookStoreContext db = new BookStoreContext())
             {
-                return db.Books.Count();
+                return db.Books
+                    .Where(book => book.SaleStatus == true)
+                    .Count();
             }
         }
 
@@ -296,8 +312,9 @@ namespace DoAnPBL3.DAL
                         db.Languages,
                         book => book.ID_Language,
                         lang => lang.ID_Language,
-                        (book, lang) => new { book.ID_Book, lang.NameLanguage })
+                        (book, lang) => new { book.ID_Book, book.SaleStatus, lang.NameLanguage })
                     .Where(book => book.NameLanguage == "Tiếng Việt")
+                    .Where(book => book.SaleStatus == true)
                     .Count();
             }
         }
@@ -311,8 +328,9 @@ namespace DoAnPBL3.DAL
                         db.Languages,
                         book => book.ID_Language,
                         lang => lang.ID_Language,
-                        (book, lang) => new { book.ID_Book, lang.NameLanguage })
+                        (book, lang) => new { book.ID_Book, book.SaleStatus, lang.NameLanguage })
                     .Where(book => book.NameLanguage == "Tiếng Anh")
+                    .Where(book => book.SaleStatus == true)
                     .Count();
             }
         }
@@ -453,20 +471,10 @@ namespace DoAnPBL3.DAL
 
         public bool DeleteBook(string ID_Book)
         {
-            //List<OrderDetail> listOrderDetails = new List<OrderDetail>();
             using (BookStoreContext db = new BookStoreContext())
             {
-                //listOrderDetails = db.OrderDetails
-                //    .Where(orderDetail => orderDetail.ID_Book == ID_Book)
-                //    .ToList();
-                //for (int i = 0; i < listOrderDetails.Count; i++)
-                //{
-                //    OrderDetail orderDetail = db.OrderDetails.Find(listOrderDetails[i].ID_Order, ID_Book);
-                //    orderDetail.ID_Book = null;
-                //    db.SaveChanges();
-                //}
                 Book book = db.Books.Find(ID_Book);
-                db.Books.Remove(book);
+                book.SaleStatus = false;
                 int result = db.SaveChanges();
                 return result > 0;
             }

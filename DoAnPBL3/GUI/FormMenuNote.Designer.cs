@@ -38,7 +38,9 @@ namespace DoAnPBL3
             // 
             // Notes
             // 
-            this.Notes.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.Notes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Notes.AutoScroll = true;
             this.Notes.Location = new System.Drawing.Point(1, 141);
             this.Notes.Name = "Notes";
@@ -58,6 +60,7 @@ namespace DoAnPBL3
             this.btnAddNote.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnAddNote.BorderRadius = 20;
             this.btnAddNote.BorderSize = 0;
+            this.btnAddNote.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddNote.FlatAppearance.BorderSize = 0;
             this.btnAddNote.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddNote.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

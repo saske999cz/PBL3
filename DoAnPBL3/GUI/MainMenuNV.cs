@@ -222,22 +222,7 @@ namespace DoAnPBL3
             if (avatar == null)
                 EmployeePicture.Image = null;
             else
-                EmployeePicture.Image = Image.FromFile(Path.Combine(projectDirectory, avatar));
-            using (BookStoreContext context = new BookStoreContext())
-            {
-                var employee = context.Employees
-                                    .Join(
-                                        context.Accounts, 
-                                        em => em.AccountUsername, 
-                                        acc => acc.Username, 
-                                        (em, acc) => new { em.FullNameEmployee, em.AccountUsername, acc.Avatar})
-                                   .Where(em => em.AccountUsername == accountUsername)
-                                   .Select(em => new { em.FullNameEmployee, em.AccountUsername, em.Avatar })
-                                   .ToList()
-                                   .FirstOrDefault();
-                lblUserName.Text = employee.FullNameEmployee;
-                lblEmployeeUsername.Text = employee.AccountUsername;
-            }
+                EmployeePicture.Image = Image.FromFile(Path.Combine(projectDirectory, avatar));            
         }
 
         private void EmployeePicture_Click(object sender, EventArgs e)

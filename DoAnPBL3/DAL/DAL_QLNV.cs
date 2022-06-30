@@ -35,7 +35,7 @@ namespace DoAnPBL3.DAL
             {
                 List<Employee> employees = new List<Employee>();
                 employees = db.Employees
-                    .Where(employee => employee.AccountUsername != null)
+                    .Where(employee => employee.WorkStatus == true)
                     .Select(employee => employee)
                     .ToList();
                 if (employees.Count > 0)
@@ -51,7 +51,7 @@ namespace DoAnPBL3.DAL
             {
                 List<Employee> employees = new List<Employee>();
                 employees = db.Employees
-                    .Where(employee => employee.AccountUsername != null)
+                    .Where(employee => employee.WorkStatus == true)
                     .Where(employee => employee.Gender == "Nam")
                     .Select(employee => employee)
                     .ToList();
@@ -68,7 +68,7 @@ namespace DoAnPBL3.DAL
             {
                 List<Employee> employees = new List<Employee>();
                 employees = db.Employees
-                    .Where(employee => employee.AccountUsername != null)
+                    .Where(employee => employee.WorkStatus == true)
                     .Where(employee => employee.Gender == "Nữ")
                     .Select(employee => employee)
                     .ToList();
@@ -85,7 +85,7 @@ namespace DoAnPBL3.DAL
             {
                 List<Employee> employeesQuitJob = new List<Employee>();
                 employeesQuitJob = db.Employees
-                    .Where(employee => employee.AccountUsername == null)
+                    .Where(employee => employee.WorkStatus == false)
                     .Select(employee => employee)
                     .ToList();
                 if (employeesQuitJob.Count > 0)
@@ -101,7 +101,7 @@ namespace DoAnPBL3.DAL
             {
                 List<Employee> employees = new List<Employee>();
                 employees = db.Employees
-                    .Where(emp => emp.AccountUsername != null)
+                    .Where(emp => emp.WorkStatus == true)
                     .Where(employee => employee.FullNameEmployee.Contains(name))
                     .ToList();
                 if (employees.Count > 0)
@@ -116,9 +116,7 @@ namespace DoAnPBL3.DAL
             using (BookStoreContext db = new BookStoreContext())
             {
                 Employee employee = db.Employees
-                    .Where(emp => emp.AccountUsername != null)
                     .Where(emp => emp.ID_Employee == ID_Employee)
-                    .ToList()
                     .FirstOrDefault();
                 if (employee == null)
                     return null;
@@ -132,7 +130,7 @@ namespace DoAnPBL3.DAL
             using (BookStoreContext db = new BookStoreContext())
             {
                 Employee employee = db.Employees
-                    .Where(emp => emp.AccountUsername != null)
+                    .Where(emp => emp.WorkStatus == true)
                     .Where(emp => emp.Phone == phone)
                     .ToList()
                     .FirstOrDefault();
@@ -177,6 +175,7 @@ namespace DoAnPBL3.DAL
             {
                 var username = db.Employees
                     .Where(emp => emp.ID_Employee == ID_Employee)
+                    .Where(emp => emp.WorkStatus == true)
                     .Select(emp => new { emp.AccountUsername })
                     .FirstOrDefault();
                 return username.AccountUsername;
@@ -189,6 +188,7 @@ namespace DoAnPBL3.DAL
             {
                 return db.Employees
                     .Where(employee => employee.AccountUsername == accountUsername)
+                    .Where(emp => emp.WorkStatus == true)
                     .Select(employee => new { employee.ID_Employee })
                     .FirstOrDefault()
                     .ID_Employee;
@@ -199,7 +199,9 @@ namespace DoAnPBL3.DAL
         {
             using (BookStoreContext db = new BookStoreContext())
             {
-                return db.Employees.Count();
+                return db.Employees
+                    .Where(employee => employee.WorkStatus == true)
+                    .Count();
             }
         }
 
@@ -208,7 +210,7 @@ namespace DoAnPBL3.DAL
             using (BookStoreContext db = new BookStoreContext())
             {
                 return db.Employees
-                    .Where(employee => employee.AccountUsername != null)
+                    .Where(employee => employee.WorkStatus == true)
                     .Where(employee => employee.Gender == "Nam")
                     .Count();
             }
@@ -219,7 +221,7 @@ namespace DoAnPBL3.DAL
             using (BookStoreContext db = new BookStoreContext())
             {
                 return db.Employees
-                    .Where(employee => employee.AccountUsername != null)
+                    .Where(employee => employee.WorkStatus == true)
                     .Where(employee => employee.Gender == "Nữ")
                     .Count();
             }
@@ -230,7 +232,7 @@ namespace DoAnPBL3.DAL
             using (BookStoreContext db = new BookStoreContext())
             {
                 return db.Employees
-                    .Where(employee => employee.AccountUsername == null)
+                    .Where(employee => employee.WorkStatus == false)
                     .Count();
             }
         }
@@ -240,7 +242,7 @@ namespace DoAnPBL3.DAL
             using (BookStoreContext db = new BookStoreContext())
             {
                 return db.Employees
-                    .Where(employee => employee.AccountUsername == null)
+                    .Where(employee => employee.WorkStatus == false)
                     .Where(employee => employee.Gender == "Nam")
                     .Count();
             }
@@ -251,7 +253,7 @@ namespace DoAnPBL3.DAL
             using (BookStoreContext db = new BookStoreContext())
             {
                 return db.Employees
-                    .Where(employee => employee.AccountUsername == null)
+                    .Where(employee => employee.WorkStatus == false)
                     .Where(employee => employee.Gender == "Nữ")
                     .Count();
             }
@@ -262,6 +264,7 @@ namespace DoAnPBL3.DAL
             using (BookStoreContext db = new BookStoreContext())
             {
                 var lastID = db.Employees
+                    .Where(emp => emp.WorkStatus == true)
                     .Select(employee => new { employee.ID_Employee })
                     .OrderByDescending(employee => employee.ID_Employee)
                     .Take(1)
@@ -299,25 +302,19 @@ namespace DoAnPBL3.DAL
                 oldEmployee.Id_Card = newInfoEmployee.Id_Card;
                 oldEmployee.Address = newInfoEmployee.Address;
                 oldEmployee.Avatar = newInfoEmployee.Avatar;
-                oldEmployee.AccountUsername = newInfoEmployee.AccountUsername;
+                oldEmployee.AccountUsername = newInfoEmployee.AccountUsername; 
                 int result = db.SaveChanges();
                 return result > 0;
             }
         }
 
-        public bool DeleteEmployee(string accountUsername)
+        public bool DeleteEmployee(string ID_Employee)
         {
             using (BookStoreContext db = new BookStoreContext())
             {
-                Account account = db.Accounts.Find(accountUsername);
-                Employee oldEmployee = db.Employees
-                    .Where(emp => emp.AccountUsername == accountUsername)
-                    .Select(emp => emp)
-                    .ToList()
-                    .FirstOrDefault();
-                oldEmployee.AccountUsername = null;
-                db.SaveChanges();
-                db.Accounts.Remove(account);
+                Employee employee = db.Employees.Find(ID_Employee);
+                employee.EndDate = DateTime.Now;
+                employee.WorkStatus = false;
                 int result = db.SaveChanges();
                 return result > 0;
             }

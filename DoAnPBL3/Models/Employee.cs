@@ -18,7 +18,7 @@ namespace DoAnPBL3.Models
         }
 
         public Employee(string id_employee, string nameEmployee, string email, DateTime dateOfBirth, DateTime startDate, 
-            DateTime? endDate, string gender, string phone, string ID_Card, string address, string avatar, string accountUsername)
+            DateTime? endDate, string gender, string phone, string ID_Card, string address, string avatar, string accountUsername, bool workStatus)
         {
             ID_Employee = id_employee;
             FullNameEmployee = nameEmployee;
@@ -32,6 +32,7 @@ namespace DoAnPBL3.Models
             Address = address;
             Avatar = avatar;
             AccountUsername = accountUsername;
+            WorkStatus = workStatus;
         }
 
         [Key]
@@ -89,6 +90,10 @@ namespace DoAnPBL3.Models
 
         [ForeignKey("AccountUsername")]
         public virtual Account Account { get; set; }
+
+        [Column("TrangThai")]
+        [Required(ErrorMessage = "Tình trạng làm việc của nhân viên không được để trống")]
+        public bool WorkStatus { get; set; }
 
         public virtual ICollection<Order> Orders { get; set; }
     }

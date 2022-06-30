@@ -77,52 +77,52 @@ namespace DoAnPBL3
                 new Admin {ID_Admin = "AD0001", FullNameAdmin = "Lê Hoàng Long", Email = "lelong.ll32@gmail.com",
                     DateOfBirth = new DateTime(2000, 01, 01), StartDate = new DateTime(2020, 01, 01), EndDate = null,
                     Gender = "Nam", Phone = "0905000001", ID_Card = "201800001", Address = "Đà Nẵng",
-                    Avatar = null, AccountUsername = "lehoanglong"},
+                    Avatar = null, AccountUsername = "lehoanglong", WorkStatus = true},
 
                 new Admin {ID_Admin = "AD0002", FullNameAdmin = "Nguyễn Khắc Thái", Email = "nguyenkhacthai@gmail.com",
                     DateOfBirth = new DateTime(2000, 01, 01), StartDate = new DateTime(2020, 01, 01), EndDate = null,
                     Gender = "Nam", Phone = "0905000002", ID_Card = "201800002", Address = "Đà Nẵng",
-                    Avatar = null, AccountUsername = "nguyenkhacthai"},
+                    Avatar = null, AccountUsername = "nguyenkhacthai", WorkStatus = true},
 
                 new Admin {ID_Admin = "AD0003", FullNameAdmin = "Đào Thủy Trang", Email = "daothuytrang@gmail.com",
                     DateOfBirth = new DateTime(2000, 01, 01), StartDate = new DateTime(2020, 01, 01), EndDate = null,
                     Gender = "Nữ", Phone = "0905000003", ID_Card = "201800003", Address = "Đà Nẵng",
-                    Avatar = null, AccountUsername = "daothuytrang"},
+                    Avatar = null, AccountUsername = "daothuytrang", WorkStatus = true},
 
                 new Admin {ID_Admin = "AD0004", FullNameAdmin = "Lý Văn Tánh", Email = "lyvantanh@gmail.com",
                     DateOfBirth = new DateTime(2000, 01, 01), StartDate = new DateTime(2020, 01, 01), EndDate = null,
                     Gender = "Nam", Phone = "0905000001", ID_Card = "201800004", Address = "Đà Nẵng",
-                    Avatar = null, AccountUsername = "lyvantanh"},
+                    Avatar = null, AccountUsername = "lyvantanh", WorkStatus = true},
 
                 new Admin {ID_Admin = "AD0005", FullNameAdmin = "Ngô Đức Quốc Khánh", Email = "ngoducquockhanh@gmail.com",
                     DateOfBirth = new DateTime(2000, 01, 01), StartDate = new DateTime(2020, 01, 01), EndDate = null,
                     Gender = "Nam", Phone = "0905000004", ID_Card = "201800005", Address = "Đà Nẵng",
-                    Avatar = null, AccountUsername = "ngoducquockhanh"},
+                    Avatar = null, AccountUsername = "ngoducquockhanh", WorkStatus = true},
 
                 new Admin {ID_Admin = "AD0006", FullNameAdmin = "Trà Văn Thiên", Email = "travanthien@gmail.com",
                     DateOfBirth = new DateTime(2000, 01, 01), StartDate = new DateTime(2020, 01, 01), EndDate = null,
                     Gender = "Nam", Phone = "0905000005", ID_Card = "201800006", Address = "Đà Nẵng",
-                    Avatar = null, AccountUsername = "travanthien"},
+                    Avatar = null, AccountUsername = "travanthien", WorkStatus = true},
 
                 new Admin {ID_Admin = "AD0007", FullNameAdmin = "Lê Trọng Hoàng Minh", Email = "letronghoangminh@gmail.com",
                     DateOfBirth = new DateTime(2000, 01, 01), StartDate = new DateTime(2020, 01, 01), EndDate = null,
                     Gender = "Nam", Phone = "0905000006", ID_Card = "201800007", Address = "Đà Nẵng",
-                    Avatar = null, AccountUsername = "letronghoangminh"},
+                    Avatar = null, AccountUsername = "letronghoangminh", WorkStatus = true},
 
                 new Admin {ID_Admin = "AD0008", FullNameAdmin = "Lê Viết Tùng Dương", Email = "leviettungduong@gmail.com",
                     DateOfBirth = new DateTime(2000, 01, 01), StartDate = new DateTime(2020, 01, 01), EndDate = null,
                     Gender = "Nam", Phone = "0905000007", ID_Card = "201800008", Address = "Đà Nẵng",
-                    Avatar = null, AccountUsername = "leviettungduong"},
+                    Avatar = null, AccountUsername = "leviettungduong", WorkStatus = true},
 
                 new Admin {ID_Admin = "AD0009", FullNameAdmin = "Nguyễn Trọng Sang", Email = "nguyentrongsang@gmail.com",
                     DateOfBirth = new DateTime(2000, 01, 01), StartDate = new DateTime(2020, 01, 01), EndDate = null,
                     Gender = "Nam", Phone = "0905000008", ID_Card = "201800009", Address = "Đà Nẵng",
-                    Avatar = null, AccountUsername = "nguyentrongsang"},
+                    Avatar = null, AccountUsername = "nguyentrongsang", WorkStatus = true},
 
                 new Admin {ID_Admin = "AD0010", FullNameAdmin = "Nguyễn Văn Hoàng Nhân", Email = "nguyenvanhoangnhan@gmail.com",
                     DateOfBirth = new DateTime(2000, 01, 01), StartDate = new DateTime(2020, 01, 01), EndDate = null,
                     Gender = "Nam", Phone = "0905000009", ID_Card = "201800010", Address = "Đà Nẵng",
-                    Avatar = null, AccountUsername = "nguyenvanhoangnhan"},
+                    Avatar = null, AccountUsername = "nguyenvanhoangnhan", WorkStatus = true},
             });
 
             context.Employees.AddRange(new Employee[]
@@ -130,57 +130,57 @@ namespace DoAnPBL3
                 new Employee {ID_Employee = "E0000", FullNameEmployee = "Phạm Tiến Hữu", Email = "phamtienhuu@gmail.com",
                     DateOfBirth = new DateTime(2000, 01, 01), StartDate = new DateTime(2020, 01, 01), EndDate = null,
                     Gender = "Nam", Phone = "0905000001", Id_Card = "201800001", Address = "Đà Nẵng",
-                    Avatar = "Img\\GI\\chongyun.png", AccountUsername = "phamtienhuu"},
+                    Avatar = "Img\\GI\\chongyun.png", AccountUsername = "phamtienhuu", WorkStatus = true},
 
                 new Employee {ID_Employee = "E0001", FullNameEmployee = "Nguyễn Bá Tuấn", Email = "nguyenbatuan@gmail.com",
                     DateOfBirth = new DateTime(2000, 01, 01), StartDate = new DateTime(2020, 01, 01), EndDate = null,
                     Gender = "Nam", Phone = "0905000002", Id_Card = "201800002", Address = "Đà Nẵng",
-                    Avatar = "Img\\GI\\xiao.png", AccountUsername = "nguyenbatuan"},
+                    Avatar = "Img\\GI\\xiao.png", AccountUsername = "nguyenbatuan", WorkStatus = true},
 
                 new Employee {ID_Employee = "E0002", FullNameEmployee = "Trần Chính Huy", Email = "tranchinhhuy@gmail.com",
                     DateOfBirth = new DateTime(2000, 01, 01), StartDate = new DateTime(2020, 01, 01), EndDate = null,
                     Gender = "Nam", Phone = "0905000003", Id_Card = "201800003", Address = "Đà Nẵng",
-                    Avatar = "Img\\GI\\diluc.png", AccountUsername = "tranchinhhuy"},
+                    Avatar = "Img\\GI\\diluc.png", AccountUsername = "tranchinhhuy", WorkStatus = true},
 
                 new Employee {ID_Employee = "E0003", FullNameEmployee = "Nguyễn Quang Khải", Email = "nguyenquankhai@gmail.com",
                     DateOfBirth = new DateTime(2000, 01, 01), StartDate = new DateTime(2020, 01, 01), EndDate = null,
                     Gender = "Nam", Phone = "0905000004", Id_Card = "201800004", Address = "Đà Nẵng",
-                    Avatar = "Img\\GI\\xingqiu.png", AccountUsername = "nguyenquangkhai"},
+                    Avatar = "Img\\GI\\xingqiu.png", AccountUsername = "nguyenquangkhai", WorkStatus = true},
 
                 new Employee {ID_Employee = "E0004", FullNameEmployee = "Phạm Hoàng Sơn", Email = "phamhoangson@gmail.com",
                     DateOfBirth = new DateTime(2000, 01, 01), StartDate = new DateTime(2020, 01, 01), EndDate = null,
                     Gender = "Nam", Phone = "0905000005", Id_Card = "201800005", Address = "Đà Nẵng",
-                    Avatar = "Img\\GI\\heizou.png", AccountUsername = "phamhoangson"},
+                    Avatar = "Img\\GI\\heizou.png", AccountUsername = "phamhoangson", WorkStatus = true},
 
                 new Employee {ID_Employee = "E0005", FullNameEmployee = "Ngô Tấn Dũng", Email = "ngotandung@gmail.com",
                     DateOfBirth = new DateTime(2000, 01, 01), StartDate = new DateTime(2020, 01, 01), EndDate = null,
                     Gender = "Nam", Phone = "0905000006", Id_Card = "201800006", Address = "Đà Nẵng",
-                    Avatar = "Img\\GI\\thoma.png", AccountUsername = "ngotandung"},
+                    Avatar = "Img\\GI\\thoma.png", AccountUsername = "ngotandung", WorkStatus = true},
 
                 new Employee {ID_Employee = "E0006", FullNameEmployee = "Nguyễn Văn Khoa", Email = "nguyenvankhoa@gmail.com",
                     DateOfBirth = new DateTime(2000, 01, 01), StartDate = new DateTime(2020, 01, 01), EndDate = null,
                     Gender = "Nam", Phone = "0905000007", Id_Card = "201800007", Address = "Đà Nẵng",
-                    Avatar = "Img\\GI\\bennett.png", AccountUsername = "nguyenvankhoa"},
+                    Avatar = "Img\\GI\\bennett.png", AccountUsername = "nguyenvankhoa", WorkStatus = true},
 
                 new Employee {ID_Employee = "E0007", FullNameEmployee = "Lê Văn Thành", Email = "levanthanh@gmail.com",
                     DateOfBirth = new DateTime(2000, 01, 01), StartDate = new DateTime(2020, 01, 01), EndDate = null,
                     Gender = "Nam", Phone = "0905000008", Id_Card = "201800008", Address = "Đà Nẵng",
-                    Avatar = "Img\\GI\\ayato.png", AccountUsername = "levanthanh"},
+                    Avatar = "Img\\GI\\ayato.png", AccountUsername = "levanthanh", WorkStatus = true},
 
                 new Employee {ID_Employee = "E0008", FullNameEmployee = "Trần Khánh Phương", Email = "trankhanhphuong@gmail.com",
                     DateOfBirth = new DateTime(2000, 01, 01), StartDate = new DateTime(2020, 01, 01), EndDate = null,
                     Gender = "Nữ", Phone = "0905000009", Id_Card = "201800009", Address = "Đà Nẵng",
-                    Avatar = "Img\\GI\\hutao.png", AccountUsername = "trankhanhphuong"},
+                    Avatar = "Img\\GI\\hutao.png", AccountUsername = "trankhanhphuong", WorkStatus = true},
 
                 new Employee {ID_Employee = "E0009", FullNameEmployee = "Lê Thị Huyền Trang", Email = "lethihuyentrang@gmail.com",
                     DateOfBirth = new DateTime(2000, 01, 01), StartDate = new DateTime(2020, 01, 01), EndDate = null,
                     Gender = "Nữ", Phone = "0905000010", Id_Card = "201800010", Address = "Đà Nẵng",
-                    Avatar = "Img\\GI\\keqing.png", AccountUsername = "lethihuyentrang"},
+                    Avatar = "Img\\GI\\keqing.png", AccountUsername = "lethihuyentrang", WorkStatus = true},
 
                 new Employee {ID_Employee = "E0010", FullNameEmployee = "Nguyễn Trọng Nghĩa", Email = "trongnghia161001@gmail.com",
                     DateOfBirth = new DateTime(2000, 10, 16), StartDate = new DateTime(2021, 01, 01), EndDate = null,
                     Gender = "Nam", Phone = "0347812458", Id_Card = "204789451", Address = "Quảng Nam",
-                    Avatar = "Img\\GI\\aether.png", AccountUsername = "nguyentrongnghiaE0010"},
+                    Avatar = "Img\\GI\\aether.png", AccountUsername = "nguyentrongnghiaE0010", WorkStatus = true},
             });
 
             context.Customers.AddRange(new Customer[]
@@ -344,151 +344,151 @@ namespace DoAnPBL3
             {
                 new Book {ID_Book = "B0000", NameBook = "One Punch Man tập 1", PublishDate = new DateTime(2020, 01, 01), 
                     NameAuthor = "Yusuke Murata", Quantity = 4, Price = 22000, Unit = "Quyển", ID_Language = 1, ID_Publisher = 1, ID_Genre = 6,
-                    Image = "Img\\Book\\OPM tap 1.jpg"},
+                    Image = "Img\\Book\\OPM tap 1.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0001", NameBook = "One Punch Man tập 2", PublishDate = new DateTime(2020, 01, 02),
                     NameAuthor = "Yusuke Murata", Quantity = 2, Price = 22000, Unit = "Quyển", ID_Language = 1, ID_Publisher = 1, ID_Genre = 6,
-                    Image = "Img\\Book\\OPM tap 2.jpg"},
+                    Image = "Img\\Book\\OPM tap 2.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0002", NameBook = "One Punch Man tập 3", PublishDate = new DateTime(2020, 01, 03),
                     NameAuthor = "Yusuke Murata", Quantity = 8, Price = 22000, Unit = "Quyển", ID_Language = 2, ID_Publisher = 1, ID_Genre = 6,
-                    Image = "Img\\Book\\OPM tap 3.jpg"},
+                    Image = "Img\\Book\\OPM tap 3.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0003", NameBook = "One Punch Man tập 4", PublishDate = new DateTime(2020, 01, 04),
                     NameAuthor = "Yusuke Murata", Quantity = 10, Price = 22000, Unit = "Quyển", ID_Language = 1, ID_Publisher = 1, ID_Genre = 6,
-                    Image = "Img\\Book\\OPM tap 4.jpg"},
+                    Image = "Img\\Book\\OPM tap 4.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0004", NameBook = "One Punch Man tập 5", PublishDate = new DateTime(2020, 01, 05),
                     NameAuthor = "Yusuke Murata", Quantity = 9, Price = 22000, Unit = "Quyển", ID_Language = 3, ID_Publisher = 1, ID_Genre = 6,
-                    Image = "Img\\Book\\OPM tap 5.jpg"},
+                    Image = "Img\\Book\\OPM tap 5.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0005", NameBook = "One Punch Man tập 6", PublishDate = new DateTime(2020, 01, 06),
                     NameAuthor = "Yusuke Murata", Quantity = 15, Price = 22000, Unit = "Quyển", ID_Language = 1, ID_Publisher = 1, ID_Genre = 6,
-                    Image = "Img\\Book\\OPM tap 6.jpg"},
+                    Image = "Img\\Book\\OPM tap 6.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0006", NameBook = "One Punch Man tập 7", PublishDate = new DateTime(2020, 01, 07),
                     NameAuthor = "Yusuke Murata", Quantity = 11, Price = 22000, Unit = "Quyển", ID_Language = 1, ID_Publisher = 1, ID_Genre = 6,
-                    Image = "Img\\Book\\OPM tap 7.jpg"},
+                    Image = "Img\\Book\\OPM tap 7.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0007", NameBook = "One Punch Man tập 8", PublishDate = new DateTime(2020, 01, 08),
                     NameAuthor = "Yusuke Murata", Quantity = 7, Price = 22000, Unit = "Quyển", ID_Language = 2, ID_Publisher = 1, ID_Genre = 6,
-                    Image = "Img\\Book\\OPM tap 8.jpg"},
+                    Image = "Img\\Book\\OPM tap 8.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0008", NameBook = "One Punch Man tập 9", PublishDate = new DateTime(2020, 01, 09),
                     NameAuthor = "Yusuke Murata", Quantity = 7, Price = 22000, Unit = "Quyển", ID_Language = 6, ID_Publisher = 1, ID_Genre = 6,
-                    Image = "Img\\Book\\OPM tap 9.jpg"},
+                    Image = "Img\\Book\\OPM tap 9.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0009", NameBook = "One Punch Man tập 10", PublishDate = new DateTime(2020, 01, 10),
                     NameAuthor = "Yusuke Murata", Quantity = 9, Price = 22000, Unit = "Quyển", ID_Language = 6, ID_Publisher = 1, ID_Genre = 6,
-                    Image = "Img\\Book\\OPM tap 10.jpg"},
+                    Image = "Img\\Book\\OPM tap 10.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0010", NameBook = "One Punch Man tập 11", PublishDate = new DateTime(2020, 01, 11),
                     NameAuthor = "Yusuke Murata", Quantity = 2, Price = 22000, Unit = "Quyển", ID_Language = 1, ID_Publisher = 1, ID_Genre = 6,
-                    Image = "Img\\Book\\OPM tap 11.jpg"},
+                    Image = "Img\\Book\\OPM tap 11.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0011", NameBook = "One Punch Man tập 12", PublishDate = new DateTime(2020, 01, 12),
                     NameAuthor = "Yusuke Murata", Quantity = 4, Price = 22000, Unit = "Quyển", ID_Language = 1, ID_Publisher = 1, ID_Genre = 6,
-                    Image = "Img\\Book\\OPM tap 12.jpg"},
+                    Image = "Img\\Book\\OPM tap 12.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0012", NameBook = "One Punch Man tập 13", PublishDate = new DateTime(2020, 01, 13),
                     NameAuthor = "Yusuke Murata", Quantity = 4, Price = 22000, Unit = "Quyển", ID_Language = 7, ID_Publisher = 1, ID_Genre = 6,
-                    Image = "Img\\Book\\OPM tap 13.jpg"},
+                    Image = "Img\\Book\\OPM tap 13.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0013", NameBook = "One Punch Man tập 14", PublishDate = new DateTime(2020, 01, 14),
                     NameAuthor = "Yusuke Murata", Quantity = 6, Price = 22000, Unit = "Quyển", ID_Language = 7, ID_Publisher = 1, ID_Genre = 6,
-                    Image = "Img\\Book\\OPM tap 14.jpg"},
+                    Image = "Img\\Book\\OPM tap 14.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0014", NameBook = "One Punch Man tập 15", PublishDate = new DateTime(2020, 01, 15),
                     NameAuthor = "Yusuke Murata", Quantity = 5, Price = 22000, Unit = "Quyển", ID_Language = 2, ID_Publisher = 1, ID_Genre = 6,
-                    Image = "Img\\Book\\OPM tap 15.jpg"},
+                    Image = "Img\\Book\\OPM tap 15.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0015", NameBook = "One Punch Man tập 16", PublishDate = new DateTime(2020, 01, 16),
                     NameAuthor = "Yusuke Murata", Quantity = 12, Price = 22000, Unit = "Quyển", ID_Language = 2, ID_Publisher = 1, ID_Genre = 6,
-                    Image = "Img\\Book\\OPM tap 16.jpg"},
+                    Image = "Img\\Book\\OPM tap 16.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0016", NameBook = "One Punch Man tập 17", PublishDate = new DateTime(2020, 01, 17),
                     NameAuthor = "Yusuke Murata", Quantity = 16, Price = 22000, Unit = "Quyển", ID_Language = 1, ID_Publisher = 1, ID_Genre = 6,
-                    Image = "Img\\Book\\OPM tap 17.jpg"},
+                    Image = "Img\\Book\\OPM tap 17.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0017", NameBook = "One Punch Man tập 18", PublishDate = new DateTime(2020, 01, 18),
                     NameAuthor = "Yusuke Murata", Quantity = 15, Price = 22000, Unit = "Quyển", ID_Language = 3, ID_Publisher = 1, ID_Genre = 6,
-                    Image = "Img\\Book\\OPM tap 18.jpg"},
+                    Image = "Img\\Book\\OPM tap 18.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0018", NameBook = "One Punch Man tập 19", PublishDate = new DateTime(2020, 01, 19),
                     NameAuthor = "Yusuke Murata", Quantity = 10, Price = 22000, Unit = "Quyển", ID_Language = 1, ID_Publisher = 1, ID_Genre = 6,
-                    Image = "Img\\Book\\OPM tap 19.jpg"},
+                    Image = "Img\\Book\\OPM tap 19.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0019", NameBook = "One Punch Man tập 20", PublishDate = new DateTime(2020, 01, 20),
                     NameAuthor = "Yusuke Murata", Quantity = 11, Price = 22000, Unit = "Quyển", ID_Language = 3, ID_Publisher = 1, ID_Genre = 6,
-                    Image = "Img\\Book\\OPM tap 20.jpg"},
+                    Image = "Img\\Book\\OPM tap 20.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0020", NameBook = "One Punch Man tập 21", PublishDate = new DateTime(2020, 01, 21),
                     NameAuthor = "Yusuke Murata", Quantity = 10, Price = 22000, Unit = "Quyển", ID_Language = 3, ID_Publisher = 1, ID_Genre = 6,
-                    Image = "Img\\Book\\OPM tap 21.jpg"},
+                    Image = "Img\\Book\\OPM tap 21.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0021", NameBook = "One Punch Man tập 22", PublishDate = new DateTime(2020, 01, 22),
                     NameAuthor = "Yusuke Murata", Quantity = 12, Price = 22000, Unit = "Quyển", ID_Language = 7, ID_Publisher = 1, ID_Genre = 6,
-                    Image = "Img\\Book\\OPM tap 22.jpg"},
+                    Image = "Img\\Book\\OPM tap 22.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0022", NameBook = "One Punch Man tập 23", PublishDate = new DateTime(2020, 01, 23),
                     NameAuthor = "Yusuke Murata", Quantity = 12, Price = 22000, Unit = "Quyển", ID_Language = 2, ID_Publisher = 1, ID_Genre = 6,
-                    Image = "Img\\Book\\OPM tap 23.jpg"},
+                    Image = "Img\\Book\\OPM tap 23.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0023", NameBook = "One Punch Man tập 24", PublishDate = new DateTime(2020, 01, 24),
                     NameAuthor = "Yusuke Murata", Quantity = 16, Price = 22000, Unit = "Quyển", ID_Language = 3, ID_Publisher = 1, ID_Genre = 6,
-                    Image = "Img\\Book\\OPM tap 24.jpg"},
+                    Image = "Img\\Book\\OPM tap 24.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0024", NameBook = "One Punch Man tập 25", PublishDate = new DateTime(2020, 01, 25),
                     NameAuthor = "Yusuke Murata", Quantity = 17, Price = 22000, Unit = "Quyển", ID_Language = 6, ID_Publisher = 1, ID_Genre = 6,
-                    Image = "Img\\Book\\OPM tap 25.jpg"},
+                    Image = "Img\\Book\\OPM tap 25.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0025", NameBook = "Giải tích 12", PublishDate = new DateTime(2020, 01, 01),
                     NameAuthor = "Bộ giáo dục và đào tạo", Quantity = 15, Price = 8000, Unit = "Quyển", ID_Language = 1, ID_Publisher = 5, ID_Genre = 5,
-                    Image = "Img\\Book\\sach-giao-khoa-giai-tich-12.jpg"},
+                    Image = "Img\\Book\\sach-giao-khoa-giai-tich-12.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0026", NameBook = "Hình học 12", PublishDate = new DateTime(2020, 01, 2),
                     NameAuthor = "Bộ giáo dục và đào tạo", Quantity = 15, Price = 8000, Unit = "Quyển", ID_Language = 1, ID_Publisher = 5, ID_Genre = 5,
-                    Image = "Img\\Book\\Hinh-hoc-12-346267-2.jpg"},
+                    Image = "Img\\Book\\Hinh-hoc-12-346267-2.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0027", NameBook = "Ngữ Văn 12 tập 1", PublishDate = new DateTime(2020, 01, 3),
                     NameAuthor = "Bộ giáo dục và đào tạo", Quantity = 17, Price = 10000, Unit = "Quyển", ID_Language = 1, ID_Publisher = 5, ID_Genre = 5,
-                    Image = "Img\\Book\\Sach-giao-khoa-ngu-van-12-tap-1-500x554.jpg"},
+                    Image = "Img\\Book\\Sach-giao-khoa-ngu-van-12-tap-1-500x554.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0028", NameBook = "Ngữ Văn 12 tập 2", PublishDate = new DateTime(2020, 01, 4),
                     NameAuthor = "Bộ giáo dục và đào tạo", Quantity = 21, Price = 10000, Unit = "Quyển", ID_Language = 1, ID_Publisher = 5, ID_Genre = 5,
-                    Image = "Img\\Book\\Sach-giao-khoa-ngu-van-12-tap-2-500x554.jpg"},
+                    Image = "Img\\Book\\Sach-giao-khoa-ngu-van-12-tap-2-500x554.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0029", NameBook = "Vật lý 12", PublishDate = new DateTime(2020, 01, 5),
                     NameAuthor = "Bộ giáo dục và đào tạo", Quantity = 21, Price = 12000, Unit = "Quyển", ID_Language = 1, ID_Publisher = 5, ID_Genre = 5,
-                    Image = "Img\\Book\\sach-giao-khoa-vat-ly-12.jpg"},
+                    Image = "Img\\Book\\sach-giao-khoa-vat-ly-12.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0030", NameBook = "Hóa học 12", PublishDate = new DateTime(2020, 01, 6),
                     NameAuthor = "Bộ giáo dục và đào tạo", Quantity = 23, Price = 12000, Unit = "Quyển", ID_Language = 1, ID_Publisher = 5, ID_Genre = 5,
-                    Image = "Img\\Book\\sach-giao-khoa-hoa-hoc-lop-12.jpg"},
+                    Image = "Img\\Book\\sach-giao-khoa-hoa-hoc-lop-12.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0031", NameBook = "Sinh học 12", PublishDate = new DateTime(2020, 01, 7),
                     NameAuthor = "Bộ giáo dục và đào tạo", Quantity = 22, Price = 12000, Unit = "Quyển", ID_Language = 1, ID_Publisher = 5, ID_Genre = 5,
-                    Image = "Img\\Book\\sach-giao-khoa-sinh-hoc-lop-12.jpg"},
+                    Image = "Img\\Book\\sach-giao-khoa-sinh-hoc-lop-12.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0032", NameBook = "Địa lí 12", PublishDate = new DateTime(2020, 01, 8),
                     NameAuthor = "Bộ giáo dục và đào tạo", Quantity = 25, Price = 12000, Unit = "Quyển", ID_Language = 1, ID_Publisher = 5, ID_Genre = 5,
-                    Image = "Img\\Book\\sach-giao-khoa-dia-li-lop-12.jpg"},
+                    Image = "Img\\Book\\sach-giao-khoa-dia-li-lop-12.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0033", NameBook = "Lịch sử 12", PublishDate = new DateTime(2020, 01, 9),
                     NameAuthor = "Bộ giáo dục và đào tạo", Quantity = 16, Price = 12000, Unit = "Quyển", ID_Language = 1, ID_Publisher = 5, ID_Genre = 5,
-                    Image = "Img\\Book\\sach-giao-khoa-lich-su-lop-12.jpg"},
+                    Image = "Img\\Book\\sach-giao-khoa-lich-su-lop-12.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0034", NameBook = "Tiếng anh 12", PublishDate = new DateTime(2020, 01, 10),
                     NameAuthor = "Bộ giáo dục và đào tạo", Quantity = 17, Price = 12000, Unit = "Quyển", ID_Language = 1, ID_Publisher = 5, ID_Genre = 5,
-                    Image = "Img\\Book\\sach-giao-khoa-tieng-anh-12.jpg"},
+                    Image = "Img\\Book\\sach-giao-khoa-tieng-anh-12.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0035", NameBook = "Tiếng anh thí điểm 12 tập 1", PublishDate = new DateTime(2020, 01, 11),
                     NameAuthor = "Bộ giáo dục và đào tạo", Quantity = 7, Price = 30000, Unit = "Quyển", ID_Language = 1, ID_Publisher = 5, ID_Genre = 5,
-                    Image = "Img\\Book\\tieng-anh-thi-diem-12-tap-1.jpg"},
+                    Image = "Img\\Book\\tieng-anh-thi-diem-12-tap-1.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0036", NameBook = "Tiếng anh thí điểm 12 tập 2", PublishDate = new DateTime(2020, 01, 12),
                     NameAuthor = "Bộ giáo dục và đào tạo", Quantity = 10, Price = 30000, Unit = "Quyển", ID_Language = 1, ID_Publisher = 5, ID_Genre = 5,
-                    Image = "Img\\Book\\tieng-anh-thi-diem-12-tap-2.jpg"},
+                    Image = "Img\\Book\\tieng-anh-thi-diem-12-tap-2.jpg", SaleStatus = true},
             });
 
             context.Orders.AddRange(new Order[]

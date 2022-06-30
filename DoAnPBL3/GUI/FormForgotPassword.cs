@@ -32,15 +32,15 @@ namespace DoAnPBL3
         private void BtnSendCode_ClickAsync(object sender, EventArgs e)
         {
             if (txtEmail.Text.Trim() == "" && txtEmailPassword.Text.Trim() == "")
-                MessageBox.Show("Vui lòng nhập email và mật khẩu email", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                RJMessageBox.Show("Vui lòng nhập email và mật khẩu email", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else if (txtEmail.Text.Trim() == "")
-                MessageBox.Show("Vui lòng nhập email", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                RJMessageBox.Show("Vui lòng nhập email", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else if (txtEmailPassword.Text.Trim() == "")
-                MessageBox.Show("Vui lòng nhập mật khẩu email", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                RJMessageBox.Show("Vui lòng nhập mật khẩu email", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
             {
                 if (!Regex.IsMatch(txtEmail.Text, EMAIL_REGEX))
-                    MessageBox.Show("Email không hợp lệ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    RJMessageBox.Show("Email không hợp lệ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
                 {
                     using (var bookStore = new BookStoreContext())
@@ -50,18 +50,18 @@ namespace DoAnPBL3
                                 bookStore.Employees,
                                 account => account.Username,
                                 employee => employee.AccountUsername,
-                                (account, employee) => new { employee.Email });
+                                (account, employee) => new { employee.Email, account.Password });
                         if (listEmail.ToList().Count == 0)
-                            MessageBox.Show("Không tìm thấy email trong hệ thống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            RJMessageBox.Show("Không tìm thấy email trong hệ thống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         else
                         {
-                            string password = txtEmailPassword.Text;
+                            string password = listEmail.FirstOrDefault().Password;
                             MailMessage mailMessage = new MailMessage
                             {
                                 From = new MailAddress("BookShop@gmail.com")
                             };
                             mailMessage.To.Add(txtEmail.Text);
-                            mailMessage.Body = "Mật khẩu của bạn là: " + password.ToString();
+                            mailMessage.Body = "Mật khẩu của bạn là: " + password;
                             mailMessage.Subject = "Nhắc nhở mật khẩu";
 
                             SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587)
@@ -73,11 +73,11 @@ namespace DoAnPBL3
                             try
                             {
                                 smtp.Send(mailMessage);
-                                MessageBox.Show("Gửi mã thành công. Vui lòng check mail", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                RJMessageBox.Show("Gửi mã thành công. Vui lòng check mail", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
                             catch (Exception)
                             {
-                                MessageBox.Show("Hệ thống gửi mail đang bảo trì. Vui lòng thử lại sau", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                                RJMessageBox.Show("Hệ thống gửi mail đang bảo trì. Vui lòng thử lại sau", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Hand);
                             }
                         }
                     }

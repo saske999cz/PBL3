@@ -67,7 +67,7 @@ namespace DoAnPBL3
 
         private void FormMenuNote_Load(object sender, EventArgs e)
         {
-            timer1.Tick += new System.EventHandler(Timer1_Tick);
+            timer1.Tick += new EventHandler(Timer1_Tick);
             timer1.Start();
         }
 

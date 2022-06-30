@@ -49,7 +49,7 @@ namespace DoAnPBL3
             {
                 if (accountUsername != "")
                 {
-                    if (BLL_QLNV.Instance.DeleteEmployee(accountUsername))
+                    if (BLL_QLNV.Instance.DeleteEmployee(id))
                     {
                         Alert("Xóa nhân viên thành công", Form_Alert.EnmType.Success);
                         RefreshData(sender, e);

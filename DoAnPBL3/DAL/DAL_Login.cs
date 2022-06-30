@@ -32,16 +32,35 @@ namespace DoAnPBL3.DAL
         {
             using (BookStoreContext db = new BookStoreContext())
             {
+                bool workStatus;
                 var acc = db.Accounts
                     .Where(a => a.Username == account.Username)
                     .Where(a => a.Password == account.Password)
                     .Where(a => a.Role == account.Role)
-                    .ToList()
                     .FirstOrDefault();
                 if (acc == null)
                     return "Đăng nhập thất bại";
                 else
-                    return "Đăng nhập thành công";
+                {
+                    if (acc.Role)
+                    {
+                        workStatus = db.Admins
+                            .Where(admin => admin.AccountUsername == account.Username)
+                            .Select(admin => admin.WorkStatus)
+                            .FirstOrDefault();
+                    }
+                    else
+                    {
+                        workStatus = db.Employees
+                            .Where(employee => employee.AccountUsername == account.Username)
+                            .Select(employee => employee.WorkStatus)
+                            .FirstOrDefault();
+                    }
+                    if (workStatus)
+                        return "Đăng nhập thành công";
+                    else
+                        return "Đăng nhập thất bại";
+                }
             }
         }
 

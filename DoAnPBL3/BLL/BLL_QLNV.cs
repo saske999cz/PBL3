@@ -193,9 +193,9 @@ namespace DoAnPBL3.BLL
                 return false;
         }
 
-        public bool DeleteEmployee(string accountUsername)
+        public bool DeleteEmployee(string ID_Employee)
         {
-            return DAL_QLNV.Instance.DeleteEmployee(accountUsername);
+            return DAL_QLNV.Instance.DeleteEmployee(ID_Employee);
         }
 
         public char ConvertVietnameseToAlphabet(char alphaName)

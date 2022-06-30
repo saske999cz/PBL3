@@ -17,7 +17,7 @@ namespace DoAnPBL3.Models
         }
 
         public Admin(string id_admin, string nameAdmin, string email, DateTime dateOfBirth, DateTime startDate,
-            DateTime? endDate, string gender, string phone, string ID_Card, string address, string avatar, string accountUsername)
+            DateTime? endDate, string gender, string phone, string ID_Card, string address, string avatar, string accountUsername, bool workStatus)
         {
             ID_Admin = id_admin;
             FullNameAdmin = nameAdmin;
@@ -31,6 +31,7 @@ namespace DoAnPBL3.Models
             Address = address;
             Avatar = avatar;
             AccountUsername = accountUsername;
+            WorkStatus = workStatus;
         }
 
         [Key]
@@ -89,5 +90,9 @@ namespace DoAnPBL3.Models
 
         [ForeignKey("AccountUsername")]
         public virtual Account Account { get; set; }
+
+        [Column("TrangThai")]
+        [Required(ErrorMessage = "Tình trạng làm việc của quản trị không được để trống")]
+        public bool WorkStatus { get; set; }
     }
 }

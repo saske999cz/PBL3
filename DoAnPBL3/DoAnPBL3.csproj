@@ -611,6 +611,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="books11.ico" />
+    <None Include="Img\Icon\export file.png" />
+    <None Include="Img\Icon\export icon.png" />
     <None Include="Img\Icon\male employee.png" />
     <None Include="Img\Icon\pencil_60px.png" />
     <None Include="Img\Icon\multiply_60px.png" />

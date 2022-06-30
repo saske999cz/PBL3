@@ -19,7 +19,7 @@ namespace DoAnPBL3.Models
         }
 
         public Book(string id_book, string nameBook, DateTime publishDate, string nameAuthor, 
-            int quantity, int price, string unit, int ID_Language, int ID_Publisher, int ID_Genre, string bookImage)
+            int quantity, int price, string unit, int ID_Language, int ID_Publisher, int ID_Genre, string bookImage, bool saleStatus)
         {
             ID_Book = id_book;
             NameBook = nameBook;
@@ -32,6 +32,7 @@ namespace DoAnPBL3.Models
             this.ID_Publisher = ID_Publisher;
             this.ID_Genre = ID_Genre;
             Image = bookImage;
+            SaleStatus = saleStatus;
         }
 
         [Key]
@@ -89,6 +90,10 @@ namespace DoAnPBL3.Models
 
         [Column("Anh")]
         public string Image { get; set; }
+
+        [Column("TrangThai")]
+        [Required(ErrorMessage = "Tình trạng của sách không được để trống")]
+        public bool SaleStatus { get; set; }
 
         public virtual ICollection<OrderDetail> OrderDetails { get; set; }
     }

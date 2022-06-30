@@ -253,7 +253,7 @@ namespace DoAnPBL3
                     DialogResult result = RJMessageBox.Show("Xác nhận xóa nhân viên " + name + "?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (result == DialogResult.Yes)
                     {
-                        FormIdentify formIdentify = new FormIdentify(employee.AccountUsername, password, "");
+                        FormIdentify formIdentify = new FormIdentify(employee.AccountUsername, password, GetID_Employee());
                         formIdentify.RefreshData += new FormIdentify.LoadData(FormQLNV_Load);
                         formIdentify.Show();
                     }
