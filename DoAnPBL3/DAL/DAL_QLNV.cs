@@ -183,6 +183,18 @@ namespace DoAnPBL3.DAL
             }
         }
 
+        public string GetIDByAccountUsername(string accountUsername)
+        {
+            using (BookStoreContext db = new BookStoreContext())
+            {
+                return db.Employees
+                    .Where(employee => employee.AccountUsername == accountUsername)
+                    .Select(employee => new { employee.ID_Employee })
+                    .FirstOrDefault()
+                    .ID_Employee;
+            }
+        }
+
         public int GetNumberTotalEmployee()
         {
             using (BookStoreContext db = new BookStoreContext())

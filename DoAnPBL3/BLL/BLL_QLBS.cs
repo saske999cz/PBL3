@@ -281,10 +281,13 @@ namespace DoAnPBL3.BLL
                 return false;
         }
 
-        //public bool UpdateQuantitySold(Book book)
-        //{
-
-        //}
+        public bool UpdateQuantityBook(string ID_Book, int quantitySold)
+        {
+            if (DAL_QLBS.Instance.UpdateQuantityBook(ID_Book, quantitySold))
+                return true;
+            else
+                return false;
+        }
 
         public bool DeleteBook(string ID_Book)
         {

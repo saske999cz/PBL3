@@ -387,7 +387,7 @@ namespace DoAnPBL3
             this.xuiClock1.Font = new System.Drawing.Font("Impact", 15F);
             this.xuiClock1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.xuiClock1.HexagonColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(70)))));
-            this.xuiClock1.Location = new System.Drawing.Point(860, 33);
+            this.xuiClock1.Location = new System.Drawing.Point(847, 33);
             this.xuiClock1.Name = "xuiClock1";
             this.xuiClock1.ShowAmPm = false;
             this.xuiClock1.ShowHexagon = true;
@@ -497,7 +497,7 @@ namespace DoAnPBL3
             this.lblDate.AutoSize = true;
             this.lblDate.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDate.ForeColor = System.Drawing.Color.White;
-            this.lblDate.Location = new System.Drawing.Point(815, 5);
+            this.lblDate.Location = new System.Drawing.Point(808, 5);
             this.lblDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(37, 16);

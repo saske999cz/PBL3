@@ -70,6 +70,50 @@ namespace DoAnPBL3
             Dispose();
         }
 
+        private void RjtbTKHD_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                btnTKHD.PerformClick();
+                e.Handled = true;
+            }
+        }
+
+        private void BtnTKHD_Click(object sender, EventArgs e)
+        {
+            DataTable data = new DataTable();
+            CreateCol(data);
+            if (rjtbTKHD.Texts.Trim() == "")
+                RJMessageBox.Show("Vui lòng điền thông tin hóa đơn cần tìm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else if (rjtbTKHD.Texts.Contains("HD0"))
+            {
+                Order order = BLL_QLHD.Instance.GetOrderByID(rjtbTKHD.Texts);
+                if (order == null)
+                    RJMessageBox.Show("Không tìm thấy", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
+                {
+                    DataRow dataRow = data.NewRow();
+                    data.Rows.Add(CreateRow(dataRow, order));
+                    dgvQLHD.DataSource = data;
+                }
+            }
+            else
+            {
+                List<Order> listOrders = BLL_QLHD.Instance.GetOrdersByEmployee(rjtbTKHD.Texts, ID_Customer);
+                if (listOrders != null)
+                {
+                    foreach (Order order in listOrders)
+                    {
+                        DataRow dataRow = data.NewRow();
+                        data.Rows.Add(CreateRow(dataRow, order));
+                    }
+                    dgvQLHD.DataSource = data;
+                }
+                else
+                    dgvQLHD.DataSource = null;
+            }
+        }
+
         private void CreateCol(DataTable data)
         {
             data.Columns.AddRange(new DataColumn[]
@@ -77,7 +121,7 @@ namespace DoAnPBL3
                 new DataColumn("ID_Order", typeof(string)),
                 new DataColumn("OrderDate", typeof(string)),
                 new DataColumn("NameEmployee", typeof(string)),
-                new DataColumn("Total", typeof(string)),
+                new DataColumn("TotalPrice", typeof(string)),
             });
         }
 
@@ -86,7 +130,7 @@ namespace DoAnPBL3
             dataRow["ID_Order"] = order.ID_Order;
             dataRow["OrderDate"] = order.OrderDate.ToString("dd/MM/yyyy");
             dataRow["NameEmployee"] = BLL_QLNV.Instance.GetNameEmployeeByID(order.ID_Employee);
-            dataRow["Total"] = order.TotalPrice.ToString("##,#") + "VNĐ";
+            dataRow["TotalPrice"] = order.TotalPrice.ToString("##,#") + "VNĐ";
             return dataRow;
         }
     }

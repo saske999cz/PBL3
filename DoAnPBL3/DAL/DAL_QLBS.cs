@@ -440,10 +440,31 @@ namespace DoAnPBL3.DAL
             }
         }
 
-        public bool DeleteBook(string ID_Book)
+        public bool UpdateQuantityBook(string ID_Book, int quantitySold)
         {
             using (BookStoreContext db = new BookStoreContext())
             {
+                Book book = db.Books.Find(ID_Book);
+                book.Quantity -= quantitySold;
+                int result = db.SaveChanges();
+                return result > 0;
+            }
+        }
+
+        public bool DeleteBook(string ID_Book)
+        {
+            //List<OrderDetail> listOrderDetails = new List<OrderDetail>();
+            using (BookStoreContext db = new BookStoreContext())
+            {
+                //listOrderDetails = db.OrderDetails
+                //    .Where(orderDetail => orderDetail.ID_Book == ID_Book)
+                //    .ToList();
+                //for (int i = 0; i < listOrderDetails.Count; i++)
+                //{
+                //    OrderDetail orderDetail = db.OrderDetails.Find(listOrderDetails[i].ID_Order, ID_Book);
+                //    orderDetail.ID_Book = null;
+                //    db.SaveChanges();
+                //}
                 Book book = db.Books.Find(ID_Book);
                 db.Books.Remove(book);
                 int result = db.SaveChanges();

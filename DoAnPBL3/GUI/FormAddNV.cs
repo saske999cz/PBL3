@@ -363,7 +363,7 @@ namespace DoAnPBL3
 
         private void RjbtnCancel_Click(object sender, EventArgs e)
         {
-            string id, name, email, dateOfBirth, startDate, phone, idCard, address;
+            string name, email, dateOfBirth, startDate, phone, idCard, address;
             name = tbNameNV.Text;
             email = tbEmailNV.Text;
             dateOfBirth = tbBD.Text;

@@ -59,15 +59,15 @@ namespace DoAnPBL3
             this.cbbCritiaDetail = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cbbCriteria = new Guna.UI2.WinForms.Guna2ComboBox();
             this.dgvQLBSNV = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID_Book = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NameBook = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PublishDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NameAuthor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NameLanguage = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NamePublisher = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NameGenre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CartIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -436,15 +436,15 @@ namespace DoAnPBL3
             this.dgvQLBSNV.ColumnHeadersHeight = 30;
             this.dgvQLBSNV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvQLBSNV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9});
+            this.ID_Book,
+            this.NameBook,
+            this.PublishDate,
+            this.NameAuthor,
+            this.NameLanguage,
+            this.NamePublisher,
+            this.NameGenre,
+            this.Price,
+            this.Quantity});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -492,86 +492,86 @@ namespace DoAnPBL3
             this.dgvQLBSNV.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvQLBSNV.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // dataGridViewTextBoxColumn1
+            // ID_Book
             // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "ID_Book";
-            this.dataGridViewTextBoxColumn1.FillWeight = 73.05836F;
-            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.ID_Book.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ID_Book.DataPropertyName = "ID_Book";
+            this.ID_Book.FillWeight = 73.05836F;
+            this.ID_Book.HeaderText = "ID";
+            this.ID_Book.Name = "ID_Book";
+            this.ID_Book.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn2
+            // NameBook
             // 
-            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "NameBook";
-            this.dataGridViewTextBoxColumn2.FillWeight = 151.5565F;
-            this.dataGridViewTextBoxColumn2.HeaderText = "Tên sách";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.NameBook.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NameBook.DataPropertyName = "NameBook";
+            this.NameBook.FillWeight = 151.5565F;
+            this.NameBook.HeaderText = "Tên sách";
+            this.NameBook.Name = "NameBook";
+            this.NameBook.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn3
+            // PublishDate
             // 
-            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "PublishDate";
-            this.dataGridViewTextBoxColumn3.FillWeight = 70.97385F;
-            this.dataGridViewTextBoxColumn3.HeaderText = "Ngày xuất bản";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.PublishDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.PublishDate.DataPropertyName = "PublishDate";
+            this.PublishDate.FillWeight = 70.97385F;
+            this.PublishDate.HeaderText = "Ngày xuất bản";
+            this.PublishDate.Name = "PublishDate";
+            this.PublishDate.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn4
+            // NameAuthor
             // 
-            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "NameAuthor";
-            this.dataGridViewTextBoxColumn4.FillWeight = 118.0675F;
-            this.dataGridViewTextBoxColumn4.HeaderText = "Tác giả";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.NameAuthor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NameAuthor.DataPropertyName = "NameAuthor";
+            this.NameAuthor.FillWeight = 118.0675F;
+            this.NameAuthor.HeaderText = "Tác giả";
+            this.NameAuthor.Name = "NameAuthor";
+            this.NameAuthor.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn5
+            // NameLanguage
             // 
-            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "NameLanguage";
-            this.dataGridViewTextBoxColumn5.FillWeight = 118.0675F;
-            this.dataGridViewTextBoxColumn5.HeaderText = "Ngôn ngữ";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.NameLanguage.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NameLanguage.DataPropertyName = "NameLanguage";
+            this.NameLanguage.FillWeight = 118.0675F;
+            this.NameLanguage.HeaderText = "Ngôn ngữ";
+            this.NameLanguage.Name = "NameLanguage";
+            this.NameLanguage.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn6
+            // NamePublisher
             // 
-            this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "NamePublisher";
-            this.dataGridViewTextBoxColumn6.FillWeight = 116.6275F;
-            this.dataGridViewTextBoxColumn6.HeaderText = "Nhà xuất bản";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            this.NamePublisher.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NamePublisher.DataPropertyName = "NamePublisher";
+            this.NamePublisher.FillWeight = 116.6275F;
+            this.NamePublisher.HeaderText = "Nhà xuất bản";
+            this.NamePublisher.Name = "NamePublisher";
+            this.NamePublisher.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn7
+            // NameGenre
             // 
-            this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "NameGenre";
-            this.dataGridViewTextBoxColumn7.FillWeight = 92.63647F;
-            this.dataGridViewTextBoxColumn7.HeaderText = "Thể loại";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            this.NameGenre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NameGenre.DataPropertyName = "NameGenre";
+            this.NameGenre.FillWeight = 92.63647F;
+            this.NameGenre.HeaderText = "Thể loại";
+            this.NameGenre.Name = "NameGenre";
+            this.NameGenre.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn8
+            // Price
             // 
-            this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "Price";
-            this.dataGridViewTextBoxColumn8.FillWeight = 76.77856F;
-            this.dataGridViewTextBoxColumn8.HeaderText = "Giá tiền";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            this.Price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Price.DataPropertyName = "Price";
+            this.Price.FillWeight = 76.77856F;
+            this.Price.HeaderText = "Giá tiền";
+            this.Price.Name = "Price";
+            this.Price.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn9
+            // Quantity
             // 
-            this.dataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "Quantity";
-            this.dataGridViewTextBoxColumn9.FillWeight = 82.2335F;
-            this.dataGridViewTextBoxColumn9.HeaderText = "Số lượng";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            this.Quantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Quantity.DataPropertyName = "Quantity";
+            this.Quantity.FillWeight = 82.2335F;
+            this.Quantity.HeaderText = "Số lượng";
+            this.Quantity.Name = "Quantity";
+            this.Quantity.ReadOnly = true;
             // 
             // FormQLBSNV
             // 
@@ -633,14 +633,14 @@ namespace DoAnPBL3
         private Guna.UI2.WinForms.Guna2ComboBox cbbCritiaDetail;
         private Guna.UI2.WinForms.Guna2ComboBox cbbCriteria;
         private Guna.UI2.WinForms.Guna2DataGridView dgvQLBSNV;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID_Book;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NameBook;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PublishDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NameAuthor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NameLanguage;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NamePublisher;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NameGenre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
     }
 }

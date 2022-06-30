@@ -601,439 +601,439 @@ namespace DoAnPBL3
                 new Order {ID_Order = "HD0035", OrderDate = new DateTime(2022, 06, 03, 12, 24, 11), TotalPrice = 20000,
                     ID_Customer = "KH0000", ID_Employee = "E0008"},
 
-                new Order {ID_Order = "HD0036", OrderDate = new DateTime(2022, 06, 04, 00, 00, 00), TotalPrice = 20000,
+                new Order {ID_Order = "HD0036", OrderDate = new DateTime(2022, 06, 04, 06, 07, 09), TotalPrice = 20000,
                     ID_Customer = "KH0008", ID_Employee = "E0005"},
 
-                new Order {ID_Order = "HD0037", OrderDate = new DateTime(2022, 06, 04, 00, 00, 00), TotalPrice = 20000,
+                new Order {ID_Order = "HD0037", OrderDate = new DateTime(2022, 06, 04, 06, 55, 12), TotalPrice = 20000,
                     ID_Customer = "KH0000", ID_Employee = "E0001"},
 
-                new Order {ID_Order = "HD0038", OrderDate = new DateTime(2022, 06, 04, 00, 00, 00), TotalPrice = 22000,
+                new Order {ID_Order = "HD0038", OrderDate = new DateTime(2022, 06, 04, 07, 22, 15), TotalPrice = 22000,
                     ID_Customer = "KH0020", ID_Employee = "E0009"},
 
-                new Order {ID_Order = "HD0039", OrderDate = new DateTime(2022, 06, 04, 00, 00, 00), TotalPrice = 110000,
+                new Order {ID_Order = "HD0039", OrderDate = new DateTime(2022, 06, 04, 07, 28, 30), TotalPrice = 110000,
                     ID_Customer = "KH0021", ID_Employee = "E0001"},
 
-                new Order {ID_Order = "HD0040", OrderDate = new DateTime(2022, 06, 05), TotalPrice = 20000,
+                new Order {ID_Order = "HD0040", OrderDate = new DateTime(2022, 06, 05, 10, 12, 15), TotalPrice = 20000,
                     ID_Customer = "KH0026", ID_Employee = "E0009"},
 
-                new Order {ID_Order = "HD0041", OrderDate = new DateTime(2022, 06, 05), TotalPrice = 20000,
+                new Order {ID_Order = "HD0041", OrderDate = new DateTime(2022, 06, 05, 10, 45, 25), TotalPrice = 20000,
                     ID_Customer = "KH0027", ID_Employee = "E0000"},
 
-                new Order {ID_Order = "HD0042", OrderDate = new DateTime(2022, 06, 05), TotalPrice = 20000,
+                new Order {ID_Order = "HD0042", OrderDate = new DateTime(2022, 06, 05, 11, 23, 11), TotalPrice = 20000,
                     ID_Customer = "KH0014", ID_Employee = "E0008"},
 
-                new Order {ID_Order = "HD0043", OrderDate = new DateTime(2022, 06, 05), TotalPrice = 52000,
+                new Order {ID_Order = "HD0043", OrderDate = new DateTime(2022, 06, 05, 12, 11, 06), TotalPrice = 52000,
                     ID_Customer = "KH0019", ID_Employee = "E0004"},
 
-                new Order {ID_Order = "HD0044", OrderDate = new DateTime(2022, 06, 05), TotalPrice = 20000,
+                new Order {ID_Order = "HD0044", OrderDate = new DateTime(2022, 06, 05, 14, 22, 21), TotalPrice = 20000,
                     ID_Customer = "KH0028", ID_Employee = "E0004"},
 
-                new Order {ID_Order = "HD0045", OrderDate = new DateTime(2022, 06, 06), TotalPrice = 20000,
+                new Order {ID_Order = "HD0045", OrderDate = new DateTime(2022, 06, 06, 06, 21, 55), TotalPrice = 20000,
                     ID_Customer = "KH0017", ID_Employee = "E0005"},
 
-                new Order {ID_Order = "HD0046", OrderDate = new DateTime(2022, 06, 06), TotalPrice = 20000,
+                new Order {ID_Order = "HD0046", OrderDate = new DateTime(2022, 06, 06, 08, 45, 12), TotalPrice = 20000,
                     ID_Customer = "KH0016", ID_Employee = "E0006"},
 
-                new Order {ID_Order = "HD0047", OrderDate = new DateTime(2022, 06, 06), TotalPrice = 52000,
+                new Order {ID_Order = "HD0047", OrderDate = new DateTime(2022, 06, 06, 11, 22, 33), TotalPrice = 52000,
                     ID_Customer = "KH0000", ID_Employee = "E0004"},
 
-                new Order {ID_Order = "HD0048", OrderDate = new DateTime(2022, 06, 07), TotalPrice = 20000,
+                new Order {ID_Order = "HD0048", OrderDate = new DateTime(2022, 06, 07, 06, 11, 22), TotalPrice = 20000,
                     ID_Customer = "KH0024", ID_Employee = "E0005"},
 
-                new Order {ID_Order = "HD0049", OrderDate = new DateTime(2022, 06, 07), TotalPrice = 20000,
+                new Order {ID_Order = "HD0049", OrderDate = new DateTime(2022, 06, 07, 06, 33, 11), TotalPrice = 20000,
                     ID_Customer = "KH0029", ID_Employee = "E0005"},
 
-                new Order {ID_Order = "HD0050", OrderDate = new DateTime(2022, 06, 07), TotalPrice = 110000,
+                new Order {ID_Order = "HD0050", OrderDate = new DateTime(2022, 06, 07, 07, 24, 14), TotalPrice = 110000,
                     ID_Customer = "KH0022", ID_Employee = "E0000"},
 
-                new Order {ID_Order = "HD0051", OrderDate = new DateTime(2022, 06, 07), TotalPrice = 20000,
+                new Order {ID_Order = "HD0051", OrderDate = new DateTime(2022, 06, 07, 07, 44, 51), TotalPrice = 20000,
                     ID_Customer = "KH0029", ID_Employee = "E0006"},
 
-                new Order {ID_Order = "HD0052", OrderDate = new DateTime(2022, 06, 07), TotalPrice = 110000,
+                new Order {ID_Order = "HD0052", OrderDate = new DateTime(2022, 06, 07, 08, 22, 44), TotalPrice = 110000,
                     ID_Customer = "KH0004", ID_Employee = "E0009"},
 
-                new Order {ID_Order = "HD0053", OrderDate = new DateTime(2022, 06, 07), TotalPrice = 52000,
+                new Order {ID_Order = "HD0053", OrderDate = new DateTime(2022, 06, 07, 10, 11, 12), TotalPrice = 52000,
                     ID_Customer = "KH0008", ID_Employee = "E0004"},
 
-                new Order {ID_Order = "HD0054", OrderDate = new DateTime(2022, 06, 07), TotalPrice = 16000,
+                new Order {ID_Order = "HD0054", OrderDate = new DateTime(2022, 06, 07, 12, 13, 14), TotalPrice = 16000,
                     ID_Customer = "KH0004", ID_Employee = "E0003"},
 
-                new Order {ID_Order = "HD0055", OrderDate = new DateTime(2022, 06, 07), TotalPrice = 24000,
+                new Order {ID_Order = "HD0055", OrderDate = new DateTime(2022, 06, 07, 14, 22, 11), TotalPrice = 24000,
                     ID_Customer = "KH0021", ID_Employee = "E0003"},
 
-                new Order {ID_Order = "HD0056", OrderDate = new DateTime(2022, 06, 08), TotalPrice = 24000,
+                new Order {ID_Order = "HD0056", OrderDate = new DateTime(2022, 06, 08, 12, 25, 11), TotalPrice = 24000,
                     ID_Customer = "KH0027", ID_Employee = "E0007"},
 
-                new Order {ID_Order = "HD0057", OrderDate = new DateTime(2022, 06, 08), TotalPrice = 32000,
+                new Order {ID_Order = "HD0057", OrderDate = new DateTime(2022, 06, 08, 13, 22, 26), TotalPrice = 32000,
                     ID_Customer = "KH0014", ID_Employee = "E0001"},
 
-                new Order {ID_Order = "HD0058", OrderDate = new DateTime(2022, 06, 08), TotalPrice = 60000,
+                new Order {ID_Order = "HD0058", OrderDate = new DateTime(2022, 06, 08, 14, 11, 45), TotalPrice = 60000,
                     ID_Customer = "KH0008", ID_Employee = "E0009"},
 
-                new Order {ID_Order = "HD0059", OrderDate = new DateTime(2022, 06, 08), TotalPrice = 42000,
+                new Order {ID_Order = "HD0059", OrderDate = new DateTime(2022, 06, 08, 15, 56, 11), TotalPrice = 42000,
                     ID_Customer = "KH0017", ID_Employee = "E0008"},
 
-                new Order {ID_Order = "HD0060", OrderDate = new DateTime(2022, 06, 08), TotalPrice = 44000,
+                new Order {ID_Order = "HD0060", OrderDate = new DateTime(2022, 06, 08, 16, 32, 22), TotalPrice = 44000,
                     ID_Customer = "KH0025", ID_Employee = "E0010"},
 
-                new Order {ID_Order = "HD0061", OrderDate = new DateTime(2022, 06, 09), TotalPrice = 34000,
+                new Order {ID_Order = "HD0061", OrderDate = new DateTime(2022, 06, 09, 12, 00, 00), TotalPrice = 34000,
                     ID_Customer = "KH0016", ID_Employee = "E0002"},
 
-                new Order {ID_Order = "HD0062", OrderDate = new DateTime(2022, 06, 09), TotalPrice = 44000,
+                new Order {ID_Order = "HD0062", OrderDate = new DateTime(2022, 06, 09, 13, 44, 22), TotalPrice = 44000,
                     ID_Customer = "KH0009", ID_Employee = "E0006"},
 
-                new Order {ID_Order = "HD0063", OrderDate = new DateTime(2022, 06, 09), TotalPrice = 34000,
+                new Order {ID_Order = "HD0063", OrderDate = new DateTime(2022, 06, 09, 16, 44, 56), TotalPrice = 34000,
                     ID_Customer = "KH0013", ID_Employee = "E0004"},
 
-                new Order {ID_Order = "HD0064", OrderDate = new DateTime(2022, 06, 09), TotalPrice = 38000,
+                new Order {ID_Order = "HD0064", OrderDate = new DateTime(2022, 06, 09, 20, 22, 12), TotalPrice = 38000,
                     ID_Customer = "KH0020", ID_Employee = "E0003"},
 
-                new Order {ID_Order = "HD0065", OrderDate = new DateTime(2022, 06, 09), TotalPrice = 46000,
+                new Order {ID_Order = "HD0065", OrderDate = new DateTime(2022, 06, 09, 21, 22, 13), TotalPrice = 46000,
                     ID_Customer = "KH0029", ID_Employee = "E0010"},
 
-                new Order {ID_Order = "HD0066", OrderDate = new DateTime(2022, 06, 10), TotalPrice = 44000,
+                new Order {ID_Order = "HD0066", OrderDate = new DateTime(2022, 06, 10, 11, 22, 18), TotalPrice = 44000,
                     ID_Customer = "KH0028", ID_Employee = "E0001"},
 
-                new Order {ID_Order = "HD0067", OrderDate = new DateTime(2022, 06, 10), TotalPrice = 24000,
+                new Order {ID_Order = "HD0067", OrderDate = new DateTime(2022, 06, 10, 12, 42, 54), TotalPrice = 24000,
                     ID_Customer = "KH0017", ID_Employee = "E0003"},
 
-                new Order {ID_Order = "HD0068", OrderDate = new DateTime(2022, 06, 10), TotalPrice = 38000,
+                new Order {ID_Order = "HD0068", OrderDate = new DateTime(2022, 06, 10, 15, 02, 11), TotalPrice = 38000,
                     ID_Customer = "KH0014", ID_Employee = "E0008"},
 
-                new Order {ID_Order = "HD0069", OrderDate = new DateTime(2022, 06, 10), TotalPrice = 42000,
+                new Order {ID_Order = "HD0069", OrderDate = new DateTime(2022, 06, 10, 15, 34, 25), TotalPrice = 42000,
                     ID_Customer = "KH0020", ID_Employee = "E0007"},
 
-                new Order {ID_Order = "HD0070", OrderDate = new DateTime(2022, 06, 10), TotalPrice = 72000,
+                new Order {ID_Order = "HD0070", OrderDate = new DateTime(2022, 06, 10, 17, 22, 12), TotalPrice = 72000,
                     ID_Customer = "KH0021", ID_Employee = "E0004"},
 
-                new Order {ID_Order = "HD0071", OrderDate = new DateTime(2022, 06, 11), TotalPrice = 16000,
+                new Order {ID_Order = "HD0071", OrderDate = new DateTime(2022, 06, 11, 11, 26, 27), TotalPrice = 16000,
                     ID_Customer = "KH0022", ID_Employee = "E0008"},
 
-                new Order {ID_Order = "HD0072", OrderDate = new DateTime(2022, 06, 11), TotalPrice = 52000,
+                new Order {ID_Order = "HD0072", OrderDate = new DateTime(2022, 06, 11, 12, 11, 23), TotalPrice = 52000,
                     ID_Customer = "KH0026", ID_Employee = "E0003"},
 
-                new Order {ID_Order = "HD0073", OrderDate = new DateTime(2022, 06, 11), TotalPrice = 20000,
+                new Order {ID_Order = "HD0073", OrderDate = new DateTime(2022, 06, 11, 13, 22, 44), TotalPrice = 20000,
                     ID_Customer = "KH0011", ID_Employee = "E0009"},
 
-                new Order {ID_Order = "HD0074", OrderDate = new DateTime(2022, 06, 11), TotalPrice = 60000,
+                new Order {ID_Order = "HD0074", OrderDate = new DateTime(2022, 06, 11, 14, 47, 33), TotalPrice = 60000,
                     ID_Customer = "KH0004", ID_Employee = "E0007"},
 
-                new Order {ID_Order = "HD0075", OrderDate = new DateTime(2022, 06, 11), TotalPrice = 66000,
+                new Order {ID_Order = "HD0075", OrderDate = new DateTime(2022, 06, 11, 15, 51, 51), TotalPrice = 66000,
                     ID_Customer = "KH0018", ID_Employee = "E0004"},
 
-                new Order {ID_Order = "HD0076", OrderDate = new DateTime(2022, 06, 12), TotalPrice = 44000,
+                new Order {ID_Order = "HD0076", OrderDate = new DateTime(2022, 06, 12, 11, 25, 12), TotalPrice = 44000,
                     ID_Customer = "KH0025", ID_Employee = "E0001"},
 
-                new Order {ID_Order = "HD0077", OrderDate = new DateTime(2022, 06, 12), TotalPrice = 18000,
+                new Order {ID_Order = "HD0077", OrderDate = new DateTime(2022, 06, 12, 14, 54, 15), TotalPrice = 18000,
                     ID_Customer = "KH0019", ID_Employee = "E0004"},
 
-                new Order {ID_Order = "HD0078", OrderDate = new DateTime(2022, 06, 12), TotalPrice = 20000,
+                new Order {ID_Order = "HD0078", OrderDate = new DateTime(2022, 06, 12, 15, 11, 16), TotalPrice = 20000,
                     ID_Customer = "KH0007", ID_Employee = "E0003"},
 
-                new Order {ID_Order = "HD0079", OrderDate = new DateTime(2022, 06, 12), TotalPrice = 36000,
+                new Order {ID_Order = "HD0079", OrderDate = new DateTime(2022, 06, 12, 17, 51, 26), TotalPrice = 36000,
                     ID_Customer = "KH0023", ID_Employee = "E0010"},
 
-                new Order {ID_Order = "HD0080", OrderDate = new DateTime(2022, 06, 12), TotalPrice = 52000,
+                new Order {ID_Order = "HD0080", OrderDate = new DateTime(2022, 06, 12, 18, 22, 33), TotalPrice = 52000,
                     ID_Customer = "KH0012", ID_Employee = "E0007"},
 
-                new Order {ID_Order = "HD0081", OrderDate = new DateTime(2022, 06, 13), TotalPrice = 34000,
+                new Order {ID_Order = "HD0081", OrderDate = new DateTime(2022, 06, 13, 09, 42, 12), TotalPrice = 34000,
                     ID_Customer = "KH0017", ID_Employee = "E0006"},
 
-                new Order {ID_Order = "HD0082", OrderDate = new DateTime(2022, 06, 13), TotalPrice = 52000,
+                new Order {ID_Order = "HD0082", OrderDate = new DateTime(2022, 06, 13, 10, 27, 42), TotalPrice = 52000,
                     ID_Customer = "KH0026", ID_Employee = "E0009"},
 
-                new Order {ID_Order = "HD0083", OrderDate = new DateTime(2022, 06, 13), TotalPrice = 16000,
+                new Order {ID_Order = "HD0083", OrderDate = new DateTime(2022, 06, 13, 11, 26, 25), TotalPrice = 16000,
                     ID_Customer = "KH0017", ID_Employee = "E0004"},
 
-                new Order {ID_Order = "HD0084", OrderDate = new DateTime(2022, 06, 13), TotalPrice = 24000,
+                new Order {ID_Order = "HD0084", OrderDate = new DateTime(2022, 06, 13, 13, 11, 25), TotalPrice = 24000,
                     ID_Customer = "KH0009", ID_Employee = "E0005"},
 
-                new Order {ID_Order = "HD0085", OrderDate = new DateTime(2022, 06, 13), TotalPrice = 36000,
+                new Order {ID_Order = "HD0085", OrderDate = new DateTime(2022, 06, 13, 15, 22, 22), TotalPrice = 36000,
                     ID_Customer = "KH0022", ID_Employee = "E0010"},
 
-                new Order {ID_Order = "HD0086", OrderDate = new DateTime(2022, 06, 14), TotalPrice = 44000,
+                new Order {ID_Order = "HD0086", OrderDate = new DateTime(2022, 06, 14, 14, 52, 55), TotalPrice = 44000,
                     ID_Customer = "KH0011", ID_Employee = "E0007"},
 
-                new Order {ID_Order = "HD0087", OrderDate = new DateTime(2022, 06, 14), TotalPrice = 38000,
+                new Order {ID_Order = "HD0087", OrderDate = new DateTime(2022, 06, 14, 15, 31, 52), TotalPrice = 38000,
                     ID_Customer = "KH0027", ID_Employee = "E0006"},
 
-                new Order {ID_Order = "HD0088", OrderDate = new DateTime(2022, 06, 14), TotalPrice = 20000,
+                new Order {ID_Order = "HD0088", OrderDate = new DateTime(2022, 06, 14, 16, 51, 32), TotalPrice = 20000,
                     ID_Customer = "KH0014", ID_Employee = "E0004"},
 
-                new Order {ID_Order = "HD0089", OrderDate = new DateTime(2022, 06, 14), TotalPrice = 24000,
+                new Order {ID_Order = "HD0089", OrderDate = new DateTime(2022, 06, 14, 17, 54, 11), TotalPrice = 24000,
                     ID_Customer = "KH0004", ID_Employee = "E0002"},
 
-                new Order {ID_Order = "HD0090", OrderDate = new DateTime(2022, 06, 14), TotalPrice = 54000,
+                new Order {ID_Order = "HD0090", OrderDate = new DateTime(2022, 06, 14, 18, 25, 43), TotalPrice = 54000,
                     ID_Customer = "KH0023", ID_Employee = "E0003"},
 
-                new Order {ID_Order = "HD0091", OrderDate = new DateTime(2022, 06, 15), TotalPrice = 16000,
+                new Order {ID_Order = "HD0091", OrderDate = new DateTime(2022, 06, 15, 10, 22, 31), TotalPrice = 16000,
                     ID_Customer = "KH0021", ID_Employee = "E0004"},
 
-                new Order {ID_Order = "HD0092", OrderDate = new DateTime(2022, 06, 15), TotalPrice = 42000,
+                new Order {ID_Order = "HD0092", OrderDate = new DateTime(2022, 06, 15, 11, 35, 35), TotalPrice = 42000,
                     ID_Customer = "KH0028", ID_Employee = "E0003"},
 
-                new Order {ID_Order = "HD0093", OrderDate = new DateTime(2022, 06, 15), TotalPrice = 34000,
+                new Order {ID_Order = "HD0093", OrderDate = new DateTime(2022, 06, 15, 12, 31, 22), TotalPrice = 34000,
                     ID_Customer = "KH0019", ID_Employee = "E0008"},
 
-                new Order {ID_Order = "HD0094", OrderDate = new DateTime(2022, 06, 15), TotalPrice = 44000,
+                new Order {ID_Order = "HD0094", OrderDate = new DateTime(2022, 06, 15, 13, 46, 15), TotalPrice = 44000,
                     ID_Customer = "KH0001", ID_Employee = "E0003"},
 
-                new Order {ID_Order = "HD0095", OrderDate = new DateTime(2022, 06, 15), TotalPrice = 38000,
+                new Order {ID_Order = "HD0095", OrderDate = new DateTime(2022, 06, 15, 14, 51, 22), TotalPrice = 38000,
                     ID_Customer = "KH0029", ID_Employee = "E0001"},
 
-                new Order {ID_Order = "HD0096", OrderDate = new DateTime(2022, 06, 16), TotalPrice = 30000,
+                new Order {ID_Order = "HD0096", OrderDate = new DateTime(2022, 06, 16, 14, 22, 22), TotalPrice = 30000,
                     ID_Customer = "KH0027", ID_Employee = "E0003"},
 
-                new Order {ID_Order = "HD0097", OrderDate = new DateTime(2022, 06, 16), TotalPrice = 44000,
+                new Order {ID_Order = "HD0097", OrderDate = new DateTime(2022, 06, 16, 15, 41, 11), TotalPrice = 44000,
                     ID_Customer = "KH0016", ID_Employee = "E0008"},
 
-                new Order {ID_Order = "HD0098", OrderDate = new DateTime(2022, 06, 16), TotalPrice = 42000,
+                new Order {ID_Order = "HD0098", OrderDate = new DateTime(2022, 06, 16, 16, 56, 07), TotalPrice = 42000,
                     ID_Customer = "KH0017", ID_Employee = "E0004"},
 
-                new Order {ID_Order = "HD0099", OrderDate = new DateTime(2022, 06, 16), TotalPrice = 52000,
+                new Order {ID_Order = "HD0099", OrderDate = new DateTime(2022, 06, 16, 17, 22, 06), TotalPrice = 52000,
                     ID_Customer = "KH0007", ID_Employee = "E0003"},
 
-                new Order {ID_Order = "HD0100", OrderDate = new DateTime(2022, 06, 16), TotalPrice = 64000,
+                new Order {ID_Order = "HD0100", OrderDate = new DateTime(2022, 06, 16, 18, 21, 50), TotalPrice = 64000,
                     ID_Customer = "KH0030", ID_Employee = "E0001"},
 
-                new Order {ID_Order = "HD0101", OrderDate = new DateTime(2022, 06, 17), TotalPrice = 44000,
+                new Order {ID_Order = "HD0101", OrderDate = new DateTime(2022, 06, 17, 06, 21, 06), TotalPrice = 44000,
                     ID_Customer = "KH0024", ID_Employee = "E0006"},
 
-                new Order {ID_Order = "HD0102", OrderDate = new DateTime(2022, 06, 17), TotalPrice = 52000,
+                new Order {ID_Order = "HD0102", OrderDate = new DateTime(2022, 06, 17, 08, 41, 26), TotalPrice = 52000,
                     ID_Customer = "KH0017", ID_Employee = "E0009"},
 
-                new Order {ID_Order = "HD0103", OrderDate = new DateTime(2022, 06, 17), TotalPrice = 34000,
+                new Order {ID_Order = "HD0103", OrderDate = new DateTime(2022, 06, 17, 11, 07, 41), TotalPrice = 34000,
                     ID_Customer = "KH0004", ID_Employee = "E0006"},
 
-                new Order {ID_Order = "HD0104", OrderDate = new DateTime(2022, 06, 17), TotalPrice = 30000,
+                new Order {ID_Order = "HD0104", OrderDate = new DateTime(2022, 06, 17, 15, 51, 49), TotalPrice = 30000,
                     ID_Customer = "KH0019", ID_Employee = "E0002"},
 
-                new Order {ID_Order = "HD0105", OrderDate = new DateTime(2022, 06, 17), TotalPrice = 64000,
+                new Order {ID_Order = "HD0105", OrderDate = new DateTime(2022, 06, 17, 18, 33, 31), TotalPrice = 64000,
                     ID_Customer = "KH0016", ID_Employee = "E0009"},
 
-                new Order {ID_Order = "HD0106", OrderDate = new DateTime(2022, 06, 18), TotalPrice = 22000,
+                new Order {ID_Order = "HD0106", OrderDate = new DateTime(2022, 06, 18, 13, 17, 22), TotalPrice = 22000,
                     ID_Customer = "KH0017", ID_Employee = "E0006"},
 
-                new Order {ID_Order = "HD0107", OrderDate = new DateTime(2022, 06, 18), TotalPrice = 22000,
+                new Order {ID_Order = "HD0107", OrderDate = new DateTime(2022, 06, 18, 13, 12, 11), TotalPrice = 22000,
                     ID_Customer = "KH0015", ID_Employee = "E0008"},
 
-                new Order {ID_Order = "HD0108", OrderDate = new DateTime(2022, 06, 18), TotalPrice = 12000,
+                new Order {ID_Order = "HD0108", OrderDate = new DateTime(2022, 06, 18, 14, 06, 33), TotalPrice = 12000,
                     ID_Customer = "KH0013", ID_Employee = "E0002"},
 
-                new Order {ID_Order = "HD0109", OrderDate = new DateTime(2022, 06, 18), TotalPrice = 22000,
+                new Order {ID_Order = "HD0109", OrderDate = new DateTime(2022, 06, 18, 16, 25, 44), TotalPrice = 22000,
                     ID_Customer = "KH0029", ID_Employee = "E0005"},
 
-                new Order {ID_Order = "HD0110", OrderDate = new DateTime(2022, 06, 18), TotalPrice = 34000,
+                new Order {ID_Order = "HD0110", OrderDate = new DateTime(2022, 06, 18, 21, 02, 55), TotalPrice = 34000,
                     ID_Customer = "KH0025", ID_Employee = "E0001"},
 
-                new Order {ID_Order = "HD0111", OrderDate = new DateTime(2022, 06, 19), TotalPrice = 52000,
+                new Order {ID_Order = "HD0111", OrderDate = new DateTime(2022, 06, 19, 00, 00, 00), TotalPrice = 52000,
                     ID_Customer = "KH0021", ID_Employee = "E0008"},
 
-                new Order {ID_Order = "HD0112", OrderDate = new DateTime(2022, 06, 19), TotalPrice = 12000,
+                new Order {ID_Order = "HD0112", OrderDate = new DateTime(2022, 06, 19, 08, 46, 22), TotalPrice = 12000,
                     ID_Customer = "KH0016", ID_Employee = "E0010"},
 
-                new Order {ID_Order = "HD0113", OrderDate = new DateTime(2022, 06, 19), TotalPrice = 42000,
+                new Order {ID_Order = "HD0113", OrderDate = new DateTime(2022, 06, 19, 08, 22, 11), TotalPrice = 42000,
                     ID_Customer = "KH0017", ID_Employee = "E0004"},
 
-                new Order {ID_Order = "HD0114", OrderDate = new DateTime(2022, 06, 19), TotalPrice = 22000,
+                new Order {ID_Order = "HD0114", OrderDate = new DateTime(2022, 06, 19, 11, 51, 25), TotalPrice = 22000,
                     ID_Customer = "KH0007", ID_Employee = "E0003"},
 
-                new Order {ID_Order = "HD0115", OrderDate = new DateTime(2022, 06, 19), TotalPrice = 60000,
+                new Order {ID_Order = "HD0115", OrderDate = new DateTime(2022, 06, 19, 13, 21, 54), TotalPrice = 60000,
                     ID_Customer = "KH0030", ID_Employee = "E0001"},
 
-                new Order {ID_Order = "HD0116", OrderDate = new DateTime(2022, 06, 20), TotalPrice = 44000,
+                new Order {ID_Order = "HD0116", OrderDate = new DateTime(2022, 06, 20, 12, 00, 24), TotalPrice = 44000,
                     ID_Customer = "KH0027", ID_Employee = "E0003"},
 
-                new Order {ID_Order = "HD0117", OrderDate = new DateTime(2022, 06, 20), TotalPrice = 52000,
+                new Order {ID_Order = "HD0117", OrderDate = new DateTime(2022, 06, 20, 12, 22, 55), TotalPrice = 52000,
                     ID_Customer = "KH0016", ID_Employee = "E0008"},
 
-                new Order {ID_Order = "HD0118", OrderDate = new DateTime(2022, 06, 20), TotalPrice = 42000,
+                new Order {ID_Order = "HD0118", OrderDate = new DateTime(2022, 06, 20, 13, 25, 11), TotalPrice = 42000,
                     ID_Customer = "KH0017", ID_Employee = "E0004"},
 
-                new Order {ID_Order = "HD0119", OrderDate = new DateTime(2022, 06, 20), TotalPrice = 52000,
+                new Order {ID_Order = "HD0119", OrderDate = new DateTime(2022, 06, 20, 13, 52, 42), TotalPrice = 52000,
                     ID_Customer = "KH0007", ID_Employee = "E0003"},
 
-                new Order {ID_Order = "HD0120", OrderDate = new DateTime(2022, 06, 20), TotalPrice = 56000,
+                new Order {ID_Order = "HD0120", OrderDate = new DateTime(2022, 06, 20, 14, 15, 00), TotalPrice = 56000,
                     ID_Customer = "KH0030", ID_Employee = "E0001"},
 
-                new Order {ID_Order = "HD0121", OrderDate = new DateTime(2022, 06, 21), TotalPrice = 30000,
+                new Order {ID_Order = "HD0121", OrderDate = new DateTime(2022, 06, 21, 09, 37, 26), TotalPrice = 30000,
                     ID_Customer = "KH0018", ID_Employee = "E0009"},
 
-                new Order {ID_Order = "HD0122", OrderDate = new DateTime(2022, 06, 21), TotalPrice = 44000,
+                new Order {ID_Order = "HD0122", OrderDate = new DateTime(2022, 06, 21, 10, 41, 54), TotalPrice = 44000,
                     ID_Customer = "KH0017", ID_Employee = "E0006"},
 
-                new Order {ID_Order = "HD0123", OrderDate = new DateTime(2022, 06, 21), TotalPrice = 82000,
+                new Order {ID_Order = "HD0123", OrderDate = new DateTime(2022, 06, 21, 11, 11, 11), TotalPrice = 82000,
                     ID_Customer = "KH0024", ID_Employee = "E0001"},
 
-                new Order {ID_Order = "HD0124", OrderDate = new DateTime(2022, 06, 21), TotalPrice = 30000,
+                new Order {ID_Order = "HD0124", OrderDate = new DateTime(2022, 06, 21, 13, 22, 08), TotalPrice = 30000,
                     ID_Customer = "KH0024", ID_Employee = "E0005"},
 
-                new Order {ID_Order = "HD0125", OrderDate = new DateTime(2022, 06, 22), TotalPrice = 44000,
+                new Order {ID_Order = "HD0125", OrderDate = new DateTime(2022, 06, 22, 12, 05, 22), TotalPrice = 44000,
                     ID_Customer = "KH0014", ID_Employee = "E0009"},
 
-                new Order {ID_Order = "HD0126", OrderDate = new DateTime(2022, 06, 22), TotalPrice = 20000,
+                new Order {ID_Order = "HD0126", OrderDate = new DateTime(2022, 06, 22, 12, 11, 25), TotalPrice = 20000,
                     ID_Customer = "KH0002", ID_Employee = "E0001"},
 
-                new Order {ID_Order = "HD0127", OrderDate = new DateTime(2022, 06, 22), TotalPrice = 52000,
+                new Order {ID_Order = "HD0127", OrderDate = new DateTime(2022, 06, 22, 14, 22, 33), TotalPrice = 52000,
                     ID_Customer = "KH0010", ID_Employee = "E0003"},
 
-                new Order {ID_Order = "HD0128", OrderDate = new DateTime(2022, 06, 23), TotalPrice = 52000,
+                new Order {ID_Order = "HD0128", OrderDate = new DateTime(2022, 06, 23, 10, 32, 25), TotalPrice = 52000,
                     ID_Customer = "KH0021", ID_Employee = "E0003"},
 
-                new Order {ID_Order = "HD0129", OrderDate = new DateTime(2022, 06, 23), TotalPrice = 30000,
+                new Order {ID_Order = "HD0129", OrderDate = new DateTime(2022, 06, 23, 11, 44, 52), TotalPrice = 30000,
                     ID_Customer = "KH0011", ID_Employee = "E0008"},
 
-                new Order {ID_Order = "HD0130", OrderDate = new DateTime(2022, 06, 23), TotalPrice = 42000,
+                new Order {ID_Order = "HD0130", OrderDate = new DateTime(2022, 06, 23, 12, 26, 55), TotalPrice = 42000,
                     ID_Customer = "KH0017", ID_Employee = "E0004"},
 
-                new Order {ID_Order = "HD0131", OrderDate = new DateTime(2022, 06, 23), TotalPrice = 38000,
+                new Order {ID_Order = "HD0131", OrderDate = new DateTime(2022, 06, 23, 13, 53, 21), TotalPrice = 38000,
                     ID_Customer = "KH0003", ID_Employee = "E0007"},
 
-                new Order {ID_Order = "HD0132", OrderDate = new DateTime(2022, 06, 23), TotalPrice = 64000,
+                new Order {ID_Order = "HD0132", OrderDate = new DateTime(2022, 06, 23, 14, 21, 44), TotalPrice = 64000,
                     ID_Customer = "KH0030", ID_Employee = "E0001"},
 
-                new Order {ID_Order = "HD0133", OrderDate = new DateTime(2022, 06, 23), TotalPrice = 90000,
+                new Order {ID_Order = "HD0133", OrderDate = new DateTime(2022, 06, 23, 16, 22, 07), TotalPrice = 90000,
                     ID_Customer = "KH0022", ID_Employee = "E0010"},
 
-                new Order {ID_Order = "HD0134", OrderDate = new DateTime(2022, 06, 24), TotalPrice = 30000,
+                new Order {ID_Order = "HD0134", OrderDate = new DateTime(2022, 06, 24, 10, 22, 11), TotalPrice = 30000,
                     ID_Customer = "KH0025", ID_Employee = "E0010"},
 
-                new Order {ID_Order = "HD0135", OrderDate = new DateTime(2022, 06, 24), TotalPrice = 44000,
+                new Order {ID_Order = "HD0135", OrderDate = new DateTime(2022, 06, 24, 15, 55, 55), TotalPrice = 44000,
                     ID_Customer = "KH0015", ID_Employee = "E0002"},
 
-                new Order {ID_Order = "HD0136", OrderDate = new DateTime(2022, 06, 25), TotalPrice = 22000,
+                new Order {ID_Order = "HD0136", OrderDate = new DateTime(2022, 06, 25, 14, 31, 25), TotalPrice = 22000,
                     ID_Customer = "KH0027", ID_Employee = "E0003"},
 
-                new Order {ID_Order = "HD0137", OrderDate = new DateTime(2022, 06, 25), TotalPrice = 30000,
+                new Order {ID_Order = "HD0137", OrderDate = new DateTime(2022, 06, 25, 16, 42, 41), TotalPrice = 30000,
                     ID_Customer = "KH0011", ID_Employee = "E0007"},
 
-                new Order {ID_Order = "HD0138", OrderDate = new DateTime(2022, 06, 25), TotalPrice = 24000,
+                new Order {ID_Order = "HD0138", OrderDate = new DateTime(2022, 06, 25, 17, 26, 25), TotalPrice = 24000,
                     ID_Customer = "KH0016", ID_Employee = "E0010"},
 
-                new Order {ID_Order = "HD0139", OrderDate = new DateTime(2022, 06, 25), TotalPrice = 22000,
+                new Order {ID_Order = "HD0139", OrderDate = new DateTime(2022, 06, 25, 18, 41, 21), TotalPrice = 22000,
                     ID_Customer = "KH0001", ID_Employee = "E0003"},
 
-                new Order {ID_Order = "HD0140", OrderDate = new DateTime(2022, 06, 25), TotalPrice = 42000,
+                new Order {ID_Order = "HD0140", OrderDate = new DateTime(2022, 06, 25, 20, 22, 31), TotalPrice = 42000,
                     ID_Customer = "KH0030", ID_Employee = "E0001"},
 
-                new Order {ID_Order = "HD0141", OrderDate = new DateTime(2022, 06, 26), TotalPrice = 30000,
+                new Order {ID_Order = "HD0141", OrderDate = new DateTime(2022, 06, 26, 07, 44, 11), TotalPrice = 30000,
                     ID_Customer = "KH0027", ID_Employee = "E0003"},
 
-                new Order {ID_Order = "HD0142", OrderDate = new DateTime(2022, 06, 26), TotalPrice = 22000,
+                new Order {ID_Order = "HD0142", OrderDate = new DateTime(2022, 06, 26, 10, 51, 12), TotalPrice = 22000,
                     ID_Customer = "KH0016", ID_Employee = "E0008"},
 
-                new Order {ID_Order = "HD0143", OrderDate = new DateTime(2022, 06, 26), TotalPrice = 12000,
+                new Order {ID_Order = "HD0143", OrderDate = new DateTime(2022, 06, 26, 12, 22, 13), TotalPrice = 12000,
                     ID_Customer = "KH0017", ID_Employee = "E0004"},
 
-                new Order {ID_Order = "HD0144", OrderDate = new DateTime(2022, 06, 26), TotalPrice = 52000,
+                new Order {ID_Order = "HD0144", OrderDate = new DateTime(2022, 06, 26, 15, 25, 44), TotalPrice = 52000,
                     ID_Customer = "KH0007", ID_Employee = "E0003"},
 
-                new Order {ID_Order = "HD0145", OrderDate = new DateTime(2022, 06, 26), TotalPrice = 34000,
+                new Order {ID_Order = "HD0145", OrderDate = new DateTime(2022, 06, 26, 18, 51, 11), TotalPrice = 34000,
                     ID_Customer = "KH0030", ID_Employee = "E0001"},
 
-                new Order {ID_Order = "HD0146", OrderDate = new DateTime(2022, 06, 27), TotalPrice = 8000,
+                new Order {ID_Order = "HD0146", OrderDate = new DateTime(2022, 06, 27, 12, 11, 11), TotalPrice = 8000,
                     ID_Customer = "KH0023", ID_Employee = "E0009"},
 
-                new Order {ID_Order = "HD0147", OrderDate = new DateTime(2022, 06, 27), TotalPrice = 52000,
+                new Order {ID_Order = "HD0147", OrderDate = new DateTime(2022, 06, 27, 16, 12, 12), TotalPrice = 52000,
                     ID_Customer = "KH0013", ID_Employee = "E0007"},
 
-                new Order {ID_Order = "HD0148", OrderDate = new DateTime(2022, 06, 27), TotalPrice = 12000,
+                new Order {ID_Order = "HD0148", OrderDate = new DateTime(2022, 06, 27, 17, 13, 13), TotalPrice = 12000,
                     ID_Customer = "KH0014", ID_Employee = "E0005"},
 
-                new Order {ID_Order = "HD0149", OrderDate = new DateTime(2022, 06, 27), TotalPrice = 64000,
+                new Order {ID_Order = "HD0149", OrderDate = new DateTime(2022, 06, 27, 18, 14, 14), TotalPrice = 64000,
                     ID_Customer = "KH0000", ID_Employee = "E0003"},
 
-                new Order {ID_Order = "HD0150", OrderDate = new DateTime(2022, 06, 27), TotalPrice = 12000,
+                new Order {ID_Order = "HD0150", OrderDate = new DateTime(2022, 06, 27, 19, 15, 15), TotalPrice = 12000,
                     ID_Customer = "KH0004", ID_Employee = "E0005"},
 
-                new Order {ID_Order = "HD0151", OrderDate = new DateTime(2022, 06, 28), TotalPrice = 30000,
+                new Order {ID_Order = "HD0151", OrderDate = new DateTime(2022, 06, 28, 07, 11, 11), TotalPrice = 30000,
                     ID_Customer = "KH0021", ID_Employee = "E0003"},
 
-                new Order {ID_Order = "HD0152", OrderDate = new DateTime(2022, 06, 28), TotalPrice = 44000,
+                new Order {ID_Order = "HD0152", OrderDate = new DateTime(2022, 06, 28, 12, 16, 17), TotalPrice = 44000,
                     ID_Customer = "KH0016", ID_Employee = "E0008"},
 
-                new Order {ID_Order = "HD0153", OrderDate = new DateTime(2022, 06, 28), TotalPrice = 42000,
+                new Order {ID_Order = "HD0153", OrderDate = new DateTime(2022, 06, 28, 12, 55, 26), TotalPrice = 42000,
                     ID_Customer = "KH0017", ID_Employee = "E0004"},
 
-                new Order {ID_Order = "HD0154", OrderDate = new DateTime(2022, 06, 28), TotalPrice = 30000,
+                new Order {ID_Order = "HD0154", OrderDate = new DateTime(2022, 06, 28, 15, 15, 46), TotalPrice = 30000,
                     ID_Customer = "KH0007", ID_Employee = "E0003"},
 
-                new Order {ID_Order = "HD0155", OrderDate = new DateTime(2022, 06, 28, 0, 0, 0), TotalPrice = 46000,
+                new Order {ID_Order = "HD0155", OrderDate = new DateTime(2022, 06, 28, 17, 21, 51), TotalPrice = 46000,
                     ID_Customer = "KH0030", ID_Employee = "E0001"},
 
-                new Order {ID_Order = "HD0156", OrderDate = new DateTime(2022, 06, 29, 7, 0, 0), TotalPrice = 12000,
+                new Order {ID_Order = "HD0156", OrderDate = new DateTime(2022, 06, 29, 07, 55, 33), TotalPrice = 12000,
                     ID_Customer = "KH0029", ID_Employee = "E0010"},
 
-                new Order {ID_Order = "HD0157", OrderDate = new DateTime(2022, 06, 29, 8, 0, 0), TotalPrice = 20000,
+                new Order {ID_Order = "HD0157", OrderDate = new DateTime(2022, 06, 29, 08, 21, 41), TotalPrice = 20000,
                     ID_Customer = "KH0019", ID_Employee = "E0008"},
 
-                new Order {ID_Order = "HD0158", OrderDate = new DateTime(2022, 06, 29, 9, 0, 0), TotalPrice = 30000,
+                new Order {ID_Order = "HD0158", OrderDate = new DateTime(2022, 06, 29, 09, 04, 55), TotalPrice = 30000,
                     ID_Customer = "KH0012", ID_Employee = "E0006"},
 
-                new Order {ID_Order = "HD0159", OrderDate = new DateTime(2022, 06, 29, 10, 0, 0), TotalPrice = 38000,
+                new Order {ID_Order = "HD0159", OrderDate = new DateTime(2022, 06, 29, 10, 54, 11), TotalPrice = 38000,
                     ID_Customer = "KH0002", ID_Employee = "E0004"},
 
-                new Order {ID_Order = "HD0160", OrderDate = new DateTime(2022, 06, 29, 11, 0, 0), TotalPrice = 28000,
+                new Order {ID_Order = "HD0160", OrderDate = new DateTime(2022, 06, 29, 11, 12, 16), TotalPrice = 28000,
                     ID_Customer = "KH0022", ID_Employee = "E0002"},
 
-                new Order {ID_Order = "HD0161", OrderDate = new DateTime(2022, 06, 30), TotalPrice = 30000,
+                new Order {ID_Order = "HD0161", OrderDate = new DateTime(2022, 06, 30, 00, 00, 00), TotalPrice = 30000,
                     ID_Customer = "KH0027", ID_Employee = "E0010"},
 
-                new Order {ID_Order = "HD0162", OrderDate = new DateTime(2022, 06, 30), TotalPrice = 30000,
+                new Order {ID_Order = "HD0162", OrderDate = new DateTime(2022, 06, 30, 12, 12, 55), TotalPrice = 30000,
                     ID_Customer = "KH0007", ID_Employee = "E0005"},
 
-                new Order {ID_Order = "HD0163", OrderDate = new DateTime(2022, 06, 30), TotalPrice = 64000,
+                new Order {ID_Order = "HD0163", OrderDate = new DateTime(2022, 06, 30, 13, 13, 55), TotalPrice = 64000,
                     ID_Customer = "KH0030", ID_Employee = "E0005"},
 
-                new Order {ID_Order = "HD0164", OrderDate = new DateTime(2022, 07, 01), TotalPrice = 16000,
+                new Order {ID_Order = "HD0164", OrderDate = new DateTime(2022, 07, 01, 06, 41, 55), TotalPrice = 16000,
                     ID_Customer = "KH0028", ID_Employee = "E0003"},
 
-                new Order {ID_Order = "HD0165", OrderDate = new DateTime(2022, 07, 01), TotalPrice = 34000,
+                new Order {ID_Order = "HD0165", OrderDate = new DateTime(2022, 07, 01, 07, 25, 25), TotalPrice = 34000,
                     ID_Customer = "KH0011", ID_Employee = "E0010"},
 
-                new Order {ID_Order = "HD0166", OrderDate = new DateTime(2022, 07, 01), TotalPrice = 12000,
+                new Order {ID_Order = "HD0166", OrderDate = new DateTime(2022, 07, 01, 08, 25, 41), TotalPrice = 12000,
                     ID_Customer = "KH0017", ID_Employee = "E0004"},
 
-                new Order {ID_Order = "HD0167", OrderDate = new DateTime(2022, 07, 01), TotalPrice = 60000,
+                new Order {ID_Order = "HD0167", OrderDate = new DateTime(2022, 07, 01, 09, 51, 33), TotalPrice = 60000,
                     ID_Customer = "KH0007", ID_Employee = "E0003"},
 
-                new Order {ID_Order = "HD0168", OrderDate = new DateTime(2022, 07, 01), TotalPrice = 22000,
+                new Order {ID_Order = "HD0168", OrderDate = new DateTime(2022, 07, 01, 10, 41, 35), TotalPrice = 22000,
                     ID_Customer = "KH0029", ID_Employee = "E0005"},
 
-                new Order {ID_Order = "HD0169", OrderDate = new DateTime(2022, 07, 01), TotalPrice = 64000,
+                new Order {ID_Order = "HD0169", OrderDate = new DateTime(2022, 07, 01, 12, 46, 31), TotalPrice = 64000,
                     ID_Customer = "KH0021", ID_Employee = "E0009"},
 
-                new Order {ID_Order = "HD0170", OrderDate = new DateTime(2022, 07, 01), TotalPrice = 50000,
+                new Order {ID_Order = "HD0170", OrderDate = new DateTime(2022, 07, 01, 15, 33, 11), TotalPrice = 50000,
                     ID_Customer = "KH0030", ID_Employee = "E0010"},
 
-                new Order {ID_Order = "HD0171", OrderDate = new DateTime(2022, 07, 02), TotalPrice = 60000,
+                new Order {ID_Order = "HD0171", OrderDate = new DateTime(2022, 07, 02, 10, 52, 15), TotalPrice = 60000,
                     ID_Customer = "KH0025", ID_Employee = "E0003"},
 
-                new Order {ID_Order = "HD0172", OrderDate = new DateTime(2022, 07, 02), TotalPrice = 44000,
+                new Order {ID_Order = "HD0172", OrderDate = new DateTime(2022, 07, 02, 11, 15, 26), TotalPrice = 44000,
                     ID_Customer = "KH0016", ID_Employee = "E0008"},
 
-                new Order {ID_Order = "HD0173", OrderDate = new DateTime(2022, 07, 02), TotalPrice = 42000,
+                new Order {ID_Order = "HD0173", OrderDate = new DateTime(2022, 07, 02, 13, 33, 24), TotalPrice = 42000,
                     ID_Customer = "KH0018", ID_Employee = "E0006"},
 
-                new Order {ID_Order = "HD0174", OrderDate = new DateTime(2022, 07, 02), TotalPrice = 22000,
+                new Order {ID_Order = "HD0174", OrderDate = new DateTime(2022, 07, 02, 14, 25, 28), TotalPrice = 22000,
                     ID_Customer = "KH0001", ID_Employee = "E0003"},
 
-                new Order {ID_Order = "HD0175", OrderDate = new DateTime(2022, 07, 02), TotalPrice = 52000,
+                new Order {ID_Order = "HD0175", OrderDate = new DateTime(2022, 07, 02, 15, 41, 58), TotalPrice = 52000,
                     ID_Customer = "KH0030", ID_Employee = "E0005"},
 
-                new Order {ID_Order = "HD0176", OrderDate = new DateTime(2022, 07, 02), TotalPrice = 36000,
+                new Order {ID_Order = "HD0176", OrderDate = new DateTime(2022, 07, 02, 17, 11, 41), TotalPrice = 36000,
                     ID_Customer = "KH0022", ID_Employee = "E0006"},
 
-                new Order {ID_Order = "HD0177", OrderDate = new DateTime(2022, 07, 02), TotalPrice = 44000,
+                new Order {ID_Order = "HD0177", OrderDate = new DateTime(2022, 07, 02, 18, 22, 22), TotalPrice = 44000,
                     ID_Customer = "KH0024", ID_Employee = "E0010"},
 
-                new Order {ID_Order = "HD0178", OrderDate = new DateTime(2022, 07, 02), TotalPrice = 16000,
+                new Order {ID_Order = "HD0178", OrderDate = new DateTime(2022, 07, 02, 20, 15, 46), TotalPrice = 16000,
                     ID_Customer = "KH0026", ID_Employee = "E0009"},
 
-                new Order {ID_Order = "HD0179", OrderDate = new DateTime(2022, 07, 03), TotalPrice = 24000,
+                new Order {ID_Order = "HD0179", OrderDate = new DateTime(2022, 07, 03, 07, 12, 42), TotalPrice = 24000,
                     ID_Customer = "KH0028", ID_Employee = "E0006"},
 
-                new Order {ID_Order = "HD0180", OrderDate = new DateTime(2022, 07, 03), TotalPrice = 94000,
+                new Order {ID_Order = "HD0180", OrderDate = new DateTime(2022, 07, 03, 07, 24, 12), TotalPrice = 94000,
                     ID_Customer = "KH0013 ", ID_Employee = "E0008"},
             });
 

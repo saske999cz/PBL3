@@ -156,10 +156,6 @@ namespace DoAnPBL3
         {
             tbIDBook.Text = ID;
         }
-        public string GetIDBook()
-        {
-            return tbIDBook.Text;
-        }
 
         public void QuantityByOne()
         {

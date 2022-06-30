@@ -72,6 +72,11 @@ namespace DoAnPBL3.BLL
             return DAL_QLNV.Instance.GetLastID();
         }
 
+        public string GetIDByAccountUsername(string accountUsername)
+        {
+            return DAL_QLNV.Instance.GetIDByAccountUsername(accountUsername);
+        }
+
         public int GetNumberTotalEmployee()
         {
             return DAL_QLNV.Instance.GetNumberTotalEmployee();

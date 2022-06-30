@@ -31,31 +31,58 @@ namespace DoAnPBL3.DAL
 
         public List<Order> GetListOrderByIDCustomer(string ID_Customer)
         {
-            using (BookStoreContext context = new BookStoreContext())
+            using (BookStoreContext db = new BookStoreContext())
             {
-                return context.Orders
+                return db.Orders
                     .Where(order => order.ID_Customer == ID_Customer)
                     .Select(order => order)
                     .ToList();
             }
         }
 
+        public List<Order> GetListOrderByEmployee(string nameEmployee, string ID_Customer)
+        {
+            using (BookStoreContext db = new BookStoreContext())
+            {
+                List<Order> listOrders = (from order in db.Orders
+                                          join employee in db.Employees on order.ID_Employee equals employee.ID_Employee
+                                          where employee.FullNameEmployee.Contains(nameEmployee)
+                                          where order.ID_Customer == ID_Customer
+                                          select order).ToList();
+                if (listOrders.Count > 0)
+                    return listOrders;
+                else
+                    return null;
+            }
+        }
+
         public List<OrderDetail> GetOrderDetailsByIDOrder(string ID_Order)
         {
-            using (BookStoreContext context = new BookStoreContext())
+            using (BookStoreContext db = new BookStoreContext())
             {
-                return context.OrderDetails
+                return db.OrderDetails
                     .Where(orderDetail => orderDetail.ID_Order == ID_Order)
                     .Select(orderDetail => orderDetail)
                     .ToList();
             }
         }
 
+        public Order GetOrderByID(string ID_Order)
+        {
+            using (BookStoreContext db = new BookStoreContext())
+            {
+                return db.Orders
+                    .Where(order => order.ID_Order == ID_Order)
+                    .Select(order => order)
+                    .FirstOrDefault();
+            }
+        }
+
         public int GetNumberTotalOrderByIDCustomer(string ID_Customer)
         {
-            using (BookStoreContext context = new BookStoreContext())
+            using (BookStoreContext db = new BookStoreContext())
             {
-                return context.Orders
+                return db.Orders
                         .Where(customer => customer.ID_Customer == ID_Customer)
                         .Select(orderInfo => new
                         {
@@ -71,9 +98,9 @@ namespace DoAnPBL3.DAL
 
         public int GetNumberTotalPriceByIDCustomer(string ID_Customer)
         {
-            using (BookStoreContext context = new BookStoreContext())
+            using (BookStoreContext db = new BookStoreContext())
             {
-                return context.Orders
+                return db.Orders
                         .Where(order => order.ID_Customer == ID_Customer)
                         .GroupBy(order => order.ID_Customer == ID_Customer)
                         .Select(orderInfo => new
@@ -87,9 +114,9 @@ namespace DoAnPBL3.DAL
 
         public int GetTotalQuantity(string ID_Order)
         {
-            using (BookStoreContext context = new BookStoreContext())
+            using (BookStoreContext db = new BookStoreContext())
             {
-                return context.OrderDetails
+                return db.OrderDetails
                         .Where(orderDetail => orderDetail.ID_Order == ID_Order)
                         .GroupBy(orderDetail => orderDetail.ID_Order)
                         .Select(orderDetail => new
@@ -103,9 +130,9 @@ namespace DoAnPBL3.DAL
 
         public int GetTotalAmount(string ID_Order)
         {
-            using (BookStoreContext context = new BookStoreContext())
+            using (BookStoreContext db = new BookStoreContext())
             {
-                return context.OrderDetails
+                return db.OrderDetails
                         .Where(orderDetail => orderDetail.ID_Order == ID_Order)
                         .GroupBy(orderDetail => orderDetail.ID_Order)
                         .Select(orderDetail => new
@@ -114,6 +141,38 @@ namespace DoAnPBL3.DAL
                         })
                         .FirstOrDefault()
                         .Price;
+            }
+        }
+
+        public string GetLastID()
+        {
+            using (BookStoreContext db = new BookStoreContext())
+            {
+                return db.Orders
+                        .OrderBy(order => order.ID_Order)
+                        .Select(order => order.ID_Order)
+                        .ToList()
+                        .LastOrDefault();
+            }
+        }
+
+        public bool AddOrder(Order order)
+        {
+            using (BookStoreContext db = new BookStoreContext())
+            {
+                db.Orders.Add(order);
+                int result = db.SaveChanges();
+                return result > 0;
+            }
+        }
+
+        public bool AddOrderDetail(OrderDetail orderDetail)
+        {
+            using (BookStoreContext db = new BookStoreContext())
+            {
+                db.OrderDetails.Add(orderDetail);
+                int result = db.SaveChanges();
+                return result > 0;
             }
         }
     }

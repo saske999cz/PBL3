@@ -1,4 +1,5 @@
-﻿using DoAnPBL3.Models;
+﻿using DoAnPBL3.BLL;
+using DoAnPBL3.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,6 +20,8 @@ namespace DoAnPBL3
         public static string ID_Customer = "";
         readonly FormNhapMua[] currentChildForm = new FormNhapMua[100];
         private readonly string accountUsername;
+        public delegate void LoadData(object sender, EventArgs e);
+        public LoadData RefreshData { get; set; }
 
         public FormCart(string accountUsername)
         {
@@ -88,7 +91,7 @@ namespace DoAnPBL3
                 {
                     foreach (FormNhapMua b in panelDesktop.Controls)
                     {
-                        if (b.GetIDBook() == ID)
+                        if (b.GetID_Book() == ID)
                         {
                             b.AddOneQuantity();
                             check = false;
@@ -144,25 +147,21 @@ namespace DoAnPBL3
                     foreach (FormNhapMua b in panelDesktop.Controls)
                     {
                         string ID_Book = b.GetID_Book();
-                        var book = context.Books
-                            .Where(bk => bk.ID_Book == ID_Book)
-                            .Select(bk => new { bk.NameBook, bk.Quantity })
-                            .ToList()
-                            .FirstOrDefault();
+                        Book book = BLL_QLBS.Instance.GetBookByID(ID_Book);
                         if (b.GetQuantityText() == "0" || b.GetQuantityText() == "")
                         {
                             check = false;
                             error[indexError] = panelDesktop.Controls.Count - panelDesktop.Controls.GetChildIndex(b);
                             indexError++;
                         }
-                        if (book.Quantity - b.GetQuantity() < 0)
+                        else if (book.Quantity - b.GetQuantity() < 0)
                         {
                             check = false;
                             error[indexError] = panelDesktop.Controls.Count - panelDesktop.Controls.GetChildIndex(b);
                             indexError++;
                             RJMessageBox.Show("Số lượng sách " + book.NameBook + " không đủ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
-                        if (book.Quantity == 0)
+                        else if (book.Quantity == 0)
                         {
                             check = false;
                             error[indexError] = panelDesktop.Controls.Count - panelDesktop.Controls.GetChildIndex(b);
@@ -170,74 +169,46 @@ namespace DoAnPBL3
                             RJMessageBox.Show("Sách " + book.NameBook + " đã bán hết", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
-                    if (check == true)
+                    if (check)
                     {
                         new FormAuthenticateCustomer().ShowDialog();
                         if (ID_Customer == "")
                             return;
                         else
                         {
-                            var ID_Order = context.Orders
-                                .OrderBy(order => order.ID_Order)
-                                .Select(order => order.ID_Order)
-                                .ToList()
-                                .LastOrDefault();
-                            var ID_Employee = context.Accounts
-                                .Join(
-                                    context.Employees,
-                                    account => account.Username,
-                                    employee => employee.AccountUsername,
-                                    (account, employee) => new
-                                    {
-                                        account.Username,
-                                        employee.ID_Employee
-                                    })
-                                .Where(account => account.Username == accountUsername)
-                                .Select(employee => employee.ID_Employee)
-                                .ToList()
-                                .FirstOrDefault();
-                            StringBuilder newID_Order;
-                            // Chua co hoa don nao
-                            if (ID_Order == null)
-                            {
-                                newID_Order = new StringBuilder("HD0000");
-                            }
-                            else
-                            {
-                                string id = ID_Order; // HD0001
-                                string code = id.Substring(2, id.Length - 2); // 0001
-                                int num = Convert.ToInt32(code); // 1
-                                num++; // 1 + 1 -> 2
-                                string numStr = num.ToString(); // "2"
-                                int lenNumStr = numStr.Length; // 1
-                                newID_Order = new StringBuilder(id.Remove(id.Length - lenNumStr, lenNumStr));// HD000
-                                newID_Order.Append(numStr); // HD000 + 2 => HD0002
-                            }
-
+                            string lastID_Order = BLL_QLHD.Instance.GetLastID();
+                            string newID_Order = BLL_QLHD.Instance.CreateNewOrderID(lastID_Order);
+                            string ID_Employee = BLL_QLNV.Instance.GetIDByAccountUsername(accountUsername);
                             string total = tbTotal.Text;
 
-
-                            Order newOrder = new Order(newID_Order.ToString(), DateTime.Now, Convert.ToInt32(total.Remove(total.Length - 3, 3)), ID_Customer, ID_Employee);
-                            context.Orders.Add(newOrder);
-                            context.SaveChanges();
-
-                            OrderDetail newOrderDetail;
-
-                            for (int i = 0; i < Convert.ToInt32(tbNumDiverse.Text); i++)
+                            Order newOrder = new Order(newID_Order.ToString(), DateTime.Now, 
+                                Convert.ToInt32(total.Remove(total.Length - 3, 3)), ID_Customer, ID_Employee);
+                            if (BLL_QLHD.Instance.AddOrder(newOrder))
                             {
-                                newOrderDetail = new OrderDetail(newID_Order.ToString(), currentChildForm[i].GetID_Book(), currentChildForm[i].GetNameBook(),
-                                    currentChildForm[i].GetPrice(), currentChildForm[i].GetQuantity(), (int)currentChildForm[i].GetAmount());
-                                context.OrderDetails.Add(newOrderDetail);
-                                context.SaveChanges();
+                                OrderDetail newOrderDetail;
 
-                                Book book = context.Books.Find(currentChildForm[i].GetID_Book());
-                                book.Quantity -= currentChildForm[i].GetQuantity();
-                                context.SaveChanges();
+                                foreach (FormNhapMua formNhapMua in panelDesktop.Controls)
+                                {
+                                    newOrderDetail = new OrderDetail(newID_Order.ToString(), formNhapMua.GetID_Book(), formNhapMua.GetNameBook(),
+                                        formNhapMua.GetPrice(), formNhapMua.GetQuantity(), (int)formNhapMua.GetAmount());
+                                    if (!BLL_QLHD.Instance.AddOrderDetail(newOrderDetail))
+                                    {
+                                        RJMessageBox.Show("Đặt món thất bại. Vui lòng thử lại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                        return;
+                                    }
+                                    else
+                                    {
+                                        string ID_Book = formNhapMua.GetID_Book();
+                                        int quantitySold = formNhapMua.GetQuantity();
+                                        if (!BLL_QLBS.Instance.UpdateQuantityBook(ID_Book, quantitySold))
+                                            return;
+                                    }
+                                }
+                                Alert("Mua sách thành công", Form_Alert.EnmType.Success);
+                                RefreshData(sender, e);
+                                panelDesktop.Controls.Clear();
+                                Hide();
                             }
-
-                            Alert("Mua sách thành công", Form_Alert.EnmType.Success);
-                            panelDesktop.Controls.Clear();
-                            this.Hide();
                         }
                         z = 0;
                         ID_Customer = "";

@@ -23,6 +23,7 @@ namespace DoAnPBL3
         {
             InitializeComponent();
             formCart = new FormCart(accountUsername);
+            formCart.RefreshData += new FormCart.LoadData(FormQLBSNV_Load);
             NotificationCircle.Hide();
             lblNotificationCounter.Hide();
         }
