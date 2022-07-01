@@ -45,6 +45,14 @@
             this.btnTKNV = new Guna.UI2.WinForms.Guna2Button();
             this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
             this.dgvQLNV = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.ID_Employee = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FullNameEmployee = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DateOfBirth = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID_Card = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblTotalEmployee = new System.Windows.Forms.Label();
             this.totalEmployee = new System.Windows.Forms.Label();
             this.lblTotalMaleEmployee = new System.Windows.Forms.Label();
@@ -56,14 +64,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelHeader = new System.Windows.Forms.Panel();
             this.tbTKNV = new DoAnPBL3.RJTextBox();
-            this.ID_Employee = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FullNameEmployee = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DateOfBirth = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ID_Card = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQLNV)).BeginInit();
@@ -270,7 +270,11 @@
             this.dgvQLNV.AllowUserToDeleteRows = false;
             this.dgvQLNV.AllowUserToResizeColumns = false;
             this.dgvQLNV.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(243)))), ((int)(((byte)(251)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 11F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvQLNV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvQLNV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
@@ -348,6 +352,78 @@
             this.dgvQLNV.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvQLNV.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvQLNV.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DgvQLNV_RowHeaderMouseClick);
+            // 
+            // ID_Employee
+            // 
+            this.ID_Employee.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ID_Employee.DataPropertyName = "ID_Employee";
+            this.ID_Employee.FillWeight = 61.65406F;
+            this.ID_Employee.HeaderText = "ID";
+            this.ID_Employee.Name = "ID_Employee";
+            this.ID_Employee.ReadOnly = true;
+            // 
+            // FullNameEmployee
+            // 
+            this.FullNameEmployee.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.FullNameEmployee.DataPropertyName = "FullNameEmployee";
+            this.FullNameEmployee.FillWeight = 120.9246F;
+            this.FullNameEmployee.HeaderText = "Họ và tên";
+            this.FullNameEmployee.Name = "FullNameEmployee";
+            this.FullNameEmployee.ReadOnly = true;
+            // 
+            // Email
+            // 
+            this.Email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Email.DataPropertyName = "Email";
+            this.Email.FillWeight = 146.5077F;
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
+            // 
+            // DateOfBirth
+            // 
+            this.DateOfBirth.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.DateOfBirth.DataPropertyName = "DateOfBirth";
+            this.DateOfBirth.FillWeight = 91.75087F;
+            this.DateOfBirth.HeaderText = "Ngày sinh";
+            this.DateOfBirth.Name = "DateOfBirth";
+            this.DateOfBirth.ReadOnly = true;
+            // 
+            // Gender
+            // 
+            this.Gender.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Gender.DataPropertyName = "Gender";
+            this.Gender.FillWeight = 83.07114F;
+            this.Gender.HeaderText = "Giới tính";
+            this.Gender.Name = "Gender";
+            this.Gender.ReadOnly = true;
+            // 
+            // ID_Card
+            // 
+            this.ID_Card.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ID_Card.DataPropertyName = "Id_Card";
+            this.ID_Card.FillWeight = 83.07114F;
+            this.ID_Card.HeaderText = "CMND";
+            this.ID_Card.Name = "ID_Card";
+            this.ID_Card.ReadOnly = true;
+            // 
+            // Phone
+            // 
+            this.Phone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Phone.DataPropertyName = "Phone";
+            this.Phone.FillWeight = 83.07114F;
+            this.Phone.HeaderText = "SĐT";
+            this.Phone.Name = "Phone";
+            this.Phone.ReadOnly = true;
+            // 
+            // Address
+            // 
+            this.Address.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Address.DataPropertyName = "Address";
+            this.Address.FillWeight = 129.9492F;
+            this.Address.HeaderText = "Địa chỉ";
+            this.Address.Name = "Address";
+            this.Address.ReadOnly = true;
             // 
             // lblTotalEmployee
             // 
@@ -500,78 +576,6 @@
             this.tbTKNV.Texts = "";
             this.tbTKNV.UnderlinedStyle = false;
             this.tbTKNV.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.RjtbTKNV_KeyPress);
-            // 
-            // ID_Employee
-            // 
-            this.ID_Employee.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ID_Employee.DataPropertyName = "ID_Employee";
-            this.ID_Employee.FillWeight = 61.65406F;
-            this.ID_Employee.HeaderText = "ID";
-            this.ID_Employee.Name = "ID_Employee";
-            this.ID_Employee.ReadOnly = true;
-            // 
-            // FullNameEmployee
-            // 
-            this.FullNameEmployee.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.FullNameEmployee.DataPropertyName = "FullNameEmployee";
-            this.FullNameEmployee.FillWeight = 120.9246F;
-            this.FullNameEmployee.HeaderText = "Họ và tên";
-            this.FullNameEmployee.Name = "FullNameEmployee";
-            this.FullNameEmployee.ReadOnly = true;
-            // 
-            // Email
-            // 
-            this.Email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Email.DataPropertyName = "Email";
-            this.Email.FillWeight = 146.5077F;
-            this.Email.HeaderText = "Email";
-            this.Email.Name = "Email";
-            this.Email.ReadOnly = true;
-            // 
-            // DateOfBirth
-            // 
-            this.DateOfBirth.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.DateOfBirth.DataPropertyName = "DateOfBirth";
-            this.DateOfBirth.FillWeight = 91.75087F;
-            this.DateOfBirth.HeaderText = "Ngày sinh";
-            this.DateOfBirth.Name = "DateOfBirth";
-            this.DateOfBirth.ReadOnly = true;
-            // 
-            // Gender
-            // 
-            this.Gender.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Gender.DataPropertyName = "Gender";
-            this.Gender.FillWeight = 83.07114F;
-            this.Gender.HeaderText = "Giới tính";
-            this.Gender.Name = "Gender";
-            this.Gender.ReadOnly = true;
-            // 
-            // ID_Card
-            // 
-            this.ID_Card.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ID_Card.DataPropertyName = "Id_Card";
-            this.ID_Card.FillWeight = 83.07114F;
-            this.ID_Card.HeaderText = "CMND";
-            this.ID_Card.Name = "ID_Card";
-            this.ID_Card.ReadOnly = true;
-            // 
-            // Phone
-            // 
-            this.Phone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Phone.DataPropertyName = "Phone";
-            this.Phone.FillWeight = 83.07114F;
-            this.Phone.HeaderText = "SĐT";
-            this.Phone.Name = "Phone";
-            this.Phone.ReadOnly = true;
-            // 
-            // Address
-            // 
-            this.Address.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Address.DataPropertyName = "Address";
-            this.Address.FillWeight = 129.9492F;
-            this.Address.HeaderText = "Địa chỉ";
-            this.Address.Name = "Address";
-            this.Address.ReadOnly = true;
             // 
             // FormQLNV
             // 

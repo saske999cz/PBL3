@@ -148,5 +148,17 @@ namespace DoAnPBL3.DAL
                     .Count();
             }
         }
+
+        public DateTime GetStartDate(string ID_Customer)
+        {
+            using (BookStoreContext db = new BookStoreContext())
+            {
+                return db.Orders
+                    .Where(order => order.ID_Customer == ID_Customer)
+                    .OrderBy(order => order.OrderDate)
+                    .Select(order => order.OrderDate)
+                    .FirstOrDefault();
+            }
+        }
     }
 }

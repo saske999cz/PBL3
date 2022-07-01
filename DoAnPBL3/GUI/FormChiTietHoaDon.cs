@@ -16,13 +16,74 @@ namespace DoAnPBL3
     {
         private readonly string ID_Order;
         private readonly string orderDate;
-
-        public FormChiTietHoaDon(string ID_Order, string orderDate)
+        private readonly string theme;
+        public FormChiTietHoaDon(string theme, string ID_Order, string orderDate)
         {
             this.ID_Order = ID_Order;
             this.orderDate = orderDate;
+            this.theme = theme;
             InitializeComponent();
             guna2ShadowForm1.SetShadowForm(this);
+            switch (theme)
+            {
+                case "Admin":
+                    panelContainer.BackColor = Color.FromArgb(24, 37, 65);
+                    lblIDHD.ForeColor = Color.WhiteSmoke;
+                    lblOrderDate.ForeColor = Color.WhiteSmoke;
+                    tbOrderDate.ForeColor = Color.WhiteSmoke;
+                    lblListBillDetail.ForeColor = Color.WhiteSmoke;
+                    lblTotalNumberBook.ForeColor = Color.WhiteSmoke;
+                    lblTotal.ForeColor = Color.WhiteSmoke;
+                    lblQuantity.ForeColor = Color.WhiteSmoke;
+                    tbIDHD.FillColor = Color.FromArgb(15, 27, 57);
+                    tbIDHD.ForeColor = Color.FromArgb(193, 200, 207);
+                    tbNumDiverse.FillColor = Color.FromArgb(15, 27, 57);
+                    tbNumDiverse.ForeColor = Color.FromArgb(193, 200, 207);
+                    tbQuantity.FillColor = Color.FromArgb(15, 27, 57);
+                    tbQuantity.ForeColor = Color.FromArgb(193, 200, 207);
+                    tbTotal.FillColor = Color.FromArgb(15, 27, 57);
+                    tbTotal.ForeColor = Color.FromArgb(193, 200, 207);
+                    dgvQLCTHD.BackgroundColor = Color.FromArgb(45, 66, 91);
+                    break;
+                case "Dark":
+                    panelContainer.BackColor = Color.FromArgb(32, 32, 32);
+                    lblIDHD.ForeColor = Color.WhiteSmoke;
+                    lblOrderDate.ForeColor = Color.WhiteSmoke;
+                    tbOrderDate.ForeColor = Color.WhiteSmoke;
+                    lblListBillDetail.ForeColor = Color.WhiteSmoke;
+                    lblTotalNumberBook.ForeColor = Color.WhiteSmoke;
+                    lblTotal.ForeColor = Color.WhiteSmoke;
+                    lblQuantity.ForeColor = Color.WhiteSmoke;
+                    tbIDHD.DisabledState.FillColor = Color.FromArgb(40, 35, 40);
+                    tbIDHD.DisabledState.ForeColor = Color.FromArgb(193, 200, 207);
+                    tbNumDiverse.DisabledState.FillColor = Color.FromArgb(40, 35, 40);
+                    tbNumDiverse.DisabledState.ForeColor = Color.FromArgb(193, 200, 207);
+                    tbQuantity.DisabledState.FillColor = Color.FromArgb(40, 35, 40);
+                    tbQuantity.DisabledState.ForeColor = Color.FromArgb(193, 200, 207);
+                    tbTotal.DisabledState.FillColor = Color.FromArgb(40, 35, 40);
+                    tbTotal.DisabledState.ForeColor = Color.FromArgb(193, 200, 207);
+                    dgvQLCTHD.BackgroundColor = Color.FromArgb(34, 31, 46);
+                    break;
+                case "Light":
+                    panelContainer.BackColor = Color.Gainsboro;
+                    lblIDHD.ForeColor = Color.Black;
+                    lblOrderDate.ForeColor = Color.Black;
+                    tbOrderDate.ForeColor = Color.Black;
+                    lblListBillDetail.ForeColor = Color.Black;
+                    lblTotalNumberBook.ForeColor = Color.Black;
+                    lblTotal.ForeColor = Color.Black;
+                    lblQuantity.ForeColor = Color.Black;
+                    tbIDHD.DisabledState.FillColor = Color.Silver;
+                    tbIDHD.DisabledState.ForeColor = Color.Black;
+                    tbNumDiverse.DisabledState.FillColor = Color.Silver;
+                    tbNumDiverse.DisabledState.ForeColor = Color.Black;
+                    tbQuantity.DisabledState.FillColor = Color.Silver;
+                    tbQuantity.DisabledState.ForeColor = Color.Black;
+                    tbTotal.DisabledState.FillColor = Color.Silver;
+                    tbTotal.DisabledState.ForeColor = Color.Black;
+                    dgvQLCTHD.BackgroundColor = Color.Silver;
+                    break;
+            }
         }
 
         private void FormChiTietHoaDon_Load(object sender, EventArgs e)
@@ -86,7 +147,7 @@ namespace DoAnPBL3
 
         private void DgvQLCTHD_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            new FormTTS(GetID_Book()).Show();
+            new FormTTS(theme, GetID_Book()).Show();
         }
     }
 }

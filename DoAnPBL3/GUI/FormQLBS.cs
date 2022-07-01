@@ -18,8 +18,10 @@ namespace DoAnPBL3
         private int ID_Language;
         private int ID_Publisher;
         private int ID_Genre;
+        private string theme;
         public FormQLBS(string theme)
         {
+            this.theme = theme;
             InitializeComponent();
             switch (theme)
             {
@@ -324,7 +326,7 @@ namespace DoAnPBL3
         private void DgvQLBS_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             string ID_Book = dgvQLBS.CurrentRow.Cells["ID_Book"].Value.ToString();
-            new FormTTS(ID_Book).ShowDialog();
+            new FormTTS(theme, ID_Book).ShowDialog();
         }
 
         private void RjtbTKS_KeyPress(object sender, KeyPressEventArgs e)

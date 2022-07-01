@@ -16,10 +16,123 @@ namespace DoAnPBL3
     public partial class FormTTS : Form
     {
         private readonly string ID_Book;
-        public FormTTS(string ID_Book)
+        
+        public FormTTS(string theme, string ID_Book)
         {
             InitializeComponent();
             this.ID_Book = ID_Book;
+            switch (theme)
+            {
+                case "Admin":
+                    panelContainer.BackColor = Color.FromArgb(24, 37, 65);
+                    lbIDBook.ForeColor = Color.WhiteSmoke;
+                    lblNameBook.ForeColor = Color.WhiteSmoke;
+                    lbPublishDate.ForeColor = Color.WhiteSmoke;
+                    lbLanguage.ForeColor = Color.WhiteSmoke;
+                    lbAuthor.ForeColor = Color.WhiteSmoke;
+                    lbPublisher.ForeColor = Color.WhiteSmoke;
+                    lbGenre.ForeColor = Color.WhiteSmoke;
+                    lbPrice.ForeColor = Color.WhiteSmoke;
+                    lblQuantity.ForeColor = Color.WhiteSmoke;
+                    lblUnit.ForeColor = Color.WhiteSmoke;
+                    tbIDBook.DisabledState.FillColor = Color.FromArgb(15, 27, 57);
+                    tbIDBook.DisabledState.ForeColor = Color.FromArgb(193, 200, 207);
+                    tbNameBook.DisabledState.FillColor = Color.FromArgb(15, 27, 57);
+                    tbNameBook.DisabledState.ForeColor = Color.FromArgb(193, 200, 207);
+                    tbPublishDate.DisabledState.FillColor = Color.FromArgb(15, 27, 57);
+                    tbPublishDate.DisabledState.ForeColor = Color.FromArgb(193, 200, 207);
+                    tbLanguage.DisabledState.FillColor = Color.FromArgb(15, 27, 57);
+                    tbLanguage.DisabledState.ForeColor = Color.FromArgb(193, 200, 207);
+                    tbAuthor.DisabledState.FillColor = Color.FromArgb(15, 27, 57);
+                    tbAuthor.DisabledState.ForeColor = Color.FromArgb(193, 200, 207);
+                    tbPublisher.DisabledState.FillColor = Color.FromArgb(15, 27, 57);
+                    tbPublisher.DisabledState.ForeColor = Color.FromArgb(193, 200, 207);
+                    tbGenre.DisabledState.FillColor = Color.FromArgb(15, 27, 57);
+                    tbGenre.DisabledState.ForeColor = Color.FromArgb(193, 200, 207);
+                    tbQuantity.DisabledState.FillColor = Color.FromArgb(15, 27, 57);
+                    tbQuantity.DisabledState.ForeColor = Color.FromArgb(193, 200, 207);
+                    tbPrice.DisabledState.FillColor = Color.FromArgb(15, 27, 57);
+                    tbPrice.DisabledState.ForeColor = Color.FromArgb(193, 200, 207);
+                    tbUnit.DisabledState.FillColor = Color.FromArgb(15, 27, 57);
+                    tbUnit.DisabledState.ForeColor = Color.FromArgb(193, 200, 207);
+                    break;
+                case "Dark":
+                    panelContainer.BackColor = Color.FromArgb(44, 53, 70);
+                    lbIDBook.ForeColor = Color.WhiteSmoke;
+                    lblNameBook.ForeColor = Color.WhiteSmoke;
+                    lbPublishDate.ForeColor = Color.WhiteSmoke;
+                    lbLanguage.ForeColor = Color.WhiteSmoke;
+                    lbAuthor.ForeColor = Color.WhiteSmoke;
+                    lbPublisher.ForeColor = Color.WhiteSmoke;
+                    lbGenre.ForeColor = Color.WhiteSmoke;
+                    lbPrice.ForeColor = Color.WhiteSmoke;
+                    lblQuantity.ForeColor = Color.WhiteSmoke;
+                    lblUnit.ForeColor = Color.WhiteSmoke;
+                    tbIDBook.DisabledState.FillColor = Color.FromArgb(22, 33, 49);
+                    tbIDBook.DisabledState.ForeColor = Color.FromArgb(193, 200, 207);
+                    tbNameBook.DisabledState.FillColor = Color.FromArgb(22, 33, 49);
+                    tbNameBook.DisabledState.ForeColor = Color.FromArgb(193, 200, 207);
+                    tbPublishDate.DisabledState.FillColor = Color.FromArgb(22, 33, 49);
+                    tbPublishDate.DisabledState.ForeColor = Color.FromArgb(193, 200, 207);
+                    tbLanguage.DisabledState.FillColor = Color.FromArgb(22, 33, 49);
+                    tbLanguage.DisabledState.ForeColor = Color.FromArgb(193, 200, 207);
+                    tbAuthor.DisabledState.FillColor = Color.FromArgb(22, 33, 49);
+                    tbAuthor.DisabledState.ForeColor = Color.FromArgb(193, 200, 207);
+                    tbPublisher.DisabledState.FillColor = Color.FromArgb(22, 33, 49);
+                    tbPublisher.DisabledState.ForeColor = Color.FromArgb(193, 200, 207);
+                    tbGenre.DisabledState.FillColor = Color.FromArgb(22, 33, 49);
+                    tbGenre.DisabledState.ForeColor = Color.FromArgb(193, 200, 207);
+                    tbQuantity.DisabledState.FillColor = Color.FromArgb(22, 33, 49);
+                    tbQuantity.DisabledState.ForeColor = Color.FromArgb(193, 200, 207);
+                    tbPrice.DisabledState.FillColor = Color.FromArgb(22, 33, 49);
+                    tbPrice.DisabledState.ForeColor = Color.FromArgb(193, 200, 207);
+                    tbUnit.DisabledState.FillColor = Color.FromArgb(22, 33, 49);
+                    tbUnit.DisabledState.ForeColor = Color.FromArgb(193, 200, 207);
+                    break;
+                case "Light":
+                    panelContainer.BackColor = Color.Gainsboro;
+                    lbIDBook.ForeColor = Color.Black;
+                    lblNameBook.ForeColor = Color.Black;
+                    lbPublishDate.ForeColor = Color.Black;
+                    lbLanguage.ForeColor = Color.Black;
+                    lbAuthor.ForeColor = Color.Black;
+                    lbPublisher.ForeColor = Color.Black;
+                    lbGenre.ForeColor = Color.Black;
+                    lbPrice.ForeColor = Color.Black;
+                    lblQuantity.ForeColor = Color.Black;
+                    lblUnit.ForeColor = Color.Black;
+                    tbIDBook.DisabledState.FillColor = Color.Silver;
+                    tbIDBook.DisabledState.ForeColor = Color.Black;
+                    tbIDBook.DisabledState.BorderColor = Color.Black;
+                    tbNameBook.DisabledState.FillColor = Color.Silver;
+                    tbNameBook.DisabledState.ForeColor = Color.Black;
+                    tbNameBook.DisabledState.BorderColor = Color.Black;
+                    tbPublishDate.DisabledState.FillColor = Color.Silver;
+                    tbPublishDate.DisabledState.ForeColor = Color.Black;
+                    tbPublishDate.DisabledState.BorderColor = Color.Black;
+                    tbLanguage.DisabledState.FillColor = Color.Silver;
+                    tbLanguage.DisabledState.ForeColor = Color.Black;
+                    tbLanguage.DisabledState.BorderColor = Color.Black;
+                    tbAuthor.DisabledState.FillColor = Color.Silver;
+                    tbAuthor.DisabledState.ForeColor = Color.Black;
+                    tbAuthor.DisabledState.BorderColor = Color.Black;
+                    tbPublisher.DisabledState.FillColor = Color.Silver;
+                    tbPublisher.DisabledState.ForeColor = Color.Black;
+                    tbPublisher.DisabledState.BorderColor = Color.Black;
+                    tbGenre.DisabledState.FillColor = Color.Silver;
+                    tbGenre.DisabledState.ForeColor = Color.Black;
+                    tbGenre.DisabledState.BorderColor = Color.Black;
+                    tbQuantity.DisabledState.FillColor = Color.Silver;
+                    tbQuantity.DisabledState.ForeColor = Color.Black;
+                    tbQuantity.DisabledState.BorderColor = Color.Black;
+                    tbPrice.DisabledState.FillColor = Color.Silver;
+                    tbPrice.DisabledState.ForeColor = Color.Black;
+                    tbPrice.DisabledState.BorderColor = Color.Black;
+                    tbUnit.DisabledState.FillColor = Color.Silver;
+                    tbUnit.DisabledState.ForeColor = Color.Black;
+                    tbUnit.DisabledState.BorderColor = Color.Black;
+                    break;
+            }
         }
 
         private void FormTTS_Load(object sender, EventArgs e)

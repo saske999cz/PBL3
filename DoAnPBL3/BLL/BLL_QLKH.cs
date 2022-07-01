@@ -75,5 +75,10 @@ namespace DoAnPBL3.BLL
         {
             return DAL_QLKH.Instance.GetNumberTotalFemaleCustomer();
         }
+
+        public DateTime GetStartDate(string ID_Customer)
+        {
+            return DAL_QLKH.Instance.GetStartDate(ID_Customer);
+        }
     }
 }

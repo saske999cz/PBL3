@@ -39,7 +39,7 @@ namespace DoAnPBL3
             this.panelContainer = new System.Windows.Forms.Panel();
             this.tbOrderDate = new System.Windows.Forms.Label();
             this.lblOrderDate = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblListBillDetail = new System.Windows.Forms.Label();
             this.dgvQLCTHD = new Guna.UI2.WinForms.Guna2DataGridView();
             this.ID_Book = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NameBook = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -107,7 +107,7 @@ namespace DoAnPBL3
             this.panelContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(37)))), ((int)(((byte)(65)))));
             this.panelContainer.Controls.Add(this.tbOrderDate);
             this.panelContainer.Controls.Add(this.lblOrderDate);
-            this.panelContainer.Controls.Add(this.label2);
+            this.panelContainer.Controls.Add(this.lblListBillDetail);
             this.panelContainer.Controls.Add(this.dgvQLCTHD);
             this.panelContainer.Controls.Add(this.tbQuantity);
             this.panelContainer.Controls.Add(this.lblQuantity);
@@ -152,17 +152,17 @@ namespace DoAnPBL3
             this.lblOrderDate.TabIndex = 70;
             this.lblOrderDate.Text = "Ngày xuất hóa đơn :";
             // 
-            // label2
+            // lblListBillDetail
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label2.Location = new System.Drawing.Point(301, 112);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(259, 22);
-            this.label2.TabIndex = 69;
-            this.label2.Text = "Liệt kê sách trong hóa đơn";
+            this.lblListBillDetail.AutoSize = true;
+            this.lblListBillDetail.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblListBillDetail.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblListBillDetail.Location = new System.Drawing.Point(301, 112);
+            this.lblListBillDetail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblListBillDetail.Name = "lblListBillDetail";
+            this.lblListBillDetail.Size = new System.Drawing.Size(259, 22);
+            this.lblListBillDetail.TabIndex = 69;
+            this.lblListBillDetail.Text = "Liệt kê sách trong hóa đơn";
             // 
             // dgvQLCTHD
             // 
@@ -170,7 +170,11 @@ namespace DoAnPBL3
             this.dgvQLCTHD.AllowUserToDeleteRows = false;
             this.dgvQLCTHD.AllowUserToResizeColumns = false;
             this.dgvQLCTHD.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(243)))), ((int)(((byte)(251)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 11F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvQLCTHD.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvQLCTHD.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
@@ -206,13 +210,13 @@ namespace DoAnPBL3
             this.dgvQLCTHD.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvQLCTHD.EnableHeadersVisualStyles = false;
             this.dgvQLCTHD.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(53)))), ((int)(((byte)(70)))));
-            this.dgvQLCTHD.Location = new System.Drawing.Point(11, 155);
+            this.dgvQLCTHD.Location = new System.Drawing.Point(0, 155);
             this.dgvQLCTHD.Name = "dgvQLCTHD";
             this.dgvQLCTHD.ReadOnly = true;
             this.dgvQLCTHD.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgvQLCTHD.RowHeadersVisible = false;
             this.dgvQLCTHD.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvQLCTHD.Size = new System.Drawing.Size(826, 413);
+            this.dgvQLCTHD.Size = new System.Drawing.Size(848, 413);
             this.dgvQLCTHD.TabIndex = 68;
             this.dgvQLCTHD.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvQLCTHD.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -289,7 +293,7 @@ namespace DoAnPBL3
             this.tbQuantity.BorderRadius = 2;
             this.tbQuantity.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbQuantity.DefaultText = "";
-            this.tbQuantity.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(43)))), ((int)(((byte)(59)))));
+            this.tbQuantity.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.tbQuantity.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(43)))), ((int)(((byte)(59)))));
             this.tbQuantity.DisabledState.ForeColor = System.Drawing.Color.LightGray;
             this.tbQuantity.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -325,7 +329,7 @@ namespace DoAnPBL3
             this.tbNumDiverse.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(43)))), ((int)(((byte)(59)))));
             this.tbNumDiverse.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbNumDiverse.DefaultText = "";
-            this.tbNumDiverse.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(43)))), ((int)(((byte)(59)))));
+            this.tbNumDiverse.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.tbNumDiverse.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(43)))), ((int)(((byte)(59)))));
             this.tbNumDiverse.DisabledState.ForeColor = System.Drawing.Color.LightGray;
             this.tbNumDiverse.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -359,7 +363,7 @@ namespace DoAnPBL3
             this.tbTotal.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(43)))), ((int)(((byte)(59)))));
             this.tbTotal.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbTotal.DefaultText = "";
-            this.tbTotal.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(43)))), ((int)(((byte)(59)))));
+            this.tbTotal.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.tbTotal.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(43)))), ((int)(((byte)(59)))));
             this.tbTotal.DisabledState.ForeColor = System.Drawing.Color.LightGray;
             this.tbTotal.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -414,7 +418,7 @@ namespace DoAnPBL3
             this.tbIDHD.BorderRadius = 6;
             this.tbIDHD.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbIDHD.DefaultText = "";
-            this.tbIDHD.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.tbIDHD.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.tbIDHD.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
             this.tbIDHD.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.tbIDHD.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
@@ -525,7 +529,7 @@ namespace DoAnPBL3
         private System.Windows.Forms.Label lblTotalNumberBook;
         private Guna.UI2.WinForms.Guna2TextBox tbTotal;
         private System.Windows.Forms.Label lblTotal;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblListBillDetail;
         private Guna.UI2.WinForms.Guna2DataGridView dgvQLCTHD;
         private System.Windows.Forms.Label tbOrderDate;
         private System.Windows.Forms.Label lblOrderDate;

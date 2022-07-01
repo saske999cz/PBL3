@@ -184,7 +184,8 @@ namespace DoAnPBL3
             // 
             // tbStartDate
             // 
-            this.tbStartDate.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.tbStartDate.Animated = true;
+            this.tbStartDate.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.tbStartDate.BorderRadius = 6;
             this.tbStartDate.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbStartDate.DefaultText = "";
@@ -363,7 +364,8 @@ namespace DoAnPBL3
             // 
             // tbEmailNV
             // 
-            this.tbEmailNV.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.tbEmailNV.Animated = true;
+            this.tbEmailNV.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.tbEmailNV.BorderRadius = 6;
             this.tbEmailNV.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbEmailNV.DefaultText = "";
@@ -387,7 +389,8 @@ namespace DoAnPBL3
             // 
             // tbSDTNV
             // 
-            this.tbSDTNV.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.tbSDTNV.Animated = true;
+            this.tbSDTNV.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.tbSDTNV.BorderRadius = 6;
             this.tbSDTNV.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbSDTNV.DefaultText = "";
@@ -411,7 +414,8 @@ namespace DoAnPBL3
             // 
             // tbAddressNV
             // 
-            this.tbAddressNV.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.tbAddressNV.Animated = true;
+            this.tbAddressNV.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.tbAddressNV.BorderRadius = 6;
             this.tbAddressNV.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbAddressNV.DefaultText = "";
@@ -435,7 +439,8 @@ namespace DoAnPBL3
             // 
             // tbCMNDNV
             // 
-            this.tbCMNDNV.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.tbCMNDNV.Animated = true;
+            this.tbCMNDNV.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.tbCMNDNV.BorderRadius = 6;
             this.tbCMNDNV.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbCMNDNV.DefaultText = "";
@@ -459,7 +464,8 @@ namespace DoAnPBL3
             // 
             // tbBD
             // 
-            this.tbBD.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.tbBD.Animated = true;
+            this.tbBD.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.tbBD.BorderRadius = 6;
             this.tbBD.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbBD.DefaultText = "";
@@ -483,7 +489,8 @@ namespace DoAnPBL3
             // 
             // tbNameNV
             // 
-            this.tbNameNV.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.tbNameNV.Animated = true;
+            this.tbNameNV.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.tbNameNV.BorderRadius = 6;
             this.tbNameNV.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbNameNV.DefaultText = "";
@@ -508,7 +515,7 @@ namespace DoAnPBL3
             // cbGenderNV
             // 
             this.cbGenderNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
-            this.cbGenderNV.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.cbGenderNV.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.cbGenderNV.BorderSize = 2;
             this.cbGenderNV.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbGenderNV.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

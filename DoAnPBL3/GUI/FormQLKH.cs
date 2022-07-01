@@ -15,8 +15,10 @@ namespace DoAnPBL3
 {
     public partial class FormQLKH : Form
     {
+        private readonly string theme;
         public FormQLKH(string theme)
         {
+            this.theme = theme;
             InitializeComponent();
             switch (theme)
             {
@@ -193,7 +195,7 @@ namespace DoAnPBL3
         private void BtnHDKH_Click(object sender, EventArgs e)
         {
             string nameCustomer = dgvQLKH.CurrentRow.Cells["FullNameCustomer"].Value.ToString();
-            new FormHoaDonKhachHang(GetID_Customer(), nameCustomer).Show();
+            new FormHoaDonKhachHang(theme, GetID_Customer(), nameCustomer).Show();
         }
 
         private void RjtbTKKH_KeyPress(object sender, KeyPressEventArgs e)
@@ -254,7 +256,7 @@ namespace DoAnPBL3
 
         private void DgvQLKH_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            new FormTTKH(GetID_Customer()).ShowDialog();
+            new FormTTKH(theme, GetID_Customer()).ShowDialog();
         }
 
         private string GetID_Customer()

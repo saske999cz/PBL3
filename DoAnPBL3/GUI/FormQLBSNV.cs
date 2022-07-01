@@ -18,6 +18,7 @@ namespace DoAnPBL3
         private int ID_Language;
         private int ID_Publisher;
         private int ID_Genre;
+        private readonly string theme = "Dark";
 
         public FormQLBSNV(string accountUsername)
         {
@@ -139,7 +140,7 @@ namespace DoAnPBL3
 
         private void DgvQLBSNV_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            new FormTTS(GetID_Book()).ShowDialog();
+            new FormTTS(theme, GetID_Book()).ShowDialog();
         }
 
         private string GetID_Book()

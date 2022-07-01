@@ -102,29 +102,36 @@ namespace DoAnPBL3
                     tbNameNV.FillColor = Color.Silver;
                     tbNameNV.ForeColor = Color.Black;
                     tbNameNV.PlaceholderForeColor = Color.Black;
+                    tbNameNV.BorderColor = Color.Black;
                     tbEmailNV.FillColor = Color.Silver;
                     tbEmailNV.ForeColor = Color.Black;
                     tbEmailNV.PlaceholderForeColor = Color.Black;
+                    tbEmailNV.BorderColor = Color.Black;
                     tbBD.FillColor = Color.Silver;
                     tbBD.ForeColor = Color.Black;
                     tbBD.PlaceholderForeColor = Color.Black;
+                    tbBD.BorderColor = Color.Black;
                     tbStartDate.FillColor = Color.Silver;
                     tbStartDate.ForeColor = Color.Black;
                     tbStartDate.PlaceholderForeColor = Color.Black;
+                    tbStartDate.BorderColor = Color.Black;
                     cbGenderNV.BackColor = Color.Silver;
-                    cbGenderNV.BorderColor = Color.Silver;
                     cbGenderNV.ListBackColor = Color.Silver;
                     cbGenderNV.ListTextColor = Color.Black;
                     cbGenderNV.ForeColor = Color.Black;
+                    cbGenderNV.BorderColor = Color.Black;
                     tbSDTNV.FillColor = Color.Silver;
                     tbSDTNV.ForeColor = Color.Black;
                     tbSDTNV.PlaceholderForeColor = Color.Black;
+                    tbSDTNV.BorderColor = Color.Black;
                     tbCMNDNV.FillColor = Color.Silver;
                     tbCMNDNV.ForeColor = Color.Black;
                     tbCMNDNV.PlaceholderForeColor = Color.Black;
+                    tbCMNDNV.BorderColor = Color.Black;
                     tbAddressNV.FillColor = Color.Silver;
                     tbAddressNV.ForeColor = Color.Black;
                     tbAddressNV.PlaceholderForeColor = Color.Black;
+                    tbAddressNV.BorderColor = Color.Black;
                     break;
             }
         }

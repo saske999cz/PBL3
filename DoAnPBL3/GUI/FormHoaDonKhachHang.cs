@@ -16,12 +16,81 @@ namespace DoAnPBL3
     {
         private readonly string ID_Customer;
         private readonly string nameCustomer;
-        public FormHoaDonKhachHang(string ID_Customer, string nameCustomer)
+        private readonly string theme;
+        public FormHoaDonKhachHang(string theme, string ID_Customer, string nameCustomer)
         {
             this.ID_Customer = ID_Customer;
             this.nameCustomer = nameCustomer;
+            this.theme = theme;
             InitializeComponent();
             guna2ShadowForm1.SetShadowForm(this);
+            switch (theme)
+            {
+                case "Admin":
+                    panelContainer.BackColor = Color.FromArgb(24, 37, 65);
+                    panel1.BackColor = Color.FromArgb(30, 30, 70);
+                    panelBill.BackColor = Color.FromArgb(30, 30, 70);
+                    lblIDKH.ForeColor = Color.WhiteSmoke;
+                    lblNameKH.ForeColor = Color.WhiteSmoke;
+                    lblTotalBill.ForeColor = Color.WhiteSmoke;
+                    totalBill.ForeColor = Color.WhiteSmoke;
+                    lblListOrders.ForeColor = Color.WhiteSmoke;
+                    lblTotalPrice.ForeColor = Color.WhiteSmoke;
+                    tbMaKH.FillColor = Color.FromArgb(15, 27, 57);
+                    tbMaKH.ForeColor = Color.FromArgb(193, 200, 207);
+                    tbNameKH.FillColor = Color.FromArgb(15, 27, 57);
+                    tbNameKH.ForeColor = Color.FromArgb(193, 200, 207);
+                    tbTotalPrice.FillColor = Color.FromArgb(15, 27, 57);
+                    tbTotalPrice.ForeColor = Color.FromArgb(193, 200, 207);
+                    dgvQLHD.BackgroundColor = Color.FromArgb(24, 37, 65);
+                    break;
+                case "Dark":
+                    panelContainer.BackColor = Color.FromArgb(32, 32, 32);
+                    panel1.BackColor = Color.FromArgb(38, 38, 40);
+                    panelBill.BackColor = Color.FromArgb(38, 38, 40);
+                    lblIDKH.ForeColor = Color.WhiteSmoke;
+                    lblNameKH.ForeColor = Color.WhiteSmoke;
+                    lblTotalBill.ForeColor = Color.WhiteSmoke;
+                    totalBill.ForeColor = Color.WhiteSmoke;
+                    lblListOrders.ForeColor = Color.WhiteSmoke;
+                    lblTotalPrice.ForeColor = Color.WhiteSmoke;
+                    tbMaKH.DisabledState.FillColor = Color.FromArgb(40, 35, 40);
+                    tbMaKH.DisabledState.BorderColor = Color.FromArgb(40, 35, 40);
+                    tbMaKH.DisabledState.ForeColor = Color.FromArgb(193, 200, 207);
+                    tbNameKH.DisabledState.FillColor = Color.FromArgb(40, 35, 40);
+                    tbNameKH.DisabledState.BorderColor = Color.FromArgb(40, 35, 40);
+                    tbNameKH.DisabledState.ForeColor = Color.FromArgb(193, 200, 207);
+                    tbTotalPrice.DisabledState.FillColor = Color.FromArgb(40, 35, 40);
+                    tbTotalPrice.DisabledState.BorderColor = Color.FromArgb(40, 35, 40);
+                    tbTotalPrice.DisabledState.ForeColor = Color.FromArgb(193, 200, 207);
+                    dgvQLHD.BackgroundColor = Color.FromArgb(34, 31, 46);
+                    break;
+                case "Light":
+                    panelContainer.BackColor = Color.Gainsboro;
+                    panel1.BackColor = Color.FromArgb(210, 200, 210);
+                    panelBill.BackColor = Color.FromArgb(210, 200, 210);
+                    lblIDKH.ForeColor = Color.Black;
+                    lblNameKH.ForeColor = Color.Black;
+                    lblTotalBill.ForeColor = Color.Black;
+                    lblListOrders.ForeColor = Color.Black;
+                    lblTotalPrice.ForeColor = Color.Black;
+                    totalBill.ForeColor = Color.Black;
+                    tbMaKH.DisabledState.FillColor = Color.Silver;
+                    tbMaKH.DisabledState.ForeColor = Color.Black;
+                    tbMaKH.DisabledState.PlaceholderForeColor = Color.Black;
+                    tbNameKH.DisabledState.FillColor = Color.Silver;
+                    tbNameKH.DisabledState.ForeColor = Color.Black;
+                    tbNameKH.DisabledState.PlaceholderForeColor = Color.Black;
+                    tbTotalPrice.DisabledState.FillColor = Color.Silver;
+                    tbTotalPrice.DisabledState.ForeColor = Color.Black;
+                    tbTotalPrice.DisabledState.PlaceholderForeColor = Color.Black;
+                    btnTKHD.FillColor = Color.FromArgb(107, 83, 255);
+                    rjtbTKHD.BackColor = Color.FromArgb(255, 255, 255);
+                    rjtbTKHD.BorderColor = Color.FromArgb(180, 180, 180);
+                    rjtbTKHD.ForeColor = Color.DimGray;
+                    dgvQLHD.BackgroundColor = Color.Silver;
+                    break;
+            }
         }
 
         private void FormHoaDonKhachHang_Load(object sender, EventArgs e)
@@ -57,7 +126,7 @@ namespace DoAnPBL3
         private void DgvQLHD_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             string orderDate = dgvQLHD.CurrentRow.Cells["OrderDate"].Value.ToString();
-            new FormChiTietHoaDon(GetID_Order(), orderDate).Show();
+            new FormChiTietHoaDon(theme, GetID_Order(), orderDate).Show();
         }
         
         private string GetID_Order()

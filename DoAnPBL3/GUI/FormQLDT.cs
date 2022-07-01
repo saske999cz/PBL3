@@ -62,6 +62,7 @@ namespace DoAnPBL3
                     chartTopFiveBooks.Legends[0].BackColor = Color.FromArgb(30, 30, 70);
                     chartTopFiveBooks.Series[0].BorderColor = Color.FromArgb(30, 30, 70);
                     chartGrossRevenue.ChartAreas[0].BackColor = Color.FromArgb(30, 30, 70);
+                    dgvHHTLI.BackgroundColor = Color.FromArgb(24, 37, 65);
                     break;
                 case "Dark":
                     btnOK.Parent.BackColor = Color.FromArgb(32, 32, 32);
@@ -96,6 +97,7 @@ namespace DoAnPBL3
                     chartTopFiveBooks.Legends[0].BackColor = Color.FromArgb(38, 38, 40);
                     chartTopFiveBooks.Series[0].BorderColor = Color.FromArgb(38, 38, 40);
                     chartGrossRevenue.ChartAreas[0].BackColor = Color.FromArgb(38, 38, 40);
+                    dgvHHTLI.BackgroundColor = Color.FromArgb(34, 31, 46);
                     break;
                 case "Light":
                     btnOK.Parent.BackColor = Color.FromArgb(220, 220, 220);
@@ -136,6 +138,7 @@ namespace DoAnPBL3
                     chartGrossRevenue.ChartAreas[0].BackColor = Color.FromArgb(210, 200, 210);
                     chartGrossRevenue.ChartAreas[0].AxisX.LabelStyle.ForeColor = Color.Black;
                     chartGrossRevenue.ChartAreas[0].AxisY.LabelStyle.ForeColor = Color.Black;
+                    dgvHHTLI.BackgroundColor = Color.Silver;
                     break;
             }
             btnOK.Hide();

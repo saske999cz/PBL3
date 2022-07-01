@@ -41,17 +41,8 @@
             this.totalBook = new System.Windows.Forms.Label();
             this.lblTotalBook = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dgvQLBS = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.panelHeader = new System.Windows.Forms.Panel();
-            this.lblSort = new System.Windows.Forms.Label();
-            this.cbbCritiaDetail = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.cbbCriteria = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.btnFind = new FontAwesome.Sharp.IconButton();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnSXS = new FontAwesome.Sharp.IconButton();
-            this.btnTKS = new Guna.UI2.WinForms.Guna2Button();
+            this.dgvQLBS = new Guna.UI2.WinForms.Guna2DataGridView();
             this.ID_Book = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NameBook = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PublishDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,6 +52,15 @@
             this.NameGenre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panelHeader = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.lblSort = new System.Windows.Forms.Label();
+            this.cbbCritiaDetail = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cbbCriteria = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.btnFind = new FontAwesome.Sharp.IconButton();
+            this.btnTKS = new Guna.UI2.WinForms.Guna2Button();
             this.rjtbTKS = new DoAnPBL3.RJTextBox();
             this.rjDropDownMenuSXS = new DoAnPBL3.RJDropDownMenu(this.components);
             this.chữCáiTăngDầnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -165,13 +165,43 @@
             this.panel1.Size = new System.Drawing.Size(143, 49);
             this.panel1.TabIndex = 39;
             // 
+            // btnSXS
+            // 
+            this.btnSXS.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnSXS.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnSXS.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSXS.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
+            this.btnSXS.FlatAppearance.BorderSize = 0;
+            this.btnSXS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSXS.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSXS.ForeColor = System.Drawing.Color.White;
+            this.btnSXS.IconChar = FontAwesome.Sharp.IconChar.SortAmountDownAlt;
+            this.btnSXS.IconColor = System.Drawing.Color.White;
+            this.btnSXS.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSXS.IconSize = 30;
+            this.btnSXS.Location = new System.Drawing.Point(0, 2);
+            this.btnSXS.Name = "btnSXS";
+            this.btnSXS.Size = new System.Drawing.Size(142, 47);
+            this.btnSXS.TabIndex = 12;
+            this.btnSXS.Text = "Sắp xếp";
+            this.btnSXS.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSXS.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSXS.UseVisualStyleBackColor = false;
+            this.btnSXS.Click += new System.EventHandler(this.BtnSXS_Click);
+            this.btnSXS.MouseEnter += new System.EventHandler(this.BtnSXS_MouseEnter);
+            this.btnSXS.MouseLeave += new System.EventHandler(this.BtnSXS_MouseLeave);
+            // 
             // dgvQLBS
             // 
             this.dgvQLBS.AllowUserToAddRows = false;
             this.dgvQLBS.AllowUserToDeleteRows = false;
             this.dgvQLBS.AllowUserToResizeColumns = false;
             this.dgvQLBS.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(243)))), ((int)(((byte)(251)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 11F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvQLBS.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvQLBS.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
@@ -211,7 +241,7 @@
             this.dgvQLBS.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvQLBS.EnableHeadersVisualStyles = false;
             this.dgvQLBS.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.dgvQLBS.Location = new System.Drawing.Point(12, 173);
+            this.dgvQLBS.Location = new System.Drawing.Point(12, 170);
             this.dgvQLBS.Name = "dgvQLBS";
             this.dgvQLBS.ReadOnly = true;
             this.dgvQLBS.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -224,7 +254,7 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvQLBS.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvQLBS.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvQLBS.Size = new System.Drawing.Size(816, 413);
+            this.dgvQLBS.Size = new System.Drawing.Size(816, 416);
             this.dgvQLBS.TabIndex = 40;
             this.dgvQLBS.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvQLBS.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -248,181 +278,6 @@
             this.dgvQLBS.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvQLBS.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvQLBS.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DgvQLBS_RowHeaderMouseClick);
-            // 
-            // panelHeader
-            // 
-            this.panelHeader.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(70)))));
-            this.panelHeader.Controls.Add(this.lblVietnameseBook);
-            this.panelHeader.Controls.Add(this.lblTotalBook);
-            this.panelHeader.Controls.Add(this.totalBook);
-            this.panelHeader.Controls.Add(this.vietnameseBook);
-            this.panelHeader.Controls.Add(this.pictureBox3);
-            this.panelHeader.Controls.Add(this.lblEnglishBook);
-            this.panelHeader.Controls.Add(this.pictureBox1);
-            this.panelHeader.Controls.Add(this.englishBook);
-            this.panelHeader.Controls.Add(this.pictureBox2);
-            this.panelHeader.Location = new System.Drawing.Point(11, 12);
-            this.panelHeader.Name = "panelHeader";
-            this.panelHeader.Size = new System.Drawing.Size(957, 95);
-            this.panelHeader.TabIndex = 41;
-            // 
-            // lblSort
-            // 
-            this.lblSort.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblSort.AutoSize = true;
-            this.lblSort.BackColor = System.Drawing.Color.Transparent;
-            this.lblSort.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSort.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
-            this.lblSort.Location = new System.Drawing.Point(456, 138);
-            this.lblSort.Name = "lblSort";
-            this.lblSort.Size = new System.Drawing.Size(31, 16);
-            this.lblSort.TabIndex = 43;
-            this.lblSort.Text = "Lọc";
-            // 
-            // cbbCritiaDetail
-            // 
-            this.cbbCritiaDetail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbbCritiaDetail.BackColor = System.Drawing.Color.Transparent;
-            this.cbbCritiaDetail.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbbCritiaDetail.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbCritiaDetail.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbbCritiaDetail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbbCritiaDetail.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbbCritiaDetail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbbCritiaDetail.ItemHeight = 30;
-            this.cbbCritiaDetail.ItemsAppearance.ForeColor = System.Drawing.Color.Black;
-            this.cbbCritiaDetail.ItemsAppearance.SelectedBackColor = System.Drawing.Color.Gainsboro;
-            this.cbbCritiaDetail.Location = new System.Drawing.Point(649, 128);
-            this.cbbCritiaDetail.Name = "cbbCritiaDetail";
-            this.cbbCritiaDetail.Size = new System.Drawing.Size(96, 36);
-            this.cbbCritiaDetail.TabIndex = 42;
-            this.cbbCritiaDetail.SelectedIndexChanged += new System.EventHandler(this.CbbCritiaDetail_SelectedIndexChanged);
-            // 
-            // cbbCriteria
-            // 
-            this.cbbCriteria.BackColor = System.Drawing.Color.Transparent;
-            this.cbbCriteria.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbbCriteria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbCriteria.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbbCriteria.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbbCriteria.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbbCriteria.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbbCriteria.ItemHeight = 30;
-            this.cbbCriteria.Items.AddRange(new object[] {
-            "Ngôn ngữ",
-            "Nhà xuất bản",
-            "Thể loại"});
-            this.cbbCriteria.ItemsAppearance.ForeColor = System.Drawing.Color.Black;
-            this.cbbCriteria.ItemsAppearance.SelectedBackColor = System.Drawing.Color.Gainsboro;
-            this.cbbCriteria.Location = new System.Drawing.Point(493, 128);
-            this.cbbCriteria.Name = "cbbCriteria";
-            this.cbbCriteria.Size = new System.Drawing.Size(150, 36);
-            this.cbbCriteria.TabIndex = 42;
-            this.cbbCriteria.SelectedIndexChanged += new System.EventHandler(this.CbbCriteria_SelectedIndexChanged);
-            // 
-            // btnFind
-            // 
-            this.btnFind.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnFind.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnFind.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnFind.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
-            this.btnFind.FlatAppearance.BorderSize = 0;
-            this.btnFind.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFind.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFind.ForeColor = System.Drawing.Color.White;
-            this.btnFind.IconChar = FontAwesome.Sharp.IconChar.SortAmountDownAlt;
-            this.btnFind.IconColor = System.Drawing.Color.White;
-            this.btnFind.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnFind.IconSize = 30;
-            this.btnFind.Location = new System.Drawing.Point(751, 128);
-            this.btnFind.Name = "btnFind";
-            this.btnFind.Size = new System.Drawing.Size(77, 36);
-            this.btnFind.TabIndex = 44;
-            this.btnFind.Text = "OK";
-            this.btnFind.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnFind.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnFind.UseVisualStyleBackColor = false;
-            this.btnFind.Click += new System.EventHandler(this.BtnFind_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(197, 19);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(38, 27);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 38;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = global::DoAnPBL3.Properties.Resources.united_kingdom_flag;
-            this.pictureBox1.Location = new System.Drawing.Point(880, 19);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(38, 27);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 37;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox2.Image = global::DoAnPBL3.Properties.Resources.vietnam_flag;
-            this.pictureBox2.Location = new System.Drawing.Point(523, 19);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(38, 27);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 36;
-            this.pictureBox2.TabStop = false;
-            // 
-            // btnSXS
-            // 
-            this.btnSXS.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnSXS.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnSXS.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSXS.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
-            this.btnSXS.FlatAppearance.BorderSize = 0;
-            this.btnSXS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSXS.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSXS.ForeColor = System.Drawing.Color.White;
-            this.btnSXS.IconChar = FontAwesome.Sharp.IconChar.SortAmountDownAlt;
-            this.btnSXS.IconColor = System.Drawing.Color.White;
-            this.btnSXS.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSXS.IconSize = 30;
-            this.btnSXS.Location = new System.Drawing.Point(0, 2);
-            this.btnSXS.Name = "btnSXS";
-            this.btnSXS.Size = new System.Drawing.Size(142, 47);
-            this.btnSXS.TabIndex = 12;
-            this.btnSXS.Text = "Sắp xếp";
-            this.btnSXS.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSXS.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSXS.UseVisualStyleBackColor = false;
-            this.btnSXS.Click += new System.EventHandler(this.BtnSXS_Click);
-            this.btnSXS.MouseEnter += new System.EventHandler(this.BtnSXS_MouseEnter);
-            this.btnSXS.MouseLeave += new System.EventHandler(this.BtnSXS_MouseLeave);
-            // 
-            // btnTKS
-            // 
-            this.btnTKS.BorderRadius = 15;
-            this.btnTKS.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnTKS.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnTKS.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnTKS.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnTKS.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
-            this.btnTKS.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnTKS.ForeColor = System.Drawing.Color.White;
-            this.btnTKS.Image = global::DoAnPBL3.Properties.Resources.icons8_search_20px;
-            this.btnTKS.Location = new System.Drawing.Point(294, 133);
-            this.btnTKS.Name = "btnTKS";
-            this.btnTKS.Size = new System.Drawing.Size(141, 31);
-            this.btnTKS.TabIndex = 22;
-            this.btnTKS.Text = "Tìm kiếm";
-            this.btnTKS.Click += new System.EventHandler(this.BtnTKS_Click);
             // 
             // ID_Book
             // 
@@ -504,6 +359,155 @@
             this.Quantity.HeaderText = "Số lượng";
             this.Quantity.Name = "Quantity";
             this.Quantity.ReadOnly = true;
+            // 
+            // panelHeader
+            // 
+            this.panelHeader.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(70)))));
+            this.panelHeader.Controls.Add(this.lblVietnameseBook);
+            this.panelHeader.Controls.Add(this.lblTotalBook);
+            this.panelHeader.Controls.Add(this.totalBook);
+            this.panelHeader.Controls.Add(this.vietnameseBook);
+            this.panelHeader.Controls.Add(this.pictureBox3);
+            this.panelHeader.Controls.Add(this.lblEnglishBook);
+            this.panelHeader.Controls.Add(this.pictureBox1);
+            this.panelHeader.Controls.Add(this.englishBook);
+            this.panelHeader.Controls.Add(this.pictureBox2);
+            this.panelHeader.Location = new System.Drawing.Point(11, 12);
+            this.panelHeader.Name = "panelHeader";
+            this.panelHeader.Size = new System.Drawing.Size(957, 95);
+            this.panelHeader.TabIndex = 41;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(197, 19);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(38, 27);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 38;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = global::DoAnPBL3.Properties.Resources.united_kingdom_flag;
+            this.pictureBox1.Location = new System.Drawing.Point(880, 19);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(38, 27);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 37;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureBox2.Image = global::DoAnPBL3.Properties.Resources.vietnam_flag;
+            this.pictureBox2.Location = new System.Drawing.Point(523, 19);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(38, 27);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 36;
+            this.pictureBox2.TabStop = false;
+            // 
+            // lblSort
+            // 
+            this.lblSort.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblSort.AutoSize = true;
+            this.lblSort.BackColor = System.Drawing.Color.Transparent;
+            this.lblSort.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSort.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
+            this.lblSort.Location = new System.Drawing.Point(456, 138);
+            this.lblSort.Name = "lblSort";
+            this.lblSort.Size = new System.Drawing.Size(31, 16);
+            this.lblSort.TabIndex = 43;
+            this.lblSort.Text = "Lọc";
+            // 
+            // cbbCritiaDetail
+            // 
+            this.cbbCritiaDetail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbbCritiaDetail.BackColor = System.Drawing.Color.Transparent;
+            this.cbbCritiaDetail.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbCritiaDetail.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbCritiaDetail.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbCritiaDetail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbCritiaDetail.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbbCritiaDetail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbbCritiaDetail.ItemHeight = 30;
+            this.cbbCritiaDetail.ItemsAppearance.ForeColor = System.Drawing.Color.Black;
+            this.cbbCritiaDetail.ItemsAppearance.SelectedBackColor = System.Drawing.Color.Gainsboro;
+            this.cbbCritiaDetail.Location = new System.Drawing.Point(649, 128);
+            this.cbbCritiaDetail.Name = "cbbCritiaDetail";
+            this.cbbCritiaDetail.Size = new System.Drawing.Size(96, 36);
+            this.cbbCritiaDetail.TabIndex = 42;
+            this.cbbCritiaDetail.SelectedIndexChanged += new System.EventHandler(this.CbbCritiaDetail_SelectedIndexChanged);
+            // 
+            // cbbCriteria
+            // 
+            this.cbbCriteria.BackColor = System.Drawing.Color.Transparent;
+            this.cbbCriteria.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbCriteria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbCriteria.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbCriteria.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbCriteria.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbbCriteria.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbbCriteria.ItemHeight = 30;
+            this.cbbCriteria.Items.AddRange(new object[] {
+            "Ngôn ngữ",
+            "Nhà xuất bản",
+            "Thể loại"});
+            this.cbbCriteria.ItemsAppearance.ForeColor = System.Drawing.Color.Black;
+            this.cbbCriteria.ItemsAppearance.SelectedBackColor = System.Drawing.Color.Gainsboro;
+            this.cbbCriteria.Location = new System.Drawing.Point(493, 128);
+            this.cbbCriteria.Name = "cbbCriteria";
+            this.cbbCriteria.Size = new System.Drawing.Size(150, 36);
+            this.cbbCriteria.TabIndex = 42;
+            this.cbbCriteria.SelectedIndexChanged += new System.EventHandler(this.CbbCriteria_SelectedIndexChanged);
+            // 
+            // btnFind
+            // 
+            this.btnFind.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFind.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnFind.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFind.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
+            this.btnFind.FlatAppearance.BorderSize = 0;
+            this.btnFind.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFind.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFind.ForeColor = System.Drawing.Color.White;
+            this.btnFind.IconChar = FontAwesome.Sharp.IconChar.SortAmountDownAlt;
+            this.btnFind.IconColor = System.Drawing.Color.White;
+            this.btnFind.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnFind.IconSize = 30;
+            this.btnFind.Location = new System.Drawing.Point(751, 128);
+            this.btnFind.Name = "btnFind";
+            this.btnFind.Size = new System.Drawing.Size(77, 36);
+            this.btnFind.TabIndex = 44;
+            this.btnFind.Text = "OK";
+            this.btnFind.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnFind.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnFind.UseVisualStyleBackColor = false;
+            this.btnFind.Click += new System.EventHandler(this.BtnFind_Click);
+            // 
+            // btnTKS
+            // 
+            this.btnTKS.BorderRadius = 15;
+            this.btnTKS.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnTKS.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnTKS.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnTKS.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnTKS.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
+            this.btnTKS.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnTKS.ForeColor = System.Drawing.Color.White;
+            this.btnTKS.Image = global::DoAnPBL3.Properties.Resources.icons8_search_20px;
+            this.btnTKS.Location = new System.Drawing.Point(294, 133);
+            this.btnTKS.Name = "btnTKS";
+            this.btnTKS.Size = new System.Drawing.Size(141, 31);
+            this.btnTKS.TabIndex = 22;
+            this.btnTKS.Text = "Tìm kiếm";
+            this.btnTKS.Click += new System.EventHandler(this.BtnTKS_Click);
             // 
             // rjtbTKS
             // 

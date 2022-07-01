@@ -59,6 +59,7 @@ namespace DoAnPBL3
             // 
             // btnExport
             // 
+            this.btnExport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExport.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnExport.BackgroundColor = System.Drawing.Color.DodgerBlue;
             this.btnExport.BorderColor = System.Drawing.Color.PaleVioletRed;

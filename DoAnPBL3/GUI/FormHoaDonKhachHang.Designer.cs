@@ -47,21 +47,21 @@ namespace DoAnPBL3
             this.totalBill = new System.Windows.Forms.Label();
             this.lblTotalBill = new System.Windows.Forms.Label();
             this.btnTKHD = new Guna.UI2.WinForms.Guna2Button();
-            this.rjtbTKHD = new DoAnPBL3.RJTextBox();
             this.lblListOrders = new System.Windows.Forms.Label();
             this.tbTotalPrice = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblTotalPrice = new System.Windows.Forms.Label();
             this.dgvQLHD = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.label3 = new System.Windows.Forms.Label();
-            this.msgValidateEmail = new System.Windows.Forms.Label();
-            this.rjbtnOK = new DoAnPBL3.RJButton();
-            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
-            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.ID_Order = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.OrderDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NameEmployee = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TotalPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label3 = new System.Windows.Forms.Label();
+            this.msgValidateEmail = new System.Windows.Forms.Label();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
+            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.rjtbTKHD = new DoAnPBL3.RJTextBox();
+            this.rjbtnOK = new DoAnPBL3.RJButton();
             this.panelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelContainer.SuspendLayout();
@@ -147,7 +147,7 @@ namespace DoAnPBL3
             this.tbMaKH.BorderRadius = 6;
             this.tbMaKH.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbMaKH.DefaultText = "";
-            this.tbMaKH.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.tbMaKH.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.tbMaKH.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
             this.tbMaKH.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.tbMaKH.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
@@ -157,7 +157,7 @@ namespace DoAnPBL3
             this.tbMaKH.Font = new System.Drawing.Font("Arial", 11.25F);
             this.tbMaKH.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.tbMaKH.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbMaKH.Location = new System.Drawing.Point(173, 10);
+            this.tbMaKH.Location = new System.Drawing.Point(173, 7);
             this.tbMaKH.Name = "tbMaKH";
             this.tbMaKH.PasswordChar = '\0';
             this.tbMaKH.PlaceholderText = "Mã khách hàng";
@@ -184,7 +184,7 @@ namespace DoAnPBL3
             this.tbNameKH.BorderRadius = 6;
             this.tbNameKH.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbNameKH.DefaultText = "";
-            this.tbNameKH.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.tbNameKH.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.tbNameKH.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
             this.tbNameKH.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.tbNameKH.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
@@ -194,7 +194,7 @@ namespace DoAnPBL3
             this.tbNameKH.Font = new System.Drawing.Font("Arial", 11.25F);
             this.tbNameKH.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.tbNameKH.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbNameKH.Location = new System.Drawing.Point(173, 65);
+            this.tbNameKH.Location = new System.Drawing.Point(173, 62);
             this.tbNameKH.Name = "tbNameKH";
             this.tbNameKH.PasswordChar = '\0';
             this.tbNameKH.PlaceholderText = "Họ và tên khách hàng";
@@ -268,30 +268,6 @@ namespace DoAnPBL3
             this.btnTKHD.Text = "Tìm kiếm";
             this.btnTKHD.Click += new System.EventHandler(this.BtnTKHD_Click);
             // 
-            // rjtbTKHD
-            // 
-            this.rjtbTKHD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(35)))));
-            this.rjtbTKHD.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(35)))));
-            this.rjtbTKHD.BorderFocusColor = System.Drawing.Color.DeepSkyBlue;
-            this.rjtbTKHD.BorderRadius = 15;
-            this.rjtbTKHD.BorderSize = 1;
-            this.rjtbTKHD.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjtbTKHD.ForeColor = System.Drawing.Color.Silver;
-            this.rjtbTKHD.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.rjtbTKHD.Location = new System.Drawing.Point(25, 136);
-            this.rjtbTKHD.Margin = new System.Windows.Forms.Padding(4);
-            this.rjtbTKHD.Multiline = false;
-            this.rjtbTKHD.Name = "rjtbTKHD";
-            this.rjtbTKHD.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjtbTKHD.PasswordChar = false;
-            this.rjtbTKHD.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(83)))), ((int)(((byte)(103)))));
-            this.rjtbTKHD.PlaceholderText = "Tìm kiếm theo ID hóa đơn hoặc tên thu ngân";
-            this.rjtbTKHD.Size = new System.Drawing.Size(285, 31);
-            this.rjtbTKHD.TabIndex = 71;
-            this.rjtbTKHD.Texts = "";
-            this.rjtbTKHD.UnderlinedStyle = false;
-            this.rjtbTKHD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.RjtbTKHD_KeyPress);
-            // 
             // lblListOrders
             // 
             this.lblListOrders.AutoSize = true;
@@ -311,7 +287,7 @@ namespace DoAnPBL3
             this.tbTotalPrice.BorderRadius = 6;
             this.tbTotalPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbTotalPrice.DefaultText = "";
-            this.tbTotalPrice.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.tbTotalPrice.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.tbTotalPrice.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
             this.tbTotalPrice.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.tbTotalPrice.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
@@ -347,7 +323,11 @@ namespace DoAnPBL3
             this.dgvQLHD.AllowUserToDeleteRows = false;
             this.dgvQLHD.AllowUserToResizeColumns = false;
             this.dgvQLHD.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(243)))), ((int)(((byte)(251)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 11F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvQLHD.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvQLHD.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
@@ -375,7 +355,7 @@ namespace DoAnPBL3
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 11F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -422,63 +402,6 @@ namespace DoAnPBL3
             this.dgvQLHD.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvQLHD.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DgvQLHD_RowHeaderMouseClick);
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(170, -19);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 16);
-            this.label3.TabIndex = 55;
-            // 
-            // msgValidateEmail
-            // 
-            this.msgValidateEmail.AutoSize = true;
-            this.msgValidateEmail.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.msgValidateEmail.Location = new System.Drawing.Point(396, 212);
-            this.msgValidateEmail.Name = "msgValidateEmail";
-            this.msgValidateEmail.Size = new System.Drawing.Size(0, 16);
-            this.msgValidateEmail.TabIndex = 50;
-            // 
-            // rjbtnOK
-            // 
-            this.rjbtnOK.BackColor = System.Drawing.Color.SeaGreen;
-            this.rjbtnOK.BackgroundColor = System.Drawing.Color.SeaGreen;
-            this.rjbtnOK.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjbtnOK.BorderRadius = 15;
-            this.rjbtnOK.BorderSize = 0;
-            this.rjbtnOK.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rjbtnOK.FlatAppearance.BorderSize = 0;
-            this.rjbtnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjbtnOK.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjbtnOK.ForeColor = System.Drawing.Color.White;
-            this.rjbtnOK.Location = new System.Drawing.Point(342, 747);
-            this.rjbtnOK.Margin = new System.Windows.Forms.Padding(2);
-            this.rjbtnOK.Name = "rjbtnOK";
-            this.rjbtnOK.Size = new System.Drawing.Size(145, 36);
-            this.rjbtnOK.TabIndex = 11;
-            this.rjbtnOK.Text = "OK";
-            this.rjbtnOK.TextColor = System.Drawing.Color.White;
-            this.rjbtnOK.UseVisualStyleBackColor = false;
-            this.rjbtnOK.Click += new System.EventHandler(this.RjbtnOK_Click);
-            // 
-            // guna2Elipse1
-            // 
-            this.guna2Elipse1.BorderRadius = 10;
-            this.guna2Elipse1.TargetControl = this;
-            // 
-            // guna2ShadowForm1
-            // 
-            this.guna2ShadowForm1.BorderRadius = 10;
-            this.guna2ShadowForm1.ShadowColor = System.Drawing.Color.White;
-            this.guna2ShadowForm1.TargetForm = this;
-            // 
-            // guna2DragControl1
-            // 
-            this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
-            this.guna2DragControl1.TargetControl = this.panelTitleBar;
-            this.guna2DragControl1.UseTransparentDrag = true;
-            // 
             // ID_Order
             // 
             this.ID_Order.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -514,6 +437,87 @@ namespace DoAnPBL3
             this.TotalPrice.HeaderText = "Tổng tiền";
             this.TotalPrice.Name = "TotalPrice";
             this.TotalPrice.ReadOnly = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(170, -19);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(0, 16);
+            this.label3.TabIndex = 55;
+            // 
+            // msgValidateEmail
+            // 
+            this.msgValidateEmail.AutoSize = true;
+            this.msgValidateEmail.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.msgValidateEmail.Location = new System.Drawing.Point(396, 212);
+            this.msgValidateEmail.Name = "msgValidateEmail";
+            this.msgValidateEmail.Size = new System.Drawing.Size(0, 16);
+            this.msgValidateEmail.TabIndex = 50;
+            // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.BorderRadius = 10;
+            this.guna2Elipse1.TargetControl = this;
+            // 
+            // guna2ShadowForm1
+            // 
+            this.guna2ShadowForm1.BorderRadius = 10;
+            this.guna2ShadowForm1.ShadowColor = System.Drawing.Color.White;
+            this.guna2ShadowForm1.TargetForm = this;
+            // 
+            // guna2DragControl1
+            // 
+            this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2DragControl1.TargetControl = this.panelTitleBar;
+            this.guna2DragControl1.UseTransparentDrag = true;
+            // 
+            // rjtbTKHD
+            // 
+            this.rjtbTKHD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(35)))));
+            this.rjtbTKHD.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(35)))));
+            this.rjtbTKHD.BorderFocusColor = System.Drawing.Color.DeepSkyBlue;
+            this.rjtbTKHD.BorderRadius = 15;
+            this.rjtbTKHD.BorderSize = 1;
+            this.rjtbTKHD.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjtbTKHD.ForeColor = System.Drawing.Color.Silver;
+            this.rjtbTKHD.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.rjtbTKHD.Location = new System.Drawing.Point(25, 136);
+            this.rjtbTKHD.Margin = new System.Windows.Forms.Padding(4);
+            this.rjtbTKHD.Multiline = false;
+            this.rjtbTKHD.Name = "rjtbTKHD";
+            this.rjtbTKHD.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.rjtbTKHD.PasswordChar = false;
+            this.rjtbTKHD.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(83)))), ((int)(((byte)(103)))));
+            this.rjtbTKHD.PlaceholderText = "Tìm kiếm theo ID hóa đơn hoặc tên thu ngân";
+            this.rjtbTKHD.Size = new System.Drawing.Size(285, 31);
+            this.rjtbTKHD.TabIndex = 71;
+            this.rjtbTKHD.Texts = "";
+            this.rjtbTKHD.UnderlinedStyle = false;
+            this.rjtbTKHD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.RjtbTKHD_KeyPress);
+            // 
+            // rjbtnOK
+            // 
+            this.rjbtnOK.BackColor = System.Drawing.Color.SeaGreen;
+            this.rjbtnOK.BackgroundColor = System.Drawing.Color.SeaGreen;
+            this.rjbtnOK.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjbtnOK.BorderRadius = 15;
+            this.rjbtnOK.BorderSize = 0;
+            this.rjbtnOK.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rjbtnOK.FlatAppearance.BorderSize = 0;
+            this.rjbtnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjbtnOK.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjbtnOK.ForeColor = System.Drawing.Color.White;
+            this.rjbtnOK.Location = new System.Drawing.Point(342, 747);
+            this.rjbtnOK.Margin = new System.Windows.Forms.Padding(2);
+            this.rjbtnOK.Name = "rjbtnOK";
+            this.rjbtnOK.Size = new System.Drawing.Size(145, 36);
+            this.rjbtnOK.TabIndex = 11;
+            this.rjbtnOK.Text = "OK";
+            this.rjbtnOK.TextColor = System.Drawing.Color.White;
+            this.rjbtnOK.UseVisualStyleBackColor = false;
+            this.rjbtnOK.Click += new System.EventHandler(this.RjbtnOK_Click);
             // 
             // FormHoaDonKhachHang
             // 

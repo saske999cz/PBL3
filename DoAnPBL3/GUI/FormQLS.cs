@@ -19,6 +19,7 @@ namespace DoAnPBL3
         private int ID_Language;
         private int ID_Publisher;
         private int ID_Genre;
+        private string theme = "Dark";
 
         public FormQLS(string password)
         {
@@ -100,7 +101,7 @@ namespace DoAnPBL3
 
         private void DgvQLSNV_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            new FormTTS(GetID_Book()).ShowDialog();
+            new FormTTS(theme, GetID_Book()).ShowDialog();
         }
 
         public string GetID_Book()
