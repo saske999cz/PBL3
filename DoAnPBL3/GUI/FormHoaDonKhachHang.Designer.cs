@@ -30,10 +30,10 @@ namespace DoAnPBL3
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelTitleBar = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -47,6 +47,7 @@ namespace DoAnPBL3
             this.totalBill = new System.Windows.Forms.Label();
             this.lblTotalBill = new System.Windows.Forms.Label();
             this.btnTKHD = new Guna.UI2.WinForms.Guna2Button();
+            this.rjtbTKHD = new DoAnPBL3.RJTextBox();
             this.lblListOrders = new System.Windows.Forms.Label();
             this.tbTotalPrice = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblTotalPrice = new System.Windows.Forms.Label();
@@ -57,11 +58,10 @@ namespace DoAnPBL3
             this.TotalPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label3 = new System.Windows.Forms.Label();
             this.msgValidateEmail = new System.Windows.Forms.Label();
+            this.rjbtnOK = new DoAnPBL3.RJButton();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.rjtbTKHD = new DoAnPBL3.RJTextBox();
-            this.rjbtnOK = new DoAnPBL3.RJButton();
             this.panelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelContainer.SuspendLayout();
@@ -268,6 +268,30 @@ namespace DoAnPBL3
             this.btnTKHD.Text = "Tìm kiếm";
             this.btnTKHD.Click += new System.EventHandler(this.BtnTKHD_Click);
             // 
+            // rjtbTKHD
+            // 
+            this.rjtbTKHD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(35)))));
+            this.rjtbTKHD.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(35)))));
+            this.rjtbTKHD.BorderFocusColor = System.Drawing.Color.DeepSkyBlue;
+            this.rjtbTKHD.BorderRadius = 15;
+            this.rjtbTKHD.BorderSize = 1;
+            this.rjtbTKHD.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjtbTKHD.ForeColor = System.Drawing.Color.Silver;
+            this.rjtbTKHD.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.rjtbTKHD.Location = new System.Drawing.Point(68, 132);
+            this.rjtbTKHD.Margin = new System.Windows.Forms.Padding(4);
+            this.rjtbTKHD.Multiline = false;
+            this.rjtbTKHD.Name = "rjtbTKHD";
+            this.rjtbTKHD.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.rjtbTKHD.PasswordChar = false;
+            this.rjtbTKHD.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(83)))), ((int)(((byte)(103)))));
+            this.rjtbTKHD.PlaceholderText = "Tìm kiếm theo tên thu ngân";
+            this.rjtbTKHD.Size = new System.Drawing.Size(181, 31);
+            this.rjtbTKHD.TabIndex = 71;
+            this.rjtbTKHD.Texts = "";
+            this.rjtbTKHD.UnderlinedStyle = false;
+            this.rjtbTKHD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.RjtbTKHD_KeyPress);
+            // 
             // lblListOrders
             // 
             this.lblListOrders.AutoSize = true;
@@ -323,12 +347,12 @@ namespace DoAnPBL3
             this.dgvQLHD.AllowUserToDeleteRows = false;
             this.dgvQLHD.AllowUserToResizeColumns = false;
             this.dgvQLHD.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(243)))), ((int)(((byte)(251)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 11F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvQLHD.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(243)))), ((int)(((byte)(251)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Arial", 11F);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvQLHD.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvQLHD.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -337,14 +361,14 @@ namespace DoAnPBL3
             this.dgvQLHD.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvQLHD.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvQLHD.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(16)))), ((int)(((byte)(221)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(16)))), ((int)(((byte)(221)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvQLHD.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(16)))), ((int)(((byte)(221)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(16)))), ((int)(((byte)(221)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvQLHD.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvQLHD.ColumnHeadersHeight = 30;
             this.dgvQLHD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvQLHD.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -352,28 +376,28 @@ namespace DoAnPBL3
             this.OrderDate,
             this.NameEmployee,
             this.TotalPrice});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 11F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvQLHD.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Arial", 11F);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvQLHD.DefaultCellStyle = dataGridViewCellStyle11;
             this.dgvQLHD.EnableHeadersVisualStyles = false;
             this.dgvQLHD.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.dgvQLHD.Location = new System.Drawing.Point(0, 231);
             this.dgvQLHD.Name = "dgvQLHD";
             this.dgvQLHD.ReadOnly = true;
             this.dgvQLHD.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvQLHD.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvQLHD.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dgvQLHD.RowHeadersVisible = false;
             this.dgvQLHD.RowHeadersWidth = 60;
             this.dgvQLHD.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -456,47 +480,6 @@ namespace DoAnPBL3
             this.msgValidateEmail.Size = new System.Drawing.Size(0, 16);
             this.msgValidateEmail.TabIndex = 50;
             // 
-            // guna2Elipse1
-            // 
-            this.guna2Elipse1.BorderRadius = 10;
-            this.guna2Elipse1.TargetControl = this;
-            // 
-            // guna2ShadowForm1
-            // 
-            this.guna2ShadowForm1.BorderRadius = 10;
-            this.guna2ShadowForm1.ShadowColor = System.Drawing.Color.White;
-            this.guna2ShadowForm1.TargetForm = this;
-            // 
-            // guna2DragControl1
-            // 
-            this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
-            this.guna2DragControl1.TargetControl = this.panelTitleBar;
-            this.guna2DragControl1.UseTransparentDrag = true;
-            // 
-            // rjtbTKHD
-            // 
-            this.rjtbTKHD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(35)))));
-            this.rjtbTKHD.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(35)))));
-            this.rjtbTKHD.BorderFocusColor = System.Drawing.Color.DeepSkyBlue;
-            this.rjtbTKHD.BorderRadius = 15;
-            this.rjtbTKHD.BorderSize = 1;
-            this.rjtbTKHD.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjtbTKHD.ForeColor = System.Drawing.Color.Silver;
-            this.rjtbTKHD.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.rjtbTKHD.Location = new System.Drawing.Point(25, 136);
-            this.rjtbTKHD.Margin = new System.Windows.Forms.Padding(4);
-            this.rjtbTKHD.Multiline = false;
-            this.rjtbTKHD.Name = "rjtbTKHD";
-            this.rjtbTKHD.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjtbTKHD.PasswordChar = false;
-            this.rjtbTKHD.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(83)))), ((int)(((byte)(103)))));
-            this.rjtbTKHD.PlaceholderText = "Tìm kiếm theo ID hóa đơn hoặc tên thu ngân";
-            this.rjtbTKHD.Size = new System.Drawing.Size(285, 31);
-            this.rjtbTKHD.TabIndex = 71;
-            this.rjtbTKHD.Texts = "";
-            this.rjtbTKHD.UnderlinedStyle = false;
-            this.rjtbTKHD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.RjtbTKHD_KeyPress);
-            // 
             // rjbtnOK
             // 
             this.rjbtnOK.BackColor = System.Drawing.Color.SeaGreen;
@@ -518,6 +501,23 @@ namespace DoAnPBL3
             this.rjbtnOK.TextColor = System.Drawing.Color.White;
             this.rjbtnOK.UseVisualStyleBackColor = false;
             this.rjbtnOK.Click += new System.EventHandler(this.RjbtnOK_Click);
+            // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.BorderRadius = 10;
+            this.guna2Elipse1.TargetControl = this;
+            // 
+            // guna2ShadowForm1
+            // 
+            this.guna2ShadowForm1.BorderRadius = 10;
+            this.guna2ShadowForm1.ShadowColor = System.Drawing.Color.White;
+            this.guna2ShadowForm1.TargetForm = this;
+            // 
+            // guna2DragControl1
+            // 
+            this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2DragControl1.TargetControl = this.panelTitleBar;
+            this.guna2DragControl1.UseTransparentDrag = true;
             // 
             // FormHoaDonKhachHang
             // 

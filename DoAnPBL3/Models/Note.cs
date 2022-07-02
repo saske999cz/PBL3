@@ -16,10 +16,12 @@ namespace DoAnPBL3.Models
 
         }
 
-        public Note(string title, string content, string accountUsername)
+        public Note(int id, string title, string content, DateTime date, string accountUsername)
         {
+            ID = id;
             Title = title;
             Content = content;
+            Date = date;
             AccountUsername = accountUsername;
         }
 
@@ -37,6 +39,10 @@ namespace DoAnPBL3.Models
         [MaxLength]
         [Required(ErrorMessage = "Nội dung không được để trống")]
         public string Content { get; set; }
+
+        [Column("NgayTao")]
+        [Required(ErrorMessage = "Ngày tạo ghi chú không được để trống")]
+        public DateTime Date { get; set; }
 
         [Column("TenDangNhap")]
         [StringLength(255)]

@@ -51,5 +51,39 @@ namespace DoAnPBL3.DAL
                 return result > 0;
             }
         }
+
+        public bool UpdateNote(Note note)
+        {
+            using (BookStoreContext db = new BookStoreContext())
+            {
+                Note findingNote = db.Notes.Find(note.ID);
+                findingNote.Title = note.Title;
+                findingNote.Content = note.Content;
+                findingNote.Date = note.Date;
+                int result = db.SaveChanges();
+                return result > 0;
+            }
+        }
+
+        public bool DeleteNote(Note note)
+        {
+            using (BookStoreContext db = new BookStoreContext())
+            {
+                Note removeNote = db.Notes.Find(note.ID);
+                db.Notes.Remove(removeNote);
+                int result = db.SaveChanges();
+                return result > 0;
+            }
+        }
+
+        public Note GetNoteByID(int ID_Note)
+        {
+            using (BookStoreContext db = new BookStoreContext())
+            {
+                return db.Notes
+                    .Where(note => note.ID == ID_Note)
+                    .FirstOrDefault();
+            }
+        }
     }
 }

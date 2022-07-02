@@ -39,7 +39,6 @@ namespace DoAnPBL3
                     lbGenre.ForeColor = Color.WhiteSmoke;
                     lbPrice.ForeColor = Color.WhiteSmoke;
                     lblQuantity.ForeColor = Color.WhiteSmoke;
-                    lblUnit.ForeColor = Color.WhiteSmoke;
                     tbIDBook.DisabledState.FillColor = Color.FromArgb(15, 27, 57);
                     tbIDBook.DisabledState.ForeColor = Color.FromArgb(193, 200, 207);
                     tbNameBook.DisabledState.FillColor = Color.FromArgb(15, 27, 57);
@@ -58,8 +57,6 @@ namespace DoAnPBL3
                     tbQuantity.DisabledState.ForeColor = Color.FromArgb(193, 200, 207);
                     tbPrice.DisabledState.FillColor = Color.FromArgb(15, 27, 57);
                     tbPrice.DisabledState.ForeColor = Color.FromArgb(193, 200, 207);
-                    tbUnit.DisabledState.FillColor = Color.FromArgb(15, 27, 57);
-                    tbUnit.DisabledState.ForeColor = Color.FromArgb(193, 200, 207);
                     break;
                 case "Dark":
                     panelContainer.BackColor = Color.FromArgb(44, 53, 70);
@@ -72,7 +69,6 @@ namespace DoAnPBL3
                     lbGenre.ForeColor = Color.WhiteSmoke;
                     lbPrice.ForeColor = Color.WhiteSmoke;
                     lblQuantity.ForeColor = Color.WhiteSmoke;
-                    lblUnit.ForeColor = Color.WhiteSmoke;
                     tbIDBook.DisabledState.FillColor = Color.FromArgb(22, 33, 49);
                     tbIDBook.DisabledState.ForeColor = Color.FromArgb(193, 200, 207);
                     tbNameBook.DisabledState.FillColor = Color.FromArgb(22, 33, 49);
@@ -91,8 +87,6 @@ namespace DoAnPBL3
                     tbQuantity.DisabledState.ForeColor = Color.FromArgb(193, 200, 207);
                     tbPrice.DisabledState.FillColor = Color.FromArgb(22, 33, 49);
                     tbPrice.DisabledState.ForeColor = Color.FromArgb(193, 200, 207);
-                    tbUnit.DisabledState.FillColor = Color.FromArgb(22, 33, 49);
-                    tbUnit.DisabledState.ForeColor = Color.FromArgb(193, 200, 207);
                     break;
                 case "Light":
                     panelContainer.BackColor = Color.Gainsboro;
@@ -105,7 +99,6 @@ namespace DoAnPBL3
                     lbGenre.ForeColor = Color.Black;
                     lbPrice.ForeColor = Color.Black;
                     lblQuantity.ForeColor = Color.Black;
-                    lblUnit.ForeColor = Color.Black;
                     tbIDBook.DisabledState.FillColor = Color.Silver;
                     tbIDBook.DisabledState.ForeColor = Color.Black;
                     tbIDBook.DisabledState.BorderColor = Color.Black;
@@ -133,9 +126,6 @@ namespace DoAnPBL3
                     tbPrice.DisabledState.FillColor = Color.Silver;
                     tbPrice.DisabledState.ForeColor = Color.Black;
                     tbPrice.DisabledState.BorderColor = Color.Black;
-                    tbUnit.DisabledState.FillColor = Color.Silver;
-                    tbUnit.DisabledState.ForeColor = Color.Black;
-                    tbUnit.DisabledState.BorderColor = Color.Black;
                     break;
             }
         }
@@ -150,9 +140,9 @@ namespace DoAnPBL3
             string projectDirectory = Directory.GetParent(Environment.CurrentDirectory).Parent.FullName;
             tbIDBook.Text = book.ID_Book;
             if (nameBook != book.NameBook)
-                tbNameBook.Text = nameBook;
-            else
                 tbNameBook.Text = book.NameBook;
+            else
+                tbNameBook.Text = nameBook;
             tbPublishDate.Text = book.PublishDate.ToString("dd/MM/yyyy");
             tbAuthor.Text = book.NameAuthor;
             tbLanguage.Text = BLL_QLBS.Instance.GetNameLanguageByID(book.ID_Language);

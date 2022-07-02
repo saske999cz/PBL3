@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DoAnPBL3.BLL;
+using DoAnPBL3.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,11 +14,11 @@ namespace DoAnPBL3
 {
     public partial class FormNoteInfo : Form
     {
-        public FormNoteInfo(string theme, string title, string content)
+        private readonly int ID_Note;
+        public FormNoteInfo(string theme, int ID_Note)
         {
+            this.ID_Note = ID_Note;
             InitializeComponent();
-            tbContent.Text = content;
-            tbTitle.Text = title;
             switch (theme)
             {
                 case "Admin":
@@ -58,6 +60,17 @@ namespace DoAnPBL3
         private void RjbtnCancel_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void FormNoteInfo_Load(object sender, EventArgs e)
+        {
+            ShowInfo(BLL_QLGC.Instance.GetNoteByID(ID_Note));
+        }
+
+        private void ShowInfo(Note note)
+        {
+            tbTitle.Text = note.Title;
+            tbContent.Text = note.Content;
         }
     }
 }

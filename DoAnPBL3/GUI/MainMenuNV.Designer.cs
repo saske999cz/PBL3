@@ -65,7 +65,6 @@ namespace DoAnPBL3
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.rjddmUserSettingMenu = new DoAnPBL3.RJDropDownMenu(this.components);
             this.chỉnhSửaTàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ghiChúToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelMenu.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -591,13 +590,12 @@ namespace DoAnPBL3
             this.rjddmUserSettingMenu.IsMainMenu = false;
             this.rjddmUserSettingMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.chỉnhSửaTàiKhoảnToolStripMenuItem,
-            this.ghiChúToolStripMenuItem,
             this.đăngXuấtToolStripMenuItem});
             this.rjddmUserSettingMenu.MenuItemHeight = 25;
             this.rjddmUserSettingMenu.MenuItemTextColor = System.Drawing.Color.DimGray;
             this.rjddmUserSettingMenu.Name = "rjddmAdminSettingMenu";
             this.rjddmUserSettingMenu.PrimaryColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjddmUserSettingMenu.Size = new System.Drawing.Size(208, 82);
+            this.rjddmUserSettingMenu.Size = new System.Drawing.Size(208, 78);
             this.rjddmUserSettingMenu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.RjddmUserSettingMenu_ItemClicked);
             // 
             // chỉnhSửaTàiKhoảnToolStripMenuItem
@@ -609,15 +607,6 @@ namespace DoAnPBL3
             this.chỉnhSửaTàiKhoảnToolStripMenuItem.Name = "chỉnhSửaTàiKhoảnToolStripMenuItem";
             this.chỉnhSửaTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(207, 26);
             this.chỉnhSửaTàiKhoảnToolStripMenuItem.Text = "Chỉnh sửa tài khoản";
-            // 
-            // ghiChúToolStripMenuItem
-            // 
-            this.ghiChúToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.ghiChúToolStripMenuItem.Image = global::DoAnPBL3.Properties.Resources.icons8_reserve_30px_1;
-            this.ghiChúToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ghiChúToolStripMenuItem.Name = "ghiChúToolStripMenuItem";
-            this.ghiChúToolStripMenuItem.Size = new System.Drawing.Size(207, 26);
-            this.ghiChúToolStripMenuItem.Text = "Ghi chú";
             // 
             // đăngXuấtToolStripMenuItem
             // 
@@ -695,7 +684,6 @@ namespace DoAnPBL3
         private System.Windows.Forms.Timer timer1;
         private RJDropDownMenu rjddmUserSettingMenu;
         private System.Windows.Forms.ToolStripMenuItem chỉnhSửaTàiKhoảnToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ghiChúToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem;
         private System.Windows.Forms.Panel panelShadow;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;

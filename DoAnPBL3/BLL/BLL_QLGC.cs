@@ -41,5 +41,26 @@ namespace DoAnPBL3.BLL
             else
                 return false;
         }
+
+        public bool UpdateNote(Note note)
+        {
+            if (DAL_QLGC.Instance.UpdateNote(note))
+                return true;
+            else
+                return false;
+        }
+
+        public bool DeleteNote(Note note)
+        {
+            if (DAL_QLGC.Instance.DeleteNote(note))
+                return true;
+            else
+                return false;
+        }
+
+        public Note GetNoteByID(int ID_Note)
+        {
+            return DAL_QLGC.Instance.GetNoteByID(ID_Note);
+        }
     }
 }

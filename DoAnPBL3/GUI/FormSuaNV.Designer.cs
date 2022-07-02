@@ -214,9 +214,9 @@ namespace DoAnPBL3
             this.lblStartDate.Location = new System.Drawing.Point(287, 251);
             this.lblStartDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblStartDate.Name = "lblStartDate";
-            this.lblStartDate.Size = new System.Drawing.Size(99, 18);
+            this.lblStartDate.Size = new System.Drawing.Size(101, 18);
             this.lblStartDate.TabIndex = 77;
-            this.lblStartDate.Text = "Ngày bắt đầu";
+            this.lblStartDate.Text = "Ngày vào làm";
             // 
             // btnDeleteImg
             // 

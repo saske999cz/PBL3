@@ -343,151 +343,151 @@ namespace DoAnPBL3
             context.Books.AddRange(new Book[]
             {
                 new Book {ID_Book = "B0000", NameBook = "One Punch Man tập 1", PublishDate = new DateTime(2020, 01, 01), 
-                    NameAuthor = "Yusuke Murata", Quantity = 4, Price = 22000, Unit = "Quyển", ID_Language = 1, ID_Publisher = 1, ID_Genre = 6,
+                    NameAuthor = "Yusuke Murata", Quantity = 4, Price = 22000, ID_Language = 1, ID_Publisher = 1, ID_Genre = 6,
                     Image = "Img\\Book\\OPM tap 1.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0001", NameBook = "One Punch Man tập 2", PublishDate = new DateTime(2020, 01, 02),
-                    NameAuthor = "Yusuke Murata", Quantity = 2, Price = 22000, Unit = "Quyển", ID_Language = 1, ID_Publisher = 1, ID_Genre = 6,
+                    NameAuthor = "Yusuke Murata", Quantity = 2, Price = 22000, ID_Language = 1, ID_Publisher = 1, ID_Genre = 6,
                     Image = "Img\\Book\\OPM tap 2.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0002", NameBook = "One Punch Man tập 3", PublishDate = new DateTime(2020, 01, 03),
-                    NameAuthor = "Yusuke Murata", Quantity = 8, Price = 22000, Unit = "Quyển", ID_Language = 2, ID_Publisher = 1, ID_Genre = 6,
+                    NameAuthor = "Yusuke Murata", Quantity = 8, Price = 22000, ID_Language = 2, ID_Publisher = 1, ID_Genre = 6,
                     Image = "Img\\Book\\OPM tap 3.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0003", NameBook = "One Punch Man tập 4", PublishDate = new DateTime(2020, 01, 04),
-                    NameAuthor = "Yusuke Murata", Quantity = 10, Price = 22000, Unit = "Quyển", ID_Language = 1, ID_Publisher = 1, ID_Genre = 6,
+                    NameAuthor = "Yusuke Murata", Quantity = 10, Price = 22000, ID_Language = 1, ID_Publisher = 1, ID_Genre = 6,
                     Image = "Img\\Book\\OPM tap 4.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0004", NameBook = "One Punch Man tập 5", PublishDate = new DateTime(2020, 01, 05),
-                    NameAuthor = "Yusuke Murata", Quantity = 9, Price = 22000, Unit = "Quyển", ID_Language = 3, ID_Publisher = 1, ID_Genre = 6,
+                    NameAuthor = "Yusuke Murata", Quantity = 9, Price = 22000, ID_Language = 3, ID_Publisher = 1, ID_Genre = 6,
                     Image = "Img\\Book\\OPM tap 5.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0005", NameBook = "One Punch Man tập 6", PublishDate = new DateTime(2020, 01, 06),
-                    NameAuthor = "Yusuke Murata", Quantity = 15, Price = 22000, Unit = "Quyển", ID_Language = 1, ID_Publisher = 1, ID_Genre = 6,
+                    NameAuthor = "Yusuke Murata", Quantity = 15, Price = 22000, ID_Language = 1, ID_Publisher = 1, ID_Genre = 6,
                     Image = "Img\\Book\\OPM tap 6.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0006", NameBook = "One Punch Man tập 7", PublishDate = new DateTime(2020, 01, 07),
-                    NameAuthor = "Yusuke Murata", Quantity = 11, Price = 22000, Unit = "Quyển", ID_Language = 1, ID_Publisher = 1, ID_Genre = 6,
+                    NameAuthor = "Yusuke Murata", Quantity = 11, Price = 22000, ID_Language = 1, ID_Publisher = 1, ID_Genre = 6,
                     Image = "Img\\Book\\OPM tap 7.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0007", NameBook = "One Punch Man tập 8", PublishDate = new DateTime(2020, 01, 08),
-                    NameAuthor = "Yusuke Murata", Quantity = 7, Price = 22000, Unit = "Quyển", ID_Language = 2, ID_Publisher = 1, ID_Genre = 6,
+                    NameAuthor = "Yusuke Murata", Quantity = 7, Price = 22000, ID_Language = 2, ID_Publisher = 1, ID_Genre = 6,
                     Image = "Img\\Book\\OPM tap 8.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0008", NameBook = "One Punch Man tập 9", PublishDate = new DateTime(2020, 01, 09),
-                    NameAuthor = "Yusuke Murata", Quantity = 7, Price = 22000, Unit = "Quyển", ID_Language = 6, ID_Publisher = 1, ID_Genre = 6,
+                    NameAuthor = "Yusuke Murata", Quantity = 7, Price = 22000, ID_Language = 6, ID_Publisher = 1, ID_Genre = 6,
                     Image = "Img\\Book\\OPM tap 9.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0009", NameBook = "One Punch Man tập 10", PublishDate = new DateTime(2020, 01, 10),
-                    NameAuthor = "Yusuke Murata", Quantity = 9, Price = 22000, Unit = "Quyển", ID_Language = 6, ID_Publisher = 1, ID_Genre = 6,
+                    NameAuthor = "Yusuke Murata", Quantity = 9, Price = 22000, ID_Language = 6, ID_Publisher = 1, ID_Genre = 6,
                     Image = "Img\\Book\\OPM tap 10.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0010", NameBook = "One Punch Man tập 11", PublishDate = new DateTime(2020, 01, 11),
-                    NameAuthor = "Yusuke Murata", Quantity = 2, Price = 22000, Unit = "Quyển", ID_Language = 1, ID_Publisher = 1, ID_Genre = 6,
+                    NameAuthor = "Yusuke Murata", Quantity = 2, Price = 22000, ID_Language = 1, ID_Publisher = 1, ID_Genre = 6,
                     Image = "Img\\Book\\OPM tap 11.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0011", NameBook = "One Punch Man tập 12", PublishDate = new DateTime(2020, 01, 12),
-                    NameAuthor = "Yusuke Murata", Quantity = 4, Price = 22000, Unit = "Quyển", ID_Language = 1, ID_Publisher = 1, ID_Genre = 6,
+                    NameAuthor = "Yusuke Murata", Quantity = 4, Price = 22000, ID_Language = 1, ID_Publisher = 1, ID_Genre = 6,
                     Image = "Img\\Book\\OPM tap 12.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0012", NameBook = "One Punch Man tập 13", PublishDate = new DateTime(2020, 01, 13),
-                    NameAuthor = "Yusuke Murata", Quantity = 4, Price = 22000, Unit = "Quyển", ID_Language = 7, ID_Publisher = 1, ID_Genre = 6,
+                    NameAuthor = "Yusuke Murata", Quantity = 4, Price = 22000, ID_Language = 7, ID_Publisher = 1, ID_Genre = 6,
                     Image = "Img\\Book\\OPM tap 13.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0013", NameBook = "One Punch Man tập 14", PublishDate = new DateTime(2020, 01, 14),
-                    NameAuthor = "Yusuke Murata", Quantity = 6, Price = 22000, Unit = "Quyển", ID_Language = 7, ID_Publisher = 1, ID_Genre = 6,
+                    NameAuthor = "Yusuke Murata", Quantity = 6, Price = 22000, ID_Language = 7, ID_Publisher = 1, ID_Genre = 6,
                     Image = "Img\\Book\\OPM tap 14.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0014", NameBook = "One Punch Man tập 15", PublishDate = new DateTime(2020, 01, 15),
-                    NameAuthor = "Yusuke Murata", Quantity = 5, Price = 22000, Unit = "Quyển", ID_Language = 2, ID_Publisher = 1, ID_Genre = 6,
+                    NameAuthor = "Yusuke Murata", Quantity = 5, Price = 22000, ID_Language = 2, ID_Publisher = 1, ID_Genre = 6,
                     Image = "Img\\Book\\OPM tap 15.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0015", NameBook = "One Punch Man tập 16", PublishDate = new DateTime(2020, 01, 16),
-                    NameAuthor = "Yusuke Murata", Quantity = 12, Price = 22000, Unit = "Quyển", ID_Language = 2, ID_Publisher = 1, ID_Genre = 6,
+                    NameAuthor = "Yusuke Murata", Quantity = 12, Price = 22000, ID_Language = 2, ID_Publisher = 1, ID_Genre = 6,
                     Image = "Img\\Book\\OPM tap 16.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0016", NameBook = "One Punch Man tập 17", PublishDate = new DateTime(2020, 01, 17),
-                    NameAuthor = "Yusuke Murata", Quantity = 16, Price = 22000, Unit = "Quyển", ID_Language = 1, ID_Publisher = 1, ID_Genre = 6,
+                    NameAuthor = "Yusuke Murata", Quantity = 16, Price = 22000, ID_Language = 1, ID_Publisher = 1, ID_Genre = 6,
                     Image = "Img\\Book\\OPM tap 17.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0017", NameBook = "One Punch Man tập 18", PublishDate = new DateTime(2020, 01, 18),
-                    NameAuthor = "Yusuke Murata", Quantity = 15, Price = 22000, Unit = "Quyển", ID_Language = 3, ID_Publisher = 1, ID_Genre = 6,
+                    NameAuthor = "Yusuke Murata", Quantity = 15, Price = 22000, ID_Language = 3, ID_Publisher = 1, ID_Genre = 6,
                     Image = "Img\\Book\\OPM tap 18.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0018", NameBook = "One Punch Man tập 19", PublishDate = new DateTime(2020, 01, 19),
-                    NameAuthor = "Yusuke Murata", Quantity = 10, Price = 22000, Unit = "Quyển", ID_Language = 1, ID_Publisher = 1, ID_Genre = 6,
+                    NameAuthor = "Yusuke Murata", Quantity = 10, Price = 22000, ID_Language = 1, ID_Publisher = 1, ID_Genre = 6,
                     Image = "Img\\Book\\OPM tap 19.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0019", NameBook = "One Punch Man tập 20", PublishDate = new DateTime(2020, 01, 20),
-                    NameAuthor = "Yusuke Murata", Quantity = 11, Price = 22000, Unit = "Quyển", ID_Language = 3, ID_Publisher = 1, ID_Genre = 6,
+                    NameAuthor = "Yusuke Murata", Quantity = 11, Price = 22000, ID_Language = 3, ID_Publisher = 1, ID_Genre = 6,
                     Image = "Img\\Book\\OPM tap 20.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0020", NameBook = "One Punch Man tập 21", PublishDate = new DateTime(2020, 01, 21),
-                    NameAuthor = "Yusuke Murata", Quantity = 10, Price = 22000, Unit = "Quyển", ID_Language = 3, ID_Publisher = 1, ID_Genre = 6,
+                    NameAuthor = "Yusuke Murata", Quantity = 10, Price = 22000, ID_Language = 3, ID_Publisher = 1, ID_Genre = 6,
                     Image = "Img\\Book\\OPM tap 21.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0021", NameBook = "One Punch Man tập 22", PublishDate = new DateTime(2020, 01, 22),
-                    NameAuthor = "Yusuke Murata", Quantity = 12, Price = 22000, Unit = "Quyển", ID_Language = 7, ID_Publisher = 1, ID_Genre = 6,
+                    NameAuthor = "Yusuke Murata", Quantity = 12, Price = 22000, ID_Language = 7, ID_Publisher = 1, ID_Genre = 6,
                     Image = "Img\\Book\\OPM tap 22.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0022", NameBook = "One Punch Man tập 23", PublishDate = new DateTime(2020, 01, 23),
-                    NameAuthor = "Yusuke Murata", Quantity = 12, Price = 22000, Unit = "Quyển", ID_Language = 2, ID_Publisher = 1, ID_Genre = 6,
+                    NameAuthor = "Yusuke Murata", Quantity = 12, Price = 22000, ID_Language = 2, ID_Publisher = 1, ID_Genre = 6,
                     Image = "Img\\Book\\OPM tap 23.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0023", NameBook = "One Punch Man tập 24", PublishDate = new DateTime(2020, 01, 24),
-                    NameAuthor = "Yusuke Murata", Quantity = 16, Price = 22000, Unit = "Quyển", ID_Language = 3, ID_Publisher = 1, ID_Genre = 6,
+                    NameAuthor = "Yusuke Murata", Quantity = 16, Price = 22000, ID_Language = 3, ID_Publisher = 1, ID_Genre = 6,
                     Image = "Img\\Book\\OPM tap 24.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0024", NameBook = "One Punch Man tập 25", PublishDate = new DateTime(2020, 01, 25),
-                    NameAuthor = "Yusuke Murata", Quantity = 17, Price = 22000, Unit = "Quyển", ID_Language = 6, ID_Publisher = 1, ID_Genre = 6,
+                    NameAuthor = "Yusuke Murata", Quantity = 17, Price = 22000, ID_Language = 6, ID_Publisher = 1, ID_Genre = 6,
                     Image = "Img\\Book\\OPM tap 25.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0025", NameBook = "Giải tích 12", PublishDate = new DateTime(2020, 01, 01),
-                    NameAuthor = "Bộ giáo dục và đào tạo", Quantity = 15, Price = 8000, Unit = "Quyển", ID_Language = 1, ID_Publisher = 5, ID_Genre = 5,
+                    NameAuthor = "Bộ giáo dục và đào tạo", Quantity = 15, Price = 8000, ID_Language = 1, ID_Publisher = 5, ID_Genre = 5,
                     Image = "Img\\Book\\sach-giao-khoa-giai-tich-12.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0026", NameBook = "Hình học 12", PublishDate = new DateTime(2020, 01, 2),
-                    NameAuthor = "Bộ giáo dục và đào tạo", Quantity = 15, Price = 8000, Unit = "Quyển", ID_Language = 1, ID_Publisher = 5, ID_Genre = 5,
+                    NameAuthor = "Bộ giáo dục và đào tạo", Quantity = 15, Price = 8000, ID_Language = 1, ID_Publisher = 5, ID_Genre = 5,
                     Image = "Img\\Book\\Hinh-hoc-12-346267-2.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0027", NameBook = "Ngữ Văn 12 tập 1", PublishDate = new DateTime(2020, 01, 3),
-                    NameAuthor = "Bộ giáo dục và đào tạo", Quantity = 17, Price = 10000, Unit = "Quyển", ID_Language = 1, ID_Publisher = 5, ID_Genre = 5,
+                    NameAuthor = "Bộ giáo dục và đào tạo", Quantity = 17, Price = 10000, ID_Language = 1, ID_Publisher = 5, ID_Genre = 5,
                     Image = "Img\\Book\\Sach-giao-khoa-ngu-van-12-tap-1-500x554.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0028", NameBook = "Ngữ Văn 12 tập 2", PublishDate = new DateTime(2020, 01, 4),
-                    NameAuthor = "Bộ giáo dục và đào tạo", Quantity = 21, Price = 10000, Unit = "Quyển", ID_Language = 1, ID_Publisher = 5, ID_Genre = 5,
+                    NameAuthor = "Bộ giáo dục và đào tạo", Quantity = 21, Price = 10000, ID_Language = 1, ID_Publisher = 5, ID_Genre = 5,
                     Image = "Img\\Book\\Sach-giao-khoa-ngu-van-12-tap-2-500x554.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0029", NameBook = "Vật lý 12", PublishDate = new DateTime(2020, 01, 5),
-                    NameAuthor = "Bộ giáo dục và đào tạo", Quantity = 21, Price = 12000, Unit = "Quyển", ID_Language = 1, ID_Publisher = 5, ID_Genre = 5,
+                    NameAuthor = "Bộ giáo dục và đào tạo", Quantity = 21, Price = 12000, ID_Language = 1, ID_Publisher = 5, ID_Genre = 5,
                     Image = "Img\\Book\\sach-giao-khoa-vat-ly-12.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0030", NameBook = "Hóa học 12", PublishDate = new DateTime(2020, 01, 6),
-                    NameAuthor = "Bộ giáo dục và đào tạo", Quantity = 23, Price = 12000, Unit = "Quyển", ID_Language = 1, ID_Publisher = 5, ID_Genre = 5,
+                    NameAuthor = "Bộ giáo dục và đào tạo", Quantity = 23, Price = 12000, ID_Language = 1, ID_Publisher = 5, ID_Genre = 5,
                     Image = "Img\\Book\\sach-giao-khoa-hoa-hoc-lop-12.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0031", NameBook = "Sinh học 12", PublishDate = new DateTime(2020, 01, 7),
-                    NameAuthor = "Bộ giáo dục và đào tạo", Quantity = 22, Price = 12000, Unit = "Quyển", ID_Language = 1, ID_Publisher = 5, ID_Genre = 5,
+                    NameAuthor = "Bộ giáo dục và đào tạo", Quantity = 22, Price = 12000, ID_Language = 1, ID_Publisher = 5, ID_Genre = 5,
                     Image = "Img\\Book\\sach-giao-khoa-sinh-hoc-lop-12.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0032", NameBook = "Địa lí 12", PublishDate = new DateTime(2020, 01, 8),
-                    NameAuthor = "Bộ giáo dục và đào tạo", Quantity = 25, Price = 12000, Unit = "Quyển", ID_Language = 1, ID_Publisher = 5, ID_Genre = 5,
+                    NameAuthor = "Bộ giáo dục và đào tạo", Quantity = 25, Price = 12000, ID_Language = 1, ID_Publisher = 5, ID_Genre = 5,
                     Image = "Img\\Book\\sach-giao-khoa-dia-li-lop-12.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0033", NameBook = "Lịch sử 12", PublishDate = new DateTime(2020, 01, 9),
-                    NameAuthor = "Bộ giáo dục và đào tạo", Quantity = 16, Price = 12000, Unit = "Quyển", ID_Language = 1, ID_Publisher = 5, ID_Genre = 5,
+                    NameAuthor = "Bộ giáo dục và đào tạo", Quantity = 16, Price = 12000, ID_Language = 1, ID_Publisher = 5, ID_Genre = 5,
                     Image = "Img\\Book\\sach-giao-khoa-lich-su-lop-12.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0034", NameBook = "Tiếng anh 12", PublishDate = new DateTime(2020, 01, 10),
-                    NameAuthor = "Bộ giáo dục và đào tạo", Quantity = 17, Price = 12000, Unit = "Quyển", ID_Language = 1, ID_Publisher = 5, ID_Genre = 5,
+                    NameAuthor = "Bộ giáo dục và đào tạo", Quantity = 17, Price = 12000, ID_Language = 1, ID_Publisher = 5, ID_Genre = 5,
                     Image = "Img\\Book\\sach-giao-khoa-tieng-anh-12.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0035", NameBook = "Tiếng anh thí điểm 12 tập 1", PublishDate = new DateTime(2020, 01, 11),
-                    NameAuthor = "Bộ giáo dục và đào tạo", Quantity = 7, Price = 30000, Unit = "Quyển", ID_Language = 1, ID_Publisher = 5, ID_Genre = 5,
+                    NameAuthor = "Bộ giáo dục và đào tạo", Quantity = 7, Price = 30000, ID_Language = 1, ID_Publisher = 5, ID_Genre = 5,
                     Image = "Img\\Book\\tieng-anh-thi-diem-12-tap-1.jpg", SaleStatus = true},
 
                 new Book {ID_Book = "B0036", NameBook = "Tiếng anh thí điểm 12 tập 2", PublishDate = new DateTime(2020, 01, 12),
-                    NameAuthor = "Bộ giáo dục và đào tạo", Quantity = 10, Price = 30000, Unit = "Quyển", ID_Language = 1, ID_Publisher = 5, ID_Genre = 5,
+                    NameAuthor = "Bộ giáo dục và đào tạo", Quantity = 10, Price = 30000, ID_Language = 1, ID_Publisher = 5, ID_Genre = 5,
                     Image = "Img\\Book\\tieng-anh-thi-diem-12-tap-2.jpg", SaleStatus = true},
             });
 

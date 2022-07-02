@@ -451,7 +451,6 @@ namespace DoAnPBL3.DAL
                 oldBook.ID_Genre = newBookInfo.ID_Genre;
                 oldBook.Quantity = newBookInfo.Quantity;
                 oldBook.Price = newBookInfo.Price;
-                oldBook.Unit = newBookInfo.Unit;
                 oldBook.Image = newBookInfo.Image;
                 int result = db.SaveChanges();
                 return result > 0;

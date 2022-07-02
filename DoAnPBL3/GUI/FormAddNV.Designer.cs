@@ -36,9 +36,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.guna2DragControl2 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.panelContainer = new System.Windows.Forms.Panel();
+            this.cbGenderNV = new DoAnPBL3.RJComboBox();
             this.msgValidateStartDate = new System.Windows.Forms.Label();
             this.tbStartDate = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblStartDate = new System.Windows.Forms.Label();
+            this.btnDeleteImg = new DoAnPBL3.RJButton();
             this.avatar = new Guna.UI2.WinForms.Guna2PictureBox();
             this.msgValidateAddress = new System.Windows.Forms.Label();
             this.msgValidateIDCard = new System.Windows.Forms.Label();
@@ -47,12 +49,15 @@
             this.msgValidateDateOfBirth = new System.Windows.Forms.Label();
             this.msgValidateEmail = new System.Windows.Forms.Label();
             this.msgValidateName = new System.Windows.Forms.Label();
+            this.btnNVImg = new DoAnPBL3.RJButton();
             this.tbEmailNV = new Guna.UI2.WinForms.Guna2TextBox();
             this.tbSDTNV = new Guna.UI2.WinForms.Guna2TextBox();
             this.tbAddressNV = new Guna.UI2.WinForms.Guna2TextBox();
             this.tbCMNDNV = new Guna.UI2.WinForms.Guna2TextBox();
             this.tbBD = new Guna.UI2.WinForms.Guna2TextBox();
             this.tbNameNV = new Guna.UI2.WinForms.Guna2TextBox();
+            this.rjbtnCancel = new DoAnPBL3.RJButton();
+            this.rjbtnOK = new DoAnPBL3.RJButton();
             this.lblCMND = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblSDT = new System.Windows.Forms.Label();
@@ -63,11 +68,6 @@
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.cbGenderNV = new DoAnPBL3.RJComboBox();
-            this.btnDeleteImg = new DoAnPBL3.RJButton();
-            this.btnNVImg = new DoAnPBL3.RJButton();
-            this.rjbtnCancel = new DoAnPBL3.RJButton();
-            this.rjbtnOK = new DoAnPBL3.RJButton();
             this.panelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelContainer.SuspendLayout();
@@ -163,6 +163,29 @@
             this.panelContainer.Size = new System.Drawing.Size(828, 700);
             this.panelContainer.TabIndex = 4;
             // 
+            // cbGenderNV
+            // 
+            this.cbGenderNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.cbGenderNV.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.cbGenderNV.BorderSize = 2;
+            this.cbGenderNV.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbGenderNV.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbGenderNV.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbGenderNV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.cbGenderNV.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.cbGenderNV.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ"});
+            this.cbGenderNV.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.cbGenderNV.ListTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.cbGenderNV.Location = new System.Drawing.Point(395, 327);
+            this.cbGenderNV.MinimumSize = new System.Drawing.Size(188, 29);
+            this.cbGenderNV.Name = "cbGenderNV";
+            this.cbGenderNV.Padding = new System.Windows.Forms.Padding(2);
+            this.cbGenderNV.Size = new System.Drawing.Size(409, 32);
+            this.cbGenderNV.TabIndex = 59;
+            this.cbGenderNV.Texts = "Giới tính";
+            // 
             // msgValidateStartDate
             // 
             this.msgValidateStartDate.AutoSize = true;
@@ -204,9 +227,33 @@
             this.lblStartDate.Location = new System.Drawing.Point(286, 262);
             this.lblStartDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblStartDate.Name = "lblStartDate";
-            this.lblStartDate.Size = new System.Drawing.Size(99, 18);
+            this.lblStartDate.Size = new System.Drawing.Size(101, 18);
             this.lblStartDate.TabIndex = 56;
-            this.lblStartDate.Text = "Ngày bắt đầu";
+            this.lblStartDate.Text = "Ngày vào làm";
+            // 
+            // btnDeleteImg
+            // 
+            this.btnDeleteImg.BackColor = System.Drawing.Color.Crimson;
+            this.btnDeleteImg.BackgroundColor = System.Drawing.Color.Crimson;
+            this.btnDeleteImg.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnDeleteImg.BorderRadius = 20;
+            this.btnDeleteImg.BorderSize = 0;
+            this.btnDeleteImg.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDeleteImg.FlatAppearance.BorderSize = 0;
+            this.btnDeleteImg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteImg.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteImg.ForeColor = System.Drawing.Color.White;
+            this.btnDeleteImg.Image = global::DoAnPBL3.Properties.Resources.delete_30px;
+            this.btnDeleteImg.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDeleteImg.Location = new System.Drawing.Point(142, 313);
+            this.btnDeleteImg.Name = "btnDeleteImg";
+            this.btnDeleteImg.Size = new System.Drawing.Size(110, 40);
+            this.btnDeleteImg.TabIndex = 10;
+            this.btnDeleteImg.Text = "Xóa ảnh";
+            this.btnDeleteImg.TextColor = System.Drawing.Color.White;
+            this.btnDeleteImg.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDeleteImg.UseVisualStyleBackColor = false;
+            this.btnDeleteImg.Click += new System.EventHandler(this.BtnDeleteImg_Click);
             // 
             // avatar
             // 
@@ -281,6 +328,30 @@
             this.msgValidateName.Name = "msgValidateName";
             this.msgValidateName.Size = new System.Drawing.Size(0, 16);
             this.msgValidateName.TabIndex = 50;
+            // 
+            // btnNVImg
+            // 
+            this.btnNVImg.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnNVImg.BackgroundColor = System.Drawing.Color.DodgerBlue;
+            this.btnNVImg.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnNVImg.BorderRadius = 20;
+            this.btnNVImg.BorderSize = 0;
+            this.btnNVImg.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNVImg.FlatAppearance.BorderSize = 0;
+            this.btnNVImg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNVImg.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNVImg.ForeColor = System.Drawing.Color.White;
+            this.btnNVImg.Image = global::DoAnPBL3.Properties.Resources.icons8_picture_30px;
+            this.btnNVImg.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnNVImg.Location = new System.Drawing.Point(10, 313);
+            this.btnNVImg.Name = "btnNVImg";
+            this.btnNVImg.Size = new System.Drawing.Size(110, 40);
+            this.btnNVImg.TabIndex = 9;
+            this.btnNVImg.Text = "Chọn ảnh";
+            this.btnNVImg.TextColor = System.Drawing.Color.White;
+            this.btnNVImg.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnNVImg.UseVisualStyleBackColor = false;
+            this.btnNVImg.Click += new System.EventHandler(this.BtnNVImg_Click);
             // 
             // tbEmailNV
             // 
@@ -432,6 +503,50 @@
             this.tbNameNV.TabIndex = 1;
             this.tbNameNV.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbNameNV_KeyPress);
             // 
+            // rjbtnCancel
+            // 
+            this.rjbtnCancel.BackColor = System.Drawing.Color.DimGray;
+            this.rjbtnCancel.BackgroundColor = System.Drawing.Color.DimGray;
+            this.rjbtnCancel.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjbtnCancel.BorderRadius = 15;
+            this.rjbtnCancel.BorderSize = 0;
+            this.rjbtnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rjbtnCancel.FlatAppearance.BorderSize = 0;
+            this.rjbtnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjbtnCancel.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjbtnCancel.ForeColor = System.Drawing.Color.White;
+            this.rjbtnCancel.Location = new System.Drawing.Point(442, 624);
+            this.rjbtnCancel.Margin = new System.Windows.Forms.Padding(2);
+            this.rjbtnCancel.Name = "rjbtnCancel";
+            this.rjbtnCancel.Size = new System.Drawing.Size(145, 36);
+            this.rjbtnCancel.TabIndex = 12;
+            this.rjbtnCancel.Text = "Hủy";
+            this.rjbtnCancel.TextColor = System.Drawing.Color.White;
+            this.rjbtnCancel.UseVisualStyleBackColor = false;
+            this.rjbtnCancel.Click += new System.EventHandler(this.RjbtnCancel_Click);
+            // 
+            // rjbtnOK
+            // 
+            this.rjbtnOK.BackColor = System.Drawing.Color.SeaGreen;
+            this.rjbtnOK.BackgroundColor = System.Drawing.Color.SeaGreen;
+            this.rjbtnOK.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjbtnOK.BorderRadius = 15;
+            this.rjbtnOK.BorderSize = 0;
+            this.rjbtnOK.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rjbtnOK.FlatAppearance.BorderSize = 0;
+            this.rjbtnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjbtnOK.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjbtnOK.ForeColor = System.Drawing.Color.White;
+            this.rjbtnOK.Location = new System.Drawing.Point(240, 624);
+            this.rjbtnOK.Margin = new System.Windows.Forms.Padding(2);
+            this.rjbtnOK.Name = "rjbtnOK";
+            this.rjbtnOK.Size = new System.Drawing.Size(145, 36);
+            this.rjbtnOK.TabIndex = 11;
+            this.rjbtnOK.Text = "OK";
+            this.rjbtnOK.TextColor = System.Drawing.Color.White;
+            this.rjbtnOK.UseVisualStyleBackColor = false;
+            this.rjbtnOK.Click += new System.EventHandler(this.RjbtnOK_Click);
+            // 
             // lblCMND
             // 
             this.lblCMND.AutoSize = true;
@@ -531,121 +646,6 @@
             // guna2Elipse1
             // 
             this.guna2Elipse1.BorderRadius = 10;
-            // 
-            // cbGenderNV
-            // 
-            this.cbGenderNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
-            this.cbGenderNV.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.cbGenderNV.BorderSize = 2;
-            this.cbGenderNV.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbGenderNV.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbGenderNV.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbGenderNV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.cbGenderNV.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.cbGenderNV.Items.AddRange(new object[] {
-            "Nam",
-            "Nữ"});
-            this.cbGenderNV.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
-            this.cbGenderNV.ListTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.cbGenderNV.Location = new System.Drawing.Point(395, 327);
-            this.cbGenderNV.MinimumSize = new System.Drawing.Size(188, 29);
-            this.cbGenderNV.Name = "cbGenderNV";
-            this.cbGenderNV.Padding = new System.Windows.Forms.Padding(2);
-            this.cbGenderNV.Size = new System.Drawing.Size(409, 32);
-            this.cbGenderNV.TabIndex = 59;
-            this.cbGenderNV.Texts = "Giới tính";
-            // 
-            // btnDeleteImg
-            // 
-            this.btnDeleteImg.BackColor = System.Drawing.Color.Crimson;
-            this.btnDeleteImg.BackgroundColor = System.Drawing.Color.Crimson;
-            this.btnDeleteImg.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnDeleteImg.BorderRadius = 20;
-            this.btnDeleteImg.BorderSize = 0;
-            this.btnDeleteImg.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDeleteImg.FlatAppearance.BorderSize = 0;
-            this.btnDeleteImg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeleteImg.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteImg.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteImg.Image = global::DoAnPBL3.Properties.Resources.delete_30px;
-            this.btnDeleteImg.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDeleteImg.Location = new System.Drawing.Point(142, 313);
-            this.btnDeleteImg.Name = "btnDeleteImg";
-            this.btnDeleteImg.Size = new System.Drawing.Size(110, 40);
-            this.btnDeleteImg.TabIndex = 10;
-            this.btnDeleteImg.Text = "Xóa ảnh";
-            this.btnDeleteImg.TextColor = System.Drawing.Color.White;
-            this.btnDeleteImg.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDeleteImg.UseVisualStyleBackColor = false;
-            this.btnDeleteImg.Click += new System.EventHandler(this.BtnDeleteImg_Click);
-            // 
-            // btnNVImg
-            // 
-            this.btnNVImg.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnNVImg.BackgroundColor = System.Drawing.Color.DodgerBlue;
-            this.btnNVImg.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnNVImg.BorderRadius = 20;
-            this.btnNVImg.BorderSize = 0;
-            this.btnNVImg.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNVImg.FlatAppearance.BorderSize = 0;
-            this.btnNVImg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNVImg.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNVImg.ForeColor = System.Drawing.Color.White;
-            this.btnNVImg.Image = global::DoAnPBL3.Properties.Resources.icons8_picture_30px;
-            this.btnNVImg.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnNVImg.Location = new System.Drawing.Point(10, 313);
-            this.btnNVImg.Name = "btnNVImg";
-            this.btnNVImg.Size = new System.Drawing.Size(110, 40);
-            this.btnNVImg.TabIndex = 9;
-            this.btnNVImg.Text = "Chọn ảnh";
-            this.btnNVImg.TextColor = System.Drawing.Color.White;
-            this.btnNVImg.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnNVImg.UseVisualStyleBackColor = false;
-            this.btnNVImg.Click += new System.EventHandler(this.BtnNVImg_Click);
-            // 
-            // rjbtnCancel
-            // 
-            this.rjbtnCancel.BackColor = System.Drawing.Color.DimGray;
-            this.rjbtnCancel.BackgroundColor = System.Drawing.Color.DimGray;
-            this.rjbtnCancel.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjbtnCancel.BorderRadius = 15;
-            this.rjbtnCancel.BorderSize = 0;
-            this.rjbtnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rjbtnCancel.FlatAppearance.BorderSize = 0;
-            this.rjbtnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjbtnCancel.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjbtnCancel.ForeColor = System.Drawing.Color.White;
-            this.rjbtnCancel.Location = new System.Drawing.Point(442, 624);
-            this.rjbtnCancel.Margin = new System.Windows.Forms.Padding(2);
-            this.rjbtnCancel.Name = "rjbtnCancel";
-            this.rjbtnCancel.Size = new System.Drawing.Size(145, 36);
-            this.rjbtnCancel.TabIndex = 12;
-            this.rjbtnCancel.Text = "Hủy";
-            this.rjbtnCancel.TextColor = System.Drawing.Color.White;
-            this.rjbtnCancel.UseVisualStyleBackColor = false;
-            this.rjbtnCancel.Click += new System.EventHandler(this.RjbtnCancel_Click);
-            // 
-            // rjbtnOK
-            // 
-            this.rjbtnOK.BackColor = System.Drawing.Color.SeaGreen;
-            this.rjbtnOK.BackgroundColor = System.Drawing.Color.SeaGreen;
-            this.rjbtnOK.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjbtnOK.BorderRadius = 15;
-            this.rjbtnOK.BorderSize = 0;
-            this.rjbtnOK.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rjbtnOK.FlatAppearance.BorderSize = 0;
-            this.rjbtnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjbtnOK.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjbtnOK.ForeColor = System.Drawing.Color.White;
-            this.rjbtnOK.Location = new System.Drawing.Point(240, 624);
-            this.rjbtnOK.Margin = new System.Windows.Forms.Padding(2);
-            this.rjbtnOK.Name = "rjbtnOK";
-            this.rjbtnOK.Size = new System.Drawing.Size(145, 36);
-            this.rjbtnOK.TabIndex = 11;
-            this.rjbtnOK.Text = "OK";
-            this.rjbtnOK.TextColor = System.Drawing.Color.White;
-            this.rjbtnOK.UseVisualStyleBackColor = false;
-            this.rjbtnOK.Click += new System.EventHandler(this.RjbtnOK_Click);
             // 
             // FormAddNV
             // 

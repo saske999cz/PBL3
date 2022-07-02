@@ -19,7 +19,7 @@ namespace DoAnPBL3.Models
         }
 
         public Book(string id_book, string nameBook, DateTime publishDate, string nameAuthor, 
-            int quantity, int price, string unit, int ID_Language, int ID_Publisher, int ID_Genre, string bookImage, bool saleStatus)
+            int quantity, int price, int ID_Language, int ID_Publisher, int ID_Genre, string bookImage, bool saleStatus)
         {
             ID_Book = id_book;
             NameBook = nameBook;
@@ -27,7 +27,6 @@ namespace DoAnPBL3.Models
             NameAuthor = nameAuthor;
             Quantity = quantity;
             Price = price;
-            Unit = unit;
             this.ID_Language = ID_Language;
             this.ID_Publisher = ID_Publisher;
             this.ID_Genre = ID_Genre;
@@ -61,11 +60,6 @@ namespace DoAnPBL3.Models
         [Column("GiaTien")]
         [Required(ErrorMessage = "Giá tiền của sách không được để trống")]
         public int Price { get; set; }
-
-        [Column("DonVi")]
-        [StringLength(50)]
-        [Required(ErrorMessage = "Đơn vị của sách không được để trống")]
-        public string Unit { get; set; }
 
         [Column("ID_NgonNgu")]
         [Required(ErrorMessage = "ID ngôn ngữ của sách không được để trống")]

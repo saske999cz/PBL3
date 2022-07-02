@@ -222,6 +222,7 @@ namespace DoAnPBL3
             this.Name = "FormNoteInfo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormNoteInfo";
+            this.Load += new System.EventHandler(this.FormNoteInfo_Load);
             this.panelTitleBar.ResumeLayout(false);
             this.panelTitleBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

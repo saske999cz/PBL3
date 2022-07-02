@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DoAnPBL3.BLL;
+using DoAnPBL3.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,17 @@ namespace DoAnPBL3
 {
     public partial class FormNote : Form
     {
-        public FormNote(string theme)
+        private readonly string accountUsername;
+        private readonly bool role;
+        private readonly int id;
+        public delegate void LoadData(object sender, EventArgs e);
+        public LoadData RefreshData { get; set; }
+        public FormNote(string theme, string accountUsername, bool role, int id = 0)
         {
             InitializeComponent();
+            this.accountUsername = accountUsername;
+            this.role = role;
+            this.id = id;
             Text = "Ghi chú";
             switch (theme)
             {
@@ -52,16 +62,12 @@ namespace DoAnPBL3
                     tbContent.PlaceholderForeColor = Color.Black;
                     break;
             }
-        }
-
-        public string GetTitle()
-        {
-            return tbTitle.Text;
-        }
-
-        public string GetContent()
-        {
-            return tbContent.Text;
+            if (id != 0)
+            {
+                Note note = BLL_QLGC.Instance.GetNoteByID(id);
+                tbTitle.Text = note.Title;
+                tbContent.Text = note.Content;
+            }
         }
 
         public void Alert(string msg, Form_Alert.EnmType type)
@@ -72,23 +78,77 @@ namespace DoAnPBL3
 
         private void RjbtnOK_Click(object sender, EventArgs e)
         {
-            rjbtnOK.Parent.Parent.Text = "Changed";
-            Hide();
-            Alert("Đã thêm ghi chú mới", Form_Alert.EnmType.Success);
+            if (id == 0)
+            {
+                if (BLL_QLGC.Instance.AddNewNote(GetAllInfo()))
+                {
+                    Alert("Thêm ghi chú mới thành công", Form_Alert.EnmType.Success);
+                    RefreshData(sender, e);
+                    Dispose();
+                }
+                else
+                {
+                    Alert("Thêm ghi chú thất bại. Vui lòng thử lại", Form_Alert.EnmType.Error);
+                    return;
+                }
+            }
+            else
+            {
+                Note note = new Note(id, tbTitle.Text, tbContent.Text, DateTime.Now, accountUsername);
+                if (BLL_QLGC.Instance.UpdateNote(note))
+                {
+                    Alert("Cập nhật ghi chú thành công", Form_Alert.EnmType.Success);
+                    RefreshData(sender, e);
+                    Dispose();
+                }
+                else
+                {
+                    Alert("Cập nhật ghi chú thất bại vì dữ liệu chưa được cập nhật", Form_Alert.EnmType.Error);
+                    return;
+                }
+            }
         }
 
         private void RjbtnCancel_Click(object sender, EventArgs e)
         {
-            if (tbTitle.Text != "" || tbContent.Text != "")
+            if (id == 0)
             {
-                DialogResult result = RJMessageBox.Show("Ghi chú chưa được lưu. Xác nhận thoát?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
-                if (result == DialogResult.Yes)
-                    Hide();
+                if (tbTitle.Text != "" || tbContent.Text != "")
+                {
+                    DialogResult result = RJMessageBox.Show("Ghi chú chưa được lưu. Xác nhận thoát?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                    if (result == DialogResult.Yes)
+                        Hide();
+                    else
+                        return;
+                }
                 else
-                    return;
+                    Dispose();
             }
             else
-                Hide();
+            {
+                Note note = BLL_QLGC.Instance.GetNoteByID(id);
+                if (tbTitle.Text != note.Title || tbContent.Text != note.Content)
+                {
+                    DialogResult result = RJMessageBox.Show("Thay đổi ghi chú chưa được lưu. Xác nhận thoát?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                    if (result == DialogResult.Yes)
+                        Hide();
+                    else
+                        return;
+                }
+                else
+                    Dispose();
+            }
+        }
+
+        private Note GetAllInfo()
+        {
+            return new Note
+            {
+                Title = tbTitle.Text,
+                Content = tbContent.Text,
+                Date = DateTime.Now,
+                AccountUsername = accountUsername
+            };
         }
     }
 }

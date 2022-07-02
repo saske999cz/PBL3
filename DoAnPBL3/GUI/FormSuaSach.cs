@@ -55,7 +55,6 @@ namespace DoAnPBL3
             cbbGenre.SelectedItem = BLL_QLBS.Instance.GetNameGenreByID(book.ID_Genre);
             tbPrice.Text = book.Price.ToString();
             tbQuantity.Text = book.Quantity.ToString();
-            cbbUnit.SelectedItem = book.Unit;
             if (book.Image == null)
                 gpbBookImg.Image = null;
             else
@@ -69,8 +68,8 @@ namespace DoAnPBL3
         private void RjbtnOK_Click(object sender, EventArgs e)
         {
             bool isValidNameBook, isValidPublishDate, isValidLanguage, isValidAuthor, isValidPublisher,
-                isValidGenre, isValidPrice, isValidQuantity, isValidUnit;
-            string nameBook, publishDate, nameAuthor, price, quantity, unit;
+                isValidGenre, isValidPrice, isValidQuantity;
+            string nameBook, publishDate, nameAuthor, price, quantity;
             // Validate name of book
             nameBook = tbNameBook.Text;
             isValidNameBook = BLL_QLBS.Instance.ValidateName(nameBook);
@@ -203,22 +202,9 @@ namespace DoAnPBL3
                     msgValidateQuantity.Text = "";
                 }
             }
-            // Validate unit
-            isValidUnit = BLL_QLBS.Instance.ValidateUnit(cbbUnit.SelectedItem);
-            if (!isValidUnit)
-            {
-                msgValidateUnit.ForeColor = Color.Red;
-                msgValidateUnit.Text = "Đơn vị không được để trống";
-            }
-            else
-            {
-                unit = cbbUnit.SelectedItem.ToString();
-                msgValidateUnit.ForeColor = Color.White;
-                msgValidateUnit.Text = "";
-            }
 
             if (isValidNameBook && isValidPublishDate && isValidLanguage && isValidAuthor
-                && isValidPublisher && isValidGenre && isValidPrice && isValidQuantity && isValidUnit)
+                && isValidPublisher && isValidGenre && isValidPrice && isValidQuantity)
             {
                 DialogResult result = RJMessageBox.Show("Xác nhận lưu mới dữ liệu?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
@@ -263,7 +249,6 @@ namespace DoAnPBL3
                 ID_Genre = cbbGenre.SelectedIndex + 1,
                 Price = Convert.ToInt32(tbPrice.Text),
                 Quantity = Convert.ToInt32(tbQuantity.Text),
-                Unit = cbbUnit.SelectedItem.ToString(),
                 Image = path,
                 SaleStatus = true
             };
@@ -272,7 +257,7 @@ namespace DoAnPBL3
         private void RjbtnCancel_Click(object sender, EventArgs e)
         {
             bool isNewNameBook, isNewPublishDate, isNewNameAuthor, isNewLanguage, isNewPublisher,
-                    isNewGenre, isNewQuantity, isNewPrice, isNewUnit, isNewImage = false;
+                    isNewGenre, isNewQuantity, isNewPrice, isNewImage = false;
             Book book = BLL_QLBS.Instance.GetBookByID(ID_Book);
 
             isNewNameBook = tbNameBook.Text != book.NameBook;
@@ -283,7 +268,6 @@ namespace DoAnPBL3
             isNewGenre = cbbGenre.SelectedIndex + 1 != book.ID_Genre;
             isNewQuantity = Convert.ToInt32(tbQuantity.Text) != book.Quantity;
             isNewPrice = Convert.ToInt32(tbPrice.Text) != book.Price;
-            isNewUnit = cbbUnit.SelectedItem.ToString() != book.Unit;
             if (book.Image == null)
             {
                 if (book.Image != null)
@@ -295,7 +279,7 @@ namespace DoAnPBL3
                     isNewImage = true;
             }
             if (isNewNameBook || isNewPublishDate || isNewNameAuthor || isNewLanguage || isNewPublisher
-                || isNewGenre || isNewQuantity || isNewPrice || isNewUnit || isNewImage)
+                || isNewGenre || isNewQuantity || isNewPrice || isNewImage)
             {
                 DialogResult result = RJMessageBox.Show("Thông tin cũ đã thay đổi nhưng chưa được lưu. Bạn vẫn muốn thoát?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
                 if (result == DialogResult.Yes)

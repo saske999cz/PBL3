@@ -154,18 +154,6 @@ namespace DoAnPBL3
             CreateCol(data);
             if (rjtbTKHD.Texts.Trim() == "")
                 RJMessageBox.Show("Vui lòng điền thông tin hóa đơn cần tìm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            else if (rjtbTKHD.Texts.Contains("HD0"))
-            {
-                Order order = BLL_QLHD.Instance.GetOrderByID(rjtbTKHD.Texts);
-                if (order == null)
-                    RJMessageBox.Show("Không tìm thấy", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                else
-                {
-                    DataRow dataRow = data.NewRow();
-                    data.Rows.Add(CreateRow(dataRow, order));
-                    dgvQLHD.DataSource = data;
-                }
-            }
             else
             {
                 List<Order> listOrders = BLL_QLHD.Instance.GetOrdersByEmployee(rjtbTKHD.Texts, ID_Customer);

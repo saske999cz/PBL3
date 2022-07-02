@@ -318,12 +318,6 @@
     <Compile Include="GUI\FormMenuNote.Designer.cs">
       <DependentUpon>FormMenuNote.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\FormMinNote.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\FormMinNote.Designer.cs">
-      <DependentUpon>FormMinNote.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\FormNote.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -525,9 +519,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormMenuNote.resx">
       <DependentUpon>FormMenuNote.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\FormMinNote.resx">
-      <DependentUpon>FormMinNote.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormNote.resx">
       <DependentUpon>FormNote.cs</DependentUpon>

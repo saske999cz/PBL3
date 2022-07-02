@@ -34,9 +34,7 @@ namespace DoAnPBL3
             this.panelContainer = new System.Windows.Forms.Panel();
             this.tbAuthor = new Guna.UI2.WinForms.Guna2TextBox();
             this.tbQuantity = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.cbbUnit = new DoAnPBL3.RJComboBox();
             this.msgValidateUnit = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.cbbPublisher = new DoAnPBL3.RJComboBox();
             this.msgValidateQuantity = new System.Windows.Forms.Label();
             this.lblQuantity = new System.Windows.Forms.Label();
@@ -84,9 +82,7 @@ namespace DoAnPBL3
             this.panelContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(53)))), ((int)(((byte)(70)))));
             this.panelContainer.Controls.Add(this.tbAuthor);
             this.panelContainer.Controls.Add(this.tbQuantity);
-            this.panelContainer.Controls.Add(this.cbbUnit);
             this.panelContainer.Controls.Add(this.msgValidateUnit);
-            this.panelContainer.Controls.Add(this.label1);
             this.panelContainer.Controls.Add(this.cbbPublisher);
             this.panelContainer.Controls.Add(this.msgValidateQuantity);
             this.panelContainer.Controls.Add(this.lblQuantity);
@@ -159,28 +155,6 @@ namespace DoAnPBL3
             this.tbQuantity.TabIndex = 8;
             this.tbQuantity.UpDownButtonFillColor = System.Drawing.Color.RoyalBlue;
             // 
-            // cbbUnit
-            // 
-            this.cbbUnit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
-            this.cbbUnit.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.cbbUnit.BorderSize = 2;
-            this.cbbUnit.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbUnit.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbUnit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.cbbUnit.IconColor = System.Drawing.Color.RoyalBlue;
-            this.cbbUnit.Items.AddRange(new object[] {
-            "Quyển",
-            "Bộ"});
-            this.cbbUnit.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
-            this.cbbUnit.ListTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.cbbUnit.Location = new System.Drawing.Point(599, 560);
-            this.cbbUnit.MinimumSize = new System.Drawing.Size(188, 29);
-            this.cbbUnit.Name = "cbbUnit";
-            this.cbbUnit.Padding = new System.Windows.Forms.Padding(2);
-            this.cbbUnit.Size = new System.Drawing.Size(188, 30);
-            this.cbbUnit.TabIndex = 9;
-            this.cbbUnit.Texts = "Chọn đơn vị";
-            // 
             // msgValidateUnit
             // 
             this.msgValidateUnit.AutoSize = true;
@@ -189,18 +163,6 @@ namespace DoAnPBL3
             this.msgValidateUnit.Name = "msgValidateUnit";
             this.msgValidateUnit.Size = new System.Drawing.Size(0, 16);
             this.msgValidateUnit.TabIndex = 89;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Location = new System.Drawing.Point(532, 566);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 18);
-            this.label1.TabIndex = 88;
-            this.label1.Text = "Đơn vị";
             // 
             // cbbPublisher
             // 
@@ -703,9 +665,7 @@ namespace DoAnPBL3
         private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
         private Guna.UI2.WinForms.Guna2TextBox tbAuthor;
         private Guna.UI2.WinForms.Guna2NumericUpDown tbQuantity;
-        private RJComboBox cbbUnit;
         private System.Windows.Forms.Label msgValidateUnit;
-        private System.Windows.Forms.Label label1;
         private RJComboBox cbbPublisher;
         private System.Windows.Forms.Label msgValidateQuantity;
         private System.Windows.Forms.Label lblQuantity;

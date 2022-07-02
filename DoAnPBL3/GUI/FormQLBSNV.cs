@@ -125,7 +125,7 @@ namespace DoAnPBL3
                     List<Book> listBooksByAuthor = BLL_QLBS.Instance.GetBooksByNameAuthor(rjtbTKS.Texts);
                     if (listBooksByAuthor != null)
                     {
-                        foreach (Book book in listBooksByName)
+                        foreach (Book book in listBooksByAuthor)
                         {
                             DataRow dataRow = data.NewRow();
                             data.Rows.Add(CreateRow(dataRow, book));

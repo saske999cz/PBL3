@@ -36,9 +36,7 @@ namespace DoAnPBL3
             this.cbbLanguage = new DoAnPBL3.RJComboBox();
             this.tbAuthor = new Guna.UI2.WinForms.Guna2TextBox();
             this.tbQuantity = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.cbbUnit = new DoAnPBL3.RJComboBox();
             this.msgValidateUnit = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.msgValidateIDBook = new System.Windows.Forms.Label();
             this.tbIDBook = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblIDBook = new System.Windows.Forms.Label();
@@ -89,9 +87,7 @@ namespace DoAnPBL3
             this.panelContainer.Controls.Add(this.cbbLanguage);
             this.panelContainer.Controls.Add(this.tbAuthor);
             this.panelContainer.Controls.Add(this.tbQuantity);
-            this.panelContainer.Controls.Add(this.cbbUnit);
             this.panelContainer.Controls.Add(this.msgValidateUnit);
-            this.panelContainer.Controls.Add(this.label3);
             this.panelContainer.Controls.Add(this.msgValidateIDBook);
             this.panelContainer.Controls.Add(this.tbIDBook);
             this.panelContainer.Controls.Add(this.lblIDBook);
@@ -204,28 +200,6 @@ namespace DoAnPBL3
             this.tbQuantity.TabIndex = 62;
             this.tbQuantity.UpDownButtonFillColor = System.Drawing.Color.RoyalBlue;
             // 
-            // cbbUnit
-            // 
-            this.cbbUnit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
-            this.cbbUnit.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.cbbUnit.BorderSize = 2;
-            this.cbbUnit.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbUnit.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbUnit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.cbbUnit.IconColor = System.Drawing.Color.RoyalBlue;
-            this.cbbUnit.Items.AddRange(new object[] {
-            "Quyển",
-            "Bộ"});
-            this.cbbUnit.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
-            this.cbbUnit.ListTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.cbbUnit.Location = new System.Drawing.Point(598, 627);
-            this.cbbUnit.MinimumSize = new System.Drawing.Size(188, 29);
-            this.cbbUnit.Name = "cbbUnit";
-            this.cbbUnit.Padding = new System.Windows.Forms.Padding(2);
-            this.cbbUnit.Size = new System.Drawing.Size(188, 30);
-            this.cbbUnit.TabIndex = 10;
-            this.cbbUnit.Texts = "Chọn đơn vị";
-            // 
             // msgValidateUnit
             // 
             this.msgValidateUnit.AutoSize = true;
@@ -234,18 +208,6 @@ namespace DoAnPBL3
             this.msgValidateUnit.Name = "msgValidateUnit";
             this.msgValidateUnit.Size = new System.Drawing.Size(0, 16);
             this.msgValidateUnit.TabIndex = 60;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label3.Location = new System.Drawing.Point(531, 633);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 18);
-            this.label3.TabIndex = 59;
-            this.label3.Text = "Đơn vị";
             // 
             // msgValidateIDBook
             // 
@@ -784,8 +746,6 @@ namespace DoAnPBL3
         private Guna.UI2.WinForms.Guna2TextBox tbIDBook;
         private System.Windows.Forms.Label lblIDBook;
         private System.Windows.Forms.Label msgValidateUnit;
-        private System.Windows.Forms.Label label3;
-        private RJComboBox cbbUnit;
         private Guna.UI2.WinForms.Guna2NumericUpDown tbQuantity;
         private Guna.UI2.WinForms.Guna2TextBox tbAuthor;
         private RJComboBox cbbPublisher;

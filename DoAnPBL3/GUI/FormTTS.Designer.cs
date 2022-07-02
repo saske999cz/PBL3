@@ -34,8 +34,6 @@ namespace DoAnPBL3
             this.panelContainer = new System.Windows.Forms.Panel();
             this.tbNameBook = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblNameBook = new System.Windows.Forms.Label();
-            this.tbUnit = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lblUnit = new System.Windows.Forms.Label();
             this.tbQuantity = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblQuantity = new System.Windows.Forms.Label();
             this.tbLanguage = new Guna.UI2.WinForms.Guna2TextBox();
@@ -73,8 +71,6 @@ namespace DoAnPBL3
             this.panelContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(53)))), ((int)(((byte)(70)))));
             this.panelContainer.Controls.Add(this.tbNameBook);
             this.panelContainer.Controls.Add(this.lblNameBook);
-            this.panelContainer.Controls.Add(this.tbUnit);
-            this.panelContainer.Controls.Add(this.lblUnit);
             this.panelContainer.Controls.Add(this.tbQuantity);
             this.panelContainer.Controls.Add(this.lblQuantity);
             this.panelContainer.Controls.Add(this.tbLanguage);
@@ -136,42 +132,6 @@ namespace DoAnPBL3
             this.lblNameBook.Size = new System.Drawing.Size(73, 18);
             this.lblNameBook.TabIndex = 51;
             this.lblNameBook.Text = "Tên sách";
-            // 
-            // tbUnit
-            // 
-            this.tbUnit.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
-            this.tbUnit.BorderRadius = 6;
-            this.tbUnit.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbUnit.DefaultText = "";
-            this.tbUnit.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.tbUnit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
-            this.tbUnit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.tbUnit.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.tbUnit.Enabled = false;
-            this.tbUnit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
-            this.tbUnit.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbUnit.Font = new System.Drawing.Font("Arial", 11.25F);
-            this.tbUnit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.tbUnit.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbUnit.Location = new System.Drawing.Point(659, 597);
-            this.tbUnit.Name = "tbUnit";
-            this.tbUnit.PasswordChar = '\0';
-            this.tbUnit.PlaceholderText = "Số lượng";
-            this.tbUnit.SelectedText = "";
-            this.tbUnit.Size = new System.Drawing.Size(129, 30);
-            this.tbUnit.TabIndex = 50;
-            // 
-            // lblUnit
-            // 
-            this.lblUnit.AutoSize = true;
-            this.lblUnit.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUnit.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblUnit.Location = new System.Drawing.Point(578, 603);
-            this.lblUnit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblUnit.Name = "lblUnit";
-            this.lblUnit.Size = new System.Drawing.Size(56, 18);
-            this.lblUnit.TabIndex = 49;
-            this.lblUnit.Text = "Đơn vị";
             // 
             // tbQuantity
             // 
@@ -609,8 +569,6 @@ namespace DoAnPBL3
         private Guna.UI2.WinForms.Guna2TextBox tbLanguage;
         private Guna.UI2.WinForms.Guna2TextBox tbQuantity;
         private System.Windows.Forms.Label lblQuantity;
-        private Guna.UI2.WinForms.Guna2TextBox tbUnit;
-        private System.Windows.Forms.Label lblUnit;
         private Guna.UI2.WinForms.Guna2TextBox tbNameBook;
         private System.Windows.Forms.Label lblNameBook;
     }
