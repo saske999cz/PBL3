@@ -607,6 +607,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="books11.ico" />
+    <Content Include="Order.txt" />
     <None Include="Img\Icon\export file.png" />
     <None Include="Img\Icon\export icon.png" />
     <None Include="Img\Icon\male employee.png" />

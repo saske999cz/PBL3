@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -204,6 +205,25 @@ namespace DoAnPBL3
                                             return;
                                     }
                                 }
+                                string projectDirectory = Directory.GetParent(Environment.CurrentDirectory).Parent.FullName;
+                                string[] orderInfo = BLL_QLHD.Instance.ShowOrderInfo(newID_Order.ToString());
+                                string[][] orderDetailInfo = BLL_QLHD.Instance.ShowOrderTable(newID_Order.ToString());
+                                File.WriteAllText(Path.Combine(projectDirectory, "Order.txt"), "");
+                                File.AppendAllText(Path.Combine(projectDirectory, "Order.txt"), "\t\t\tTHANH TOÁN HÓA ĐƠN\n");
+                                File.AppendAllText(Path.Combine(projectDirectory, "Order.txt"), "\t\t==================================\n");
+                                File.AppendAllText(Path.Combine(projectDirectory, "Order.txt"), "\t Mã hóa đơn: " + orderInfo[0] + "\n");
+                                File.AppendAllText(Path.Combine(projectDirectory, "Order.txt"), "\t Tên thu ngân: " + BLL_QLNV.Instance.GetEmployeeByID(orderInfo[4]).FullNameEmployee + "\n");
+                                File.AppendAllText(Path.Combine(projectDirectory, "Order.txt"), "\t Ngày mua: " + orderInfo[1] + "\n");
+                                File.AppendAllText(Path.Combine(projectDirectory, "Order.txt"), "\t Tên khách hàng: " + BLL_QLKH.Instance.GetCustomerByID(orderInfo[3]).FullNameCustomer + "\n");
+                                File.AppendAllText(Path.Combine(projectDirectory, "Order.txt"), "\t\t==================================\n");
+                                for (int i = 0; i < orderDetailInfo.Length; i++)
+                                {
+                                    File.AppendAllText(Path.Combine(projectDirectory, "Order.txt"), "\t Tên sách: " + orderDetailInfo[i][3] + "\tSố lượng: "
+                                                    + orderDetailInfo[i][5] + "\tGiá tiền: " + orderDetailInfo[i][4] + "VNĐ\tThành tiền: " + orderDetailInfo[i][6] + "VNĐ\n");
+                                }
+                                File.AppendAllText(Path.Combine(projectDirectory, "Order.txt"), "\t\t==================================\n");
+                                File.AppendAllText(Path.Combine(projectDirectory, "Order.txt"), "\t Tổng tiền: " + orderInfo[2] + "VNĐ\n");
+
                                 Alert("Mua sách thành công", Form_Alert.EnmType.Success);
                                 RefreshData(sender, e);
                                 panelDesktop.Controls.Clear();

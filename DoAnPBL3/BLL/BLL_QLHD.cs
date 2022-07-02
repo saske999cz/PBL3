@@ -112,5 +112,15 @@ namespace DoAnPBL3.BLL
             else
                 return false;
         }
+
+        public string[] ShowOrderInfo(string ID_Order)
+        {
+            return DAL_QLHD.Instance.ShowOrderInfo(ID_Order);
+        }
+
+        public string[][] ShowOrderTable(string ID_Order)
+        {
+            return DAL_QLHD.Instance.ShowOrderTable(ID_Order);
+        }
     }
 }
