@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DoAnPBL3.BLL;
+using DoAnPBL3.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,8 +15,12 @@ namespace DoAnPBL3
     public partial class FormMinNote : Form
     {
         private string content;
-        public FormMinNote(string theme)
+        private string theme;
+        private string id;
+        public FormMinNote(string theme, string id)
         {
+            this.theme = theme;
+            this.id = id;
             InitializeComponent();
             switch (theme)
             {
@@ -32,8 +38,15 @@ namespace DoAnPBL3
                     lblNoteDate.Parent.BackColor = Color.FromArgb(220, 220, 220);
                     lblNoteDate.ForeColor = Color.Black;
                     lblNoteTitle.ForeColor = Color.Black;
+                    btnSaveNote.ForeColor = Color.Black;
                     break;
             }
+        }
+
+        public void Alert(string msg, Form_Alert.EnmType type)
+        {
+            Form_Alert frm = new Form_Alert();
+            frm.ShowAlert(msg, type);
         }
 
         private void BtnDelete_Click(object sender, EventArgs e)
@@ -62,12 +75,19 @@ namespace DoAnPBL3
 
         private void PanelNote_Click(object sender, EventArgs e)
         {
-            new FormNoteInfo(lblNoteTitle.Text, content).Show();
+            new FormNoteInfo(theme, lblNoteTitle.Text, content).Show();
         }
 
-        private void BtnExport_Click(object sender, EventArgs e)
+        private void BtnSaveNote_Click(object sender, EventArgs e)
         {
-
+            Note note = new Note(lblNoteTitle.Text, content, id);
+            if (BLL_QLGC.Instance.AddNewNote(note))
+            {
+                Alert("Thêm ghi chú mới thành công", Form_Alert.EnmType.Success);
+                Dispose();
+            }
+            else
+                Alert("Thêm ghi chú thất bại", Form_Alert.EnmType.Error);
         }
     }
 }

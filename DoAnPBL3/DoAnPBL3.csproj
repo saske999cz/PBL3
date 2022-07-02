@@ -208,11 +208,15 @@
     <Compile Include="BLL\BLL_Login.cs" />
     <Compile Include="BLL\BLL_QLBS.cs" />
     <Compile Include="BLL\BLL_QLDT.cs" />
+    <Compile Include="BLL\BLL_QLGC.cs" />
     <Compile Include="BLL\BLL_QLHD.cs" />
     <Compile Include="BLL\BLL_QLKH.cs" />
     <Compile Include="BLL\BLL_QLNV.cs" />
+    <Compile Include="BLL\BLL_QLQT.cs" />
     <Compile Include="BLL\BLL_QLTK.cs" />
     <Compile Include="BookStoreContext.cs" />
+    <Compile Include="DAL\DAL_QLGC.cs" />
+    <Compile Include="DAL\DAL_QLQT.cs" />
     <Compile Include="DAL\DAL_Login.cs" />
     <Compile Include="DAL\DAL_QLBS.cs" />
     <Compile Include="DAL\DAL_QLDT.cs" />
@@ -450,6 +454,7 @@
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\Language.cs" />
+    <Compile Include="Models\Note.cs" />
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\OrderDetail.cs" />
     <Compile Include="Models\Publisher.cs" />

@@ -22,8 +22,8 @@ namespace DoAnPBL3
         private string theme = "Admin";
         private readonly string accountUsername;
         private readonly string password;
-
-        public MainMenuQTV(string accountUsername, string password, string nameAdmin)
+        private readonly bool role;
+        public MainMenuQTV(string accountUsername, string password, bool role, string nameAdmin)
         {
             InitializeComponent();
             btnLeftBorder = new Panel
@@ -35,6 +35,7 @@ namespace DoAnPBL3
             lblAdminUsername.Text = accountUsername;
             this.accountUsername = accountUsername;
             this.password = password;
+            this.role = role;
             //Form
             Text = string.Empty;
             ControlBox = false;
@@ -319,7 +320,7 @@ namespace DoAnPBL3
                 DisableButton();
                 iconCurrentChildForm.IconChar = IconChar.Pen;
                 btnLeftBorder.Visible = false;
-                OpenChildForm(new FormMenuNote(theme));
+                OpenChildForm(new FormMenuNote(theme, accountUsername, role));
             }
         }
 

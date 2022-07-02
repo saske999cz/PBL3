@@ -93,7 +93,7 @@ namespace DoAnPBL3
                     Properties.Settings.Default.Reset();
                 }
                 Hide();
-                new MainMenuQTV(account.Username, password, nameStaff).Show();
+                new MainMenuQTV(account.Username, password, true, nameStaff).Show();
                 Dispose();
             }
             // Nhân viên
@@ -111,7 +111,7 @@ namespace DoAnPBL3
                     Properties.Settings.Default.Reset();
                 }
                 Hide();
-                new MainMenuNV(account.Username, password, nameStaff).Show();
+                new MainMenuNV(account.Username, password, false, nameStaff).Show();
                 Dispose();
             }
         }

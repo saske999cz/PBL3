@@ -31,11 +31,11 @@ namespace DoAnPBL3
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMinNote));
             this.panelNote = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnExport = new DoAnPBL3.RJButton();
             this.btnDelete = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.lblNoteDate = new System.Windows.Forms.Label();
             this.lblNoteTitle = new System.Windows.Forms.Label();
+            this.btnSaveNote = new FontAwesome.Sharp.IconButton();
             this.panelNote.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,7 +44,7 @@ namespace DoAnPBL3
             this.panelNote.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(20)))), ((int)(((byte)(137)))));
             this.panelNote.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
             this.panelNote.BorderThickness = 1;
-            this.panelNote.Controls.Add(this.btnExport);
+            this.panelNote.Controls.Add(this.btnSaveNote);
             this.panelNote.Controls.Add(this.btnDelete);
             this.panelNote.Controls.Add(this.guna2CircleButton1);
             this.panelNote.Controls.Add(this.lblNoteDate);
@@ -56,31 +56,6 @@ namespace DoAnPBL3
             this.panelNote.Size = new System.Drawing.Size(978, 57);
             this.panelNote.TabIndex = 3;
             this.panelNote.Click += new System.EventHandler(this.PanelNote_Click);
-            // 
-            // btnExport
-            // 
-            this.btnExport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExport.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnExport.BackgroundColor = System.Drawing.Color.DodgerBlue;
-            this.btnExport.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnExport.BorderRadius = 20;
-            this.btnExport.BorderSize = 0;
-            this.btnExport.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExport.FlatAppearance.BorderSize = 0;
-            this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExport.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExport.ForeColor = System.Drawing.Color.White;
-            this.btnExport.Image = global::DoAnPBL3.Properties.Resources.export_file;
-            this.btnExport.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnExport.Location = new System.Drawing.Point(748, 7);
-            this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(110, 40);
-            this.btnExport.TabIndex = 30;
-            this.btnExport.Text = "Xuất file";
-            this.btnExport.TextColor = System.Drawing.Color.White;
-            this.btnExport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnExport.UseVisualStyleBackColor = false;
-            this.btnExport.Click += new System.EventHandler(this.BtnExport_Click);
             // 
             // btnDelete
             // 
@@ -138,6 +113,31 @@ namespace DoAnPBL3
             this.lblNoteTitle.TabIndex = 0;
             this.lblNoteTitle.Text = "label1";
             // 
+            // btnSaveNote
+            // 
+            this.btnSaveNote.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSaveNote.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnSaveNote.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSaveNote.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
+            this.btnSaveNote.FlatAppearance.BorderSize = 0;
+            this.btnSaveNote.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaveNote.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveNote.ForeColor = System.Drawing.Color.White;
+            this.btnSaveNote.IconChar = FontAwesome.Sharp.IconChar.Database;
+            this.btnSaveNote.IconColor = System.Drawing.Color.White;
+            this.btnSaveNote.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSaveNote.IconSize = 30;
+            this.btnSaveNote.Location = new System.Drawing.Point(765, 6);
+            this.btnSaveNote.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSaveNote.Name = "btnSaveNote";
+            this.btnSaveNote.Size = new System.Drawing.Size(122, 44);
+            this.btnSaveNote.TabIndex = 30;
+            this.btnSaveNote.Text = "Lưu ghi chú";
+            this.btnSaveNote.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSaveNote.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSaveNote.UseVisualStyleBackColor = false;
+            this.btnSaveNote.Click += new System.EventHandler(this.BtnSaveNote_Click);
+            // 
             // FormMinNote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -162,6 +162,6 @@ namespace DoAnPBL3
         private System.Windows.Forms.Label lblNoteDate;
         private System.Windows.Forms.Label lblNoteTitle;
         private Guna.UI2.WinForms.Guna2CircleButton btnDelete;
-        private RJButton btnExport;
+        private FontAwesome.Sharp.IconButton btnSaveNote;
     }
 }

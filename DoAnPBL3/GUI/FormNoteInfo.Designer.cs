@@ -35,7 +35,7 @@ namespace DoAnPBL3
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panelContainer = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblContent = new System.Windows.Forms.Label();
             this.tbContent = new Guna.UI2.WinForms.Guna2TextBox();
             this.tbTitle = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblTitle = new System.Windows.Forms.Label();
@@ -87,7 +87,7 @@ namespace DoAnPBL3
             // panelContainer
             // 
             this.panelContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(37)))), ((int)(((byte)(65)))));
-            this.panelContainer.Controls.Add(this.label2);
+            this.panelContainer.Controls.Add(this.lblContent);
             this.panelContainer.Controls.Add(this.tbContent);
             this.panelContainer.Controls.Add(this.tbTitle);
             this.panelContainer.Controls.Add(this.lblTitle);
@@ -100,24 +100,24 @@ namespace DoAnPBL3
             this.panelContainer.Size = new System.Drawing.Size(812, 604);
             this.panelContainer.TabIndex = 5;
             // 
-            // label2
+            // lblContent
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(18, 84);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 18);
-            this.label2.TabIndex = 20;
-            this.label2.Text = "Nội dung";
+            this.lblContent.AutoSize = true;
+            this.lblContent.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContent.ForeColor = System.Drawing.Color.White;
+            this.lblContent.Location = new System.Drawing.Point(18, 84);
+            this.lblContent.Name = "lblContent";
+            this.lblContent.Size = new System.Drawing.Size(72, 18);
+            this.lblContent.TabIndex = 20;
+            this.lblContent.Text = "Nội dung";
             // 
             // tbContent
             // 
-            this.tbContent.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.tbContent.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.tbContent.BorderRadius = 10;
             this.tbContent.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbContent.DefaultText = "";
-            this.tbContent.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.tbContent.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.tbContent.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
             this.tbContent.DisabledState.ForeColor = System.Drawing.Color.White;
             this.tbContent.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -138,11 +138,11 @@ namespace DoAnPBL3
             // 
             // tbTitle
             // 
-            this.tbTitle.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.tbTitle.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.tbTitle.BorderRadius = 10;
             this.tbTitle.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbTitle.DefaultText = "";
-            this.tbTitle.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.tbTitle.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.tbTitle.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
             this.tbTitle.DisabledState.ForeColor = System.Drawing.Color.White;
             this.tbTitle.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -237,7 +237,7 @@ namespace DoAnPBL3
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panelContainer;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblContent;
         private Guna.UI2.WinForms.Guna2TextBox tbContent;
         private Guna.UI2.WinForms.Guna2TextBox tbTitle;
         private System.Windows.Forms.Label lblTitle;

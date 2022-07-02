@@ -24,6 +24,7 @@ namespace DoAnPBL3
         public virtual DbSet<Customer> Customers { get; set; }
         public virtual DbSet<Order> Orders { get; set; }
         public virtual DbSet<OrderDetail> OrderDetails { get; set; }
+        public virtual DbSet<Note> Notes { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -36,35 +37,6 @@ namespace DoAnPBL3
             modelBuilder.Entity<Customer>()
                 .HasIndex(customer => customer.Phone)
                 .IsUnique();
-            modelBuilder.Entity<Employee>()
-                .MapToStoredProcedures(s =>
-                    s.Insert(i => i.HasName("Employee_Insert", "dbo")
-                                   .Parameter(e => e.ID_Employee, "ID_NhanVien")
-                                   .Parameter(e => e.FullNameEmployee, "HoVaTen")
-                                   .Parameter(e => e.Email, "Email")
-                                   .Parameter(e => e.DateOfBirth, "NgaySinh")
-                                   .Parameter(e => e.StartDate, "NgayBatDau")
-                                   .Parameter(e => e.Gender, "GioiTinh")
-                                   .Parameter(e => e.Phone, "SDT")
-                                   .Parameter(e => e.Id_Card, "CMND")
-                                   .Parameter(e => e.Address, "DiaChi")
-                                   .Parameter(e => e.Avatar, "Anh")
-                                   .Parameter(e => e.AccountUsername, "TaiKhoanDangNhap"))
-                     .Update(u => u.HasName("Employee_Update", "dbo")
-                                   .Parameter(e => e.ID_Employee, "ID_NhanVien")
-                                   .Parameter(e => e.FullNameEmployee, "HoVaTen")
-                                   .Parameter(e => e.Email, "Email")
-                                   .Parameter(e => e.DateOfBirth, "NgaySinh")
-                                   .Parameter(e => e.StartDate, "NgayBatDau")
-                                   .Parameter(e => e.Gender, "GioiTinh")
-                                   .Parameter(e => e.Phone, "SDT")
-                                   .Parameter(e => e.Id_Card, "CMND")
-                                   .Parameter(e => e.Address, "DiaChi")
-                                   .Parameter(e => e.Avatar, "Anh")
-                                   .Parameter(e => e.AccountUsername, "TaiKhoanDangNhap"))
-                     .Delete(d => d.HasName("Employee_Delete", "dbo")
-                                   .Parameter(e => e.ID_Employee, "ID_NhanVien"))
-               );
             base.OnModelCreating(modelBuilder);
         }
     }

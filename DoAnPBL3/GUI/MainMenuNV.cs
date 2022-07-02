@@ -21,8 +21,9 @@ namespace DoAnPBL3
         private Form currentChildForm;
         private readonly string accountUsername;
         private readonly string password;
+        private readonly bool role;
 
-        public MainMenuNV(string accountUsername, string password, string nameEmployee)
+        public MainMenuNV(string accountUsername, string password, bool role, string nameEmployee)
         {
             InitializeComponent();
             btnLeftBorder = new Panel
@@ -34,6 +35,7 @@ namespace DoAnPBL3
             lblEmployeeUsername.Text = accountUsername;
             this.accountUsername = accountUsername;
             this.password = password;
+            this.role = role;
             //Form
             Text = string.Empty;
             ControlBox = false;
