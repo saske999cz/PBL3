@@ -75,6 +75,7 @@ namespace DoAnPBL3
             if (image == null)
                 pbAvatar.Image = null;
             else
+                pbAvatar.ImageLocation = Path.Combine(projectDirectory, image);
                 pbAvatar.Image = Image.FromFile(Path.Combine(projectDirectory, image));
         }
 
@@ -107,7 +108,7 @@ namespace DoAnPBL3
             if (pbAvatar.Image == null)
                 path = null;
             else
-                path = pbAvatar.ImageLocation.Remove(0, projectDirectory.Length + 1);
+                path = pbAvatar.ImageLocation.Remove(0, projectDirectory.Length + 3);
             string newPassword = tbPassword.Text;
             string confirmPassword = tbConfirmPassword.Text;
             bool isEqualToOldPassword, isConfirmPassMatchToNewPass, isNewAvatar;
@@ -122,7 +123,7 @@ namespace DoAnPBL3
                 {
                     msgValidateNewPassword.ForeColor = Color.Red;
                     msgValidateNewPassword.Text = "Mật khẩu mới không được trùng mật khẩu cũ";
-                    isEqualToOldPassword = true;
+                    return;
                 }
                 else
                 {
@@ -134,7 +135,7 @@ namespace DoAnPBL3
                 {
                     msgValidateConfirmPassword.ForeColor = Color.Red;
                     msgValidateConfirmPassword.Text = "Mật khẩu xác nhận không khớp";
-                    isConfirmPassMatchToNewPass = false;
+                    return;
                 }
                 else
                 {
@@ -142,7 +143,17 @@ namespace DoAnPBL3
                     msgValidateConfirmPassword.Text = "";
                     isConfirmPassMatchToNewPass = true;
                 }
-                isNewAvatar = pbAvatar.ImageLocation != BLL_QLTK.Instance.GetImage(accountUsername);
+                string image = BLL_QLTK.Instance.GetImage(accountUsername);
+                if (pbAvatar.ImageLocation == "" && image == null)
+                    isNewAvatar = false;
+                else if (pbAvatar.ImageLocation != "" && image == null)
+                    isNewAvatar = true;
+                else if (pbAvatar.ImageLocation == "" && image != null)
+                    isNewAvatar = true;
+                else if (pbAvatar.ImageLocation != image)
+                    isNewAvatar = true;
+                else
+                    isNewAvatar = false;
                 if ((!isEqualToOldPassword && isConfirmPassMatchToNewPass) || isNewAvatar)
                 {
                     DialogResult dialogResult = RJMessageBox.Show("Xác nhận lưu?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -151,19 +162,37 @@ namespace DoAnPBL3
                         Account account = new Account(accountUsername, newPassword, role, pbAvatar.Image == null ? null : path);
                         if (BLL_QLTK.Instance.SaveNewInfo(account))
                         {
-                            RJMessageBox.Show("Lưu mới dữ liệu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            RJMessageBox.Show("Thay đổi tài khoản thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             RefreshData(sender, e);
                             Close();
                         }
                         else
                         {
-                            RJMessageBox.Show("Lưu dữ liệu thất bại. Vui lòng thử lại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            RJMessageBox.Show("Thay đổi tài khoản thất bại. Vui lòng thử lại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             return;
                         }
                     }
                     else
                         return;
                 }
+            }
+        }
+
+        private void TbPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                btnSaveChange.PerformClick();
+                e.Handled = true;
+            }
+        }
+
+        private void TbConfirmPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                btnSaveChange.PerformClick();
+                e.Handled = true;
             }
         }
     }

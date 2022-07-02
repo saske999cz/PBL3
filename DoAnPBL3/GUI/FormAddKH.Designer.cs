@@ -43,7 +43,6 @@
             this.tbPhoneKH = new Guna.UI2.WinForms.Guna2TextBox();
             this.tbAddressKH = new Guna.UI2.WinForms.Guna2TextBox();
             this.tbNameKH = new Guna.UI2.WinForms.Guna2TextBox();
-            this.cbbGenderKH = new DoAnPBL3.RJComboBox();
             this.lblPhoneKH = new System.Windows.Forms.Label();
             this.lblAddressKH = new System.Windows.Forms.Label();
             this.lblGenderKH = new System.Windows.Forms.Label();
@@ -53,6 +52,7 @@
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.cbbGenderKH = new DoAnPBL3.RJComboBox();
             this.panelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelContainer.SuspendLayout();
@@ -97,6 +97,7 @@
             // panelContainer
             // 
             this.panelContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(53)))), ((int)(((byte)(70)))));
+            this.panelContainer.Controls.Add(this.cbbGenderKH);
             this.panelContainer.Controls.Add(this.msgValidateAddress);
             this.panelContainer.Controls.Add(this.msgValidatePhone);
             this.panelContainer.Controls.Add(this.msgValidateGender);
@@ -106,7 +107,6 @@
             this.panelContainer.Controls.Add(this.tbPhoneKH);
             this.panelContainer.Controls.Add(this.tbAddressKH);
             this.panelContainer.Controls.Add(this.tbNameKH);
-            this.panelContainer.Controls.Add(this.cbbGenderKH);
             this.panelContainer.Controls.Add(this.lblPhoneKH);
             this.panelContainer.Controls.Add(this.lblAddressKH);
             this.panelContainer.Controls.Add(this.lblGenderKH);
@@ -203,7 +203,7 @@
             // tbPhoneKH
             // 
             this.tbPhoneKH.Animated = true;
-            this.tbPhoneKH.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
+            this.tbPhoneKH.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.tbPhoneKH.BorderRadius = 6;
             this.tbPhoneKH.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbPhoneKH.DefaultText = "";
@@ -228,7 +228,7 @@
             // tbAddressKH
             // 
             this.tbAddressKH.Animated = true;
-            this.tbAddressKH.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
+            this.tbAddressKH.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.tbAddressKH.BorderRadius = 6;
             this.tbAddressKH.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbAddressKH.DefaultText = "";
@@ -253,7 +253,7 @@
             // tbNameKH
             // 
             this.tbNameKH.Animated = true;
-            this.tbNameKH.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
+            this.tbNameKH.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.tbNameKH.BorderRadius = 6;
             this.tbNameKH.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbNameKH.DefaultText = "";
@@ -274,29 +274,6 @@
             this.tbNameKH.Size = new System.Drawing.Size(487, 30);
             this.tbNameKH.TabIndex = 1;
             this.tbNameKH.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbNameKH_KeyPress);
-            // 
-            // cbbGenderKH
-            // 
-            this.cbbGenderKH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
-            this.cbbGenderKH.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
-            this.cbbGenderKH.BorderSize = 2;
-            this.cbbGenderKH.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbGenderKH.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbGenderKH.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.cbbGenderKH.IconColor = System.Drawing.Color.RoyalBlue;
-            this.cbbGenderKH.Items.AddRange(new object[] {
-            "Nam",
-            "Nữ",
-            "Giới tính thứ 3"});
-            this.cbbGenderKH.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
-            this.cbbGenderKH.ListTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.cbbGenderKH.Location = new System.Drawing.Point(197, 151);
-            this.cbbGenderKH.MinimumSize = new System.Drawing.Size(188, 29);
-            this.cbbGenderKH.Name = "cbbGenderKH";
-            this.cbbGenderKH.Padding = new System.Windows.Forms.Padding(2);
-            this.cbbGenderKH.Size = new System.Drawing.Size(487, 32);
-            this.cbbGenderKH.TabIndex = 2;
-            this.cbbGenderKH.Texts = "Giới tính";
             // 
             // lblPhoneKH
             // 
@@ -362,7 +339,6 @@
             // guna2Elipse1
             // 
             this.guna2Elipse1.BorderRadius = 10;
-            this.guna2Elipse1.TargetControl = this.cbbGenderKH;
             // 
             // guna2ShadowForm1
             // 
@@ -374,6 +350,28 @@
             // 
             this.guna2Elipse2.BorderRadius = 10;
             this.guna2Elipse2.TargetControl = this;
+            // 
+            // cbbGenderKH
+            // 
+            this.cbbGenderKH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
+            this.cbbGenderKH.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.cbbGenderKH.BorderSize = 2;
+            this.cbbGenderKH.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbGenderKH.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbGenderKH.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.cbbGenderKH.IconColor = System.Drawing.Color.RoyalBlue;
+            this.cbbGenderKH.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ"});
+            this.cbbGenderKH.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
+            this.cbbGenderKH.ListTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.cbbGenderKH.Location = new System.Drawing.Point(195, 149);
+            this.cbbGenderKH.MinimumSize = new System.Drawing.Size(188, 29);
+            this.cbbGenderKH.Name = "cbbGenderKH";
+            this.cbbGenderKH.Padding = new System.Windows.Forms.Padding(2);
+            this.cbbGenderKH.Size = new System.Drawing.Size(489, 32);
+            this.cbbGenderKH.TabIndex = 65;
+            this.cbbGenderKH.Texts = "Chọn giới tính";
             // 
             // FormAddKH
             // 
@@ -408,7 +406,6 @@
         private Guna.UI2.WinForms.Guna2TextBox tbPhoneKH;
         private Guna.UI2.WinForms.Guna2TextBox tbAddressKH;
         private Guna.UI2.WinForms.Guna2TextBox tbNameKH;
-        private RJComboBox cbbGenderKH;
         private System.Windows.Forms.Label lblPhoneKH;
         private System.Windows.Forms.Label lblAddressKH;
         private System.Windows.Forms.Label lblGenderKH;
@@ -422,5 +419,6 @@
         private System.Windows.Forms.Label msgValidateAddress;
         private System.Windows.Forms.Label msgValidatePhone;
         private System.Windows.Forms.Label msgValidateGender;
+        private RJComboBox cbbGenderKH;
     }
 }

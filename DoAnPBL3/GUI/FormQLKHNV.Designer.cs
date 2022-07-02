@@ -123,7 +123,7 @@ namespace DoAnPBL3
             this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::DoAnPBL3.Properties.Resources.women;
-            this.pictureBox3.Location = new System.Drawing.Point(888, 17);
+            this.pictureBox3.Location = new System.Drawing.Point(886, 17);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(38, 27);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -134,7 +134,7 @@ namespace DoAnPBL3
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox2.Image = global::DoAnPBL3.Properties.Resources.man_1;
-            this.pictureBox2.Location = new System.Drawing.Point(530, 17);
+            this.pictureBox2.Location = new System.Drawing.Point(529, 17);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(38, 27);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -147,7 +147,7 @@ namespace DoAnPBL3
             this.totalFemaleCustomers.AutoSize = true;
             this.totalFemaleCustomers.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalFemaleCustomers.ForeColor = System.Drawing.Color.White;
-            this.totalFemaleCustomers.Location = new System.Drawing.Point(816, 54);
+            this.totalFemaleCustomers.Location = new System.Drawing.Point(814, 54);
             this.totalFemaleCustomers.Name = "totalFemaleCustomers";
             this.totalFemaleCustomers.Size = new System.Drawing.Size(29, 16);
             this.totalFemaleCustomers.TabIndex = 60;
@@ -159,7 +159,7 @@ namespace DoAnPBL3
             this.lblTotalFemaleCustomers.AutoSize = true;
             this.lblTotalFemaleCustomers.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalFemaleCustomers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
-            this.lblTotalFemaleCustomers.Location = new System.Drawing.Point(767, 23);
+            this.lblTotalFemaleCustomers.Location = new System.Drawing.Point(765, 23);
             this.lblTotalFemaleCustomers.Name = "lblTotalFemaleCustomers";
             this.lblTotalFemaleCustomers.Size = new System.Drawing.Size(124, 16);
             this.lblTotalFemaleCustomers.TabIndex = 59;
@@ -171,7 +171,7 @@ namespace DoAnPBL3
             this.totalMaleCustomers.AutoSize = true;
             this.totalMaleCustomers.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalMaleCustomers.ForeColor = System.Drawing.Color.White;
-            this.totalMaleCustomers.Location = new System.Drawing.Point(448, 54);
+            this.totalMaleCustomers.Location = new System.Drawing.Point(447, 54);
             this.totalMaleCustomers.Name = "totalMaleCustomers";
             this.totalMaleCustomers.Size = new System.Drawing.Size(29, 16);
             this.totalMaleCustomers.TabIndex = 58;
@@ -183,7 +183,7 @@ namespace DoAnPBL3
             this.lblTotalMaleCustomers.AutoSize = true;
             this.lblTotalMaleCustomers.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalMaleCustomers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
-            this.lblTotalMaleCustomers.Location = new System.Drawing.Point(399, 23);
+            this.lblTotalMaleCustomers.Location = new System.Drawing.Point(398, 23);
             this.lblTotalMaleCustomers.Name = "lblTotalMaleCustomers";
             this.lblTotalMaleCustomers.Size = new System.Drawing.Size(135, 16);
             this.lblTotalMaleCustomers.TabIndex = 57;
@@ -276,6 +276,7 @@ namespace DoAnPBL3
             this.panelHeader.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(57)))), ((int)(((byte)(80)))));
+            this.panelHeader.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelHeader.Controls.Add(this.lblTotalMaleCustomers);
             this.panelHeader.Controls.Add(this.lblTotalCustomers);
             this.panelHeader.Controls.Add(this.pictureBox1);

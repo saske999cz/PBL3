@@ -131,7 +131,7 @@ namespace DoAnPBL3
             // cbbPublisher
             // 
             this.cbbPublisher.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
-            this.cbbPublisher.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
+            this.cbbPublisher.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.cbbPublisher.BorderSize = 2;
             this.cbbPublisher.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbPublisher.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -150,7 +150,7 @@ namespace DoAnPBL3
             // cbbLanguage
             // 
             this.cbbLanguage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
-            this.cbbLanguage.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
+            this.cbbLanguage.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.cbbLanguage.BorderSize = 2;
             this.cbbLanguage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbLanguage.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -169,7 +169,7 @@ namespace DoAnPBL3
             // tbAuthor
             // 
             this.tbAuthor.Animated = true;
-            this.tbAuthor.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
+            this.tbAuthor.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.tbAuthor.BorderRadius = 6;
             this.tbAuthor.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbAuthor.DefaultText = "";
@@ -193,7 +193,7 @@ namespace DoAnPBL3
             // tbQuantity
             // 
             this.tbQuantity.BackColor = System.Drawing.Color.Transparent;
-            this.tbQuantity.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
+            this.tbQuantity.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.tbQuantity.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbQuantity.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
             this.tbQuantity.Font = new System.Drawing.Font("Arial", 11.25F);
@@ -207,7 +207,7 @@ namespace DoAnPBL3
             // cbbUnit
             // 
             this.cbbUnit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
-            this.cbbUnit.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
+            this.cbbUnit.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.cbbUnit.BorderSize = 2;
             this.cbbUnit.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbUnit.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -259,7 +259,7 @@ namespace DoAnPBL3
             // tbIDBook
             // 
             this.tbIDBook.Animated = true;
-            this.tbIDBook.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
+            this.tbIDBook.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.tbIDBook.BorderRadius = 6;
             this.tbIDBook.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbIDBook.DefaultText = "";
@@ -379,7 +379,7 @@ namespace DoAnPBL3
             // cbbGenre
             // 
             this.cbbGenre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
-            this.cbbGenre.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
+            this.cbbGenre.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.cbbGenre.BorderSize = 2;
             this.cbbGenre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbGenre.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -502,7 +502,7 @@ namespace DoAnPBL3
             // tbPrice
             // 
             this.tbPrice.Animated = true;
-            this.tbPrice.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
+            this.tbPrice.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.tbPrice.BorderRadius = 6;
             this.tbPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbPrice.DefaultText = "";
@@ -527,7 +527,7 @@ namespace DoAnPBL3
             // tbPublishDate
             // 
             this.tbPublishDate.Animated = true;
-            this.tbPublishDate.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
+            this.tbPublishDate.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.tbPublishDate.BorderRadius = 6;
             this.tbPublishDate.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbPublishDate.DefaultText = "";
@@ -552,7 +552,7 @@ namespace DoAnPBL3
             // tbNameBook
             // 
             this.tbNameBook.Animated = true;
-            this.tbNameBook.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(33)))), ((int)(((byte)(49)))));
+            this.tbNameBook.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.tbNameBook.BorderRadius = 6;
             this.tbNameBook.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbNameBook.DefaultText = "";

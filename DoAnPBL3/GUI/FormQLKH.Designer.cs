@@ -110,7 +110,7 @@
             this.totalFemaleCustomers.BackColor = System.Drawing.Color.Transparent;
             this.totalFemaleCustomers.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalFemaleCustomers.ForeColor = System.Drawing.Color.White;
-            this.totalFemaleCustomers.Location = new System.Drawing.Point(812, 56);
+            this.totalFemaleCustomers.Location = new System.Drawing.Point(810, 56);
             this.totalFemaleCustomers.Name = "totalFemaleCustomers";
             this.totalFemaleCustomers.Size = new System.Drawing.Size(29, 16);
             this.totalFemaleCustomers.TabIndex = 29;
@@ -123,7 +123,7 @@
             this.lblTotalFemaleCustomers.BackColor = System.Drawing.Color.Transparent;
             this.lblTotalFemaleCustomers.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalFemaleCustomers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
-            this.lblTotalFemaleCustomers.Location = new System.Drawing.Point(763, 25);
+            this.lblTotalFemaleCustomers.Location = new System.Drawing.Point(761, 25);
             this.lblTotalFemaleCustomers.Name = "lblTotalFemaleCustomers";
             this.lblTotalFemaleCustomers.Size = new System.Drawing.Size(124, 16);
             this.lblTotalFemaleCustomers.TabIndex = 28;
@@ -136,7 +136,7 @@
             this.totalMaleCustomers.BackColor = System.Drawing.Color.Transparent;
             this.totalMaleCustomers.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalMaleCustomers.ForeColor = System.Drawing.Color.White;
-            this.totalMaleCustomers.Location = new System.Drawing.Point(455, 56);
+            this.totalMaleCustomers.Location = new System.Drawing.Point(454, 56);
             this.totalMaleCustomers.Name = "totalMaleCustomers";
             this.totalMaleCustomers.Size = new System.Drawing.Size(29, 16);
             this.totalMaleCustomers.TabIndex = 27;
@@ -149,7 +149,7 @@
             this.lblTotalMaleCustomers.BackColor = System.Drawing.Color.Transparent;
             this.lblTotalMaleCustomers.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalMaleCustomers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
-            this.lblTotalMaleCustomers.Location = new System.Drawing.Point(406, 25);
+            this.lblTotalMaleCustomers.Location = new System.Drawing.Point(405, 25);
             this.lblTotalMaleCustomers.Name = "lblTotalMaleCustomers";
             this.lblTotalMaleCustomers.Size = new System.Drawing.Size(135, 16);
             this.lblTotalMaleCustomers.TabIndex = 26;
@@ -184,7 +184,7 @@
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::DoAnPBL3.Properties.Resources.man_1;
-            this.pictureBox2.Location = new System.Drawing.Point(537, 19);
+            this.pictureBox2.Location = new System.Drawing.Point(536, 19);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(38, 27);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -196,7 +196,7 @@
             this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::DoAnPBL3.Properties.Resources.women;
-            this.pictureBox3.Location = new System.Drawing.Point(884, 19);
+            this.pictureBox3.Location = new System.Drawing.Point(882, 19);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(38, 27);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -408,6 +408,7 @@
             this.panelHeader.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(70)))));
+            this.panelHeader.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelHeader.Controls.Add(this.lblTotalMaleCustomers);
             this.panelHeader.Controls.Add(this.lblTotalCustomer);
             this.panelHeader.Controls.Add(this.totalCustomers);

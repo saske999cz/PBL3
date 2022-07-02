@@ -52,7 +52,7 @@ namespace DoAnPBL3
                     tbStartDate.FillColor = Color.FromArgb(15, 27, 57);
                     tbStartDate.ForeColor = Color.FromArgb(193, 200, 207);
                     cbGenderNV.BackColor = Color.FromArgb(15, 27, 57);
-                    cbGenderNV.BorderColor = Color.FromArgb(15, 27, 57);
+                    cbGenderNV.BorderColor = Color.FromArgb(193, 200, 207);
                     cbGenderNV.ListBackColor = Color.FromArgb(15, 27, 57);
                     cbGenderNV.ListTextColor = Color.FromArgb(193, 200, 207);
                     cbGenderNV.ForeColor = Color.FromArgb(193, 200, 207);
@@ -83,7 +83,7 @@ namespace DoAnPBL3
                     tbStartDate.ForeColor = Color.FromArgb(193, 200, 207);
                     cbGenderNV.BackColor = Color.FromArgb(40, 35, 40);
                     cbGenderNV.ForeColor = Color.FromArgb(193, 200, 207);
-                    cbGenderNV.BorderColor = Color.FromArgb(40, 35, 40);
+                    cbGenderNV.BorderColor = Color.FromArgb(193, 200, 207);
                     cbGenderNV.ListBackColor = Color.FromArgb(40, 35, 40);
                     cbGenderNV.ListTextColor = Color.FromArgb(193, 200, 207);
                     tbSDTNV.FillColor = Color.FromArgb(40, 35, 40);
@@ -106,29 +106,36 @@ namespace DoAnPBL3
                     tbNameNV.FillColor = Color.Silver;
                     tbNameNV.ForeColor = Color.Black;
                     tbNameNV.PlaceholderForeColor = Color.Black;
+                    tbNameNV.BorderColor = Color.Black;
                     tbEmailNV.FillColor = Color.Silver;
                     tbEmailNV.ForeColor = Color.Black;
                     tbEmailNV.PlaceholderForeColor = Color.Black;
+                    tbEmailNV.BorderColor = Color.Black;
                     tbBD.FillColor = Color.Silver;
                     tbBD.ForeColor = Color.Black;
                     tbBD.PlaceholderForeColor = Color.Black;
+                    tbBD.BorderColor = Color.Black;
                     tbStartDate.FillColor = Color.Silver;
                     tbStartDate.ForeColor = Color.Black;
                     tbStartDate.PlaceholderForeColor = Color.Black;
+                    tbStartDate.BorderColor = Color.Black;
                     cbGenderNV.BackColor = Color.Silver;
-                    cbGenderNV.BorderColor = Color.Silver;
+                    cbGenderNV.BorderColor = Color.Black;
                     cbGenderNV.ListBackColor = Color.Silver;
                     cbGenderNV.ListTextColor = Color.Black;
                     cbGenderNV.ForeColor = Color.Black;
                     tbSDTNV.FillColor = Color.Silver;
                     tbSDTNV.ForeColor = Color.Black;
                     tbSDTNV.PlaceholderForeColor = Color.Black;
+                    tbSDTNV.BorderColor = Color.Black;
                     tbCMNDNV.FillColor = Color.Silver;
                     tbCMNDNV.ForeColor = Color.Black;
                     tbCMNDNV.PlaceholderForeColor = Color.Black;
+                    tbCMNDNV.BorderColor = Color.Black;
                     tbAddressNV.FillColor = Color.Silver;
                     tbAddressNV.ForeColor = Color.Black;
                     tbAddressNV.PlaceholderForeColor = Color.Black;
+                    tbAddressNV.BorderColor = Color.Black;
                     break;
             }
         }
@@ -391,7 +398,7 @@ namespace DoAnPBL3
             if (avatar.Image == null)
                 path = null;
             else
-                path = avatar.ImageLocation.Remove(0, projectDirectory.Length + 1);
+                path = avatar.ImageLocation.Remove(0, projectDirectory.Length + 3);
             return new Employee
             {
                 ID_Employee = newID_Employee,
@@ -413,7 +420,8 @@ namespace DoAnPBL3
                 Id_Card = tbCMNDNV.Text,
                 Address = tbAddressNV.Text,
                 Avatar = path,
-                AccountUsername = username
+                AccountUsername = username,
+                WorkStatus = true
             };
         }
 

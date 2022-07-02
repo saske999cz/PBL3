@@ -234,6 +234,7 @@ namespace DoAnPBL3
             // panelNumberOrder
             // 
             this.panelNumberOrder.BackColor = System.Drawing.Color.Transparent;
+            this.panelNumberOrder.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelNumberOrder.Controls.Add(this.pictureBox1);
             this.panelNumberOrder.Controls.Add(this.numberOrder);
             this.panelNumberOrder.Controls.Add(this.lblNumberOrder);
@@ -279,6 +280,7 @@ namespace DoAnPBL3
             this.panelTotalRevenue.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelTotalRevenue.BackColor = System.Drawing.Color.Transparent;
+            this.panelTotalRevenue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelTotalRevenue.Controls.Add(this.pictureBox2);
             this.panelTotalRevenue.Controls.Add(this.totalRevenue);
             this.panelTotalRevenue.Controls.Add(this.lblTotalRevenue);
@@ -292,7 +294,7 @@ namespace DoAnPBL3
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox2.BackgroundImage = global::DoAnPBL3.Properties.Resources.money_bag;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(22, 4);
+            this.pictureBox2.Location = new System.Drawing.Point(21, 4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(64, 65);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -305,7 +307,7 @@ namespace DoAnPBL3
             this.totalRevenue.AutoSize = true;
             this.totalRevenue.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalRevenue.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.totalRevenue.Location = new System.Drawing.Point(110, 40);
+            this.totalRevenue.Location = new System.Drawing.Point(109, 40);
             this.totalRevenue.Name = "totalRevenue";
             this.totalRevenue.Size = new System.Drawing.Size(63, 19);
             this.totalRevenue.TabIndex = 20;
@@ -317,7 +319,7 @@ namespace DoAnPBL3
             this.lblTotalRevenue.AutoSize = true;
             this.lblTotalRevenue.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalRevenue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
-            this.lblTotalRevenue.Location = new System.Drawing.Point(105, 14);
+            this.lblTotalRevenue.Location = new System.Drawing.Point(104, 14);
             this.lblTotalRevenue.Name = "lblTotalRevenue";
             this.lblTotalRevenue.Size = new System.Drawing.Size(108, 16);
             this.lblTotalRevenue.TabIndex = 19;
@@ -327,6 +329,7 @@ namespace DoAnPBL3
             // 
             this.panelTotalProfit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panelTotalProfit.BackColor = System.Drawing.Color.Transparent;
+            this.panelTotalProfit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelTotalProfit.Controls.Add(this.pictureBox3);
             this.panelTotalProfit.Controls.Add(this.totalProfit);
             this.panelTotalProfit.Controls.Add(this.lblTotalProfit);
@@ -485,6 +488,7 @@ namespace DoAnPBL3
             // panel4
             // 
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.iconPictureBox4);
             this.panel4.Controls.Add(this.iconPictureBox3);
             this.panel4.Controls.Add(this.iconPictureBox1);
@@ -640,6 +644,7 @@ namespace DoAnPBL3
             this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.BackColor = System.Drawing.Color.Transparent;
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.dgvHHTLI);
             this.panel5.Controls.Add(this.lblUnderstockBook);
             this.panel5.Location = new System.Drawing.Point(203, 378);
@@ -689,7 +694,7 @@ namespace DoAnPBL3
             this.dgvHHTLI.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvHHTLI.EnableHeadersVisualStyles = false;
             this.dgvHHTLI.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.dgvHHTLI.Location = new System.Drawing.Point(0, 18);
+            this.dgvHHTLI.Location = new System.Drawing.Point(0, 16);
             this.dgvHHTLI.Name = "dgvHHTLI";
             this.dgvHHTLI.ReadOnly = true;
             this.dgvHHTLI.RowHeadersVisible = false;
@@ -702,7 +707,7 @@ namespace DoAnPBL3
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvHHTLI.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvHHTLI.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvHHTLI.Size = new System.Drawing.Size(391, 173);
+            this.dgvHHTLI.Size = new System.Drawing.Size(389, 173);
             this.dgvHHTLI.TabIndex = 29;
             this.dgvHHTLI.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvHHTLI.ThemeStyle.AlternatingRowsStyle.Font = null;

@@ -250,7 +250,7 @@ namespace DoAnPBL3
                 if (oldPath == gpbBookImg.ImageLocation)
                     path = oldPath;
                 else
-                    path = gpbBookImg.ImageLocation.Remove(0, projectDirectory.Length + 1);
+                    path = gpbBookImg.ImageLocation.Remove(0, projectDirectory.Length + 3);
             }
             return new Book
             {
@@ -264,7 +264,8 @@ namespace DoAnPBL3
                 Price = Convert.ToInt32(tbPrice.Text),
                 Quantity = Convert.ToInt32(tbQuantity.Text),
                 Unit = cbbUnit.SelectedItem.ToString(),
-                Image = path
+                Image = path,
+                SaleStatus = true
             };
         }
 

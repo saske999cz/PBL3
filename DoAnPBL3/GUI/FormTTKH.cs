@@ -53,25 +53,18 @@ namespace DoAnPBL3
                     lblNumberOrder.ForeColor = Color.WhiteSmoke;
                     lblTotalPrice.ForeColor = Color.WhiteSmoke;
                     tbNameKH.DisabledState.FillColor = Color.FromArgb(40, 35, 40);
-                    tbNameKH.DisabledState.BorderColor = Color.FromArgb(40, 35, 40);
                     tbNameKH.DisabledState.ForeColor = Color.FromArgb(193, 200, 207);
                     tbGenderKH.DisabledState.FillColor = Color.FromArgb(40, 35, 40);
-                    tbGenderKH.DisabledState.BorderColor = Color.FromArgb(40, 35, 40);
                     tbGenderKH.DisabledState.ForeColor = Color.FromArgb(193, 200, 207);
                     tbPhoneKH.DisabledState.FillColor = Color.FromArgb(40, 35, 40);
-                    tbPhoneKH.DisabledState.BorderColor = Color.FromArgb(40, 35, 40);
                     tbPhoneKH.DisabledState.ForeColor = Color.FromArgb(193, 200, 207);
                     tbAddressKH.DisabledState.FillColor = Color.FromArgb(40, 35, 40);
-                    tbAddressKH.DisabledState.BorderColor = Color.FromArgb(40, 35, 40);
                     tbAddressKH.DisabledState.ForeColor = Color.FromArgb(193, 200, 207);
                     tbStartDate.DisabledState.FillColor = Color.FromArgb(40, 35, 40);
-                    tbStartDate.DisabledState.BorderColor = Color.FromArgb(40, 35, 40);
                     tbStartDate.DisabledState.ForeColor = Color.FromArgb(193, 200, 207);
                     tbNumberOrder.DisabledState.FillColor = Color.FromArgb(40, 35, 40);
-                    tbNumberOrder.DisabledState.BorderColor = Color.FromArgb(40, 35, 40);
                     tbNumberOrder.DisabledState.ForeColor = Color.FromArgb(193, 200, 207);
                     tbTotalPrice.DisabledState.FillColor = Color.FromArgb(40, 35, 40);
-                    tbTotalPrice.DisabledState.BorderColor = Color.FromArgb(40, 35, 40);
                     tbTotalPrice.DisabledState.ForeColor = Color.FromArgb(193, 200, 207);
                     break;
                 case "Light":

@@ -245,9 +245,11 @@ namespace DoAnPBL3
 
             if (chỉnhSửaTàiKhoảnToolStripMenuItem.Selected == true)
             {
+                FormSettingAccountNV formSettingAccountNV = new FormSettingAccountNV(accountUsername, password, false);
+                formSettingAccountNV.RefreshData += new FormSettingAccountNV.LoadData(MainMenuNV_Load);
                 DisableButton();
                 btnLeftBorder.Visible = false;
-                OpenChildForm(new FormSettingAccountNV(accountUsername, password, false));
+                OpenChildForm(formSettingAccountNV);
             }
         }
     }

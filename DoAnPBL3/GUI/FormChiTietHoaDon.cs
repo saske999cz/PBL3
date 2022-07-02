@@ -75,12 +75,16 @@ namespace DoAnPBL3
                     lblQuantity.ForeColor = Color.Black;
                     tbIDHD.DisabledState.FillColor = Color.Silver;
                     tbIDHD.DisabledState.ForeColor = Color.Black;
+                    tbIDHD.DisabledState.BorderColor = Color.Black;
                     tbNumDiverse.DisabledState.FillColor = Color.Silver;
                     tbNumDiverse.DisabledState.ForeColor = Color.Black;
+                    tbNumDiverse.DisabledState.BorderColor = Color.Black;
                     tbQuantity.DisabledState.FillColor = Color.Silver;
                     tbQuantity.DisabledState.ForeColor = Color.Black;
+                    tbQuantity.DisabledState.BorderColor = Color.Black;
                     tbTotal.DisabledState.FillColor = Color.Silver;
                     tbTotal.DisabledState.ForeColor = Color.Black;
+                    tbTotal.DisabledState.BorderColor = Color.Black;
                     dgvQLCTHD.BackgroundColor = Color.Silver;
                     break;
             }
@@ -147,7 +151,17 @@ namespace DoAnPBL3
 
         private void DgvQLCTHD_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            new FormTTS(theme, GetID_Book()).Show();
+            string nameBook = dgvQLCTHD.CurrentRow.Cells["NameBook"].Value.ToString();
+            int quantity = Convert.ToInt32(dgvQLCTHD.CurrentRow.Cells["Quantity"].Value.ToString());
+            string price = dgvQLCTHD.CurrentRow.Cells["UnitPrice"].Value.ToString();
+            price = price.Remove(price.Length - 3, 3);
+            var charsToRemove = new string[] { "@", ",", ".", ";", "'" };
+            foreach (var c in charsToRemove)
+            {
+                price = price.Replace(c, string.Empty);
+            }
+            int unitPrice = Convert.ToInt32(price);
+            new FormTTS(theme, GetID_Book(), nameBook, unitPrice, quantity).Show();
         }
     }
 }

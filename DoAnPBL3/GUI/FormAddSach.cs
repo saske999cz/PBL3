@@ -260,7 +260,7 @@ namespace DoAnPBL3
             if (gpbBookImg.Image == null)
                 path = null;
             else
-                path = gpbBookImg.ImageLocation.Remove(0, projectDirectory.Length + 1);
+                path = gpbBookImg.ImageLocation.Remove(0, projectDirectory.Length + 3);
             return new Book
             {
                 ID_Book = tbIDBook.Text,
@@ -273,7 +273,8 @@ namespace DoAnPBL3
                 Price = Convert.ToInt32(tbPrice.Text),
                 Quantity = Convert.ToInt32(tbQuantity.Text),
                 Unit = cbbUnit.SelectedItem.ToString(),
-                Image = path
+                Image = path,
+                SaleStatus = true
             };
         }
 

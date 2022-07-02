@@ -456,7 +456,7 @@
             this.lblTotalMaleEmployee.BackColor = System.Drawing.Color.Transparent;
             this.lblTotalMaleEmployee.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalMaleEmployee.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
-            this.lblTotalMaleEmployee.Location = new System.Drawing.Point(372, 25);
+            this.lblTotalMaleEmployee.Location = new System.Drawing.Point(371, 25);
             this.lblTotalMaleEmployee.Name = "lblTotalMaleEmployee";
             this.lblTotalMaleEmployee.Size = new System.Drawing.Size(182, 16);
             this.lblTotalMaleEmployee.TabIndex = 40;
@@ -469,7 +469,7 @@
             this.maleEmployee.BackColor = System.Drawing.Color.Transparent;
             this.maleEmployee.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.maleEmployee.ForeColor = System.Drawing.Color.White;
-            this.maleEmployee.Location = new System.Drawing.Point(441, 51);
+            this.maleEmployee.Location = new System.Drawing.Point(440, 51);
             this.maleEmployee.Name = "maleEmployee";
             this.maleEmployee.Size = new System.Drawing.Size(29, 16);
             this.maleEmployee.TabIndex = 41;
@@ -482,7 +482,7 @@
             this.lblTotalFemaleEmployee.BackColor = System.Drawing.Color.Transparent;
             this.lblTotalFemaleEmployee.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalFemaleEmployee.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
-            this.lblTotalFemaleEmployee.Location = new System.Drawing.Point(699, 25);
+            this.lblTotalFemaleEmployee.Location = new System.Drawing.Point(697, 25);
             this.lblTotalFemaleEmployee.Name = "lblTotalFemaleEmployee";
             this.lblTotalFemaleEmployee.Size = new System.Drawing.Size(171, 16);
             this.lblTotalFemaleEmployee.TabIndex = 42;
@@ -495,7 +495,7 @@
             this.femaleEmployee.BackColor = System.Drawing.Color.Transparent;
             this.femaleEmployee.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.femaleEmployee.ForeColor = System.Drawing.Color.White;
-            this.femaleEmployee.Location = new System.Drawing.Point(767, 51);
+            this.femaleEmployee.Location = new System.Drawing.Point(765, 51);
             this.femaleEmployee.Name = "femaleEmployee";
             this.femaleEmployee.Size = new System.Drawing.Size(29, 16);
             this.femaleEmployee.TabIndex = 43;
@@ -506,7 +506,7 @@
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::DoAnPBL3.Properties.Resources.man_1;
-            this.pictureBox2.Location = new System.Drawing.Point(550, 19);
+            this.pictureBox2.Location = new System.Drawing.Point(549, 19);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(38, 27);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -518,7 +518,7 @@
             this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::DoAnPBL3.Properties.Resources.women;
-            this.pictureBox3.Location = new System.Drawing.Point(867, 19);
+            this.pictureBox3.Location = new System.Drawing.Point(865, 19);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(38, 27);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -540,6 +540,7 @@
             this.panelHeader.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(70)))));
+            this.panelHeader.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelHeader.Controls.Add(this.lblTotalMaleEmployee);
             this.panelHeader.Controls.Add(this.lblTotalEmployee);
             this.panelHeader.Controls.Add(this.pictureBox1);

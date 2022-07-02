@@ -55,13 +55,10 @@ namespace DoAnPBL3
                     lblListOrders.ForeColor = Color.WhiteSmoke;
                     lblTotalPrice.ForeColor = Color.WhiteSmoke;
                     tbMaKH.DisabledState.FillColor = Color.FromArgb(40, 35, 40);
-                    tbMaKH.DisabledState.BorderColor = Color.FromArgb(40, 35, 40);
                     tbMaKH.DisabledState.ForeColor = Color.FromArgb(193, 200, 207);
                     tbNameKH.DisabledState.FillColor = Color.FromArgb(40, 35, 40);
-                    tbNameKH.DisabledState.BorderColor = Color.FromArgb(40, 35, 40);
                     tbNameKH.DisabledState.ForeColor = Color.FromArgb(193, 200, 207);
                     tbTotalPrice.DisabledState.FillColor = Color.FromArgb(40, 35, 40);
-                    tbTotalPrice.DisabledState.BorderColor = Color.FromArgb(40, 35, 40);
                     tbTotalPrice.DisabledState.ForeColor = Color.FromArgb(193, 200, 207);
                     dgvQLHD.BackgroundColor = Color.FromArgb(34, 31, 46);
                     break;
@@ -78,12 +75,15 @@ namespace DoAnPBL3
                     tbMaKH.DisabledState.FillColor = Color.Silver;
                     tbMaKH.DisabledState.ForeColor = Color.Black;
                     tbMaKH.DisabledState.PlaceholderForeColor = Color.Black;
+                    tbMaKH.DisabledState.BorderColor = Color.Black;
                     tbNameKH.DisabledState.FillColor = Color.Silver;
                     tbNameKH.DisabledState.ForeColor = Color.Black;
                     tbNameKH.DisabledState.PlaceholderForeColor = Color.Black;
+                    tbNameKH.DisabledState.BorderColor = Color.Black;
                     tbTotalPrice.DisabledState.FillColor = Color.Silver;
                     tbTotalPrice.DisabledState.ForeColor = Color.Black;
                     tbTotalPrice.DisabledState.PlaceholderForeColor = Color.Black;
+                    tbTotalPrice.DisabledState.BorderColor = Color.Black;
                     btnTKHD.FillColor = Color.FromArgb(107, 83, 255);
                     rjtbTKHD.BackColor = Color.FromArgb(255, 255, 255);
                     rjtbTKHD.BorderColor = Color.FromArgb(180, 180, 180);
@@ -179,7 +179,11 @@ namespace DoAnPBL3
                     dgvQLHD.DataSource = data;
                 }
                 else
+                {
                     dgvQLHD.DataSource = null;
+                    dgvQLHD.Columns.Clear();
+                    SetColumnHeader();
+                }
             }
         }
 
@@ -201,6 +205,17 @@ namespace DoAnPBL3
             dataRow["NameEmployee"] = BLL_QLNV.Instance.GetNameEmployeeByID(order.ID_Employee);
             dataRow["TotalPrice"] = order.TotalPrice.ToString("##,#") + "VNĐ";
             return dataRow;
+        }
+
+        private void SetColumnHeader()
+        {
+            dgvQLHD.Columns.AddRange(new DataGridViewColumn[]
+            {
+                new DataGridViewTextBoxColumn() {HeaderText = "ID Hóa đơn", DataPropertyName = "ID_Order", Name = "ID_Order"},
+                new DataGridViewTextBoxColumn() {HeaderText = "Ngày mua", DataPropertyName = "OrderDate", Name = "OrderDate"},
+                new DataGridViewTextBoxColumn() {HeaderText = "Thu ngân", DataPropertyName = "NameEmployee", Name = "NameEmployee"},
+                new DataGridViewTextBoxColumn() {HeaderText = "Tổng tiền", DataPropertyName = "TotalPrice", Name = "TotalPrice"},
+            });
         }
     }
 }

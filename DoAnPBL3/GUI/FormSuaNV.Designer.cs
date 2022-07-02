@@ -517,6 +517,7 @@ namespace DoAnPBL3
             this.cbGenderNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
             this.cbGenderNV.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.cbGenderNV.BorderSize = 2;
+            this.cbGenderNV.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbGenderNV.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbGenderNV.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbGenderNV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));

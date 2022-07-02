@@ -43,15 +43,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSXS = new FontAwesome.Sharp.IconButton();
             this.dgvQLBS = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.ID_Book = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NameBook = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PublishDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NameAuthor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NameLanguage = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NamePublisher = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NameGenre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelHeader = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -67,10 +58,17 @@
             this.chữCáiGiảmDầnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.giáMuaSáchTăngDầnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.giáMuaSáchGiảmDầnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mứcĐộBánChạyTăngDầnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mứcĐộBánChạyGiảmDầnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sốLượngSáchHiệnCóTăngDầnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sốLượngSáchHiệnCóGiảmDầnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ID_Book = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NameBook = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PublishDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NameAuthor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NameLanguage = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NamePublisher = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NameGenre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQLBS)).BeginInit();
             this.panelHeader.SuspendLayout();
@@ -87,7 +85,7 @@
             this.englishBook.BackColor = System.Drawing.Color.Transparent;
             this.englishBook.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.englishBook.ForeColor = System.Drawing.Color.White;
-            this.englishBook.Location = new System.Drawing.Point(803, 56);
+            this.englishBook.Location = new System.Drawing.Point(801, 56);
             this.englishBook.Name = "englishBook";
             this.englishBook.Size = new System.Drawing.Size(29, 16);
             this.englishBook.TabIndex = 35;
@@ -100,7 +98,7 @@
             this.lblEnglishBook.BackColor = System.Drawing.Color.Transparent;
             this.lblEnglishBook.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEnglishBook.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
-            this.lblEnglishBook.Location = new System.Drawing.Point(759, 25);
+            this.lblEnglishBook.Location = new System.Drawing.Point(757, 25);
             this.lblEnglishBook.Name = "lblEnglishBook";
             this.lblEnglishBook.Size = new System.Drawing.Size(123, 16);
             this.lblEnglishBook.TabIndex = 34;
@@ -113,7 +111,7 @@
             this.vietnameseBook.BackColor = System.Drawing.Color.Transparent;
             this.vietnameseBook.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.vietnameseBook.ForeColor = System.Drawing.Color.White;
-            this.vietnameseBook.Location = new System.Drawing.Point(445, 56);
+            this.vietnameseBook.Location = new System.Drawing.Point(444, 56);
             this.vietnameseBook.Name = "vietnameseBook";
             this.vietnameseBook.Size = new System.Drawing.Size(29, 16);
             this.vietnameseBook.TabIndex = 33;
@@ -126,7 +124,7 @@
             this.lblVietnameseBook.BackColor = System.Drawing.Color.Transparent;
             this.lblVietnameseBook.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVietnameseBook.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
-            this.lblVietnameseBook.Location = new System.Drawing.Point(402, 25);
+            this.lblVietnameseBook.Location = new System.Drawing.Point(401, 25);
             this.lblVietnameseBook.Name = "lblVietnameseBook";
             this.lblVietnameseBook.Size = new System.Drawing.Size(123, 16);
             this.lblVietnameseBook.TabIndex = 32;
@@ -279,92 +277,12 @@
             this.dgvQLBS.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvQLBS.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DgvQLBS_RowHeaderMouseClick);
             // 
-            // ID_Book
-            // 
-            this.ID_Book.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ID_Book.DataPropertyName = "ID_Book";
-            this.ID_Book.FillWeight = 73.05836F;
-            this.ID_Book.HeaderText = "ID";
-            this.ID_Book.Name = "ID_Book";
-            this.ID_Book.ReadOnly = true;
-            // 
-            // NameBook
-            // 
-            this.NameBook.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.NameBook.DataPropertyName = "NameBook";
-            this.NameBook.FillWeight = 151.5565F;
-            this.NameBook.HeaderText = "Tên sách";
-            this.NameBook.Name = "NameBook";
-            this.NameBook.ReadOnly = true;
-            // 
-            // PublishDate
-            // 
-            this.PublishDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.PublishDate.DataPropertyName = "PublishDate";
-            this.PublishDate.FillWeight = 70.97385F;
-            this.PublishDate.HeaderText = "Ngày xuất bản";
-            this.PublishDate.Name = "PublishDate";
-            this.PublishDate.ReadOnly = true;
-            // 
-            // NameAuthor
-            // 
-            this.NameAuthor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.NameAuthor.DataPropertyName = "NameAuthor";
-            this.NameAuthor.FillWeight = 118.0675F;
-            this.NameAuthor.HeaderText = "Tác giả";
-            this.NameAuthor.Name = "NameAuthor";
-            this.NameAuthor.ReadOnly = true;
-            // 
-            // NameLanguage
-            // 
-            this.NameLanguage.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.NameLanguage.DataPropertyName = "NameLanguage";
-            this.NameLanguage.FillWeight = 118.0675F;
-            this.NameLanguage.HeaderText = "Ngôn ngữ";
-            this.NameLanguage.Name = "NameLanguage";
-            this.NameLanguage.ReadOnly = true;
-            // 
-            // NamePublisher
-            // 
-            this.NamePublisher.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.NamePublisher.DataPropertyName = "NamePublisher";
-            this.NamePublisher.FillWeight = 116.6275F;
-            this.NamePublisher.HeaderText = "Nhà xuất bản";
-            this.NamePublisher.Name = "NamePublisher";
-            this.NamePublisher.ReadOnly = true;
-            // 
-            // NameGenre
-            // 
-            this.NameGenre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.NameGenre.DataPropertyName = "NameGenre";
-            this.NameGenre.FillWeight = 92.63647F;
-            this.NameGenre.HeaderText = "Thể loại";
-            this.NameGenre.Name = "NameGenre";
-            this.NameGenre.ReadOnly = true;
-            // 
-            // Price
-            // 
-            this.Price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Price.DataPropertyName = "Price";
-            this.Price.FillWeight = 76.77856F;
-            this.Price.HeaderText = "Giá tiền";
-            this.Price.Name = "Price";
-            this.Price.ReadOnly = true;
-            // 
-            // Quantity
-            // 
-            this.Quantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Quantity.DataPropertyName = "Quantity";
-            this.Quantity.FillWeight = 82.2335F;
-            this.Quantity.HeaderText = "Số lượng";
-            this.Quantity.Name = "Quantity";
-            this.Quantity.ReadOnly = true;
-            // 
             // panelHeader
             // 
             this.panelHeader.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(70)))));
+            this.panelHeader.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelHeader.Controls.Add(this.lblVietnameseBook);
             this.panelHeader.Controls.Add(this.lblTotalBook);
             this.panelHeader.Controls.Add(this.totalBook);
@@ -393,7 +311,7 @@
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = global::DoAnPBL3.Properties.Resources.united_kingdom_flag;
-            this.pictureBox1.Location = new System.Drawing.Point(880, 19);
+            this.pictureBox1.Location = new System.Drawing.Point(878, 19);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(38, 27);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -404,7 +322,7 @@
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox2.Image = global::DoAnPBL3.Properties.Resources.vietnam_flag;
-            this.pictureBox2.Location = new System.Drawing.Point(523, 19);
+            this.pictureBox2.Location = new System.Drawing.Point(522, 19);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(38, 27);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -544,15 +462,13 @@
             this.chữCáiGiảmDầnToolStripMenuItem,
             this.giáMuaSáchTăngDầnToolStripMenuItem,
             this.giáMuaSáchGiảmDầnToolStripMenuItem,
-            this.mứcĐộBánChạyTăngDầnToolStripMenuItem,
-            this.mứcĐộBánChạyGiảmDầnToolStripMenuItem,
             this.sốLượngSáchHiệnCóTăngDầnToolStripMenuItem,
             this.sốLượngSáchHiệnCóGiảmDầnToolStripMenuItem});
             this.rjDropDownMenuSXS.MenuItemHeight = 25;
             this.rjDropDownMenuSXS.MenuItemTextColor = System.Drawing.Color.DarkSlateBlue;
             this.rjDropDownMenuSXS.Name = "rjDropDownMenu1";
             this.rjDropDownMenuSXS.PrimaryColor = System.Drawing.Color.DarkSlateBlue;
-            this.rjDropDownMenuSXS.Size = new System.Drawing.Size(258, 180);
+            this.rjDropDownMenuSXS.Size = new System.Drawing.Size(258, 136);
             // 
             // chữCáiTăngDầnToolStripMenuItem
             // 
@@ -590,24 +506,6 @@
             this.giáMuaSáchGiảmDầnToolStripMenuItem.Text = "Giá mua sách giảm dần";
             this.giáMuaSáchGiảmDầnToolStripMenuItem.Click += new System.EventHandler(this.GiáMuaSáchGiảmDầnToolStripMenuItem_Click);
             // 
-            // mứcĐộBánChạyTăngDầnToolStripMenuItem
-            // 
-            this.mứcĐộBánChạyTăngDầnToolStripMenuItem.BackColor = System.Drawing.Color.MediumPurple;
-            this.mứcĐộBánChạyTăngDầnToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.mứcĐộBánChạyTăngDầnToolStripMenuItem.Name = "mứcĐộBánChạyTăngDầnToolStripMenuItem";
-            this.mứcĐộBánChạyTăngDầnToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
-            this.mứcĐộBánChạyTăngDầnToolStripMenuItem.Text = "Mức độ bán chạy tăng dần";
-            this.mứcĐộBánChạyTăngDầnToolStripMenuItem.Click += new System.EventHandler(this.MứcĐộBánChạyTăngDầnToolStripMenuItem_Click);
-            // 
-            // mứcĐộBánChạyGiảmDầnToolStripMenuItem
-            // 
-            this.mứcĐộBánChạyGiảmDầnToolStripMenuItem.BackColor = System.Drawing.Color.MediumPurple;
-            this.mứcĐộBánChạyGiảmDầnToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.mứcĐộBánChạyGiảmDầnToolStripMenuItem.Name = "mứcĐộBánChạyGiảmDầnToolStripMenuItem";
-            this.mứcĐộBánChạyGiảmDầnToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
-            this.mứcĐộBánChạyGiảmDầnToolStripMenuItem.Text = "Mức độ bán chạy giảm dần";
-            this.mứcĐộBánChạyGiảmDầnToolStripMenuItem.Click += new System.EventHandler(this.MứcĐộBánChạyGiảmDầnToolStripMenuItem_Click);
-            // 
             // sốLượngSáchHiệnCóTăngDầnToolStripMenuItem
             // 
             this.sốLượngSáchHiệnCóTăngDầnToolStripMenuItem.BackColor = System.Drawing.Color.MediumPurple;
@@ -625,6 +523,87 @@
             this.sốLượngSáchHiệnCóGiảmDầnToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
             this.sốLượngSáchHiệnCóGiảmDầnToolStripMenuItem.Text = "Số lượng sách hiện có giảm dần";
             this.sốLượngSáchHiệnCóGiảmDầnToolStripMenuItem.Click += new System.EventHandler(this.SốLượngSáchHiệnCóGiảmDầnToolStripMenuItem_Click);
+            // 
+            // ID_Book
+            // 
+            this.ID_Book.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ID_Book.DataPropertyName = "ID_Book";
+            this.ID_Book.FillWeight = 73.05836F;
+            this.ID_Book.HeaderText = "ID";
+            this.ID_Book.Name = "ID_Book";
+            this.ID_Book.ReadOnly = true;
+            // 
+            // NameBook
+            // 
+            this.NameBook.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NameBook.DataPropertyName = "NameBook";
+            this.NameBook.FillWeight = 151.5565F;
+            this.NameBook.HeaderText = "Tên sách";
+            this.NameBook.Name = "NameBook";
+            this.NameBook.ReadOnly = true;
+            // 
+            // PublishDate
+            // 
+            this.PublishDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.PublishDate.DataPropertyName = "PublishDate";
+            this.PublishDate.FillWeight = 70.97385F;
+            this.PublishDate.HeaderText = "Ngày xuất bản";
+            this.PublishDate.Name = "PublishDate";
+            this.PublishDate.ReadOnly = true;
+            // 
+            // NameAuthor
+            // 
+            this.NameAuthor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NameAuthor.DataPropertyName = "NameAuthor";
+            this.NameAuthor.FillWeight = 118.0675F;
+            this.NameAuthor.HeaderText = "Tác giả";
+            this.NameAuthor.Name = "NameAuthor";
+            this.NameAuthor.ReadOnly = true;
+            // 
+            // NameLanguage
+            // 
+            this.NameLanguage.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NameLanguage.DataPropertyName = "NameLanguage";
+            this.NameLanguage.FillWeight = 118.0675F;
+            this.NameLanguage.HeaderText = "Ngôn ngữ";
+            this.NameLanguage.Name = "NameLanguage";
+            this.NameLanguage.ReadOnly = true;
+            // 
+            // NamePublisher
+            // 
+            this.NamePublisher.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NamePublisher.DataPropertyName = "NamePublisher";
+            this.NamePublisher.FillWeight = 116.6275F;
+            this.NamePublisher.HeaderText = "Nhà xuất bản";
+            this.NamePublisher.Name = "NamePublisher";
+            this.NamePublisher.ReadOnly = true;
+            // 
+            // NameGenre
+            // 
+            this.NameGenre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NameGenre.DataPropertyName = "NameGenre";
+            this.NameGenre.FillWeight = 92.63647F;
+            this.NameGenre.HeaderText = "Thể loại";
+            this.NameGenre.Name = "NameGenre";
+            this.NameGenre.ReadOnly = true;
+            // 
+            // Price
+            // 
+            this.Price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Price.DataPropertyName = "Price";
+            this.Price.FillWeight = 76.77856F;
+            this.Price.HeaderText = "Giá tiền";
+            this.Price.Name = "Price";
+            this.Price.ReadOnly = true;
+            // 
+            // Quantity
+            // 
+            this.Quantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Quantity.DataPropertyName = "Quantity";
+            this.Quantity.FillWeight = 82.2335F;
+            this.Quantity.HeaderText = "Số lượng";
+            this.Quantity.Name = "Quantity";
+            this.Quantity.ReadOnly = true;
             // 
             // FormQLBS
             // 
@@ -684,8 +663,6 @@
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2DataGridView dgvQLBS;
         private System.Windows.Forms.Panel panelHeader;
-        private System.Windows.Forms.ToolStripMenuItem mứcĐộBánChạyTăngDầnToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem mứcĐộBánChạyGiảmDầnToolStripMenuItem;
         private System.Windows.Forms.Label lblSort;
         private Guna.UI2.WinForms.Guna2ComboBox cbbCritiaDetail;
         private FontAwesome.Sharp.IconButton btnFind;

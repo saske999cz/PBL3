@@ -71,34 +71,107 @@ namespace DoAnPBL3.BLL
             return DAL_QLBS.Instance.GetBooksByNameAuthor(nameAuthor);
         }
 
-        public List<Book> SortByNameBookASC()
+        public void Swap(List<Book> books, int i, int j)
         {
-            return DAL_QLBS.Instance.SortByNameBookASC();
+            Book temp = books[i];
+            books[i] = books[j];
+            books[j] = temp;
         }
 
-        public List<Book> SortByNameBookDESC()
+        public List<Book> SortNameASC(List<Book> books)
         {
-            return DAL_QLBS.Instance.SortByNameBookDESC();
+            int n = books.Count;
+            for (int i = n - 1; i >= 0; i--)
+            {
+                for (int j = 1; j <= i; j++)
+                {
+                    if (string.Compare(books[j - 1].NameBook, books[j].NameBook) < 0)
+                    {
+                        Swap(books, j - 1, j);
+                    }
+                }
+            }
+            return books;
         }
 
-        public List<Book> SortByPriceASC()
+        public List<Book> SortNameDESC(List<Book> books)
         {
-            return DAL_QLBS.Instance.SortByPriceASC();
+            int n = books.Count;
+            for (int i = n - 1; i >= 0; i--)
+            {
+                for (int j = 1; j <= i; j++)
+                {
+                    if (string.Compare(books[j - 1].NameBook, books[j].NameBook) > 0)
+                    {
+                        Swap(books, j - 1, j);
+                    }
+                }
+            }
+            return books;
         }
 
-        public List<Book> SortByPriceDESC()
+        public List<Book> SortPriceASC(List<Book> books)
         {
-            return DAL_QLBS.Instance.SortByPriceDESC();
+            int n = books.Count;
+            for (int i = n - 1; i >= 0; i--)
+            {
+                for (int j = 1; j <= i; j++)
+                {
+                    if (books[j - 1].Price > books[j].Price)
+                    {
+                        Swap(books, j - 1, j);
+                    }
+                }
+            }
+            return books;
         }
 
-        public List<Book> SortByQuantityASC()
+        public List<Book> SortPriceDESC(List<Book> books)
         {
-            return DAL_QLBS.Instance.SortByQuantityASC();
+            int n = books.Count;
+            for (int i = n - 1; i >= 0; i--)
+            {
+                for (int j = 1; j <= i; j++)
+                {
+                    if (books[j - 1].Price < books[j].Price)
+                    {
+                        Swap(books, j - 1, j);
+                    }
+                }
+            }
+            return books;
         }
 
-        public List<Book> SortByQuantityDESC()
+        public List<Book> SortQuantityASC(List<Book> books)
         {
-            return DAL_QLBS.Instance.SortByQuantityDESC();
+            int n = books.Count;
+            for (int i = n - 1; i >= 0; i--)
+            {
+                for (int j = 1; j <= i; j++)
+                {
+                    if (books[j - 1].Quantity > books[j].Quantity)
+                    {
+                        Swap(books, j - 1, j);
+                    }
+                }
+            }
+            return books;
+        }
+
+        public List<Book> SortQuantityDESC(List<Book> books)
+        {
+            int n = books.Count;
+            for (int i = n - 1; i >= 0; i--)
+            {
+                for (int j = 1; j <= i; j++)
+                {
+                    if (books[j - 1].Quantity < books[j].Quantity)
+                    {
+                        Swap(books, j - 1, j);
+                    }
+                }
+            }
+            return books;
         }
 
         public Book GetBookByID(string ID_Book)

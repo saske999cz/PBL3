@@ -19,6 +19,7 @@ namespace DoAnPBL3
         private int ID_Publisher;
         private int ID_Genre;
         private string theme;
+        private List<Book> books = new List<Book>();
         public FormQLBS(string theme)
         {
             this.theme = theme;
@@ -62,6 +63,7 @@ namespace DoAnPBL3
                     lblTotalBook.ForeColor = Color.Black;
                     lblVietnameseBook.ForeColor = Color.Black;
                     lblEnglishBook.ForeColor = Color.Black;
+                    lblSort.ForeColor = Color.Black;
                     panelHeader.BackColor = Color.FromArgb(210, 200, 210);
                     englishBook.ForeColor = Color.Black;
                     vietnameseBook.ForeColor = Color.Black;
@@ -104,7 +106,6 @@ namespace DoAnPBL3
         private void FormQLBS_Load(object sender, EventArgs e)
         {
             GetAllInfoBooks();
-            dgvQLBS.Columns["Quantity"].HeaderCell.Value = "Số lượng hiện có";
             dgvQLBS.RowHeadersVisible = true;
             dgvQLBS.BorderStyle = BorderStyle.FixedSingle;
             dgvQLBS.CellBorderStyle = DataGridViewCellBorderStyle.Single;
@@ -118,11 +119,13 @@ namespace DoAnPBL3
                 {
                     DataRow dataRow = data.NewRow();
                     data.Rows.Add(CreateRow(dataRow, book));
+                    books.Add(GetBook(book));
                 }
                 dgvQLBS.DataSource = data;
             }
             else
             {
+                books = null;
                 dgvQLBS.DataSource = null;
                 totalBook.Text = "0";
                 vietnameseBook.Text = "0";
@@ -131,19 +134,19 @@ namespace DoAnPBL3
             rjDropDownMenuSXS.IsMainMenu = false;
         }
 
-        private void ChữCáiGiảmDầnToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ChữCáiTăngDầnToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DataTable data = new DataTable();
             CreateCol(data);
-            dgvQLBS.Columns["Quantity"].HeaderCell.Value = "Số lượng hiện có";
-            List<Book> listBooks = BLL_QLBS.Instance.SortByNameBookDESC();
-            if (listBooks == null)
+            if (books == null)
             {
                 dgvQLBS.DataSource = null;
+                RJMessageBox.Show("Chưa có dữ liệu sắp xếp", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                foreach (Book book in listBooks)
+                books = BLL_QLBS.Instance.SortNameASC(books);
+                foreach (Book book in books)
                 {
                     DataRow dataRow = data.NewRow();
                     data.Rows.Add(CreateRow(dataRow, book));
@@ -152,19 +155,19 @@ namespace DoAnPBL3
             }
         }
 
-        private void ChữCáiTăngDầnToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ChữCáiGiảmDầnToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DataTable data = new DataTable();
             CreateCol(data);
-            dgvQLBS.Columns["Quantity"].HeaderCell.Value = "Số lượng hiện có";
-            List<Book> listBooks = BLL_QLBS.Instance.SortByNameBookASC();
-            if (listBooks == null)
+            if (books == null)
             {
                 dgvQLBS.DataSource = null;
+                RJMessageBox.Show("Chưa có dữ liệu sắp xếp", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                foreach (Book book in listBooks)
+                books = BLL_QLBS.Instance.SortNameDESC(books);
+                foreach (Book book in books)
                 {
                     DataRow dataRow = data.NewRow();
                     data.Rows.Add(CreateRow(dataRow, book));
@@ -177,15 +180,15 @@ namespace DoAnPBL3
         {
             DataTable data = new DataTable();
             CreateCol(data);
-            dgvQLBS.Columns["Quantity"].HeaderCell.Value = "Số lượng hiện có";
-            List<Book> listBooks = BLL_QLBS.Instance.SortByPriceASC();
-            if (listBooks == null)
+            if (books == null)
             {
                 dgvQLBS.DataSource = null;
+                RJMessageBox.Show("Chưa có dữ liệu sắp xếp", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                foreach (Book book in listBooks)
+                books = BLL_QLBS.Instance.SortPriceASC(books);
+                foreach (Book book in books)
                 {
                     DataRow dataRow = data.NewRow();
                     data.Rows.Add(CreateRow(dataRow, book));
@@ -198,15 +201,15 @@ namespace DoAnPBL3
         {
             DataTable data = new DataTable();
             CreateCol(data);
-            dgvQLBS.Columns["Quantity"].HeaderCell.Value = "Số lượng hiện có";
-            List<Book> listBooks = BLL_QLBS.Instance.SortByPriceDESC();
-            if (listBooks == null)
+            if (books == null)
             {
                 dgvQLBS.DataSource = null;
+                RJMessageBox.Show("Chưa có dữ liệu sắp xếp", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                foreach (Book book in listBooks)
+                books = BLL_QLBS.Instance.SortPriceDESC(books);
+                foreach (Book book in books)
                 {
                     DataRow dataRow = data.NewRow();
                     data.Rows.Add(CreateRow(dataRow, book));
@@ -215,85 +218,19 @@ namespace DoAnPBL3
             }
         }
 
-        private void MứcĐộBánChạyTăngDầnToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            dgvQLBS.Columns["Quantity"].HeaderCell.Value = "Số lượng đã bán";
-            using (BookStoreContext context = new BookStoreContext())
-            {
-                dgvQLBS.DataSource = (from orderDetail in context.OrderDetails
-                                      group orderDetail by orderDetail.ID_Book into ord
-                                      select new
-                                      {
-                                          ID_Book = ord.Key,
-                                          Quantity = ord.Sum(o => o.Quantity)
-                                      } into o
-                                      join book in context.Books on o.ID_Book equals book.ID_Book
-                                      join lang in context.Languages on book.ID_Language equals lang.ID_Language
-                                      join publisher in context.Publishers on book.ID_Publisher equals publisher.ID_Publisher
-                                      join genre in context.Genres on book.ID_Genre equals genre.ID_Genre
-                                      select new
-                                      {
-                                          book.ID_Book,
-                                          book.NameBook,
-                                          book.PublishDate,
-                                          book.NameAuthor,
-                                          lang.NameLanguage,
-                                          publisher.NamePublisher,
-                                          genre.NameGenre,
-                                          o.Quantity,
-                                          book.Price
-                                      })
-                                      .OrderBy(b => b.Quantity)
-                                      .ToList();
-            }
-        }
-
-        private void MứcĐộBánChạyGiảmDầnToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            dgvQLBS.Columns["Quantity"].HeaderCell.Value = "Số lượng đã bán";
-            using (BookStoreContext context = new BookStoreContext())
-            {
-                dgvQLBS.DataSource = (from orderDetail in context.OrderDetails
-                                      group orderDetail by orderDetail.ID_Book into ord
-                                      select new
-                                      {
-                                          ID_Book = ord.Key,
-                                          Quantity = ord.Sum(o => o.Quantity)
-                                      } into o
-                                      join book in context.Books on o.ID_Book equals book.ID_Book
-                                      join lang in context.Languages on book.ID_Language equals lang.ID_Language
-                                      join publisher in context.Publishers on book.ID_Publisher equals publisher.ID_Publisher
-                                      join genre in context.Genres on book.ID_Genre equals genre.ID_Genre
-                                      select new
-                                      {
-                                          book.ID_Book,
-                                          book.NameBook,
-                                          book.PublishDate,
-                                          book.NameAuthor,
-                                          lang.NameLanguage,
-                                          publisher.NamePublisher,
-                                          genre.NameGenre,
-                                          o.Quantity,
-                                          book.Price
-                                      })
-                                      .OrderByDescending(b => b.Quantity)
-                                      .ToList();
-            }
-        }
-
         private void SốLượngSáchHiệnCóTăngDầnToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DataTable data = new DataTable();
             CreateCol(data);
-            dgvQLBS.Columns["Quantity"].HeaderCell.Value = "Số lượng hiện có";
-            List<Book> listBooks = BLL_QLBS.Instance.SortByQuantityASC();
-            if (listBooks == null)
+            if (books == null)
             {
                 dgvQLBS.DataSource = null;
+                RJMessageBox.Show("Chưa có dữ liệu sắp xếp", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                foreach (Book book in listBooks)
+                books = BLL_QLBS.Instance.SortQuantityASC(books);
+                foreach (Book book in books)
                 {
                     DataRow dataRow = data.NewRow();
                     data.Rows.Add(CreateRow(dataRow, book));
@@ -306,15 +243,15 @@ namespace DoAnPBL3
         {
             DataTable data = new DataTable();
             CreateCol(data);
-            dgvQLBS.Columns["Quantity"].HeaderCell.Value = "Số lượng hiện có";
-            List<Book> listBooks = BLL_QLBS.Instance.SortByQuantityDESC();
-            if (listBooks == null)
+            if (books == null)
             {
                 dgvQLBS.DataSource = null;
+                RJMessageBox.Show("Chưa có dữ liệu sắp xếp", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                foreach (Book book in listBooks)
+                books = BLL_QLBS.Instance.SortQuantityDESC(books);
+                foreach (Book book in books)
                 {
                     DataRow dataRow = data.NewRow();
                     data.Rows.Add(CreateRow(dataRow, book));
@@ -423,6 +360,41 @@ namespace DoAnPBL3
             return dataRow;
         }
 
+        private void SetColumnHeader()
+        {
+            dgvQLBS.Columns.AddRange(new DataGridViewColumn[]
+            {
+                new DataGridViewTextBoxColumn() {HeaderText = "ID", DataPropertyName = "ID_Book", Name = "ID_Book"},
+                new DataGridViewTextBoxColumn() {HeaderText = "Tên sách", DataPropertyName = "NameBook", Name = "NameBook"},
+                new DataGridViewTextBoxColumn() {HeaderText = "Ngày xuất bản", DataPropertyName = "PublishDate", Name = "PublishDate"},
+                new DataGridViewTextBoxColumn() {HeaderText = "Tác giả", DataPropertyName = "NameAuthor", Name = "NameAuthor"},
+                new DataGridViewTextBoxColumn() {HeaderText = "Ngôn ngữ", DataPropertyName = "NameLanguage", Name = "NameLanguage"},
+                new DataGridViewTextBoxColumn() {HeaderText = "Nhà xuất bản", DataPropertyName = "NamePublisher", Name = "NamePublisher"},
+                new DataGridViewTextBoxColumn() {HeaderText = "Thể loại", DataPropertyName = "NameGenre", Name = "NameGenre"},
+                new DataGridViewTextBoxColumn() {HeaderText = "Giá tiền", DataPropertyName = "Price", Name = "Price"},
+                new DataGridViewTextBoxColumn() {HeaderText = "Số lượng", DataPropertyName = "Quantity", Name = "Quantity"},
+            });
+        }
+
+        private Book GetBook(Book book)
+        {
+            return new Book
+            {
+                ID_Book = book.ID_Book,
+                NameBook = book.NameBook,
+                PublishDate = book.PublishDate,
+                NameAuthor = book.NameAuthor,
+                ID_Language = book.ID_Language,
+                ID_Publisher = book.ID_Publisher,
+                ID_Genre = book.ID_Genre,
+                Quantity = book.Quantity,
+                Price = book.Price,
+                Image = book.Image,
+                Unit = book.Unit,
+                SaleStatus = book.SaleStatus
+            };
+        }
+
         private void CbbCriteria_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbbCriteria.SelectedIndex == 0)
@@ -484,7 +456,6 @@ namespace DoAnPBL3
 
         private void BtnFind_Click(object sender, EventArgs e)
         {
-            dgvQLBS.Columns["Quantity"].HeaderCell.Value = "Số lượng hiện có";
             DataTable data = new DataTable();
             CreateCol(data);
             if (cbbCritiaDetail.SelectedItem == null)
@@ -492,46 +463,106 @@ namespace DoAnPBL3
             else if (cbbCriteria.SelectedItem.ToString() == "Ngôn ngữ")
             {
                 List<Book> listBooks = BLL_QLBS.Instance.GetBooksByIDLanguage(ID_Language);
-                if (listBooks == null)
-                    dgvQLBS.DataSource = null;
-                else
+                if (listBooks != null)
                 {
-                    foreach (Book book in listBooks)
+                    if (books != null)
                     {
-                        DataRow dataRow = data.NewRow();
-                        data.Rows.Add(CreateRow(dataRow, book));
+                        if (books.Count != listBooks.Count)
+                            books.Clear();
+                        foreach (Book book in listBooks)
+                        {
+                            DataRow dataRow = data.NewRow();
+                            data.Rows.Add(CreateRow(dataRow, book));
+                            books.Add(GetBook(book));
+                        }
+                    }
+                    else
+                    {
+                        books = listBooks;
+                        foreach (Book book in listBooks)
+                        {
+                            DataRow dataRow = data.NewRow();
+                            data.Rows.Add(CreateRow(dataRow, book));
+                        }
                     }
                     dgvQLBS.DataSource = data;
+                }
+                else
+                {
+                    books = null;
+                    dgvQLBS.DataSource = null;
+                    dgvQLBS.Columns.Clear();
+                    SetColumnHeader();
                 }
             }
             else if (cbbCriteria.SelectedItem.ToString() == "Nhà xuất bản")
             {
                 List<Book> listBooks = BLL_QLBS.Instance.GetBooksByIDPublisher(ID_Publisher);
-                if (listBooks == null)
-                    dgvQLBS.DataSource = null;
-                else
+                if (listBooks != null)
                 {
-                    foreach (Book book in listBooks)
+                    if (books != null)
                     {
-                        DataRow dataRow = data.NewRow();
-                        data.Rows.Add(CreateRow(dataRow, book));
+                        if (books.Count != listBooks.Count)
+                            books.Clear();
+                        foreach (Book book in listBooks)
+                        {
+                            DataRow dataRow = data.NewRow();
+                            data.Rows.Add(CreateRow(dataRow, book));
+                            books.Add(GetBook(book));
+                        }
+                    }
+                    else
+                    {
+                        books = listBooks;
+                        foreach (Book book in listBooks)
+                        {
+                            DataRow dataRow = data.NewRow();
+                            data.Rows.Add(CreateRow(dataRow, book));
+                        }
                     }
                     dgvQLBS.DataSource = data;
+                }
+                else
+                {
+                    books = null;
+                    dgvQLBS.DataSource = null;
+                    dgvQLBS.Columns.Clear();
+                    SetColumnHeader();
                 }
             }
             else
             {
                 List<Book> listBooks = BLL_QLBS.Instance.GetBooksByIDGenre(ID_Genre);
-                if (listBooks == null)
-                    dgvQLBS.DataSource = null;
-                else
+                if (listBooks != null)
                 {
-                    foreach (Book book in listBooks)
+                    if (books != null)
                     {
-                        DataRow dataRow = data.NewRow();
-                        data.Rows.Add(CreateRow(dataRow, book));
+                        if (books.Count != listBooks.Count)
+                            books.Clear();
+                        foreach (Book book in listBooks)
+                        {
+                            DataRow dataRow = data.NewRow();
+                            data.Rows.Add(CreateRow(dataRow, book));
+                            books.Add(GetBook(book));
+                        }
+                    }
+                    else
+                    {
+                        books = listBooks;
+                        foreach (Book book in listBooks)
+                        {
+                            DataRow dataRow = data.NewRow();
+                            data.Rows.Add(CreateRow(dataRow, book));
+                        }
                     }
                     dgvQLBS.DataSource = data;
+                }
+                else
+                {
+                    books = null;
+                    dgvQLBS.DataSource = null;
+                    dgvQLBS.Columns.Clear();
+                    SetColumnHeader();
                 }
             }
         }

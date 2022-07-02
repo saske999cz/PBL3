@@ -83,7 +83,7 @@ namespace DoAnPBL3
             this.totalEnglishBooks.AutoSize = true;
             this.totalEnglishBooks.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalEnglishBooks.ForeColor = System.Drawing.Color.White;
-            this.totalEnglishBooks.Location = new System.Drawing.Point(818, 56);
+            this.totalEnglishBooks.Location = new System.Drawing.Point(816, 56);
             this.totalEnglishBooks.Name = "totalEnglishBooks";
             this.totalEnglishBooks.Size = new System.Drawing.Size(29, 16);
             this.totalEnglishBooks.TabIndex = 61;
@@ -95,7 +95,7 @@ namespace DoAnPBL3
             this.lblTotalEnglishBook.AutoSize = true;
             this.lblTotalEnglishBook.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalEnglishBook.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
-            this.lblTotalEnglishBook.Location = new System.Drawing.Point(774, 25);
+            this.lblTotalEnglishBook.Location = new System.Drawing.Point(772, 25);
             this.lblTotalEnglishBook.Name = "lblTotalEnglishBook";
             this.lblTotalEnglishBook.Size = new System.Drawing.Size(123, 16);
             this.lblTotalEnglishBook.TabIndex = 60;
@@ -107,7 +107,7 @@ namespace DoAnPBL3
             this.totalVietnameseBooks.AutoSize = true;
             this.totalVietnameseBooks.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalVietnameseBooks.ForeColor = System.Drawing.Color.White;
-            this.totalVietnameseBooks.Location = new System.Drawing.Point(452, 56);
+            this.totalVietnameseBooks.Location = new System.Drawing.Point(451, 56);
             this.totalVietnameseBooks.Name = "totalVietnameseBooks";
             this.totalVietnameseBooks.Size = new System.Drawing.Size(29, 16);
             this.totalVietnameseBooks.TabIndex = 59;
@@ -119,7 +119,7 @@ namespace DoAnPBL3
             this.lblTotalVietnameseBook.AutoSize = true;
             this.lblTotalVietnameseBook.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalVietnameseBook.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
-            this.lblTotalVietnameseBook.Location = new System.Drawing.Point(409, 25);
+            this.lblTotalVietnameseBook.Location = new System.Drawing.Point(408, 25);
             this.lblTotalVietnameseBook.Name = "lblTotalVietnameseBook";
             this.lblTotalVietnameseBook.Size = new System.Drawing.Size(123, 16);
             this.lblTotalVietnameseBook.TabIndex = 58;
@@ -250,7 +250,7 @@ namespace DoAnPBL3
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = global::DoAnPBL3.Properties.Resources.united_kingdom_flag;
-            this.pictureBox1.Location = new System.Drawing.Point(895, 19);
+            this.pictureBox1.Location = new System.Drawing.Point(893, 19);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(38, 27);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -261,7 +261,7 @@ namespace DoAnPBL3
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox2.Image = global::DoAnPBL3.Properties.Resources.vietnam_flag;
-            this.pictureBox2.Location = new System.Drawing.Point(530, 19);
+            this.pictureBox2.Location = new System.Drawing.Point(529, 19);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(38, 27);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -315,6 +315,7 @@ namespace DoAnPBL3
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(57)))), ((int)(((byte)(80)))));
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.lblTotalVietnameseBook);
             this.panel2.Controls.Add(this.lblTotalBook);
             this.panel2.Controls.Add(this.totalBooks);

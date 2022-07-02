@@ -38,7 +38,6 @@ namespace DoAnPBL3
                     lblSDT.ForeColor = Color.WhiteSmoke;
                     lblCMND.ForeColor = Color.WhiteSmoke;
                     lblAddress.ForeColor = Color.WhiteSmoke;
-
                     tbNameNV.FillColor = Color.FromArgb(15, 27, 57);
                     tbNameNV.ForeColor = Color.FromArgb(193, 200, 207);
                     tbEmailNV.FillColor = Color.FromArgb(15, 27, 57);
@@ -48,7 +47,6 @@ namespace DoAnPBL3
                     tbStartDate.FillColor = Color.FromArgb(15, 27, 57);
                     tbStartDate.ForeColor = Color.FromArgb(193, 200, 207);
                     cbGenderNV.BackColor = Color.FromArgb(15, 27, 57);
-                    cbGenderNV.BorderColor = Color.FromArgb(15, 27, 57);
                     cbGenderNV.ListBackColor = Color.FromArgb(15, 27, 57);
                     cbGenderNV.ListTextColor = Color.FromArgb(193, 200, 207);
                     cbGenderNV.ForeColor = Color.FromArgb(193, 200, 207);
@@ -79,7 +77,6 @@ namespace DoAnPBL3
                     tbStartDate.ForeColor = Color.FromArgb(193, 200, 207);
                     cbGenderNV.BackColor = Color.FromArgb(40, 35, 40);
                     cbGenderNV.ForeColor = Color.FromArgb(193, 200, 207);
-                    cbGenderNV.BorderColor = Color.FromArgb(40, 35, 40);
                     cbGenderNV.ListBackColor = Color.FromArgb(40, 35, 40);
                     cbGenderNV.ListTextColor = Color.FromArgb(193, 200, 207);
                     tbSDTNV.FillColor = Color.FromArgb(40, 35, 40);
@@ -424,7 +421,7 @@ namespace DoAnPBL3
                 if (oldPath == avatar.ImageLocation)
                     path = oldPath;
                 else
-                    path = avatar.ImageLocation.Remove(0, projectDirectory.Length + 1);
+                    path = avatar.ImageLocation.Remove(0, projectDirectory.Length + 3);
             }
             return new Employee
             {
@@ -439,7 +436,8 @@ namespace DoAnPBL3
                 Id_Card = tbCMNDNV.Text,
                 Address = tbAddressNV.Text,
                 Avatar = path,
-                AccountUsername = BLL_QLNV.Instance.GetAccountUsernameByID(ID_Employee)
+                AccountUsername = BLL_QLNV.Instance.GetAccountUsernameByID(ID_Employee),
+                WorkStatus = true
             };
         }
 

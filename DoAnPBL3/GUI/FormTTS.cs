@@ -16,11 +16,16 @@ namespace DoAnPBL3
     public partial class FormTTS : Form
     {
         private readonly string ID_Book;
-        
-        public FormTTS(string theme, string ID_Book)
+        private readonly string nameBook;
+        private readonly int unitPrice;
+        private readonly int quantity;
+        public FormTTS(string theme, string ID_Book, string nameBook = "", int unitPrice = 0, int quantity = 0)
         {
             InitializeComponent();
             this.ID_Book = ID_Book;
+            this.nameBook = nameBook;
+            this.unitPrice = unitPrice;
+            this.quantity = quantity;
             switch (theme)
             {
                 case "Admin":
@@ -144,15 +149,23 @@ namespace DoAnPBL3
         {
             string projectDirectory = Directory.GetParent(Environment.CurrentDirectory).Parent.FullName;
             tbIDBook.Text = book.ID_Book;
-            tbNameBook.Text = book.NameBook;
+            if (nameBook != book.NameBook)
+                tbNameBook.Text = nameBook;
+            else
+                tbNameBook.Text = book.NameBook;
             tbPublishDate.Text = book.PublishDate.ToString("dd/MM/yyyy");
             tbAuthor.Text = book.NameAuthor;
             tbLanguage.Text = BLL_QLBS.Instance.GetNameLanguageByID(book.ID_Language);
             tbPublisher.Text = BLL_QLBS.Instance.GetNamePublisherByID(book.ID_Publisher);
             tbGenre.Text = BLL_QLBS.Instance.GetNameGenreByID(book.ID_Genre);
-            tbQuantity.Text = book.Quantity.ToString();
-            tbPrice.Text = book.Price.ToString("##,#") + "VNĐ";
-            tbUnit.Text = book.Unit;
+            if (quantity != 0)
+                tbQuantity.Text = quantity.ToString();
+            else
+                tbQuantity.Text = book.Quantity.ToString();
+            if (unitPrice != 0)
+                tbPrice.Text = unitPrice.ToString("##,#") + "VNĐ";
+            else
+                tbPrice.Text = book.Price.ToString("##,#") + "VNĐ";
             if (book.Image == null)
                 gpbBookImg.Image = null;
             else

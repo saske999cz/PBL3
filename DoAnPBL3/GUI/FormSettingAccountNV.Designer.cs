@@ -78,6 +78,7 @@ namespace DoAnPBL3
             this.tbConfirmPassword.SelectedText = "";
             this.tbConfirmPassword.Size = new System.Drawing.Size(200, 36);
             this.tbConfirmPassword.TabIndex = 2;
+            this.tbConfirmPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbConfirmPassword_KeyPress);
             // 
             // lblConfirmPassword
             // 
@@ -175,6 +176,7 @@ namespace DoAnPBL3
             // pbAvatar
             // 
             this.pbAvatar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pbAvatar.ErrorImage = null;
             this.pbAvatar.ImageRotate = 0F;
             this.pbAvatar.Location = new System.Drawing.Point(378, 244);
             this.pbAvatar.Name = "pbAvatar";
@@ -206,6 +208,7 @@ namespace DoAnPBL3
             this.tbPassword.SelectedText = "";
             this.tbPassword.Size = new System.Drawing.Size(200, 36);
             this.tbPassword.TabIndex = 1;
+            this.tbPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbPassword_KeyPress);
             // 
             // lblPassword
             // 
