@@ -236,7 +236,7 @@ namespace DoAnPBL3
                 if (oldPath == gpbBookImg.ImageLocation)
                     path = oldPath;
                 else
-                    path = gpbBookImg.ImageLocation.Remove(0, projectDirectory.Length + 3);
+                    path = gpbBookImg.ImageLocation.Remove(0, projectDirectory.Length + 1);
             }
             return new Book
             {

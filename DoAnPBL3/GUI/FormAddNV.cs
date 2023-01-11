@@ -398,7 +398,7 @@ namespace DoAnPBL3
             if (avatar.Image == null)
                 path = null;
             else
-                path = avatar.ImageLocation.Remove(0, projectDirectory.Length + 3);
+                path = avatar.ImageLocation.Remove(0, projectDirectory.Length + 1);
             return new Employee
             {
                 ID_Employee = newID_Employee,

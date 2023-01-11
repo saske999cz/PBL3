@@ -45,17 +45,20 @@ namespace DoAnPBL3
                 {
                     using (var bookStore = new BookStoreContext())
                     {
-                        var listEmail = bookStore.Accounts
+
+                        var listEmail = bookStore.Admins
+                            .Where(employee => employee.Email == txtEmail.Text)
                             .Join(
-                                bookStore.Employees,
-                                account => account.Username,
+                                bookStore.Accounts,
                                 employee => employee.AccountUsername,
-                                (account, employee) => new { employee.Email, account.Password });
+                                account => account.Username,
+                                (employee, account) => new { account.Password });
                         if (listEmail.ToList().Count == 0)
                             RJMessageBox.Show("Không tìm thấy email trong hệ thống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         else
                         {
                             string password = listEmail.FirstOrDefault().Password;
+                            MessageBox.Show(password);
                             MailMessage mailMessage = new MailMessage
                             {
                                 From = new MailAddress("BookShop@gmail.com")

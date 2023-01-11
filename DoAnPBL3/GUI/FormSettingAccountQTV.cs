@@ -108,7 +108,7 @@ namespace DoAnPBL3
             if (pbAvatar.Image == null)
                 path = null;
             else
-                path = pbAvatar.ImageLocation.Remove(0, projectDirectory.Length + 3);
+                path = pbAvatar.ImageLocation.Remove(0, projectDirectory.Length + 1);
             string newPassword = tbPassword.Text;
             string confirmPassword = tbConfirmPassword.Text;
             bool isEqualToOldPassword, isConfirmPassMatchToNewPass, isNewAvatar;
