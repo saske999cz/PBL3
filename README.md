@@ -51,6 +51,11 @@ The book sales management application is developed in Visual Studio using a comb
 
 <br>
 <br>
+<h1>Book Details<h1>
+<img src ="https://github.com/saske999cz/PBL3/blob/master/pic12.png">
+
+<br>
+<br>
 <h1>Light Theme<h1>
 <img src ="https://github.com/saske999cz/PBL3/blob/master/pic9.png">
 
